@@ -1426,11 +1426,31 @@ function BestCollaboratorsTab() {
 
 // Big 10 Conference benchmark data (5 schools with available IP data)
 const big10Schools = [
-  { name: 'Nebraska', followers: 3012749, posts: 3049, ipPosts: 1658, adoption: 54.4, logo: 49.1, mention: 20.2, collab: 0 },
-  { name: 'Michigan State', followers: 802304, posts: 2216, ipPosts: 1039, adoption: 46.9, logo: 38.3, mention: 20.1, collab: 2.9 },
-  { name: 'Maryland', followers: 858916, posts: 2120, ipPosts: 925, adoption: 43.6, logo: 38.1, mention: 18.5, collab: 0 },
-  { name: 'Ohio State', followers: 5543153, posts: 8918, ipPosts: 2401, adoption: 26.9, logo: 8.2, mention: 21.6, collab: 0.26 },
-  { name: 'Penn State', followers: 4032162, posts: 7202, ipPosts: 1686, adoption: 23.4, logo: 7.6, mention: 18.8, collab: 0.01 },
+  { name: 'Nebraska', conf: 'Big 10', followers: 3012749, posts: 3049, ipPosts: 1658, adoption: 54.4, logo: 49.1, mention: 20.2, collab: 0 },
+  { name: 'Michigan State', conf: 'Big 10', followers: 802304, posts: 2216, ipPosts: 1039, adoption: 46.9, logo: 38.3, mention: 20.1, collab: 2.9 },
+  { name: 'Maryland', conf: 'Big 10', followers: 858916, posts: 2120, ipPosts: 925, adoption: 43.6, logo: 38.1, mention: 18.5, collab: 0 },
+  { name: 'Ohio State', conf: 'Big 10', followers: 5543153, posts: 8918, ipPosts: 2401, adoption: 26.9, logo: 8.2, mention: 21.6, collab: 0.26 },
+  { name: 'Penn State', conf: 'Big 10', followers: 4032162, posts: 7202, ipPosts: 1686, adoption: 23.4, logo: 7.6, mention: 18.8, collab: 0.01 },
+];
+
+// NCAA D1 schools benchmark data (16 schools with available IP data)
+const ncaaD1Schools = [
+  { name: 'Old Dominion', conf: 'Sun Belt', followers: 406830, posts: 1564, adoption: 56.8, logo: 53.6, mention: 14.6, collab: 1.34 },
+  { name: 'Nebraska', conf: 'Big 10', followers: 3012749, posts: 3049, adoption: 54.4, logo: 49.1, mention: 20.2, collab: 0 },
+  { name: 'Virginia Tech', conf: 'ACC', followers: 1787521, posts: 3735, adoption: 49.7, logo: 45.9, mention: 16.1, collab: 0.11 },
+  { name: 'Michigan State', conf: 'Big 10', followers: 802304, posts: 2216, adoption: 46.9, logo: 38.3, mention: 20.1, collab: 2.93 },
+  { name: 'Maryland', conf: 'Big 10', followers: 858916, posts: 2120, adoption: 43.6, logo: 38.1, mention: 18.5, collab: 0 },
+  { name: 'UTSA', conf: 'AAC', followers: 832689, posts: 3339, adoption: 41.1, logo: 32.3, mention: 19.1, collab: 9.52 },
+  { name: 'Baylor', conf: 'Big 12', followers: 2190438, posts: 6156, adoption: 38.8, logo: 29.5, mention: 22.9, collab: 3.07 },
+  { name: 'Auburn', conf: 'SEC', followers: 2274859, posts: 5314, adoption: 33.8, logo: 12.3, mention: 25.9, collab: 0.40 },
+  { name: 'Texas A&M', conf: 'SEC', followers: 1817133, posts: 3419, adoption: 32.4, logo: 15.5, mention: 24.5, collab: 0 },
+  { name: 'Washington St', conf: 'Pac-12', followers: 186487, posts: 948, adoption: 28.2, logo: 12.1, mention: 19.4, collab: 4.75 },
+  { name: 'Ohio State', conf: 'Big 10', followers: 5543153, posts: 8918, adoption: 26.9, logo: 8.2, mention: 21.6, collab: 0.26 },
+  { name: 'Cincinnati', conf: 'Big 12', followers: 1031767, posts: 4309, adoption: 26.2, logo: 10.8, mention: 18.6, collab: 0.51 },
+  { name: 'LSU', conf: 'SEC', followers: 5116014, posts: 4269, adoption: 25.8, logo: 10.2, mention: 18.6, collab: 0 },
+  { name: 'UCF', conf: 'Big 12', followers: 1137996, posts: 1756, adoption: 24.0, logo: 16.7, mention: 11.0, collab: 0 },
+  { name: 'Penn State', conf: 'Big 10', followers: 4032162, posts: 7202, adoption: 23.4, logo: 7.6, mention: 18.8, collab: 0.01 },
+  { name: 'Virginia', conf: 'ACC', followers: 2052253, posts: 5926, adoption: 22.7, logo: 7.7, mention: 18.1, collab: 0.61 },
 ];
 
 const conferenceAvg = {
@@ -1440,22 +1460,34 @@ const conferenceAvg = {
   collab: 0.63,
 };
 
+const ncaaD1Avg = {
+  adoption: 35.9,
+  logo: 24.2,
+  mention: 19.2,
+  collab: 1.47,
+};
+
 const ohioStateRank = {
-  adoption: 4, // 4th of 5
-  logo: 4,
-  mention: 1, // Highest mention rate!
-  collab: 2,
+  conference: { adoption: 4, logo: 4, mention: 1, collab: 2, total: 5 },
+  ncaa: { adoption: 11, logo: 14, mention: 4, collab: 9, total: 16 },
 };
 
 function BenchmarkTab() {
   const [benchmarkType, setBenchmarkType] = useState<'conference' | 'ncaa'>('conference');
 
+  // Dynamic data based on benchmark type
+  const isConference = benchmarkType === 'conference';
+  const schools = isConference ? big10Schools : ncaaD1Schools;
+  const avg = isConference ? conferenceAvg : ncaaD1Avg;
+  const ranks = isConference ? ohioStateRank.conference : ohioStateRank.ncaa;
+  const benchmarkLabel = isConference ? 'Big 10' : 'NCAA D1';
+
   // Ohio State metrics
-  const ohioState = big10Schools.find(s => s.name === 'Ohio State')!;
-  const adoptionDelta = ohioState.adoption - conferenceAvg.adoption;
-  const logoDelta = ohioState.logo - conferenceAvg.logo;
-  const mentionDelta = ohioState.mention - conferenceAvg.mention;
-  const collabDelta = ohioState.collab - conferenceAvg.collab;
+  const ohioState = { adoption: 26.9, logo: 8.2, mention: 21.6, collab: 0.26 };
+  const adoptionDelta = ohioState.adoption - avg.adoption;
+  const logoDelta = ohioState.logo - avg.logo;
+  const mentionDelta = ohioState.mention - avg.mention;
+  const collabDelta = ohioState.collab - avg.collab;
 
   return (
     <div className="space-y-6">
@@ -1465,7 +1497,7 @@ function BenchmarkTab() {
           <span className="font-semibold">Benchmark</span> shows how often Ohio State athletes use IP elements (logos, mentions, collaborations) in social content compared to other schools.
         </p>
         <div className="flex gap-6 mt-2 text-xs text-gray-500">
-          <span><span className="inline-block w-2 h-2 rounded-full mr-1" style={{ backgroundColor: colors.scarlet }}></span> Big 10 Conference: Compare against other Big 10 schools</span>
+          <span><span className="inline-block w-2 h-2 rounded-full mr-1" style={{ backgroundColor: colors.scarlet }}></span> {benchmarkLabel}: Compare against {isConference ? 'other Big 10 schools' : '16 NCAA D1 schools'}</span>
         </div>
       </div>
 
@@ -1484,13 +1516,16 @@ function BenchmarkTab() {
           </button>
           <button
             onClick={() => setBenchmarkType('ncaa')}
-            className="px-5 py-2.5 text-sm font-semibold transition-colors flex items-center gap-2 opacity-50 cursor-not-allowed"
-            disabled
+            className="px-5 py-2.5 text-sm font-semibold transition-colors flex items-center gap-2"
+            style={{
+              backgroundColor: benchmarkType === 'ncaa' ? colors.scarlet : colors.white,
+              color: benchmarkType === 'ncaa' ? colors.white : colors.text,
+            }}
           >
             🏆 NCAA D1
           </button>
         </div>
-        <span className="text-xs text-gray-400">NCAA D1 data coming soon</span>
+        <span className="text-xs text-gray-400">{schools.length} schools compared</span>
       </div>
 
       {/* Summary Row */}
@@ -1499,10 +1534,10 @@ function BenchmarkTab() {
         <div className="rounded-xl border border-gray-200 bg-white p-5">
           <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Overall IP Adoption</p>
           <div className="flex items-end gap-2">
-            <p className="text-4xl font-black" style={{ color: colors.scarlet }}>#{ohioStateRank.adoption}</p>
-            <p className="text-sm text-gray-500 mb-1">of {big10Schools.length} schools</p>
+            <p className="text-4xl font-black" style={{ color: colors.scarlet }}>#{ranks.adoption}</p>
+            <p className="text-sm text-gray-500 mb-1">of {ranks.total} schools</p>
           </div>
-          <p className="text-xs text-gray-400 mt-2">vs Big 10 Conference</p>
+          <p className="text-xs text-gray-400 mt-2">vs {benchmarkLabel}</p>
         </div>
 
         {/* Your Adoption */}
@@ -1517,14 +1552,17 @@ function BenchmarkTab() {
               {adoptionDelta >= 0 ? '↑' : '↓'} {Math.abs(adoptionDelta).toFixed(1)}%
             </p>
           </div>
-          <p className="text-xs text-gray-400 mt-2">vs {conferenceAvg.adoption}% conference avg</p>
+          <p className="text-xs text-gray-400 mt-2">vs {avg.adoption}% {benchmarkLabel.toLowerCase()} avg</p>
         </div>
 
         {/* Insight */}
         <div className="rounded-xl border-2 p-5" style={{ borderColor: colors.positive, backgroundColor: `${colors.positive}08` }}>
           <p className="text-xs uppercase tracking-wider mb-2" style={{ color: colors.positive }}>💡 Key Insight</p>
           <p className="text-sm text-gray-700">
-            Ohio State leads the Big 10 in <span className="font-semibold">mention rate</span> ({ohioState.mention}%), outperforming the conference average by {(ohioState.mention - conferenceAvg.mention).toFixed(1)}%.
+            {isConference
+              ? <>Ohio State leads the Big 10 in <span className="font-semibold">mention rate</span> ({ohioState.mention}%), outperforming the conference average by {mentionDelta.toFixed(1)}%.</>
+              : <>Ohio State ranks <span className="font-semibold">#{ranks.mention} in mention rate</span> among {ranks.total} NCAA D1 schools, with {ohioState.mention}% vs {avg.mention}% average.</>
+            }
           </p>
         </div>
       </div>
@@ -1544,8 +1582,8 @@ function BenchmarkTab() {
               </div>
             </div>
             <div className="text-right">
-              <p className="text-2xl font-black" style={{ color: colors.scarlet }}>#{ohioStateRank.logo}</p>
-              <p className="text-xs text-gray-400">of {big10Schools.length} schools</p>
+              <p className="text-2xl font-black" style={{ color: colors.scarlet }}>#{ranks.logo}</p>
+              <p className="text-xs text-gray-400">of {ranks.total} schools</p>
             </div>
           </div>
 
@@ -1561,11 +1599,11 @@ function BenchmarkTab() {
             </div>
             <div>
               <div className="flex justify-between text-sm mb-1">
-                <span className="text-gray-500">Big 10 Avg</span>
-                <span className="text-gray-500">{conferenceAvg.logo}%</span>
+                <span className="text-gray-500">{benchmarkLabel} Avg</span>
+                <span className="text-gray-500">{avg.logo}%</span>
               </div>
               <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
-                <div className="h-full rounded-full" style={{ width: `${(conferenceAvg.logo / 60) * 100}%`, backgroundColor: colors.gray }} />
+                <div className="h-full rounded-full" style={{ width: `${(avg.logo / 60) * 100}%`, backgroundColor: colors.gray }} />
               </div>
             </div>
           </div>
@@ -1575,13 +1613,13 @@ function BenchmarkTab() {
               className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-semibold"
               style={{ backgroundColor: logoDelta >= 0 ? `${colors.positive}20` : `${colors.negative}20`, color: logoDelta >= 0 ? colors.positive : colors.negative }}
             >
-              {logoDelta >= 0 ? '↑' : '↓'} {Math.abs(logoDelta).toFixed(1)}% vs conference
+              {logoDelta >= 0 ? '↑' : '↓'} {Math.abs(logoDelta).toFixed(1)}% vs {benchmarkLabel.toLowerCase()}
             </span>
           </div>
         </div>
 
         {/* Mention */}
-        <div className="rounded-xl border-2 bg-white p-5" style={{ borderColor: colors.positive }}>
+        <div className="rounded-xl border-2 bg-white p-5" style={{ borderColor: isConference || ranks.mention <= 5 ? colors.positive : colors.cardBorder }}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: `${colors.positive}15` }}>
@@ -1593,8 +1631,8 @@ function BenchmarkTab() {
               </div>
             </div>
             <div className="text-right">
-              <p className="text-2xl font-black" style={{ color: colors.positive }}>#{ohioStateRank.mention}</p>
-              <p className="text-xs text-gray-400">of {big10Schools.length} schools</p>
+              <p className="text-2xl font-black" style={{ color: colors.positive }}>#{ranks.mention}</p>
+              <p className="text-xs text-gray-400">of {ranks.total} schools</p>
             </div>
           </div>
 
@@ -1610,11 +1648,11 @@ function BenchmarkTab() {
             </div>
             <div>
               <div className="flex justify-between text-sm mb-1">
-                <span className="text-gray-500">Big 10 Avg</span>
-                <span className="text-gray-500">{conferenceAvg.mention}%</span>
+                <span className="text-gray-500">{benchmarkLabel} Avg</span>
+                <span className="text-gray-500">{avg.mention}%</span>
               </div>
               <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
-                <div className="h-full rounded-full" style={{ width: `${(conferenceAvg.mention / 30) * 100}%`, backgroundColor: colors.gray }} />
+                <div className="h-full rounded-full" style={{ width: `${(avg.mention / 30) * 100}%`, backgroundColor: colors.gray }} />
               </div>
             </div>
           </div>
@@ -1622,9 +1660,9 @@ function BenchmarkTab() {
           <div className="mt-4 pt-3 border-t border-gray-100">
             <span
               className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-semibold"
-              style={{ backgroundColor: `${colors.positive}20`, color: colors.positive }}
+              style={{ backgroundColor: mentionDelta >= 0 ? `${colors.positive}20` : `${colors.negative}20`, color: mentionDelta >= 0 ? colors.positive : colors.negative }}
             >
-              ↑ {mentionDelta.toFixed(1)}% vs conference • #1 in Big 10
+              {mentionDelta >= 0 ? '↑' : '↓'} {Math.abs(mentionDelta).toFixed(1)}% vs {benchmarkLabel.toLowerCase()} {isConference && '• #1 in Big 10'}
             </span>
           </div>
         </div>
@@ -1642,8 +1680,8 @@ function BenchmarkTab() {
               </div>
             </div>
             <div className="text-right">
-              <p className="text-2xl font-black" style={{ color: colors.scarlet }}>#{ohioStateRank.collab}</p>
-              <p className="text-xs text-gray-400">of {big10Schools.length} schools</p>
+              <p className="text-2xl font-black" style={{ color: colors.scarlet }}>#{ranks.collab}</p>
+              <p className="text-xs text-gray-400">of {ranks.total} schools</p>
             </div>
           </div>
 
@@ -1654,16 +1692,16 @@ function BenchmarkTab() {
                 <span className="font-semibold">{ohioState.collab}%</span>
               </div>
               <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
-                <div className="h-full rounded-full" style={{ width: `${(ohioState.collab / 5) * 100}%`, backgroundColor: colors.scarlet }} />
+                <div className="h-full rounded-full" style={{ width: `${(ohioState.collab / 10) * 100}%`, backgroundColor: colors.scarlet }} />
               </div>
             </div>
             <div>
               <div className="flex justify-between text-sm mb-1">
-                <span className="text-gray-500">Big 10 Avg</span>
-                <span className="text-gray-500">{conferenceAvg.collab}%</span>
+                <span className="text-gray-500">{benchmarkLabel} Avg</span>
+                <span className="text-gray-500">{avg.collab}%</span>
               </div>
               <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
-                <div className="h-full rounded-full" style={{ width: `${(conferenceAvg.collab / 5) * 100}%`, backgroundColor: colors.gray }} />
+                <div className="h-full rounded-full" style={{ width: `${(avg.collab / 10) * 100}%`, backgroundColor: colors.gray }} />
               </div>
             </div>
           </div>
@@ -1673,7 +1711,7 @@ function BenchmarkTab() {
               className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-semibold"
               style={{ backgroundColor: collabDelta >= 0 ? `${colors.positive}20` : `${colors.negative}20`, color: collabDelta >= 0 ? colors.positive : colors.negative }}
             >
-              {collabDelta >= 0 ? '↑' : '↓'} {Math.abs(collabDelta).toFixed(2)}% vs conference
+              {collabDelta >= 0 ? '↑' : '↓'} {Math.abs(collabDelta).toFixed(2)}% vs {benchmarkLabel.toLowerCase()}
             </span>
           </div>
         </div>
@@ -1691,8 +1729,8 @@ function BenchmarkTab() {
               </div>
             </div>
             <div className="text-right">
-              <p className="text-2xl font-black" style={{ color: colors.scarlet }}>#{ohioStateRank.adoption}</p>
-              <p className="text-xs text-gray-400">of {big10Schools.length} schools</p>
+              <p className="text-2xl font-black" style={{ color: colors.scarlet }}>#{ranks.adoption}</p>
+              <p className="text-xs text-gray-400">of {ranks.total} schools</p>
             </div>
           </div>
 
@@ -1708,11 +1746,11 @@ function BenchmarkTab() {
             </div>
             <div>
               <div className="flex justify-between text-sm mb-1">
-                <span className="text-gray-500">Big 10 Avg</span>
-                <span className="text-gray-500">{conferenceAvg.adoption}%</span>
+                <span className="text-gray-500">{benchmarkLabel} Avg</span>
+                <span className="text-gray-500">{avg.adoption}%</span>
               </div>
               <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
-                <div className="h-full rounded-full" style={{ width: `${(conferenceAvg.adoption / 60) * 100}%`, backgroundColor: colors.gray }} />
+                <div className="h-full rounded-full" style={{ width: `${(avg.adoption / 60) * 100}%`, backgroundColor: colors.gray }} />
               </div>
             </div>
           </div>
@@ -1722,32 +1760,33 @@ function BenchmarkTab() {
               className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-semibold"
               style={{ backgroundColor: adoptionDelta >= 0 ? `${colors.positive}20` : `${colors.negative}20`, color: adoptionDelta >= 0 ? colors.positive : colors.negative }}
             >
-              {adoptionDelta >= 0 ? '↑' : '↓'} {Math.abs(adoptionDelta).toFixed(1)}% vs conference
+              {adoptionDelta >= 0 ? '↑' : '↓'} {Math.abs(adoptionDelta).toFixed(1)}% vs {benchmarkLabel.toLowerCase()}
             </span>
           </div>
         </div>
       </div>
 
-      {/* Conference Leaderboard */}
+      {/* Leaderboard */}
       <div>
         <h3 className="text-lg font-bold text-gray-400 uppercase tracking-wider mb-4">
-          Big 10 IP Adoption Rankings
+          {benchmarkLabel} IP Adoption Rankings
         </h3>
-        <div className="rounded-xl border border-gray-200 bg-white overflow-hidden">
+        <div className="rounded-xl border border-gray-200 bg-white overflow-hidden max-h-[500px] overflow-y-auto">
           <table className="w-full">
-            <thead>
+            <thead className="sticky top-0">
               <tr style={{ backgroundColor: colors.scarlet }}>
                 <th className="text-center px-3 py-3 text-xs font-semibold uppercase tracking-wider text-white w-10">#</th>
                 <th className="text-left px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">School</th>
+                {!isConference && <th className="text-left px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">Conf</th>}
                 <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">Followers</th>
                 <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">Posts</th>
-                <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">IP Adoption</th>
-                <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">Logo %</th>
-                <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">Mention %</th>
+                <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">Adoption</th>
+                <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">Logo</th>
+                <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">Mention</th>
               </tr>
             </thead>
             <tbody>
-              {big10Schools.map((school, idx) => (
+              {schools.map((school, idx) => (
                 <tr
                   key={school.name}
                   className={`border-b border-gray-100 ${school.name === 'Ohio State' ? 'bg-red-50' : idx % 2 === 1 ? 'bg-gray-50/50' : ''}`}
@@ -1766,6 +1805,7 @@ function BenchmarkTab() {
                   <td className={`px-4 py-3 font-semibold ${school.name === 'Ohio State' ? 'text-red-700' : 'text-gray-900'}`}>
                     {school.name}
                   </td>
+                  {!isConference && <td className="px-4 py-3 text-xs text-gray-500">{school.conf}</td>}
                   <td className="px-4 py-3 text-right text-gray-600">{formatNumber(school.followers)}</td>
                   <td className="px-4 py-3 text-right text-gray-600">{formatNumber(school.posts)}</td>
                   <td className="px-4 py-3 text-right font-semibold" style={{ color: school.name === 'Ohio State' ? colors.scarlet : colors.text }}>
@@ -1778,7 +1818,7 @@ function BenchmarkTab() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-gray-400 mt-2">* Based on 5 Big 10 schools with available IP data</p>
+        <p className="text-xs text-gray-400 mt-2">* Based on {schools.length} {isConference ? 'Big 10' : 'NCAA D1'} schools with available IP data</p>
       </div>
     </div>
   );
