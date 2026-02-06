@@ -4,7 +4,7 @@ import { SCHOOLS, SchoolConfig } from '../data/schoolConfig';
 import { SchoolReportView } from './SchoolReportView';
 import { PlayflyReportHub } from './PlayflyReportHub';
 import { AuburnCampaignDashboard } from './AuburnCampaignDashboard';
-import { OhioStateDashboard } from './OhioStateDashboard';
+import { OhioStateIPImpact } from './OhioStateIPImpact';
 
 export function SchoolReportsPage() {
   const [selectedSchool, setSelectedSchool] = useState<SchoolConfig | null>(null);
@@ -28,10 +28,10 @@ export function SchoolReportsPage() {
         <AuburnCampaignDashboard onBack={() => setSelectedSchool(null)} />
       );
     }
-    // If Ohio State is selected, show IP impact dashboard
+    // If Ohio State is selected, show IP Impact report
     if (selectedSchool.id === 'ohio-state') {
       return (
-        <OhioStateDashboard onBack={() => setSelectedSchool(null)} />
+        <OhioStateIPImpact onBack={() => setSelectedSchool(null)} />
       );
     }
     // If Kentucky is selected, show blank report for now
