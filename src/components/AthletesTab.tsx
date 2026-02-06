@@ -88,6 +88,7 @@ export function AthletesTab({
     const athleteMap = new Map<string, {
       name: string;
       sport: string;
+      school: string;
       totalPosts: number;
       totalEMV: number;
       avgEngagement: number;
@@ -103,7 +104,7 @@ export function AthletesTab({
       ['collaboration', 'logo', 'mention (in caption)', 'partnership'].forEach(ipType => {
         const ipData = schoolData[ipType as keyof Omit<SchoolAthleteData, 'school'>];
         ipData.top5Athletes.forEach(athlete => {
-          const key = `${athlete.athlete.name}-${athlete.athlete.sport}`;
+          const key = `${athlete.athlete.name}-${athlete.athlete.sport}-${schoolData.school.name}`;
           const existing = athleteMap.get(key);
 
           if (existing) {
@@ -117,6 +118,7 @@ export function AthletesTab({
             athleteMap.set(key, {
               name: athlete.athlete.name,
               sport: athlete.athlete.sport,
+              school: schoolData.school.name,
               totalPosts: athlete.posts,
               totalEMV: athlete.emv,
               avgEngagement: athlete.engagementRate,
@@ -135,6 +137,7 @@ export function AthletesTab({
     return Array.from(athleteMap.values()).map(athlete => ({
       name: athlete.name,
       sport: athlete.sport,
+      school: athlete.school,
       posts: athlete.totalPosts,
       emv: athlete.totalEMV,
       engagement: athlete.engagementSum / athlete.dataPoints,
@@ -323,22 +326,23 @@ export function AthletesTab({
                     key={`${athlete.name}-${athlete.sport}`}
                     className="border-b border-white/5 hover:bg-white/5 transition-colors"
                   >
-                    <td className="px-6 py-4 text-white/60 font-mono text-sm">
+                    <td className="px-6 py-4 text-white/60 font-medium text-sm">
                       {index + 1}
                     </td>
                     <td className="px-6 py-4">
                       <div>
                         <div className="text-white font-semibold">{athlete.name}</div>
-                        <div className="text-xs text-white/60 mt-1">{formatSport(athlete.sport)}</div>
+                        <div className="text-xs text-white/60 mt-0.5">{athlete.school}</div>
+                        <div className="text-xs text-white/40 mt-0.5">{formatSport(athlete.sport)}</div>
                       </div>
                     </td>
                     <td className="px-6 py-4 text-right">
-                      <div className="text-[#00FFD9] font-bold font-mono">
+                      <div className="text-[#00FFD9] font-bold text-base">
                         {(athlete.engagement * 100).toFixed(2)}%
                       </div>
                     </td>
                     <td className="px-6 py-4 text-right">
-                      <div className="text-[#FFFF00] font-bold font-mono">
+                      <div className="text-[#FFFF00] font-bold text-base">
                         {formatEMV(athlete.emv)}
                       </div>
                     </td>
@@ -346,14 +350,14 @@ export function AthletesTab({
                       <div className={`font-semibold ${
                         athlete.avgLift > 0 ? 'text-[#00FFD9]' : 'text-red-400'
                       }`}>
-                        {athlete.avgLift > 0 ? '+' : ''}{athlete.avgLift.toFixed(1)}% {athlete.avgLift > 0 ? '↑' : '↓'}
+                        {athlete.avgLift > 0 ? '+' : ''}{(athlete.avgLift * 100).toFixed(1)}% {athlete.avgLift > 0 ? '↑' : '↓'}
                         <span className="text-white/60 text-xs ml-2">
                           ({athlete.posts} IP)
                         </span>
                       </div>
                     </td>
                     <td className="px-6 py-4 text-right">
-                      <div className="text-white/80 font-mono">
+                      <div className="text-white font-medium text-base">
                         {formatNumber(athlete.posts)}
                       </div>
                     </td>
@@ -439,8 +443,13 @@ export function AthletesTab({
             const avgLift = ipData.reduce((sum, d) => sum + d.avgLift, 0) / ipData.length;
 
             // Get all athletes for this IP type and sort by EMV
-            const allAthletes = ipData.flatMap(d => d.top5Athletes);
-            const topAthletes = allAthletes
+            const allAthletesWithSchool = filteredAthleteData.flatMap(schoolData =>
+              schoolData[ipType.key as keyof Omit<SchoolAthleteData, 'school'>].top5Athletes.map(athlete => ({
+                ...athlete,
+                schoolName: schoolData.school.name
+              }))
+            );
+            const topAthletes = allAthletesWithSchool
               .sort((a, b) => b.emv - a.emv)
               .slice(0, 5);
 
@@ -454,7 +463,7 @@ export function AthletesTab({
                   </div>
                   <p className="text-white/60">
                     <span className="text-[#FFFF00] font-bold">{formatEMV(avgEMV)}</span> avg EMV •{' '}
-                    <span className="text-[#00FFD9] font-bold">{avgLift > 0 ? '+' : ''}{avgLift.toFixed(1)}%</span> lift
+                    <span className="text-[#00FFD9] font-bold">{avgLift > 0 ? '+' : ''}{(avgLift * 100).toFixed(1)}%</span> lift
                   </p>
                 </div>
 
@@ -471,24 +480,25 @@ export function AthletesTab({
                           <div className="text-2xl font-bold text-white/40">#{index + 1}</div>
                           <div>
                             <div className="text-white font-semibold">{athlete.athlete.name}</div>
-                            <div className="text-xs text-white/60 mt-1">{formatSport(athlete.athlete.sport)}</div>
+                            <div className="text-xs text-white/60 mt-0.5">{athlete.schoolName}</div>
+                            <div className="text-xs text-white/40 mt-0.5">{formatSport(athlete.athlete.sport)}</div>
                           </div>
                         </div>
                         <div className="flex items-center gap-6 text-sm">
                           <div>
                             <div className="text-white/60 text-xs">POSTS</div>
-                            <div className="text-white font-mono font-bold">{athlete.posts}</div>
+                            <div className="text-white font-bold text-base">{athlete.posts}</div>
                           </div>
                           <div>
                             <div className="text-white/60 text-xs">EMV</div>
-                            <div className="text-[#FFFF00] font-mono font-bold">{formatEMV(athlete.emv)}</div>
+                            <div className="text-[#FFFF00] font-bold text-base">{formatEMV(athlete.emv)}</div>
                           </div>
                           <div>
                             <div className="text-white/60 text-xs">LIFT</div>
-                            <div className={`font-mono font-bold ${
+                            <div className={`font-bold text-base ${
                               athlete.lift > 0 ? 'text-[#00FFD9]' : 'text-red-400'
                             }`}>
-                              {athlete.lift > 0 ? '+' : ''}{athlete.lift.toFixed(1)}%
+                              {athlete.lift > 0 ? '+' : ''}{(athlete.lift * 100).toFixed(1)}%
                             </div>
                           </div>
                         </div>

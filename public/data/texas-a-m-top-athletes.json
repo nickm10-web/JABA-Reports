@@ -5,12 +5,12 @@
   },
   "collaboration": {
     "avgEmv": 0,
-    "avgLift": null,
+    "avgLift": 0,
     "top5Athletes": []
   },
   "logo": {
-    "avgEmv": 1654.86,
-    "avgLift": 98.49,
+    "avgEmv": 1994.93,
+    "avgLift": 0.9849,
     "top5Athletes": [
       {
         "athlete": {
@@ -18,9 +18,9 @@
           "sport": "WOMENS_VOLLEYBALL"
         },
         "posts": 19,
-        "emv": 2645.74,
-        "engagementRate": 0.2864,
-        "lift": 51.21
+        "emv": 2189.39,
+        "engagementRate": 0.002864,
+        "lift": 0.5121
       },
       {
         "athlete": {
@@ -28,9 +28,9 @@
           "sport": "MENS_BASKETBALL"
         },
         "posts": 17,
-        "emv": 298.98,
-        "engagementRate": 0.3213,
-        "lift": 22.69
+        "emv": 463.69,
+        "engagementRate": 0.0032129999999999997,
+        "lift": 0.22690000000000002
       },
       {
         "athlete": {
@@ -38,9 +38,9 @@
           "sport": "FOOTBALL"
         },
         "posts": 17,
-        "emv": 3737.6,
-        "engagementRate": 0.2062,
-        "lift": 120.68
+        "emv": 5830.1,
+        "engagementRate": 0.002062,
+        "lift": 1.2068
       },
       {
         "athlete": {
@@ -48,9 +48,9 @@
           "sport": "WOMENS_VOLLEYBALL"
         },
         "posts": 12,
-        "emv": 934.34,
-        "engagementRate": 0.6991,
-        "lift": 199.39
+        "emv": 668.81,
+        "engagementRate": 0.006991000000000001,
+        "lift": 1.9938999999999998
       },
       {
         "athlete": {
@@ -58,15 +58,15 @@
           "sport": "BASEBALL"
         },
         "posts": 12,
-        "emv": 657.66,
-        "engagementRate": 0.4635,
-        "lift": null
+        "emv": 822.64,
+        "engagementRate": 0.004635,
+        "lift": 0
       }
     ]
   },
   "mention (in caption)": {
-    "avgEmv": 1465.45,
-    "avgLift": 137.8,
+    "avgEmv": 2621.75,
+    "avgLift": 1.3780000000000001,
     "top5Athletes": [
       {
         "athlete": {
@@ -74,9 +74,9 @@
           "sport": "WOMENS_VOLLEYBALL"
         },
         "posts": 39,
-        "emv": 3370.2,
-        "engagementRate": 0.1782,
-        "lift": -53.06
+        "emv": 4159.37,
+        "engagementRate": 0.001782,
+        "lift": -0.5306000000000001
       },
       {
         "athlete": {
@@ -84,9 +84,9 @@
           "sport": "MENS_BASKETBALL"
         },
         "posts": 18,
-        "emv": 454.66,
-        "engagementRate": 0.4592,
-        "lift": 308.54
+        "emv": 528.14,
+        "engagementRate": 0.004592,
+        "lift": 3.0854000000000004
       },
       {
         "athlete": {
@@ -94,9 +94,9 @@
           "sport": "FOOTBALL"
         },
         "posts": 18,
-        "emv": 2118.08,
-        "engagementRate": 0.1233,
-        "lift": -33.79
+        "emv": 6279.69,
+        "engagementRate": 0.0012330000000000002,
+        "lift": -0.3379
       },
       {
         "athlete": {
@@ -104,9 +104,9 @@
           "sport": "WOMENS_VOLLEYBALL"
         },
         "posts": 16,
-        "emv": 895.24,
-        "engagementRate": 0.1616,
-        "lift": 214.74
+        "emv": 1760.58,
+        "engagementRate": 0.001616,
+        "lift": 2.1474
       },
       {
         "athlete": {
@@ -114,15 +114,15 @@
           "sport": "WOMENS_VOLLEYBALL"
         },
         "posts": 12,
-        "emv": 489.06,
-        "engagementRate": 0.6631,
-        "lift": 252.59
+        "emv": 380.95,
+        "engagementRate": 0.006631000000000001,
+        "lift": 2.5259
       }
     ]
   },
   "partnership": {
-    "avgEmv": 494.65,
-    "avgLift": -38.22,
+    "avgEmv": 2006.97,
+    "avgLift": -0.3822,
     "top5Athletes": [
       {
         "athlete": {
@@ -130,9 +130,9 @@
           "sport": "FOOTBALL"
         },
         "posts": 9,
-        "emv": 484.68,
-        "engagementRate": 0.0945,
-        "lift": -47.8
+        "emv": 1856.56,
+        "engagementRate": 0.000945,
+        "lift": -0.478
       },
       {
         "athlete": {
@@ -140,9 +140,9 @@
           "sport": "FOOTBALL"
         },
         "posts": 7,
-        "emv": 570.88,
-        "engagementRate": 0.0851,
-        "lift": -49.93
+        "emv": 2369.78,
+        "engagementRate": 0.000851,
+        "lift": -0.4993
       },
       {
         "athlete": {
@@ -150,9 +150,9 @@
           "sport": "WOMENS_GOLF"
         },
         "posts": 7,
-        "emv": 344.6,
-        "engagementRate": 0.1767,
-        "lift": 43.29
+        "emv": 667.3,
+        "engagementRate": 0.001767,
+        "lift": 0.4329
       },
       {
         "athlete": {
@@ -160,9 +160,9 @@
           "sport": "FOOTBALL"
         },
         "posts": 7,
-        "emv": 788.36,
-        "engagementRate": 0.0463,
-        "lift": -63.46
+        "emv": 3816.61,
+        "engagementRate": 0.00046300000000000003,
+        "lift": -0.6346
       },
       {
         "athlete": {
@@ -170,9 +170,9 @@
           "sport": "BASEBALL"
         },
         "posts": 6,
-        "emv": 284.74,
-        "engagementRate": 0.0778,
-        "lift": -73.22
+        "emv": 1324.58,
+        "engagementRate": 0.0007779999999999999,
+        "lift": -0.7322
       }
     ]
   }

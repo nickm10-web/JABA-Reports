@@ -1,8 +1,9 @@
 import { useState, useEffect, useMemo } from 'react';
-import { TrendingUp, Award, Users, BarChart3 } from 'lucide-react';
+import { TrendingUp, Award, Users, BarChart3, Info } from 'lucide-react';
 import { PartnershipsTab } from './PartnershipsTab';
 import { RankingsTab } from './RankingsTab';
 import { AthletesTab } from './AthletesTab';
+import { loadPartnershipDataWithRecalculatedEMV } from '../utils/partnershipDataLoader';
 
 /**
  * PLAYFLY IP PAGE
@@ -262,12 +263,10 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
           .then(res => res.ok ? res.json() as Promise<BrandPartnershipData> : null)
           .catch(() => null);
 
-        // Load school partnership data
-        const partnershipPromises = Object.values(SCHOOL_FILE_MAP).map(async (fileName) => {
-          const response = await fetch(`/data/${fileName}-partnerships.json`);
-          if (!response.ok) return null;
-          return response.json() as Promise<SchoolPartnershipData>;
-        });
+        // Load school partnership data with recalculated EMV
+        const partnershipDataPromise = loadPartnershipDataWithRecalculatedEMV(
+          Object.values(SCHOOL_FILE_MAP)
+        );
 
         // Load athlete data
         const athletePromises = Object.values(SCHOOL_FILE_MAP).map(async (fileName) => {
@@ -279,7 +278,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
         const [schoolResults, brandResult, partnershipResults, athleteResults] = await Promise.all([
           Promise.all(schoolPromises),
           brandPromise,
-          Promise.all(partnershipPromises),
+          partnershipDataPromise,
           Promise.all(athletePromises)
         ]);
 
@@ -290,8 +289,8 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
           setBrandData(brandResult);
         }
 
-        const validPartnerships = partnershipResults.filter((p): p is SchoolPartnershipData => p !== null);
-        setSchoolPartnershipData(validPartnerships);
+        // partnershipResults is already filtered by the loader
+        setSchoolPartnershipData(partnershipResults);
 
         const validAthletes = athleteResults.filter((a): a is SchoolAthleteData => a !== null);
         setAthleteData(validAthletes);
@@ -572,7 +571,15 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-1">
                       {formatNumber(networkTotals.totalLikes + networkTotals.totalComments)}
                     </div>
-                    <div className="text-sm text-white/60">Total Engagement</div>
+                    <div className="flex items-center gap-1.5 text-sm text-white/60">
+                      <span>Total Interactions</span>
+                      <div className="relative group">
+                        <Info className="w-3.5 h-3.5 cursor-help" />
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-black border border-white/20 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
+                          Likes + Comments
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
                   <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
@@ -601,6 +608,22 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                   ? partnershipData.sponsorPartners.reduce((sum, partner) => sum + partner.totalContents, 0)
                   : 0;
 
+                // Calculate engagement from posts WITH IP only
+                // Posts without any IP
+                const postsWithoutIP = school.overall.totalContents - school.counts.withIp;
+                // Use collaboration.no as proxy for average engagement per "no IP" post (covers most posts)
+                const avgEngagementPerNoIPPost = school.collaboration.no.likes + school.collaboration.no.comments;
+                // Total engagement from posts without IP
+                const engagementFromNoIP = avgEngagementPerNoIPPost * postsWithoutIP;
+                // Total engagement from posts WITH IP (subtract no-IP from overall)
+                const totalEngagementOverall = school.overall.totalLikes + school.overall.totalComments;
+                const engagementFromWithIP = totalEngagementOverall - engagementFromNoIP;
+
+                // Calculate total likes/comments from IP posts (proportional split)
+                const ipEngagementRatio = engagementFromWithIP / totalEngagementOverall;
+                const totalLikesFromIP = school.overall.totalLikes * ipEngagementRatio;
+                const totalCommentsFromIP = school.overall.totalComments * ipEngagementRatio;
+
                 return {
                   rank: index + 1,
                   schoolName: getDisplayName(school.school.name),
@@ -608,11 +631,11 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                   isPlayflyMax: maxSchools.includes(school.school.name),
                   totalPosts: school.overall.totalContents,
                   sponsoredPosts: sponsoredPosts,
-                  totalLikes: school.overall.totalLikes,
-                  totalComments: school.overall.totalComments,
-                  totalEngagement: school.overall.totalLikes + school.overall.totalComments,
-                  avgEngagementPerPost: (school.overall.totalLikes + school.overall.totalComments) / school.overall.totalContents,
-                  avgLikesPerPost: school.overall.totalLikes / school.overall.totalContents,
+                  totalLikes: totalLikesFromIP,
+                  totalComments: totalCommentsFromIP,
+                  totalEngagement: engagementFromWithIP,
+                  avgEngagementPerPost: engagementFromWithIP / school.counts.withIp,
+                  avgLikesPerPost: totalLikesFromIP / school.counts.withIp,
                   engagementRate: school.overall.engagementRate
                 };
               });
@@ -763,7 +786,15 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                             className="px-6 py-4 text-right text-sm font-semibold text-white/80 cursor-pointer hover:text-white"
                           >
                             <div className="flex items-center justify-end gap-2">
-                              Avg Engagement Per Post
+                              <div className="flex items-center gap-1.5">
+                                <span>Avg Interactions Per Post</span>
+                                <div className="relative group">
+                                  <Info className="w-3 h-3 cursor-help" />
+                                  <div className="absolute top-full right-0 mt-2 px-4 py-2 bg-black border border-white/20 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
+                                    Likes + Comments
+                                  </div>
+                                </div>
+                              </div>
                               {baselineSortBy === 'totalEngagement' && (
                                 <span>{baselineSortDirection === 'asc' ? '↑' : '↓'}</span>
                               )}
@@ -1174,7 +1205,15 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                                         <span className="text-sm font-bold text-green-400">{formatEMV(ipType.data.yes.emv)}</span>
                                       </div>
                                       <div className="flex justify-between items-center">
-                                        <span className="text-xs text-white/60">Total Engagement</span>
+                                        <div className="flex items-center gap-1.5 text-xs text-white/60">
+                                          <span>Total Interactions</span>
+                                          <div className="relative group">
+                                            <Info className="w-3 h-3 cursor-help" />
+                                            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-black border border-white/20 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
+                                              Likes + Comments
+                                            </div>
+                                          </div>
+                                        </div>
                                         <span className="text-sm font-bold text-white">{formatNumber(totalEngagement)}</span>
                                       </div>
                                       <div className="flex justify-between items-center">
@@ -1279,7 +1318,15 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         <div className="text-2xl md:text-3xl font-bold text-white">{formatNumber(totals.withIP.contents)}</div>
                       </div>
                       <div>
-                        <div className="text-sm text-white/60 mb-1">Total Engagement</div>
+                        <div className="flex items-center gap-1.5 text-sm text-white/60 mb-1">
+                          <span>Total Interactions</span>
+                          <div className="relative group">
+                            <Info className="w-3.5 h-3.5 cursor-help" />
+                            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-black border border-white/20 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
+                              Likes + Comments
+                            </div>
+                          </div>
+                        </div>
                         <div className="text-2xl md:text-3xl font-bold text-white">
                           {formatNumber(totals.withIP.likes + totals.withIP.comments)}
                         </div>
@@ -1314,7 +1361,15 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         <div className="text-2xl md:text-3xl font-bold text-white">{formatNumber(totals.withoutIP.contents)}</div>
                       </div>
                       <div>
-                        <div className="text-sm text-white/60 mb-1">Total Engagement</div>
+                        <div className="flex items-center gap-1.5 text-sm text-white/60 mb-1">
+                          <span>Total Interactions</span>
+                          <div className="relative group">
+                            <Info className="w-3.5 h-3.5 cursor-help" />
+                            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-black border border-white/20 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
+                              Likes + Comments
+                            </div>
+                          </div>
+                        </div>
                         <div className="text-2xl md:text-3xl font-bold text-white">
                           {formatNumber(totals.withoutIP.likes + totals.withoutIP.comments)}
                         </div>
@@ -1398,7 +1453,15 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         <div className="text-2xl md:text-3xl font-bold text-white">{formatNumber(totals.withIP.contents)}</div>
                       </div>
                       <div>
-                        <div className="text-sm text-white/60 mb-1">Total Engagement</div>
+                        <div className="flex items-center gap-1.5 text-sm text-white/60 mb-1">
+                          <span>Total Interactions</span>
+                          <div className="relative group">
+                            <Info className="w-3.5 h-3.5 cursor-help" />
+                            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-black border border-white/20 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
+                              Likes + Comments
+                            </div>
+                          </div>
+                        </div>
                         <div className="text-2xl md:text-3xl font-bold text-white">
                           {formatNumber(totals.withIP.likes + totals.withIP.comments)}
                         </div>
@@ -1433,7 +1496,15 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         <div className="text-2xl md:text-3xl font-bold text-white">{formatNumber(totals.withoutIP.contents)}</div>
                       </div>
                       <div>
-                        <div className="text-sm text-white/60 mb-1">Total Engagement</div>
+                        <div className="flex items-center gap-1.5 text-sm text-white/60 mb-1">
+                          <span>Total Interactions</span>
+                          <div className="relative group">
+                            <Info className="w-3.5 h-3.5 cursor-help" />
+                            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-black border border-white/20 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
+                              Likes + Comments
+                            </div>
+                          </div>
+                        </div>
                         <div className="text-2xl md:text-3xl font-bold text-white">
                           {formatNumber(totals.withoutIP.likes + totals.withoutIP.comments)}
                         </div>
@@ -1517,7 +1588,15 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         <div className="text-2xl md:text-3xl font-bold text-white">{formatNumber(totals.withIP.contents)}</div>
                       </div>
                       <div>
-                        <div className="text-sm text-white/60 mb-1">Total Engagement</div>
+                        <div className="flex items-center gap-1.5 text-sm text-white/60 mb-1">
+                          <span>Total Interactions</span>
+                          <div className="relative group">
+                            <Info className="w-3.5 h-3.5 cursor-help" />
+                            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-black border border-white/20 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
+                              Likes + Comments
+                            </div>
+                          </div>
+                        </div>
                         <div className="text-2xl md:text-3xl font-bold text-white">
                           {formatNumber(totals.withIP.likes + totals.withIP.comments)}
                         </div>
@@ -1552,7 +1631,15 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         <div className="text-2xl md:text-3xl font-bold text-white">{formatNumber(totals.withoutIP.contents)}</div>
                       </div>
                       <div>
-                        <div className="text-sm text-white/60 mb-1">Total Engagement</div>
+                        <div className="flex items-center gap-1.5 text-sm text-white/60 mb-1">
+                          <span>Total Interactions</span>
+                          <div className="relative group">
+                            <Info className="w-3.5 h-3.5 cursor-help" />
+                            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-black border border-white/20 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
+                              Likes + Comments
+                            </div>
+                          </div>
+                        </div>
                         <div className="text-2xl md:text-3xl font-bold text-white">
                           {formatNumber(totals.withoutIP.likes + totals.withoutIP.comments)}
                         </div>

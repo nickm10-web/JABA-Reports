@@ -5,7 +5,7 @@
   },
   "collaboration": {
     "avgEmv": 109.32,
-    "avgLift": 248.65,
+    "avgLift": 2.4865,
     "top5Athletes": [
       {
         "athlete": {
@@ -14,8 +14,8 @@
         },
         "posts": 5,
         "emv": 58.56,
-        "engagementRate": 0.6006,
-        "lift": 78.5
+        "engagementRate": 0.006006,
+        "lift": 0.785
       },
       {
         "athlete": {
@@ -24,8 +24,8 @@
         },
         "posts": 3,
         "emv": 278.4,
-        "engagementRate": 0.1638,
-        "lift": -2.33
+        "engagementRate": 0.001638,
+        "lift": -0.0233
       },
       {
         "athlete": {
@@ -34,8 +34,8 @@
         },
         "posts": 3,
         "emv": 54.38,
-        "engagementRate": 0.3171,
-        "lift": 74.75
+        "engagementRate": 0.0031709999999999998,
+        "lift": 0.7475
       },
       {
         "athlete": {
@@ -44,8 +44,8 @@
         },
         "posts": 3,
         "emv": 134.64,
-        "engagementRate": 0.9497,
-        "lift": 1135.85
+        "engagementRate": 0.009497,
+        "lift": 11.3585
       },
       {
         "athlete": {
@@ -54,14 +54,14 @@
         },
         "posts": 2,
         "emv": 20.64,
-        "engagementRate": 0.1301,
-        "lift": -43.54
+        "engagementRate": 0.0013009999999999999,
+        "lift": -0.4354
       }
     ]
   },
   "logo": {
     "avgEmv": 269.88,
-    "avgLift": 8.62,
+    "avgLift": 0.0862,
     "top5Athletes": [
       {
         "athlete": {
@@ -70,8 +70,8 @@
         },
         "posts": 12,
         "emv": 422.1,
-        "engagementRate": 0.543,
-        "lift": null
+        "engagementRate": 0.005430000000000001,
+        "lift": 0
       },
       {
         "athlete": {
@@ -80,8 +80,8 @@
         },
         "posts": 12,
         "emv": 222.74,
-        "engagementRate": 0.26,
-        "lift": null
+        "engagementRate": 0.0026,
+        "lift": 0
       },
       {
         "athlete": {
@@ -90,8 +90,8 @@
         },
         "posts": 11,
         "emv": 129.1,
-        "engagementRate": 0.1761,
-        "lift": -18.83
+        "engagementRate": 0.001761,
+        "lift": -0.1883
       },
       {
         "athlete": {
@@ -100,8 +100,8 @@
         },
         "posts": 11,
         "emv": 443.12,
-        "engagementRate": 0.4948,
-        "lift": 59.45
+        "engagementRate": 0.004948,
+        "lift": 0.5945
       },
       {
         "athlete": {
@@ -110,14 +110,14 @@
         },
         "posts": 10,
         "emv": 132.36,
-        "engagementRate": 0.1513,
-        "lift": -14.77
+        "engagementRate": 0.0015129999999999998,
+        "lift": -0.1477
       }
     ]
   },
   "mention (in caption)": {
     "avgEmv": 185.77,
-    "avgLift": 211.49,
+    "avgLift": 2.1149,
     "top5Athletes": [
       {
         "athlete": {
@@ -126,8 +126,8 @@
         },
         "posts": 15,
         "emv": 88.26,
-        "engagementRate": 0.1136,
-        "lift": 905.74
+        "engagementRate": 0.001136,
+        "lift": 9.0574
       },
       {
         "athlete": {
@@ -136,8 +136,8 @@
         },
         "posts": 13,
         "emv": 489.5,
-        "engagementRate": 0.2701,
-        "lift": -54.34
+        "engagementRate": 0.0027010000000000003,
+        "lift": -0.5434
       },
       {
         "athlete": {
@@ -146,8 +146,8 @@
         },
         "posts": 13,
         "emv": 125.22,
-        "engagementRate": 0.1646,
-        "lift": 43.16
+        "engagementRate": 0.001646,
+        "lift": 0.4316
       },
       {
         "athlete": {
@@ -156,8 +156,8 @@
         },
         "posts": 12,
         "emv": 106.24,
-        "engagementRate": 0.1324,
-        "lift": 80.97
+        "engagementRate": 0.0013239999999999999,
+        "lift": 0.8097
       },
       {
         "athlete": {
@@ -166,14 +166,14 @@
         },
         "posts": 11,
         "emv": 119.62,
-        "engagementRate": 0.4451,
-        "lift": 81.92
+        "engagementRate": 0.004451,
+        "lift": 0.8192
       }
     ]
   },
   "partnership": {
     "avgEmv": 165.04,
-    "avgLift": -53.4,
+    "avgLift": -0.534,
     "top5Athletes": [
       {
         "athlete": {
@@ -182,8 +182,8 @@
         },
         "posts": 8,
         "emv": 384.48,
-        "engagementRate": 0.1555,
-        "lift": -24.4
+        "engagementRate": 0.001555,
+        "lift": -0.244
       },
       {
         "athlete": {
@@ -192,8 +192,8 @@
         },
         "posts": 7,
         "emv": 325.32,
-        "engagementRate": 0.0913,
-        "lift": -26.84
+        "engagementRate": 0.0009130000000000001,
+        "lift": -0.26839999999999997
       },
       {
         "athlete": {
@@ -202,8 +202,8 @@
         },
         "posts": 6,
         "emv": 11.9,
-        "engagementRate": 0.104,
-        "lift": -62.41
+        "engagementRate": 0.00104,
+        "lift": -0.6241
       },
       {
         "athlete": {
@@ -212,8 +212,8 @@
         },
         "posts": 6,
         "emv": 94.4,
-        "engagementRate": 0.017,
-        "lift": -70.57
+        "engagementRate": 0.00017,
+        "lift": -0.7056999999999999
       },
       {
         "athlete": {
@@ -222,8 +222,8 @@
         },
         "posts": 5,
         "emv": 9.12,
-        "engagementRate": 0.0073,
-        "lift": -82.8
+        "engagementRate": 0.000073,
+        "lift": -0.828
       }
     ]
   }

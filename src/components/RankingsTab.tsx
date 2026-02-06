@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Info } from 'lucide-react';
 
 // Standardized display names - ensures consistent formatting across the UI
 const SCHOOL_DISPLAY_NAMES: Record<string, string> = {
@@ -67,7 +68,7 @@ interface RankingsTabProps {
   formatEMV: (emv: number) => string;
 }
 
-type SortMetric = 'ipLift' | 'emv' | 'posts' | 'engagement' | 'adoption';
+type SortMetric = 'ipLift' | 'emv' | 'posts' | 'interactions' | 'adoption';
 
 export function RankingsTab({
   schoolsData,
@@ -111,7 +112,7 @@ export function RankingsTab({
       ipLift: bestIPLift,
       totalEMV: school.overall.emv,
       postsWithIP: school.counts.withIp,
-      totalEngagement: school.overall.totalLikes + school.overall.totalComments,
+      totalInteractions: school.overall.totalLikes + school.overall.totalComments,
       engagementRate: school.overall.engagementRate,
       ipAdoption: (school.counts.withIp / school.overall.totalContents) * 100,
 
@@ -119,7 +120,7 @@ export function RankingsTab({
       sortableIPLift: bestIPLift,
       sortableEMV: school.overall.emv,
       sortablePosts: school.counts.withIp,
-      sortableEngagement: school.overall.totalLikes + school.overall.totalComments,
+      sortableInteractions: school.overall.totalLikes + school.overall.totalComments,
       sortableAdoption: (school.counts.withIp / school.overall.totalContents) * 100
     };
   });
@@ -147,9 +148,9 @@ export function RankingsTab({
         aVal = a.sortablePosts;
         bVal = b.sortablePosts;
         break;
-      case 'engagement':
-        aVal = a.sortableEngagement;
-        bVal = b.sortableEngagement;
+      case 'interactions':
+        aVal = a.sortableInteractions;
+        bVal = b.sortableInteractions;
         break;
       case 'adoption':
         aVal = a.sortableAdoption;
@@ -218,14 +219,14 @@ export function RankingsTab({
                 Posts {sortBy === 'posts' && (sortDirection === 'desc' ? '↓' : '↑')}
               </button>
               <button
-                onClick={() => handleSort('engagement')}
+                onClick={() => handleSort('interactions')}
                 className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
-                  sortBy === 'engagement'
+                  sortBy === 'interactions'
                     ? 'bg-[#1770C0] text-white'
                     : 'bg-black/40 text-white/60 hover:bg-black/60'
                 }`}
               >
-                Engagement {sortBy === 'engagement' && (sortDirection === 'desc' ? '↓' : '↑')}
+                Interactions {sortBy === 'interactions' && (sortDirection === 'desc' ? '↓' : '↑')}
               </button>
               <button
                 onClick={() => handleSort('adoption')}
@@ -308,12 +309,20 @@ export function RankingsTab({
                   </div>
                 </th>
                 <th
-                  onClick={() => handleSort('engagement')}
+                  onClick={() => handleSort('interactions')}
                   className="px-6 py-4 text-right text-sm font-semibold text-white/80 cursor-pointer hover:text-white"
                 >
                   <div className="flex items-center justify-end gap-2">
-                    Engagement
-                    {sortBy === 'engagement' && (sortDirection === 'desc' ? ' ↓' : ' ↑')}
+                    <div className="flex items-center gap-1.5">
+                      <span>Interactions</span>
+                      <div className="relative group">
+                        <Info className="w-3 h-3 cursor-help" />
+                        <div className="absolute top-full right-0 mt-2 px-4 py-2 bg-black border border-white/20 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
+                          Likes + Comments
+                        </div>
+                      </div>
+                    </div>
+                    {sortBy === 'interactions' && (sortDirection === 'desc' ? ' ↓' : ' ↑')}
                   </div>
                 </th>
               </tr>
@@ -365,18 +374,18 @@ export function RankingsTab({
                     </div>
                   </td>
                   <td className="px-6 py-4 text-right">
-                    <div className="text-green-400 font-semibold font-mono">
+                    <div className="text-green-400 font-semibold text-lg">
                       {formatEMV(rank.totalEMV)}
                     </div>
                   </td>
                   <td className="px-6 py-4 text-right">
-                    <div className="text-white/80 font-mono">
+                    <div className="text-white font-medium text-base">
                       {formatNumber(rank.postsWithIP)}
                     </div>
                   </td>
                   <td className="px-6 py-4 text-right">
-                    <div className="text-white/80 font-mono">
-                      {formatNumber(rank.totalEngagement)}
+                    <div className="text-white font-medium text-base">
+                      {formatNumber(rank.totalInteractions)}
                     </div>
                   </td>
                 </tr>
