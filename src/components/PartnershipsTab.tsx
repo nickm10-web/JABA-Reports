@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronDown, ChevronUp, Info, TrendingUp, TrendingDown } from 'lucide-react';
+import { Info, TrendingUp, TrendingDown } from 'lucide-react';
 
 interface SchoolPartnershipData {
   school: {
@@ -54,9 +54,7 @@ export function PartnershipsTab({
   formatEMV
 }: PartnershipsTabProps) {
   const [partnershipSearchQuery, setPartnershipSearchQuery] = useState('');
-  const [showAllBrands, setShowAllBrands] = useState(false);
   const [engagementFilter, setEngagementFilter] = useState<'all' | 'high' | 'mid' | 'low'>('all');
-  const [expandedIndustries, setExpandedIndustries] = useState<Set<string>>(new Set());
   const [sortBy, setSortBy] = useState<'emv' | 'posts' | 'engagement' | 'lift'>('emv');
   const [cardsToShow, setCardsToShow] = useState(20);
   const [selectedIndustry, setSelectedIndustry] = useState<string>('All Industries');
@@ -118,17 +116,6 @@ export function PartnershipsTab({
     return 'Other';
   };
 
-  const toggleIndustry = (industry: string) => {
-    setExpandedIndustries(prev => {
-      const newSet = new Set(prev);
-      if (newSet.has(industry)) {
-        newSet.delete(industry);
-      } else {
-        newSet.add(industry);
-      }
-      return newSet;
-    });
-  };
 
   // Industry colors mapping
   const industryColors: Record<string, string> = {

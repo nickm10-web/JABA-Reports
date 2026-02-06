@@ -26,6 +26,10 @@ export interface SchoolPartnershipData {
   followers: number;
   overall: {
     totalContents: number;
+    avgLikes: number;
+    avgComments: number;
+    engagementRate: number;
+    emv: number;
   };
   sponsorPartners: PartnershipData[];
 }
