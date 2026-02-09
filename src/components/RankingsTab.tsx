@@ -49,15 +49,15 @@ interface SchoolIPData {
   };
   logo: {
     avgLift: number;
-    yes: { emv: number };
+    yes: { contents: number; emv: number };
   };
   collaboration: {
     avgLift: number;
-    yes: { emv: number };
+    yes: { contents: number; emv: number };
   };
   orgInCaption: {
     avgLift: number;
-    yes: { emv: number };
+    yes: { contents: number; emv: number };
   };
 }
 
