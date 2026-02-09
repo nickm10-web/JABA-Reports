@@ -18,6 +18,132 @@ import { IPTypeBreakdownChart } from './charts/IPTypeBreakdownChart';
  * Data is loaded from real Playfly school data sources
  */
 
+// ═══════════════════════════════════════════════════════════════
+// PLAYFLY BRAND COLORS (matching JABA campaign dashboard style)
+// ═══════════════════════════════════════════════════════════════
+const colors = {
+  primary: '#1770C0',      // PlayFly blue
+  secondary: '#3B9FD9',    // Light blue
+  darkNavy: '#091831',     // Dark background
+  positive: '#10b981',     // Green for positive metrics
+  negative: '#ef4444',     // Red for negative metrics
+  accent: '#0369a1',       // Accent blue
+  lightBg: '#f5f5f5',      // Light gray page background
+  warmGray: '#78716c',
+  cardBg: '#ffffff',
+  cardBorder: 'transparent', // No visible borders, use shadows instead
+  text: '#111827',
+  textMuted: '#6b7280',
+  textDim: '#9ca3af',
+  headerGray: '#6b7280',   // Gray color for two-tone headers
+  white: '#ffffff',
+  gray: '#6b7280',
+};
+
+// Two-tone header component matching JABA style
+function SectionHeader({ primary, secondary }: { primary: string; secondary: string }) {
+  return (
+    <h2 style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }} className="text-2xl md:text-3xl font-bold uppercase tracking-tight">
+      <span style={{ color: colors.primary }}>{primary}</span>
+      <span style={{ color: colors.headerGray }}>{secondary}</span>
+    </h2>
+  );
+}
+
+// KPI Card Component (matching Ohio State style but with PlayFly blue)
+function KPICard({
+  label,
+  value,
+  subLabel,
+  icon,
+}: {
+  label: string;
+  value: string;
+  subLabel?: string;
+  icon: React.ReactNode;
+}) {
+  return (
+    <div
+      className="rounded-xl p-4 relative overflow-hidden flex flex-col justify-center items-center text-center min-h-[120px]"
+      style={{ backgroundColor: colors.primary }}
+    >
+      {icon && (
+        <div className="absolute top-3 right-3 opacity-20">
+          {icon}
+        </div>
+      )}
+      <div className="flex items-center justify-center gap-1 mb-2">
+        <p className="text-xs font-semibold uppercase tracking-wider text-white/80">{label}</p>
+      </div>
+      <p className="text-3xl md:text-4xl font-black text-white mb-1">{value}</p>
+      {subLabel && (
+        <p className="text-xs text-white/70">{subLabel}</p>
+      )}
+    </div>
+  );
+}
+
+// IP Mode Card Component
+function IPModeCard({
+  title,
+  icon,
+  posts,
+  delta,
+  avgEngagement,
+}: {
+  title: string;
+  icon: React.ReactNode;
+  posts: number;
+  delta: number;
+  avgEngagement: string;
+}) {
+  return (
+    <div
+      className="rounded-2xl bg-white p-4 hover:shadow-lg transition-shadow"
+      style={{ boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)' }}
+    >
+      <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center gap-3">
+          <div
+            className="w-10 h-10 rounded-lg flex items-center justify-center"
+            style={{ backgroundColor: `${colors.primary}15` }}
+          >
+            {icon}
+          </div>
+          <div>
+            <div className="flex items-center gap-2">
+              <h3 className="font-bold uppercase tracking-wide text-gray-900">{title}</h3>
+            </div>
+            <p className="text-xs text-gray-500">{posts} posts with this signal</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mb-4">
+        <div className="flex items-center gap-1 mb-1">
+          <p className="text-xs uppercase tracking-wider text-gray-500">
+            Engagement Delta vs Baseline
+          </p>
+        </div>
+        <p
+          className="text-3xl font-black"
+          style={{ color: delta >= 0 ? colors.positive : colors.negative }}
+        >
+          {delta >= 0 ? '+' : ''}{delta.toFixed(1)}%
+        </p>
+        <p className="text-xs text-gray-500">vs posts without {title.toLowerCase()}</p>
+      </div>
+
+      <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-100">
+        <div>
+          <p className="text-xs text-gray-500 mb-1">Avg Eng</p>
+          <p className="text-lg font-bold text-gray-900">{avgEngagement}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 interface SchoolPerformance {
   schoolId: string;
   schoolName: string;
@@ -336,10 +462,10 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
   // Show loading state (after all hooks are called)
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-[#091831] via-[#0B1F3D] to-[#091831] text-white p-8 flex items-center justify-center">
+      <div className="min-h-screen bg-white p-8 flex items-center justify-center" style={{ backgroundColor: colors.lightBg }}>
         <div className="text-center">
-          <div className="w-16 h-16 border-4 border-[#1770C0] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-white/60">Loading Playfly school data...</p>
+          <div className="w-16 h-16 border-4 border-t-transparent rounded-full animate-spin mx-auto mb-4" style={{ borderColor: colors.primary }}></div>
+          <p className="text-gray-600">Loading Playfly school data...</p>
         </div>
       </div>
     );
@@ -348,12 +474,12 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
   // If no data, show empty state (after all hooks are called)
   if (schoolsData.length === 0) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-[#091831] via-[#0B1F3D] to-[#091831] text-white p-8">
+      <div className="min-h-screen bg-white p-8" style={{ backgroundColor: colors.lightBg }}>
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl font-bold text-white mb-4">Playfly IP Report</h1>
-          <div className="bg-black/40 border border-white/10 rounded-xl p-12 text-center">
-            <p className="text-white/60 text-lg mb-4">No school data available. Please check your data source.</p>
-            <p className="text-white/40 text-sm">Check the browser console (F12) for error details.</p>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Playfly IP Report</h1>
+          <div className="bg-white border border-gray-200 rounded-xl p-12 text-center shadow-sm">
+            <p className="text-gray-600 text-lg mb-4">No school data available. Please check your data source.</p>
+            <p className="text-gray-400 text-sm">Check the browser console (F12) for error details.</p>
           </div>
         </div>
       </div>
@@ -361,26 +487,32 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#091831] via-[#0B1F3D] to-[#091831] text-white p-8">
+    <div className="min-h-screen p-8" style={{ backgroundColor: colors.lightBg }}>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="flex justify-between items-start mb-8">
+        <div className="flex justify-between items-start mb-6">
           <div>
             {onBack && (
               <button
                 onClick={onBack}
-                className="text-white/60 hover:text-white mb-4 flex items-center gap-2"
+                className="text-gray-600 hover:text-gray-900 mb-4 flex items-center gap-2"
               >
                 ← Back to Reports
               </button>
             )}
-            <h1 className="text-4xl font-bold text-white mb-2">Playfly IP Report</h1>
-            <p className="text-white/60 text-lg">School brand deal performance and Playfly IP impact</p>
+            <h1 style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }} className="text-5xl font-bold uppercase tracking-tight mb-2">
+              <span style={{ color: colors.primary }}>PLAYFLY </span>
+              <span style={{ color: colors.headerGray }}>IP REPORT</span>
+            </h1>
+            <p className="text-gray-600 text-lg">School brand deal performance and Playfly IP impact</p>
           </div>
 
           <button
             onClick={() => setShowExportModal(true)}
-            className="flex items-center gap-2 px-4 py-2 bg-[#1770C0] hover:bg-[#1770C0]/80 rounded-lg transition-colors"
+            className="flex items-center gap-2 px-4 py-2 text-white rounded-lg transition-colors shadow-sm"
+            style={{ backgroundColor: colors.primary }}
+            onMouseEnter={(e) => e.currentTarget.style.opacity = '0.9'}
+            onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
           >
             <Download className="w-5 h-5" />
             Export Report
@@ -388,30 +520,23 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
         </div>
 
         {/* JABA Hero Section */}
-        <div className="relative overflow-hidden rounded-2xl shadow-2xl mb-12">
-          {/* Dark gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900" />
-
+        <div className="relative overflow-hidden rounded-2xl shadow-sm mb-8 bg-white">
           {/* Content */}
-          <div className="relative z-10 p-12">
+          <div className="p-8 md:p-12">
             {/* Headline with highlighted stats */}
-            <h2 className="text-5xl font-bold mb-8 leading-tight">
-              <span className="text-white">JABA analyzed </span>
-              <span className="text-[#3B9FD9] bg-[#1770C0]/20 px-3 py-1 rounded-lg">{formatNumber(networkTotals.totalSponsoredPosts)} sponsored posts</span>
-              <span className="text-white"> across </span>
-              <span className="text-[#3B9FD9] bg-[#1770C0]/20 px-3 py-1 rounded-lg">{networkTotals.totalSchools} Playfly schools</span>
-              <span className="text-white"> to show how IP drives engagement and EMV.</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-gray-900">
+              <span>JABA analyzed </span>
+              <span className="px-3 py-1 rounded-lg" style={{ color: colors.primary, backgroundColor: `${colors.primary}15` }}>{formatNumber(networkTotals.totalSponsoredPosts)} sponsored posts</span>
+              <span> across </span>
+              <span className="px-3 py-1 rounded-lg" style={{ color: colors.primary, backgroundColor: `${colors.primary}15` }}>{networkTotals.totalSchools} Playfly schools</span>
+              <span> to show how IP drives engagement and EMV.</span>
             </h2>
 
             {/* Accent bar */}
-            <div className="h-1 w-40 bg-gradient-to-r from-[#3B9FD9] to-blue-500 mb-8" />
-
-            {/* Key findings */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 max-w-5xl">
-            </div>
+            <div className="h-1 w-40 mb-6" style={{ background: `linear-gradient(90deg, ${colors.primary}, ${colors.secondary})` }} />
 
             {/* CTA section */}
-            <div className="flex items-center gap-2 text-[#3B9FD9] font-semibold text-lg">
+            <div className="flex items-center gap-2 font-semibold text-lg" style={{ color: colors.primary }}>
               <span>See the full picture below</span>
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -423,74 +548,74 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
         {/* ============================================ */}
         {/* SECTION 1: SCHOOL BRAND DEALS OVERVIEW */}
         {/* ============================================ */}
-        <section className="mb-12">
-          <div className="mb-6">
-            <h2 className="text-3xl font-bold text-white mb-2">School Brand Deals Overview</h2>
-            <p className="text-white/60">Performance of sponsored content and brand partnerships across Playfly schools</p>
+        <section className="mb-8">
+          <div className="mb-4">
+            <SectionHeader primary="SCHOOL BRAND DEALS " secondary="OVERVIEW" />
+            <p className="text-gray-600 mt-2">Performance of sponsored content and brand partnerships across Playfly schools</p>
           </div>
 
           {/* Key Metrics Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
             {/* Card 1: Total Schools */}
-            <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
-              <div className="flex items-center justify-between mb-2">
-                <Target className="w-6 h-6 text-[#1770C0]" />
+            <div className="bg-white rounded-xl p-5 shadow-sm">
+              <div className="flex items-center justify-between mb-3">
+                <Target className="w-6 h-6" style={{ color: colors.primary }} />
               </div>
-              <div className="text-4xl font-bold text-[#FFFF00] mb-1">
+              <div className="text-4xl font-bold mb-1" style={{ color: colors.primary }}>
                 {networkTotals.totalSchools}
               </div>
-              <div className="text-sm text-white/60">Playfly Partner Schools</div>
+              <div className="text-sm text-gray-600">Playfly Partner Schools</div>
             </div>
 
             {/* Card 2: Total Sponsored Posts */}
-            <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
-              <div className="flex items-center justify-between mb-2">
-                <BarChart3 className="w-6 h-6 text-[#1770C0]" />
+            <div className="bg-white rounded-xl p-5 shadow-sm">
+              <div className="flex items-center justify-between mb-3">
+                <BarChart3 className="w-6 h-6" style={{ color: colors.primary }} />
               </div>
-              <div className="text-4xl font-bold text-white mb-1">
+              <div className="text-4xl font-bold text-gray-900 mb-1">
                 {formatNumber(networkTotals.totalSponsoredPosts)}
               </div>
-              <div className="text-sm text-white/60">Athlete-created sponsored content</div>
+              <div className="text-sm text-gray-600">Athlete-created sponsored content</div>
             </div>
 
             {/* Card 3: Total Brand Partnerships */}
-            <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
+            <div className="bg-white rounded-xl p-5 shadow-sm">
               <div className="flex items-center justify-between mb-2">
                 <Award className="w-6 h-6 text-[#1770C0]" />
               </div>
               <div className="text-4xl font-bold text-white mb-1">
                 {networkTotals.totalBrandPartners}
               </div>
-              <div className="text-sm text-white/60">Brand partnerships across Playfly schools</div>
+              <div className="text-sm text-gray-600">Brand partnerships across Playfly schools</div>
             </div>
 
             {/* Card 4: Total Sponsored Athletes */}
-            <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
+            <div className="bg-white shadow-sm rounded-xl p-6">
               <div className="flex items-center justify-between mb-2">
                 <Users className="w-6 h-6 text-[#1770C0]" />
               </div>
               <div className="text-4xl font-bold text-white mb-1">
                 {formatNumber(networkTotals.totalSponsoredAthletes)}
               </div>
-              <div className="text-sm text-white/60">Athletes with brand partnerships</div>
+              <div className="text-sm text-gray-600">Athletes with brand partnerships</div>
             </div>
           </div>
 
           {/* School Performance Table */}
-          <div className="bg-black/40 border border-white/10 rounded-xl p-6">
+          <div className="bg-white shadow-sm border border-gray-200 rounded-xl p-6">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
               <h3 className="text-xl font-bold text-white">School Performance</h3>
 
               <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
                 {/* Search */}
                 <div className="relative flex-1 md:w-64">
-                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40" />
+                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                   <input
                     type="text"
                     placeholder="Search schools..."
                     value={schoolSearchTerm}
                     onChange={(e) => setSchoolSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#1770C0]"
+                    className="w-full pl-10 pr-4 py-2 bg-white border border-gray-300 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-[#1770C0]"
                   />
                 </div>
 
@@ -498,7 +623,7 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
                 <select
                   value={filterPlayflyMax}
                   onChange={(e) => setFilterPlayflyMax(e.target.value as 'all' | 'max' | 'standard')}
-                  className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-[#1770C0]"
+                  className="px-4 py-2 bg-white border border-gray-300 rounded-lg text-white focus:outline-none focus:border-[#1770C0]"
                 >
                   <option value="all">All Schools</option>
                   <option value="max">Playfly Max Only</option>
@@ -512,7 +637,7 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-white/10">
-                    <th className="text-left py-3 px-4 text-white/60 font-semibold">
+                    <th className="text-left py-3 px-4 text-gray-600 font-semibold">
                       <button
                         onClick={() => handleSort('schoolName')}
                         className="flex items-center gap-2 hover:text-white"
@@ -523,7 +648,7 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
                         )}
                       </button>
                     </th>
-                    <th className="text-right py-3 px-4 text-white/60 font-semibold">
+                    <th className="text-right py-3 px-4 text-gray-600 font-semibold">
                       <button
                         onClick={() => handleSort('totalSponsoredPosts')}
                         className="flex items-center gap-2 ml-auto hover:text-white"
@@ -534,7 +659,7 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
                         )}
                       </button>
                     </th>
-                    <th className="text-right py-3 px-4 text-white/60 font-semibold">
+                    <th className="text-right py-3 px-4 text-gray-600 font-semibold">
                       <button
                         onClick={() => handleSort('uniqueBrandCount')}
                         className="flex items-center gap-2 ml-auto hover:text-white"
@@ -545,7 +670,7 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
                         )}
                       </button>
                     </th>
-                    <th className="text-right py-3 px-4 text-white/60 font-semibold">
+                    <th className="text-right py-3 px-4 text-gray-600 font-semibold">
                       <button
                         onClick={() => handleSort('sponsoredAthletesCount')}
                         className="flex items-center gap-2 ml-auto hover:text-white"
@@ -556,7 +681,7 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
                         )}
                       </button>
                     </th>
-                    <th className="text-right py-3 px-4 text-white/60 font-semibold">
+                    <th className="text-right py-3 px-4 text-gray-600 font-semibold">
                       <button
                         onClick={() => handleSort('totalEngagement')}
                         className="flex items-center gap-2 ml-auto hover:text-white"
@@ -578,7 +703,7 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
                     >
                       <td className="py-4 px-4">
                         <div className="flex items-center gap-2">
-                          <span className="text-white/40 text-sm w-6">#{index + 1}</span>
+                          <span className="text-gray-400 text-sm w-6">#{index + 1}</span>
                           <span className="text-white font-medium">{school.schoolName}</span>
                           {school.isPlayflyMax && (
                             <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-[#FFFF00]/20 border border-[#FFFF00]/40 rounded text-xs text-[#FFFF00] font-semibold">
@@ -599,7 +724,7 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
             </div>
 
             {filteredSchools.length === 0 && (
-              <div className="text-center py-8 text-white/40">
+              <div className="text-center py-8 text-gray-400">
                 No schools found matching your filters
               </div>
             )}
@@ -612,7 +737,7 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
         <section className="mb-12">
           <div className="mb-6">
             <h2 className="text-3xl font-bold text-white mb-2">Playfly IP Effectiveness</h2>
-            <p className="text-white/60">How Playfly IP (Logo, Collaboration, Mention) drives real engagement</p>
+            <p className="text-gray-600">How Playfly IP (Logo, Collaboration, Mention) drives real engagement</p>
           </div>
 
           {/* 2.1 Overall Impact: With vs Without IP */}
@@ -626,27 +751,27 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
 
                 <div className="space-y-3">
                   <div className="bg-white/5 rounded-lg p-4 border border-white/10">
-                    <div className="text-sm text-white/60 mb-1">Total Posts</div>
+                    <div className="text-sm text-gray-600 mb-1">Total Posts</div>
                     <div className="text-3xl font-bold text-white">{networkTotals.totalPostsWithoutIP}</div>
                   </div>
 
                   <div className="bg-white/5 rounded-lg p-4 border border-white/10">
-                    <div className="text-sm text-white/60 mb-1">Total Engagement</div>
+                    <div className="text-sm text-gray-600 mb-1">Total Engagement</div>
                     <div className="text-3xl font-bold text-white">{formatNumber(networkTotals.totalEngagementWithoutIP)}</div>
                   </div>
 
                   <div className="bg-white/5 rounded-lg p-4 border border-white/10">
-                    <div className="text-sm text-white/60 mb-1">Avg Engagement Per Post</div>
+                    <div className="text-sm text-gray-600 mb-1">Avg Engagement Per Post</div>
                     <div className="text-3xl font-bold text-gray-300">{formatNumber(Math.round(avgEngagementWithoutIP))}</div>
                   </div>
 
                   <div className="bg-white/5 rounded-lg p-4 border border-white/10">
-                    <div className="text-sm text-white/60 mb-1">Total EMV</div>
+                    <div className="text-sm text-gray-600 mb-1">Total EMV</div>
                     <div className="text-3xl font-bold text-white">{formatEMV(networkTotals.totalEMVWithoutIP)}</div>
                   </div>
 
                   <div className="bg-white/5 rounded-lg p-4 border border-white/10">
-                    <div className="text-sm text-white/60 mb-1">Average EMV Per Post</div>
+                    <div className="text-sm text-gray-600 mb-1">Average EMV Per Post</div>
                     <div className="text-3xl font-bold text-gray-300">
                       {formatEMV(networkTotals.totalPostsWithoutIP > 0 ? networkTotals.totalEMVWithoutIP / networkTotals.totalPostsWithoutIP : 0)}
                     </div>
@@ -660,27 +785,27 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
 
                 <div className="space-y-3">
                   <div className="bg-white/5 rounded-lg p-4 border border-[#00C9A7]/30">
-                    <div className="text-sm text-white/60 mb-1">Total Posts</div>
+                    <div className="text-sm text-gray-600 mb-1">Total Posts</div>
                     <div className="text-3xl font-bold text-white">{networkTotals.totalPostsWithIP}</div>
                   </div>
 
                   <div className="bg-white/5 rounded-lg p-4 border border-[#00C9A7]/30">
-                    <div className="text-sm text-white/60 mb-1">Total Engagement</div>
+                    <div className="text-sm text-gray-600 mb-1">Total Engagement</div>
                     <div className="text-3xl font-bold text-white">{formatNumber(networkTotals.totalEngagementWithIP)}</div>
                   </div>
 
                   <div className="bg-white/5 rounded-lg p-4 border border-[#00C9A7]/30">
-                    <div className="text-sm text-white/60 mb-1">Avg Engagement Per Post</div>
+                    <div className="text-sm text-gray-600 mb-1">Avg Engagement Per Post</div>
                     <div className="text-3xl font-bold text-[#00C9A7]">{formatNumber(Math.round(avgEngagementWithIP))}</div>
                   </div>
 
                   <div className="bg-white/5 rounded-lg p-4 border border-[#00C9A7]/30">
-                    <div className="text-sm text-white/60 mb-1">Total EMV</div>
+                    <div className="text-sm text-gray-600 mb-1">Total EMV</div>
                     <div className="text-3xl font-bold text-white">{formatEMV(networkTotals.totalEMVWithIP)}</div>
                   </div>
 
                   <div className="bg-white/5 rounded-lg p-4 border border-[#00C9A7]/30">
-                    <div className="text-sm text-white/60 mb-1">Average EMV Per Post</div>
+                    <div className="text-sm text-gray-600 mb-1">Average EMV Per Post</div>
                     <div className="text-3xl font-bold text-[#00C9A7]">
                       {formatEMV(networkTotals.totalPostsWithIP > 0 ? networkTotals.totalEMVWithIP / networkTotals.totalPostsWithIP : 0)}
                     </div>
@@ -723,7 +848,7 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
           {/* 2.2 IP Type Breakdown */}
           <div className="mb-8">
             <h3 className="text-2xl font-bold text-white mb-4">IP Type Performance</h3>
-            <p className="text-white/60 mb-6">Engagement boost by IP type (Logo, Collaboration, Mention)</p>
+            <p className="text-gray-600 mb-6">Engagement boost by IP type (Logo, Collaboration, Mention)</p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Logo */}
@@ -732,27 +857,27 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
                   <div className="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center">
                     <Award className="w-6 h-6 text-blue-500" />
                   </div>
-                  <h4 className="text-xl font-bold text-white">Logo</h4>
+                  <h4 className="text-xl font-bold text-white">Visual IP</h4>
                 </div>
 
                 <div className="space-y-3">
                   <div>
-                    <div className="text-sm text-white/60">Posts using Logo</div>
+                    <div className="text-sm text-gray-600">Posts using Visual IP</div>
                     <div className="text-2xl font-bold text-white">{networkTotals.totalLogoPostsCount}</div>
                   </div>
 
                   <div>
-                    <div className="text-sm text-white/60">Total Engagement</div>
+                    <div className="text-sm text-gray-600">Total Engagement</div>
                     <div className="text-2xl font-bold text-white">{formatNumber(networkTotals.totalLogoEngagement)}</div>
                   </div>
 
                   <div>
-                    <div className="text-sm text-white/60">Avg Engagement Per Post</div>
+                    <div className="text-sm text-gray-600">Avg Engagement Per Post</div>
                     <div className="text-2xl font-bold text-white">{formatNumber(Math.round(avgLogoEngagement))}</div>
                   </div>
 
                   <div className="pt-3 border-t border-white/10">
-                    <div className="text-sm text-white/60 mb-1">Engagement Boost</div>
+                    <div className="text-sm text-gray-600 mb-1">Engagement Boost</div>
                     <div className="text-3xl font-bold text-blue-500">+{logoLift}%</div>
                   </div>
                 </div>
@@ -769,22 +894,22 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
 
                 <div className="space-y-3">
                   <div>
-                    <div className="text-sm text-white/60">Posts using Collaboration</div>
+                    <div className="text-sm text-gray-600">Posts using Collaboration</div>
                     <div className="text-2xl font-bold text-white">{networkTotals.totalCollaborationPostsCount}</div>
                   </div>
 
                   <div>
-                    <div className="text-sm text-white/60">Total Engagement</div>
+                    <div className="text-sm text-gray-600">Total Engagement</div>
                     <div className="text-2xl font-bold text-white">{formatNumber(networkTotals.totalCollaborationEngagement)}</div>
                   </div>
 
                   <div>
-                    <div className="text-sm text-white/60">Avg Engagement Per Post</div>
+                    <div className="text-sm text-gray-600">Avg Engagement Per Post</div>
                     <div className="text-2xl font-bold text-white">{formatNumber(Math.round(avgCollaborationEngagement))}</div>
                   </div>
 
                   <div className="pt-3 border-t border-white/10">
-                    <div className="text-sm text-white/60 mb-1">Engagement Boost</div>
+                    <div className="text-sm text-gray-600 mb-1">Engagement Boost</div>
                     <div className="text-3xl font-bold text-green-500">+{collaborationLift}%</div>
                   </div>
                 </div>
@@ -803,22 +928,22 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
                 {/* Data - blurred */}
                 <div className="space-y-3 filter blur-md select-none pointer-events-none">
                   <div>
-                    <div className="text-sm text-white/60">Posts using Mention</div>
+                    <div className="text-sm text-gray-600">Posts using Mention</div>
                     <div className="text-2xl font-bold text-white">1247</div>
                   </div>
 
                   <div>
-                    <div className="text-sm text-white/60">Total Engagement</div>
+                    <div className="text-sm text-gray-600">Total Engagement</div>
                     <div className="text-2xl font-bold text-white">3.2M</div>
                   </div>
 
                   <div>
-                    <div className="text-sm text-white/60">Avg Engagement Per Post</div>
+                    <div className="text-sm text-gray-600">Avg Engagement Per Post</div>
                     <div className="text-2xl font-bold text-white">2.6K</div>
                   </div>
 
                   <div className="pt-3 border-t border-white/10">
-                    <div className="text-sm text-white/60 mb-1">Engagement Boost</div>
+                    <div className="text-sm text-gray-600 mb-1">Engagement Boost</div>
                     <div className="text-3xl font-bold text-yellow-500">+2456%</div>
                   </div>
                 </div>
@@ -852,41 +977,41 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
           <div>
             <h3 className="text-2xl font-bold text-white mb-4">Brand Partners Using Playfly IP</h3>
 
-            <div className="bg-black/40 border border-white/10 rounded-xl p-6 mb-6">
+            <div className="bg-white shadow-sm border border-gray-200 rounded-xl p-6 mb-6">
               <div className="text-center mb-6">
                 <div className="text-5xl font-bold text-[#1770C0] mb-2">{networkTotals.totalBrandsUsingIP}</div>
-                <p className="text-white/60 text-lg">Brand Partners are using Playfly IP</p>
+                <p className="text-gray-600 text-lg">Brand Partners are using Playfly IP</p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-white/5 rounded-lg p-4 text-center">
-                  <div className="text-sm text-white/60 mb-1">Using Logo</div>
+                  <div className="text-sm text-gray-600 mb-1">Using Logo</div>
                   <div className="text-2xl font-bold text-blue-500">{networkTotals.totalBrandsUsingIP}</div>
                 </div>
                 <div className="bg-white/5 rounded-lg p-4 text-center">
-                  <div className="text-sm text-white/60 mb-1">Using Collaboration</div>
+                  <div className="text-sm text-gray-600 mb-1">Using Collaboration</div>
                   <div className="text-2xl font-bold text-green-500">{Math.round(networkTotals.totalBrandsUsingIP * 0.6)}</div>
                 </div>
                 <div className="bg-white/5 rounded-lg p-4 text-center">
-                  <div className="text-sm text-white/60 mb-1">Using Mention</div>
+                  <div className="text-sm text-gray-600 mb-1">Using Mention</div>
                   <div className="text-2xl font-bold text-yellow-500 filter blur-sm select-none pointer-events-none">247</div>
                 </div>
               </div>
             </div>
 
             {/* Top Brands Table */}
-            <div className="bg-black/40 border border-white/10 rounded-xl p-6">
+            <div className="bg-white shadow-sm border border-gray-200 rounded-xl p-6">
               <h4 className="text-lg font-bold text-white mb-4">Top 10 Brands by Engagement with IP</h4>
 
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead>
                     <tr className="border-b border-white/10">
-                      <th className="text-left py-3 px-4 text-white/60 font-semibold">Brand</th>
-                      <th className="text-center py-3 px-4 text-white/60 font-semibold">IP Types Used</th>
-                      <th className="text-right py-3 px-4 text-white/60 font-semibold">Posts with IP</th>
-                      <th className="text-right py-3 px-4 text-white/60 font-semibold">Total Engagement</th>
-                      <th className="text-right py-3 px-4 text-white/60 font-semibold">Avg Per Post</th>
+                      <th className="text-left py-3 px-4 text-gray-600 font-semibold">Brand</th>
+                      <th className="text-center py-3 px-4 text-gray-600 font-semibold">IP Types Used</th>
+                      <th className="text-right py-3 px-4 text-gray-600 font-semibold">Posts with IP</th>
+                      <th className="text-right py-3 px-4 text-gray-600 font-semibold">Total Engagement</th>
+                      <th className="text-right py-3 px-4 text-gray-600 font-semibold">Avg Per Post</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -894,7 +1019,7 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
                       <tr key={brand.brandName} className="border-b border-white/5 hover:bg-white/5">
                         <td className="py-4 px-4">
                           <div className="flex items-center gap-2">
-                            <span className="text-white/40 text-sm w-6">#{index + 1}</span>
+                            <span className="text-gray-400 text-sm w-6">#{index + 1}</span>
                             <span className="text-white font-medium">{brand.brandName}</span>
                           </div>
                         </td>
@@ -909,7 +1034,7 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
                                   'bg-yellow-500/20 text-yellow-400'
                                 }`}
                               >
-                                {type}
+                                {type === 'Logo' ? 'Visual IP' : type}
                               </span>
                             ))}
                           </div>
@@ -932,11 +1057,11 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
         <section className="mb-12">
           <div className="mb-6">
             <h2 className="text-3xl font-bold text-white mb-2">School Benchmarking</h2>
-            <p className="text-white/60">Compare your school against other Playfly schools on IP performance</p>
+            <p className="text-gray-600">Compare your school against other Playfly schools on IP performance</p>
           </div>
 
           {/* 3.1 Interactive Leaderboard */}
-          <div className="bg-black/40 border border-white/10 rounded-xl p-6 mb-8">
+          <div className="bg-white shadow-sm border border-gray-200 rounded-xl p-6 mb-8">
             <div className="flex items-center gap-3 mb-6">
               <Trophy className="w-6 h-6 text-[#FFFF00]" />
               <h3 className="text-xl font-bold text-white">Playfly Schools IP Performance Leaderboard</h3>
@@ -946,8 +1071,8 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-white/10">
-                    <th className="text-left py-3 px-4 text-white/60 font-semibold">Rank</th>
-                    <th className="text-left py-3 px-4 text-white/60 font-semibold">
+                    <th className="text-left py-3 px-4 text-gray-600 font-semibold">Rank</th>
+                    <th className="text-left py-3 px-4 text-gray-600 font-semibold">
                       <button
                         onClick={() => handleSort('schoolName')}
                         className="flex items-center gap-2 hover:text-white"
@@ -958,7 +1083,7 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
                         )}
                       </button>
                     </th>
-                    <th className="text-right py-3 px-4 text-white/60 font-semibold">
+                    <th className="text-right py-3 px-4 text-gray-600 font-semibold">
                       <button
                         onClick={() => handleSort('postsWithIP')}
                         className="flex items-center gap-2 ml-auto hover:text-white"
@@ -969,7 +1094,7 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
                         )}
                       </button>
                     </th>
-                    <th className="text-right py-3 px-4 text-white/60 font-semibold">
+                    <th className="text-right py-3 px-4 text-gray-600 font-semibold">
                       <button
                         onClick={() => handleSort('engagementWithIP')}
                         className="flex items-center gap-2 ml-auto hover:text-white"
@@ -980,7 +1105,7 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
                         )}
                       </button>
                     </th>
-                    <th className="text-right py-3 px-4 text-white/60 font-semibold">
+                    <th className="text-right py-3 px-4 text-gray-600 font-semibold">
                       <button
                         onClick={() => handleSort('brandsUsingIP')}
                         className="flex items-center gap-2 ml-auto hover:text-white"
@@ -991,7 +1116,7 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
                         )}
                       </button>
                     </th>
-                    <th className="text-right py-3 px-4 text-white/60 font-semibold">
+                    <th className="text-right py-3 px-4 text-gray-600 font-semibold">
                       <button
                         onClick={() => handleSort('totalEMV')}
                         className="flex items-center gap-2 ml-auto hover:text-white"
@@ -1002,7 +1127,7 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
                         )}
                       </button>
                     </th>
-                    <th className="text-right py-3 px-4 text-white/60 font-semibold">
+                    <th className="text-right py-3 px-4 text-gray-600 font-semibold">
                       <button
                         onClick={() => handleSort('engagementLiftPercent')}
                         className="flex items-center gap-2 ml-auto hover:text-white"
@@ -1028,7 +1153,7 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
                           {index === 0 && <Trophy className="w-5 h-5 text-[#FFD700]" />}
                           {index === 1 && <Trophy className="w-5 h-5 text-[#C0C0C0]" />}
                           {index === 2 && <Trophy className="w-5 h-5 text-[#CD7F32]" />}
-                          <span className={`font-bold ${index < 3 ? 'text-[#FFFF00]' : 'text-white/60'}`}>
+                          <span className={`font-bold ${index < 3 ? 'text-[#FFFF00]' : 'text-gray-600'}`}>
                             #{index + 1}
                           </span>
                         </div>
@@ -1059,16 +1184,16 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
           </div>
 
           {/* 3.2 School Comparison Tool */}
-          <div className="bg-black/40 border border-white/10 rounded-xl p-6">
+          <div className="bg-white shadow-sm border border-gray-200 rounded-xl p-6">
             <h3 className="text-xl font-bold text-white mb-4">Compare Two Schools</h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               <div>
-                <label className="block text-sm text-white/60 mb-2">School 1</label>
+                <label className="block text-sm text-gray-600 mb-2">School 1</label>
                 <select
                   value={compareSchool1}
                   onChange={(e) => setCompareSchool1(e.target.value)}
-                  className="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-[#1770C0]"
+                  className="w-full px-4 py-2 bg-white border border-gray-300 rounded-lg text-white focus:outline-none focus:border-[#1770C0]"
                 >
                   <option value="">Select a school...</option>
                   {schoolsData.map(school => (
@@ -1080,11 +1205,11 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
               </div>
 
               <div>
-                <label className="block text-sm text-white/60 mb-2">School 2</label>
+                <label className="block text-sm text-gray-600 mb-2">School 2</label>
                 <select
                   value={compareSchool2}
                   onChange={(e) => setCompareSchool2(e.target.value)}
-                  className="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-[#1770C0]"
+                  className="w-full px-4 py-2 bg-white border border-gray-300 rounded-lg text-white focus:outline-none focus:border-[#1770C0]"
                 >
                   <option value="">Select a school...</option>
                   {schoolsData.map(school => (
@@ -1105,7 +1230,7 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
               return (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* School 1 */}
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                  <div className="bg-white border border-gray-300 rounded-xl p-6">
                     <div className="flex items-center gap-2 mb-4">
                       <h4 className="text-lg font-bold text-white">{school1.schoolName}</h4>
                       {school1.isPlayflyMax && (
@@ -1118,47 +1243,47 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
 
                     <div className="space-y-3 text-sm">
                       <div className="flex justify-between">
-                        <span className="text-white/60">Sponsored Posts:</span>
+                        <span className="text-gray-600">Sponsored Posts:</span>
                         <span className="text-white font-semibold">{school1.totalSponsoredPosts}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-white/60">Posts with IP:</span>
+                        <span className="text-gray-600">Posts with IP:</span>
                         <span className="text-white font-semibold">
                           {school1.postsWithIP} ({Math.round((school1.postsWithIP / school1.totalSponsoredPosts) * 100)}%)
                         </span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-white/60">Total Engagement:</span>
+                        <span className="text-gray-600">Total Engagement:</span>
                         <span className="text-white font-semibold">{formatNumber(school1.totalEngagement)}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-white/60">Brand Partners:</span>
+                        <span className="text-gray-600">Brand Partners:</span>
                         <span className="text-white font-semibold">{school1.uniqueBrandCount}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-white/60">Avg Per Post:</span>
+                        <span className="text-gray-600">Avg Per Post:</span>
                         <span className="text-white font-semibold">
                           {formatNumber(Math.round(school1.totalEngagement / school1.totalSponsoredPosts))}
                         </span>
                       </div>
                       <div className="flex justify-between pt-3 border-t border-white/10">
-                        <span className="text-white/60">Engagement Boost:</span>
+                        <span className="text-gray-600">Engagement Boost:</span>
                         <span className="text-[#00C9A7] font-bold">+{school1.engagementLiftPercent}%</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-white/60">Total EMV:</span>
+                        <span className="text-gray-600">Total EMV:</span>
                         <span className="text-white font-semibold">{formatEMV(school1.totalEMV)}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-white/60">EMV Boost:</span>
+                        <span className="text-gray-600">EMV Boost:</span>
                         <span className="text-[#3B9FD9] font-bold">+{school1.emvLiftPercent}%</span>
                       </div>
 
                       <div className="pt-3 border-t border-white/10">
-                        <div className="text-white/60 mb-2">Top IP Types:</div>
+                        <div className="text-gray-600 mb-2">Top IP Types:</div>
                         <div className="space-y-1">
                           <div className="flex justify-between text-xs">
-                            <span className="text-blue-400">1. Logo</span>
+                            <span className="text-blue-400">1. Visual IP</span>
                             <span className="text-white">
                               {Math.round((school1.logoPostCount / school1.postsWithIP) * 100)}%
                             </span>
@@ -1181,7 +1306,7 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
                   </div>
 
                   {/* School 2 */}
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                  <div className="bg-white border border-gray-300 rounded-xl p-6">
                     <div className="flex items-center gap-2 mb-4">
                       <h4 className="text-lg font-bold text-white">{school2.schoolName}</h4>
                       {school2.isPlayflyMax && (
@@ -1194,47 +1319,47 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
 
                     <div className="space-y-3 text-sm">
                       <div className="flex justify-between">
-                        <span className="text-white/60">Sponsored Posts:</span>
+                        <span className="text-gray-600">Sponsored Posts:</span>
                         <span className="text-white font-semibold">{school2.totalSponsoredPosts}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-white/60">Posts with IP:</span>
+                        <span className="text-gray-600">Posts with IP:</span>
                         <span className="text-white font-semibold">
                           {school2.postsWithIP} ({Math.round((school2.postsWithIP / school2.totalSponsoredPosts) * 100)}%)
                         </span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-white/60">Total Engagement:</span>
+                        <span className="text-gray-600">Total Engagement:</span>
                         <span className="text-white font-semibold">{formatNumber(school2.totalEngagement)}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-white/60">Brand Partners:</span>
+                        <span className="text-gray-600">Brand Partners:</span>
                         <span className="text-white font-semibold">{school2.uniqueBrandCount}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-white/60">Avg Per Post:</span>
+                        <span className="text-gray-600">Avg Per Post:</span>
                         <span className="text-white font-semibold">
                           {formatNumber(Math.round(school2.totalEngagement / school2.totalSponsoredPosts))}
                         </span>
                       </div>
                       <div className="flex justify-between pt-3 border-t border-white/10">
-                        <span className="text-white/60">Engagement Boost:</span>
+                        <span className="text-gray-600">Engagement Boost:</span>
                         <span className="text-[#00C9A7] font-bold">+{school2.engagementLiftPercent}%</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-white/60">Total EMV:</span>
+                        <span className="text-gray-600">Total EMV:</span>
                         <span className="text-white font-semibold">{formatEMV(school2.totalEMV)}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-white/60">EMV Boost:</span>
+                        <span className="text-gray-600">EMV Boost:</span>
                         <span className="text-[#3B9FD9] font-bold">+{school2.emvLiftPercent}%</span>
                       </div>
 
                       <div className="pt-3 border-t border-white/10">
-                        <div className="text-white/60 mb-2">Top IP Types:</div>
+                        <div className="text-gray-600 mb-2">Top IP Types:</div>
                         <div className="space-y-1">
                           <div className="flex justify-between text-xs">
-                            <span className="text-blue-400">1. Logo</span>
+                            <span className="text-blue-400">1. Visual IP</span>
                             <span className="text-white">
                               {Math.round((school2.logoPostCount / school2.postsWithIP) * 100)}%
                             </span>
@@ -1260,7 +1385,7 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
             })()}
 
             {(!compareSchool1 || !compareSchool2) && (
-              <div className="text-center py-8 text-white/40">
+              <div className="text-center py-8 text-gray-400">
                 Select two schools to compare their performance
               </div>
             )}

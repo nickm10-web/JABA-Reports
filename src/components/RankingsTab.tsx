@@ -97,9 +97,15 @@ export function RankingsTab({
 
   // Calculate rankings with all metrics
   const rankings = schoolsData.map(school => {
-    // Calculate best IP lift (highest of logo, collaboration, caption)
-    const ipLifts = [school.logo.avgLift, school.collaboration.avgLift, school.orgInCaption.avgLift];
-    const bestIPLift = Math.max(...ipLifts);
+    // Calculate average IP lift across all IP types (only include types with posts)
+    const ipLifts = [];
+    if (school.logo.yes.contents > 0) ipLifts.push(school.logo.avgLift);
+    if (school.collaboration.yes.contents > 0) ipLifts.push(school.collaboration.avgLift);
+    if (school.orgInCaption.yes.contents > 0) ipLifts.push(school.orgInCaption.avgLift);
+
+    const avgIPLift = ipLifts.length > 0
+      ? ipLifts.reduce((sum, lift) => sum + lift, 0) / ipLifts.length
+      : 0;
 
     return {
       school: school.school.name, // Keep original for matching
@@ -109,7 +115,7 @@ export function RankingsTab({
       isPlayflyMax: maxSchools.includes(school.school.name),
 
       // Key metrics
-      ipLift: bestIPLift,
+      ipLift: avgIPLift,
       totalEMV: school.overall.emv,
       postsWithIP: school.counts.withIp,
       totalInteractions: school.overall.totalLikes + school.overall.totalComments,
@@ -117,7 +123,7 @@ export function RankingsTab({
       ipAdoption: (school.counts.withIp / school.overall.totalContents) * 100,
 
       // For sorting
-      sortableIPLift: bestIPLift,
+      sortableIPLift: avgIPLift,
       sortableEMV: school.overall.emv,
       sortablePosts: school.counts.withIp,
       sortableInteractions: school.overall.totalLikes + school.overall.totalComments,
@@ -174,26 +180,26 @@ export function RankingsTab({
     <div className="space-y-8">
       <div className="flex items-center justify-between">
         <div>
-          <h3 className="text-3xl font-bold text-white">School IP Leaderboard</h3>
-          <p className="text-white/60 mt-2">All {schoolsData.length} Playfly schools ranked by IP performance</p>
+          <h3 className="text-3xl font-bold text-gray-900">School IP Leaderboard</h3>
+          <p className="text-gray-600 mt-2">All {schoolsData.length} Playfly schools ranked by IP performance</p>
         </div>
-        <div className="text-sm text-white/60">
+        <div className="text-sm text-gray-600">
           Showing {sortedRankings.length} schools
         </div>
       </div>
 
       {/* Sort and Filter Controls */}
-      <div className="bg-black/40 border border-white/10 rounded-xl p-6">
+      <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
         <div className="flex flex-col md:flex-row gap-4 items-end">
           <div>
-            <label className="text-sm text-white/60 mb-2 block">Sort By</label>
+            <label className="text-sm text-gray-600 mb-2 block">Sort By</label>
             <div className="flex gap-2 flex-wrap">
               <button
                 onClick={() => handleSort('ipLift')}
                 className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
                   sortBy === 'ipLift'
                     ? 'bg-[#1770C0] text-white'
-                    : 'bg-black/40 text-white/60 hover:bg-black/60'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
                 IP Lift % {sortBy === 'ipLift' && (sortDirection === 'desc' ? '↓' : '↑')}
@@ -203,7 +209,7 @@ export function RankingsTab({
                 className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
                   sortBy === 'emv'
                     ? 'bg-[#1770C0] text-white'
-                    : 'bg-black/40 text-white/60 hover:bg-black/60'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
                 EMV {sortBy === 'emv' && (sortDirection === 'desc' ? '↓' : '↑')}
@@ -213,7 +219,7 @@ export function RankingsTab({
                 className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
                   sortBy === 'posts'
                     ? 'bg-[#1770C0] text-white'
-                    : 'bg-black/40 text-white/60 hover:bg-black/60'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
                 Posts {sortBy === 'posts' && (sortDirection === 'desc' ? '↓' : '↑')}
@@ -223,7 +229,7 @@ export function RankingsTab({
                 className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
                   sortBy === 'interactions'
                     ? 'bg-[#1770C0] text-white'
-                    : 'bg-black/40 text-white/60 hover:bg-black/60'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
                 Interactions {sortBy === 'interactions' && (sortDirection === 'desc' ? '↓' : '↑')}
@@ -233,7 +239,7 @@ export function RankingsTab({
                 className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
                   sortBy === 'adoption'
                     ? 'bg-[#1770C0] text-white'
-                    : 'bg-black/40 text-white/60 hover:bg-black/60'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
                 IP Adoption {sortBy === 'adoption' && (sortDirection === 'desc' ? '↓' : '↑')}
@@ -242,14 +248,14 @@ export function RankingsTab({
           </div>
 
           <div>
-            <label className="text-sm text-white/60 mb-2 block">Filter</label>
+            <label className="text-sm text-gray-600 mb-2 block">Filter</label>
             <div className="flex gap-2">
               <button
                 onClick={() => setFilterType('all')}
                 className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
                   filterType === 'all'
                     ? 'bg-[#1770C0] text-white'
-                    : 'bg-black/40 text-white/60 hover:bg-black/60'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
                 All Schools
@@ -259,7 +265,7 @@ export function RankingsTab({
                 className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
                   filterType === 'max'
                     ? 'bg-[#1770C0] text-white'
-                    : 'bg-black/40 text-white/60 hover:bg-black/60'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
                 Max Schools ⭐
@@ -270,59 +276,59 @@ export function RankingsTab({
       </div>
 
       {/* Leaderboard Table */}
-      <div className="bg-black/40 border border-white/10 rounded-xl overflow-hidden">
+      <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg">
         <div className="overflow-x-auto">
           <table className="w-full">
-            <thead className="bg-[#0a0e27] border-b border-white/10">
+            <thead style={{ backgroundColor: '#f9fafb' }} className="border-b border-gray-300">
               <tr>
-                <th className="px-6 py-4 text-left text-sm font-semibold text-white/80">
+                <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">
                   Rank
                 </th>
-                <th className="px-6 py-4 text-left text-sm font-semibold text-white/80">
+                <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">
                   School
                 </th>
                 <th
                   onClick={() => handleSort('ipLift')}
-                  className="px-6 py-4 text-right text-sm font-semibold text-white/80 cursor-pointer hover:text-white"
+                  className="px-6 py-4 text-right text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
                 >
                   <div className="flex items-center justify-end gap-2">
                     IP Lift %
-                    {sortBy === 'ipLift' && (sortDirection === 'desc' ? ' ↓' : ' ↑')}
+                    {sortBy === 'ipLift' && <span style={{ color: '#1770C0' }}>{sortDirection === 'desc' ? ' ↓' : ' ↑'}</span>}
                   </div>
                 </th>
                 <th
                   onClick={() => handleSort('emv')}
-                  className="px-6 py-4 text-right text-sm font-semibold text-white/80 cursor-pointer hover:text-white"
+                  className="px-6 py-4 text-right text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
                 >
                   <div className="flex items-center justify-end gap-2">
                     EMV
-                    {sortBy === 'emv' && (sortDirection === 'desc' ? ' ↓' : ' ↑')}
+                    {sortBy === 'emv' && <span style={{ color: '#1770C0' }}>{sortDirection === 'desc' ? ' ↓' : ' ↑'}</span>}
                   </div>
                 </th>
                 <th
                   onClick={() => handleSort('posts')}
-                  className="px-6 py-4 text-right text-sm font-semibold text-white/80 cursor-pointer hover:text-white"
+                  className="px-6 py-4 text-right text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
                 >
                   <div className="flex items-center justify-end gap-2">
                     Posts w/ IP
-                    {sortBy === 'posts' && (sortDirection === 'desc' ? ' ↓' : ' ↑')}
+                    {sortBy === 'posts' && <span style={{ color: '#1770C0' }}>{sortDirection === 'desc' ? ' ↓' : ' ↑'}</span>}
                   </div>
                 </th>
                 <th
                   onClick={() => handleSort('interactions')}
-                  className="px-6 py-4 text-right text-sm font-semibold text-white/80 cursor-pointer hover:text-white"
+                  className="px-6 py-4 text-right text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
                 >
                   <div className="flex items-center justify-end gap-2">
                     <div className="flex items-center gap-1.5">
                       <span>Interactions</span>
                       <div className="relative group">
                         <Info className="w-3 h-3 cursor-help" />
-                        <div className="absolute top-full right-0 mt-2 px-4 py-2 bg-black border border-white/20 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
+                        <div className="absolute top-full right-0 mt-2 px-4 py-2 bg-gray-900 border border-gray-700 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
                           Likes + Comments
                         </div>
                       </div>
                     </div>
-                    {sortBy === 'interactions' && (sortDirection === 'desc' ? ' ↓' : ' ↑')}
+                    {sortBy === 'interactions' && <span style={{ color: '#1770C0' }}>{sortDirection === 'desc' ? ' ↓' : ' ↑'}</span>}
                   </div>
                 </th>
               </tr>
@@ -331,7 +337,7 @@ export function RankingsTab({
               {sortedRankings.map((rank, index) => (
                 <tr
                   key={rank.schoolId}
-                  className="border-b border-white/5 hover:bg-white/5 transition-colors cursor-pointer"
+                  className={`border-b border-gray-200 hover:bg-blue-50 transition-colors cursor-pointer ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
                   onClick={() => setSelectedSchool(rank.school)}
                 >
                   <td className="px-6 py-4">
@@ -345,7 +351,7 @@ export function RankingsTab({
                           ⭐{index + 1}
                         </div>
                       ) : (
-                        <div className="text-lg font-bold text-white/60 w-8 text-center">
+                        <div className="text-lg font-bold text-gray-600 w-8 text-center">
                           {index + 1}
                         </div>
                       )}
@@ -358,9 +364,9 @@ export function RankingsTab({
                       </div>
                       <div>
                         <div className="flex items-center gap-2">
-                          <span className="text-white font-semibold">{rank.displayName}</span>
+                          <span className="text-gray-900 font-semibold">{rank.displayName}</span>
                           {rank.isPlayflyMax && (
-                            <span className="text-yellow-400 text-xs">⭐</span>
+                            <span className="text-yellow-500 text-xs">⭐</span>
                           )}
                         </div>
                       </div>
@@ -368,23 +374,23 @@ export function RankingsTab({
                   </td>
                   <td className="px-6 py-4 text-right">
                     <div className={`text-lg font-bold ${
-                      rank.ipLift > 0 ? 'text-green-400' : rank.ipLift < 0 ? 'text-red-400' : 'text-white/60'
+                      rank.ipLift > 0 ? 'text-green-600' : rank.ipLift < 0 ? 'text-red-600' : 'text-gray-600'
                     }`}>
                       {rank.ipLift > 0 ? '+' : ''}{rank.ipLift.toFixed(1)}% {rank.ipLift > 0 ? '▲' : rank.ipLift < 0 ? '▼' : ''}
                     </div>
                   </td>
                   <td className="px-6 py-4 text-right">
-                    <div className="text-green-400 font-semibold text-lg">
+                    <div className="text-green-600 font-semibold text-lg">
                       {formatEMV(rank.totalEMV)}
                     </div>
                   </td>
                   <td className="px-6 py-4 text-right">
-                    <div className="text-white font-medium text-base">
+                    <div className="text-gray-900 font-medium text-base">
                       {formatNumber(rank.postsWithIP)}
                     </div>
                   </td>
                   <td className="px-6 py-4 text-right">
-                    <div className="text-white font-medium text-base">
+                    <div className="text-gray-900 font-medium text-base">
                       {formatNumber(rank.totalInteractions)}
                     </div>
                   </td>
@@ -400,12 +406,12 @@ export function RankingsTab({
         {sortedRankings.slice(0, 3).map((rank, index) => (
           <div
             key={rank.schoolId}
-            className={`bg-gradient-to-br rounded-xl p-6 border-2 ${
+            className={`bg-white rounded-xl p-6 border-2 shadow-lg ${
               index === 0
-                ? 'from-yellow-500/10 to-yellow-900/20 border-yellow-500/30'
+                ? 'border-yellow-400'
                 : index === 1
-                ? 'from-gray-400/10 to-gray-700/20 border-gray-400/30'
-                : 'from-orange-500/10 to-orange-900/20 border-orange-500/30'
+                ? 'border-gray-400'
+                : 'border-orange-400'
             }`}
           >
             <div className="flex items-center gap-3 mb-4">
@@ -416,31 +422,26 @@ export function RankingsTab({
               }`}>
                 #{index + 1}
               </div>
-              <h5 className="text-xl font-bold text-white">{rank.displayName}</h5>
+              <h5 className="text-xl font-bold text-gray-900">{rank.displayName}</h5>
             </div>
             <div className="space-y-3">
               <div>
-                <div className="text-sm text-white/60">IP Lift</div>
+                <div className="text-sm text-gray-600">IP Lift</div>
                 <div className={`text-2xl font-bold ${
-                  rank.ipLift > 0 ? 'text-green-400' : 'text-red-400'
+                  rank.ipLift > 0 ? 'text-green-600' : 'text-red-600'
                 }`}>
                   {rank.ipLift > 0 ? '+' : ''}{rank.ipLift.toFixed(1)}%
                 </div>
               </div>
               <div>
-                <div className="text-sm text-white/60">Total EMV</div>
-                <div className="text-lg font-bold text-white">
+                <div className="text-sm text-gray-600">Total EMV</div>
+                <div className="text-lg font-bold text-gray-900">
                   {formatEMV(rank.totalEMV)}
                 </div>
               </div>
             </div>
           </div>
         ))}
-      </div>
-
-      {/* Legend */}
-      <div className="text-sm text-white/60 text-center">
-        ⭐ = Playfly Max school • Click any row to view school details
       </div>
     </div>
   );

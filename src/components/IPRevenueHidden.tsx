@@ -57,7 +57,7 @@ export function IPRevenueHidden() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 border border-white/30">
               <div className="text-3xl font-bold mb-1">+{(logoLift * 100).toFixed(0)}%</div>
-              <div className="text-sm">Logo content</div>
+              <div className="text-sm">Visual IP content</div>
             </div>
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 border border-white/30">
               <div className="text-3xl font-bold mb-1">+{(brandedLift * 100).toFixed(0)}%</div>

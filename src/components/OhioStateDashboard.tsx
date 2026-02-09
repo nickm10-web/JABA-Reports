@@ -835,9 +835,9 @@ export function OhioStateDashboard({ onBack }: OhioStateDashboardProps) {
               insight="Caption mentions prioritize brand alignment over raw engagement metrics."
             />
             <VarianceCard
-              title="Logo Visibility"
+              title="Visual IP Visibility"
               variance={data.ipUsage.logo.variance}
-              insight="Logos reinforce brand consistency across institutional content moments."
+              insight="Visual IP reinforces brand consistency across institutional content moments."
             />
             <VarianceCard
               title="Official Collaborations"

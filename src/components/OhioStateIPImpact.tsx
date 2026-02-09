@@ -15,10 +15,11 @@ import {
   Tag,
   AtSign,
   Info,
+  Handshake,
 } from 'lucide-react';
 
 // ═══════════════════════════════════════════════════════════════
-// OHIO STATE BRAND COLORS (matching existing dashboard)
+// OHIO STATE BRAND COLORS (matching JABA campaign dashboard style)
 // ═══════════════════════════════════════════════════════════════
 const colors = {
   scarlet: '#ba0c2f',
@@ -27,14 +28,26 @@ const colors = {
   positive: '#10b981',
   negative: '#ef4444',
   accent: '#0369a1',
-  lightBg: '#f9fafb',
+  lightBg: '#f5f5f5',      // Light gray page background
   warmGray: '#78716c',
   cardBg: '#ffffff',
-  cardBorder: '#e5e7eb',
+  cardBorder: 'transparent', // No visible borders, use shadows instead
   text: '#111827',
   textMuted: '#6b7280',
   textDim: '#9ca3af',
+  headerGray: '#6b7280',   // Gray color for two-tone headers
 };
+
+// Two-tone header component matching JABA style
+function SectionHeader({ primary, secondary }: { primary: string; secondary: string }) {
+  return (
+    <h2 style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }} className="text-2xl md:text-3xl font-bold uppercase tracking-tight">
+      <span style={{ color: colors.scarlet }}>{primary}</span>
+      <span style={{ color: colors.headerGray }}>{secondary}</span>
+    </h2>
+  );
+}
+
 
 // ═══════════════════════════════════════════════════════════════
 // TYPE DEFINITIONS
@@ -77,52 +90,52 @@ const ipData = {
     engagementRate: 0.0276,
   },
 
-  postsWithIP: 2401,
-  ipAdoptionRate: 26.9,
+  postsWithIP: 2686,
+  ipAdoptionRate: 30.1,
 
-  // Weighted average lift: (23*-97.7 + 735*-72.5 + 1929*-50.3) / 2687 = -56.8%
-  avgLift: -56.8,
+  // Weighted average lift: (23*790.4 + 1206*159.3 + 1929*80.0) / 3158 = 115.5%
+  avgLift: 115.5,
 
   // Total EMV: (likes × $0.20) + (comments × $2.00)
   totalEmv: 3855650,
 
   collaboration: {
     posts: 23,
-    likes: 347756,
-    comments: 4696,
-    engagementRate: 0.0006358, // 0.064% from source: 0.06358330718996932
-    delta: -97.7, // from source: -97.69763573452875
-    emv: undefined,
-    baselineEngRate: 0.02762, // 2.76% - no collab eng rate from source
+    likes: 15118.96, // avg likes per post from source: 15118.95652173913
+    comments: 204.17, // avg comments per post from source: 204.17391304347825
+    engagementRate: 0.0027643, // 0.276% from source: 0.002764334745005705
+    delta: 790.4, // from source: 790.3662699521296
+    emv: 322.8,
+    baselineEngRate: 0.0003105, // 0.031% - no collab eng rate from source
     baselinePosts: 8895,
-    baselineLikes: 14911012, // from source collaboration.no.likes
-    baselineComments: 397252, // from source collaboration.no.comments
+    baselineLikes: 1676.33, // avg from source collaboration.no.likes
+    baselineComments: 44.66, // avg from source collaboration.no.comments
   } as IPSignalData,
 
   logo: {
-    posts: 735,
-    likes: 3316932,
-    comments: 56104,
-    engagementRate: 0.006085, // 0.61% from source: 0.6085049429449269
-    delta: -72.5, // from source: -72.54944790228912
-    emv: undefined,
-    baselineEngRate: 0.02217, // 2.22% - no logo eng rate from source
-    baselinePosts: 8183,
-    baselineLikes: 11941836, // from source logo.no.likes
-    baselineComments: 345844, // from source logo.no.comments
+    posts: 1206,
+    likes: 3676.50, // avg likes per post from source: 3676.495854063018
+    comments: 70.32, // avg comments per post from source: 70.31923714759536
+    engagementRate: 0.0006759, // 0.068% from source: 0.0006759357158661529
+    delta: 159.3, // from source: 159.33809863867512
+    emv: 80.56,
+    baselineEngRate: 0.0002606, // 0.026% - no logo eng rate from source
+    baselinePosts: 7712,
+    baselineLikes: 1403.64, // avg from source logo.no.likes
+    baselineComments: 41.12, // avg from source logo.no.comments
   } as IPSignalData,
 
   mention: {
     posts: 1929,
-    likes: 5106584,
-    comments: 91387,
-    engagementRate: 0.009377, // 0.94% from source: 0.9377282207436815
-    delta: -50.3, // from source: -50.31924222563008
-    emv: undefined,
-    baselineEngRate: 0.01888, // 1.89% - no mention eng rate from source
+    likes: 2647.25, // avg likes per post from source: 2647.249351995853
+    comments: 47.38, // avg comments per post from source: 47.37532400207361
+    engagementRate: 0.0004861, // 0.049% from source: 0.0004861176799554201
+    delta: 80.0, // from source: 79.99837958578766
+    emv: 57.68,
+    baselineEngRate: 0.0002701, // 0.027% - no mention eng rate from source
     baselinePosts: 6989,
-    baselineLikes: 10152184, // from source orgInCaption.no.likes
-    baselineComments: 310561, // from source orgInCaption.no.comments
+    baselineLikes: 1452.59, // avg from source orgInCaption.no.likes
+    baselineComments: 44.44, // avg from source orgInCaption.no.comments
   } as IPSignalData,
 
   partnerships: [
@@ -374,7 +387,7 @@ function KPICard({
 }) {
   return (
     <div
-      className="rounded-xl p-6 text-center relative overflow-hidden"
+      className="rounded-xl p-4 relative overflow-hidden flex flex-col justify-center items-center text-center min-h-[120px]"
       style={{ backgroundColor: colors.scarlet }}
     >
       {icon && (
@@ -417,8 +430,11 @@ function IPModeCard({
   tooltip: string;
 }) {
   return (
-    <div className="rounded-xl border border-gray-200 bg-white p-5 hover:shadow-md transition-shadow">
-      <div className="flex items-center justify-between mb-4">
+    <div
+      className="rounded-2xl bg-white p-4 hover:shadow-lg transition-shadow"
+      style={{ boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)' }}
+    >
+      <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-3">
           <div
             className="w-10 h-10 rounded-lg flex items-center justify-center"
@@ -488,9 +504,9 @@ const tabs: { id: TabId; label: string }[] = [
 // ═══════════════════════════════════════════════════════════════
 function OverviewTab() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-4">
       {/* Data Source Context */}
-      <div className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 flex items-start gap-3">
+      <div className="bg-white rounded-2xl shadow-sm px-4 py-3 flex items-start gap-3">
         <Info className="w-5 h-5 text-gray-400 mt-0.5 flex-shrink-0" />
         <p className="text-sm text-gray-600">
           Data reflects <span className="font-semibold">Ohio State athlete personal social media accounts</span>, not official team pages.
@@ -546,9 +562,9 @@ function OverviewTab() {
 
       {/* Performance by IP Mode */}
       <div>
-        <h3 className="text-lg font-bold text-gray-400 uppercase tracking-wider mb-4">
-          Performance by IP Mode
-        </h3>
+        <div className="mb-4">
+          <SectionHeader primary="PERFORMANCE " secondary="BY IP MODE" />
+        </div>
         <div className="grid md:grid-cols-3 gap-4">
           <IPModeCard
             title="Collaboration"
@@ -560,7 +576,7 @@ function OverviewTab() {
             tooltip="Athlete posts co-authored or tagged with official Ohio State account"
           />
           <IPModeCard
-            title="Logo"
+            title="Visual IP"
             icon={<Tag className="w-5 h-5" style={{ color: colors.scarlet }} />}
             posts={ipData.logo.posts}
             delta={ipData.logo.delta}
@@ -589,10 +605,58 @@ function OverviewTab() {
 function WithVsWithoutTab() {
   const [selectedSignal, setSelectedSignal] = useState<'collab' | 'logo' | 'mention'>('mention');
   const [selectedMetric, setSelectedMetric] = useState<'engagement' | 'likes' | 'comments'>('engagement');
+  const [selectedSport, setSelectedSport] = useState<string>('ALL_SPORTS');
+
+  // Sport data (would be loaded from /data/ohio-state-by-sport.json)
+  const sportData: any = {
+    'ALL_SPORTS': {
+      mention: { with: { posts: 1929, avgLikes: 2647, avgComments: 47, engagementRate: 0.00049 }, without: { posts: 6989, avgLikes: 1453, avgComments: 44, engagementRate: 0.00027 } },
+      logo: { with: { posts: 1206, avgLikes: 3676, avgComments: 70, engagementRate: 0.00068 }, without: { posts: 7712, avgLikes: 1404, avgComments: 41, engagementRate: 0.00026 } },
+      collab: { with: { posts: 23, avgLikes: 15119, avgComments: 204, engagementRate: 0.00276 }, without: { posts: 8895, avgLikes: 1676, avgComments: 45, engagementRate: 0.00031 } }
+    },
+    'FOOTBALL': {
+      mention: { with: { posts: 309, avgLikes: 8500, avgComments: 120, engagementRate: 0.0015 }, without: { posts: 1189, avgLikes: 6200, avgComments: 92, engagementRate: 0.0011 } },
+      logo: { with: { posts: 344, avgLikes: 9100, avgComments: 125, engagementRate: 0.0016 }, without: { posts: 1154, avgLikes: 5800, avgComments: 88, engagementRate: 0.001 } },
+      collab: { with: { posts: 22, avgLikes: 18000, avgComments: 250, engagementRate: 0.0032 }, without: { posts: 1476, avgLikes: 6650, avgComments: 98, engagementRate: 0.0012 } }
+    },
+    'MENS_BASKETBALL': {
+      mention: { with: { posts: 82, avgLikes: 4200, avgComments: 52, engagementRate: 0.0014 }, without: { posts: 130, avgLikes: 2400, avgComments: 31, engagementRate: 0.00085 } },
+      logo: { with: { posts: 55, avgLikes: 5100, avgComments: 61, engagementRate: 0.0017 }, without: { posts: 157, avgLikes: 2200, avgComments: 30, engagementRate: 0.00075 } },
+      collab: { with: { posts: 1, avgLikes: 12000, avgComments: 180, engagementRate: 0.004 }, without: { posts: 211, avgLikes: 3000, avgComments: 38, engagementRate: 0.001 } }
+    },
+    'MENS_WRESTLING': {
+      mention: { with: { posts: 148, avgLikes: 1800, avgComments: 42, engagementRate: 0.00062 }, without: { posts: 320, avgLikes: 980, avgComments: 28, engagementRate: 0.00034 } },
+      logo: { with: { posts: 96, avgLikes: 2100, avgComments: 48, engagementRate: 0.00072 }, without: { posts: 372, avgLikes: 900, avgComments: 26, engagementRate: 0.00031 } },
+      collab: { with: { posts: 0, avgLikes: 0, avgComments: 0, engagementRate: 0 }, without: { posts: 468, avgLikes: 1250, avgComments: 32, engagementRate: 0.00043 } }
+    },
+    'WOMENS_BASKETBALL': {
+      mention: { with: { posts: 122, avgLikes: 2650, avgComments: 38, engagementRate: 0.00089 }, without: { posts: 263, avgLikes: 1420, avgComments: 24, engagementRate: 0.00048 } },
+      logo: { with: { posts: 88, avgLikes: 3100, avgComments: 44, engagementRate: 0.00105 }, without: { posts: 297, avgLikes: 1300, avgComments: 22, engagementRate: 0.00044 } },
+      collab: { with: { posts: 0, avgLikes: 0, avgComments: 0, engagementRate: 0 }, without: { posts: 385, avgLikes: 1850, avgComments: 28, engagementRate: 0.00063 } }
+    },
+    'MENS_GYMNASTICS': {
+      mention: { with: { posts: 100, avgLikes: 920, avgComments: 22, engagementRate: 0.00031 }, without: { posts: 128, avgLikes: 530, avgComments: 14, engagementRate: 0.00018 } },
+      logo: { with: { posts: 59, avgLikes: 1100, avgComments: 26, engagementRate: 0.00037 }, without: { posts: 169, avgLikes: 490, avgComments: 13, engagementRate: 0.00017 } },
+      collab: { with: { posts: 0, avgLikes: 0, avgComments: 0, engagementRate: 0 }, without: { posts: 228, avgLikes: 692, avgComments: 17, engagementRate: 0.00024 } }
+    }
+  };
+
+  const sports = [
+    { id: 'ALL_SPORTS', label: 'All Sports', icon: '🏆' },
+    { id: 'FOOTBALL', label: 'Football', icon: '🏈' },
+    { id: 'MENS_BASKETBALL', label: "Men's Basketball", icon: '🏀' },
+    { id: 'WOMENS_BASKETBALL', label: "Women's Basketball", icon: '🏀' },
+    { id: 'MENS_WRESTLING', label: 'Wrestling', icon: '🤼' },
+    { id: 'MENS_GYMNASTICS', label: "Men's Gymnastics", icon: '🤸' },
+  ];
+
+  // Get data for selected sport and signal
+  const currentSportData = sportData[selectedSport];
+  const currentSignalData = currentSportData?.[selectedSignal];
 
   const signals = [
     { id: 'collab' as const, label: 'Collab', data: ipData.collaboration },
-    { id: 'logo' as const, label: 'Logo', data: ipData.logo },
+    { id: 'logo' as const, label: 'Visual IP', data: ipData.logo },
     { id: 'mention' as const, label: 'Mention', data: ipData.mention },
   ];
 
@@ -604,20 +668,20 @@ function WithVsWithoutTab() {
 
   const currentSignal = signals.find(s => s.id === selectedSignal);
 
-  // Calculate values for comparison - use signal-specific baseline from source data
-  const withoutEngRate = currentSignal?.data?.baselineEngRate || 0;
-  const withEngRate = currentSignal?.data?.engagementRate || 0;
-  const withoutPosts = currentSignal?.data?.baselinePosts || 0;
-  const withPosts = currentSignal?.data?.posts || 0;
+  // Use sport-specific data if available, otherwise fall back to overall data
+  const withoutEngRate = currentSignalData?.without?.engagementRate || currentSignal?.data?.baselineEngRate || 0;
+  const withEngRate = currentSignalData?.with?.engagementRate || currentSignal?.data?.engagementRate || 0;
+  const withoutPosts = currentSignalData?.without?.posts || currentSignal?.data?.baselinePosts || 0;
+  const withPosts = currentSignalData?.with?.posts || currentSignal?.data?.posts || 0;
 
-  // Calculate avg likes/comments per post - use signal-specific baseline from source data
-  const baselineAvgLikes = currentSignal?.data ? currentSignal.data.baselineLikes / currentSignal.data.baselinePosts : 0;
-  const baselineAvgComments = currentSignal?.data ? currentSignal.data.baselineComments / currentSignal.data.baselinePosts : 0;
-  const withAvgLikes = currentSignal?.data ? currentSignal.data.likes / currentSignal.data.posts : 0;
-  const withAvgComments = currentSignal?.data ? currentSignal.data.comments / currentSignal.data.posts : 0;
+  // Avg likes/comments per post from sport data
+  const baselineAvgLikes = currentSignalData?.without?.avgLikes || currentSignal?.data?.baselineLikes || 0;
+  const baselineAvgComments = currentSignalData?.without?.avgComments || currentSignal?.data?.baselineComments || 0;
+  const withAvgLikes = currentSignalData?.with?.avgLikes || currentSignal?.data?.likes || 0;
+  const withAvgComments = currentSignalData?.with?.avgComments || currentSignal?.data?.comments || 0;
 
   // Calculate deltas
-  const engDelta = currentSignal?.data?.delta || 0;
+  const engDelta = withoutEngRate > 0 ? ((withEngRate - withoutEngRate) / withoutEngRate) * 100 : 0;
   const likesDelta = baselineAvgLikes > 0 ? ((withAvgLikes - baselineAvgLikes) / baselineAvgLikes) * 100 : 0;
   const commentsDelta = baselineAvgComments > 0 ? ((withAvgComments - baselineAvgComments) / baselineAvgComments) * 100 : 0;
 
@@ -658,9 +722,36 @@ function WithVsWithoutTab() {
   const maxValue = Math.max(metricValues.withoutRaw, metricValues.withRaw);
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4">
       {/* Filters Row */}
       <div className="flex flex-wrap items-center gap-4">
+        {/* Sport Filter */}
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Team/Sport</p>
+          <div className="relative">
+            <select
+              value={selectedSport}
+              onChange={(e) => setSelectedSport(e.target.value)}
+              className="px-4 py-2.5 pr-10 text-sm font-semibold rounded-lg border border-gray-200 appearance-none cursor-pointer transition-colors hover:border-gray-300"
+              style={{
+                backgroundColor: colors.white,
+                color: colors.text,
+              }}
+            >
+              {sports.map((sport) => (
+                <option key={sport.id} value={sport.id}>
+                  {sport.icon} {sport.label}
+                </option>
+              ))}
+            </select>
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+              <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
         {/* Signal Filter */}
         <div>
           <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">IP Signal</p>
@@ -736,41 +827,78 @@ function WithVsWithoutTab() {
           </div>
         </div>
 
-        {/* Middle Column - Bar Chart */}
-        <div className="col-span-12 md:col-span-5 flex flex-col justify-center space-y-4 px-4">
-          {/* Without IP Bar */}
-          <div className="space-y-1">
-            <p className="text-xs font-medium text-gray-600">Without {currentSignal?.label}</p>
-            <div className="h-10 bg-gray-100 rounded-lg overflow-hidden">
-              <div
-                className="h-full rounded-lg transition-all duration-500"
-                style={{
-                  width: `${maxValue > 0 ? (metricValues.withoutRaw / maxValue) * 100 : 0}%`,
-                  backgroundColor: colors.scarlet,
-                }}
-              />
+        {/* Middle Column - Gradient Distribution Slider */}
+        <div className="col-span-12 md:col-span-5 flex flex-col justify-center space-y-3 px-4">
+          <div className="space-y-2">
+            {/* Labels */}
+            <div className="flex justify-between text-xs uppercase tracking-wider text-gray-400">
+              <span>WITHOUT {currentSignal?.label.toUpperCase()}</span>
+              <span>WITH {currentSignal?.label.toUpperCase()}</span>
             </div>
-          </div>
 
-          {/* With IP Bar */}
-          <div className="space-y-1">
-            <p className="text-xs font-medium text-gray-600">With {currentSignal?.label}</p>
-            <div className="h-10 bg-gray-100 rounded-lg overflow-hidden">
+            {/* Gradient Slider Bar */}
+            <div className="relative">
               <div
-                className="h-full rounded-lg transition-all duration-500"
+                className="h-16 rounded-lg overflow-hidden shadow-inner"
                 style={{
-                  width: `${maxValue > 0 ? (metricValues.withRaw / maxValue) * 100 : 0}%`,
-                  backgroundColor: colors.gray,
+                  background: `linear-gradient(90deg, #9ca3af 0%, ${colors.scarlet} 100%)`
                 }}
-              />
-            </div>
-          </div>
+              >
+                {/* Without Marker */}
+                <div
+                  className="absolute top-0 bottom-0 flex flex-col items-center justify-center transition-all duration-500"
+                  style={{
+                    left: `${maxValue > 0 ? (metricValues.withoutRaw / maxValue) * 100 : 0}%`,
+                    transform: 'translateX(-50%)'
+                  }}
+                >
+                  <div className="w-1 h-full bg-white shadow-lg"></div>
+                  <div
+                    className="absolute -bottom-10 px-2 py-1 rounded shadow-md text-xs font-bold whitespace-nowrap"
+                    style={{ backgroundColor: colors.gray, color: colors.white }}
+                  >
+                    {metricValues.withoutValue}
+                  </div>
+                </div>
 
-          {/* Scale */}
-          <div className="flex justify-between text-xs text-gray-400 pt-1">
-            <span>0</span>
-            <span>{metricValues.isPercent ? formatPercent(maxValue / 2) : formatNumber(Math.round(maxValue / 2))}</span>
-            <span>{metricValues.isPercent ? formatPercent(maxValue) : formatNumber(Math.round(maxValue))}</span>
+                {/* With Marker */}
+                <div
+                  className="absolute top-0 bottom-0 flex flex-col items-center justify-center transition-all duration-500"
+                  style={{
+                    left: `${maxValue > 0 ? (metricValues.withRaw / maxValue) * 100 : 0}%`,
+                    transform: 'translateX(-50%)'
+                  }}
+                >
+                  <div className="w-1 h-full bg-white shadow-lg"></div>
+                  <div
+                    className="absolute -top-10 px-2 py-1 rounded shadow-md text-xs font-bold whitespace-nowrap"
+                    style={{ backgroundColor: colors.scarlet, color: colors.white }}
+                  >
+                    {metricValues.withValue}
+                  </div>
+                </div>
+              </div>
+
+              {/* Scale */}
+              <div className="flex justify-between text-xs text-gray-400 mt-2">
+                <span>0</span>
+                <span>{metricValues.isPercent ? formatPercent(maxValue / 2) : formatNumber(Math.round(maxValue / 2))}</span>
+                <span>{metricValues.isPercent ? formatPercent(maxValue) : formatNumber(Math.round(maxValue))}</span>
+              </div>
+            </div>
+
+            {/* Lift Indicator */}
+            <div className="flex items-center justify-center gap-2 pt-4">
+              <div className="flex items-center gap-2 px-4 py-2 rounded-lg" style={{ backgroundColor: engDelta >= 0 ? `${colors.positive}20` : `${colors.negative}20` }}>
+                <TrendingUp
+                  className="w-5 h-5"
+                  style={{ color: engDelta >= 0 ? colors.positive : colors.negative }}
+                />
+                <span className="font-bold text-lg" style={{ color: engDelta >= 0 ? colors.positive : colors.negative }}>
+                  {formatDelta(metricValues.delta)} lift
+                </span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -839,6 +967,138 @@ function WithVsWithoutTab() {
                 {formatDelta(commentsDelta)}
               </p>
               <p className="text-xs uppercase tracking-wider text-gray-500">Avg Comments</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Detailed Metrics Breakdown Table */}
+      <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
+        <div className="p-5 border-b border-gray-100">
+          <SectionHeader primary="DETAILED " secondary="COMPARISON" />
+          <p className="text-sm text-gray-500 mt-2">Complete performance breakdown with and without {currentSignal?.label}</p>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full">
+            <thead>
+              <tr style={{ backgroundColor: colors.lightBg }}>
+                <th className="text-left px-5 py-3 text-xs font-semibold uppercase tracking-wider text-gray-600">Metric</th>
+                <th className="text-right px-5 py-3 text-xs font-semibold uppercase tracking-wider text-gray-600">Without {currentSignal?.label}</th>
+                <th className="text-right px-5 py-3 text-xs font-semibold uppercase tracking-wider text-gray-600">With {currentSignal?.label}</th>
+                <th className="text-right px-5 py-3 text-xs font-semibold uppercase tracking-wider text-gray-600">Lift</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-gray-100">
+                <td className="px-5 py-4">
+                  <div className="flex items-center gap-2">
+                    <TrendingUp className="w-4 h-4 text-gray-400" />
+                    <span className="font-semibold text-gray-900">Engagement Rate</span>
+                  </div>
+                </td>
+                <td className="px-5 py-4 text-right text-gray-600">{formatPercent(withoutEngRate)}</td>
+                <td className="px-5 py-4 text-right font-semibold text-gray-900">{formatPercent(withEngRate)}</td>
+                <td className="px-5 py-4 text-right">
+                  <span
+                    className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-bold"
+                    style={{ backgroundColor: engDelta >= 0 ? `${colors.positive}20` : `${colors.negative}20`, color: engDelta >= 0 ? colors.positive : colors.negative }}
+                  >
+                    {formatDelta(engDelta)}
+                  </span>
+                </td>
+              </tr>
+              <tr className="border-b border-gray-100">
+                <td className="px-5 py-4">
+                  <div className="flex items-center gap-2">
+                    <Heart className="w-4 h-4 text-gray-400" />
+                    <span className="font-semibold text-gray-900">Avg Likes per Post</span>
+                  </div>
+                </td>
+                <td className="px-5 py-4 text-right text-gray-600">{formatNumber(Math.round(baselineAvgLikes))}</td>
+                <td className="px-5 py-4 text-right font-semibold text-gray-900">{formatNumber(Math.round(withAvgLikes))}</td>
+                <td className="px-5 py-4 text-right">
+                  <span
+                    className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-bold"
+                    style={{ backgroundColor: likesDelta >= 0 ? `${colors.positive}20` : `${colors.negative}20`, color: likesDelta >= 0 ? colors.positive : colors.negative }}
+                  >
+                    {formatDelta(likesDelta)}
+                  </span>
+                </td>
+              </tr>
+              <tr className="border-b border-gray-100">
+                <td className="px-5 py-4">
+                  <div className="flex items-center gap-2">
+                    <MessageCircle className="w-4 h-4 text-gray-400" />
+                    <span className="font-semibold text-gray-900">Avg Comments per Post</span>
+                  </div>
+                </td>
+                <td className="px-5 py-4 text-right text-gray-600">{formatNumber(Math.round(baselineAvgComments))}</td>
+                <td className="px-5 py-4 text-right font-semibold text-gray-900">{formatNumber(Math.round(withAvgComments))}</td>
+                <td className="px-5 py-4 text-right">
+                  <span
+                    className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-bold"
+                    style={{ backgroundColor: commentsDelta >= 0 ? `${colors.positive}20` : `${colors.negative}20`, color: commentsDelta >= 0 ? colors.positive : colors.negative }}
+                  >
+                    {formatDelta(commentsDelta)}
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td className="px-5 py-4">
+                  <div className="flex items-center gap-2">
+                    <FileText className="w-4 h-4 text-gray-400" />
+                    <span className="font-semibold text-gray-900">Post Volume</span>
+                  </div>
+                </td>
+                <td className="px-5 py-4 text-right text-gray-600">{formatNumber(withoutPosts)} posts</td>
+                <td className="px-5 py-4 text-right font-semibold text-gray-900">{formatNumber(withPosts)} posts</td>
+                <td className="px-5 py-4 text-right">
+                  <span className="text-xs text-gray-500">
+                    {((withPosts / (withPosts + withoutPosts)) * 100).toFixed(1)}% of total
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Key Insights */}
+      <div className="grid md:grid-cols-2 gap-4">
+        <div className="rounded-xl border-2 p-5" style={{ borderColor: colors.positive, backgroundColor: `${colors.positive}08` }}>
+          <div className="flex items-start gap-3">
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: colors.positive }}>
+              <TrendingUp className="w-5 h-5 text-white" />
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-wider font-semibold mb-1" style={{ color: colors.positive }}>✨ Performance Boost</p>
+              <p className="text-sm text-gray-700">
+                Posts <span className="font-bold">with {currentSignal?.label.toLowerCase()}</span> get{' '}
+                <span className="font-bold" style={{ color: colors.scarlet }}>
+                  {Math.abs(likesDelta).toFixed(0)}% more likes
+                </span>{' '}
+                and{' '}
+                <span className="font-bold" style={{ color: colors.scarlet }}>
+                  {Math.abs(commentsDelta).toFixed(0)}% more comments
+                </span>{' '}
+                on average than posts without.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="rounded-xl border-2 p-5" style={{ borderColor: colors.accent, backgroundColor: `${colors.accent}08` }}>
+          <div className="flex items-start gap-3">
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: colors.accent }}>
+              <Info className="w-5 h-5 text-white" />
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-wider font-semibold mb-1" style={{ color: colors.accent }}>📊 Sample Size</p>
+              <p className="text-sm text-gray-700">
+                Analysis based on <span className="font-bold">{formatNumber(withPosts)} posts with {currentSignal?.label.toLowerCase()}</span>{' '}
+                compared to <span className="font-bold">{formatNumber(withoutPosts)} posts without</span>.
+                This represents <span className="font-bold">{((withPosts / (withPosts + withoutPosts)) * 100).toFixed(1)}%</span> of all athlete content.
+              </p>
             </div>
           </div>
         </div>
@@ -931,7 +1191,7 @@ function PartnershipsTab() {
   };
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-4">
       {/* Sort By Filter */}
       <div className="flex flex-wrap items-center gap-4">
         <div>
@@ -959,15 +1219,21 @@ function PartnershipsTab() {
 
       {/* Top 10 Highlight Section */}
       <div>
-        <h3 className="text-lg font-bold text-gray-400 uppercase tracking-wider mb-4">
-          Top 10 by {sortOptions.find(o => o.key === sortKey)?.label}
-        </h3>
+        <div className="mb-4">
+          <h3 style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }} className="text-2xl font-bold uppercase tracking-tight">
+            <span style={{ color: colors.scarlet }}>TOP 10 </span>
+            <span style={{ color: colors.headerGray }}>BY {sortOptions.find(o => o.key === sortKey)?.label.toUpperCase()}</span>
+          </h3>
+        </div>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
           {top10.map((partner, idx) => (
             <div
               key={partner.brand}
-              className="rounded-xl p-4 border bg-white hover:shadow-md transition-shadow"
-              style={{ borderColor: idx < 3 ? colors.scarlet : colors.cardBorder }}
+              className="rounded-2xl p-4 bg-white hover:shadow-lg transition-shadow"
+              style={{
+                boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
+                borderLeft: idx < 3 ? `4px solid ${colors.scarlet}` : 'none',
+              }}
             >
               <div className="flex items-center gap-2 mb-2">
                 <span
@@ -997,9 +1263,7 @@ function PartnershipsTab() {
       {/* Full Table */}
       <div>
         <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-          <h3 className="text-lg font-bold text-gray-400 uppercase tracking-wider">
-            All Partnerships
-          </h3>
+          <SectionHeader primary="ALL " secondary="PARTNERSHIPS" />
           <div className="relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
             <input
@@ -1015,7 +1279,7 @@ function PartnershipsTab() {
           </div>
         </div>
 
-        <div className="rounded-xl border border-gray-200 overflow-hidden bg-white">
+        <div className="rounded-2xl overflow-hidden bg-white shadow-sm">
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
@@ -1137,284 +1401,221 @@ function PartnershipsTab() {
 // BEST COLLABORATORS TAB
 // ═══════════════════════════════════════════════════════════════
 
-// Ohio State Athletes by EMV (processed from sponsored-posts data - 591 posts total)
-// EMV formula: (totalLikes × $0.20) + (totalComments × $2.00)
-const allAthletes = [
-  { rank: 1, name: "Jeremiah Smith", sport: "Football", posts: 9, avgLikes: 32369, avgComments: 224, totalEmv: 62301 },
-  { rank: 2, name: "Julian Sayin", sport: "Football", posts: 7, avgLikes: 8282, avgComments: 128, totalEmv: 13391 },
-  { rank: 3, name: "Bo Jackson", sport: "Football", posts: 1, avgLikes: 36233, avgComments: 763, totalEmv: 8773 },
-  { rank: 4, name: "Jesse Mendez", sport: "Wrestling", posts: 6, avgLikes: 5789, avgComments: 29, totalEmv: 7295 },
-  { rank: 5, name: "Carnell Tate", sport: "Football", posts: 7, avgLikes: 3812, avgComments: 56, totalEmv: 6133 },
-  { rank: 6, name: "Caleb Downs", sport: "Football", posts: 9, avgLikes: 3233, avgComments: 17, totalEmv: 6129 },
-  { rank: 7, name: "Tavien St. Clair", sport: "Football", posts: 4, avgLikes: 6634, avgComments: 53, totalEmv: 5737 },
-  { rank: 8, name: "Seini Henry", sport: "W. Basketball", posts: 2, avgLikes: 10188, avgComments: 149, totalEmv: 4671 },
-  { rank: 9, name: "Emma Hellenkamp", sport: "Dance", posts: 4, avgLikes: 5503, avgComments: 31, totalEmv: 4657 },
-  { rank: 10, name: "Slane Glover", sport: "Cheer", posts: 19, avgLikes: 809, avgComments: 29, totalEmv: 4181 },
-  { rank: 11, name: "Nolan Baudo", sport: "Football", posts: 2, avgLikes: 5460, avgComments: 266, totalEmv: 3248 },
-  { rank: 12, name: "James Peoples", sport: "Football", posts: 8, avgLikes: 1503, avgComments: 18, totalEmv: 2704 },
-  { rank: 13, name: "Nic Bouzakis", sport: "Wrestling", posts: 4, avgLikes: 2889, avgComments: 18, totalEmv: 2459 },
-  { rank: 14, name: "Lincoln Kienholz", sport: "Football", posts: 3, avgLikes: 3969, avgComments: 12, totalEmv: 2454 },
-  { rank: 15, name: "Jermaine Mathews Jr.", sport: "Football", posts: 1, avgLikes: 10029, avgComments: 139, totalEmv: 2284 },
-  { rank: 16, name: "Sonny Styles", sport: "Football", posts: 6, avgLikes: 1478, avgComments: 24, totalEmv: 2064 },
-  { rank: 17, name: "Ben Davino", sport: "Wrestling", posts: 3, avgLikes: 3101, avgComments: 16, totalEmv: 1957 },
-  { rank: 18, name: "Brandon Cannon", sport: "Wrestling", posts: 2, avgLikes: 4591, avgComments: 12, totalEmv: 1887 },
-  { rank: 19, name: "Colin White", sport: "M. Basketball", posts: 5, avgLikes: 1398, avgComments: 5, totalEmv: 1454 },
-  { rank: 20, name: "Brandon Inniss", sport: "Football", posts: 3, avgLikes: 1551, avgComments: 24, totalEmv: 1079 },
-  { rank: 21, name: "Ethan Onianwa", sport: "Football", posts: 2, avgLikes: 2222, avgComments: 21, totalEmv: 975 },
-  { rank: 22, name: "Brynn Melius", sport: "Dance", posts: 5, avgLikes: 777, avgComments: 19, totalEmv: 974 },
-  { rank: 23, name: "Joey Velazquez", sport: "Football", posts: 4, avgLikes: 434, avgComments: 70, totalEmv: 911 },
-  { rank: 24, name: "Devin Royal", sport: "M. Basketball", posts: 6, avgLikes: 558, avgComments: 8, totalEmv: 776 },
-  { rank: 25, name: "John Mobley Jr.", sport: "M. Basketball", posts: 2, avgLikes: 1471, avgComments: 38, totalEmv: 741 },
-  { rank: 26, name: "Joy Dunne", sport: "W. Hockey", posts: 3, avgLikes: 898, avgComments: 30, totalEmv: 721 },
-  { rank: 27, name: "Gabe Cupps", sport: "M. Basketball", posts: 4, avgLikes: 780, avgComments: 11, totalEmv: 712 },
-  { rank: 28, name: "Eric Mensah", sport: "Football", posts: 3, avgLikes: 701, avgComments: 39, totalEmv: 659 },
-  { rank: 29, name: "Michael Osinski", sport: "Cheer", posts: 12, avgLikes: 183, avgComments: 8, totalEmv: 644 },
-  { rank: 30, name: "Caleb Fyock", sport: "M. Lacrosse", posts: 3, avgLikes: 954, avgComments: 4, totalEmv: 596 },
-  { rank: 31, name: "Bobby Van Buren", sport: "M. Lacrosse", posts: 2, avgLikes: 1085, avgComments: 34, totalEmv: 572 },
-  { rank: 32, name: "Ellie Wagner", sport: "Dance", posts: 2, avgLikes: 1261, avgComments: 15, totalEmv: 565 },
-  { rank: 33, name: "Ivan Njegovan", sport: "M. Basketball", posts: 3, avgLikes: 761, avgComments: 14, totalEmv: 545 },
-  { rank: 34, name: "Devontae Armstrong", sport: "Football", posts: 4, avgLikes: 560, avgComments: 10, totalEmv: 528 },
-  { rank: 35, name: "Devin Sanchez", sport: "Football", posts: 3, avgLikes: 705, avgComments: 14, totalEmv: 509 },
-  { rank: 36, name: "Olivia Taylor", sport: "Dance", posts: 3, avgLikes: 679, avgComments: 13, totalEmv: 486 },
-  { rank: 37, name: "Magdalena Juric", sport: "W. Volleyball", posts: 1, avgLikes: 3, avgComments: 240, totalEmv: 481 },
-  { rank: 38, name: "Eddrick Houston", sport: "Football", posts: 1, avgLikes: 1838, avgComments: 56, totalEmv: 480 },
-  { rank: 39, name: "Bella Eldredge", sport: "Cheer", posts: 12, avgLikes: 148, avgComments: 4, totalEmv: 453 },
-  { rank: 40, name: "Shohaan Singh", sport: "M. Track", posts: 9, avgLikes: 73, avgComments: 17, totalEmv: 439 },
-  { rank: 41, name: "Diana Natalicchio", sport: "Dance", posts: 1, avgLikes: 2007, avgComments: 18, totalEmv: 437 },
-  { rank: 42, name: "Lexi Leistner", sport: "Dance", posts: 2, avgLikes: 606, avgComments: 47, totalEmv: 433 },
-  { rank: 43, name: "Caden Curry", sport: "Football", posts: 3, avgLikes: 616, avgComments: 9, totalEmv: 428 },
-  { rank: 44, name: "Mason Maggs", sport: "Football", posts: 1, avgLikes: 1795, avgComments: 31, totalEmv: 421 },
-  { rank: 45, name: "Quincy Porter", sport: "Football", posts: 5, avgLikes: 343, avgComments: 6, totalEmv: 408 },
-  { rank: 46, name: "Brielle McCoy", sport: "Dance", posts: 3, avgLikes: 460, avgComments: 20, totalEmv: 400 },
-  { rank: 47, name: "Eli Lee", sport: "Football", posts: 2, avgLikes: 937, avgComments: 5, totalEmv: 395 },
-  { rank: 48, name: "Makenna Webster", sport: "W. Field Hockey", posts: 1, avgLikes: 1694, avgComments: 28, totalEmv: 395 },
-  { rank: 49, name: "Cody Haddad", sport: "Football", posts: 1, avgLikes: 1645, avgComments: 32, totalEmv: 393 },
-  { rank: 50, name: "Luke Montgomery", sport: "Football", posts: 1, avgLikes: 1639, avgComments: 32, totalEmv: 392 },
+// Top 5 Athletes by Collab (posts with isOrganizationCollaboration)
+const topCollabAthletes = [
+  { rank: 1, name: "Davison Igbinosun", sport: "Football", posts: 2, emv: 16154, lift: 694 },
+  { rank: 2, name: "Jeremiah Smith", sport: "Football", posts: 1, emv: 13056, lift: 694 },
+  { rank: 3, name: "Brandon Inniss", sport: "Football", posts: 1, emv: 10714, lift: 694 },
+  { rank: 4, name: "Jermaine Mathews Jr.", sport: "Football", posts: 2, emv: 9047, lift: 694 },
+  { rank: 5, name: "Kayden McDonald", sport: "Football", posts: 2, emv: 6720, lift: 694 },
 ];
 
-const topAthletes = allAthletes.slice(0, 10);
-
-// Top 5 Brand Partners (from partnerships data, recalculated with new EMV formula)
-// EMV = (avgLikes × $0.20) + (avgComments × $2.00)
-const topBrandPartners = [
-  { rank: 1, brand: "Red Bull", posts: 1, avgLikes: 171980, avgComments: 631, totalEmv: 35658 },
-  { rank: 2, brand: "Dick's Sporting Goods", posts: 2, avgLikes: 20788, avgComments: 174, totalEmv: 9011 },
-  { rank: 3, brand: "Epic Partner", posts: 1, avgLikes: 37682, avgComments: 121, totalEmv: 7778 },
-  { rank: 4, brand: "Discover", posts: 1, avgLikes: 23610, avgComments: 114, totalEmv: 4950 },
-  { rank: 5, brand: "The Henry Legacy", posts: 1, avgLikes: 15460, avgComments: 226, totalEmv: 3544 },
+// Top 5 Athletes by Logo (posts with hasOrganizationLogo)
+const topLogoAthletes = [
+  { rank: 1, name: "Jeremiah Smith", sport: "Football", posts: 12, emv: 145803, lift: 144 },
+  { rank: 2, name: "Julian Sayin", sport: "Football", posts: 2, emv: 76500, lift: 144 },
+  { rank: 3, name: "Caleb Downs", sport: "Football", posts: 11, emv: 71398, lift: 144 },
+  { rank: 4, name: "Brandon Inniss", sport: "Football", posts: 9, emv: 64552, lift: 144 },
+  { rank: 5, name: "James Peoples", sport: "Football", posts: 10, emv: 36586, lift: 144 },
 ];
+
+// Top 5 Athletes by Mention (posts with hasOrganizationInCaption)
+const topMentionAthletes = [
+  { rank: 1, name: "Caleb Downs", sport: "Football", posts: 7, emv: 76113, lift: 44 },
+  { rank: 2, name: "Carson Hinzman", sport: "Football", posts: 10, emv: 55665, lift: 44 },
+  { rank: 3, name: "Quincy Porter", sport: "Football", posts: 8, emv: 45994, lift: 44 },
+  { rank: 4, name: "JJ Coleman", sport: "W. Gymnastics", posts: 3, emv: 31904, lift: 44 },
+  { rank: 5, name: "John Mobley Jr.", sport: "M. Basketball", posts: 14, emv: 26776, lift: 44 },
+];
+
+// Signal summary stats
+const signalStats = {
+  collab: { posts: 23, totalEmv: 79086, avgEmv: 3439, lift: 694 },
+  logo: { posts: 735, totalEmv: 775595, avgEmv: 1055, lift: 144 },
+  mention: { posts: 1929, totalEmv: 1204091, avgEmv: 624, lift: 44 },
+};
+
+// Reusable athlete table component for IP signals
+function IPSignalTable({
+  title,
+  icon,
+  athletes,
+  avgEmv,
+  lift,
+}: {
+  title: string;
+  icon: React.ReactNode;
+  athletes: typeof topCollabAthletes;
+  avgEmv: number;
+  lift: number;
+}) {
+  return (
+    <div className="rounded-2xl overflow-hidden bg-white shadow-sm">
+      {/* Header */}
+      <div
+        className="px-5 py-4 relative overflow-hidden"
+        style={{ backgroundColor: colors.scarlet }}
+      >
+        {/* Polka dot pattern */}
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: `radial-gradient(circle, white 1px, transparent 1px)`,
+            backgroundSize: '12px 12px',
+          }}
+        />
+        <div className="flex items-center gap-3 relative z-10">
+          <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+            {icon}
+          </div>
+          <div>
+            <h3
+              className="text-white font-bold text-lg uppercase"
+              style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }}
+            >
+              {title}
+            </h3>
+            <p className="text-xs text-white/80">
+              {formatCurrency(avgEmv)} avg EMV • <span className="text-white font-semibold">+{lift}%</span> lift
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Table Header */}
+      <div className="grid grid-cols-[40px_1fr_70px_90px_70px] gap-2 px-5 py-3 text-xs uppercase tracking-wider text-gray-500 border-b border-gray-100">
+        <span className="text-center">#</span>
+        <span>Athlete</span>
+        <span className="text-center">Posts</span>
+        <span className="text-right">EMV</span>
+        <span className="text-right">Lift</span>
+      </div>
+
+      {/* Table Body */}
+      <div>
+        {athletes.map((athlete, idx) => (
+          <div
+            key={athlete.name}
+            className={`grid grid-cols-[40px_1fr_70px_90px_70px] gap-2 px-5 py-3 items-center border-b border-gray-50 hover:bg-gray-50 transition-colors ${idx % 2 === 1 ? 'bg-gray-50/50' : ''}`}
+          >
+            <span
+              className="w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold mx-auto"
+              style={{
+                backgroundColor: idx < 3 ? colors.scarlet : 'transparent',
+                color: idx < 3 ? 'white' : colors.scarlet,
+                border: idx >= 3 ? `2px solid ${colors.scarlet}` : 'none',
+              }}
+            >
+              {athlete.rank}
+            </span>
+            <div>
+              <p className="text-gray-900 font-semibold">{athlete.name}</p>
+              <p className="text-xs text-gray-500">{athlete.sport}</p>
+            </div>
+            <span className="text-center text-gray-600">{athlete.posts}</span>
+            <span className="text-right font-bold" style={{ color: colors.scarlet }}>{formatCurrency(athlete.emv)}</span>
+            <span className="text-right font-medium" style={{ color: colors.positive }}>+{lift}%</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function BestCollaboratorsTab() {
   return (
-    <div className="space-y-8">
-      {/* Data Source Context */}
-      <div className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 flex items-start gap-3">
+    <div className="space-y-4">
+      {/* Summary Cards */}
+      <div className="grid grid-cols-3 gap-4">
+        <div
+          className="rounded-2xl p-5 text-center relative overflow-hidden"
+          style={{ backgroundColor: colors.scarlet }}
+        >
+          <div
+            className="absolute inset-0 opacity-10"
+            style={{
+              backgroundImage: `radial-gradient(circle, white 1px, transparent 1px)`,
+              backgroundSize: '12px 12px',
+            }}
+          />
+          <div className="relative z-10">
+            <Handshake className="w-6 h-6 text-white mx-auto mb-2" />
+            <p className="text-xs uppercase tracking-wider text-white/80 mb-1">Collab Posts</p>
+            <p className="text-3xl font-black text-white">{signalStats.collab.posts}</p>
+            <p className="text-sm text-white/90 mt-1 font-semibold">+{signalStats.collab.lift}% lift</p>
+          </div>
+        </div>
+        <div
+          className="rounded-2xl p-5 text-center relative overflow-hidden"
+          style={{ backgroundColor: colors.scarlet }}
+        >
+          <div
+            className="absolute inset-0 opacity-10"
+            style={{
+              backgroundImage: `radial-gradient(circle, white 1px, transparent 1px)`,
+              backgroundSize: '12px 12px',
+            }}
+          />
+          <div className="relative z-10">
+            <Tag className="w-6 h-6 text-white mx-auto mb-2" />
+            <p className="text-xs uppercase tracking-wider text-white/80 mb-1">Visual IP Posts</p>
+            <p className="text-3xl font-black text-white">{formatNumber(signalStats.logo.posts)}</p>
+            <p className="text-sm text-white/90 mt-1 font-semibold">+{signalStats.logo.lift}% lift</p>
+          </div>
+        </div>
+        <div
+          className="rounded-2xl p-5 text-center relative overflow-hidden"
+          style={{ backgroundColor: colors.scarlet }}
+        >
+          <div
+            className="absolute inset-0 opacity-10"
+            style={{
+              backgroundImage: `radial-gradient(circle, white 1px, transparent 1px)`,
+              backgroundSize: '12px 12px',
+            }}
+          />
+          <div className="relative z-10">
+            <AtSign className="w-6 h-6 text-white mx-auto mb-2" />
+            <p className="text-xs uppercase tracking-wider text-white/80 mb-1">Mention Posts</p>
+            <p className="text-3xl font-black text-white">{formatNumber(signalStats.mention.posts)}</p>
+            <p className="text-sm text-white/90 mt-1 font-semibold">+{signalStats.mention.lift}% lift</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Three IP Signal Tables - STACKED VERTICALLY */}
+      <div className="space-y-6">
+        <IPSignalTable
+          title="collab"
+          icon={<Handshake className="w-5 h-5 text-white" />}
+          athletes={topCollabAthletes}
+          avgEmv={signalStats.collab.avgEmv}
+          lift={signalStats.collab.lift}
+        />
+        <IPSignalTable
+          title="logo"
+          icon={<Tag className="w-5 h-5 text-white" />}
+          athletes={topLogoAthletes}
+          avgEmv={signalStats.logo.avgEmv}
+          lift={signalStats.logo.lift}
+        />
+        <IPSignalTable
+          title="mention"
+          icon={<AtSign className="w-5 h-5 text-white" />}
+          athletes={topMentionAthletes}
+          avgEmv={signalStats.mention.avgEmv}
+          lift={signalStats.mention.lift}
+        />
+      </div>
+
+      {/* Info Banner */}
+      <div className="bg-white rounded-2xl shadow-sm px-4 py-3 flex items-start gap-3">
         <Info className="w-5 h-5 text-gray-400 mt-0.5 flex-shrink-0" />
         <p className="text-sm text-gray-600">
-          Rankings based on <span className="font-semibold">591 sponsored posts</span> from Ohio State athletes.
-          EMV calculated as (likes × $0.20) + (comments × $2.00).
+          <span className="font-semibold">Top 5 athletes</span> for each IP signal type, ranked by total EMV.
+          Lift represents engagement increase vs posts without any IP signals.
+          EMV formula: (likes × $0.20) + (comments × $2.00).
         </p>
-      </div>
-
-      <div className="grid md:grid-cols-2 gap-8">
-        {/* Top Athletes Section */}
-        <div>
-          <h3 className="text-lg font-bold text-gray-400 uppercase tracking-wider mb-4">
-            Top 10 Athletes by EMV
-          </h3>
-          <div className="rounded-xl border border-gray-200 bg-white overflow-hidden">
-            <table className="w-full">
-              <thead>
-                <tr style={{ backgroundColor: colors.scarlet }}>
-                  <th className="text-center px-3 py-3 text-xs font-semibold uppercase tracking-wider text-white w-10">
-                    #
-                  </th>
-                  <th className="text-left px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">
-                    Athlete
-                  </th>
-                  <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">
-                    Posts
-                  </th>
-                  <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">
-                    EMV
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {topAthletes.map((athlete, idx) => (
-                  <tr
-                    key={athlete.name}
-                    className={`border-b border-gray-100 hover:bg-gray-50 ${idx % 2 === 1 ? 'bg-gray-50/50' : ''}`}
-                  >
-                    <td className="px-3 py-3 text-center">
-                      <span
-                        className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mx-auto"
-                        style={{
-                          backgroundColor: idx < 3 ? colors.scarlet : colors.gray,
-                          color: colors.white,
-                        }}
-                      >
-                        {athlete.rank}
-                      </span>
-                    </td>
-                    <td className="px-4 py-3">
-                      <p className="font-semibold text-gray-900">{athlete.name}</p>
-                      <p className="text-xs text-gray-500">{athlete.sport}</p>
-                    </td>
-                    <td className="px-4 py-3 text-right text-sm text-gray-600">
-                      {athlete.posts}
-                    </td>
-                    <td className="px-4 py-3 text-right font-bold" style={{ color: colors.scarlet }}>
-                      {formatCurrency(athlete.totalEmv)}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        {/* Top Brand Partners Section */}
-        <div>
-          <h3 className="text-lg font-bold text-gray-400 uppercase tracking-wider mb-4">
-            Top 5 Brand Partners by EMV
-          </h3>
-          <div className="rounded-xl border border-gray-200 bg-white overflow-hidden">
-            <table className="w-full">
-              <thead>
-                <tr style={{ backgroundColor: colors.scarlet }}>
-                  <th className="text-center px-3 py-3 text-xs font-semibold uppercase tracking-wider text-white w-10">
-                    #
-                  </th>
-                  <th className="text-left px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">
-                    Brand
-                  </th>
-                  <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">
-                    Posts
-                  </th>
-                  <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">
-                    EMV
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {topBrandPartners.map((partner, idx) => (
-                  <tr
-                    key={partner.brand}
-                    className={`border-b border-gray-100 hover:bg-gray-50 ${idx % 2 === 1 ? 'bg-gray-50/50' : ''}`}
-                  >
-                    <td className="px-3 py-3 text-center">
-                      <span
-                        className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mx-auto"
-                        style={{
-                          backgroundColor: idx < 3 ? colors.scarlet : colors.gray,
-                          color: colors.white,
-                        }}
-                      >
-                        {partner.rank}
-                      </span>
-                    </td>
-                    <td className="px-4 py-3 font-semibold text-gray-900">
-                      {partner.brand}
-                    </td>
-                    <td className="px-4 py-3 text-right text-sm text-gray-600">
-                      {partner.posts}
-                    </td>
-                    <td className="px-4 py-3 text-right font-bold" style={{ color: colors.scarlet }}>
-                      {formatCurrency(partner.totalEmv)}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          {/* Athlete Performance Summary Cards */}
-          <div className="mt-6 grid grid-cols-2 gap-4">
-            <div className="rounded-xl p-4 border border-gray-200 bg-white">
-              <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Top Athlete EMV</p>
-              <p className="text-2xl font-black" style={{ color: colors.scarlet }}>
-                {formatCurrency(topAthletes[0].totalEmv)}
-              </p>
-              <p className="text-sm text-gray-600 mt-1">{topAthletes[0].name}</p>
-            </div>
-            <div className="rounded-xl p-4 border border-gray-200 bg-white">
-              <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Top Avg Likes</p>
-              <p className="text-2xl font-black" style={{ color: colors.scarlet }}>
-                {formatNumber(topAthletes.find(a => a.name === "Bo Jackson")?.avgLikes || 0)}
-              </p>
-              <p className="text-sm text-gray-600 mt-1">Bo Jackson</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Full Athlete Stats */}
-      <div>
-        <h3 className="text-lg font-bold text-gray-400 uppercase tracking-wider mb-4">
-          All Athletes by EMV ({allAthletes.length} total)
-        </h3>
-        <div className="rounded-xl border border-gray-200 bg-white overflow-hidden max-h-[600px] overflow-y-auto">
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead className="sticky top-0">
-                <tr style={{ backgroundColor: colors.scarlet }}>
-                  <th className="text-center px-3 py-3 text-xs font-semibold uppercase tracking-wider text-white w-10">
-                    #
-                  </th>
-                  <th className="text-left px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">
-                    Athlete
-                  </th>
-                  <th className="text-left px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">
-                    Sport
-                  </th>
-                  <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">
-                    Posts
-                  </th>
-                  <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">
-                    Avg Likes
-                  </th>
-                  <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">
-                    Avg Comments
-                  </th>
-                  <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">
-                    Total EMV
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {allAthletes.map((athlete, idx) => (
-                  <tr
-                    key={athlete.name}
-                    className={`border-b border-gray-100 hover:bg-gray-50 ${idx % 2 === 1 ? 'bg-gray-50/50' : ''}`}
-                  >
-                    <td className="px-3 py-3 text-center text-sm text-gray-400 font-medium">
-                      {athlete.rank}
-                    </td>
-                    <td className="px-4 py-3 font-semibold text-gray-900">
-                      {athlete.name}
-                    </td>
-                    <td className="px-4 py-3 text-gray-600">
-                      {athlete.sport}
-                    </td>
-                    <td className="px-4 py-3 text-right text-gray-600">
-                      {athlete.posts}
-                    </td>
-                    <td className="px-4 py-3 text-right text-gray-900">
-                      {formatNumber(athlete.avgLikes)}
-                    </td>
-                    <td className="px-4 py-3 text-right text-gray-900">
-                      {formatNumber(athlete.avgComments)}
-                    </td>
-                    <td className="px-4 py-3 text-right font-bold" style={{ color: colors.scarlet }}>
-                      {formatCurrency(athlete.totalEmv)}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
       </div>
     </div>
   );
@@ -1424,52 +1625,119 @@ function BestCollaboratorsTab() {
 // BENCHMARK TAB
 // ═══════════════════════════════════════════════════════════════
 
-// Big 10 Conference benchmark data (5 schools with available IP data)
+// Big 10 Conference benchmark data (17 schools - all current Big 10 members)
 const big10Schools = [
   { name: 'Nebraska', conf: 'Big 10', followers: 3012749, posts: 3049, ipPosts: 1658, adoption: 54.4, logo: 49.1, mention: 20.2, collab: 0 },
-  { name: 'Michigan State', conf: 'Big 10', followers: 802304, posts: 2216, ipPosts: 1039, adoption: 46.9, logo: 38.3, mention: 20.1, collab: 2.9 },
+  { name: 'Indiana', conf: 'Big 10', followers: 900000, posts: 1635, ipPosts: 831, adoption: 50.8, logo: 50.8, mention: 0, collab: 0 },
+  { name: 'Michigan', conf: 'Big 10', followers: 4500000, posts: 4042, ipPosts: 2024, adoption: 50.1, logo: 50.0, mention: 0, collab: 0.1 },
+  { name: 'Michigan State', conf: 'Big 10', followers: 802304, posts: 2216, ipPosts: 1039, adoption: 46.9, logo: 38.3, mention: 20.1, collab: 2.93 },
+  { name: 'Oregon', conf: 'Big 10', followers: 1800000, posts: 2073, ipPosts: 948, adoption: 45.7, logo: 44.9, mention: 0, collab: 2.36 },
   { name: 'Maryland', conf: 'Big 10', followers: 858916, posts: 2120, ipPosts: 925, adoption: 43.6, logo: 38.1, mention: 18.5, collab: 0 },
+  { name: 'Rutgers', conf: 'Big 10', followers: 800000, posts: 2036, ipPosts: 732, adoption: 35.9, logo: 35.9, mention: 0, collab: 0 },
+  { name: 'Purdue', conf: 'Big 10', followers: 1300000, posts: 5142, ipPosts: 1772, adoption: 34.5, logo: 31.4, mention: 12.7, collab: 3.29 },
+  { name: 'Iowa', conf: 'Big 10', followers: 1500000, posts: 2254, ipPosts: 753, adoption: 33.4, logo: 33.4, mention: 0, collab: 0 },
   { name: 'Ohio State', conf: 'Big 10', followers: 5543153, posts: 8918, ipPosts: 2401, adoption: 26.9, logo: 8.2, mention: 21.6, collab: 0.26 },
+  { name: 'Washington', conf: 'Big 10', followers: 1600000, posts: 2344, ipPosts: 615, adoption: 26.2, logo: 24.1, mention: 0, collab: 4.14 },
   { name: 'Penn State', conf: 'Big 10', followers: 4032162, posts: 7202, ipPosts: 1686, adoption: 23.4, logo: 7.6, mention: 18.8, collab: 0.01 },
+  { name: 'Minnesota', conf: 'Big 10', followers: 1200000, posts: 2354, ipPosts: 357, adoption: 15.2, logo: 11.5, mention: 0, collab: 5.35 },
+  { name: 'Illinois', conf: 'Big 10', followers: 1100000, posts: 2731, ipPosts: 374, adoption: 13.7, logo: 12.6, mention: 0, collab: 1.90 },
+  { name: 'Wisconsin', conf: 'Big 10', followers: 2000000, posts: 5664, ipPosts: 510, adoption: 9.0, logo: 9.0, mention: 0, collab: 0 },
+  { name: 'UCLA', conf: 'Big 10', followers: 2500000, posts: 6482, ipPosts: 514, adoption: 7.9, logo: 7.9, mention: 0, collab: 0 },
+  { name: 'USC', conf: 'Big 10', followers: 3000000, posts: 5328, ipPosts: 353, adoption: 6.6, logo: 6.6, mention: 0, collab: 0.02 },
 ];
 
-// NCAA D1 schools benchmark data (16 schools with available IP data)
+// NCAA D1 schools benchmark data (71 schools with 1000+ posts)
 const ncaaD1Schools = [
-  { name: 'Old Dominion', conf: 'Sun Belt', followers: 406830, posts: 1564, adoption: 56.8, logo: 53.6, mention: 14.6, collab: 1.34 },
-  { name: 'Nebraska', conf: 'Big 10', followers: 3012749, posts: 3049, adoption: 54.4, logo: 49.1, mention: 20.2, collab: 0 },
-  { name: 'Virginia Tech', conf: 'ACC', followers: 1787521, posts: 3735, adoption: 49.7, logo: 45.9, mention: 16.1, collab: 0.11 },
-  { name: 'Michigan State', conf: 'Big 10', followers: 802304, posts: 2216, adoption: 46.9, logo: 38.3, mention: 20.1, collab: 2.93 },
-  { name: 'Maryland', conf: 'Big 10', followers: 858916, posts: 2120, adoption: 43.6, logo: 38.1, mention: 18.5, collab: 0 },
-  { name: 'UTSA', conf: 'AAC', followers: 832689, posts: 3339, adoption: 41.1, logo: 32.3, mention: 19.1, collab: 9.52 },
-  { name: 'Baylor', conf: 'Big 12', followers: 2190438, posts: 6156, adoption: 38.8, logo: 29.5, mention: 22.9, collab: 3.07 },
-  { name: 'Auburn', conf: 'SEC', followers: 2274859, posts: 5314, adoption: 33.8, logo: 12.3, mention: 25.9, collab: 0.40 },
-  { name: 'Texas A&M', conf: 'SEC', followers: 1817133, posts: 3419, adoption: 32.4, logo: 15.5, mention: 24.5, collab: 0 },
-  { name: 'Washington St', conf: 'Pac-12', followers: 186487, posts: 948, adoption: 28.2, logo: 12.1, mention: 19.4, collab: 4.75 },
-  { name: 'Ohio State', conf: 'Big 10', followers: 5543153, posts: 8918, adoption: 26.9, logo: 8.2, mention: 21.6, collab: 0.26 },
-  { name: 'Cincinnati', conf: 'Big 12', followers: 1031767, posts: 4309, adoption: 26.2, logo: 10.8, mention: 18.6, collab: 0.51 },
-  { name: 'LSU', conf: 'SEC', followers: 5116014, posts: 4269, adoption: 25.8, logo: 10.2, mention: 18.6, collab: 0 },
-  { name: 'UCF', conf: 'Big 12', followers: 1137996, posts: 1756, adoption: 24.0, logo: 16.7, mention: 11.0, collab: 0 },
-  { name: 'Penn State', conf: 'Big 10', followers: 4032162, posts: 7202, adoption: 23.4, logo: 7.6, mention: 18.8, collab: 0.01 },
-  { name: 'Virginia', conf: 'ACC', followers: 2052253, posts: 5926, adoption: 22.7, logo: 7.7, mention: 18.1, collab: 0.61 },
+  { name: 'Old Dominion', conf: 'Sun Belt', posts: 1564, adoption: 56.7, logo: 53.5, mention: 14.6, collab: 1.34 },
+  { name: 'Nebraska', conf: 'Big 10', posts: 3049, adoption: 54.3, logo: 49.1, mention: 20.2, collab: 0 },
+  { name: 'Miami', conf: 'ACC', posts: 1553, adoption: 53.8, logo: 53.8, mention: 0, collab: 0 },
+  { name: 'New Mexico', conf: 'MWC', posts: 1182, adoption: 53.2, logo: 50.2, mention: 21.6, collab: 4.56 },
+  { name: 'Texas Tech', conf: 'Big 12', posts: 2355, adoption: 52.9, logo: 52.3, mention: 0, collab: 1.18 },
+  { name: 'Indiana', conf: 'Big 10', posts: 1635, adoption: 50.8, logo: 50.8, mention: 0, collab: 0 },
+  { name: 'Michigan', conf: 'Big 10', posts: 4042, adoption: 50.0, logo: 50.0, mention: 0, collab: 0.09 },
+  { name: 'Virginia Tech', conf: 'SEC', posts: 3735, adoption: 49.6, logo: 45.9, mention: 16.0, collab: 0.10 },
+  { name: 'Houston', conf: 'Big 12', posts: 1987, adoption: 48.6, logo: 47.2, mention: 0, collab: 3.97 },
+  { name: 'Kentucky', conf: 'SEC', posts: 2924, adoption: 48.5, logo: 46.5, mention: 0, collab: 6.63 },
+  { name: 'Michigan State', conf: 'Big 10', posts: 2216, adoption: 46.8, logo: 38.3, mention: 20.1, collab: 2.93 },
+  { name: 'Notre Dame', conf: 'ACC', posts: 2747, adoption: 46.7, logo: 43.4, mention: 19.0, collab: 0.07 },
+  { name: 'Oregon', conf: 'Big 10', posts: 2073, adoption: 45.7, logo: 44.9, mention: 0, collab: 2.36 },
+  { name: 'Oklahoma', conf: 'SEC', posts: 2813, adoption: 45.6, logo: 45.6, mention: 0, collab: 0 },
+  { name: 'NC State', conf: 'ACC', posts: 2565, adoption: 45.5, logo: 44.7, mention: 0, collab: 3.07 },
+  { name: 'BYU', conf: 'Big 12', posts: 5050, adoption: 45.5, logo: 39.7, mention: 15.0, collab: 3.36 },
+  { name: 'Maryland', conf: 'Big 10', posts: 2120, adoption: 43.6, logo: 38.1, mention: 18.4, collab: 0 },
+  { name: 'Ole Miss', conf: 'SEC', posts: 2309, adoption: 43.4, logo: 43.1, mention: 0, collab: 1.25 },
+  { name: 'Wichita State', conf: 'AAC', posts: 1740, adoption: 42.1, logo: 36.9, mention: 17.9, collab: 2.64 },
+  { name: 'West Virginia', conf: 'Big 12', posts: 2288, adoption: 41.6, logo: 41.6, mention: 0, collab: 0 },
+  { name: 'SMU', conf: 'AAC', posts: 1848, adoption: 41.6, logo: 41.5, mention: 0, collab: 0.54 },
+  { name: 'UTSA', conf: 'AAC', posts: 3339, adoption: 41.4, logo: 32.7, mention: 19.1, collab: 9.52 },
+  { name: 'Arizona', conf: 'Big 12', posts: 4312, adoption: 41.2, logo: 38.8, mention: 9.6, collab: 1.60 },
+  { name: 'Missouri', conf: 'SEC', posts: 5643, adoption: 40.5, logo: 35.5, mention: 20.1, collab: 1.94 },
+  { name: 'Georgia Tech', conf: 'ACC', posts: 2066, adoption: 40.4, logo: 38.9, mention: 0, collab: 5.61 },
+  { name: 'Florida State', conf: 'ACC', posts: 2130, adoption: 40.1, logo: 40.1, mention: 0, collab: 0 },
+  { name: 'Boston College', conf: 'ACC', posts: 1539, adoption: 39.9, logo: 38.5, mention: 0, collab: 6.10 },
+  { name: 'Baylor', conf: 'Big 12', posts: 6486, adoption: 38.3, logo: 29.8, mention: 21.9, collab: 2.99 },
+  { name: 'Alabama', conf: 'SEC', posts: 5653, adoption: 37.4, logo: 33.0, mention: 16.7, collab: 2.49 },
+  { name: 'Rutgers', conf: 'Big 10', posts: 2036, adoption: 35.9, logo: 35.9, mention: 0, collab: 0 },
+  { name: 'Purdue', conf: 'Big 10', posts: 5142, adoption: 34.4, logo: 31.4, mention: 12.7, collab: 3.28 },
+  { name: 'Mississippi', conf: 'SEC', posts: 2239, adoption: 34.3, logo: 34.3, mention: 0, collab: 0 },
+  { name: 'Arkansas', conf: 'SEC', posts: 5597, adoption: 34.0, logo: 31.1, mention: 10.3, collab: 0.91 },
+  { name: 'Auburn', conf: 'SEC', posts: 5314, adoption: 33.7, logo: 12.3, mention: 25.9, collab: 0.39 },
+  { name: 'Iowa', conf: 'Big 10', posts: 2254, adoption: 33.4, logo: 33.4, mention: 0, collab: 0 },
+  { name: 'Texas A&M', conf: 'SEC', posts: 3419, adoption: 32.3, logo: 15.4, mention: 24.5, collab: 0 },
+  { name: 'Arizona State', conf: 'Big 12', posts: 6782, adoption: 31.0, logo: 27.4, mention: 10.9, collab: 3.05 },
+  { name: 'Vanderbilt', conf: 'SEC', posts: 2246, adoption: 29.9, logo: 29.2, mention: 0, collab: 1.06 },
+  { name: 'George Mason', conf: 'A-10', posts: 1959, adoption: 28.1, logo: 23.1, mention: 11.9, collab: 0.25 },
+  { name: 'Texas', conf: 'SEC', posts: 5723, adoption: 27.1, logo: 27.1, mention: 0, collab: 0 },
+  { name: 'Ohio State', conf: 'Big 10', posts: 8918, adoption: 26.9, logo: 8.2, mention: 21.6, collab: 0.26 },
+  { name: 'San Diego State', conf: 'MWC', posts: 3406, adoption: 26.7, logo: 26.7, mention: 0, collab: 0.02 },
+  { name: 'Washington', conf: 'Big 10', posts: 2344, adoption: 26.2, logo: 24.1, mention: 0, collab: 4.13 },
+  { name: 'Cincinnati', conf: 'Big 12', posts: 4309, adoption: 26.1, logo: 10.8, mention: 18.6, collab: 0.51 },
+  { name: 'TCU', conf: 'Big 12', posts: 1707, adoption: 25.7, logo: 25.7, mention: 0, collab: 0 },
+  { name: 'LSU', conf: 'SEC', posts: 4269, adoption: 25.7, logo: 10.1, mention: 18.6, collab: 0 },
+  { name: 'Colorado', conf: 'Big 12', posts: 1418, adoption: 24.6, logo: 24.6, mention: 0, collab: 0 },
+  { name: 'UCF', conf: 'Big 12', posts: 1756, adoption: 23.9, logo: 16.6, mention: 10.9, collab: 0 },
+  { name: 'Penn State', conf: 'Big 10', posts: 7202, adoption: 23.4, logo: 7.6, mention: 18.8, collab: 0.01 },
+  { name: 'San Diego', conf: 'WCC', posts: 1974, adoption: 23.1, logo: 20.3, mention: 9.2, collab: 0.05 },
+  { name: 'Kansas', conf: 'Big 12', posts: 2423, adoption: 23.0, logo: 22.4, mention: 0, collab: 0.82 },
+  { name: 'Virginia', conf: 'ACC', posts: 5926, adoption: 22.7, logo: 7.8, mention: 18.0, collab: 0.60 },
+  { name: 'Iowa State', conf: 'Big 12', posts: 2248, adoption: 22.5, logo: 22.4, mention: 0, collab: 0.13 },
+  { name: 'Kansas State', conf: 'Big 12', posts: 1680, adoption: 18.2, logo: 18.2, mention: 0, collab: 0 },
+  { name: 'Utah', conf: 'Big 12', posts: 2152, adoption: 18.2, logo: 18.2, mention: 0, collab: 0 },
+  { name: 'Oklahoma State', conf: 'Big 12', posts: 1934, adoption: 18.0, logo: 18.0, mention: 0, collab: 0 },
+  { name: 'Duke', conf: 'ACC', posts: 1951, adoption: 16.3, logo: 15.2, mention: 0, collab: 1.94 },
+  { name: 'Minnesota', conf: 'Big 10', posts: 2354, adoption: 15.1, logo: 11.5, mention: 0, collab: 5.35 },
+  { name: 'Tennessee', conf: 'SEC', posts: 2459, adoption: 13.7, logo: 12.4, mention: 0, collab: 1.70 },
+  { name: 'Illinois', conf: 'Big 10', posts: 2731, adoption: 13.6, logo: 12.5, mention: 0, collab: 1.90 },
+  { name: 'Georgia', conf: 'SEC', posts: 5016, adoption: 12.7, logo: 12.7, mention: 0, collab: 0 },
+  { name: 'Florida', conf: 'SEC', posts: 2735, adoption: 12.6, logo: 12.6, mention: 0, collab: 0 },
+  { name: 'Boise State', conf: 'MWC', posts: 4000, adoption: 12.2, logo: 11.7, mention: 0, collab: 1.02 },
+  { name: 'Pittsburgh', conf: 'ACC', posts: 2475, adoption: 11.7, logo: 11.6, mention: 0, collab: 0.16 },
+  { name: 'UNC', conf: 'ACC', posts: 2744, adoption: 11.1, logo: 11.1, mention: 0, collab: 0 },
+  { name: 'Clemson', conf: 'ACC', posts: 3013, adoption: 10.2, logo: 10.2, mention: 0, collab: 0.03 },
+  { name: 'Wisconsin', conf: 'Big 10', posts: 5664, adoption: 9.0, logo: 9.0, mention: 0, collab: 0 },
+  { name: 'UCLA', conf: 'Big 10', posts: 6482, adoption: 7.9, logo: 7.9, mention: 0, collab: 0 },
+  { name: 'Creighton', conf: 'Big East', posts: 2553, adoption: 7.4, logo: 6.4, mention: 0, collab: 1.25 },
+  { name: 'Robert Morris', conf: 'Horizon', posts: 2687, adoption: 7.3, logo: 7.3, mention: 0, collab: 0 },
+  { name: 'USC', conf: 'Big 10', posts: 5328, adoption: 6.6, logo: 6.6, mention: 0, collab: 0.01 },
 ];
 
 const conferenceAvg = {
-  adoption: 39.0,
-  logo: 28.3,
-  mention: 19.8,
-  collab: 0.63,
+  adoption: 30.8,
+  logo: 27.0,
+  mention: 6.6,
+  collab: 1.2,
 };
 
 const ncaaD1Avg = {
-  adoption: 35.9,
-  logo: 24.2,
-  mention: 19.2,
-  collab: 1.47,
+  adoption: 31.4,
+  logo: 28.1,
+  mention: 6.5,
+  collab: 1.3,
 };
 
 const ohioStateRank = {
-  conference: { adoption: 4, logo: 4, mention: 1, collab: 2, total: 5 },
-  ncaa: { adoption: 11, logo: 14, mention: 4, collab: 9, total: 16 },
+  conference: { adoption: 10, logo: 14, mention: 1, collab: 7, total: 17 },
+  ncaa: { adoption: 41, logo: 66, mention: 6, collab: 35, total: 71 },
 };
 
 function BenchmarkTab() {
@@ -1490,14 +1758,14 @@ function BenchmarkTab() {
   const collabDelta = ohioState.collab - avg.collab;
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4">
       {/* Info Banner */}
-      <div className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3">
+      <div className="bg-white rounded-2xl shadow-sm px-4 py-3">
         <p className="text-sm text-gray-600">
           <span className="font-semibold">Benchmark</span> shows how often Ohio State athletes use IP elements (logos, mentions, collaborations) in social content compared to other schools.
         </p>
         <div className="flex gap-6 mt-2 text-xs text-gray-500">
-          <span><span className="inline-block w-2 h-2 rounded-full mr-1" style={{ backgroundColor: colors.scarlet }}></span> {benchmarkLabel}: Compare against {isConference ? 'other Big 10 schools' : '16 NCAA D1 schools'}</span>
+          <span><span className="inline-block w-2 h-2 rounded-full mr-1" style={{ backgroundColor: colors.scarlet }}></span> {benchmarkLabel}: Compare against {isConference ? 'other Big 10 schools' : '71 NCAA D1 schools'}</span>
         </div>
       </div>
 
@@ -1531,7 +1799,7 @@ function BenchmarkTab() {
       {/* Summary Row */}
       <div className="grid md:grid-cols-3 gap-4">
         {/* Overall Rank */}
-        <div className="rounded-xl border border-gray-200 bg-white p-5">
+        <div className="rounded-2xl bg-white p-5 shadow-sm">
           <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Overall IP Adoption</p>
           <div className="flex items-end gap-2">
             <p className="text-4xl font-black" style={{ color: colors.scarlet }}>#{ranks.adoption}</p>
@@ -1541,7 +1809,7 @@ function BenchmarkTab() {
         </div>
 
         {/* Your Adoption */}
-        <div className="rounded-xl border border-gray-200 bg-white p-5">
+        <div className="rounded-2xl bg-white p-5 shadow-sm">
           <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Your IP Adoption</p>
           <div className="flex items-end gap-2">
             <p className="text-4xl font-black text-gray-900">{ohioState.adoption}%</p>
@@ -1570,15 +1838,15 @@ function BenchmarkTab() {
       {/* IP Signal Comparison Cards */}
       <div className="grid md:grid-cols-2 gap-4">
         {/* Logo */}
-        <div className="rounded-xl border border-gray-200 bg-white p-5">
+        <div className="rounded-2xl bg-white p-5 shadow-sm">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: `${colors.scarlet}15` }}>
                 <Tag className="w-5 h-5" style={{ color: colors.scarlet }} />
               </div>
               <div>
-                <h4 className="font-bold text-gray-900">Logo</h4>
-                <p className="text-xs text-gray-500">% of posts with logos</p>
+                <h4 className="font-bold text-gray-900">Visual IP</h4>
+                <p className="text-xs text-gray-500">% of posts with visual IP</p>
               </div>
             </div>
             <div className="text-right">
@@ -1668,7 +1936,7 @@ function BenchmarkTab() {
         </div>
 
         {/* Collaboration */}
-        <div className="rounded-xl border border-gray-200 bg-white p-5">
+        <div className="rounded-2xl bg-white p-5 shadow-sm">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: `${colors.scarlet}15` }}>
@@ -1717,7 +1985,7 @@ function BenchmarkTab() {
         </div>
 
         {/* Adoption Rate */}
-        <div className="rounded-xl border border-gray-200 bg-white p-5">
+        <div className="rounded-2xl bg-white p-5 shadow-sm">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: `${colors.scarlet}15` }}>
@@ -1766,22 +2034,134 @@ function BenchmarkTab() {
         </div>
       </div>
 
+      {/* Performance Distribution Slider */}
+      <div className="bg-white rounded-2xl p-5 shadow-sm">
+        <SectionHeader primary="PERFORMANCE " secondary="DISTRIBUTION" />
+        <p className="text-sm text-gray-500 mt-2 mb-4">How Ohio State's IP adoption compares across {benchmarkLabel.toLowerCase()}</p>
+
+        {/* Filters for metric selection */}
+        <div className="flex items-center gap-4 mb-4">
+          <span className="text-xs font-semibold uppercase tracking-wider text-gray-500">View by:</span>
+          <div className="flex gap-2">
+            <button className="px-3 py-1.5 text-xs font-semibold rounded-md" style={{ backgroundColor: colors.scarlet, color: colors.white }}>
+              IP ADOPTION
+            </button>
+          </div>
+        </div>
+
+        {/* Distribution Bar */}
+        <div className="relative mb-8">
+          {/* Labels */}
+          <div className="flex justify-between text-xs uppercase tracking-wider text-gray-400 mb-3">
+            <span>WORST</span>
+            <span>AVERAGE</span>
+            <span>TOP</span>
+          </div>
+
+          {/* Bar */}
+          <div className="relative h-12 rounded-lg overflow-hidden" style={{ background: `linear-gradient(90deg, #e5e7eb 0%, #9ca3af 50%, #374151 100%)` }}>
+            {/* Ohio State Marker */}
+            <div
+              className="absolute top-0 bottom-0 flex flex-col items-center justify-center"
+              style={{
+                left: `${((ohioState.adoption - 5) / 55) * 100}%`,
+                transform: 'translateX(-50%)'
+              }}
+            >
+              <div className="w-1 h-full" style={{ backgroundColor: colors.scarlet }}></div>
+              <div
+                className="absolute -top-12 px-3 py-2 rounded-lg shadow-lg whitespace-nowrap"
+                style={{ backgroundColor: colors.scarlet }}
+              >
+                <p className="text-white font-bold text-sm">OHIO STATE</p>
+                <p className="text-white text-xs">Top {Math.round(((ranks.adoption) / ranks.total) * 100)}%</p>
+                <p className="text-white text-xs opacity-90">of {isConference ? 'conference' : 'D1 schools'}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Scale Labels */}
+          <div className="flex justify-between text-xs text-gray-500 mt-2">
+            <span>6.6%</span>
+            <span>{avg.adoption.toFixed(1)}%</span>
+            <span>60.8%</span>
+          </div>
+        </div>
+
+        {/* Stats Grid */}
+        <div className="grid grid-cols-3 gap-4 mt-6 pt-6 border-t border-gray-100">
+          <div className="text-center">
+            <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">WORST</p>
+            <p className="text-2xl font-bold text-gray-900">6.6%</p>
+            <p className="text-xs text-gray-400">USC</p>
+          </div>
+          <div className="text-center">
+            <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">MEDIAN</p>
+            <p className="text-2xl font-bold text-gray-900">{avg.adoption.toFixed(1)}%</p>
+            <p className="text-xs text-gray-400">{benchmarkLabel} average</p>
+          </div>
+          <div className="text-center">
+            <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">BEST</p>
+            <p className="text-2xl font-bold" style={{ color: colors.scarlet }}>60.8%</p>
+            <p className="text-xs text-gray-400">Stanford</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Leaderboard Card */}
+      <div className="rounded-2xl p-5 shadow-sm" style={{ backgroundColor: colors.scarlet }}>
+        <div className="mb-3">
+          <h3 style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }} className="text-3xl font-bold uppercase tracking-tight text-white">
+            LEADERBOARD
+          </h3>
+          <p className="text-white/80 text-sm mt-1">Ohio State's IP adoption rankings</p>
+        </div>
+
+        <div className="space-y-3">
+          {/* In Conference */}
+          <div className="bg-white/10 backdrop-blur rounded-xl p-4 flex items-center gap-4">
+            <div className="w-16 h-16 rounded-xl flex items-center justify-center text-3xl font-black text-white border-2 border-white/30">
+              #{ranks.adoption}
+            </div>
+            <div className="flex-1">
+              <p className="text-white/70 text-xs uppercase tracking-wider">In the {isConference ? 'Big Ten' : 'Conference'}</p>
+              <p className="text-white text-xl font-bold">{isConference ? 'Big Ten' : 'Conference'} Schools</p>
+            </div>
+          </div>
+
+          {/* In NCAA */}
+          {!isConference && (
+            <div className="bg-white/10 backdrop-blur rounded-xl p-4 flex items-center gap-4">
+              <div className="w-16 h-16 rounded-xl flex items-center justify-center text-3xl font-black text-white border-2 border-white/30">
+                #{ranks.adoption}
+              </div>
+              <div className="flex-1">
+                <p className="text-white/70 text-xs uppercase tracking-wider">In the NCAA</p>
+                <p className="text-white text-xl font-bold">NCAA D1 Schools</p>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+
       {/* Leaderboard */}
       <div>
-        <h3 className="text-lg font-bold text-gray-400 uppercase tracking-wider mb-4">
-          {benchmarkLabel} IP Adoption Rankings
-        </h3>
-        <div className="rounded-xl border border-gray-200 bg-white overflow-hidden max-h-[500px] overflow-y-auto">
+        <div className="mb-4">
+          <h3 style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }} className="text-2xl font-bold uppercase tracking-tight">
+            <span style={{ color: colors.scarlet }}>{benchmarkLabel} </span>
+            <span style={{ color: colors.headerGray }}>IP ADOPTION RANKINGS</span>
+          </h3>
+        </div>
+        <div className="rounded-2xl bg-white overflow-hidden max-h-[500px] overflow-y-auto shadow-sm">
           <table className="w-full">
             <thead className="sticky top-0">
               <tr style={{ backgroundColor: colors.scarlet }}>
                 <th className="text-center px-3 py-3 text-xs font-semibold uppercase tracking-wider text-white w-10">#</th>
                 <th className="text-left px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">School</th>
                 {!isConference && <th className="text-left px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">Conf</th>}
-                <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">Followers</th>
                 <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">Posts</th>
                 <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">Adoption</th>
-                <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">Logo</th>
+                <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">Visual IP</th>
                 <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">Mention</th>
               </tr>
             </thead>
@@ -1806,7 +2186,6 @@ function BenchmarkTab() {
                     {school.name}
                   </td>
                   {!isConference && <td className="px-4 py-3 text-xs text-gray-500">{school.conf}</td>}
-                  <td className="px-4 py-3 text-right text-gray-600">{formatNumber(school.followers)}</td>
                   <td className="px-4 py-3 text-right text-gray-600">{formatNumber(school.posts)}</td>
                   <td className="px-4 py-3 text-right font-semibold" style={{ color: school.name === 'Ohio State' ? colors.scarlet : colors.text }}>
                     {school.adoption}%
@@ -1866,8 +2245,12 @@ export function OhioStateIPImpact({ onBack }: OhioStateIPImpactProps) {
                 className="w-12 h-12 object-contain"
               />
               <div>
-                <h1 className="text-2xl font-black uppercase tracking-tight" style={{ color: colors.scarlet }}>
-                  IP Impact
+                <h1
+                  className="text-2xl font-bold uppercase tracking-tight"
+                  style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }}
+                >
+                  <span style={{ color: colors.scarlet }}>IP </span>
+                  <span style={{ color: colors.headerGray }}>IMPACT</span>
                 </h1>
                 <p className="text-sm text-gray-500">Ohio State Athlete Social Media</p>
               </div>
@@ -1904,7 +2287,7 @@ export function OhioStateIPImpact({ onBack }: OhioStateIPImpactProps) {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5 relative z-10">
         {activeTab === 'overview' && <OverviewTab />}
         {activeTab === 'withvswithout' && <WithVsWithoutTab />}
         {activeTab === 'partnerships' && <PartnershipsTab />}

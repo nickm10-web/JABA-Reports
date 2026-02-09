@@ -3,7 +3,7 @@ import { TrendingUp, DollarSign, Award, Target, ArrowUpRight } from 'lucide-reac
 export function WhatActuallyWorks() {
   // IP Performance Metrics
   const ipMetrics = [
-    { type: 'Logo Content', lift: 45, color: 'blue' },
+    { type: 'Visual IP Content', lift: 45, color: 'blue' },
     { type: 'Branded Posts', lift: 38, color: 'purple' },
     { type: 'Collaboration Content', lift: 52, color: 'green' },
     { type: '90-Day Rolling Average', lift: 28, color: 'amber' },

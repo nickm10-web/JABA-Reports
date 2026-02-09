@@ -21,13 +21,13 @@ export function IPImpactAnalysis() {
 
       {/* 4 Key Lifts - Large Display */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        {/* Logo Content */}
+        {/* Visual IP Content */}
         <div className="bg-white rounded-xl p-6 border border-white/20 shadow-sm">
           <div className="flex items-center gap-2 mb-3">
             <div className="w-10 h-10 rounded-lg bg-[#1770C0] flex items-center justify-center">
               <ThumbsUp className="w-5 h-5 text-white" />
             </div>
-            <div className="text-sm font-semibold text-gray-300">Logo Content</div>
+            <div className="text-sm font-semibold text-gray-300">Visual IP Content</div>
           </div>
           <div className="text-5xl font-bold text-[#1770C0] mb-2">
             +{ipMetrics.logoContentEngagementLift}%

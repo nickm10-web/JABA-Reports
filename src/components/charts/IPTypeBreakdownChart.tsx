@@ -53,7 +53,7 @@ export function IPTypeBreakdownChart({ logo, collaboration, mention, formatNumbe
                 <Award className="w-5 h-5 text-blue-500" />
               </div>
               <div>
-                <div className="text-white font-semibold">Logo</div>
+                <div className="text-white font-semibold">Visual IP</div>
                 <div className="text-white/60 text-xs">{logo.posts} posts</div>
               </div>
             </div>
@@ -128,7 +128,7 @@ export function IPTypeBreakdownChart({ logo, collaboration, mention, formatNumbe
       </div>
 
       <div className="mt-6 text-sm text-white/60 bg-blue-500/10 border border-blue-500/30 rounded-lg p-4">
-        <span className="font-bold text-white">Key Insight:</span> Logo IP drives the highest total engagement,
+        <span className="font-bold text-white">Key Insight:</span> Visual IP drives the highest total engagement,
         followed by Collaboration and Mention. All IP types show positive engagement lift.
       </div>
     </div>

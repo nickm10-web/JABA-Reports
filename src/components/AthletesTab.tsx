@@ -221,27 +221,27 @@ export function AthletesTab({
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="text-3xl font-bold text-white">Athletes Performance</h3>
-            <p className="text-white/60 mt-2">
+            <h3 className="text-3xl font-bold text-gray-900">Athletes Performance</h3>
+            <p className="text-gray-600 mt-2">
               {selectedSchool === 'all'
                 ? 'Top performing athletes across all schools'
                 : `Top performing athletes at ${selectedSchool}`
               }
             </p>
           </div>
-          <div className="text-sm text-white/60">
+          <div className="text-sm text-gray-600">
             {sortedAthletes.length} athletes tracked
           </div>
         </div>
 
         {/* View Mode Toggle - Similar to With vs Without tabs */}
-        <div className="flex gap-4 border-b border-white/10">
+        <div className="flex gap-4 border-b border-gray-200">
           <button
             onClick={() => setViewMode('leaderboard')}
             className={`px-6 py-3 font-semibold transition-all ${
               viewMode === 'leaderboard'
-                ? 'text-[#3B9FD9] border-b-2 border-[#3B9FD9]'
-                : 'text-white/60 hover:text-white'
+                ? 'text-[#1770C0] border-b-2 border-[#1770C0]'
+                : 'text-gray-600 hover:text-[#1770C0]'
             }`}
           >
             Leaderboard
@@ -250,8 +250,8 @@ export function AthletesTab({
             onClick={() => setViewMode('by-ip-type')}
             className={`px-6 py-3 font-semibold transition-all ${
               viewMode === 'by-ip-type'
-                ? 'text-[#3B9FD9] border-b-2 border-[#3B9FD9]'
-                : 'text-white/60 hover:text-white'
+                ? 'text-[#1770C0] border-b-2 border-[#1770C0]'
+                : 'text-gray-600 hover:text-[#1770C0]'
             }`}
           >
             By IP Type
@@ -264,58 +264,58 @@ export function AthletesTab({
         <div className="space-y-6">
 
         {/* Search */}
-        <div className="bg-black/40 border border-white/10 rounded-xl p-4">
+        <div className="bg-white border border-gray-200 rounded-xl p-4 shadow-lg">
           <input
             type="text"
             placeholder="Search athletes..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-black/60 border border-white/20 rounded-lg px-4 py-2 text-white focus:border-[#3B9FD9] focus:outline-none"
+            className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2 text-gray-900 focus:border-blue-500 focus:outline-none"
           />
         </div>
 
         {/* Athletes Table */}
-        <div className="bg-black/40 border border-white/10 rounded-xl overflow-hidden">
+        <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg">
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-[#0a0e27] border-b border-white/10">
+              <thead style={{ backgroundColor: '#f9fafb' }} className="border-b border-gray-300">
                 <tr>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-white/80">#</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-white/80">ATHLETE</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">#</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">ATHLETE</th>
                   <th
                     onClick={() => handleSort('engagement')}
-                    className="px-6 py-4 text-right text-sm font-semibold text-white/80 cursor-pointer hover:text-white"
+                    className="px-6 py-4 text-right text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
                   >
                     <div className="flex items-center justify-end gap-2">
                       ENGAGEMENT
-                      {sortBy === 'engagement' && (sortDirection === 'desc' ? ' ↓' : ' ↑')}
+                      {sortBy === 'engagement' && <span style={{ color: '#1770C0' }}>{sortDirection === 'desc' ? ' ↓' : ' ↑'}</span>}
                     </div>
                   </th>
                   <th
                     onClick={() => handleSort('emv')}
-                    className="px-6 py-4 text-right text-sm font-semibold text-white/80 cursor-pointer hover:text-white"
+                    className="px-6 py-4 text-right text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
                   >
                     <div className="flex items-center justify-end gap-2">
                       EMV
-                      {sortBy === 'emv' && (sortDirection === 'desc' ? ' ↓' : ' ↑')}
+                      {sortBy === 'emv' && <span style={{ color: '#1770C0' }}>{sortDirection === 'desc' ? ' ↓' : ' ↑'}</span>}
                     </div>
                   </th>
                   <th
                     onClick={() => handleSort('lift')}
-                    className="px-6 py-4 text-right text-sm font-semibold text-white/80 cursor-pointer hover:text-white"
+                    className="px-6 py-4 text-right text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
                   >
                     <div className="flex items-center justify-end gap-2">
                       IP LIFT
-                      {sortBy === 'lift' && (sortDirection === 'desc' ? ' ↓' : ' ↑')}
+                      {sortBy === 'lift' && <span style={{ color: '#1770C0' }}>{sortDirection === 'desc' ? ' ↓' : ' ↑'}</span>}
                     </div>
                   </th>
                   <th
                     onClick={() => handleSort('posts')}
-                    className="px-6 py-4 text-right text-sm font-semibold text-white/80 cursor-pointer hover:text-white"
+                    className="px-6 py-4 text-right text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
                   >
                     <div className="flex items-center justify-end gap-2">
                       POSTS
-                      {sortBy === 'posts' && (sortDirection === 'desc' ? ' ↓' : ' ↑')}
+                      {sortBy === 'posts' && <span style={{ color: '#1770C0' }}>{sortDirection === 'desc' ? ' ↓' : ' ↑'}</span>}
                     </div>
                   </th>
                 </tr>
@@ -324,40 +324,40 @@ export function AthletesTab({
                 {sortedAthletes.slice(0, 50).map((athlete, index) => (
                   <tr
                     key={`${athlete.name}-${athlete.sport}`}
-                    className="border-b border-white/5 hover:bg-white/5 transition-colors"
+                    className={`border-b border-gray-200 hover:bg-blue-50 transition-colors ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
                   >
-                    <td className="px-6 py-4 text-white/60 font-medium text-sm">
+                    <td className="px-6 py-4 font-medium text-sm" style={{ color: '#1770C0' }}>
                       {index + 1}
                     </td>
                     <td className="px-6 py-4">
                       <div>
-                        <div className="text-white font-semibold">{athlete.name}</div>
-                        <div className="text-xs text-white/60 mt-0.5">{athlete.school}</div>
-                        <div className="text-xs text-white/40 mt-0.5">{formatSport(athlete.sport)}</div>
+                        <div className="text-gray-900 font-semibold">{athlete.name}</div>
+                        <div className="text-xs text-gray-600 mt-0.5">{athlete.school}</div>
+                        <div className="text-xs text-gray-500 mt-0.5">{formatSport(athlete.sport)}</div>
                       </div>
                     </td>
                     <td className="px-6 py-4 text-right">
-                      <div className="text-[#00FFD9] font-bold text-base">
+                      <div className="text-[#00C4A7] font-bold text-base">
                         {(athlete.engagement * 100).toFixed(2)}%
                       </div>
                     </td>
                     <td className="px-6 py-4 text-right">
-                      <div className="text-[#FFFF00] font-bold text-base">
+                      <div className="text-yellow-600 font-bold text-base">
                         {formatEMV(athlete.emv)}
                       </div>
                     </td>
                     <td className="px-6 py-4 text-right">
                       <div className={`font-semibold ${
-                        athlete.avgLift > 0 ? 'text-[#00FFD9]' : 'text-red-400'
+                        athlete.avgLift > 0 ? 'text-green-600' : 'text-red-600'
                       }`}>
                         {athlete.avgLift > 0 ? '+' : ''}{(athlete.avgLift * 100).toFixed(1)}% {athlete.avgLift > 0 ? '↑' : '↓'}
-                        <span className="text-white/60 text-xs ml-2">
+                        <span className="text-gray-600 text-xs ml-2">
                           ({athlete.posts} IP)
                         </span>
                       </div>
                     </td>
                     <td className="px-6 py-4 text-right">
-                      <div className="text-white font-medium text-base">
+                      <div className="text-gray-900 font-medium text-base">
                         {formatNumber(athlete.posts)}
                       </div>
                     </td>
@@ -367,7 +367,7 @@ export function AthletesTab({
             </table>
           </div>
 
-          <div className="p-4 border-t border-white/10 text-center text-sm text-white/60">
+          <div className="p-4 border-t border-gray-200 text-center text-sm text-gray-600">
             Showing top {Math.min(50, sortedAthletes.length)} of {sortedAthletes.length} athletes
           </div>
         </div>
@@ -379,14 +379,14 @@ export function AthletesTab({
         <div className="space-y-6">
 
         {/* Filter Bar */}
-        <div className="bg-black/40 border border-white/10 rounded-xl p-6">
+        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
           <div className="flex flex-wrap gap-3">
             <button
               onClick={() => setIPModeFilter('all')}
               className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
                 ipModeFilter === 'all'
                   ? 'bg-[#1770C0] text-white'
-                  : 'bg-black/40 text-white/60 hover:bg-black/60'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               All Modes
@@ -396,7 +396,7 @@ export function AthletesTab({
               className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
                 ipModeFilter === 'collaboration'
                   ? 'bg-[#1770C0] text-white'
-                  : 'bg-black/40 text-white/60 hover:bg-black/60'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               🤝 Collab
@@ -406,7 +406,7 @@ export function AthletesTab({
               className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
                 ipModeFilter === 'logo'
                   ? 'bg-[#1770C0] text-white'
-                  : 'bg-black/40 text-white/60 hover:bg-black/60'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               🏫 Logo
@@ -416,20 +416,10 @@ export function AthletesTab({
               className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
                 ipModeFilter === 'mention'
                   ? 'bg-[#1770C0] text-white'
-                  : 'bg-black/40 text-white/60 hover:bg-black/60'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               💬 Mention
-            </button>
-            <button
-              onClick={() => setIPModeFilter('partnership')}
-              className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
-                ipModeFilter === 'partnership'
-                  ? 'bg-[#1770C0] text-white'
-                  : 'bg-black/40 text-white/60 hover:bg-black/60'
-              }`}
-            >
-              🤝 Partner
             </button>
           </div>
         </div>
@@ -454,49 +444,49 @@ export function AthletesTab({
               .slice(0, 5);
 
             return (
-              <div key={ipType.key} className="bg-black/40 border border-white/10 rounded-xl p-6">
+              <div key={ipType.key} className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
                 {/* IP Type Header */}
                 <div className="mb-6">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="text-3xl">{ipType.icon}</span>
-                    <h4 className="text-2xl font-bold text-white">{ipType.label}</h4>
+                    <h4 className="text-2xl font-bold text-gray-900">{ipType.label}</h4>
                   </div>
-                  <p className="text-white/60">
-                    <span className="text-[#FFFF00] font-bold">{formatEMV(avgEMV)}</span> avg EMV •{' '}
-                    <span className="text-[#00FFD9] font-bold">{avgLift > 0 ? '+' : ''}{(avgLift * 100).toFixed(1)}%</span> lift
+                  <p className="text-gray-600">
+                    <span className="text-yellow-600 font-bold">{formatEMV(avgEMV)}</span> avg EMV •{' '}
+                    <span className="text-[#00C4A7] font-bold">{avgLift > 0 ? '+' : ''}{(avgLift * 100).toFixed(1)}%</span> lift
                   </p>
                 </div>
 
                 {/* Top 5 Athletes */}
                 <div>
-                  <h5 className="text-sm font-bold text-white/80 mb-4">TOP 5 ATHLETES</h5>
+                  <h5 className="text-sm font-bold text-gray-700 mb-4">TOP 5 ATHLETES</h5>
                   <div className="space-y-3">
                     {topAthletes.map((athlete, index) => (
                       <div
                         key={`${athlete.athlete.name}-${index}`}
-                        className="bg-white/5 rounded-lg p-4 flex items-center justify-between hover:bg-white/10 transition-colors"
+                        className="bg-gray-50 rounded-lg p-4 flex items-center justify-between hover:bg-blue-50 transition-colors"
                       >
                         <div className="flex items-center gap-4">
-                          <div className="text-2xl font-bold text-white/40">#{index + 1}</div>
+                          <div className="text-2xl font-bold text-gray-400">#{index + 1}</div>
                           <div>
-                            <div className="text-white font-semibold">{athlete.athlete.name}</div>
-                            <div className="text-xs text-white/60 mt-0.5">{athlete.schoolName}</div>
-                            <div className="text-xs text-white/40 mt-0.5">{formatSport(athlete.athlete.sport)}</div>
+                            <div className="text-gray-900 font-semibold">{athlete.athlete.name}</div>
+                            <div className="text-xs text-gray-600 mt-0.5">{athlete.schoolName}</div>
+                            <div className="text-xs text-gray-500 mt-0.5">{formatSport(athlete.athlete.sport)}</div>
                           </div>
                         </div>
                         <div className="flex items-center gap-6 text-sm">
                           <div>
-                            <div className="text-white/60 text-xs">POSTS</div>
-                            <div className="text-white font-bold text-base">{athlete.posts}</div>
+                            <div className="text-gray-600 text-xs">POSTS</div>
+                            <div className="text-gray-900 font-bold text-base">{athlete.posts}</div>
                           </div>
                           <div>
-                            <div className="text-white/60 text-xs">EMV</div>
-                            <div className="text-[#FFFF00] font-bold text-base">{formatEMV(athlete.emv)}</div>
+                            <div className="text-gray-600 text-xs">EMV</div>
+                            <div className="text-yellow-600 font-bold text-base">{formatEMV(athlete.emv)}</div>
                           </div>
                           <div>
-                            <div className="text-white/60 text-xs">LIFT</div>
+                            <div className="text-gray-600 text-xs">LIFT</div>
                             <div className={`font-bold text-base ${
-                              athlete.lift > 0 ? 'text-[#00FFD9]' : 'text-red-400'
+                              athlete.lift > 0 ? 'text-green-600' : 'text-red-600'
                             }`}>
                               {athlete.lift > 0 ? '+' : ''}{(athlete.lift * 100).toFixed(1)}%
                             </div>

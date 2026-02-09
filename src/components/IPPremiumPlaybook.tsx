@@ -28,7 +28,7 @@ export function IPPremiumPlaybook() {
       annualImpact: 35680 * 150,
     },
     {
-      type: 'Logo content',
+      type: 'Visual IP content',
       currentPrice: 500,
       ipPremiumPrice: 675,
       uplift: 175,
@@ -326,7 +326,7 @@ export function IPPremiumPlaybook() {
           <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 border border-white/30">
             <div className="flex items-center gap-2 mb-2">
               <Zap className="w-5 h-5" />
-              <div className="text-sm">Logo content</div>
+              <div className="text-sm">Visual IP content</div>
             </div>
             <div className="text-2xl font-bold">{formatCurrency(postTypes[2].annualImpact)}</div>
           </div>

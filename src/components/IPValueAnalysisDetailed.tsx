@@ -76,7 +76,7 @@ export function IPValueAnalysisDetailed() {
         </div>
         <div className="text-6xl font-bold mb-4">+{formatPercent(ipEngagementLift)}</div>
         <div className="text-2xl font-semibold mb-6">
-          Branded/Logo content gets 45% MORE engagement than organic posts
+          Branded/Visual IP content gets 45% MORE engagement than organic posts
         </div>
         <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 border-2 border-white/40">
           <div className="text-sm text-yellow-100 mb-2">Annual Value of the IP Premium</div>
@@ -215,7 +215,7 @@ export function IPValueAnalysisDetailed() {
           <div className="bg-white rounded-lg p-6 border-2 border-green-400">
             <div className="text-sm font-semibold text-green-700 mb-3 flex items-center gap-2">
               <Zap className="w-4 h-4" />
-              Branded/Logo Posts
+              Branded/Visual IP Posts
             </div>
             <div className="text-5xl font-bold text-green-600 mb-2">{formatPercent(ipEngagementRate)}</div>
             <div className="text-xs text-green-700 mb-1 font-semibold">

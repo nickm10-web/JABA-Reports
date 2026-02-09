@@ -310,14 +310,14 @@ export function PartnershipsTab({
     const [showLogo, setShowLogo] = useState(logoUrls.length > 0);
 
     return (
-      <div className="bg-black/40 border border-white/10 rounded-xl p-6 hover:border-[#3B9FD9]/50 transition-all">
+      <div className="bg-white border border-gray-200 rounded-xl p-6 hover:border-[#1770C0] transition-all shadow-lg">
         {/* Industry Pill, Logo & Brand Name */}
         <div className="mb-4">
           <IndustryPill industry={brand.industry} />
           <div className="flex items-center gap-3 mt-3">
             {/* Brand Logo or Avatar */}
             {showLogo && logoUrls.length > 0 ? (
-              <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center p-2 shadow-lg">
+              <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center p-2 shadow-lg border border-gray-200">
                 <img
                   src={logoUrls[currentLogoIndex]}
                   alt={brand.name}
@@ -337,7 +337,7 @@ export function PartnershipsTab({
                 <span className="text-white font-bold text-base">{initials}</span>
               </div>
             )}
-            <h4 className="text-lg font-bold text-white capitalize">
+            <h4 className="text-lg font-bold text-gray-900 capitalize">
               {brand.name.replace(/_/g, ' ')}
             </h4>
           </div>
@@ -345,21 +345,21 @@ export function PartnershipsTab({
 
         {/* Posts & EMV Row */}
         <div className="flex items-center justify-between mb-3">
-          <div className="text-[#3B9FD9] font-semibold">
+          <div className="text-[#1770C0] font-semibold">
             {formatNumber(brand.totalPosts)} posts
           </div>
-          <div className="text-green-400 font-bold font-mono text-sm">
+          <div className="text-green-600 font-bold font-mono text-sm">
             ${brand.totalEMV.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </div>
         </div>
 
         {/* Likes & Comments Row */}
         <div className="flex items-center justify-between mb-3 text-sm">
-          <div className="flex items-center gap-1.5 text-white/80">
+          <div className="flex items-center gap-1.5 text-gray-700">
             <span>❤️</span>
             <span className="font-medium">{formatNumber(brand.totalLikes)}</span>
           </div>
-          <div className="flex items-center gap-1.5 text-white/80">
+          <div className="flex items-center gap-1.5 text-gray-700">
             <span>💬</span>
             <span className="font-medium">{formatNumber(brand.totalComments)}</span>
           </div>
@@ -367,7 +367,7 @@ export function PartnershipsTab({
 
         {/* Avg Lift */}
         <div className={`flex items-center gap-1.5 text-sm font-semibold ${
-          brand.avgLift > 0 ? 'text-green-400' : brand.avgLift < 0 ? 'text-red-400' : 'text-white/60'
+          brand.avgLift > 0 ? 'text-green-600' : brand.avgLift < 0 ? 'text-red-600' : 'text-gray-600'
         }`}>
           <span>{brand.avgLift > 0 ? '+' : ''}{brand.avgLift.toFixed(1)}% Lift</span>
           {brand.avgLift > 0 ? (
@@ -485,42 +485,42 @@ export function PartnershipsTab({
       <div className="space-y-8">
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="text-2xl md:text-3xl font-bold text-white">Brand Partnerships</h3>
-            <p className="text-white/60 mt-2">Brands leveraging school IP across your network</p>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Brand Partnerships</h3>
+            <p className="text-gray-600 mt-2">Brands leveraging school IP across your network</p>
           </div>
-          <div className="text-sm text-white/60">
+          <div className="text-sm text-gray-600">
             {brandsArray.length} total brands
           </div>
         </div>
 
         {/* Network Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
-            <div className="text-sm text-white/60 mb-2">Sponsored Posts</div>
-            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#3B9FD9]">
+          <div className="bg-white border-2 border-[#1770C0] rounded-xl p-6 shadow-lg">
+            <div className="text-sm text-gray-600 mb-2">Sponsored Posts</div>
+            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1770C0]">
               {formatNumber(schoolPartnershipData.reduce((sum, s) =>
                 sum + s.sponsorPartners.reduce((pSum, p) => pSum + p.totalContents, 0), 0))}
             </div>
           </div>
-          <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
-            <div className="text-sm text-white/60 mb-2">Active Brands</div>
-            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">{brandsArray.length}</div>
+          <div className="bg-white border-2 border-[#1770C0] rounded-xl p-6 shadow-lg">
+            <div className="text-sm text-gray-600 mb-2">Active Brands</div>
+            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">{brandsArray.length}</div>
           </div>
-          <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
-            <div className="text-sm text-white/60 mb-2">Active Schools</div>
-            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">{schoolPartnershipData.length}</div>
+          <div className="bg-white border-2 border-[#1770C0] rounded-xl p-6 shadow-lg">
+            <div className="text-sm text-gray-600 mb-2">Active Schools</div>
+            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">{schoolPartnershipData.length}</div>
           </div>
-          <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
-            <div className="text-sm text-white/60 mb-2">Total EMV</div>
-            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-400">
+          <div className="bg-white border-2 border-[#1770C0] rounded-xl p-6 shadow-lg">
+            <div className="text-sm text-gray-600 mb-2">Total EMV</div>
+            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-600">
               {formatEMV(brandsArray.reduce((sum, b) => sum + b.totalEMV, 0))}
             </div>
           </div>
         </div>
 
         {/* Industry Filter Pills */}
-        <div className="bg-black/40 border border-white/10 rounded-xl p-4 md:p-6">
-          <label className="text-sm text-white/60 mb-3 block">Filter by Industry</label>
+        <div className="bg-white border border-gray-200 rounded-xl p-4 md:p-6 shadow-lg">
+          <label className="text-sm text-gray-600 mb-3 block">Filter by Industry</label>
           <div className="flex flex-wrap gap-2">
             {availableIndustries.map(industry => {
               const isSelected = industry === selectedIndustry;
@@ -535,7 +535,7 @@ export function PartnershipsTab({
                   className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
                     isSelected
                       ? 'text-white'
-                      : 'bg-white/10 text-white/60 hover:bg-white/20'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                   style={isSelected ? { backgroundColor: bgColor } : {}}
                 >
@@ -547,26 +547,26 @@ export function PartnershipsTab({
         </div>
 
         {/* Search and Filters */}
-        <div className="bg-black/40 border border-white/10 rounded-xl p-4 md:p-6">
+        <div className="bg-white border border-gray-200 rounded-xl p-4 md:p-6 shadow-lg">
           <div className="flex flex-col gap-4">
             <div className="flex flex-col md:flex-row gap-4">
               <div className="flex-1">
-                <label className="text-sm text-white/60 mb-2 block">Search Brands</label>
+                <label className="text-sm text-gray-600 mb-2 block">Search Brands</label>
                 <input
                   type="text"
                   placeholder="Search brands..."
                   value={partnershipSearchQuery}
                   onChange={(e) => setPartnershipSearchQuery(e.target.value)}
-                  className="w-full bg-black/60 border border-white/20 rounded-lg px-4 py-2 text-white focus:border-[#3B9FD9] focus:outline-none"
+                  className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2 text-gray-900 focus:border-blue-500 focus:outline-none"
                 />
               </div>
 
               <div className="w-full md:w-auto md:min-w-[200px]">
-                <label className="text-sm text-white/60 mb-2 block">Sort By</label>
+                <label className="text-sm text-gray-600 mb-2 block">Sort By</label>
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as any)}
-                  className="w-full bg-black/60 border border-white/20 rounded-lg px-4 py-2 text-white focus:border-[#3B9FD9] focus:outline-none"
+                  className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2 text-gray-900 focus:border-blue-500 focus:outline-none"
                 >
                   <option value="emv">Total EMV</option>
                   <option value="posts">Total Posts</option>
@@ -576,11 +576,11 @@ export function PartnershipsTab({
               </div>
 
               <div className="w-full md:w-auto md:min-w-[200px]">
-                <label className="text-sm text-white/60 mb-2 block">Engagement Level</label>
+                <label className="text-sm text-gray-600 mb-2 block">Engagement Level</label>
                 <select
                   value={engagementFilter}
                   onChange={(e) => setEngagementFilter(e.target.value as any)}
-                  className="w-full bg-black/60 border border-white/20 rounded-lg px-4 py-2 text-white focus:border-[#3B9FD9] focus:outline-none"
+                  className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2 text-gray-900 focus:border-blue-500 focus:outline-none"
                 >
                   <option value="all">All Engagement</option>
                   <option value="high">High (&gt;100% lift)</option>
@@ -590,7 +590,7 @@ export function PartnershipsTab({
               </div>
             </div>
 
-            <div className="text-sm text-white/60 text-center md:text-left">
+            <div className="text-sm text-gray-600 text-center md:text-left">
               Showing {displayedBrands.length} of {industryFilteredBrands.length} brands
             </div>
           </div>
@@ -600,8 +600,8 @@ export function PartnershipsTab({
         <div className="space-y-6">
           <div className="flex items-center justify-between">
             <div>
-              <h4 className="text-xl font-bold text-white">Brand Partners</h4>
-              <p className="text-sm text-white/60 mt-1">
+              <h4 className="text-xl font-bold text-gray-900">Brand Partners</h4>
+              <p className="text-sm text-gray-600 mt-1">
                 Showing top {cardsToShow} brands sorted by {sortBy === 'emv' ? 'Total EMV' : sortBy === 'posts' ? 'Total Posts' : sortBy === 'engagement' ? 'Total Interactions' : 'Avg Lift'}
               </p>
             </div>
@@ -642,7 +642,7 @@ export function PartnershipsTab({
             <div className="flex justify-center">
               <button
                 onClick={() => setCardsToShow(20)}
-                className="px-8 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-semibold transition-all"
+                className="px-8 py-3 bg-gray-200 hover:bg-gray-300 text-gray-900 rounded-lg font-semibold transition-all"
               >
                 Show Less
               </button>
