@@ -3,14 +3,16 @@ import { FileText } from 'lucide-react';
 import { SCHOOLS, SchoolConfig } from '../data/schoolConfig';
 import { SchoolReportView } from './SchoolReportView';
 import { PlayflyReportHub } from './PlayflyReportHub';
-import { AuburnCampaignDashboard } from './AuburnCampaignDashboard';
+import { AuburnReportHub } from './AuburnReportHub';
+import { BaylorReportHub } from './BaylorReportHub';
+import { KentuckyReportHub } from './KentuckyReportHub';
 import { OhioStateIPImpact } from './OhioStateIPImpact';
 
 export function SchoolReportsPage() {
   const [selectedSchool, setSelectedSchool] = useState<SchoolConfig | null>(null);
 
-  // Show Playfly, Auburn, Kentucky, and Ohio State
-  const allSchools = [SCHOOLS['playfly'], SCHOOLS['auburn'], SCHOOLS['kentucky'], SCHOOLS['ohio-state']].filter(Boolean);
+  // Show Playfly, Auburn, Baylor, Kentucky, and Ohio State
+  const allSchools = [SCHOOLS['playfly'], SCHOOLS['auburn'], SCHOOLS['baylor'], SCHOOLS['kentucky'], SCHOOLS['ohio-state']].filter(Boolean);
 
   // If a school is selected, show the appropriate view
   if (selectedSchool) {
@@ -22,10 +24,10 @@ export function SchoolReportsPage() {
         />
       );
     }
-    // If Auburn is selected, show campaign dashboard
+    // If Auburn is selected, show the hub with multiple report options
     if (selectedSchool.id === 'auburn') {
       return (
-        <AuburnCampaignDashboard onBack={() => setSelectedSchool(null)} />
+        <AuburnReportHub onBack={() => setSelectedSchool(null)} />
       );
     }
     // If Ohio State is selected, show IP Impact report
@@ -34,43 +36,16 @@ export function SchoolReportsPage() {
         <OhioStateIPImpact onBack={() => setSelectedSchool(null)} />
       );
     }
-    // If Kentucky is selected, show blank report for now
+    // If Baylor is selected, show the hub
+    if (selectedSchool.id === 'baylor') {
+      return (
+        <BaylorReportHub onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    // If Kentucky is selected, show the hub with multiple report options
     if (selectedSchool.id === 'kentucky') {
       return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-          {/* Header */}
-          <div className="border-b border-white/10 bg-black/30 backdrop-blur-lg sticky top-0 z-10">
-            <div className="max-w-[1600px] mx-auto px-8 py-6">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4">
-                  <button
-                    onClick={() => setSelectedSchool(null)}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                    </svg>
-                  </button>
-                  <div>
-                    <h1 className="text-3xl font-bold text-white tracking-wide">
-                      {selectedSchool.name.toUpperCase()}
-                    </h1>
-                    <p className="text-gray-400 text-sm mt-1">
-                      {selectedSchool.mascot} • {selectedSchool.conference}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Blank Content Area */}
-          <div className="max-w-[1600px] mx-auto px-8 py-16">
-            <div className="text-center text-gray-400">
-              <p className="text-xl">Report coming soon...</p>
-            </div>
-          </div>
-        </div>
+        <KentuckyReportHub onBack={() => setSelectedSchool(null)} />
       );
     }
     // Otherwise show regular school report view

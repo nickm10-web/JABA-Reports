@@ -59,8 +59,8 @@ export function getAvailableReports(): ReportConfig[] {
     },
     {
       id: 'ip-page',
-      name: 'IP & Athlete Performance Report',
-      description: 'Comprehensive IP impact, partnerships, and athlete analytics'
+      name: 'IP Report',
+      description: 'IP impact analysis across all schools'
     },
     {
       id: 'brand-partnerships',

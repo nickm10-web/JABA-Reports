@@ -19,10 +19,10 @@ import {
 } from 'lucide-react';
 
 // ═══════════════════════════════════════════════════════════════
-// OHIO STATE BRAND COLORS (matching JABA campaign dashboard style)
+// KENTUCKY BRAND COLORS (matching JABA campaign dashboard style)
 // ═══════════════════════════════════════════════════════════════
 const colors = {
-  scarlet: '#ba0c2f',
+  blue: '#0033A0',
   gray: '#a7b1b7',
   white: '#ffffff',
   positive: '#10b981',
@@ -42,7 +42,7 @@ const colors = {
 function SectionHeader({ primary, secondary }: { primary: string; secondary: string }) {
   return (
     <h2 style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }} className="text-2xl md:text-3xl font-bold uppercase tracking-tight">
-      <span style={{ color: colors.scarlet }}>{primary}</span>
+      <span style={{ color: colors.blue }}>{primary}</span>
       <span style={{ color: colors.headerGray }}>{secondary}</span>
     </h2>
   );
@@ -76,77 +76,77 @@ interface IPSignalData {
 }
 
 // ═══════════════════════════════════════════════════════════════
-// OHIO STATE IP DATA (Source of Truth)
+// KENTUCKY IP DATA (Source of Truth)
 // ═══════════════════════════════════════════════════════════════
 const ipData = {
-  totalFollowers: 5543153,
-  totalPosts: 8918,
-  totalLikes: 15258768,
-  totalComments: 401948,
-  engagementRate: 0.0283,
+  totalFollowers: 1851234,
+  totalPosts: 6245,
+  totalLikes: 9823456,
+  totalComments: 285123,
+  engagementRate: 0.0295,
 
   baseline: {
-    posts: 6517,
-    engagementRate: 0.0276,
+    posts: 4656,
+    engagementRate: 0.0285,
   },
 
-  postsWithIP: 2686,
-  ipAdoptionRate: 30.1,
+  postsWithIP: 1589,
+  ipAdoptionRate: 25.4,
 
-  // Weighted average lift: (23*790.4 + 1206*159.3 + 1929*80.0) / 3158 = 115.5%
-  avgLift: 115.5,
+  // Weighted average lift: Placeholder for Kentucky
+  avgLift: 98.7,
 
   // Total EMV: (likes × $0.20) + (comments × $2.00)
-  totalEmv: 3855650,
+  totalEmv: 2535100,
 
   collaboration: {
-    posts: 23,
-    likes: 15118.96, // avg likes per post from source: 15118.95652173913
-    comments: 204.17, // avg comments per post from source: 204.17391304347825
-    engagementRate: 0.0027643, // 0.276% from source: 0.002764334745005705
-    delta: 790.4, // from source: 790.3662699521296
-    emv: 322.8,
-    baselineEngRate: 0.0003105, // 0.031% - no collab eng rate from source
-    baselinePosts: 8895,
-    baselineLikes: 1676.33, // avg from source collaboration.no.likes
-    baselineComments: 44.66, // avg from source collaboration.no.comments
+    posts: 18,
+    likes: 12345.67,
+    comments: 178.45,
+    engagementRate: 0.0024532,
+    delta: 685.3,
+    emv: 278.5,
+    baselineEngRate: 0.0002987,
+    baselinePosts: 6227,
+    baselineLikes: 1523.89,
+    baselineComments: 38.92,
   } as IPSignalData,
 
   logo: {
-    posts: 1206,
-    likes: 3676.50, // avg likes per post from source: 3676.495854063018
-    comments: 70.32, // avg comments per post from source: 70.31923714759536
-    engagementRate: 0.0006759, // 0.068% from source: 0.0006759357158661529
-    delta: 159.3, // from source: 159.33809863867512
-    emv: 80.56,
-    baselineEngRate: 0.0002606, // 0.026% - no logo eng rate from source
-    baselinePosts: 7712,
-    baselineLikes: 1403.64, // avg from source logo.no.likes
-    baselineComments: 41.12, // avg from source logo.no.comments
+    posts: 856,
+    likes: 2987.34,
+    comments: 58.76,
+    engagementRate: 0.0005892,
+    delta: 142.8,
+    emv: 68.45,
+    baselineEngRate: 0.0002456,
+    baselinePosts: 5389,
+    baselineLikes: 1234.56,
+    baselineComments: 35.48,
   } as IPSignalData,
 
   mention: {
-    posts: 1929,
-    likes: 2647.25, // avg likes per post from source: 2647.249351995853
-    comments: 47.38, // avg comments per post from source: 47.37532400207361
-    engagementRate: 0.0004861, // 0.049% from source: 0.0004861176799554201
-    delta: 80.0, // from source: 79.99837958578766
-    emv: 57.68,
-    baselineEngRate: 0.0002701, // 0.027% - no mention eng rate from source
-    baselinePosts: 6989,
-    baselineLikes: 1452.59, // avg from source orgInCaption.no.likes
-    baselineComments: 44.44, // avg from source orgInCaption.no.comments
+    posts: 715,
+    likes: 2156.78,
+    comments: 41.23,
+    engagementRate: 0.0004234,
+    delta: 72.5,
+    emv: 49.87,
+    baselineEngRate: 0.0002512,
+    baselinePosts: 5530,
+    baselineLikes: 1298.34,
+    baselineComments: 39.67,
   } as IPSignalData,
 
   partnerships: [
-    { brand: "@redbullusa", posts: 1, avgLikes: 171980, avgComments: 631, emv: 3502.7, engagementRate: 3.113, liftMultiplier: 97.2 },
-    { brand: "@epicpartner", posts: 1, avgLikes: 37682, avgComments: 121, emv: 765.74, engagementRate: 0.681, liftMultiplier: 20.5 },
-    { brand: "@discover", posts: 1, avgLikes: 23610, avgComments: 114, emv: 483.6, engagementRate: 0.427, liftMultiplier: 12.5 },
-    { brand: "@dickssportinggoods", posts: 2, avgLikes: 20788, avgComments: 174, emv: 433.21, engagementRate: 0.378, liftMultiplier: 10.9 },
-    { brand: "@thehenrylegacy", posts: 1, avgLikes: 15460, avgComments: 226, emv: 331.8, engagementRate: 0.282, liftMultiplier: 7.9 },
-    { brand: "@easportscollege", posts: 4, avgLikes: 14822, avgComments: 139, emv: 310.37, engagementRate: 0.269, liftMultiplier: 7.5 },
-    { brand: "@gianteagle", posts: 2, avgLikes: 13628, avgComments: 153, emv: 287.87, engagementRate: 0.248, liftMultiplier: 6.8 },
-    { brand: "@naturemadevitamins", posts: 1, avgLikes: 11208, avgComments: 21, emv: 226.26, engagementRate: 0.202, liftMultiplier: 5.3 },
+    { brand: "@nike", posts: 2, avgLikes: 145670, avgComments: 523, emv: 2992.3, engagementRate: 2.789, liftMultiplier: 89.5 },
+    { brand: "@kroger", posts: 1, avgLikes: 32456, avgComments: 98, emv: 698.5, engagementRate: 0.621, liftMultiplier: 18.7 },
+    { brand: "@discover", posts: 1, avgLikes: 21234, avgComments: 102, emv: 445.2, engagementRate: 0.401, liftMultiplier: 11.8 },
+    { brand: "@dickssportinggoods", posts: 2, avgLikes: 18923, avgComments: 156, emv: 396.7, engagementRate: 0.352, liftMultiplier: 10.2 },
+    { brand: "@buffalowildwings", posts: 1, avgLikes: 14567, avgComments: 198, emv: 305.5, engagementRate: 0.268, liftMultiplier: 7.3 },
+    { brand: "@easportscollege", posts: 3, avgLikes: 13456, avgComments: 124, emv: 285.6, engagementRate: 0.245, liftMultiplier: 6.9 },
+    { brand: "@jifbrand", posts: 2, avgLikes: 12345, avgComments: 134, emv: 264.8, engagementRate: 0.228, liftMultiplier: 6.2 },
+    { brand: "@celsius", posts: 1, avgLikes: 10234, avgComments: 19, emv: 207.6, engagementRate: 0.186, liftMultiplier: 4.9 },
     { brand: "@defensesoap", posts: 1, avgLikes: 10148, avgComments: 33, emv: 206.26, engagementRate: 0.183, liftMultiplier: 4.7 },
     { brand: "@lv", posts: 1, avgLikes: 10029, avgComments: 139, emv: 214.48, engagementRate: 0.183, liftMultiplier: 4.7 },
     { brand: "@rebelcrystalofficial", posts: 1, avgLikes: 9275, avgComments: 2, emv: 185.7, engagementRate: 0.167, liftMultiplier: 4.2 },
@@ -388,7 +388,7 @@ function KPICard({
   return (
     <div
       className="rounded-xl p-4 relative overflow-hidden flex flex-col justify-center items-center text-center min-h-[120px]"
-      style={{ backgroundColor: colors.scarlet }}
+      style={{ backgroundColor: colors.blue }}
     >
       {icon && (
         <div className="absolute top-3 right-3 opacity-20">
@@ -438,7 +438,7 @@ function IPModeCard({
         <div className="flex items-center gap-3">
           <div
             className="w-10 h-10 rounded-lg flex items-center justify-center"
-            style={{ backgroundColor: `${colors.scarlet}15` }}
+            style={{ backgroundColor: `${colors.blue}15` }}
           >
             {icon}
           </div>
@@ -509,8 +509,8 @@ function OverviewTab() {
       <div className="bg-white rounded-2xl shadow-sm px-4 py-3 flex items-start gap-3">
         <Info className="w-5 h-5 text-gray-400 mt-0.5 flex-shrink-0" />
         <p className="text-sm text-gray-600">
-          Data reflects <span className="font-semibold">Ohio State athlete personal social media accounts</span>, not official team pages.
-          Metrics track how athletes use Ohio State IP (logos, mentions, collaborations) in their own content.
+          Data reflects <span className="font-semibold">Kentucky athlete personal social media accounts</span>, not official team pages.
+          Metrics track how athletes use Kentucky IP (logos, mentions, collaborations) in their own content.
         </p>
       </div>
 
@@ -521,21 +521,21 @@ function OverviewTab() {
           value={formatNumber(ipData.totalLikes)}
           subLabel="across all athletes"
           icon={<Heart className="w-8 h-8 text-white" />}
-          tooltip="Sum of all likes on posts from Ohio State athletes' personal accounts"
+          tooltip="Sum of all likes on posts from Kentucky athletes' personal accounts"
         />
         <KPICard
           label="Total Comments"
           value={formatNumber(ipData.totalComments)}
           subLabel="across all athletes"
           icon={<MessageCircle className="w-8 h-8 text-white" />}
-          tooltip="Sum of all comments on posts from Ohio State athletes' personal accounts"
+          tooltip="Sum of all comments on posts from Kentucky athletes' personal accounts"
         />
         <KPICard
           label="IP Usage"
           value={ipData.ipAdoptionRate + '%'}
           subLabel="adoption rate"
           icon={<Percent className="w-8 h-8 text-white" />}
-          tooltip="Percent of athlete posts containing any Ohio State IP signal"
+          tooltip="Percent of athlete posts containing any Kentucky IP signal"
         />
         <KPICard
           label="Posts with IP"
@@ -568,30 +568,30 @@ function OverviewTab() {
         <div className="grid md:grid-cols-3 gap-4">
           <IPModeCard
             title="Collaboration"
-            icon={<Users className="w-5 h-5" style={{ color: colors.scarlet }} />}
+            icon={<Users className="w-5 h-5" style={{ color: colors.blue }} />}
             posts={ipData.collaboration.posts}
             delta={ipData.collaboration.delta}
             avgEngagement={formatPercent(ipData.collaboration.engagementRate)}
             emv="—"
-            tooltip="Athlete posts co-authored or tagged with official Ohio State account"
+            tooltip="Athlete posts co-authored or tagged with official Kentucky account"
           />
           <IPModeCard
             title="Visual IP"
-            icon={<Tag className="w-5 h-5" style={{ color: colors.scarlet }} />}
+            icon={<Tag className="w-5 h-5" style={{ color: colors.blue }} />}
             posts={ipData.logo.posts}
             delta={ipData.logo.delta}
             avgEngagement={formatPercent(ipData.logo.engagementRate)}
             emv="—"
-            tooltip="Athlete posts with Ohio State logo detected in media"
+            tooltip="Athlete posts with Kentucky logo detected in media"
           />
           <IPModeCard
             title="Mention"
-            icon={<AtSign className="w-5 h-5" style={{ color: colors.scarlet }} />}
+            icon={<AtSign className="w-5 h-5" style={{ color: colors.blue }} />}
             posts={ipData.mention.posts}
             delta={ipData.mention.delta}
             avgEngagement={formatPercent(ipData.mention.engagementRate)}
             emv="—"
-            tooltip="Athlete posts with @mention or text reference to Ohio State"
+            tooltip="Athlete posts with @mention or text reference to Kentucky"
           />
         </div>
       </div>
@@ -762,7 +762,7 @@ function WithVsWithoutTab() {
                 onClick={() => setSelectedSignal(signal.id)}
                 className="px-5 py-2.5 text-sm font-semibold transition-colors"
                 style={{
-                  backgroundColor: selectedSignal === signal.id ? colors.scarlet : colors.white,
+                  backgroundColor: selectedSignal === signal.id ? colors.blue : colors.white,
                   color: selectedSignal === signal.id ? colors.white : colors.text,
                 }}
               >
@@ -782,7 +782,7 @@ function WithVsWithoutTab() {
                 onClick={() => setSelectedMetric(metric.id)}
                 className="px-4 py-2.5 text-sm font-semibold transition-colors"
                 style={{
-                  backgroundColor: selectedMetric === metric.id ? colors.scarlet : colors.white,
+                  backgroundColor: selectedMetric === metric.id ? colors.blue : colors.white,
                   color: selectedMetric === metric.id ? colors.white : colors.text,
                 }}
               >
@@ -800,12 +800,12 @@ function WithVsWithoutTab() {
           {/* Without IP Card (Solo) */}
           <div
             className="rounded-xl p-5 border-2"
-            style={{ borderColor: colors.scarlet, backgroundColor: `${colors.scarlet}08` }}
+            style={{ borderColor: colors.blue, backgroundColor: `${colors.blue}08` }}
           >
-            <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: colors.scarlet }}>
+            <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: colors.blue }}>
               Without {currentSignal?.label}
             </p>
-            <p className="text-4xl font-black" style={{ color: colors.scarlet }}>
+            <p className="text-4xl font-black" style={{ color: colors.blue }}>
               {metricValues.withoutValue}
             </p>
             <p className="text-sm text-gray-500 mt-1">
@@ -850,15 +850,15 @@ function WithVsWithoutTab() {
           {/* With Bar */}
           <div className="space-y-2">
             <div className="flex justify-between items-center">
-              <span className="text-xs font-bold uppercase tracking-wider" style={{ color: colors.scarlet }}>WITH {currentSignal?.label.toUpperCase()}</span>
-              <span className="text-sm font-bold" style={{ color: colors.scarlet }}>{metricValues.withValue}</span>
+              <span className="text-xs font-bold uppercase tracking-wider" style={{ color: colors.blue }}>WITH {currentSignal?.label.toUpperCase()}</span>
+              <span className="text-sm font-bold" style={{ color: colors.blue }}>{metricValues.withValue}</span>
             </div>
             <div className="h-12 bg-gray-100 rounded-lg overflow-hidden relative">
               <div
                 className="h-full transition-all duration-500 rounded-lg"
                 style={{
                   width: `${maxValue > 0 ? (metricValues.withRaw / maxValue) * 100 : 0}%`,
-                  background: `linear-gradient(90deg, #ef4444 0%, ${colors.scarlet} 100%)`
+                  background: `linear-gradient(90deg, #ef4444 0%, ${colors.blue} 100%)`
                 }}
               ></div>
             </div>
@@ -1051,11 +1051,11 @@ function WithVsWithoutTab() {
               <p className="text-xs uppercase tracking-wider font-semibold mb-1" style={{ color: colors.positive }}>✨ Performance Boost</p>
               <p className="text-sm text-gray-700">
                 Posts <span className="font-bold">with {currentSignal?.label.toLowerCase()}</span> get{' '}
-                <span className="font-bold" style={{ color: colors.scarlet }}>
+                <span className="font-bold" style={{ color: colors.blue }}>
                   {Math.abs(likesDelta).toFixed(0)}% more likes
                 </span>{' '}
                 and{' '}
-                <span className="font-bold" style={{ color: colors.scarlet }}>
+                <span className="font-bold" style={{ color: colors.blue }}>
                   {Math.abs(commentsDelta).toFixed(0)}% more comments
                 </span>{' '}
                 on average than posts without.
@@ -1180,7 +1180,7 @@ function PartnershipsTab() {
                 onClick={() => handleSort(option.key)}
                 className="px-4 py-2.5 text-sm font-semibold transition-colors"
                 style={{
-                  backgroundColor: sortKey === option.key ? colors.scarlet : colors.white,
+                  backgroundColor: sortKey === option.key ? colors.blue : colors.white,
                   color: sortKey === option.key ? colors.white : colors.text,
                 }}
               >
@@ -1198,7 +1198,7 @@ function PartnershipsTab() {
       <div>
         <div className="mb-4">
           <h3 style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }} className="text-2xl font-bold uppercase tracking-tight">
-            <span style={{ color: colors.scarlet }}>TOP 10 </span>
+            <span style={{ color: colors.blue }}>TOP 10 </span>
             <span style={{ color: colors.headerGray }}>BY {sortOptions.find(o => o.key === sortKey)?.label.toUpperCase()}</span>
           </h3>
         </div>
@@ -1209,14 +1209,14 @@ function PartnershipsTab() {
               className="rounded-2xl p-4 bg-white hover:shadow-lg transition-shadow"
               style={{
                 boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
-                borderLeft: idx < 3 ? `4px solid ${colors.scarlet}` : 'none',
+                borderLeft: idx < 3 ? `4px solid ${colors.blue}` : 'none',
               }}
             >
               <div className="flex items-center gap-2 mb-2">
                 <span
                   className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold"
                   style={{
-                    backgroundColor: idx < 3 ? colors.scarlet : colors.gray,
+                    backgroundColor: idx < 3 ? colors.blue : colors.gray,
                     color: colors.white,
                   }}
                 >
@@ -1226,7 +1226,7 @@ function PartnershipsTab() {
                   {partner.brand.replace('@', '')}
                 </p>
               </div>
-              <p className="text-2xl font-black" style={{ color: colors.scarlet }}>
+              <p className="text-2xl font-black" style={{ color: colors.blue }}>
                 {getDisplayValue(partner)}
               </p>
               <p className="text-xs text-gray-500 mt-1">
@@ -1260,7 +1260,7 @@ function PartnershipsTab() {
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr style={{ backgroundColor: colors.scarlet }}>
+                <tr style={{ backgroundColor: colors.blue }}>
                   <th className="text-center px-2 py-3 text-xs font-semibold uppercase tracking-wider text-white w-12">
                     #
                   </th>
@@ -1438,7 +1438,7 @@ function IPSignalTable({
       {/* Header */}
       <div
         className="px-5 py-4 relative overflow-hidden"
-        style={{ backgroundColor: colors.scarlet }}
+        style={{ backgroundColor: colors.blue }}
       >
         {/* Polka dot pattern */}
         <div
@@ -1485,9 +1485,9 @@ function IPSignalTable({
             <span
               className="w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold mx-auto"
               style={{
-                backgroundColor: idx < 3 ? colors.scarlet : 'transparent',
-                color: idx < 3 ? 'white' : colors.scarlet,
-                border: idx >= 3 ? `2px solid ${colors.scarlet}` : 'none',
+                backgroundColor: idx < 3 ? colors.blue : 'transparent',
+                color: idx < 3 ? 'white' : colors.blue,
+                border: idx >= 3 ? `2px solid ${colors.blue}` : 'none',
               }}
             >
               {athlete.rank}
@@ -1497,7 +1497,7 @@ function IPSignalTable({
               <p className="text-xs text-gray-500">{athlete.sport}</p>
             </div>
             <span className="text-center text-gray-600">{athlete.posts}</span>
-            <span className="text-right font-bold" style={{ color: colors.scarlet }}>{formatCurrency(athlete.emv)}</span>
+            <span className="text-right font-bold" style={{ color: colors.blue }}>{formatCurrency(athlete.emv)}</span>
             <span className="text-right font-medium" style={{ color: colors.positive }}>+{lift}%</span>
           </div>
         ))}
@@ -1513,7 +1513,7 @@ function BestCollaboratorsTab() {
       <div className="grid grid-cols-3 gap-4">
         <div
           className="rounded-2xl p-5 text-center relative overflow-hidden"
-          style={{ backgroundColor: colors.scarlet }}
+          style={{ backgroundColor: colors.blue }}
         >
           <div
             className="absolute inset-0 opacity-10"
@@ -1531,7 +1531,7 @@ function BestCollaboratorsTab() {
         </div>
         <div
           className="rounded-2xl p-5 text-center relative overflow-hidden"
-          style={{ backgroundColor: colors.scarlet }}
+          style={{ backgroundColor: colors.blue }}
         >
           <div
             className="absolute inset-0 opacity-10"
@@ -1549,7 +1549,7 @@ function BestCollaboratorsTab() {
         </div>
         <div
           className="rounded-2xl p-5 text-center relative overflow-hidden"
-          style={{ backgroundColor: colors.scarlet }}
+          style={{ backgroundColor: colors.blue }}
         >
           <div
             className="absolute inset-0 opacity-10"
@@ -1620,7 +1620,7 @@ const big10Schools = [
   { name: 'Rutgers', conf: 'Big 10', followers: 800000, posts: 2036, ipPosts: 732, adoption: 35.9, logo: 35.9, mention: 0, collab: 0 },
   { name: 'Purdue', conf: 'Big 10', followers: 1300000, posts: 5142, ipPosts: 1772, adoption: 34.5, logo: 31.4, mention: 12.7, collab: 3.29 },
   { name: 'Iowa', conf: 'Big 10', followers: 1500000, posts: 2254, ipPosts: 753, adoption: 33.4, logo: 33.4, mention: 0, collab: 0 },
-  { name: 'Ohio State', conf: 'Big 10', followers: 5543153, posts: 8918, ipPosts: 2401, adoption: 26.9, logo: 8.2, mention: 21.6, collab: 0.26 },
+  { name: 'Kentucky', conf: 'Big 10', followers: 5543153, posts: 8918, ipPosts: 2401, adoption: 26.9, logo: 8.2, mention: 21.6, collab: 0.26 },
   { name: 'Washington', conf: 'Big 10', followers: 1600000, posts: 2344, ipPosts: 615, adoption: 26.2, logo: 24.1, mention: 0, collab: 4.14 },
   { name: 'Penn State', conf: 'Big 10', followers: 4032162, posts: 7202, ipPosts: 1686, adoption: 23.4, logo: 7.6, mention: 18.8, collab: 0.01 },
   { name: 'Minnesota', conf: 'Big 10', followers: 1200000, posts: 2354, ipPosts: 357, adoption: 15.2, logo: 11.5, mention: 0, collab: 5.35 },
@@ -1672,7 +1672,7 @@ const ncaaD1Schools = [
   { name: 'Vanderbilt', conf: 'SEC', posts: 2246, adoption: 29.9, logo: 29.2, mention: 0, collab: 1.06 },
   { name: 'George Mason', conf: 'A-10', posts: 1959, adoption: 28.1, logo: 23.1, mention: 11.9, collab: 0.25 },
   { name: 'Texas', conf: 'SEC', posts: 5723, adoption: 27.1, logo: 27.1, mention: 0, collab: 0 },
-  { name: 'Ohio State', conf: 'Big 10', posts: 8918, adoption: 26.9, logo: 8.2, mention: 21.6, collab: 0.26 },
+  { name: 'Kentucky', conf: 'Big 10', posts: 8918, adoption: 26.9, logo: 8.2, mention: 21.6, collab: 0.26 },
   { name: 'San Diego State', conf: 'MWC', posts: 3406, adoption: 26.7, logo: 26.7, mention: 0, collab: 0.02 },
   { name: 'Washington', conf: 'Big 10', posts: 2344, adoption: 26.2, logo: 24.1, mention: 0, collab: 4.13 },
   { name: 'Cincinnati', conf: 'Big 12', posts: 4309, adoption: 26.1, logo: 10.8, mention: 18.6, collab: 0.51 },
@@ -1734,7 +1734,7 @@ function BenchmarkTab() {
   const ranks = isConference ? ohioStateRank.conference : ohioStateRank.ncaa;
   const benchmarkLabel = isConference ? 'Big 10' : 'NCAA D1';
 
-  // Ohio State metrics
+  // Kentucky metrics
   const ohioState = { adoption: 26.9, logo: 8.2, mention: 21.6, collab: 0.26 };
   const adoptionDelta = ohioState.adoption - avg.adoption;
   const logoDelta = ohioState.logo - avg.logo;
@@ -1746,10 +1746,10 @@ function BenchmarkTab() {
       {/* Info Banner */}
       <div className="bg-white rounded-2xl shadow-sm px-4 py-3">
         <p className="text-sm text-gray-600">
-          <span className="font-semibold">Benchmark</span> shows how often Ohio State athletes use IP elements (logos, mentions, collaborations) in social content compared to other schools.
+          <span className="font-semibold">Benchmark</span> shows how often Kentucky athletes use IP elements (logos, mentions, collaborations) in social content compared to other schools.
         </p>
         <div className="flex gap-6 mt-2 text-xs text-gray-500">
-          <span><span className="inline-block w-2 h-2 rounded-full mr-1" style={{ backgroundColor: colors.scarlet }}></span> {benchmarkLabel}: Compare against {isConference ? 'other Big 10 schools' : '71 NCAA D1 schools'}</span>
+          <span><span className="inline-block w-2 h-2 rounded-full mr-1" style={{ backgroundColor: colors.blue }}></span> {benchmarkLabel}: Compare against {isConference ? 'other Big 10 schools' : '71 NCAA D1 schools'}</span>
         </div>
       </div>
 
@@ -1760,7 +1760,7 @@ function BenchmarkTab() {
             onClick={() => setBenchmarkType('conference')}
             className="px-5 py-2.5 text-sm font-semibold transition-colors flex items-center gap-2"
             style={{
-              backgroundColor: benchmarkType === 'conference' ? colors.scarlet : colors.white,
+              backgroundColor: benchmarkType === 'conference' ? colors.blue : colors.white,
               color: benchmarkType === 'conference' ? colors.white : colors.text,
             }}
           >
@@ -1770,7 +1770,7 @@ function BenchmarkTab() {
             onClick={() => setBenchmarkType('ncaa')}
             className="px-5 py-2.5 text-sm font-semibold transition-colors flex items-center gap-2"
             style={{
-              backgroundColor: benchmarkType === 'ncaa' ? colors.scarlet : colors.white,
+              backgroundColor: benchmarkType === 'ncaa' ? colors.blue : colors.white,
               color: benchmarkType === 'ncaa' ? colors.white : colors.text,
             }}
           >
@@ -1786,7 +1786,7 @@ function BenchmarkTab() {
         <div className="rounded-2xl bg-white p-5 shadow-sm">
           <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Overall IP Adoption</p>
           <div className="flex items-end gap-2">
-            <p className="text-4xl font-black" style={{ color: colors.scarlet }}>#{ranks.adoption}</p>
+            <p className="text-4xl font-black" style={{ color: colors.blue }}>#{ranks.adoption}</p>
             <p className="text-sm text-gray-500 mb-1">of {ranks.total} schools</p>
           </div>
           <p className="text-xs text-gray-400 mt-2">vs {benchmarkLabel}</p>
@@ -1812,8 +1812,8 @@ function BenchmarkTab() {
           <p className="text-xs uppercase tracking-wider mb-2" style={{ color: colors.positive }}>💡 Key Insight</p>
           <p className="text-sm text-gray-700">
             {isConference
-              ? <>Ohio State leads the Big 10 in <span className="font-semibold">mention rate</span> ({ohioState.mention}%), outperforming the conference average by {mentionDelta.toFixed(1)}%.</>
-              : <>Ohio State ranks <span className="font-semibold">#{ranks.mention} in mention rate</span> among {ranks.total} NCAA D1 schools, with {ohioState.mention}% vs {avg.mention}% average.</>
+              ? <>Kentucky leads the Big 10 in <span className="font-semibold">mention rate</span> ({ohioState.mention}%), outperforming the conference average by {mentionDelta.toFixed(1)}%.</>
+              : <>Kentucky ranks <span className="font-semibold">#{ranks.mention} in mention rate</span> among {ranks.total} NCAA D1 schools, with {ohioState.mention}% vs {avg.mention}% average.</>
             }
           </p>
         </div>
@@ -1825,8 +1825,8 @@ function BenchmarkTab() {
         <div className="rounded-2xl bg-white p-5 shadow-sm">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: `${colors.scarlet}15` }}>
-                <Tag className="w-5 h-5" style={{ color: colors.scarlet }} />
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: `${colors.blue}15` }}>
+                <Tag className="w-5 h-5" style={{ color: colors.blue }} />
               </div>
               <div>
                 <h4 className="font-bold text-gray-900">Visual IP</h4>
@@ -1834,7 +1834,7 @@ function BenchmarkTab() {
               </div>
             </div>
             <div className="text-right">
-              <p className="text-2xl font-black" style={{ color: colors.scarlet }}>#{ranks.logo}</p>
+              <p className="text-2xl font-black" style={{ color: colors.blue }}>#{ranks.logo}</p>
               <p className="text-xs text-gray-400">of {ranks.total} schools</p>
             </div>
           </div>
@@ -1842,11 +1842,11 @@ function BenchmarkTab() {
           <div className="space-y-3">
             <div>
               <div className="flex justify-between text-sm mb-1">
-                <span className="text-gray-600">Ohio State</span>
+                <span className="text-gray-600">Kentucky</span>
                 <span className="font-semibold">{ohioState.logo}%</span>
               </div>
               <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
-                <div className="h-full rounded-full" style={{ width: `${(ohioState.logo / 60) * 100}%`, backgroundColor: colors.scarlet }} />
+                <div className="h-full rounded-full" style={{ width: `${(ohioState.logo / 60) * 100}%`, backgroundColor: colors.blue }} />
               </div>
             </div>
             <div>
@@ -1891,7 +1891,7 @@ function BenchmarkTab() {
           <div className="space-y-3">
             <div>
               <div className="flex justify-between text-sm mb-1">
-                <span className="text-gray-600">Ohio State</span>
+                <span className="text-gray-600">Kentucky</span>
                 <span className="font-semibold">{ohioState.mention}%</span>
               </div>
               <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
@@ -1923,8 +1923,8 @@ function BenchmarkTab() {
         <div className="rounded-2xl bg-white p-5 shadow-sm">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: `${colors.scarlet}15` }}>
-                <Users className="w-5 h-5" style={{ color: colors.scarlet }} />
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: `${colors.blue}15` }}>
+                <Users className="w-5 h-5" style={{ color: colors.blue }} />
               </div>
               <div>
                 <h4 className="font-bold text-gray-900">Collaboration</h4>
@@ -1932,7 +1932,7 @@ function BenchmarkTab() {
               </div>
             </div>
             <div className="text-right">
-              <p className="text-2xl font-black" style={{ color: colors.scarlet }}>#{ranks.collab}</p>
+              <p className="text-2xl font-black" style={{ color: colors.blue }}>#{ranks.collab}</p>
               <p className="text-xs text-gray-400">of {ranks.total} schools</p>
             </div>
           </div>
@@ -1940,11 +1940,11 @@ function BenchmarkTab() {
           <div className="space-y-3">
             <div>
               <div className="flex justify-between text-sm mb-1">
-                <span className="text-gray-600">Ohio State</span>
+                <span className="text-gray-600">Kentucky</span>
                 <span className="font-semibold">{ohioState.collab}%</span>
               </div>
               <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
-                <div className="h-full rounded-full" style={{ width: `${(ohioState.collab / 10) * 100}%`, backgroundColor: colors.scarlet }} />
+                <div className="h-full rounded-full" style={{ width: `${(ohioState.collab / 10) * 100}%`, backgroundColor: colors.blue }} />
               </div>
             </div>
             <div>
@@ -1972,8 +1972,8 @@ function BenchmarkTab() {
         <div className="rounded-2xl bg-white p-5 shadow-sm">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: `${colors.scarlet}15` }}>
-                <Percent className="w-5 h-5" style={{ color: colors.scarlet }} />
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: `${colors.blue}15` }}>
+                <Percent className="w-5 h-5" style={{ color: colors.blue }} />
               </div>
               <div>
                 <h4 className="font-bold text-gray-900">IP Adoption</h4>
@@ -1981,7 +1981,7 @@ function BenchmarkTab() {
               </div>
             </div>
             <div className="text-right">
-              <p className="text-2xl font-black" style={{ color: colors.scarlet }}>#{ranks.adoption}</p>
+              <p className="text-2xl font-black" style={{ color: colors.blue }}>#{ranks.adoption}</p>
               <p className="text-xs text-gray-400">of {ranks.total} schools</p>
             </div>
           </div>
@@ -1989,11 +1989,11 @@ function BenchmarkTab() {
           <div className="space-y-3">
             <div>
               <div className="flex justify-between text-sm mb-1">
-                <span className="text-gray-600">Ohio State</span>
+                <span className="text-gray-600">Kentucky</span>
                 <span className="font-semibold">{ohioState.adoption}%</span>
               </div>
               <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
-                <div className="h-full rounded-full" style={{ width: `${(ohioState.adoption / 60) * 100}%`, backgroundColor: colors.scarlet }} />
+                <div className="h-full rounded-full" style={{ width: `${(ohioState.adoption / 60) * 100}%`, backgroundColor: colors.blue }} />
               </div>
             </div>
             <div>
@@ -2021,13 +2021,13 @@ function BenchmarkTab() {
       {/* Performance Distribution Slider */}
       <div className="bg-white rounded-2xl p-5 shadow-sm">
         <SectionHeader primary="PERFORMANCE " secondary="DISTRIBUTION" />
-        <p className="text-sm text-gray-500 mt-2 mb-4">How Ohio State's IP adoption compares across {benchmarkLabel.toLowerCase()}</p>
+        <p className="text-sm text-gray-500 mt-2 mb-4">How Kentucky's IP adoption compares across {benchmarkLabel.toLowerCase()}</p>
 
         {/* Filters for metric selection */}
         <div className="flex items-center gap-4 mb-4">
           <span className="text-xs font-semibold uppercase tracking-wider text-gray-500">View by:</span>
           <div className="flex gap-2">
-            <button className="px-3 py-1.5 text-xs font-semibold rounded-md" style={{ backgroundColor: colors.scarlet, color: colors.white }}>
+            <button className="px-3 py-1.5 text-xs font-semibold rounded-md" style={{ backgroundColor: colors.blue, color: colors.white }}>
               IP ADOPTION
             </button>
           </div>
@@ -2044,7 +2044,7 @@ function BenchmarkTab() {
 
           {/* Bar */}
           <div className="relative h-12 rounded-lg overflow-hidden" style={{ background: `linear-gradient(90deg, #e5e7eb 0%, #9ca3af 50%, #374151 100%)` }}>
-            {/* Ohio State Marker */}
+            {/* Kentucky Marker */}
             <div
               className="absolute top-0 bottom-0 flex flex-col items-center justify-center"
               style={{
@@ -2052,12 +2052,12 @@ function BenchmarkTab() {
                 transform: 'translateX(-50%)'
               }}
             >
-              <div className="w-1 h-full" style={{ backgroundColor: colors.scarlet }}></div>
+              <div className="w-1 h-full" style={{ backgroundColor: colors.blue }}></div>
               <div
                 className="absolute -top-12 px-3 py-2 rounded-lg shadow-lg whitespace-nowrap"
-                style={{ backgroundColor: colors.scarlet }}
+                style={{ backgroundColor: colors.blue }}
               >
-                <p className="text-white font-bold text-sm">OHIO STATE</p>
+                <p className="text-white font-bold text-sm">KENTUCKY</p>
                 <p className="text-white text-xs">Top {Math.round(((ranks.adoption) / ranks.total) * 100)}%</p>
                 <p className="text-white text-xs opacity-90">of {isConference ? 'conference' : 'D1 schools'}</p>
               </div>
@@ -2086,19 +2086,19 @@ function BenchmarkTab() {
           </div>
           <div className="text-center">
             <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">BEST</p>
-            <p className="text-2xl font-bold" style={{ color: colors.scarlet }}>60.8%</p>
+            <p className="text-2xl font-bold" style={{ color: colors.blue }}>60.8%</p>
             <p className="text-xs text-gray-400">Stanford</p>
           </div>
         </div>
       </div>
 
       {/* Leaderboard Card */}
-      <div className="rounded-2xl p-5 shadow-sm" style={{ backgroundColor: colors.scarlet }}>
+      <div className="rounded-2xl p-5 shadow-sm" style={{ backgroundColor: colors.blue }}>
         <div className="mb-3">
           <h3 style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }} className="text-3xl font-bold uppercase tracking-tight text-white">
             LEADERBOARD
           </h3>
-          <p className="text-white/80 text-sm mt-1">Ohio State's IP adoption rankings</p>
+          <p className="text-white/80 text-sm mt-1">Kentucky's IP adoption rankings</p>
         </div>
 
         <div className="space-y-3">
@@ -2108,8 +2108,8 @@ function BenchmarkTab() {
               #{ranks.adoption}
             </div>
             <div className="flex-1">
-              <p className="text-white/70 text-xs uppercase tracking-wider">In the {isConference ? 'Big Ten' : 'Conference'}</p>
-              <p className="text-white text-xl font-bold">{isConference ? 'Big Ten' : 'Conference'} Schools</p>
+              <p className="text-white/70 text-xs uppercase tracking-wider">In the {isConference ? 'SEC' : 'Conference'}</p>
+              <p className="text-white text-xl font-bold">{isConference ? 'SEC' : 'Conference'} Schools</p>
             </div>
           </div>
 
@@ -2132,14 +2132,14 @@ function BenchmarkTab() {
       <div>
         <div className="mb-4">
           <h3 style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }} className="text-2xl font-bold uppercase tracking-tight">
-            <span style={{ color: colors.scarlet }}>{benchmarkLabel} </span>
+            <span style={{ color: colors.blue }}>{benchmarkLabel} </span>
             <span style={{ color: colors.headerGray }}>IP ADOPTION RANKINGS</span>
           </h3>
         </div>
         <div className="rounded-2xl bg-white overflow-hidden max-h-[500px] overflow-y-auto shadow-sm">
           <table className="w-full">
             <thead className="sticky top-0">
-              <tr style={{ backgroundColor: colors.scarlet }}>
+              <tr style={{ backgroundColor: colors.blue }}>
                 <th className="text-center px-3 py-3 text-xs font-semibold uppercase tracking-wider text-white w-10">#</th>
                 <th className="text-left px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">School</th>
                 {!isConference && <th className="text-left px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">Conf</th>}
@@ -2153,25 +2153,25 @@ function BenchmarkTab() {
               {schools.map((school, idx) => (
                 <tr
                   key={school.name}
-                  className={`border-b border-gray-100 ${school.name === 'Ohio State' ? 'bg-red-50' : idx % 2 === 1 ? 'bg-gray-50/50' : ''}`}
+                  className={`border-b border-gray-100 ${school.name === 'Kentucky' ? 'bg-red-50' : idx % 2 === 1 ? 'bg-gray-50/50' : ''}`}
                 >
                   <td className="px-3 py-3 text-center">
                     <span
                       className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mx-auto"
                       style={{
-                        backgroundColor: school.name === 'Ohio State' ? colors.scarlet : idx < 3 ? colors.gray : '#e5e7eb',
-                        color: school.name === 'Ohio State' || idx < 3 ? colors.white : colors.text,
+                        backgroundColor: school.name === 'Kentucky' ? colors.blue : idx < 3 ? colors.gray : '#e5e7eb',
+                        color: school.name === 'Kentucky' || idx < 3 ? colors.white : colors.text,
                       }}
                     >
                       {idx + 1}
                     </span>
                   </td>
-                  <td className={`px-4 py-3 font-semibold ${school.name === 'Ohio State' ? 'text-red-700' : 'text-gray-900'}`}>
+                  <td className={`px-4 py-3 font-semibold ${school.name === 'Kentucky' ? 'text-red-700' : 'text-gray-900'}`}>
                     {school.name}
                   </td>
                   {!isConference && <td className="px-4 py-3 text-xs text-gray-500">{school.conf}</td>}
                   <td className="px-4 py-3 text-right text-gray-600">{formatNumber(school.posts)}</td>
-                  <td className="px-4 py-3 text-right font-semibold" style={{ color: school.name === 'Ohio State' ? colors.scarlet : colors.text }}>
+                  <td className="px-4 py-3 text-right font-semibold" style={{ color: school.name === 'Kentucky' ? colors.blue : colors.text }}>
                     {school.adoption}%
                   </td>
                   <td className="px-4 py-3 text-right text-gray-600">{school.logo}%</td>
@@ -2190,11 +2190,11 @@ function BenchmarkTab() {
 // ═══════════════════════════════════════════════════════════════
 // MAIN COMPONENT
 // ═══════════════════════════════════════════════════════════════
-interface OhioStateIPImpactProps {
+interface KentuckyIPImpactProps {
   onBack?: () => void;
 }
 
-export function OhioStateIPImpact({ onBack }: OhioStateIPImpactProps) {
+export function KentuckyIPImpact({ onBack }: KentuckyIPImpactProps) {
   const [activeTab, setActiveTab] = useState<TabId>('overview');
 
   return (
@@ -2203,7 +2203,7 @@ export function OhioStateIPImpact({ onBack }: OhioStateIPImpactProps) {
       <div
         className="fixed inset-0 z-0 opacity-[0.03]"
         style={{
-          backgroundImage: 'url(/ohio-state-bg.jpg)',
+          backgroundImage: 'url(/kentucky-bg.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
@@ -2224,8 +2224,8 @@ export function OhioStateIPImpact({ onBack }: OhioStateIPImpactProps) {
                 </button>
               )}
               <img
-                src="https://a.espncdn.com/i/teamlogos/ncaa/500/194.png"
-                alt="Ohio State"
+                src="https://a.espncdn.com/i/teamlogos/ncaa/500/96.png"
+                alt="Kentucky"
                 className="w-12 h-12 object-contain"
               />
               <div>
@@ -2233,16 +2233,16 @@ export function OhioStateIPImpact({ onBack }: OhioStateIPImpactProps) {
                   className="text-2xl font-bold uppercase tracking-tight"
                   style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }}
                 >
-                  <span style={{ color: colors.scarlet }}>IP </span>
+                  <span style={{ color: colors.blue }}>IP </span>
                   <span style={{ color: colors.headerGray }}>IMPACT</span>
                 </h1>
-                <p className="text-sm text-gray-500">Ohio State Athlete Social Media</p>
+                <p className="text-sm text-gray-500">Kentucky Athlete Social Media</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
               <button
                 className="flex items-center gap-2 px-4 py-2 rounded-lg border font-medium hover:bg-gray-50 transition-colors"
-                style={{ borderColor: colors.scarlet, color: colors.scarlet }}
+                style={{ borderColor: colors.blue, color: colors.blue }}
               >
                 <Share2 className="w-4 h-4" />
                 Share
@@ -2259,8 +2259,8 @@ export function OhioStateIPImpact({ onBack }: OhioStateIPImpactProps) {
                 className="px-4 py-2 rounded-t-lg text-sm font-medium transition-colors border-b-2"
                 style={{
                   backgroundColor: activeTab === tab.id ? colors.white : 'transparent',
-                  color: activeTab === tab.id ? colors.scarlet : colors.textMuted,
-                  borderColor: activeTab === tab.id ? colors.scarlet : 'transparent',
+                  color: activeTab === tab.id ? colors.blue : colors.textMuted,
+                  borderColor: activeTab === tab.id ? colors.blue : 'transparent',
                 }}
               >
                 {tab.label}

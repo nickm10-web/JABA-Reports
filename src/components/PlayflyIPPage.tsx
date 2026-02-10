@@ -372,9 +372,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
 
   // Format numbers
   const formatNumber = (num: number): string => {
-    if (num >= 1000000) return `${(num / 1000000).toFixed(1)}M`;
-    if (num >= 1000) return `${(num / 1000).toFixed(0)}K`;
-    return num.toLocaleString();
+    return Math.round(num).toLocaleString();
   };
 
   // Format full numbers without abbreviations (for baseline metrics)
@@ -383,8 +381,17 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
   };
 
   const formatEMV = (emv: number): string => {
+    return `$${Math.round(emv).toLocaleString()}`;
+  };
+
+  // Format large numbers with M abbreviation (for network overview cards)
+  const formatMillions = (num: number): string => {
+    if (num >= 1000000) return `${(num / 1000000).toFixed(1)}M`;
+    return Math.round(num).toLocaleString();
+  };
+
+  const formatEMVMillions = (emv: number): string => {
     if (emv >= 1000000) return `$${(emv / 1000000).toFixed(1)}M`;
-    if (emv >= 1000) return `$${(emv / 1000).toFixed(0)}K`;
     return `$${Math.round(emv).toLocaleString()}`;
   };
 
@@ -571,7 +578,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     <h5 className="text-lg font-bold text-gray-900">Total Followers</h5>
                   </div>
                   <div className="text-3xl font-bold text-[#1770C0]">
-                    {formatNumber(networkTotals.totalFollowers)}
+                    {formatMillions(networkTotals.totalFollowers)}
                   </div>
                   <p className="text-sm text-gray-600 mt-2">Across all {schoolsData.length} schools</p>
                 </div>
@@ -599,7 +606,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     <h5 className="text-lg font-bold text-gray-900">Total Interactions</h5>
                   </div>
                   <div className="text-3xl font-bold text-green-600">
-                    {formatNumber(networkTotals.totalLikes + networkTotals.totalComments)}
+                    {formatMillions(networkTotals.totalLikes + networkTotals.totalComments)}
                   </div>
                   <p className="text-sm text-gray-600 mt-2">Likes + Comments</p>
                 </div>
@@ -613,7 +620,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     <h5 className="text-lg font-bold text-gray-900">Total EMV</h5>
                   </div>
                   <div className="text-3xl font-bold text-yellow-600">
-                    {formatEMV(networkTotals.totalEMV)}
+                    {formatEMVMillions(networkTotals.totalEMV)}
                   </div>
                   <p className="text-sm text-gray-600 mt-2">Earned media value</p>
                 </div>
@@ -753,7 +760,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         <tr>
                           <th
                             onClick={() => handleBaselineSort('rank')}
-                            className="px-6 py-4 text-left text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
+                            className="px-6 py-4 text-left text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0] hover:underline"
                           >
                             <div className="flex items-center gap-2">
                               Rank
@@ -764,7 +771,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                           </th>
                           <th
                             onClick={() => handleBaselineSort('school')}
-                            className="px-6 py-4 text-left text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
+                            className="px-6 py-4 text-left text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0] hover:underline"
                           >
                             <div className="flex items-center gap-2">
                               School Name
@@ -775,7 +782,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                           </th>
                           <th
                             onClick={() => handleBaselineSort('totalPosts')}
-                            className="px-6 py-4 text-right text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
+                            className="px-6 py-4 text-right text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0] hover:underline"
                           >
                             <div className="flex items-center justify-end gap-2">
                               Total Posts
@@ -786,7 +793,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                           </th>
                           <th
                             onClick={() => handleBaselineSort('sponsoredPosts')}
-                            className="px-6 py-4 text-right text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
+                            className="px-6 py-4 text-right text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0] hover:underline"
                           >
                             <div className="flex items-center justify-end gap-2">
                               Sponsored Posts
@@ -797,7 +804,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                           </th>
                           <th
                             onClick={() => handleBaselineSort('totalLikes')}
-                            className="px-6 py-4 text-right text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
+                            className="px-6 py-4 text-right text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0] hover:underline"
                           >
                             <div className="flex items-center justify-end gap-2">
                               Avg Likes Per Post
@@ -808,7 +815,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                           </th>
                           <th
                             onClick={() => handleBaselineSort('totalEngagement')}
-                            className="px-6 py-4 text-right text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
+                            className="px-6 py-4 text-right text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0] hover:underline"
                           >
                             <div className="flex items-center justify-end gap-2">
                               <div className="flex items-center gap-1.5">
@@ -829,10 +836,6 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                       </thead>
                       <tbody>
                         {sortedData.map((school, index) => {
-                          // Determine row color coding based on engagement
-                          const isTopPerformer = index < 5;
-                          const isLowPerformer = index >= sortedData.length - 5;
-
                           return (
                             <tr
                               key={school.schoolId}
@@ -841,7 +844,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                               }`}
                               title={`Avg Engagement/Post: ${formatNumber(school.avgEngagementPerPost)} | Engagement Rate: ${(school.engagementRate * 100).toFixed(2)}%`}
                             >
-                              <td className="px-6 py-4 font-semibold text-sm" style={{ color: colors.primary }}>
+                              <td className={`px-6 py-4 font-semibold text-sm ${baselineSortBy === 'rank' ? 'text-green-600' : ''}`} style={{ color: baselineSortBy === 'rank' ? undefined : colors.primary }}>
                                 {school.rank}
                               </td>
                               <td className="px-6 py-4 text-gray-900 font-semibold">
@@ -852,16 +855,16 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                                   )}
                                 </div>
                               </td>
-                              <td className={`px-6 py-4 text-right ${isTopPerformer ? 'text-green-600 font-semibold' : isLowPerformer ? 'text-gray-400' : 'text-gray-700'}`}>
+                              <td className={`px-6 py-4 text-right ${baselineSortBy === 'totalPosts' ? 'text-green-600 font-semibold' : 'text-gray-700'}`}>
                                 {formatFullNumber(school.totalPosts)}
                               </td>
-                              <td className={`px-6 py-4 text-right ${isTopPerformer ? 'text-green-600 font-semibold' : isLowPerformer ? 'text-gray-400' : 'text-gray-700'}`}>
+                              <td className={`px-6 py-4 text-right ${baselineSortBy === 'sponsoredPosts' ? 'text-green-600 font-semibold' : 'text-gray-700'}`}>
                                 {formatFullNumber(school.sponsoredPosts)}
                               </td>
-                              <td className={`px-6 py-4 text-right ${isTopPerformer ? 'text-green-600 font-semibold' : isLowPerformer ? 'text-gray-400' : 'text-gray-700'}`}>
+                              <td className={`px-6 py-4 text-right ${baselineSortBy === 'totalLikes' ? 'text-green-600 font-semibold' : 'text-gray-700'}`}>
                                 {formatFullNumber(school.avgLikesPerPost)}
                               </td>
-                              <td className={`px-6 py-4 text-right font-semibold ${isTopPerformer ? 'text-green-600' : isLowPerformer ? 'text-gray-400' : 'text-gray-900'}`}>
+                              <td className={`px-6 py-4 text-right font-semibold ${baselineSortBy === 'totalEngagement' ? 'text-green-600' : 'text-gray-900'}`}>
                                 {formatFullNumber(school.avgEngagementPerPost)}
                               </td>
                             </tr>
@@ -1052,21 +1055,30 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                 {/* Scrollable School Cards */}
                 <div className="space-y-8 max-h-[2000px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent">
                   {(() => {
-                    // Sort schools by IP adoption rate
-                    const sortedSchools = [...schoolsData].sort((a, b) => {
-                      const aAdoption = (a.counts.withIp / a.overall.totalContents) * 100;
-                      const bAdoption = (b.counts.withIp / b.overall.totalContents) * 100;
-                      return bAdoption - aAdoption;
+                    // ═══════════════════════════════════════════════════════════════
+                    // CALCULATE IP IMPACT (Total Engagement from IP Posts)
+                    // ═══════════════════════════════════════════════════════════════
+                    const schoolsWithImpact = schoolsData.map(school => {
+                      // Calculate total engagement (likes + comments) from all IP posts
+                      const totalIPEngagement =
+                        (school.collaboration.yes.contents * (school.collaboration.yes.likes + school.collaboration.yes.comments)) +
+                        (school.logo.yes.contents * (school.logo.yes.likes + school.logo.yes.comments)) +
+                        (school.orgInCaption.yes.contents * (school.orgInCaption.yes.likes + school.orgInCaption.yes.comments));
+
+                      return { school, totalIPEngagement };
                     });
+
+                    // Sort schools by IP Impact (highest engagement first)
+                    const sortedSchools = schoolsWithImpact.sort((a, b) => b.totalIPEngagement - a.totalIPEngagement);
 
                     // Max schools (schools with premium tier)
                     const maxSchools = ['Michigan State', 'University of Maryland', 'Auburn University', 'Texas A&M', 'Louisiana State University', 'Penn State University'];
 
-                    return sortedSchools.map((school) => {
-                      // Define IP types in FIXED order: Collaboration, Logo, Mention
+                    return sortedSchools.map(({ school, totalIPEngagement }) => {
+                      // Define IP types in FIXED order: Collaboration, Visual IP, Mention
                       const ipTypes = [
                         { type: 'Collaboration', lift: school.collaboration.avgLift, data: school.collaboration, icon: '🤝' },
-                        { type: 'Logo', lift: school.logo.avgLift, data: school.logo, icon: '🏫' },
+                        { type: 'Visual IP', lift: school.logo.avgLift, data: school.logo, icon: '🏫' },
                         { type: 'Mention', lift: school.orgInCaption.avgLift, data: school.orgInCaption, icon: '💬' }
                       ];
 
@@ -1110,12 +1122,26 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                                 <p className="text-sm text-gray-600 mt-1">
                                   Best: <span className="text-green-600 font-semibold">{bestIPType} IP</span> ({ipTypes.find(t => t.type === bestIPType)!.lift > 0 ? '+' : ''}{ipTypes.find(t => t.type === bestIPType)!.lift.toFixed(1)}% lift)
                                 </p>
+                                <p className="text-xs text-gray-500 mt-1">
+                                  IP Adoption: <span className="font-semibold text-gray-700">{ipAdoption.toFixed(1)}%</span> • {formatNumber(school.counts.withIp)} IP Posts
+                                </p>
                               </div>
                             </div>
 
                             <div className="text-right">
-                              <div className="text-2xl font-bold text-[#1770C0]">{ipAdoption.toFixed(1)}%</div>
-                              <div className="text-xs text-gray-600">IP Adoption</div>
+                              <div className="text-3xl font-bold text-[#1770C0]">{formatMillions(totalIPEngagement)}</div>
+                              <div className="flex items-center justify-end gap-1.5">
+                                <div className="text-xs text-gray-600 font-semibold">IP Impact</div>
+                                <div className="relative group">
+                                  <Info className="w-3.5 h-3.5 text-gray-400 cursor-help" />
+                                  <div className="absolute top-1/2 right-full -translate-y-1/2 mr-2 w-56 px-4 py-3 bg-gray-900 border border-gray-700 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
+                                    <div className="font-bold mb-2 text-[#3B9FD9]">IP Impact</div>
+                                    <div className="text-gray-300">
+                                      Total interactions from all IP posts
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
 
@@ -1151,7 +1177,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                                         <h6 className="text-base font-bold text-gray-900">{ipType.type.toUpperCase()}</h6>
                                       </div>
                                       <p className="text-xs text-gray-600">
-                                        {ipType.type === 'Logo' && 'Visual IP visible in content (logo, uniform with marks)'}
+                                        {ipType.type === 'Visual IP' && 'Visual IP visible in content (logo, uniform with marks)'}
                                         {ipType.type === 'Collaboration' && 'Collaboration posts with school'}
                                         {ipType.type === 'Mention' && 'School mentioned in caption'}
                                       </p>
@@ -1178,12 +1204,12 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                                         <span className="text-sm font-bold text-gray-900">{formatNumber(ipType.data.yes.contents)}</span>
                                       </div>
                                       <div className="flex justify-between items-center">
-                                        <span className="text-xs text-gray-600">Total EMV</span>
+                                        <span className="text-xs text-gray-600">Avg EMV</span>
                                         <span className="text-sm font-bold text-green-600">{formatEMV(ipType.data.yes.emv)}</span>
                                       </div>
                                       <div className="flex justify-between items-center">
                                         <div className="flex items-center gap-1.5 text-xs text-gray-600">
-                                          <span>Total Interactions</span>
+                                          <span>Avg Interactions</span>
                                           <div className="relative group">
                                             <Info className="w-3 h-3 cursor-help" />
                                             <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-gray-900 border border-gray-700 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
@@ -1194,7 +1220,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                                         <span className="text-sm font-bold text-gray-900">{formatNumber(totalEngagement)}</span>
                                       </div>
                                       <div className="flex justify-between items-center">
-                                        <span className="text-xs text-gray-600">Total Likes</span>
+                                        <span className="text-xs text-gray-600">Avg Likes</span>
                                         <span className="text-sm font-bold text-gray-900">{formatNumber(ipType.data.yes.likes)}</span>
                                       </div>
                                     </div>
@@ -1279,7 +1305,15 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                 : 0;
 
               return (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-6">
+                  {/* Visual IP Explanation */}
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <p className="text-sm text-gray-700">
+                      <span className="font-semibold text-gray-900">Visual IP</span> refers to posts where school intellectual property is visible in the content, including logos, uniforms with marks, and other branded visual elements.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* With Logo */}
                   <div className="bg-white border-2 border-green-400 rounded-xl p-8 shadow-lg">
                     <div className="flex items-center gap-3 mb-6">
@@ -1296,7 +1330,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                       </div>
                       <div>
                         <div className="flex items-center gap-1.5 text-sm text-gray-600 mb-1">
-                          <span>Total Interactions</span>
+                          <span>Avg Interactions</span>
                           <div className="relative group">
                             <Info className="w-3.5 h-3.5 cursor-help" />
                             <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-gray-900 border border-gray-700 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
@@ -1315,7 +1349,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         </div>
                       </div>
                       <div>
-                        <div className="text-sm text-gray-600 mb-1">Total EMV</div>
+                        <div className="text-sm text-gray-600 mb-1">Avg EMV</div>
                         <div className="text-2xl font-bold text-green-600">
                           {formatEMV(totals.withIP.emv)}
                         </div>
@@ -1339,7 +1373,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                       </div>
                       <div>
                         <div className="flex items-center gap-1.5 text-sm text-gray-600 mb-1">
-                          <span>Total Interactions</span>
+                          <span>Avg Interactions</span>
                           <div className="relative group">
                             <Info className="w-3.5 h-3.5 cursor-help" />
                             <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-gray-900 border border-gray-700 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
@@ -1358,7 +1392,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         </div>
                       </div>
                       <div>
-                        <div className="text-sm text-gray-600 mb-1">Total EMV</div>
+                        <div className="text-sm text-gray-600 mb-1">Avg EMV</div>
                         <div className="text-2xl font-bold text-gray-400">
                           N/A
                         </div>
@@ -1366,20 +1400,21 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     </div>
                   </div>
 
-                  {/* Impact Summary */}
-                  <div className="md:col-span-2 bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/30 rounded-xl p-8">
-                    <h4 className="text-xl font-bold text-gray-900 mb-4">Impact Summary</h4>
-                    <div className="flex items-center gap-6">
-                      <div>
-                        <div className="text-sm text-gray-700 mb-1">Average Engagement Lift</div>
-                        <div className="text-4xl font-bold text-green-600">
-                          {totals.avgLift > 0 ? '+' : ''}{totals.avgLift.toFixed(1)}%
+                    {/* Impact Summary */}
+                    <div className="md:col-span-2 bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/30 rounded-xl p-8">
+                      <h4 className="text-xl font-bold text-gray-900 mb-4">Impact Summary</h4>
+                      <div className="flex items-center gap-6">
+                        <div>
+                          <div className="text-sm text-gray-700 mb-1">Average Engagement Lift</div>
+                          <div className="text-4xl font-bold text-green-600">
+                            {totals.avgLift > 0 ? '+' : ''}{totals.avgLift.toFixed(1)}%
+                          </div>
                         </div>
-                      </div>
-                      <div className="flex-1">
-                        <p className="text-gray-700">
-                          Posts with visual IP show <span className="text-green-600 font-bold">{Math.abs(totals.avgLift).toFixed(1)}%</span> {totals.avgLift > 0 ? 'higher' : 'lower'} engagement on average compared to posts without visual IP.
-                        </p>
+                        <div className="flex-1">
+                          <p className="text-gray-700">
+                            Posts with visual IP show <span className="text-green-600 font-bold">{Math.abs(totals.avgLift).toFixed(1)}%</span> {totals.avgLift > 0 ? 'higher' : 'lower'} engagement on average compared to posts without visual IP.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1431,7 +1466,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                       </div>
                       <div>
                         <div className="flex items-center gap-1.5 text-sm text-gray-600 mb-1">
-                          <span>Total Interactions</span>
+                          <span>Avg Interactions</span>
                           <div className="relative group">
                             <Info className="w-3.5 h-3.5 cursor-help" />
                             <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-gray-900 border border-gray-700 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
@@ -1450,7 +1485,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         </div>
                       </div>
                       <div>
-                        <div className="text-sm text-gray-600 mb-1">Total EMV</div>
+                        <div className="text-sm text-gray-600 mb-1">Avg EMV</div>
                         <div className="text-2xl font-bold text-purple-600">
                           {formatEMV(totals.withIP.emv)}
                         </div>
@@ -1474,7 +1509,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                       </div>
                       <div>
                         <div className="flex items-center gap-1.5 text-sm text-gray-600 mb-1">
-                          <span>Total Interactions</span>
+                          <span>Avg Interactions</span>
                           <div className="relative group">
                             <Info className="w-3.5 h-3.5 cursor-help" />
                             <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-gray-900 border border-gray-700 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
@@ -1493,7 +1528,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         </div>
                       </div>
                       <div>
-                        <div className="text-sm text-gray-600 mb-1">Total EMV</div>
+                        <div className="text-sm text-gray-600 mb-1">Avg EMV</div>
                         <div className="text-2xl font-bold text-gray-400">
                           N/A
                         </div>
@@ -1566,7 +1601,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                       </div>
                       <div>
                         <div className="flex items-center gap-1.5 text-sm text-gray-600 mb-1">
-                          <span>Total Interactions</span>
+                          <span>Avg Interactions</span>
                           <div className="relative group">
                             <Info className="w-3.5 h-3.5 cursor-help" />
                             <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-gray-900 border border-gray-700 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
@@ -1585,7 +1620,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         </div>
                       </div>
                       <div>
-                        <div className="text-sm text-gray-600 mb-1">Total EMV</div>
+                        <div className="text-sm text-gray-600 mb-1">Avg EMV</div>
                         <div className="text-2xl font-bold text-yellow-600">
                           {formatEMV(totals.withIP.emv)}
                         </div>
@@ -1609,7 +1644,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                       </div>
                       <div>
                         <div className="flex items-center gap-1.5 text-sm text-gray-600 mb-1">
-                          <span>Total Interactions</span>
+                          <span>Avg Interactions</span>
                           <div className="relative group">
                             <Info className="w-3.5 h-3.5 cursor-help" />
                             <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-gray-900 border border-gray-700 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
@@ -1628,7 +1663,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         </div>
                       </div>
                       <div>
-                        <div className="text-sm text-gray-600 mb-1">Total EMV</div>
+                        <div className="text-sm text-gray-600 mb-1">Avg EMV</div>
                         <div className="text-2xl font-bold text-gray-400">
                           N/A
                         </div>

@@ -118,12 +118,12 @@ export function PlayflyReportHub({ onBack }: PlayflyReportHubProps) {
 
                 {/* Title */}
                 <h2 className="text-2xl font-bold text-white mb-3">
-                  IP & Athlete Performance
+                  IP Report
                 </h2>
 
                 {/* One-line description */}
                 <p className="text-gray-300 text-base mb-6">
-                  Comprehensive IP impact, partnerships, and athlete analytics
+                  IP impact analysis across all schools
                 </p>
 
                 {/* View button */}
