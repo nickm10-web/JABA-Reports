@@ -1,487 +1,543 @@
-import { ArrowDown, Calendar } from 'lucide-react';
+import { ArrowDown, Heart, Eye, MessageCircle, Share2, TrendingUp, Users, Award, Zap, Star, ExternalLink } from 'lucide-react';
 
-interface CampaignData {
-  school: string;
-  campaign: {
-    name: string;
-    posts: number;
-    athletes: number;
-  };
-  metrics: {
-    totalEngagements: number;
-    earnedMediaValue: number;
-    averageEMV: string;
-    likes: number;
-    comments: number;
-    commentToLikeRatio: string;
-  };
-  performance: {
-    vsAverage: number;
-    performanceIndex: number;
-  };
-  rankings: {
-    atSchool: number;
-    inConference: number;
-    inNCAAAll: number;
-  };
-  topPost: {
-    title: string;
-    image: string;
-    athletes: string;
-    likes: number;
-    percentage: number;
-    brand: string;
-  };
-  campaignLift: Array<{
-    athleteName: string;
-    handle: string;
-    sport: string;
-    image: string;
-    liftAmount: number;
-    campaignAvg: number;
-    athleteAvg: number;
-    liftPercent?: number;
-  }>;
-}
+// ═══════════════════════════════════════════════════════════════
+// DATA — Real metrics from Instagram + instaloader scrape
+// ═══════════════════════════════════════════════════════════════
 
-interface AuburnCampaignDashboardProps {
-  data?: CampaignData;
-  onBack?: () => void;
-}
-
-// Real data from Instagram reel: https://www.instagram.com/reel/DUEd0DmimWi/
-// Baumhower's: 1,757 likes, 0 comments, 22.2K views, 52 reposts, $35.14 EMV
-// Framed positively: outperformed Nike (388), Ford (801), Chevrolet (520), etc.
-const defaultData: CampaignData = {
-  school: "Auburn University",
-  campaign: {
-    name: "Baumhower's Victory Grille",
-    posts: 1,
-    athletes: 2 // Collab between @wareagleplus and @auburnmbb
-  },
-  metrics: {
-    totalEngagements: 1809, // 1,757 likes + 52 reposts
-    earnedMediaValue: 35.14, // Real EMV from data
-    averageEMV: "$35.14",
-    likes: 1757,
-    comments: 0,
-    commentToLikeRatio: "0.00%"
-  },
-  performance: {
-    // Framing: 1,757 likes ranks well above median sponsor (293 likes)
-    // Top 15% of Auburn sponsors by likes
-    vsAverage: 85, // Top 15% = 85th percentile
-    performanceIndex: 15 // Positive spin
-  },
-  rankings: {
-    atSchool: 18, // Top 15% of 120+ sponsors
-    inConference: 32, // Estimated SEC ranking
-    inNCAAAll: 67 // Estimated NCAA ranking
-  },
-  topPost: {
-    title: "The Flight Gaming Show",
-    image: "/baumhowers-post.png",
-    athletes: "@wareagleplus x @auburnmbb",
-    likes: 1757,
-    percentage: 100,
-    brand: "BAUMHOWER'S"
-  },
-  campaignLift: [
-    {
-      athleteName: "War Eagle Plus",
-      handle: "@wareagleplus",
-      sport: "Auburn Athletics Portal",
-      image: "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png",
-      liftAmount: 1337, // 1757 campaign vs 420 avg
-      campaignAvg: 1757,
-      athleteAvg: 420, // Baseline: avg of last 30 posts
-      liftPercent: 318.33
-    },
-    {
-      athleteName: "Auburn MBB",
-      handle: "@auburnmbb",
-      sport: "Men's Basketball",
-      image: "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png",
-      liftAmount: 867, // 1757 campaign vs 890 avg sponsored post
-      campaignAvg: 1757,
-      athleteAvg: 890, // Baseline: avg of last 30 sponsored posts
-      liftPercent: 97.42
-    }
-  ]
+// Campaign posts
+const athletePost = {
+  account: '@auburnmbb',
+  label: 'Auburn MBB',
+  image: '/baumhowers-post.png',
+  link: 'https://www.instagram.com/reel/DUEd0DmimWi/',
+  likes: 1757,
+  comments: 0,
+  reposts: 52,
+  views: 22200,
 };
 
+const brandPost = {
+  account: '@baumhowersauburn',
+  label: 'Brand Post',
+  image: '/baumhowers-post.png',
+  link: 'https://www.instagram.com/reel/DT07eUokmge/',
+  likes: 103,
+  comments: 1,
+  reposts: 5,
+  views: 4891, // Updated from live count (was 954 at scrape time)
+  emv: 2.10,
+  caption: 'A quick look back at last week, where Tahaad Pettiford and Keshawn Murphy brought the competition in Fortnite and NBA2K',
+};
+
+const combined = {
+  totalLikes: athletePost.likes + brandPost.likes,
+  totalViews: athletePost.views + brandPost.views,
+  totalPosts: 2,
+  totalEMV: athletePost.emv + brandPost.emv,
+};
+
+// Baumhower's baseline from instaloader scrape (810+ posts)
+const baumhowersProfile = {
+  followers: 2008,
+  totalPosts: 810,
+  recentAvgLikes: 26.8, // Last 30 posts excl Auburn reel
+  recentAvgComments: 0.6,
+  recentMedianLikes: 12,
+};
+
+// Their top posts of all time — with campaign posts inserted at their natural ranking
+// The athlete post (1,757 likes) would rank #2 among Baumhower's all-time best
+// The brand post (103 likes) is well above their avg of 27 but not top-10 material
+const baumhowersTopPosts = [
+  { rank: 1, likes: 3489, caption: 'AU Football NIL partnership announcement', year: '2023', isPartnership: true, isCampaign: false },
+  { rank: 2, likes: 1777, caption: 'Football kickoff NIL announcement', year: '2024', isPartnership: true, isCampaign: false },
+  { rank: 3, likes: 1757, caption: 'The Flight Gaming Show (Athlete Post)', year: '2026', isPartnership: true, isCampaign: true },
+  { rank: 4, likes: 1650, caption: "Byron's Smokehouse x Baumhower's collab", year: '2025', isPartnership: true, isCampaign: false },
+  { rank: 5, likes: 1211, caption: 'Track & Field NIL partnership', year: '2023', isPartnership: true, isCampaign: false },
+  { rank: 6, likes: 1181, caption: 'Fallan Lanham partnership', year: '2024', isPartnership: true, isCampaign: false },
+  { rank: 7, likes: 1060, caption: 'Freshman partnership announcement', year: '2023', isPartnership: true, isCampaign: false },
+  { rank: 8, likes: 974, caption: 'Gymnastics NIL partnership', year: '2023', isPartnership: true, isCampaign: false },
+  { rank: 9, likes: 904, caption: 'AU Football pre-season partnership', year: '2023', isPartnership: true, isCampaign: false },
+  { rank: 10, likes: 812, caption: 'Sebastian Trujillo NIL partnership', year: '2025', isPartnership: true, isCampaign: false },
+];
+
+// Baumhower's recent posts for comparison (from instaloader scrape)
+const baumhowersRecentPosts = [
+  { date: 'Feb 8', likes: 5, caption: 'Regular post' },
+  { date: 'Feb 7', likes: 12, caption: 'Regular post' },
+  { date: 'Feb 5', likes: 31, caption: 'Regular post' },
+  { date: 'Feb 4', likes: 4, caption: 'Regular post' },
+  { date: 'Jan 29', likes: 42, caption: 'Regular post' },
+  { date: 'Jan 29', likes: 15, caption: 'Regular post' },
+  { date: 'Jan 28', likes: 4, caption: 'Regular post' },
+  { date: 'Jan 22', likes: 103, caption: 'Auburn Campaign Reel', isAuburn: true },
+  { date: 'Jan 20', likes: 5, caption: 'Regular post' },
+  { date: 'Jan 15', likes: 42, caption: 'Tahaad Pettiford event' },
+];
+
+// Athlete performance
+const athleteBenchmarks = [
+  { name: 'Keyshawn Hall', sport: "Men's Basketball", avgLikes: '2.5K', vsAll: '+70.0%', vsSponsored: '+257.1%' },
+  { name: 'Kevin Overton', sport: "Men's Basketball", avgLikes: '1.8K', vsAll: '+42.5%', vsSponsored: '+118.3%' },
+];
+
+const campaignLift = [
+  {
+    athleteName: 'War Eagle Plus',
+    handle: '@wareagleplus',
+    sport: 'Auburn Athletics Portal',
+    image: 'https://a.espncdn.com/i/teamlogos/ncaa/500/2.png',
+    liftAmount: 1337,
+    campaignAvg: 1757,
+    athleteAvg: 420,
+    liftPercent: 318,
+  },
+  {
+    athleteName: 'Auburn MBB',
+    handle: '@auburnmbb',
+    sport: "Men's Basketball",
+    image: 'https://a.espncdn.com/i/teamlogos/ncaa/500/2.png',
+    liftAmount: 867,
+    campaignAvg: 1757,
+    athleteAvg: 890,
+    liftPercent: 97,
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════
+// HELPERS
+// ═══════════════════════════════════════════════════════════════
+
 function formatNumber(num: number): string {
-  if (num >= 1000000) {
-    return (num / 1000000).toFixed(1) + 'M';
-  } else if (num >= 1000) {
-    return (num / 1000).toFixed(1) + 'K';
-  }
-  return num.toString();
+  if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+  if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
+  return num.toLocaleString();
 }
 
 function formatCurrency(num: number): string {
-  if (num >= 1000000) {
-    return '$' + (num / 1000000).toFixed(1) + 'M';
-  } else if (num >= 1000) {
-    return '$' + (num / 1000).toFixed(1) + 'K';
-  }
-  return '$' + num.toString();
+  if (num >= 1000000) return '$' + (num / 1000000).toFixed(1) + 'M';
+  if (num >= 1000) return '$' + (num / 1000).toFixed(1) + 'K';
+  return '$' + num.toFixed(2);
 }
 
-export function AuburnCampaignDashboard({ data = defaultData, onBack }: AuburnCampaignDashboardProps) {
+// ═══════════════════════════════════════════════════════════════
+// MAIN COMPONENT
+// ═══════════════════════════════════════════════════════════════
+
+interface AuburnCampaignDashboardProps {
+  onBack?: () => void;
+}
+
+export function AuburnCampaignDashboard({ onBack }: AuburnCampaignDashboardProps) {
+  const liftPercent = Math.round(((brandPost.likes / baumhowersProfile.recentAvgLikes) - 1) * 100);
+  const partnershipPostCount = baumhowersTopPosts.filter(p => p.isPartnership).length;
+
   return (
-    <div className="min-h-screen bg-gray-100">
-      {/* Header */}
+    <div className="min-h-screen bg-gray-50">
+      {/* ─── Header ─── */}
       <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               {onBack && (
-                <button
-                  onClick={onBack}
-                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-                >
+                <button onClick={onBack} className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
                   <ArrowDown className="w-5 h-5 rotate-90" />
                 </button>
               )}
-              <img
-                src="https://a.espncdn.com/i/teamlogos/ncaa/500/2.png"
-                alt="Auburn"
-                className="w-14 h-14 object-contain"
-              />
+              <img src="https://a.espncdn.com/i/teamlogos/ncaa/500/2.png" alt="Auburn" className="w-12 h-12 object-contain" />
               <div>
-                <h1 className="text-2xl font-extrabold text-[#0C2340] tracking-wide uppercase">
-                  AUBURN
+                <h1 className="text-xl font-extrabold text-[#0C2340] tracking-wide uppercase">
+                  Baumhower's <span className="text-[#E87722]">x</span> Auburn
                 </h1>
                 <p className="text-sm text-gray-500 font-medium">Campaign Performance Report</p>
               </div>
             </div>
-            <div className="flex items-center gap-4">
-              <button className="flex items-center gap-2 bg-gray-100 border border-gray-200 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:border-[#E87722] transition-colors">
-                <Calendar className="w-4 h-4" />
-                <span>{data.campaign.name}</span>
-                <ArrowDown className="w-4 h-4" />
-              </button>
-              <p className="text-xs text-gray-500">War Eagle Intelligence</p>
-            </div>
+            <p className="text-xs text-gray-400">Powered by JABA</p>
           </div>
         </div>
       </header>
 
-      {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
-        {/* Hero Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
-          {/* Left Hero Card */}
-          <div className="lg:col-span-3 rounded-2xl p-8 text-white relative overflow-hidden bg-gradient-to-br from-[#E87722] to-[#C96318]">
-            <div className="absolute inset-0 opacity-10">
-              <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                  <circle cx="5" cy="5" r="1" fill="currentColor" />
+
+        {/* ─── 1. Co-Branded Hero Banner ─── */}
+        <div className="rounded-2xl overflow-hidden relative">
+          <div className="bg-gradient-to-r from-[#0C2340] via-[#1a3a5c] to-[#E87722] p-8 lg:p-10">
+            <div className="absolute inset-0 opacity-5">
+              <svg className="w-full h-full" viewBox="0 0 200 200" preserveAspectRatio="none">
+                <pattern id="heroGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <circle cx="10" cy="10" r="1.5" fill="currentColor" />
                 </pattern>
-                <rect width="100" height="100" fill="url(#grid)" />
+                <rect width="200" height="200" fill="url(#heroGrid)" />
               </svg>
             </div>
-            <div className="relative z-10 flex items-center h-full">
-              <div className="grid grid-cols-2 gap-8 w-full">
-                <div className="border-r border-white/20 pr-8">
-                  <p className="text-xs font-bold uppercase tracking-wider opacity-90 mb-2">
-                    Total Engagements
-                  </p>
-                  <p className="text-5xl font-black leading-none mb-2">
-                    {formatNumber(data.metrics.totalEngagements)}
-                  </p>
-                  <p className="text-sm opacity-90">
-                    Driven by campaign highlights.
-                  </p>
-                </div>
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-wider opacity-90 mb-2">
-                    Earned Media Value
-                  </p>
-                  <p className="text-5xl font-black leading-none mb-2">
-                    {formatCurrency(data.metrics.earnedMediaValue)}
-                  </p>
-                  <p className="text-sm opacity-90">
-                    Campaign EMV total.
-                  </p>
-                </div>
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                  Campaign Report
+                </span>
+                <span className="bg-[#E87722]/30 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                  Jan 2026
+                </span>
               </div>
-            </div>
-          </div>
-
-          {/* Right Metrics Cards - 2x2 Grid */}
-          <div className="lg:col-span-2 grid grid-cols-2 gap-4">
-            <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-5 border-l-4 border-l-[#E87722]">
-              <p className="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-2">Average EMV</p>
-              <p className="text-3xl font-black text-gray-900">{data.metrics.averageEMV}</p>
-            </div>
-            <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-5 border-l-4 border-l-[#E87722]">
-              <p className="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-2">Likes</p>
-              <p className="text-3xl font-black text-gray-900">{formatNumber(data.metrics.likes)}</p>
-            </div>
-            <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-5 border-l-4 border-l-[#E87722]">
-              <p className="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-2">Reposts</p>
-              <p className="text-3xl font-black text-gray-900">52</p>
-            </div>
-            <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-5 border-l-4 border-l-[#E87722]">
-              <p className="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-2">EMV</p>
-              <p className="text-3xl font-black text-gray-900">{data.metrics.averageEMV}</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Performance & Top Post */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
-          {/* Campaign Performance vs Benchmark */}
-          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col">
-            <div className="px-6 py-4 border-b border-gray-100">
-              <h3 className="text-lg font-extrabold text-[#E87722] uppercase tracking-wide">
-                Campaign Performance <span className="text-gray-400 font-medium normal-case">vs</span> Benchmark
-              </h3>
-              <p className="text-sm text-gray-500 mt-1">Baumhower's ranked among 120+ Auburn sponsors</p>
-            </div>
-            <div className="p-6 flex-1 flex flex-col justify-between">
-              <div className="space-y-5">
-                {/* Baumhower's position */}
-                <div>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-bold text-[#0C2340]">Baumhower's</span>
-                    <span className="text-sm font-extrabold text-[#E87722]">1,757 likes</span>
-                  </div>
-                  <div className="relative h-4 bg-gray-100 rounded-full overflow-hidden">
-                    <div className="absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-[#E87722] to-[#C96318]" style={{ width: '85%' }} />
-                    <div className="absolute top-0 bottom-0 left-1/2 w-0.5 bg-gray-400" />
-                  </div>
-                  <div className="flex justify-between text-xs text-gray-400 mt-1">
-                    <span>0</span>
-                    <span>Median: 293</span>
-                    <span>Top: 33.9K</span>
-                  </div>
-                </div>
-
-                {/* Comparison bars */}
-                <div className="space-y-4">
-                  <div>
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs font-semibold text-gray-600">Nike</span>
-                      <span className="text-xs text-gray-500">388 likes</span>
-                    </div>
-                    <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
-                      <div className="h-full rounded-full bg-gray-300" style={{ width: '1.1%' }} />
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs font-semibold text-gray-600">Chevrolet</span>
-                      <span className="text-xs text-gray-500">520 likes</span>
-                    </div>
-                    <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
-                      <div className="h-full rounded-full bg-gray-300" style={{ width: '1.5%' }} />
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs font-semibold text-gray-600">Ford</span>
-                      <span className="text-xs text-gray-500">801 likes</span>
-                    </div>
-                    <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
-                      <div className="h-full rounded-full bg-gray-300" style={{ width: '2.4%' }} />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Summary badge - pushed to bottom */}
-              <div className="rounded-lg p-3 bg-[#E87722]/10 text-center mt-6">
-                <p className="text-sm font-bold text-[#E87722]">
-                  Top 15% — Ranked #18 of 120+ sponsors
-                </p>
-                <p className="text-xs text-gray-500 mt-1">Outperformed Nike, Ford & Chevrolet at Auburn</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Campaign Post */}
-          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col">
-            {/* Image takes up most of the card */}
-            <div className="relative flex-1 min-h-[300px] overflow-hidden bg-gray-100">
-              <img
-                src={data.topPost.image}
-                alt={data.topPost.title}
-                className="w-full h-full object-cover absolute inset-0"
-                onError={(e) => {
-                  e.currentTarget.src = 'https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=600&h=400&fit=crop';
-                }}
-              />
-              <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1.5 rounded-lg text-sm font-bold uppercase tracking-wide">
-                {data.topPost.brand}
-              </div>
-              <a
-                href="https://www.instagram.com/reel/DUEd0DmimWi/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute top-4 right-4 bg-white/90 text-gray-700 px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-white transition-colors"
-              >
-                View on Instagram →
-              </a>
-              {/* Overlay caption */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-5 pt-16">
-                <p className="text-white/80 text-xs mb-1">"Ballers 🤝 Gamers" - The Flight gaming show promo</p>
-                <h4 className="text-lg font-extrabold text-white uppercase">
-                  {data.topPost.athletes}
-                </h4>
-              </div>
-            </div>
-            {/* Metrics bar at bottom */}
-            <div className="px-5 py-4 flex items-center justify-between border-t border-gray-100">
-              <div className="flex items-center gap-3">
-                <div className="flex items-center gap-1.5 text-sm font-bold text-[#E87722]">
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                    <circle cx="12" cy="12" r="3"/>
-                  </svg>
-                  22.2K
-                </div>
-                <span className="text-gray-300">|</span>
-                <div className="flex items-center gap-1.5 text-sm font-bold text-[#0C2340]">
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-                  </svg>
-                  {formatNumber(data.topPost.likes)}
-                </div>
-                <span className="text-gray-300">|</span>
-                <div className="flex items-center gap-1.5 text-sm font-bold text-gray-600">
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M17 1l4 4-4 4"/>
-                    <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
-                    <path d="M7 23l-4-4 4-4"/>
-                    <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
-                  </svg>
-                  52
-                </div>
-              </div>
-              <p className="text-xs text-[#E87722] font-semibold">
-                4.5x vs Nike, Ford & Chevrolet
+              <h2 className="text-3xl lg:text-4xl font-black text-white mb-2">
+                Baumhower's Victory Grille
+              </h2>
+              <p className="text-lg text-white/80">
+                "The Flight Gaming Show" — Tahaad Pettiford & Keshawn Murphy
               </p>
             </div>
           </div>
         </div>
 
-        {/* Rankings */}
+        {/* ─── 2. Combined Campaign KPIs ─── */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <KPICard icon={<Heart className="w-5 h-5" />} label="Total Likes" value={formatNumber(combined.totalLikes)} accent />
+          <KPICard icon={<Eye className="w-5 h-5" />} label="Total Views" value={formatNumber(combined.totalViews)} />
+          <KPICard icon={<Share2 className="w-5 h-5" />} label="Campaign Posts" value={combined.totalPosts.toString()} />
+          <KPICard icon={<TrendingUp className="w-5 h-5" />} label="Combined EMV" value={formatCurrency(combined.totalEMV)} accent />
+        </div>
+
+        {/* ─── 3. Post-by-Post Breakdown ─── */}
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
           <div className="px-6 py-4 border-b border-gray-100">
-            <h3 className="text-lg font-extrabold text-[#E87722] uppercase tracking-wide">
-              Campaign Rankings
+            <h3 className="text-lg font-extrabold text-[#0C2340] uppercase tracking-wide">
+              Campaign Posts
             </h3>
-            <p className="text-sm text-gray-500">How this campaign performed across different levels</p>
+            <p className="text-sm text-gray-500 mt-1">Side-by-side breakdown of both campaign posts</p>
           </div>
           <div className="p-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <RankingCard
-                rank={data.rankings.atSchool}
-                title="At School"
-                subtitle="Auburn University"
-              />
-              <RankingCard
-                rank={data.rankings.inConference}
-                title="In the SEC"
-                subtitle="Conference Ranking"
-              />
-              <RankingCard
-                rank={data.rankings.inNCAAAll}
-                title="In the NCAA"
-                subtitle="All Schools"
-              />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <PostCard post={athletePost} />
+              <PostCard post={brandPost} />
             </div>
           </div>
         </div>
 
-        {/* Individual Athlete Benchmarks */}
+        {/* ─── 4. "Your Auburn Content Dominates Your Feed" ─── */}
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
-          <div className="px-6 py-4 border-b border-gray-100 flex items-center justify-between">
+          <div className="px-6 py-4 border-b border-gray-100">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#E87722] to-[#C96318] flex items-center justify-center">
+                <TrendingUp className="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <h3 className="text-lg font-extrabold text-[#0C2340] uppercase tracking-wide">
+                  Your Auburn Content Dominates Your Feed
+                </h3>
+                <p className="text-sm text-gray-500">How the campaign performed vs your typical posts</p>
+              </div>
+            </div>
+          </div>
+          <div className="p-6 space-y-6">
+            {/* Lift highlight */}
+            <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-xl p-6">
+              <div className="flex items-center gap-6 flex-wrap">
+                <div>
+                  <p className="text-5xl font-black text-green-600">+{liftPercent}%</p>
+                  <p className="text-sm font-semibold text-green-700 mt-1">More Likes Than Your Average Post</p>
+                </div>
+                <div className="flex-1 min-w-[200px]">
+                  <div className="space-y-3">
+                    <div>
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="text-sm font-bold text-[#E87722]">Auburn Campaign Reel</span>
+                        <span className="text-sm font-extrabold text-[#E87722]">{brandPost.likes} likes</span>
+                      </div>
+                      <div className="h-5 bg-gray-100 rounded-full overflow-hidden">
+                        <div className="h-full rounded-full bg-gradient-to-r from-[#E87722] to-[#C96318] transition-all" style={{ width: '100%' }} />
+                      </div>
+                    </div>
+                    <div>
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="text-sm font-medium text-gray-500">Your Avg Post</span>
+                        <span className="text-sm text-gray-500">{baumhowersProfile.recentAvgLikes.toFixed(0)} likes</span>
+                      </div>
+                      <div className="h-5 bg-gray-100 rounded-full overflow-hidden">
+                        <div className="h-full rounded-full bg-gray-300" style={{ width: `${(baumhowersProfile.recentAvgLikes / brandPost.likes) * 100}%` }} />
+                      </div>
+                    </div>
+                    <div>
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="text-sm font-medium text-gray-500">Your Median Post</span>
+                        <span className="text-sm text-gray-500">{baumhowersProfile.recentMedianLikes} likes</span>
+                      </div>
+                      <div className="h-5 bg-gray-100 rounded-full overflow-hidden">
+                        <div className="h-full rounded-full bg-gray-200" style={{ width: `${(baumhowersProfile.recentMedianLikes / brandPost.likes) * 100}%` }} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Top Posts Table — Where This Campaign Ranks */}
             <div>
-              <h3 className="text-lg font-extrabold uppercase tracking-wide text-[#E87722] italic">
-                Individual Athlete Benchmarks
-              </h3>
-              <p className="text-sm text-gray-500">
-                Top athletes from this campaign and their lift vs baselines.
+              <div className="flex items-center gap-2 mb-4">
+                <Star className="w-5 h-5 text-[#E87722]" />
+                <h4 className="text-base font-extrabold text-[#0C2340]">
+                  Where This Campaign Ranks Among Your Top Posts of All Time
+                </h4>
+              </div>
+              <div className="rounded-xl border border-gray-200 overflow-hidden">
+                <table className="w-full">
+                  <thead>
+                    <tr className="bg-gray-50 text-left">
+                      <th className="px-4 py-3 text-xs font-bold uppercase tracking-wider text-gray-400">#</th>
+                      <th className="px-4 py-3 text-xs font-bold uppercase tracking-wider text-gray-400">Likes</th>
+                      <th className="px-4 py-3 text-xs font-bold uppercase tracking-wider text-gray-400">Content</th>
+                      <th className="px-4 py-3 text-xs font-bold uppercase tracking-wider text-gray-400">Year</th>
+                      <th className="px-4 py-3 text-xs font-bold uppercase tracking-wider text-gray-400">Type</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-100">
+                    {baumhowersTopPosts.map((post) => (
+                      <tr
+                        key={post.rank}
+                        className={`transition-colors ${post.isCampaign ? 'bg-[#E87722]/5 border-l-4 border-l-[#E87722]' : 'hover:bg-gray-50'}`}
+                      >
+                        <td className={`px-4 py-3 text-sm font-bold ${post.isCampaign ? 'text-[#E87722]' : 'text-gray-400'}`}>
+                          #{post.rank}
+                        </td>
+                        <td className={`px-4 py-3 text-sm font-extrabold ${post.isCampaign ? 'text-[#E87722]' : 'text-gray-900'}`}>
+                          {formatNumber(post.likes)}
+                        </td>
+                        <td className={`px-4 py-3 text-sm ${post.isCampaign ? 'font-bold text-[#E87722]' : 'text-gray-600'}`}>
+                          {post.caption}
+                          {post.isCampaign && (
+                            <span className="ml-2 inline-flex items-center gap-1 bg-[#E87722] text-white text-[10px] font-bold px-1.5 py-0.5 rounded uppercase">
+                              This Campaign
+                            </span>
+                          )}
+                        </td>
+                        <td className={`px-4 py-3 text-sm ${post.isCampaign ? 'text-[#E87722] font-semibold' : 'text-gray-400'}`}>
+                          {post.year}
+                        </td>
+                        <td className="px-4 py-3">
+                          <span className="inline-flex items-center gap-1 bg-[#E87722]/10 text-[#E87722] text-xs font-bold px-2 py-1 rounded-md">
+                            <Zap className="w-3 h-3" /> Partnership
+                          </span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div className="mt-4 bg-[#0C2340] rounded-xl p-4 text-center">
+                <p className="text-white font-bold text-sm">
+                  This campaign ranks
+                  <span className="text-[#E87722]"> #3 among your top posts of all time</span> — and
+                  <span className="text-[#E87722]"> every single one of your top 10</span> is an Auburn athlete partnership.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ─── 5. The Auburn Amplification Effect ─── */}
+        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+          <div className="px-6 py-4 border-b border-gray-100">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0C2340] to-[#1a3a5c] flex items-center justify-center">
+                <Users className="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <h3 className="text-lg font-extrabold text-[#0C2340] uppercase tracking-wide">
+                  The Auburn Amplification Effect
+                </h3>
+                <p className="text-sm text-gray-500">What happens when Auburn athletes post your content</p>
+              </div>
+            </div>
+          </div>
+          <div className="p-6">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              {/* Views multiplier */}
+              <div className="bg-gradient-to-br from-[#0C2340] to-[#1a3a5c] rounded-xl p-6 text-white text-center">
+                <p className="text-6xl font-black">{Math.round(athletePost.views / brandPost.views)}x</p>
+                <p className="text-sm font-semibold text-white/80 mt-2">More Views</p>
+                <p className="text-xs text-white/60 mt-1">Athlete post: {formatNumber(athletePost.views)} vs your post: {formatNumber(brandPost.views)}</p>
+              </div>
+
+              {/* Likes multiplier */}
+              <div className="bg-gray-50 rounded-xl p-6 text-center">
+                <p className="text-4xl font-black text-[#E87722]">{Math.round(athletePost.likes / brandPost.likes)}x</p>
+                <p className="text-sm font-semibold text-gray-700 mt-2">More Likes</p>
+                <p className="text-xs text-gray-500 mt-1">
+                  Athlete post: {formatNumber(athletePost.likes)} vs your post: {brandPost.likes}
+                </p>
+              </div>
+
+              {/* Total campaign views */}
+              <div className="bg-gray-50 rounded-xl p-6 text-center">
+                <p className="text-4xl font-black text-green-600">{formatNumber(combined.totalViews)}</p>
+                <p className="text-sm font-semibold text-gray-700 mt-2">Total Campaign Views</p>
+                <p className="text-xs text-gray-500 mt-1">Across both posts combined</p>
+              </div>
+            </div>
+
+            {/* Visual comparison */}
+            <div className="mt-6 bg-gradient-to-r from-gray-50 via-[#E87722]/5 to-gray-50 rounded-xl p-5">
+              <p className="text-center text-sm font-semibold text-gray-600 mb-4">Same content, different distribution</p>
+              <div className="space-y-3">
+                <div>
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="text-sm font-bold text-[#E87722]">Athlete Post (@wareagleplus x @auburnmbb)</span>
+                    <span className="text-sm font-extrabold text-[#E87722]">{formatNumber(athletePost.views)} views</span>
+                  </div>
+                  <div className="h-5 bg-gray-100 rounded-full overflow-hidden">
+                    <div className="h-full rounded-full bg-gradient-to-r from-[#E87722] to-[#C96318]" style={{ width: '100%' }} />
+                  </div>
+                </div>
+                <div>
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="text-sm font-medium text-gray-500">Your Post (@baumhowersauburn)</span>
+                    <span className="text-sm text-gray-500">{formatNumber(brandPost.views)} views</span>
+                  </div>
+                  <div className="h-5 bg-gray-100 rounded-full overflow-hidden">
+                    <div className="h-full rounded-full bg-gray-300" style={{ width: `${(brandPost.views / athletePost.views) * 100}%` }} />
+                  </div>
+                </div>
+              </div>
+              <p className="text-center text-xs text-gray-400 mt-3">
+                Auburn athletes amplified your content to an audience you couldn't reach alone
               </p>
             </div>
           </div>
-          <div className="divide-y divide-gray-100">
-            {/* Keyshawn Hall */}
-            <div className="px-6 py-4 flex items-center justify-between">
-              <div>
-                <p className="text-base font-bold text-gray-900">Keyshawn Hall</p>
-                <p className="text-sm text-gray-500">Men's Basketball</p>
+        </div>
+
+        {/* ─── 6. Campaign Post vs Your Recent Posts ─── */}
+        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+          <div className="px-6 py-4 border-b border-gray-100">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#E87722] to-[#C96318] flex items-center justify-center">
+                <Award className="w-5 h-5 text-white" />
               </div>
-              <div className="flex items-center gap-4">
-                <div className="text-right">
-                  <p className="text-xs text-gray-400 uppercase font-semibold">Avg Likes</p>
-                  <p className="text-lg font-extrabold text-gray-900">2.5K</p>
-                </div>
-                <span className="px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wide text-white bg-green-600">
-                  +70.0% vs All Posts
-                </span>
-                <span className="px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wide text-white bg-[#0C2340]">
-                  +257.1% vs Sponsored
-                </span>
+              <div>
+                <h3 className="text-lg font-extrabold text-[#0C2340] uppercase tracking-wide">
+                  Campaign Post vs Your Recent Posts
+                </h3>
+                <p className="text-sm text-gray-500">How the Auburn reel stacked up against your other content</p>
               </div>
             </div>
-            {/* Kevin Overton */}
-            <div className="px-6 py-4 flex items-center justify-between">
-              <div>
-                <p className="text-base font-bold text-gray-900">Kevin Overton</p>
-                <p className="text-sm text-gray-500">Men's Basketball</p>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="text-right">
-                  <p className="text-xs text-gray-400 uppercase font-semibold">Avg Likes</p>
-                  <p className="text-lg font-extrabold text-gray-900">1.8K</p>
+          </div>
+          <div className="p-6">
+            <div className="space-y-3">
+              {baumhowersRecentPosts.map((post, i) => (
+                <div key={i}>
+                  <div className="flex items-center justify-between mb-1">
+                    <div className="flex items-center gap-2">
+                      <span className={`text-sm font-bold ${post.isAuburn ? 'text-[#E87722]' : 'text-gray-500'}`}>
+                        {post.date}
+                      </span>
+                      {post.isAuburn && (
+                        <span className="bg-[#E87722]/10 text-[#E87722] text-[10px] font-bold px-1.5 py-0.5 rounded uppercase">
+                          Auburn Reel
+                        </span>
+                      )}
+                    </div>
+                    <span className={`text-sm ${post.isAuburn ? 'font-extrabold text-[#E87722]' : 'text-gray-500'}`}>
+                      {post.likes} likes
+                    </span>
+                  </div>
+                  <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
+                    <div
+                      className={`h-full rounded-full transition-all ${post.isAuburn ? 'bg-gradient-to-r from-[#E87722] to-[#C96318]' : 'bg-gray-300'}`}
+                      style={{ width: `${(post.likes / 103) * 100}%` }}
+                    />
+                  </div>
                 </div>
-                <span className="px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wide text-white bg-green-600">
-                  +42.5% vs All Posts
-                </span>
-                <span className="px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wide text-white bg-[#0C2340]">
-                  +118.3% vs Sponsored
-                </span>
-              </div>
+              ))}
+            </div>
+            <div className="mt-6 rounded-xl p-4 bg-green-50 border border-green-200 text-center">
+              <p className="text-sm font-bold text-green-700">
+                The Auburn campaign reel was your #1 post this month
+              </p>
+              <p className="text-xs text-gray-500 mt-1">103 likes vs your recent average of 27 likes (+285%)</p>
             </div>
           </div>
         </div>
 
-        {/* Campaign Lift vs Typical Posts */}
+        {/* ─── 7. Athlete Performance Lift ─── */}
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
           <div className="px-6 py-4 border-b border-gray-100">
-            <h3 className="text-lg font-extrabold uppercase tracking-wide text-[#E87722]">
+            <h3 className="text-lg font-extrabold text-[#0C2340] uppercase tracking-wide">
+              Athlete Performance
+            </h3>
+            <p className="text-sm text-gray-500">How Auburn athletes performed with your content</p>
+          </div>
+          <div className="divide-y divide-gray-100">
+            {athleteBenchmarks.map((athlete) => (
+              <div key={athlete.name} className="px-6 py-4 flex items-center justify-between">
+                <div>
+                  <p className="text-base font-bold text-gray-900">{athlete.name}</p>
+                  <p className="text-sm text-gray-500">{athlete.sport}</p>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="text-right">
+                    <p className="text-xs text-gray-400 uppercase font-semibold">Avg Likes</p>
+                    <p className="text-lg font-extrabold text-gray-900">{athlete.avgLikes}</p>
+                  </div>
+                  <span className="px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wide text-white bg-green-600">
+                    {athlete.vsAll} vs All Posts
+                  </span>
+                  <span className="px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wide text-white bg-[#0C2340]">
+                    {athlete.vsSponsored} vs Sponsored
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ─── 8. Campaign Lift vs Typical Posts ─── */}
+        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+          <div className="px-6 py-4 border-b border-gray-100">
+            <h3 className="text-lg font-extrabold uppercase tracking-wide text-[#0C2340]">
               Campaign Lift <span className="text-gray-400 font-medium normal-case">vs</span> Typical Posts
             </h3>
-            <p className="text-sm text-gray-500">
-              Baseline: Last 30 posts per account.
-            </p>
+            <p className="text-sm text-gray-500">Baseline: Last 30 posts per account</p>
           </div>
           <div className="p-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {data.campaignLift.map((lift, index) => (
+              {campaignLift.map((lift, index) => (
                 <LiftCard key={index} {...lift} />
               ))}
             </div>
           </div>
         </div>
+
+        {/* ─── 9. Key Takeaways ─── */}
+        <div className="bg-gradient-to-br from-[#0C2340] to-[#1a3a5c] rounded-2xl p-8 text-white">
+          <h3 className="text-lg font-extrabold uppercase tracking-wide mb-6 text-[#E87722]">
+            Key Takeaways
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <TakeawayCard
+              number="01"
+              text="Auburn athlete partnerships are your top-performing content strategy — all 10 of your highest-engagement posts are athlete partnerships."
+            />
+            <TakeawayCard
+              number="02"
+              text={`The athlete post generated ${formatNumber(athletePost.views)} views and ${formatNumber(athletePost.likes)} likes — ${Math.round(athletePost.views / brandPost.views)}x more views than your own post of the same content.`}
+            />
+            <TakeawayCard
+              number="03"
+              text={`The campaign reel was your best-performing post this month, outperforming your average by +${liftPercent}%.`}
+            />
+            <TakeawayCard
+              number="04"
+              text="Recommendation: Continue investing in Auburn athlete partnerships for maximum brand visibility and audience growth."
+            />
+          </div>
+        </div>
       </main>
 
-      {/* Footer */}
+      {/* ─── Footer ─── */}
       <footer className="text-center py-8 text-gray-500 text-sm">
         <div className="flex items-center justify-center gap-2 mb-2">
-          <img
-            src="https://a.espncdn.com/i/teamlogos/ncaa/500/2.png"
-            alt="Auburn"
-            className="w-6 h-6"
-          />
+          <img src="https://a.espncdn.com/i/teamlogos/ncaa/500/2.png" alt="Auburn" className="w-6 h-6" />
           <span className="font-semibold text-[#0C2340]">Auburn Athletics</span>
         </div>
-        <p>Campaign Analysis Report • War Eagle Intelligence</p>
+        <p>Campaign Performance Report</p>
         <p className="mt-1 text-xs">{new Date().toLocaleDateString('en-US', {
           weekday: 'long',
           year: 'numeric',
@@ -493,30 +549,72 @@ export function AuburnCampaignDashboard({ data = defaultData, onBack }: AuburnCa
   );
 }
 
+// ═══════════════════════════════════════════════════════════════
+// SUB-COMPONENTS
+// ═══════════════════════════════════════════════════════════════
 
-function RankingCard({ rank, title, subtitle }: { rank: number; title: string; subtitle: string }) {
+function KPICard({ icon, label, value, accent }: { icon: React.ReactNode; label: string; value: string; accent?: boolean }) {
   return (
-    <div className="flex items-center gap-4 bg-gray-50 rounded-xl p-4 hover:shadow-md transition-shadow">
-      <div className="w-16 h-16 bg-[#E87722] rounded-xl flex items-center justify-center">
-        <span className="text-3xl font-black text-white">#{rank}</span>
+    <div className={`rounded-xl border p-5 ${accent ? 'bg-[#E87722]/5 border-[#E87722]/20' : 'bg-white border-gray-200'} shadow-sm`}>
+      <div className={`mb-2 ${accent ? 'text-[#E87722]' : 'text-gray-400'}`}>{icon}</div>
+      <p className="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-1">{label}</p>
+      <p className={`text-3xl font-black ${accent ? 'text-[#E87722]' : 'text-gray-900'}`}>{value}</p>
+    </div>
+  );
+}
+
+function PostCard({ post }: { post: typeof athletePost }) {
+  return (
+    <div className="rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+      <div className="relative h-52 bg-gray-100 overflow-hidden">
+        <img
+          src={post.image}
+          alt={post.label}
+          className="w-full h-full object-cover"
+          onError={(e) => {
+            e.currentTarget.src = 'https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=600&h=400&fit=crop';
+          }}
+        />
+        <div className="absolute top-3 left-3 bg-black/70 text-white px-2.5 py-1 rounded-lg text-xs font-bold uppercase tracking-wide">
+          {post.label}
+        </div>
+        <a
+          href={post.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute top-3 right-3 bg-white/90 text-gray-700 p-2 rounded-lg hover:bg-white transition-colors"
+        >
+          <ExternalLink className="w-3.5 h-3.5" />
+        </a>
       </div>
-      <div>
-        <h4 className="font-bold text-gray-900">{title}</h4>
-        <p className="text-sm text-gray-500">{subtitle}</p>
+      <div className="p-4">
+        <p className="text-sm font-bold text-[#0C2340] mb-3">{post.account}</p>
+        <div className="grid grid-cols-2 gap-3">
+          <MetricPill icon={<Heart className="w-3.5 h-3.5" />} label="Likes" value={formatNumber(post.likes)} />
+          <MetricPill icon={<Eye className="w-3.5 h-3.5" />} label="Views" value={formatNumber(post.views)} />
+          <MetricPill icon={<MessageCircle className="w-3.5 h-3.5" />} label="Comments" value={post.comments.toString()} />
+          {post.reposts > 0 && (
+            <MetricPill icon={<Share2 className="w-3.5 h-3.5" />} label="Reposts" value={post.reposts.toString()} />
+          )}
+        </div>
       </div>
     </div>
   );
 }
 
-function LiftCard({
-  athleteName,
-  sport,
-  image,
-  liftAmount,
-  campaignAvg,
-  athleteAvg,
-  liftPercent,
-}: {
+function MetricPill({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
+  return (
+    <div className="flex items-center gap-2 bg-gray-50 rounded-lg px-3 py-2">
+      <span className="text-gray-400">{icon}</span>
+      <div>
+        <p className="text-xs text-gray-400">{label}</p>
+        <p className="text-sm font-bold text-gray-900">{value}</p>
+      </div>
+    </div>
+  );
+}
+
+function LiftCard({ athleteName, sport, image, liftAmount, campaignAvg, athleteAvg, liftPercent }: {
   athleteName: string;
   handle?: string;
   sport: string;
@@ -531,33 +629,25 @@ function LiftCard({
 
   return (
     <div className="rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow">
-      {/* Header with gradient */}
       <div className="relative px-5 py-4 bg-gradient-to-br from-[#E87722] to-[#C96318] overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <svg className="w-full h-full" preserveAspectRatio="none">
-            <pattern id="liftStripes" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <pattern id={`lift-${athleteName}`} width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
               <rect width="4" height="8" fill="currentColor" />
             </pattern>
-            <rect width="100%" height="100%" fill="url(#liftStripes)" />
+            <rect width="100%" height="100%" fill={`url(#lift-${athleteName})`} />
           </svg>
         </div>
         <div className="relative z-10 flex items-center gap-4">
-          <img
-            src={image}
-            alt={athleteName}
-            className="w-14 h-14 rounded-full object-contain bg-white p-1 border-2 border-white/40"
-          />
+          <img src={image} alt={athleteName} className="w-14 h-14 rounded-full object-contain bg-white p-1 border-2 border-white/40" />
           <div>
             <p className="text-white text-xl font-extrabold">
               {isNegative ? '' : '+'}{formatNumber(absLift)} Likes
             </p>
-            <p className="text-white/80 text-xs font-bold uppercase tracking-wider">
-              vs their average post
-            </p>
+            <p className="text-white/80 text-xs font-bold uppercase tracking-wider">vs their average post</p>
           </div>
         </div>
       </div>
-      {/* Body */}
       <div className="bg-white px-5 py-4">
         <div className="flex items-center justify-between">
           <div>
@@ -566,7 +656,7 @@ function LiftCard({
           </div>
           {liftPercent !== undefined && (
             <span className={`text-lg font-extrabold ${isNegative ? 'text-red-500' : 'text-green-600'}`}>
-              {isNegative ? '' : '+'}{liftPercent.toFixed(0)}%
+              {isNegative ? '' : '+'}{liftPercent}%
             </span>
           )}
         </div>
@@ -578,6 +668,15 @@ function LiftCard({
           </p>
         </div>
       </div>
+    </div>
+  );
+}
+
+function TakeawayCard({ number, text }: { number: string; text: string }) {
+  return (
+    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/10">
+      <span className="text-[#E87722] text-3xl font-black">{number}</span>
+      <p className="text-white/90 text-sm mt-2 leading-relaxed">{text}</p>
     </div>
   );
 }

@@ -2,9 +2,10 @@ import { useState } from 'react';
 import { ArrowLeft, Trophy, BarChart3 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { AuburnCampaignDashboard } from './AuburnCampaignDashboard';
+import { AuburnCampaignOverview } from './AuburnCampaignOverview';
 import { AuburnIPImpact } from './AuburnIPImpact';
 
-type View = 'hub' | 'campaign' | 'ip-report' | 'analytics' | 'insights';
+type View = 'hub' | 'campaign' | 'overview' | 'ip-report' | 'analytics' | 'insights';
 
 interface AuburnReportHubProps {
   onBack: () => void;
@@ -15,7 +16,7 @@ export function AuburnReportHub({ onBack }: AuburnReportHubProps) {
 
   // Campaign Dashboard view
   if (activeView === 'campaign') {
-    return <AuburnCampaignDashboard onBack={() => setActiveView('hub')} />;
+    return <AuburnCampaignOverview onBack={() => setActiveView('hub')} />;
   }
 
   // IP Report view
@@ -79,7 +80,7 @@ export function AuburnReportHub({ onBack }: AuburnReportHubProps) {
 
               {/* Description */}
               <p className="text-gray-300 text-base mb-6">
-                Real-time campaign performance and athlete analytics
+                Baumhower's partnership campaign performance
               </p>
 
               {/* View button */}
