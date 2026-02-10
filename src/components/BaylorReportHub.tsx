@@ -6,7 +6,7 @@ import { BaylorBrandDeals } from './BaylorBrandDeals';
 type View = 'hub' | 'brand-deals';
 
 interface BaylorReportHubProps {
-  onBack: () => void;
+  onBack?: () => void;
 }
 
 export function BaylorReportHub({ onBack }: BaylorReportHubProps) {
@@ -20,13 +20,15 @@ export function BaylorReportHub({ onBack }: BaylorReportHubProps) {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-green-600/10 via-yellow-900/10 to-green-500/10 opacity-30" />
 
-      <button
-        onClick={onBack}
-        className="fixed top-6 left-6 z-50 bg-white/10 hover:bg-white/20 backdrop-blur-lg text-white px-4 py-2 rounded-lg font-semibold text-sm transition-all border border-white/20 flex items-center gap-2"
-      >
-        <ArrowLeft className="w-4 h-4" />
-        Back
-      </button>
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="fixed top-6 left-6 z-50 bg-white/10 hover:bg-white/20 backdrop-blur-lg text-white px-4 py-2 rounded-lg font-semibold text-sm transition-all border border-white/20 flex items-center gap-2"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back
+        </button>
+      )}
 
       <div className="pt-20 pb-12 px-6 relative z-10">
         <div className="max-w-6xl mx-auto text-center">

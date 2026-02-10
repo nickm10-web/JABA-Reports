@@ -13,7 +13,7 @@ const colors = {
 type View = 'hub' | 'dashboard' | 'ip-impact';
 
 interface OhioStateReportHubProps {
-  onBack: () => void;
+  onBack?: () => void;
 }
 
 export function OhioStateReportHub({ onBack }: OhioStateReportHubProps) {

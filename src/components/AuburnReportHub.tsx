@@ -7,7 +7,7 @@ import { AuburnIPImpact } from './AuburnIPImpact';
 type View = 'hub' | 'campaign' | 'overview' | 'ip-report' | 'analytics' | 'insights';
 
 interface AuburnReportHubProps {
-  onBack: () => void;
+  onBack?: () => void;
 }
 
 export function AuburnReportHub({ onBack }: AuburnReportHubProps) {

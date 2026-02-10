@@ -7,7 +7,7 @@ import { KentuckyIPImpact } from './KentuckyIPImpact';
 type View = 'hub' | 'campaign' | 'ip-report' | 'analytics' | 'insights';
 
 interface KentuckyReportHubProps {
-  onBack: () => void;
+  onBack?: () => void;
 }
 
 export function KentuckyReportHub({ onBack }: KentuckyReportHubProps) {

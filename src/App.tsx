@@ -7,29 +7,35 @@ import { KentuckyReportHub } from './components/KentuckyReportHub';
 import { PlayflyReportHub } from './components/PlayflyReportHub';
 
 // Wrapper components that provide navigation
+// Only show back button if user navigated from within the app
 function AuburnRoute() {
   const navigate = useNavigate();
-  return <AuburnReportHub onBack={() => navigate('/')} />;
+  const canGoBack = window.history.length > 2;
+  return <AuburnReportHub onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
 function BaylorRoute() {
   const navigate = useNavigate();
-  return <BaylorReportHub onBack={() => navigate('/')} />;
+  const canGoBack = window.history.length > 2;
+  return <BaylorReportHub onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
 function OhioStateRoute() {
   const navigate = useNavigate();
-  return <OhioStateReportHub onBack={() => navigate('/')} />;
+  const canGoBack = window.history.length > 2;
+  return <OhioStateReportHub onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
 function KentuckyRoute() {
   const navigate = useNavigate();
-  return <KentuckyReportHub onBack={() => navigate('/')} />;
+  const canGoBack = window.history.length > 2;
+  return <KentuckyReportHub onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
 function PlayflyRoute() {
   const navigate = useNavigate();
-  return <PlayflyReportHub onBack={() => navigate('/')} />;
+  const canGoBack = window.history.length > 2;
+  return <PlayflyReportHub onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
 function App() {

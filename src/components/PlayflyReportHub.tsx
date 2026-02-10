@@ -7,7 +7,7 @@ import { isReportEnabled } from '../config/reports';
 type View = 'hub' | 'ip-page';
 
 interface PlayflyReportHubProps {
-  onBack: () => void;
+  onBack?: () => void;
 }
 
 export function PlayflyReportHub({ onBack }: PlayflyReportHubProps) {
