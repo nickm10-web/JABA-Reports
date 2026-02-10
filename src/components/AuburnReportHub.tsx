@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { ArrowLeft, Trophy, BarChart3 } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { AuburnCampaignDashboard } from './AuburnCampaignDashboard';
 import { AuburnCampaignOverview } from './AuburnCampaignOverview';
 import { AuburnIPImpact } from './AuburnIPImpact';
 

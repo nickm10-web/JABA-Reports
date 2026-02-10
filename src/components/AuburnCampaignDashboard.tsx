@@ -24,7 +24,7 @@ const brandPost = {
   likes: 103,
   comments: 1,
   reposts: 5,
-  views: 4891, // Updated from live count (was 954 at scrape time)
+  views: 4899,
   emv: 2.10,
   caption: 'A quick look back at last week, where Tahaad Pettiford and Keshawn Murphy brought the competition in Fortnite and NBA2K',
 };
@@ -33,7 +33,7 @@ const combined = {
   totalLikes: athletePost.likes + brandPost.likes,
   totalViews: athletePost.views + brandPost.views,
   totalPosts: 2,
-  totalEMV: athletePost.emv + brandPost.emv,
+  totalEMV: brandPost.emv,
 };
 
 // Baumhower's baseline from instaloader scrape (810+ posts)
@@ -130,7 +130,6 @@ interface AuburnCampaignDashboardProps {
 
 export function AuburnCampaignDashboard({ onBack }: AuburnCampaignDashboardProps) {
   const liftPercent = Math.round(((brandPost.likes / baumhowersProfile.recentAvgLikes) - 1) * 100);
-  const partnershipPostCount = baumhowersTopPosts.filter(p => p.isPartnership).length;
 
   return (
     <div className="min-h-screen bg-gray-50">

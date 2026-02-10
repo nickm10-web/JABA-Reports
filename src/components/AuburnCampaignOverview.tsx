@@ -1,4 +1,4 @@
-import { ChevronDown, ArrowLeft, Heart, Eye, MessageCircle, Share2, TrendingUp, Users, Award, Zap, Star, ExternalLink, Trophy } from 'lucide-react';
+import { ArrowLeft, Heart, Eye, MessageCircle, Share2, Award, ExternalLink, Trophy } from 'lucide-react';
 
 // ═══════════════════════════════════════════════════════════════
 // DATA
@@ -63,37 +63,8 @@ const brandPost = {
   comments: 1,
   reposts: 5,
   views: 4899,
-  emv: 2.10,
   caption: 'A quick look back at last week, where Tahaad Pettiford and Keshawn Murphy brought the competition in Fortnite and NBA2K',
 };
-
-const combined = {
-  totalLikes: athletePost.likes + brandPost.likes,
-  totalViews: athletePost.views + brandPost.views,
-  totalPosts: 2,
-  totalEMV: athletePost.emv + brandPost.emv,
-};
-
-const baumhowersProfile = {
-  followers: 2008,
-  totalPosts: 810,
-  recentAvgLikes: 26.8,
-  recentAvgComments: 0.6,
-  recentMedianLikes: 12,
-};
-
-const baumhowersTopPosts = [
-  { rank: 1, likes: 3489, caption: 'AU Football NIL partnership announcement', year: '2023', isPartnership: true, isCampaign: false },
-  { rank: 2, likes: 1777, caption: 'Football kickoff NIL announcement', year: '2024', isPartnership: true, isCampaign: false },
-  { rank: 3, likes: 1757, caption: 'The Flight Gaming Show (Athlete Post)', year: '2026', isPartnership: true, isCampaign: true },
-  { rank: 4, likes: 1650, caption: "Byron's Smokehouse x Baumhower's collab", year: '2025', isPartnership: true, isCampaign: false },
-  { rank: 5, likes: 1211, caption: 'Track & Field NIL partnership', year: '2023', isPartnership: true, isCampaign: false },
-  { rank: 6, likes: 1181, caption: 'Fallan Lanham partnership', year: '2024', isPartnership: true, isCampaign: false },
-  { rank: 7, likes: 1060, caption: 'Freshman partnership announcement', year: '2023', isPartnership: true, isCampaign: false },
-  { rank: 8, likes: 974, caption: 'Gymnastics NIL partnership', year: '2023', isPartnership: true, isCampaign: false },
-  { rank: 9, likes: 904, caption: 'AU Football pre-season partnership', year: '2023', isPartnership: true, isCampaign: false },
-  { rank: 10, likes: 812, caption: 'Sebastian Trujillo NIL partnership', year: '2025', isPartnership: true, isCampaign: false },
-];
 
 const baumhowersRecentPosts = [
   { date: 'Feb 8', likes: 5, caption: 'Regular post' },
@@ -149,29 +120,6 @@ const athleteBenchmarks = [
   { name: 'Kevin Overton', sport: "Men's Basketball", avgLikes: '1.8K', vsAll: '+42.5%', vsSponsored: '+118.3%' },
 ];
 
-const campaignLift = [
-  {
-    athleteName: 'War Eagle Plus',
-    handle: '@wareagleplus',
-    sport: 'Auburn Athletics Portal',
-    image: 'https://a.espncdn.com/i/teamlogos/ncaa/500/2.png',
-    liftAmount: 1337,
-    campaignAvg: 1757,
-    athleteAvg: 420,
-    liftPercent: 318,
-  },
-  {
-    athleteName: 'Auburn MBB',
-    handle: '@auburnmbb',
-    sport: "Men's Basketball",
-    image: 'https://a.espncdn.com/i/teamlogos/ncaa/500/2.png',
-    liftAmount: 867,
-    campaignAvg: 1757,
-    athleteAvg: 890,
-    liftPercent: 97,
-  },
-];
-
 // ═══════════════════════════════════════════════════════════════
 // HELPERS
 // ═══════════════════════════════════════════════════════════════
@@ -180,12 +128,6 @@ function formatNumber(num: number): string {
   if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
   if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
   return num.toLocaleString();
-}
-
-function formatCurrency(num: number): string {
-  if (num >= 1000000) return '$' + (num / 1000000).toFixed(1) + 'M';
-  if (num >= 1000) return '$' + (num / 1000).toFixed(1) + 'K';
-  return '$' + num.toFixed(2);
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -197,8 +139,6 @@ interface AuburnCampaignOverviewProps {
 }
 
 export function AuburnCampaignOverview({ onBack }: AuburnCampaignOverviewProps) {
-  const liftPercent = Math.round(((brandPost.likes / baumhowersProfile.recentAvgLikes) - 1) * 100);
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* ─── Header ─── */}
@@ -656,73 +596,6 @@ function MetricPill({ icon, label, value }: { icon: React.ReactNode; label: stri
         <p className="text-xs text-gray-400">{label}</p>
         <p className="text-sm font-bold text-gray-900">{value}</p>
       </div>
-    </div>
-  );
-}
-
-function LiftCard({ athleteName, sport, image, liftAmount, campaignAvg, athleteAvg, liftPercent }: {
-  athleteName: string;
-  handle?: string;
-  sport: string;
-  image: string;
-  liftAmount: number;
-  campaignAvg: number;
-  athleteAvg: number;
-  liftPercent?: number;
-}) {
-  const isNegative = liftAmount < 0;
-  const absLift = Math.abs(liftAmount);
-
-  return (
-    <div className="rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow">
-      <div className="relative px-5 py-4 bg-gradient-to-br from-[#E87722] to-[#C96318] overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <svg className="w-full h-full" preserveAspectRatio="none">
-            <pattern id={`lift-${athleteName}`} width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-              <rect width="4" height="8" fill="currentColor" />
-            </pattern>
-            <rect width="100%" height="100%" fill={`url(#lift-${athleteName})`} />
-          </svg>
-        </div>
-        <div className="relative z-10 flex items-center gap-4">
-          <img src={image} alt={athleteName} className="w-14 h-14 rounded-full object-contain bg-white p-1 border-2 border-white/40" />
-          <div>
-            <p className="text-white text-xl font-extrabold">
-              {isNegative ? '' : '+'}{formatNumber(absLift)} Likes
-            </p>
-            <p className="text-white/80 text-xs font-bold uppercase tracking-wider">vs their average post</p>
-          </div>
-        </div>
-      </div>
-      <div className="bg-white px-5 py-4">
-        <div className="flex items-center justify-between">
-          <div>
-            <p className="text-base font-bold text-gray-900">{athleteName}</p>
-            <p className="text-sm text-gray-500">{sport}</p>
-          </div>
-          {liftPercent !== undefined && (
-            <span className={`text-lg font-extrabold ${isNegative ? 'text-red-500' : 'text-green-600'}`}>
-              {isNegative ? '' : '+'}{liftPercent}%
-            </span>
-          )}
-        </div>
-        <div className="mt-3 pt-3 border-t border-gray-100">
-          <p className="text-sm">
-            <span className="font-bold text-[#E87722]">Campaign: {formatNumber(campaignAvg)}</span>
-            <span className="text-gray-400 mx-2">&bull;</span>
-            <span className="text-gray-500">Avg: {formatNumber(athleteAvg)}</span>
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function TakeawayCard({ number, text }: { number: string; text: string }) {
-  return (
-    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/10">
-      <span className="text-[#E87722] text-3xl font-black">{number}</span>
-      <p className="text-white/90 text-sm mt-2 leading-relaxed">{text}</p>
     </div>
   );
 }
