@@ -637,10 +637,13 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
 
             {/* KPI Cards */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold mb-4 uppercase tracking-tight"
+              <h2 className="text-2xl font-bold mb-2 uppercase tracking-tight"
                 style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic', color: colors.green }}>
                 Executive Summary
               </h2>
+              <p className="text-sm text-gray-500 mb-5">
+                Summary of all sponsored athlete social activity for Baylor during the 2025 calendar year.
+              </p>
 
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-6">
                 {[
@@ -679,6 +682,11 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
                       </button>
                     ))}
                   </div>
+                  <button onClick={() => setActiveTab('brand-index')}
+                    className="mt-3 pt-3 border-t border-gray-100 w-full text-left text-xs font-semibold hover:underline"
+                    style={{ color: colors.green }}>
+                    View all brands →
+                  </button>
                 </div>
 
                 <div className="bg-white rounded-xl border border-gray-100 p-5">
@@ -697,6 +705,11 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
                       </div>
                     ))}
                   </div>
+                  <button onClick={() => setActiveTab('athletes')}
+                    className="mt-3 pt-3 border-t border-gray-100 w-full text-left text-xs font-semibold hover:underline"
+                    style={{ color: colors.green }}>
+                    View all athletes →
+                  </button>
                 </div>
               </div>
             </section>
