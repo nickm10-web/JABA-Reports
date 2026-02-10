@@ -83,27 +83,6 @@ export function AuburnReportHub({ onBack }: AuburnReportHubProps) {
 
         </div>
 
-        {/* Stats Bar at Bottom */}
-        <div className="mt-12 pt-8 border-t border-white/20">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-orange-400 mb-2">SEC</div>
-              <div className="text-sm text-gray-400 uppercase tracking-wide">Conference</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-orange-400 mb-2">2.3M</div>
-              <div className="text-sm text-gray-400 uppercase tracking-wide">Followers</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-orange-400 mb-2">248</div>
-              <div className="text-sm text-gray-400 uppercase tracking-wide">Brand Posts</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-orange-400 mb-2">$172K</div>
-              <div className="text-sm text-gray-400 uppercase tracking-wide">Total EMV</div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
