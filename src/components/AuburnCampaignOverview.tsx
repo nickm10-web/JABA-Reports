@@ -161,43 +161,43 @@ export function AuburnCampaignOverview({ onBack }: AuburnCampaignOverviewProps) 
 
       <div className="max-w-7xl mx-auto px-8 py-8 space-y-8">
         {/* ─── Campaign Selector ─── */}
-        <div className="flex items-center justify-center gap-4">
-          <div className="flex items-center gap-4">
+        <div className="flex items-center justify-center gap-2 sm:gap-4">
+          <div className="flex items-center gap-2 sm:gap-4 min-w-0">
             {/* School Logo & Info */}
-            <div className="w-28 h-28 flex items-center justify-center">
+            <div className="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 flex items-center justify-center shrink-0">
               <img
                 src={campaignData.school.logo}
                 alt={campaignData.school.name}
                 className="w-full h-full object-contain"
               />
             </div>
-            <div>
-              <h2 className="text-xl font-black uppercase text-gray-900">
+            <div className="min-w-0">
+              <h2 className="text-base sm:text-xl font-black uppercase text-gray-900 leading-tight">
                 {campaignData.school.name}
               </h2>
-              <p className="text-sm text-gray-500 uppercase tracking-wide">
+              <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wide">
                 {campaignData.school.sport}
               </p>
             </div>
           </div>
 
           {/* Orange X between logos */}
-          <span className="text-[#E87722] font-black text-4xl leading-none select-none">✕</span>
+          <span className="text-[#E87722] font-black text-2xl sm:text-4xl leading-none select-none shrink-0">✕</span>
 
           {/* Brand Badge */}
-          <div className="flex items-center gap-4">
-            <div className="w-28 h-28 flex items-center justify-center">
+          <div className="flex items-center gap-2 sm:gap-4 min-w-0">
+            <div className="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 flex items-center justify-center shrink-0">
               <img
                 src="/Untitled%20design%20(53).png"
                 alt="Baumhower's"
                 className="w-full h-full object-contain"
               />
             </div>
-            <div>
-              <h2 className="text-xl font-black uppercase text-gray-900">
+            <div className="min-w-0">
+              <h2 className="text-base sm:text-xl font-black uppercase text-gray-900 leading-tight">
                 Baumhower's
               </h2>
-              <p className="text-sm text-gray-500 uppercase tracking-wide">
+              <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wide">
                 Auburn
               </p>
             </div>
