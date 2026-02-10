@@ -181,6 +181,9 @@ export function AuburnCampaignOverview({ onBack }: AuburnCampaignOverviewProps) 
             </div>
           </div>
 
+          {/* Orange X between logos */}
+          <span className="text-[#E87722] font-black text-4xl leading-none select-none">✕</span>
+
           {/* Brand Badge */}
           <div className="flex items-center gap-4">
             <div className="w-28 h-28 flex items-center justify-center">
@@ -321,20 +324,6 @@ export function AuburnCampaignOverview({ onBack }: AuburnCampaignOverviewProps) 
             </div>
           </div>
           <div className="relative p-6 space-y-6">
-            {/* Hero Stats - 2 Large Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-gradient-to-br from-[#E87722] to-[#C96318] rounded-xl p-6 text-center text-white">
-                <p className="text-5xl font-black mb-2">{partnershipStats.engagementMultiplier}x</p>
-                <p className="text-sm font-semibold uppercase tracking-wide opacity-90">More Engagement</p>
-                <p className="text-xs opacity-75 mt-1">Top partnership vs top regular post</p>
-              </div>
-              <div className="bg-gradient-to-br from-[#0C2340] to-[#1a3a5c] rounded-xl p-6 text-center text-white">
-                <p className="text-5xl font-black mb-2">#3</p>
-                <p className="text-sm font-semibold uppercase tracking-wide opacity-90">All-Time Ranking</p>
-                <p className="text-xs opacity-75 mt-1">Out of {partnershipStats.partnershipPosts} Baumhower's x Auburn posts</p>
-              </div>
-            </div>
-
             {/* Side-by-Side Comparison */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
               {/* LEFT COLUMN - Top 10 WITH Auburn Partnerships */}
@@ -442,6 +431,20 @@ export function AuburnCampaignOverview({ onBack }: AuburnCampaignOverviewProps) 
           </div>
         </div>
 
+        {/* Hero Stats - 2 Large Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-gradient-to-br from-[#E87722] to-[#C96318] rounded-xl p-6 text-center text-white">
+            <p className="text-5xl font-black mb-2">{partnershipStats.engagementMultiplier}x</p>
+            <p className="text-sm font-semibold uppercase tracking-wide opacity-90">Peak Engagement Lift</p>
+            <p className="text-xs opacity-75 mt-1">Campaign post vs Baumhower's recent posts</p>
+          </div>
+          <div className="bg-gradient-to-br from-[#0C2340] to-[#1a3a5c] rounded-xl p-6 text-center text-white">
+            <p className="text-5xl font-black mb-2">6x</p>
+            <p className="text-sm font-semibold uppercase tracking-wide opacity-90">Above Average Likes</p>
+            <p className="text-xs opacity-75 mt-1">Campaign reel (103 likes) vs Baumhower's avg post (~18 likes)</p>
+          </div>
+        </div>
+
         {/* ─── Campaign Post vs Your Recent Posts ─── */}
         <div className="relative bg-gradient-to-br from-white via-gray-50/50 to-white rounded-2xl border border-gray-200/50 shadow-lg overflow-hidden backdrop-blur-sm">
           <div className="absolute inset-0 bg-gradient-to-br from-[#E87722]/5 via-transparent to-[#0C2340]/5 pointer-events-none"></div>
@@ -452,9 +455,9 @@ export function AuburnCampaignOverview({ onBack }: AuburnCampaignOverviewProps) 
               </div>
               <div>
                 <h3 className="text-lg font-extrabold text-[#0C2340] uppercase tracking-wide">
-                  Campaign Post vs Your Recent Posts
+                  Campaign Post vs Baumhower's Recent Posts
                 </h3>
-                <p className="text-sm text-gray-500">How the Auburn reel stacked up against your other content</p>
+                <p className="text-sm text-gray-500">How the Auburn reel stacked up against Baumhower's other content</p>
               </div>
             </div>
           </div>
@@ -469,7 +472,7 @@ export function AuburnCampaignOverview({ onBack }: AuburnCampaignOverviewProps) 
                       </span>
                       {post.isAuburn && (
                         <span className="bg-[#E87722]/10 text-[#E87722] text-[10px] font-bold px-1.5 py-0.5 rounded uppercase">
-                          Auburn Reel
+                          This Campaign
                         </span>
                       )}
                     </div>
