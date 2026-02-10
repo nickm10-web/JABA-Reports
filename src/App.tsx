@@ -9,9 +9,7 @@ import { PlayflyReportHub } from './components/PlayflyReportHub';
 // Wrapper components that provide navigation
 // Only show back button if user navigated from within the app
 function AuburnRoute() {
-  const navigate = useNavigate();
-  const canGoBack = window.history.length > 2;
-  return <AuburnReportHub onBack={canGoBack ? () => navigate('/') : undefined} />;
+  return <AuburnReportHub />;
 }
 
 function BaylorRoute() {
