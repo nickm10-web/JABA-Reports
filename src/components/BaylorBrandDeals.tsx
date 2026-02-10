@@ -601,22 +601,46 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
           <>
             {/* Cover Banner */}
             <section className="mb-8">
-              <div className="rounded-2xl overflow-hidden" style={{ backgroundColor: colors.green }}>
-                <div className="px-8 py-10 md:py-14 text-center">
-                  <img src="https://a.espncdn.com/i/teamlogos/ncaa/500/239.png" alt="Baylor" className="w-20 h-20 mx-auto mb-4 object-contain" />
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-2" style={{ fontFamily: "'Oswald', sans-serif" }}>
+              <div className="rounded-2xl overflow-hidden relative"
+                style={{
+                  background: `radial-gradient(ellipse 120% 80% at 50% 20%, #1a5c45 0%, ${colors.green} 50%, #0d2e22 100%)`,
+                  boxShadow: '0 8px 32px rgba(13, 46, 34, 0.45), 0 2px 8px rgba(0,0,0,0.12)',
+                }}>
+                {/* Subtle inner highlight for depth */}
+                <div className="absolute inset-0 rounded-2xl pointer-events-none"
+                  style={{
+                    boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.06), inset 0 -1px 0 rgba(0,0,0,0.15)',
+                  }} />
+                {/* Very faint noise texture overlay */}
+                <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
+                  style={{
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E")`,
+                    backgroundSize: '128px 128px',
+                  }} />
+
+                <div className="px-8 py-14 md:py-20 text-center relative z-10">
+                  <img src="https://a.espncdn.com/i/teamlogos/ncaa/500/239.png" alt="Baylor" className="w-20 h-20 mx-auto mb-6 object-contain drop-shadow-lg" />
+
+                  <h2 className="text-2xl md:text-3xl font-bold text-white/90 mb-6 uppercase"
+                    style={{ fontFamily: "'Oswald', sans-serif", letterSpacing: '0.14em' }}>
                     Baylor Athletics
                   </h2>
-                  <div className="w-16 h-1 mx-auto mb-4 rounded-full" style={{ backgroundColor: colors.gold }} />
-                  <h3 className="text-xl md:text-2xl font-semibold mb-2" style={{ color: colors.gold }}>
+
+                  <div className="w-10 h-1.5 mx-auto mb-6 rounded-full"
+                    style={{ backgroundColor: colors.gold }} />
+
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4"
+                    style={{ fontFamily: "'Oswald', sans-serif", color: colors.gold }}>
                     2025 Brand Partnerships Report
                   </h3>
-                  <p className="text-sm text-white/70 max-w-lg mx-auto">
+
+                  <p className="text-sm text-white/60 max-w-md mx-auto leading-relaxed">
                     Sponsored social activity tracked across athlete accounts
                   </p>
-                  <div className="flex items-center justify-center gap-4 mt-6 text-xs text-white/50">
-                    <span className="flex items-center gap-1"><Calendar className="w-3 h-3" /> Generated {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
-                    <span>·</span>
+
+                  <div className="flex items-center justify-center gap-6 mt-8 text-[11px] text-white/40 tracking-wide">
+                    <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" /> Generated {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+                    <span className="text-white/20">|</span>
                     <span>JABA Social Sponsorship Dataset</span>
                   </div>
                 </div>
