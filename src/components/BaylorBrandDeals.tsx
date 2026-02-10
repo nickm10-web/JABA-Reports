@@ -1,7 +1,6 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
 import {
   ArrowLeft,
-  Share2,
   Search,
   Heart,
   MessageCircle,
@@ -19,7 +18,6 @@ import {
   Shield,
   Play,
   Filter,
-  Printer,
   Calendar,
   Award,
 } from 'lucide-react';
@@ -555,17 +553,7 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
                 </h1>
               </div>
             </div>
-            <div className="flex items-center gap-2">
-              <button onClick={() => window.print()}
-                className="flex items-center gap-2 px-3 py-2 rounded-lg border text-sm font-medium hover:bg-gray-50 transition-colors"
-                style={{ borderColor: colors.border, color: colors.textMuted }}>
-                <Printer className="w-4 h-4" /> PDF
-              </button>
-              <button className="flex items-center gap-2 px-3 py-2 rounded-lg border text-sm font-medium hover:bg-gray-50 transition-colors"
-                style={{ borderColor: colors.green, color: colors.green }}>
-                <Share2 className="w-4 h-4" /> Share
-              </button>
-            </div>
+            <div />
           </div>
 
           {/* Tab bar */}
