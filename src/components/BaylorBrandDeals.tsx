@@ -20,6 +20,10 @@ import {
   Filter,
   Calendar,
   Award,
+  Eye,
+  Bookmark,
+  Share2,
+  Hash,
 } from 'lucide-react';
 
 // ═══════════════════════════════════════════════════════════════
@@ -46,6 +50,7 @@ interface SponsorPost {
     _id: string;
     name: string;
     image: string;
+    bio?: string;
     sport: string;
     position?: string;
     year?: string;
@@ -62,6 +67,12 @@ interface SponsorPost {
     shares?: number;
     saves?: number;
     videoViews?: number;
+    impressions?: number;
+    reach?: number;
+    followers?: number;
+    totalInteractions?: number;
+    accountsEngaged?: number;
+    profileLinksTaps?: number;
   };
   permalink: string;
   publishedAt: { $date: string };
@@ -226,8 +237,13 @@ const brandDomains: Record<string, string> = {
   '@cvspharmacy': 'cvs.com', '@maccosmetics': 'maccosmetics.com',
 };
 
+const localBrandLogos: Record<string, string> = {
+  '@baylorthreads': '/baylor-threads.png',
+};
+
 function getBrandLogoUrl(brand: string): string {
   const key = normalizeBrandKey(brand);
+  if (localBrandLogos[key]) return localBrandLogos[key];
   const mapped = brandDomains[key];
   if (mapped) return `https://icons.duckduckgo.com/ip3/${mapped}.ico`;
   const handle = key.replace('@', '').replace(/_+$/, '');
@@ -330,21 +346,40 @@ function PostTile({ post }: { post: SponsorPost }) {
         <p className="text-[11px] text-gray-400 mb-1.5">{formatDate(post.publishedAt.$date)}</p>
         <ExpandCaption text={post.caption} />
 
-        <div className="flex items-center gap-3 mt-2 text-xs text-gray-500">
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-2 text-xs text-gray-500">
           <span className="flex items-center gap-1"><Heart className="w-3 h-3" /> {metricDisplay(post.metrics.likes)}</span>
           <span className="flex items-center gap-1"><MessageCircle className="w-3 h-3" /> {metricDisplay(post.metrics.comments)}</span>
+          {(post.metrics.saves ?? 0) > 0 && <span className="flex items-center gap-1"><Bookmark className="w-3 h-3" /> {metricDisplay(post.metrics.saves)}</span>}
+          {(post.metrics.shares ?? 0) > 0 && <span className="flex items-center gap-1"><Share2 className="w-3 h-3" /> {metricDisplay(post.metrics.shares)}</span>}
           <span className="flex items-center gap-1">
             <TrendingUp className="w-3 h-3" />
             {post.metrics.engagementRate > 0 ? (post.metrics.engagementRate * 100).toFixed(2) + '%' : '—'}
           </span>
         </div>
 
+        {(post.metrics.impressions ?? 0) > 0 && (
+          <div className="flex items-center gap-3 mt-1 text-[10px] text-gray-400">
+            <span className="flex items-center gap-1"><Eye className="w-3 h-3" /> {formatNumber(post.metrics.impressions!)} impr.</span>
+            {(post.metrics.reach ?? 0) > 0 && <span>{formatNumber(post.metrics.reach!)} reach</span>}
+          </div>
+        )}
+
         <div className="flex flex-wrap gap-1 mt-2">
-          {post.isSponsored && <Badge color={colors.green}>Sponsored</Badge>}
           {post.isCollaboration && <Badge color="#7c3aed">Collab</Badge>}
           {post.isOrganizationCollaboration && <Badge color="#0369a1">Org Collab</Badge>}
           {post.hasOrganizationLogo && <Badge color={colors.gold}>Org Logo</Badge>}
         </div>
+
+        {post.hashtags && post.hashtags.length > 0 && (
+          <div className="flex flex-wrap gap-1 mt-1.5">
+            {post.hashtags.slice(0, 4).map(h => (
+              <span key={h} className="text-[10px] px-1.5 py-0.5 rounded bg-gray-100 text-gray-500">
+                #{h.replace(/^#/, '')}
+              </span>
+            ))}
+            {post.hashtags.length > 4 && <span className="text-[10px] text-gray-400">+{post.hashtags.length - 4}</span>}
+          </div>
+        )}
 
         <a href={post.permalink} target="_blank" rel="noopener noreferrer"
           className="mt-3 flex items-center justify-center gap-1.5 w-full py-2 rounded-lg text-xs font-semibold transition-colors hover:opacity-90"
@@ -394,12 +429,17 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
   const [isLoading, setIsLoading] = useState(true);
 
   // UI state
-  const [activeTab, setActiveTab] = useState<TabId>('overview');
+  const [activeTab, setActiveTabRaw] = useState<TabId>('overview');
+  const switchTab = (tab: TabId) => {
+    setActiveTabRaw(tab);
+    window.scrollTo({ top: 0 });
+  };
   const [searchTerm, setSearchTerm] = useState('');
-  const [sponsoredOnly, setSponsoredOnly] = useState(false);
   const [collabOnly, setCollabOnly] = useState(false);
   const [collapsedBrands, setCollapsedBrands] = useState<Set<string>>(new Set());
   const [brandIndexSort, setBrandIndexSort] = useState<'posts' | 'athletes' | 'name'>('posts');
+  const [athleteSort, setAthleteSort] = useState<'posts' | 'likes' | 'brands' | 'name'>('posts');
+  const [sportFilter, setSportFilter] = useState<string>('all');
 
   const brandRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
@@ -418,9 +458,16 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
       .catch(() => setIsLoading(false));
   }, []);
 
-  // Apply search + toggles (for content tab)
+  // Sport options for filter
+  const sportOptions = useMemo(() => {
+    const sports = [...new Set(posts.map(p => p.athlete.sport))];
+    return sports.sort((a, b) => formatSportName(a).localeCompare(formatSportName(b)));
+  }, [posts]);
+
+  // Apply search + toggles + sport filter (for content tab)
   const filteredPosts = useMemo(() => {
     let result = posts;
+    if (sportFilter !== 'all') result = result.filter(p => p.athlete.sport === sportFilter);
     if (searchTerm) {
       const term = searchTerm.toLowerCase();
       result = result.filter(p =>
@@ -429,10 +476,9 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
         p.caption.toLowerCase().includes(term)
       );
     }
-    if (sponsoredOnly) result = result.filter(p => p.isSponsored);
     if (collabOnly) result = result.filter(p => p.isCollaboration);
     return result;
-  }, [posts, searchTerm, sponsoredOnly, collabOnly]);
+  }, [posts, searchTerm, collabOnly, sportFilter]);
 
   // Brand groups
   const brandGroups = useMemo(() => groupPostsByBrand(filteredPosts), [filteredPosts]);
@@ -443,11 +489,13 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
     const totalLikes = posts.reduce((s, p) => s + p.metrics.likes, 0);
     const totalComments = posts.reduce((s, p) => s + p.metrics.comments, 0);
     const totalEMV = totalLikes * 0.20 + totalComments * 2.00;
+    const totalImpressions = posts.reduce((s, p) => s + (p.metrics.impressions || 0), 0);
+    const totalReach = posts.reduce((s, p) => s + (p.metrics.reach || 0), 0);
+    const totalSaves = posts.reduce((s, p) => s + (p.metrics.saves || 0), 0);
+    const totalShares = posts.reduce((s, p) => s + (p.metrics.shares || 0), 0);
     const uniqueAthletes = new Set(posts.map(p => p.athlete._id)).size;
     const uniqueBrands = new Set(posts.filter(p => p.sponsorPartner).map(p => normalizeBrandKey(p.sponsorPartner))).size;
     const uniqueSports = new Set(posts.map(p => p.athlete.sport)).size;
-    const sponsoredCount = posts.filter(p => p.isSponsored).length;
-
     const brandCounts = new Map<string, number>();
     for (const p of posts) {
       const k = normalizeBrandKey(p.sponsorPartner);
@@ -455,25 +503,40 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
     }
     const top5Brands = [...brandCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 5);
 
-    const athCounts = new Map<string, { name: string; count: number }>();
+    const athCounts = new Map<string, { name: string; count: number; image: string }>();
     for (const p of posts) {
       const existing = athCounts.get(p.athlete._id);
       if (existing) existing.count++;
-      else athCounts.set(p.athlete._id, { name: p.athlete.name, count: 1 });
+      else athCounts.set(p.athlete._id, { name: p.athlete.name, count: 1, image: p.athlete.image });
     }
     const top5Athletes = [...athCounts.values()].sort((a, b) => b.count - a.count).slice(0, 5);
 
-    return { totalPosts: posts.length, totalLikes, totalComments, totalEMV, uniqueAthletes, uniqueBrands, uniqueSports, sponsoredCount, top5Brands, top5Athletes };
+    // Top hashtags
+    const hashCounts = new Map<string, number>();
+    for (const p of posts) {
+      if (p.hashtags) {
+        for (const h of p.hashtags) {
+          const tag = h.toLowerCase().replace(/^#/, '');
+          if (tag) hashCounts.set(tag, (hashCounts.get(tag) || 0) + 1);
+        }
+      }
+    }
+    const topHashtags = [...hashCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 10);
+
+    return { totalPosts: posts.length, totalLikes, totalComments, totalEMV, totalImpressions, totalReach, totalSaves, totalShares, uniqueAthletes, uniqueBrands, uniqueSports, top5Brands, top5Athletes, topHashtags };
   }, [posts]);
 
   // Athlete index data
   const athleteIndex = useMemo(() => {
-    const map = new Map<string, { name: string; sport: string; image: string; posts: number; brands: Set<string> }>();
+    const map = new Map<string, { name: string; sport: string; image: string; posts: number; brands: Set<string>; followers: number; totalLikes: number; totalComments: number }>();
     for (const p of posts) {
       const existing = map.get(p.athlete._id);
       if (existing) {
         existing.posts++;
         existing.brands.add(normalizeBrandKey(p.sponsorPartner));
+        existing.totalLikes += p.metrics.likes;
+        existing.totalComments += p.metrics.comments;
+        if (p.metrics.followers && p.metrics.followers > existing.followers) existing.followers = p.metrics.followers;
       } else {
         map.set(p.athlete._id, {
           name: p.athlete.name,
@@ -481,6 +544,9 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
           image: p.athlete.image,
           posts: 1,
           brands: new Set([normalizeBrandKey(p.sponsorPartner)]),
+          followers: p.metrics.followers || 0,
+          totalLikes: p.metrics.likes,
+          totalComments: p.metrics.comments,
         });
       }
     }
@@ -497,7 +563,7 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
 
   const scrollToBrand = (key: string) => {
     // Switch to content tab, expand the brand, then scroll
-    setActiveTab('content');
+    setActiveTabRaw('content');
     setCollapsedBrands(prev => {
       const next = new Set(prev);
       next.delete(key);
@@ -516,6 +582,17 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
     else if (brandIndexSort === 'name') sorted.sort((a, b) => a.displayName.localeCompare(b.displayName));
     return sorted;
   }, [allBrandGroups, brandIndexSort]);
+
+  // Sorted athlete index (with sport filter)
+  const sortedAthleteIndex = useMemo(() => {
+    let filtered = athleteIndex;
+    if (sportFilter !== 'all') filtered = filtered.filter(a => a.sport === sportFilter);
+    const sorted = [...filtered];
+    if (athleteSort === 'likes') sorted.sort((a, b) => b.totalLikes - a.totalLikes);
+    else if (athleteSort === 'brands') sorted.sort((a, b) => b.brands.size - a.brands.size);
+    else if (athleteSort === 'name') sorted.sort((a, b) => a.name.localeCompare(b.name));
+    return sorted;
+  }, [athleteIndex, athleteSort, sportFilter]);
 
   if (isLoading) {
     return (
@@ -563,7 +640,7 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
               return (
                 <button
                   key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
+                  onClick={() => switchTab(tab.id)}
                   className={`flex items-center gap-2 px-4 py-2.5 text-sm font-semibold border-b-2 transition-colors whitespace-nowrap ${
                     isActive
                       ? 'border-current'
@@ -645,10 +722,9 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
                 Summary of all sponsored athlete social activity for Baylor during the 2025 calendar year.
               </p>
 
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-6">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 mb-3">
                 {[
                   { label: 'Total Posts', value: stats.totalPosts.toString(), icon: <LayoutGrid className="w-6 h-6 text-white" /> },
-                  { label: 'Sponsored', value: stats.sponsoredCount.toString(), icon: <Shield className="w-6 h-6 text-white" /> },
                   { label: 'Brands', value: stats.uniqueBrands.toString(), icon: <Tag className="w-6 h-6 text-white" /> },
                   { label: 'Athletes', value: stats.uniqueAthletes.toString(), icon: <Users className="w-6 h-6 text-white" /> },
                   { label: 'Sports', value: stats.uniqueSports.toString(), icon: <Award className="w-6 h-6 text-white" /> },
@@ -662,11 +738,32 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
                 ))}
               </div>
 
-              {/* Top 5s */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Engagement Metrics Row */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+                {[
+                  { label: 'Impressions', value: formatNumber(stats.totalImpressions), icon: <Eye className="w-5 h-5" /> },
+                  { label: 'Reach', value: formatNumber(stats.totalReach), icon: <Users className="w-5 h-5" /> },
+                  { label: 'Saves', value: formatNumber(stats.totalSaves), icon: <Bookmark className="w-5 h-5" /> },
+                  { label: 'Shares', value: formatNumber(stats.totalShares), icon: <Share2 className="w-5 h-5" /> },
+                ].map(kpi => (
+                  <div key={kpi.label} className="bg-white rounded-xl border border-gray-100 p-4 flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
+                      style={{ backgroundColor: colors.green + '12', color: colors.green }}>
+                      {kpi.icon}
+                    </div>
+                    <div>
+                      <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-400">{kpi.label}</p>
+                      <p className="text-lg font-bold" style={{ color: colors.text }}>{kpi.value}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Top 5s + Hashtags */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-white rounded-xl border border-gray-100 p-5">
                   <h4 className="text-sm font-bold uppercase tracking-wider mb-3" style={{ color: colors.green }}>
-                    <Handshake className="w-4 h-4 inline mr-1.5 -mt-0.5" />Top 5 Brands by Posts
+                    <Handshake className="w-4 h-4 inline mr-1.5 -mt-0.5" />Top 5 Brands
                   </h4>
                   <div className="space-y-2">
                     {stats.top5Brands.map(([key, count], i) => (
@@ -682,7 +779,7 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
                       </button>
                     ))}
                   </div>
-                  <button onClick={() => setActiveTab('brand-index')}
+                  <button onClick={() => switchTab('brand-index')}
                     className="mt-3 pt-3 border-t border-gray-100 w-full text-left text-xs font-semibold hover:underline"
                     style={{ color: colors.green }}>
                     View all brands →
@@ -691,27 +788,47 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
 
                 <div className="bg-white rounded-xl border border-gray-100 p-5">
                   <h4 className="text-sm font-bold uppercase tracking-wider mb-3" style={{ color: colors.green }}>
-                    <Users className="w-4 h-4 inline mr-1.5 -mt-0.5" />Top 5 Athletes by Posts
+                    <Users className="w-4 h-4 inline mr-1.5 -mt-0.5" />Top 5 Athletes
                   </h4>
                   <div className="space-y-2">
                     {stats.top5Athletes.map((ath, i) => (
-                      <div key={ath.name} className="flex items-center gap-3">
+                      <div key={ath.name} className="flex items-center gap-3 px-2 py-1 -mx-2">
                         <span className="w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold text-white flex-shrink-0"
                           style={{ backgroundColor: i === 0 ? colors.gold : colors.green }}>
                           {i + 1}
                         </span>
+                        <AthleteAvatar src={ath.image} name={ath.name} size={24} />
                         <span className="text-sm font-medium flex-1 truncate">{ath.name}</span>
                         <span className="text-sm font-bold" style={{ color: colors.green }}>{ath.count}</span>
                       </div>
                     ))}
                   </div>
-                  <button onClick={() => setActiveTab('athletes')}
+                  <button onClick={() => switchTab('athletes')}
                     className="mt-3 pt-3 border-t border-gray-100 w-full text-left text-xs font-semibold hover:underline"
                     style={{ color: colors.green }}>
                     View all athletes →
                   </button>
                 </div>
+
+                <div className="bg-white rounded-xl border border-gray-100 p-5">
+                  <h4 className="text-sm font-bold uppercase tracking-wider mb-3" style={{ color: colors.green }}>
+                    <Hash className="w-4 h-4 inline mr-1.5 -mt-0.5" />Top Hashtags
+                  </h4>
+                  <div className="space-y-1.5">
+                    {stats.topHashtags.map(([tag, count], i) => (
+                      <div key={tag} className="flex items-center gap-2 px-2 py-1 -mx-2">
+                        <span className="text-xs text-gray-400 w-4 text-right">{i + 1}</span>
+                        <span className="text-sm font-medium flex-1 truncate">#{tag}</span>
+                        <span className="text-xs font-semibold text-gray-500">{count}</span>
+                      </div>
+                    ))}
+                  </div>
+                  {stats.topHashtags.length === 0 && (
+                    <p className="text-xs text-gray-400 italic">No hashtag data available</p>
+                  )}
+                </div>
               </div>
+
             </section>
           </>
         )}
@@ -747,7 +864,6 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
                         Athletes {brandIndexSort === 'athletes' && '▼'}
                       </th>
                       <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Sports</th>
-                      <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-white hidden sm:table-cell">Sponsored %</th>
                       <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white hidden lg:table-cell">Date Range</th>
                       <th className="px-4 py-3 text-center text-xs font-semibold uppercase tracking-wider text-white w-10"></th>
                     </tr>
@@ -756,7 +872,6 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
                     {sortedBrandIndex.map((bg, i) => {
                       const topSports = bg.sports.slice(0, 3).map(formatSportName);
                       const moreSports = bg.sports.length > 3 ? bg.sports.length - 3 : 0;
-                      const sponsoredPct = bg.posts.length > 0 ? Math.round((bg.sponsoredCount / bg.posts.length) * 100) : 0;
                       return (
                         <tr key={bg.key}
                           className="border-b border-gray-50 hover:bg-gray-50/50 cursor-pointer transition-colors"
@@ -776,7 +891,6 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
                           <td className="px-4 py-3 text-xs text-gray-500 hidden md:table-cell">
                             {topSports.join(', ')}{moreSports > 0 && <span className="text-gray-400"> +{moreSports}</span>}
                           </td>
-                          <td className="px-4 py-3 text-sm text-right text-gray-600 hidden sm:table-cell">{sponsoredPct}%</td>
                           <td className="px-4 py-3 text-xs text-gray-500 hidden lg:table-cell">
                             {formatShortDate(bg.dateRange.min)} – {formatShortDate(bg.dateRange.max)}
                           </td>
@@ -807,11 +921,14 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
                     value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}
                     className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-green-800/20 focus:border-green-800" />
                 </div>
-                <label className="flex items-center gap-2 text-sm cursor-pointer select-none">
-                  <input type="checkbox" checked={sponsoredOnly} onChange={(e) => setSponsoredOnly(e.target.checked)}
-                    className="w-4 h-4 rounded border-gray-300" style={{ accentColor: colors.green }} />
-                  Sponsored only
-                </label>
+                <select value={sportFilter} onChange={(e) => setSportFilter(e.target.value)}
+                  className="px-3 py-2 rounded-lg border border-gray-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-green-800/20 focus:border-green-800"
+                  style={{ accentColor: colors.green }}>
+                  <option value="all">All Sports</option>
+                  {sportOptions.map(s => (
+                    <option key={s} value={s}>{formatSportName(s)}</option>
+                  ))}
+                </select>
                 <label className="flex items-center gap-2 text-sm cursor-pointer select-none">
                   <input type="checkbox" checked={collabOnly} onChange={(e) => setCollabOnly(e.target.checked)}
                     className="w-4 h-4 rounded border-gray-300" style={{ accentColor: colors.green }} />
@@ -827,7 +944,6 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
             {/* Brand Sections */}
             {brandGroups.map((bg) => {
               const isCollapsed = collapsedBrands.has(bg.key);
-              const sponsoredPct = bg.posts.length > 0 ? Math.round((bg.sponsoredCount / bg.posts.length) * 100) : 0;
 
               return (
                 <div key={bg.key}
@@ -850,7 +966,6 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
                         <div className="flex items-center gap-4 mt-1 text-xs text-gray-500">
                           <span className="font-semibold" style={{ color: colors.green }}>{bg.posts.length} posts</span>
                           <span>{bg.uniqueAthletes.length} athletes</span>
-                          <span>{sponsoredPct}% sponsored</span>
                           <span className="hidden sm:inline">
                             {formatShortDate(bg.dateRange.min)} – {formatShortDate(bg.dateRange.max)}
                           </span>
@@ -909,13 +1024,24 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
         {/* ═══════════════════════════════════════════════════════ */}
         {activeTab === 'athletes' && (
           <section>
-            <h2 className="text-2xl font-bold mb-4 uppercase tracking-tight"
-              style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic', color: colors.green }}>
-              Athlete Index
-            </h2>
-            <p className="text-sm text-gray-500 mb-4">
-              {athleteIndex.length} athletes with brand partnership posts in 2025.
-            </p>
+            <div className="flex flex-wrap items-end justify-between gap-4 mb-4">
+              <div>
+                <h2 className="text-2xl font-bold uppercase tracking-tight"
+                  style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic', color: colors.green }}>
+                  Athlete Index
+                </h2>
+                <p className="text-sm text-gray-500 mt-1">
+                  {sortedAthleteIndex.length} athletes{sportFilter !== 'all' ? ` in ${formatSportName(sportFilter)}` : ''} with brand partnership posts in 2025.
+                </p>
+              </div>
+              <select value={sportFilter} onChange={(e) => setSportFilter(e.target.value)}
+                className="px-3 py-2 rounded-lg border border-gray-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-green-800/20 focus:border-green-800 no-print">
+                <option value="all">All Sports</option>
+                {sportOptions.map(s => (
+                  <option key={s} value={s}>{formatSportName(s)}</option>
+                ))}
+              </select>
+            </div>
 
             <div className="bg-white rounded-xl border border-gray-100 overflow-hidden">
               <div className="overflow-x-auto">
@@ -923,15 +1049,28 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
                   <thead>
                     <tr style={{ backgroundColor: colors.green }}>
                       <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white">#</th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white">Athlete</th>
+                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white cursor-pointer hover:text-yellow-300"
+                        onClick={() => setAthleteSort('name')}>
+                        Athlete {athleteSort === 'name' && '▼'}
+                      </th>
                       <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white hidden sm:table-cell">Sport</th>
-                      <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-white">Posts</th>
-                      <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-white">Brands</th>
-                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Top Brands</th>
+                      <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-white cursor-pointer hover:text-yellow-300"
+                        onClick={() => setAthleteSort('posts')}>
+                        Posts {athleteSort === 'posts' && '▼'}
+                      </th>
+                      <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-white hidden sm:table-cell cursor-pointer hover:text-yellow-300"
+                        onClick={() => setAthleteSort('likes')}>
+                        Likes {athleteSort === 'likes' && '▼'}
+                      </th>
+                      <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-white cursor-pointer hover:text-yellow-300"
+                        onClick={() => setAthleteSort('brands')}>
+                        Brands {athleteSort === 'brands' && '▼'}
+                      </th>
+                      <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-white hidden lg:table-cell">Top Brands</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {athleteIndex.map((ath, i) => {
+                    {sortedAthleteIndex.map((ath, i) => {
                       const topBrands = [...ath.brands].slice(0, 3).map(brandDisplayName);
                       return (
                         <tr key={ath.name + i} className={`border-b border-gray-50 hover:bg-gray-50/30 ${i % 2 === 1 ? 'bg-gray-50/20' : ''}`}>
@@ -944,8 +1083,9 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
                           </td>
                           <td className="px-4 py-2.5 text-xs text-gray-500 hidden sm:table-cell">{formatSportName(ath.sport)}</td>
                           <td className="px-4 py-2.5 text-sm text-right font-bold" style={{ color: colors.green }}>{ath.posts}</td>
+                          <td className="px-4 py-2.5 text-sm text-right text-gray-600 hidden sm:table-cell">{formatNumber(ath.totalLikes)}</td>
                           <td className="px-4 py-2.5 text-sm text-right text-gray-600">{ath.brands.size}</td>
-                          <td className="px-4 py-2.5 text-xs text-gray-500 hidden md:table-cell">{topBrands.join(', ')}</td>
+                          <td className="px-4 py-2.5 text-xs text-gray-500 hidden lg:table-cell">{topBrands.join(', ')}</td>
                         </tr>
                       );
                     })}
@@ -961,24 +1101,38 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
         {/* ═══════════════════════════════════════════════════════ */}
         {activeTab === 'compliance' && (
           <section>
-            <h2 className="text-2xl font-bold mb-4 uppercase tracking-tight"
-              style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic', color: colors.green }}>
-              Compliance Appendix
-            </h2>
-            <p className="text-sm text-gray-500 mb-4">Complete log of all {posts.length} sponsored posts in 2025.</p>
+            <div className="flex flex-wrap items-end justify-between gap-4 mb-4">
+              <div>
+                <h2 className="text-2xl font-bold uppercase tracking-tight"
+                  style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic', color: colors.green }}>
+                  Compliance Appendix
+                </h2>
+                <p className="text-sm text-gray-500 mt-1">
+                  Complete log of all {sportFilter !== 'all' ? `${formatSportName(sportFilter)} ` : ''}{posts.filter(p => sportFilter === 'all' || p.athlete.sport === sportFilter).length} sponsored posts in 2025.
+                </p>
+              </div>
+              <select value={sportFilter} onChange={(e) => setSportFilter(e.target.value)}
+                className="px-3 py-2 rounded-lg border border-gray-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-green-800/20 focus:border-green-800 no-print">
+                <option value="all">All Sports</option>
+                {sportOptions.map(s => (
+                  <option key={s} value={s}>{formatSportName(s)}</option>
+                ))}
+              </select>
+            </div>
 
             <div className="bg-white rounded-xl border border-gray-100 overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full text-xs">
                   <thead>
                     <tr style={{ backgroundColor: colors.green }}>
-                      {['#', 'Date', 'Athlete', 'Sport', 'Brand', 'Source', 'Sponsored', 'Collab', 'Org Collab', 'Org Logo', 'Link'].map(h => (
+                      {['#', 'Date', 'Athlete', 'Sport', 'Brand', 'Source', 'Collab', 'Org Collab', 'Org Logo', 'Link'].map(h => (
                         <th key={h} className="px-3 py-2.5 text-left font-semibold uppercase tracking-wider text-white whitespace-nowrap">{h}</th>
                       ))}
                     </tr>
                   </thead>
                   <tbody>
                     {posts
+                      .filter(p => sportFilter === 'all' || p.athlete.sport === sportFilter)
                       .sort((a, b) => new Date(b.publishedAt.$date).getTime() - new Date(a.publishedAt.$date).getTime())
                       .map((p, i) => (
                         <tr key={p._id} className={`border-b border-gray-50 ${i % 2 === 1 ? 'bg-gray-50/30' : ''}`}>
@@ -988,7 +1142,6 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
                           <td className="px-3 py-2 text-gray-500">{formatSportName(p.athlete.sport)}</td>
                           <td className="px-3 py-2 font-medium" style={{ color: colors.green }}>{p.sponsorPartner}</td>
                           <td className="px-3 py-2 text-gray-500">{p.source || '—'}</td>
-                          <td className="px-3 py-2">{p.isSponsored ? '✓' : '—'}</td>
                           <td className="px-3 py-2">{p.isCollaboration ? '✓' : '—'}</td>
                           <td className="px-3 py-2">{p.isOrganizationCollaboration ? '✓' : '—'}</td>
                           <td className="px-3 py-2">{p.hasOrganizationLogo ? '✓' : '—'}</td>
