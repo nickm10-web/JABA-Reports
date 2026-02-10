@@ -1,0 +1,7466 @@
+[
+  {
+    "name": "Tahaad Pettiford",
+    "sport": "MENS_BASKETBALL",
+    "totalPosts": 21,
+    "totalEmv": 216378.6,
+    "engagementRate": 0.16633,
+    "collab": {
+      "posts": 1,
+      "emv": 10407.2,
+      "avgLikes": 49866.0,
+      "avgComments": 217.0,
+      "engagementRate": 0.218987,
+      "lift": 21.4
+    },
+    "logo": {
+      "posts": 5,
+      "emv": 60252.4,
+      "avgLikes": 57158.4,
+      "avgComments": 309.4,
+      "engagementRate": 0.196226,
+      "lift": 8.8
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 22412.4,
+      "avgLikes": 26768.0,
+      "avgComments": 124.8,
+      "engagementRate": 0.103422,
+      "lift": -42.7
+    }
+  },
+  {
+    "name": "Cam'Ron King",
+    "sport": "FOOTBALL",
+    "totalPosts": 14,
+    "totalEmv": 49211.8,
+    "engagementRate": 1.663517,
+    "logo": {
+      "posts": 2,
+      "emv": 1459.4,
+      "avgLikes": 2933.5,
+      "avgComments": 71.5,
+      "engagementRate": 0.313445,
+      "lift": -83.4
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 1152.2,
+      "avgLikes": 4731.0,
+      "avgComments": 103.0,
+      "engagementRate": 0.504224,
+      "lift": -73.3
+    }
+  },
+  {
+    "name": "Keyshawn Hall",
+    "sport": "MENS_BASKETBALL",
+    "totalPosts": 39,
+    "totalEmv": 46938.6,
+    "engagementRate": 0.059861,
+    "collab": {
+      "posts": 7,
+      "emv": 11829.0,
+      "avgLikes": 7767.9,
+      "avgComments": 68.1,
+      "engagementRate": 0.034263,
+      "lift": 20.2
+    },
+    "logo": {
+      "posts": 17,
+      "emv": 21303.6,
+      "avgLikes": 5651.1,
+      "avgComments": 61.5,
+      "engagementRate": 0.061509,
+      "lift": 115.7
+    },
+    "mention": {
+      "posts": 12,
+      "emv": 27570.8,
+      "avgLikes": 10215.3,
+      "avgComments": 127.2,
+      "engagementRate": 0.1262,
+      "lift": 342.6
+    }
+  },
+  {
+    "name": "Deuce Knight",
+    "sport": "FOOTBALL",
+    "totalPosts": 13,
+    "totalEmv": 41464.8,
+    "engagementRate": 0.310213,
+    "logo": {
+      "posts": 3,
+      "emv": 8554.4,
+      "avgLikes": 11897.3,
+      "avgComments": 236.0,
+      "engagementRate": 0.278708,
+      "lift": 86.5
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 21326.2,
+      "avgLikes": 31007.0,
+      "avgComments": 453.7,
+      "engagementRate": 0.716823,
+      "lift": 379.6
+    }
+  },
+  {
+    "name": "Cam Coleman",
+    "sport": "FOOTBALL",
+    "totalPosts": 12,
+    "totalEmv": 36870.4,
+    "engagementRate": 0.189165
+  },
+  {
+    "name": "Alex McPherson",
+    "sport": "FOOTBALL",
+    "totalPosts": 19,
+    "totalEmv": 35653.6,
+    "engagementRate": 0.392751,
+    "logo": {
+      "posts": 5,
+      "emv": 5938.6,
+      "avgLikes": 5434.6,
+      "avgComments": 50.4,
+      "engagementRate": 0.333313,
+      "lift": 11.7
+    },
+    "mention": {
+      "posts": 10,
+      "emv": 13246.4,
+      "avgLikes": 6227.2,
+      "avgComments": 39.6,
+      "engagementRate": 0.462224,
+      "lift": 54.9
+    }
+  },
+  {
+    "name": "Malcolm Simmons",
+    "sport": "FOOTBALL",
+    "totalPosts": 24,
+    "totalEmv": 32892.0,
+    "engagementRate": 0.346011,
+    "logo": {
+      "posts": 7,
+      "emv": 15348.4,
+      "avgLikes": 8924.6,
+      "avgComments": 203.9,
+      "engagementRate": 0.547604,
+      "lift": 86.2
+    },
+    "mention": {
+      "posts": 6,
+      "emv": 10741.4,
+      "avgLikes": 7522.8,
+      "avgComments": 142.8,
+      "engagementRate": 0.464249,
+      "lift": 57.9
+    }
+  },
+  {
+    "name": "Eric Singleton Jr.",
+    "sport": "FOOTBALL",
+    "totalPosts": 17,
+    "totalEmv": 29441.2,
+    "engagementRate": 0.300589,
+    "logo": {
+      "posts": 3,
+      "emv": 7242.8,
+      "avgLikes": 10594.7,
+      "avgComments": 147.7,
+      "engagementRate": 0.467044,
+      "lift": 70.3
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 3588.8,
+      "avgLikes": 5314.7,
+      "avgComments": 66.7,
+      "engagementRate": 0.239724,
+      "lift": -12.6
+    }
+  },
+  {
+    "name": "Champ Anthony",
+    "sport": "FOOTBALL",
+    "totalPosts": 11,
+    "totalEmv": 27735.4,
+    "engagementRate": 1.896968,
+    "mention": {
+      "posts": 5,
+      "emv": 10922.4,
+      "avgLikes": 9878.4,
+      "avgComments": 104.4,
+      "engagementRate": 1.698044,
+      "lift": -17.7
+    }
+  },
+  {
+    "name": "Chase Fralick",
+    "sport": "BASEBALL",
+    "totalPosts": 13,
+    "totalEmv": 27330.4,
+    "engagementRate": 5.09605,
+    "logo": {
+      "posts": 5,
+      "emv": 25317.2,
+      "avgLikes": 24621.2,
+      "avgComments": 69.6,
+      "engagementRate": 8.830758,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 12,
+      "emv": 27152.4,
+      "avgLikes": 11001.8,
+      "avgComments": 31.2,
+      "engagementRate": 5.706143,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Elyjah Freeman",
+    "sport": "MENS_BASKETBALL",
+    "totalPosts": 16,
+    "totalEmv": 26411.2,
+    "engagementRate": 0.837641,
+    "collab": {
+      "posts": 3,
+      "emv": 6631.0,
+      "avgLikes": 10281.7,
+      "avgComments": 77.0,
+      "engagementRate": 0.045293,
+      "lift": -96.5
+    },
+    "logo": {
+      "posts": 2,
+      "emv": 1824.4,
+      "avgLikes": 4001.0,
+      "avgComments": 56.0,
+      "engagementRate": 0.017739,
+      "lift": -98.6
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 5136.8,
+      "avgLikes": 7881.3,
+      "avgComments": 68.0,
+      "engagementRate": 0.880968,
+      "lift": -31.4
+    }
+  },
+  {
+    "name": "Jackson Arnold",
+    "sport": "FOOTBALL",
+    "totalPosts": 10,
+    "totalEmv": 26067.8,
+    "engagementRate": 0.219753,
+    "logo": {
+      "posts": 1,
+      "emv": 1257.6,
+      "avgLikes": 5118.0,
+      "avgComments": 117.0,
+      "engagementRate": 0.106563,
+      "lift": -54.1
+    }
+  },
+  {
+    "name": "Kaden Magwood",
+    "sport": "MENS_BASKETBALL",
+    "totalPosts": 15,
+    "totalEmv": 24484.6,
+    "engagementRate": 0.310361,
+    "logo": {
+      "posts": 3,
+      "emv": 3488.6,
+      "avgLikes": 5481.0,
+      "avgComments": 33.3,
+      "engagementRate": 0.041391,
+      "lift": -89.2
+    },
+    "mention": {
+      "posts": 8,
+      "emv": 11759.4,
+      "avgLikes": 6893.4,
+      "avgComments": 45.6,
+      "engagementRate": 0.290159,
+      "lift": -23.9
+    }
+  },
+  {
+    "name": "Ashton Daniels",
+    "sport": "FOOTBALL",
+    "totalPosts": 20,
+    "totalEmv": 23371.8,
+    "engagementRate": 0.559283,
+    "logo": {
+      "posts": 7,
+      "emv": 15048.2,
+      "avgLikes": 9044.4,
+      "avgComments": 170.4,
+      "engagementRate": 1.278283,
+      "lift": 919.2
+    },
+    "mention": {
+      "posts": 7,
+      "emv": 16652.2,
+      "avgLikes": 10294.4,
+      "avgComments": 160.0,
+      "engagementRate": 1.208016,
+      "lift": 863.2
+    }
+  },
+  {
+    "name": "Drake Cardwell",
+    "sport": "MENS_BASKETBALL",
+    "totalPosts": 15,
+    "totalEmv": 22113.6,
+    "engagementRate": 0.516908,
+    "logo": {
+      "posts": 2,
+      "emv": 915.2,
+      "avgLikes": 2093.0,
+      "avgComments": 19.5,
+      "engagementRate": 0.15463,
+      "lift": -73.0
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 542.6,
+      "avgLikes": 2583.0,
+      "avgComments": 13.0,
+      "engagementRate": 0.18978,
+      "lift": -66.9
+    }
+  },
+  {
+    "name": "Ben Wilson",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 15,
+    "totalEmv": 22054.2,
+    "engagementRate": 1.8595,
+    "logo": {
+      "posts": 2,
+      "emv": 393.4,
+      "avgLikes": 508.5,
+      "avgComments": 47.5,
+      "engagementRate": 0.152538,
+      "lift": -95.3
+    },
+    "mention": {
+      "posts": 7,
+      "emv": 2489.6,
+      "avgLikes": 774.0,
+      "avgComments": 100.4,
+      "engagementRate": 0.239898,
+      "lift": -92.7
+    }
+  },
+  {
+    "name": "Perry Thompson",
+    "sport": "FOOTBALL",
+    "totalPosts": 19,
+    "totalEmv": 21318.8,
+    "engagementRate": 0.190357,
+    "logo": {
+      "posts": 3,
+      "emv": 10100.6,
+      "avgLikes": 13114.3,
+      "avgComments": 372.0,
+      "engagementRate": 0.495182,
+      "lift": 281.9
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 10062.2,
+      "avgLikes": 13150.3,
+      "avgComments": 362.0,
+      "engagementRate": 0.496157,
+      "lift": 282.6
+    }
+  },
+  {
+    "name": "Xavier Atkins",
+    "sport": "FOOTBALL",
+    "totalPosts": 29,
+    "totalEmv": 21199.8,
+    "engagementRate": 0.247448,
+    "logo": {
+      "posts": 6,
+      "emv": 5767.4,
+      "avgLikes": 4506.2,
+      "avgComments": 30.0,
+      "engagementRate": 0.303931,
+      "lift": 42.9
+    },
+    "mention": {
+      "posts": 11,
+      "emv": 10629.8,
+      "avgLikes": 4334.5,
+      "avgComments": 49.7,
+      "engagementRate": 0.270153,
+      "lift": 27.0
+    }
+  },
+  {
+    "name": "Jeremiah Cobb",
+    "sport": "FOOTBALL",
+    "totalPosts": 17,
+    "totalEmv": 20800.0,
+    "engagementRate": 0.481169,
+    "logo": {
+      "posts": 4,
+      "emv": 3923.4,
+      "avgLikes": 3644.2,
+      "avgComments": 126.0,
+      "engagementRate": 0.329136,
+      "lift": -30.2
+    },
+    "mention": {
+      "posts": 8,
+      "emv": 10921.0,
+      "avgLikes": 6258.1,
+      "avgComments": 56.8,
+      "engagementRate": 0.539978,
+      "lift": 14.6
+    }
+  },
+  {
+    "name": "Saxon Roberts",
+    "sport": "BASEBALL",
+    "totalPosts": 17,
+    "totalEmv": 19668.2,
+    "engagementRate": 1.298849,
+    "logo": {
+      "posts": 1,
+      "emv": 2453.4,
+      "avgLikes": 11967.0,
+      "avgComments": 30.0,
+      "engagementRate": 2.333139,
+      "lift": 831.8
+    },
+    "mention": {
+      "posts": 10,
+      "emv": 17606.6,
+      "avgLikes": 8445.3,
+      "avgComments": 35.8,
+      "engagementRate": 1.764832,
+      "lift": 604.8
+    }
+  },
+  {
+    "name": "Jay Crawford",
+    "sport": "FOOTBALL",
+    "totalPosts": 15,
+    "totalEmv": 19207.0,
+    "engagementRate": 0.717594,
+    "logo": {
+      "posts": 3,
+      "emv": 7363.0,
+      "avgLikes": 9961.7,
+      "avgComments": 231.0,
+      "engagementRate": 1.770303,
+      "lift": 208.0
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 8316.4,
+      "avgLikes": 8765.5,
+      "avgComments": 163.0,
+      "engagementRate": 1.03897,
+      "lift": 80.8
+    }
+  },
+  {
+    "name": "Alvin Henderson",
+    "sport": "FOOTBALL",
+    "totalPosts": 18,
+    "totalEmv": 18687.4,
+    "engagementRate": 0.316328,
+    "logo": {
+      "posts": 4,
+      "emv": 3850.2,
+      "avgLikes": 4430.2,
+      "avgComments": 38.2,
+      "engagementRate": 0.176369,
+      "lift": -22.1
+    },
+    "mention": {
+      "posts": 6,
+      "emv": 14813.0,
+      "avgLikes": 11492.5,
+      "avgComments": 85.2,
+      "engagementRate": 0.411949,
+      "lift": 82.0
+    }
+  },
+  {
+    "name": "KeShawn Murphy",
+    "sport": "MENS_BASKETBALL",
+    "totalPosts": 18,
+    "totalEmv": 18199.8,
+    "engagementRate": 0.279319,
+    "logo": {
+      "posts": 4,
+      "emv": 4148.6,
+      "avgLikes": 4738.2,
+      "avgComments": 44.8,
+      "engagementRate": 0.223865,
+      "lift": 44.7
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 5590.6,
+      "avgLikes": 24993.0,
+      "avgComments": 296.0,
+      "engagementRate": 1.99629,
+      "lift": 1190.2
+    }
+  },
+  {
+    "name": "Jackson Koivun",
+    "sport": "MENS_GOLF",
+    "totalPosts": 15,
+    "totalEmv": 17534.0,
+    "engagementRate": 0.170042,
+    "mention": {
+      "posts": 4,
+      "emv": 4809.4,
+      "avgLikes": 5806.8,
+      "avgComments": 20.5,
+      "engagementRate": 0.183343,
+      "lift": 11.0
+    }
+  },
+  {
+    "name": "Simon Walker",
+    "sport": "MENS_BASKETBALL",
+    "totalPosts": 17,
+    "totalEmv": 16722.2,
+    "engagementRate": 0.26193,
+    "collab": {
+      "posts": 2,
+      "emv": 2372.6,
+      "avgLikes": 5166.5,
+      "avgComments": 76.5,
+      "engagementRate": 0.022925,
+      "lift": -89.7
+    },
+    "logo": {
+      "posts": 3,
+      "emv": 3056.0,
+      "avgLikes": 4526.7,
+      "avgComments": 56.7,
+      "engagementRate": 0.020041,
+      "lift": -91.0
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 5378.0,
+      "avgLikes": 6410.0,
+      "avgComments": 31.2,
+      "engagementRate": 0.593053,
+      "lift": 166.7
+    }
+  },
+  {
+    "name": "Keldric Faulk",
+    "sport": "FOOTBALL",
+    "totalPosts": 20,
+    "totalEmv": 15461.4,
+    "engagementRate": 0.249416,
+    "logo": {
+      "posts": 8,
+      "emv": 7640.4,
+      "avgLikes": 4247.8,
+      "avgComments": 52.8,
+      "engagementRate": 0.296484,
+      "lift": 40.6
+    },
+    "mention": {
+      "posts": 8,
+      "emv": 7562.2,
+      "avgLikes": 4073.9,
+      "avgComments": 65.2,
+      "engagementRate": 0.291948,
+      "lift": 38.5
+    }
+  },
+  {
+    "name": "Donovan Starr",
+    "sport": "FOOTBALL",
+    "totalPosts": 20,
+    "totalEmv": 13648.6,
+    "engagementRate": 0.366914,
+    "logo": {
+      "posts": 3,
+      "emv": 2165.0,
+      "avgLikes": 2411.7,
+      "avgComments": 119.7,
+      "engagementRate": 0.354628,
+      "lift": 48.2
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 5352.2,
+      "avgLikes": 7047.0,
+      "avgComments": 187.3,
+      "engagementRate": 1.019151,
+      "lift": 325.9
+    }
+  },
+  {
+    "name": "AnQuon Fegans",
+    "sport": "FOOTBALL",
+    "totalPosts": 18,
+    "totalEmv": 13390.0,
+    "engagementRate": 0.263583,
+    "logo": {
+      "posts": 6,
+      "emv": 3111.0,
+      "avgLikes": 1915.8,
+      "avgComments": 67.7,
+      "engagementRate": 0.263583,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 4502.8,
+      "avgLikes": 8257.0,
+      "avgComments": 300.0,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Bryce Cain",
+    "sport": "FOOTBALL",
+    "totalPosts": 18,
+    "totalEmv": 13050.0,
+    "engagementRate": 0.288547,
+    "logo": {
+      "posts": 2,
+      "emv": 961.8,
+      "avgLikes": 1844.5,
+      "avgComments": 56.0,
+      "engagementRate": 0.169219,
+      "lift": -44.4
+    }
+  },
+  {
+    "name": "Robert Woodyard Jr.",
+    "sport": "FOOTBALL",
+    "totalPosts": 21,
+    "totalEmv": 12422.0,
+    "engagementRate": 0.268778,
+    "logo": {
+      "posts": 8,
+      "emv": 8764.4,
+      "avgLikes": 4789.0,
+      "avgComments": 68.9,
+      "engagementRate": 0.421061,
+      "lift": 255.3
+    },
+    "mention": {
+      "posts": 6,
+      "emv": 8227.6,
+      "avgLikes": 6008.0,
+      "avgComments": 84.8,
+      "engagementRate": 0.528476,
+      "lift": 345.9
+    }
+  },
+  {
+    "name": "Abdul Bashir",
+    "sport": "MENS_BASKETBALL",
+    "totalPosts": 7,
+    "totalEmv": 12067.0,
+    "engagementRate": 0.612706,
+    "mention": {
+      "posts": 1,
+      "emv": 6050.0,
+      "avgLikes": 27440.0,
+      "avgComments": 281.0,
+      "engagementRate": 2.300307,
+      "lift": 594.0
+    }
+  },
+  {
+    "name": "Towns McGough",
+    "sport": "FOOTBALL",
+    "totalPosts": 15,
+    "totalEmv": 11740.0,
+    "engagementRate": 0.412801,
+    "logo": {
+      "posts": 2,
+      "emv": 454.6,
+      "avgLikes": 1.5,
+      "avgComments": 113.5,
+      "engagementRate": 0.01449,
+      "lift": -94.9
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 6415.8,
+      "avgLikes": 7024.8,
+      "avgComments": 99.5,
+      "engagementRate": 0.706335,
+      "lift": 150.2
+    }
+  },
+  {
+    "name": "Cade Belyeu",
+    "sport": "BASEBALL",
+    "totalPosts": 12,
+    "totalEmv": 11390.4,
+    "engagementRate": 1.39356,
+    "mention": {
+      "posts": 8,
+      "emv": 10459.6,
+      "avgLikes": 6211.0,
+      "avgComments": 32.6,
+      "engagementRate": 1.951743,
+      "lift": 604.1
+    }
+  },
+  {
+    "name": "Charlotte Booth",
+    "sport": "WOMENS_GYMNASTICS",
+    "totalPosts": 27,
+    "totalEmv": 11275.0,
+    "engagementRate": 0.034467,
+    "logo": {
+      "posts": 6,
+      "emv": 2849.2,
+      "avgLikes": 2062.7,
+      "avgComments": 31.2,
+      "engagementRate": 0.044908,
+      "lift": 34.1
+    },
+    "mention": {
+      "posts": 8,
+      "emv": 2824.8,
+      "avgLikes": 1500.5,
+      "avgComments": 26.5,
+      "engagementRate": 0.029018,
+      "lift": -13.4
+    }
+  },
+  {
+    "name": "Emeka Opurum",
+    "sport": "MENS_BASKETBALL",
+    "totalPosts": 17,
+    "totalEmv": 11145.4,
+    "engagementRate": 0.973389,
+    "collab": {
+      "posts": 3,
+      "emv": 1675.2,
+      "avgLikes": 2415.3,
+      "avgComments": 37.7,
+      "engagementRate": 0.015997,
+      "lift": -98.2
+    },
+    "logo": {
+      "posts": 4,
+      "emv": 2347.2,
+      "avgLikes": 2579.0,
+      "avgComments": 35.5,
+      "engagementRate": 0.015181,
+      "lift": -98.3
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 4728.2,
+      "avgLikes": 6963.7,
+      "avgComments": 91.7,
+      "engagementRate": 2.043743,
+      "lift": 125.6
+    }
+  },
+  {
+    "name": "Blake Woodby",
+    "sport": "FOOTBALL",
+    "totalPosts": 17,
+    "totalEmv": 10961.0,
+    "engagementRate": 0.173482,
+    "logo": {
+      "posts": 1,
+      "emv": 1351.2,
+      "avgLikes": 5186.0,
+      "avgComments": 157.0,
+      "engagementRate": 0.374895,
+      "lift": 135.6
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 1351.2,
+      "avgLikes": 5186.0,
+      "avgComments": 157.0,
+      "engagementRate": 0.374895,
+      "lift": 135.6
+    }
+  },
+  {
+    "name": "Filip Jovi\u0107",
+    "sport": "MENS_BASKETBALL",
+    "totalPosts": 16,
+    "totalEmv": 10815.0,
+    "engagementRate": 0.479741,
+    "collab": {
+      "posts": 1,
+      "emv": 1023.0,
+      "avgLikes": 4755.0,
+      "avgComments": 36.0,
+      "engagementRate": 0.020949,
+      "lift": -96.2
+    },
+    "logo": {
+      "posts": 1,
+      "emv": 96.4,
+      "avgLikes": 362.0,
+      "avgComments": 12.0,
+      "engagementRate": 0.066101,
+      "lift": -87.9
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 96.4,
+      "avgLikes": 362.0,
+      "avgComments": 12.0,
+      "engagementRate": 0.066101,
+      "lift": -87.9
+    }
+  },
+  {
+    "name": "Amaris Williams",
+    "sport": "FOOTBALL",
+    "totalPosts": 13,
+    "totalEmv": 10732.4,
+    "engagementRate": 0.696711,
+    "logo": {
+      "posts": 5,
+      "emv": 7830.8,
+      "avgLikes": 5978.8,
+      "avgComments": 185.2,
+      "engagementRate": 0.951467,
+      "lift": 408.3
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 6371.2,
+      "avgLikes": 12943.0,
+      "avgComments": 298.5,
+      "engagementRate": 1.639408,
+      "lift": 775.8
+    }
+  },
+  {
+    "name": "Kevin Overton",
+    "sport": "MENS_BASKETBALL",
+    "totalPosts": 24,
+    "totalEmv": 10267.2,
+    "engagementRate": 0.212512,
+    "collab": {
+      "posts": 1,
+      "emv": 602.2,
+      "avgLikes": 2781.0,
+      "avgComments": 23.0,
+      "engagementRate": 0.01226,
+      "lift": -87.9
+    },
+    "logo": {
+      "posts": 9,
+      "emv": 2161.6,
+      "avgLikes": 1097.6,
+      "avgComments": 10.3,
+      "engagementRate": 0.057631,
+      "lift": -43.0
+    },
+    "mention": {
+      "posts": 5,
+      "emv": 6170.8,
+      "avgLikes": 5634.8,
+      "avgComments": 53.6,
+      "engagementRate": 0.499482,
+      "lift": 394.0
+    }
+  },
+  {
+    "name": "Malik Blocton",
+    "sport": "FOOTBALL",
+    "totalPosts": 20,
+    "totalEmv": 10001.6,
+    "engagementRate": 0.146744,
+    "logo": {
+      "posts": 6,
+      "emv": 5944.4,
+      "avgLikes": 3503.7,
+      "avgComments": 145.0,
+      "engagementRate": 0.221129,
+      "lift": 290.1
+    },
+    "mention": {
+      "posts": 6,
+      "emv": 7429.2,
+      "avgLikes": 4844.3,
+      "avgComments": 134.7,
+      "engagementRate": 0.182766,
+      "lift": 222.4
+    }
+  },
+  {
+    "name": "Kayin Lee",
+    "sport": "FOOTBALL",
+    "totalPosts": 16,
+    "totalEmv": 9886.2,
+    "engagementRate": 0.167346,
+    "logo": {
+      "posts": 2,
+      "emv": 2609.8,
+      "avgLikes": 5649.5,
+      "avgComments": 87.5,
+      "engagementRate": 0.3289,
+      "lift": 114.8
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 305.6,
+      "avgLikes": 554.0,
+      "avgComments": 21.0,
+      "engagementRate": 0.000532,
+      "lift": -99.7
+    }
+  },
+  {
+    "name": "Blake Muschalek",
+    "sport": "MENS_BASKETBALL",
+    "totalPosts": 13,
+    "totalEmv": 9782.4,
+    "engagementRate": 0.705446,
+    "collab": {
+      "posts": 1,
+      "emv": 1050.0,
+      "avgLikes": 5070.0,
+      "avgComments": 18.0,
+      "engagementRate": 1.286473,
+      "lift": 80.0
+    },
+    "logo": {
+      "posts": 2,
+      "emv": 2072.4,
+      "avgLikes": 4931.0,
+      "avgComments": 25.0,
+      "engagementRate": 0.653783,
+      "lift": -8.5
+    }
+  },
+  {
+    "name": "Justice de Jong",
+    "sport": "BASEBALL",
+    "totalPosts": 14,
+    "totalEmv": 9659.6,
+    "engagementRate": 0.367075,
+    "mention": {
+      "posts": 2,
+      "emv": 1582.4,
+      "avgLikes": 2526.0,
+      "avgComments": 143.0,
+      "engagementRate": 0.298981,
+      "lift": -21.2
+    }
+  },
+  {
+    "name": "Jahquez Robinson",
+    "sport": "FOOTBALL",
+    "totalPosts": 16,
+    "totalEmv": 9401.4,
+    "engagementRate": 0.176749,
+    "logo": {
+      "posts": 4,
+      "emv": 1425.4,
+      "avgLikes": 1099.2,
+      "avgComments": 68.2,
+      "engagementRate": 0.118235,
+      "lift": -38.6
+    }
+  },
+  {
+    "name": "Bristol Carter",
+    "sport": "BASEBALL",
+    "totalPosts": 18,
+    "totalEmv": 9269.2,
+    "engagementRate": 0.547494,
+    "mention": {
+      "posts": 8,
+      "emv": 7103.2,
+      "avgLikes": 4329.5,
+      "avgComments": 11.0,
+      "engagementRate": 0.924942,
+      "lift": 443.9
+    }
+  },
+  {
+    "name": "Angella Okutoyi",
+    "sport": "WOMENS_TENNIS",
+    "totalPosts": 34,
+    "totalEmv": 9172.6,
+    "engagementRate": 0.063528,
+    "logo": {
+      "posts": 3,
+      "emv": 490.2,
+      "avgLikes": 593.7,
+      "avgComments": 22.3,
+      "engagementRate": 0.040377,
+      "lift": -38.6
+    }
+  },
+  {
+    "name": "Elijah Melendez",
+    "sport": "FOOTBALL",
+    "totalPosts": 11,
+    "totalEmv": 8823.0,
+    "engagementRate": 0.188758,
+    "logo": {
+      "posts": 9,
+      "emv": 8060.6,
+      "avgLikes": 3719.2,
+      "avgComments": 75.9,
+      "engagementRate": 0.213154,
+      "lift": 169.9
+    }
+  },
+  {
+    "name": "Sebastian Williams-Adams",
+    "sport": "MENS_BASKETBALL",
+    "totalPosts": 20,
+    "totalEmv": 8800.8,
+    "engagementRate": 0.14275,
+    "collab": {
+      "posts": 1,
+      "emv": 760.0,
+      "avgLikes": 2500.0,
+      "avgComments": 130.0,
+      "engagementRate": 0.0115,
+      "lift": -92.3
+    },
+    "logo": {
+      "posts": 5,
+      "emv": 2284.6,
+      "avgLikes": 1882.6,
+      "avgComments": 40.2,
+      "engagementRate": 0.152449,
+      "lift": 1.8
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 1598.4,
+      "avgLikes": 1835.5,
+      "avgComments": 16.2,
+      "engagementRate": 0.188149,
+      "lift": 25.6
+    }
+  },
+  {
+    "name": "Hudson Kaak",
+    "sport": "FOOTBALL",
+    "totalPosts": 14,
+    "totalEmv": 8685.0,
+    "engagementRate": 0.446369,
+    "logo": {
+      "posts": 3,
+      "emv": 1473.4,
+      "avgLikes": 2059.0,
+      "avgComments": 39.7,
+      "engagementRate": 0.3317,
+      "lift": 31.8
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 4082.6,
+      "avgLikes": 6277.7,
+      "avgComments": 52.7,
+      "engagementRate": 1.080222,
+      "lift": 329.2
+    }
+  },
+  {
+    "name": "Duke Smith",
+    "sport": "FOOTBALL",
+    "totalPosts": 10,
+    "totalEmv": 8657.6,
+    "engagementRate": 1.158254,
+    "mention": {
+      "posts": 3,
+      "emv": 6343.8,
+      "avgLikes": 7849.7,
+      "avgComments": 272.3,
+      "engagementRate": 2.758832,
+      "lift": 484.1
+    }
+  },
+  {
+    "name": "Izzy Orton",
+    "sport": "WOMENS_VOLLEYBALL",
+    "totalPosts": 16,
+    "totalEmv": 8391.6,
+    "engagementRate": 0.46389,
+    "logo": {
+      "posts": 2,
+      "emv": 4319.0,
+      "avgLikes": 9822.5,
+      "avgComments": 97.5,
+      "engagementRate": 2.18406,
+      "lift": 885.3
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 4395.4,
+      "avgLikes": 9898.5,
+      "avgComments": 109.0,
+      "engagementRate": 2.203325,
+      "lift": 894.0
+    }
+  },
+  {
+    "name": "Horatio Fields",
+    "sport": "FOOTBALL",
+    "totalPosts": 15,
+    "totalEmv": 8176.0,
+    "engagementRate": 0.290284,
+    "logo": {
+      "posts": 2,
+      "emv": 1708.4,
+      "avgLikes": 3346.0,
+      "avgComments": 92.5,
+      "engagementRate": 1.056598,
+      "lift": 356.7
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 1694.4,
+      "avgLikes": 6692.0,
+      "avgComments": 178.0,
+      "engagementRate": 1.056598,
+      "lift": 356.7
+    }
+  },
+  {
+    "name": "Joah Shay",
+    "sport": "MENS_BASKETBALL",
+    "totalPosts": 14,
+    "totalEmv": 8142.0,
+    "engagementRate": 0.527092,
+    "mention": {
+      "posts": 3,
+      "emv": 925.8,
+      "avgLikes": 1093.0,
+      "avgComments": 45.0,
+      "engagementRate": 0.237125,
+      "lift": -60.9
+    }
+  },
+  {
+    "name": "Dillon Wade",
+    "sport": "FOOTBALL",
+    "totalPosts": 14,
+    "totalEmv": 8138.6,
+    "engagementRate": 0.29321,
+    "logo": {
+      "posts": 3,
+      "emv": 1601.6,
+      "avgLikes": 2396.0,
+      "avgComments": 27.3,
+      "engagementRate": 0.185974,
+      "lift": -44.2
+    },
+    "mention": {
+      "posts": 5,
+      "emv": 377.0,
+      "avgLikes": 349.0,
+      "avgComments": 2.8,
+      "engagementRate": 0.066608,
+      "lift": -80.0
+    }
+  },
+  {
+    "name": "Ethin Bingaman",
+    "sport": "BASEBALL",
+    "totalPosts": 16,
+    "totalEmv": 7935.8,
+    "engagementRate": 0.510523,
+    "logo": {
+      "posts": 1,
+      "emv": 315.0,
+      "avgLikes": 1255.0,
+      "avgComments": 32.0,
+      "engagementRate": 0.282423,
+      "lift": -32.6
+    },
+    "mention": {
+      "posts": 6,
+      "emv": 3981.6,
+      "avgLikes": 3024.7,
+      "avgComments": 29.3,
+      "engagementRate": 0.670843,
+      "lift": 60.2
+    }
+  },
+  {
+    "name": "Sam Turner",
+    "sport": "FOOTBALL",
+    "totalPosts": 14,
+    "totalEmv": 7679.4,
+    "engagementRate": 0.323022,
+    "logo": {
+      "posts": 1,
+      "emv": 1172.8,
+      "avgLikes": 4334.0,
+      "avgComments": 153.0,
+      "engagementRate": 0.775761,
+      "lift": 300.0
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 2208.4,
+      "avgLikes": 4571.0,
+      "avgComments": 95.0,
+      "engagementRate": 0.806708,
+      "lift": 316.0
+    }
+  },
+  {
+    "name": "Raion Strader",
+    "sport": "FOOTBALL",
+    "totalPosts": 15,
+    "totalEmv": 7464.0,
+    "engagementRate": 0.498174,
+    "logo": {
+      "posts": 1,
+      "emv": 2216.6,
+      "avgLikes": 8683.0,
+      "avgComments": 240.0,
+      "engagementRate": 2.028877,
+      "lift": 671.9
+    },
+    "mention": {
+      "posts": 8,
+      "emv": 5374.6,
+      "avgLikes": 2922.9,
+      "avgComments": 43.6,
+      "engagementRate": 0.674677,
+      "lift": 156.7
+    }
+  },
+  {
+    "name": "Alexis Dacosta",
+    "sport": "WOMENS_VOLLEYBALL",
+    "totalPosts": 20,
+    "totalEmv": 7459.8,
+    "engagementRate": 0.183695,
+    "logo": {
+      "posts": 2,
+      "emv": 1567.8,
+      "avgLikes": 3254.5,
+      "avgComments": 66.5,
+      "engagementRate": 0.375212,
+      "lift": 130.7
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 1595.2,
+      "avgLikes": 2238.7,
+      "avgComments": 42.0,
+      "engagementRate": 0.257673,
+      "lift": 58.4
+    }
+  },
+  {
+    "name": "Avery Glynn",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 25,
+    "totalEmv": 7296.4,
+    "engagementRate": 0.056519,
+    "logo": {
+      "posts": 5,
+      "emv": 1366.8,
+      "avgLikes": 1224.8,
+      "avgComments": 14.2,
+      "engagementRate": 0.053681,
+      "lift": -3.4
+    },
+    "mention": {
+      "posts": 9,
+      "emv": 2815.6,
+      "avgLikes": 1315.3,
+      "avgComments": 24.9,
+      "engagementRate": 0.058119,
+      "lift": 4.6
+    }
+  },
+  {
+    "name": "Antonio Coleman",
+    "sport": "FOOTBALL",
+    "totalPosts": 25,
+    "totalEmv": 7173.8,
+    "engagementRate": 0.101412,
+    "logo": {
+      "posts": 2,
+      "emv": 2424.6,
+      "avgLikes": 4436.5,
+      "avgComments": 162.5,
+      "engagementRate": 0.418706,
+      "lift": 547.1
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 2552.8,
+      "avgLikes": 5177.0,
+      "avgComments": 120.5,
+      "engagementRate": 0.481668,
+      "lift": 644.4
+    }
+  },
+  {
+    "name": "Sydney Handel",
+    "sport": "WOMENS_VOLLEYBALL",
+    "totalPosts": 20,
+    "totalEmv": 6915.8,
+    "engagementRate": 0.223224,
+    "logo": {
+      "posts": 5,
+      "emv": 2334.2,
+      "avgLikes": 1904.2,
+      "avgComments": 43.0,
+      "engagementRate": 0.308826,
+      "lift": 56.7
+    },
+    "mention": {
+      "posts": 7,
+      "emv": 2573.6,
+      "avgLikes": 1592.6,
+      "avgComments": 24.6,
+      "engagementRate": 0.255842,
+      "lift": 29.8
+    }
+  },
+  {
+    "name": "Rayshawn Pleasant",
+    "sport": "FOOTBALL",
+    "totalPosts": 15,
+    "totalEmv": 6598.2,
+    "engagementRate": 0.628522,
+    "mention": {
+      "posts": 2,
+      "emv": 1331.6,
+      "avgLikes": 3199.0,
+      "avgComments": 13.0,
+      "engagementRate": 0.539741,
+      "lift": -19.8
+    }
+  },
+  {
+    "name": "Baylee Mckeever",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 25,
+    "totalEmv": 6395.2,
+    "engagementRate": 0.120032,
+    "logo": {
+      "posts": 2,
+      "emv": 441.2,
+      "avgLikes": 823.0,
+      "avgComments": 28.0,
+      "engagementRate": 0.096273,
+      "lift": -22.7
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 163.8,
+      "avgLikes": 629.0,
+      "avgComments": 19.0,
+      "engagementRate": 0.073394,
+      "lift": -41.1
+    }
+  },
+  {
+    "name": "Kaylee Bluffstone",
+    "sport": "WOMENS_GYMNASTICS",
+    "totalPosts": 21,
+    "totalEmv": 6387.0,
+    "engagementRate": 0.132598,
+    "logo": {
+      "posts": 3,
+      "emv": 1139.8,
+      "avgLikes": 1416.3,
+      "avgComments": 48.3,
+      "engagementRate": 0.198923,
+      "lift": 95.3
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 2001.0,
+      "avgLikes": 1738.3,
+      "avgComments": 159.7,
+      "engagementRate": 0.257775,
+      "lift": 153.1
+    }
+  },
+  {
+    "name": "Bryce Deas",
+    "sport": "FOOTBALL",
+    "totalPosts": 17,
+    "totalEmv": 6247.6,
+    "engagementRate": 0.574862,
+    "logo": {
+      "posts": 3,
+      "emv": 1997.0,
+      "avgLikes": 2238.3,
+      "avgComments": 109.0,
+      "engagementRate": 0.466284,
+      "lift": -47.0
+    },
+    "mention": {
+      "posts": 7,
+      "emv": 2506.6,
+      "avgLikes": 1127.6,
+      "avgComments": 66.3,
+      "engagementRate": 0.415375,
+      "lift": -52.8
+    }
+  },
+  {
+    "name": "Durell Robinson",
+    "sport": "FOOTBALL",
+    "totalPosts": 12,
+    "totalEmv": 6243.6,
+    "engagementRate": 0.308382,
+    "logo": {
+      "posts": 1,
+      "emv": 862.4,
+      "avgLikes": 3552.0,
+      "avgComments": 76.0,
+      "engagementRate": 0.561089,
+      "lift": 178.8
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 2337.6,
+      "avgLikes": 5084.0,
+      "avgComments": 76.0,
+      "engagementRate": 0.790605,
+      "lift": 292.9
+    }
+  },
+  {
+    "name": "J.J. Faulk",
+    "sport": "FOOTBALL",
+    "totalPosts": 13,
+    "totalEmv": 6095.8,
+    "engagementRate": 0.435057,
+    "logo": {
+      "posts": 1,
+      "emv": 301.4,
+      "avgLikes": 1197.0,
+      "avgComments": 31.0,
+      "engagementRate": 0.24783,
+      "lift": -23.7
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 2965.4,
+      "avgLikes": 3441.8,
+      "avgComments": 26.5,
+      "engagementRate": 0.702052,
+      "lift": 116.0
+    }
+  },
+  {
+    "name": "Sophia Bell",
+    "sport": "WOMENS_GYMNASTICS",
+    "totalPosts": 17,
+    "totalEmv": 6089.2,
+    "engagementRate": 0.937952,
+    "logo": {
+      "posts": 3,
+      "emv": 3395.8,
+      "avgLikes": 4883.0,
+      "avgComments": 77.7,
+      "engagementRate": 2.230319,
+      "lift": 6214.1
+    },
+    "mention": {
+      "posts": 6,
+      "emv": 1836.2,
+      "avgLikes": 1331.8,
+      "avgComments": 19.8,
+      "engagementRate": 0.601532,
+      "lift": 1603.0
+    }
+  },
+  {
+    "name": "Lucas Steele",
+    "sport": "BASEBALL",
+    "totalPosts": 15,
+    "totalEmv": 6027.6,
+    "engagementRate": 1.069286,
+    "logo": {
+      "posts": 1,
+      "emv": 644.4,
+      "avgLikes": 3162.0,
+      "avgComments": 6.0,
+      "engagementRate": 1.497872,
+      "lift": 940.5
+    },
+    "mention": {
+      "posts": 11,
+      "emv": 5648.0,
+      "avgLikes": 2453.6,
+      "avgComments": 11.4,
+      "engagementRate": 1.274915,
+      "lift": 785.6
+    }
+  },
+  {
+    "name": "Jake White",
+    "sport": "FOOTBALL",
+    "totalPosts": 15,
+    "totalEmv": 5918.8,
+    "engagementRate": 0.339962,
+    "logo": {
+      "posts": 2,
+      "emv": 1279.0,
+      "avgLikes": 2622.5,
+      "avgComments": 57.5,
+      "engagementRate": 0.477208,
+      "lift": 52.7
+    }
+  },
+  {
+    "name": "Devin Williams",
+    "sport": "FOOTBALL",
+    "totalPosts": 9,
+    "totalEmv": 5862.4,
+    "engagementRate": 0.601649,
+    "mention": {
+      "posts": 2,
+      "emv": 2331.4,
+      "avgLikes": 4723.5,
+      "avgComments": 110.5,
+      "engagementRate": 1.228775,
+      "lift": 190.9
+    }
+  },
+  {
+    "name": "Reed Hughes",
+    "sport": "FOOTBALL",
+    "totalPosts": 19,
+    "totalEmv": 5624.6,
+    "engagementRate": 0.258121,
+    "logo": {
+      "posts": 6,
+      "emv": 2993.0,
+      "avgLikes": 2207.5,
+      "avgComments": 28.7,
+      "engagementRate": 0.425235,
+      "lift": 65.7
+    },
+    "mention": {
+      "posts": 11,
+      "emv": 2514.0,
+      "avgLikes": 989.1,
+      "avgComments": 15.4,
+      "engagementRate": 0.191409,
+      "lift": -25.4
+    }
+  },
+  {
+    "name": "Max Hardin",
+    "sport": "MENS_TRACK_AND_FIELD",
+    "totalPosts": 15,
+    "totalEmv": 5598.8,
+    "engagementRate": 0.317635,
+    "logo": {
+      "posts": 1,
+      "emv": 2031.6,
+      "avgLikes": 4748.0,
+      "avgComments": 541.0,
+      "engagementRate": 1.286548,
+      "lift": 532.9
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 1204.8,
+      "avgLikes": 1481.3,
+      "avgComments": 52.7,
+      "engagementRate": 0.37586,
+      "lift": 84.9
+    }
+  },
+  {
+    "name": "Bub Terrell",
+    "sport": "BASEBALL",
+    "totalPosts": 13,
+    "totalEmv": 5569.0,
+    "engagementRate": 0.450101,
+    "logo": {
+      "posts": 1,
+      "emv": 972.0,
+      "avgLikes": 4680.0,
+      "avgComments": 18.0,
+      "engagementRate": 0.994286,
+      "lift": 67.9
+    },
+    "mention": {
+      "posts": 10,
+      "emv": 4110.6,
+      "avgLikes": 1914.3,
+      "avgComments": 14.1,
+      "engagementRate": 0.418507,
+      "lift": -29.3
+    }
+  },
+  {
+    "name": "Kensley Louidor-Faustin",
+    "sport": "FOOTBALL",
+    "totalPosts": 20,
+    "totalEmv": 5539.2,
+    "engagementRate": 0.179159,
+    "logo": {
+      "posts": 4,
+      "emv": 3016.8,
+      "avgLikes": 2428.5,
+      "avgComments": 134.2,
+      "engagementRate": 0.54829,
+      "lift": 644.0
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 1905.4,
+      "avgLikes": 3333.5,
+      "avgComments": 143.0,
+      "engagementRate": 0.744464,
+      "lift": 910.2
+    }
+  },
+  {
+    "name": "Anna Davis",
+    "sport": "WOMENS_GOLF",
+    "totalPosts": 14,
+    "totalEmv": 5414.8,
+    "engagementRate": 0.109467,
+    "mention": {
+      "posts": 5,
+      "emv": 2509.6,
+      "avgLikes": 2045.6,
+      "avgComments": 46.4,
+      "engagementRate": 0.144097,
+      "lift": 59.7
+    }
+  },
+  {
+    "name": "Demarcus Riddick",
+    "sport": "FOOTBALL",
+    "totalPosts": 6,
+    "totalEmv": 5234.2,
+    "engagementRate": 0.267876,
+    "logo": {
+      "posts": 1,
+      "emv": 658.4,
+      "avgLikes": 2502.0,
+      "avgComments": 79.0,
+      "engagementRate": 0.234104,
+      "lift": -14.8
+    }
+  },
+  {
+    "name": "Chris Murray",
+    "sport": "FOOTBALL",
+    "totalPosts": 15,
+    "totalEmv": 5131.4,
+    "engagementRate": 0.123069,
+    "logo": {
+      "posts": 2,
+      "emv": 544.6,
+      "avgLikes": 1051.5,
+      "avgComments": 31.0,
+      "engagementRate": 0.123762,
+      "lift": 156.0
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 2466.4,
+      "avgLikes": 10862.0,
+      "avgComments": 147.0,
+      "engagementRate": 0.645424,
+      "lift": 1235.0
+    }
+  },
+  {
+    "name": "Kail Ellis",
+    "sport": "FOOTBALL",
+    "totalPosts": 16,
+    "totalEmv": 4970.8,
+    "engagementRate": 0.308617,
+    "logo": {
+      "posts": 4,
+      "emv": 1412.8,
+      "avgLikes": 1448.5,
+      "avgComments": 31.8,
+      "engagementRate": 0.371549,
+      "lift": 79.5
+    },
+    "mention": {
+      "posts": 7,
+      "emv": 2117.2,
+      "avgLikes": 1436.6,
+      "avgComments": 7.6,
+      "engagementRate": 0.335499,
+      "lift": 62.0
+    }
+  },
+  {
+    "name": "Caleb Wheatland",
+    "sport": "FOOTBALL",
+    "totalPosts": 13,
+    "totalEmv": 4950.2,
+    "engagementRate": 0.404307,
+    "mention": {
+      "posts": 2,
+      "emv": 701.2,
+      "avgLikes": 598.0,
+      "avgComments": 115.5,
+      "engagementRate": 0.25754,
+      "lift": -40.2
+    }
+  },
+  {
+    "name": "Ja'Mia Harris",
+    "sport": "WOMENS_BASKETBALL",
+    "totalPosts": 27,
+    "totalEmv": 4931.8,
+    "engagementRate": 0.029106,
+    "logo": {
+      "posts": 13,
+      "emv": 1361.2,
+      "avgLikes": 313.5,
+      "avgComments": 21.0,
+      "engagementRate": 0.03848,
+      "lift": 70.5
+    },
+    "mention": {
+      "posts": 5,
+      "emv": 784.6,
+      "avgLikes": 604.6,
+      "avgComments": 18.0,
+      "engagementRate": 0.037765,
+      "lift": 67.4
+    }
+  },
+  {
+    "name": "Talan Blackmon",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 17,
+    "totalEmv": 4925.8,
+    "engagementRate": 0.603227,
+    "logo": {
+      "posts": 2,
+      "emv": 218.6,
+      "avgLikes": 461.5,
+      "avgComments": 8.5,
+      "engagementRate": 0.245303,
+      "lift": -31.3
+    },
+    "mention": {
+      "posts": 5,
+      "emv": 2421.6,
+      "avgLikes": 2317.6,
+      "avgComments": 10.4,
+      "engagementRate": 1.215031,
+      "lift": 240.4
+    }
+  },
+  {
+    "name": "Will Myers",
+    "sport": "FOOTBALL",
+    "totalPosts": 9,
+    "totalEmv": 4878.8,
+    "engagementRate": 0.350909
+  },
+  {
+    "name": "Jasmine Okeoma",
+    "sport": "WOMENS_VOLLEYBALL",
+    "totalPosts": 13,
+    "totalEmv": 4870.8,
+    "engagementRate": 0.295198,
+    "mention": {
+      "posts": 3,
+      "emv": 620.6,
+      "avgLikes": 717.7,
+      "avgComments": 31.7,
+      "engagementRate": 0.35819,
+      "lift": 29.6
+    }
+  },
+  {
+    "name": "Brandon Frazier",
+    "sport": "FOOTBALL",
+    "totalPosts": 16,
+    "totalEmv": 4867.6,
+    "engagementRate": 0.736318,
+    "logo": {
+      "posts": 3,
+      "emv": 2402.6,
+      "avgLikes": 3527.7,
+      "avgComments": 47.7,
+      "engagementRate": 1.131077,
+      "lift": 126.5
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 0.0,
+      "avgLikes": 0.0,
+      "avgComments": 0.0,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Chris Rembert",
+    "sport": "BASEBALL",
+    "totalPosts": 10,
+    "totalEmv": 4861.0,
+    "engagementRate": 0.243771,
+    "logo": {
+      "posts": 4,
+      "emv": 2012.0,
+      "avgLikes": 2372.5,
+      "avgComments": 14.2,
+      "engagementRate": 0.262194,
+      "lift": -26.7
+    },
+    "mention": {
+      "posts": 7,
+      "emv": 2784.0,
+      "avgLikes": 1927.1,
+      "avgComments": 6.1,
+      "engagementRate": 0.212386,
+      "lift": -40.6
+    }
+  },
+  {
+    "name": "Jared Smith",
+    "sport": "FOOTBALL",
+    "totalPosts": 10,
+    "totalEmv": 4839.0,
+    "engagementRate": 0.282925,
+    "logo": {
+      "posts": 3,
+      "emv": 1365.2,
+      "avgLikes": 1668.7,
+      "avgComments": 60.7,
+      "engagementRate": 0.218726,
+      "lift": -45.9
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 1168.0,
+      "avgLikes": 2595.0,
+      "avgComments": 32.5,
+      "engagementRate": 0.225653,
+      "lift": -44.2
+    }
+  },
+  {
+    "name": "Eric Guevara",
+    "sport": "BASEBALL",
+    "totalPosts": 12,
+    "totalEmv": 4785.4,
+    "engagementRate": 0.681794,
+    "mention": {
+      "posts": 10,
+      "emv": 4251.2,
+      "avgLikes": 1885.6,
+      "avgComments": 24.0,
+      "engagementRate": 0.756877,
+      "lift": 147.0
+    }
+  },
+  {
+    "name": "A\u2019mon Lane-Ganus",
+    "sport": "FOOTBALL",
+    "totalPosts": 19,
+    "totalEmv": 4774.4,
+    "engagementRate": 0.096359,
+    "logo": {
+      "posts": 2,
+      "emv": 528.2,
+      "avgLikes": 1195.5,
+      "avgComments": 12.5,
+      "engagementRate": 0.109361,
+      "lift": -25.0
+    },
+    "mention": {
+      "posts": 8,
+      "emv": 603.0,
+      "avgLikes": 350.6,
+      "avgComments": 2.6,
+      "engagementRate": 0.031958,
+      "lift": -78.1
+    }
+  },
+  {
+    "name": "Sania Richardson",
+    "sport": "WOMENS_BASKETBALL",
+    "totalPosts": 17,
+    "totalEmv": 4762.2,
+    "engagementRate": 0.151949,
+    "logo": {
+      "posts": 4,
+      "emv": 834.6,
+      "avgLikes": 855.8,
+      "avgComments": 18.8,
+      "engagementRate": 0.129001,
+      "lift": -3.2
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 1259.8,
+      "avgLikes": 1613.0,
+      "avgComments": 48.7,
+      "engagementRate": 0.244849,
+      "lift": 83.7
+    }
+  },
+  {
+    "name": "Connor Lew",
+    "sport": "FOOTBALL",
+    "totalPosts": 15,
+    "totalEmv": 4692.2,
+    "engagementRate": 0.61178,
+    "logo": {
+      "posts": 4,
+      "emv": 2226.6,
+      "avgLikes": 1968.2,
+      "avgComments": 81.5,
+      "engagementRate": 1.831793,
+      "lift": 21305.8
+    },
+    "mention": {
+      "posts": 8,
+      "emv": 4003.0,
+      "avgLikes": 2270.6,
+      "avgComments": 23.1,
+      "engagementRate": 0.853069,
+      "lift": 9868.7
+    }
+  },
+  {
+    "name": "Cole Gamble",
+    "sport": "FOOTBALL",
+    "totalPosts": 14,
+    "totalEmv": 4630.0,
+    "engagementRate": 0.377831
+  },
+  {
+    "name": "John McGuire",
+    "sport": "FOOTBALL",
+    "totalPosts": 10,
+    "totalEmv": 4550.4,
+    "engagementRate": 1.274255,
+    "logo": {
+      "posts": 1,
+      "emv": 78.0,
+      "avgLikes": 0.0,
+      "avgComments": 39.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 3985.6,
+      "avgLikes": 4622.0,
+      "avgComments": 36.0,
+      "engagementRate": 2.604323,
+      "lift": 1139.0
+    }
+  },
+  {
+    "name": "McKaela Walker",
+    "sport": "SOFTBALL",
+    "totalPosts": 14,
+    "totalEmv": 4513.0,
+    "engagementRate": 0.213577,
+    "mention": {
+      "posts": 1,
+      "emv": 550.2,
+      "avgLikes": 681.0,
+      "avgComments": 207.0,
+      "engagementRate": 0.286729,
+      "lift": 38.2
+    }
+  },
+  {
+    "name": "Liz Markovska",
+    "sport": "WOMENS_VOLLEYBALL",
+    "totalPosts": 24,
+    "totalEmv": 4484.4,
+    "engagementRate": 0.193209,
+    "logo": {
+      "posts": 12,
+      "emv": 3051.0,
+      "avgLikes": 690.4,
+      "avgComments": 58.1,
+      "engagementRate": 0.299811,
+      "lift": 883.2
+    },
+    "mention": {
+      "posts": 7,
+      "emv": 1625.4,
+      "avgLikes": 782.4,
+      "avgComments": 37.9,
+      "engagementRate": 0.322154,
+      "lift": 956.5
+    }
+  },
+  {
+    "name": "Juliette Landi",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 20,
+    "totalEmv": 4448.2,
+    "engagementRate": 0.062368,
+    "logo": {
+      "posts": 3,
+      "emv": 285.6,
+      "avgLikes": 292.7,
+      "avgComments": 18.3,
+      "engagementRate": 0.024604,
+      "lift": -67.7
+    },
+    "mention": {
+      "posts": 8,
+      "emv": 1403.2,
+      "avgLikes": 553.2,
+      "avgComments": 32.4,
+      "engagementRate": 0.046327,
+      "lift": -39.1
+    }
+  },
+  {
+    "name": "Nicholas Heng",
+    "sport": "MENS_TENNIS",
+    "totalPosts": 16,
+    "totalEmv": 4444.4,
+    "engagementRate": 0.322604,
+    "logo": {
+      "posts": 1,
+      "emv": 357.0,
+      "avgLikes": 1015.0,
+      "avgComments": 77.0,
+      "engagementRate": 0.403548,
+      "lift": 5.3
+    },
+    "mention": {
+      "posts": 7,
+      "emv": 1435.6,
+      "avgLikes": 621.1,
+      "avgComments": 40.4,
+      "engagementRate": 0.282263,
+      "lift": -26.3
+    }
+  },
+  {
+    "name": "Jay Hardy",
+    "sport": "FOOTBALL",
+    "totalPosts": 17,
+    "totalEmv": 4406.0,
+    "engagementRate": 0.840189,
+    "logo": {
+      "posts": 5,
+      "emv": 698.0,
+      "avgLikes": 0.0,
+      "avgComments": 69.8,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 5,
+      "emv": 2217.8,
+      "avgLikes": 1987.8,
+      "avgComments": 23.0,
+      "engagementRate": 1.350616,
+      "lift": 195.3
+    }
+  },
+  {
+    "name": "Taye Seymore",
+    "sport": "FOOTBALL",
+    "totalPosts": 9,
+    "totalEmv": 4351.8,
+    "engagementRate": 0.323421
+  },
+  {
+    "name": "Maria Faoro",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 22,
+    "totalEmv": 4323.4,
+    "engagementRate": 0.463991,
+    "mention": {
+      "posts": 3,
+      "emv": 335.8,
+      "avgLikes": 133.0,
+      "avgComments": 42.7,
+      "engagementRate": 0.096288,
+      "lift": -82.1
+    }
+  },
+  {
+    "name": "Keaton McNutt",
+    "sport": "FOOTBALL",
+    "totalPosts": 13,
+    "totalEmv": 4281.4,
+    "engagementRate": 0.458383,
+    "logo": {
+      "posts": 1,
+      "emv": 378.2,
+      "avgLikes": 1011.0,
+      "avgComments": 88.0,
+      "engagementRate": 0.428627,
+      "lift": -9.3
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 630.2,
+      "avgLikes": 910.5,
+      "avgComments": 66.5,
+      "engagementRate": 0.381045,
+      "lift": -19.3
+    }
+  },
+  {
+    "name": "Mason Murphy",
+    "sport": "FOOTBALL",
+    "totalPosts": 17,
+    "totalEmv": 4260.0,
+    "engagementRate": 0.402267,
+    "logo": {
+      "posts": 7,
+      "emv": 2109.4,
+      "avgLikes": 1323.9,
+      "avgComments": 18.3,
+      "engagementRate": 0.512856,
+      "lift": 135.4
+    },
+    "mention": {
+      "posts": 8,
+      "emv": 1443.2,
+      "avgLikes": 775.8,
+      "avgComments": 12.6,
+      "engagementRate": 0.302161,
+      "lift": 38.7
+    }
+  },
+  {
+    "name": "Allison Goodwin",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 13,
+    "totalEmv": 4255.0,
+    "engagementRate": 0.323134,
+    "mention": {
+      "posts": 1,
+      "emv": 812.8,
+      "avgLikes": 794.0,
+      "avgComments": 327.0,
+      "engagementRate": 0.588761,
+      "lift": 95.6
+    }
+  },
+  {
+    "name": "Katelyn Jong",
+    "sport": "WOMENS_GYMNASTICS",
+    "totalPosts": 17,
+    "totalEmv": 4243.6,
+    "engagementRate": 0.165303,
+    "logo": {
+      "posts": 2,
+      "emv": 142.0,
+      "avgLikes": 0.0,
+      "avgComments": 35.5,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 6,
+      "emv": 2261.2,
+      "avgLikes": 1742.7,
+      "avgComments": 14.2,
+      "engagementRate": 0.202706,
+      "lift": 58.5
+    }
+  },
+  {
+    "name": "Zoe Slaughter",
+    "sport": "WOMENS_VOLLEYBALL",
+    "totalPosts": 15,
+    "totalEmv": 4237.8,
+    "engagementRate": 0.14289,
+    "logo": {
+      "posts": 1,
+      "emv": 189.2,
+      "avgLikes": 886.0,
+      "avgComments": 6.0,
+      "engagementRate": 0.118822,
+      "lift": 4.0
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 1601.6,
+      "avgLikes": 1564.5,
+      "avgComments": 43.8,
+      "engagementRate": 0.214539,
+      "lift": 87.8
+    }
+  },
+  {
+    "name": "Sammie Hamilton",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 15,
+    "totalEmv": 4218.8,
+    "engagementRate": 0.248375,
+    "logo": {
+      "posts": 2,
+      "emv": 460.2,
+      "avgLikes": 405.5,
+      "avgComments": 74.5,
+      "engagementRate": 0.208422,
+      "lift": -18.5
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 872.6,
+      "avgLikes": 916.5,
+      "avgComments": 126.5,
+      "engagementRate": 0.246747,
+      "lift": -3.5
+    }
+  },
+  {
+    "name": "Bryce McCleary",
+    "sport": "MENS_TRACK_AND_FIELD",
+    "totalPosts": 13,
+    "totalEmv": 4217.8,
+    "engagementRate": 1.10728,
+    "logo": {
+      "posts": 1,
+      "emv": 88.6,
+      "avgLikes": 263.0,
+      "avgComments": 18.0,
+      "engagementRate": 0.219018,
+      "lift": -80.4
+    },
+    "mention": {
+      "posts": 5,
+      "emv": 2067.0,
+      "avgLikes": 1583.0,
+      "avgComments": 48.4,
+      "engagementRate": 1.272917,
+      "lift": 13.9
+    }
+  },
+  {
+    "name": "Camden Etheredge",
+    "sport": "FOOTBALL",
+    "totalPosts": 14,
+    "totalEmv": 4178.4,
+    "engagementRate": 0.171851,
+    "logo": {
+      "posts": 3,
+      "emv": 849.4,
+      "avgLikes": 952.3,
+      "avgComments": 46.3,
+      "engagementRate": 0.158771,
+      "lift": -7.4
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 1295.6,
+      "avgLikes": 1059.5,
+      "avgComments": 56.0,
+      "engagementRate": 0.177312,
+      "lift": 3.4
+    }
+  },
+  {
+    "name": "Olivia Ahern",
+    "sport": "WOMENS_GYMNASTICS",
+    "totalPosts": 24,
+    "totalEmv": 4176.2,
+    "engagementRate": 0.041434,
+    "logo": {
+      "posts": 7,
+      "emv": 944.2,
+      "avgLikes": 418.7,
+      "avgComments": 25.6,
+      "engagementRate": 0.027657,
+      "lift": -34.1
+    },
+    "mention": {
+      "posts": 8,
+      "emv": 1929.6,
+      "avgLikes": 881.0,
+      "avgComments": 32.5,
+      "engagementRate": 0.056928,
+      "lift": 35.6
+    }
+  },
+  {
+    "name": "Jake Albert",
+    "sport": "MENS_GOLF",
+    "totalPosts": 9,
+    "totalEmv": 4125.4,
+    "engagementRate": 1.37431,
+    "logo": {
+      "posts": 3,
+      "emv": 416.0,
+      "avgLikes": 626.7,
+      "avgComments": 6.7,
+      "engagementRate": 0.492685,
+      "lift": -92.3
+    },
+    "mention": {
+      "posts": 6,
+      "emv": 1530.6,
+      "avgLikes": 985.5,
+      "avgComments": 29.0,
+      "engagementRate": 0.530042,
+      "lift": -91.8
+    }
+  },
+  {
+    "name": "Jenna Sapong",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 19,
+    "totalEmv": 4093.4,
+    "engagementRate": 0.295985,
+    "logo": {
+      "posts": 2,
+      "emv": 109.0,
+      "avgLikes": 117.5,
+      "avgComments": 15.5,
+      "engagementRate": 0.110667,
+      "lift": -59.7
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 1157.8,
+      "avgLikes": 794.8,
+      "avgComments": 65.2,
+      "engagementRate": 0.486966,
+      "lift": 77.4
+    }
+  },
+  {
+    "name": "Malia Loadwick",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 14,
+    "totalEmv": 4081.8,
+    "engagementRate": 0.357553,
+    "logo": {
+      "posts": 1,
+      "emv": 118.0,
+      "avgLikes": 230.0,
+      "avgComments": 36.0,
+      "engagementRate": 0.194872,
+      "lift": -35.9
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 1458.6,
+      "avgLikes": 621.0,
+      "avgComments": 181.0,
+      "engagementRate": 0.589861,
+      "lift": 94.0
+    }
+  },
+  {
+    "name": "Warner Russ",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 14,
+    "totalEmv": 4013.4,
+    "engagementRate": 0.315468,
+    "logo": {
+      "posts": 1,
+      "emv": 194.0,
+      "avgLikes": 530.0,
+      "avgComments": 44.0,
+      "engagementRate": 0.197931,
+      "lift": -41.7
+    },
+    "mention": {
+      "posts": 5,
+      "emv": 1604.8,
+      "avgLikes": 788.8,
+      "avgComments": 81.6,
+      "engagementRate": 0.300138,
+      "lift": -11.7
+    }
+  },
+  {
+    "name": "James Ash",
+    "sport": "FOOTBALL",
+    "totalPosts": 13,
+    "totalEmv": 3981.2,
+    "engagementRate": 0.264121,
+    "mention": {
+      "posts": 1,
+      "emv": 916.4,
+      "avgLikes": 2152.0,
+      "avgComments": 243.0,
+      "engagementRate": 0.498854,
+      "lift": 109.6
+    }
+  },
+  {
+    "name": "Brynn Torry",
+    "sport": "WOMENS_GYMNASTICS",
+    "totalPosts": 14,
+    "totalEmv": 3976.2,
+    "engagementRate": 0.347309,
+    "logo": {
+      "posts": 3,
+      "emv": 641.2,
+      "avgLikes": 788.7,
+      "avgComments": 28.0,
+      "engagementRate": 0.374459,
+      "lift": 52.6
+    },
+    "mention": {
+      "posts": 8,
+      "emv": 2408.0,
+      "avgLikes": 1193.8,
+      "avgComments": 31.1,
+      "engagementRate": 0.382745,
+      "lift": 55.9
+    }
+  },
+  {
+    "name": "Asha Means",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 16,
+    "totalEmv": 3940.4,
+    "engagementRate": 0.490959,
+    "logo": {
+      "posts": 1,
+      "emv": 97.6,
+      "avgLikes": 418.0,
+      "avgComments": 7.0,
+      "engagementRate": 0.124743,
+      "lift": -87.1
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 871.6,
+      "avgLikes": 419.3,
+      "avgComments": 103.3,
+      "engagementRate": 0.196353,
+      "lift": -79.7
+    }
+  },
+  {
+    "name": "Logan Reilly",
+    "sport": "MENS_GOLF",
+    "totalPosts": 14,
+    "totalEmv": 3928.6,
+    "engagementRate": 0.259512,
+    "logo": {
+      "posts": 1,
+      "emv": 73.2,
+      "avgLikes": 216.0,
+      "avgComments": 15.0,
+      "engagementRate": 0.066667,
+      "lift": -72.5
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 1677.2,
+      "avgLikes": 914.0,
+      "avgComments": 118.2,
+      "engagementRate": 0.29806,
+      "lift": 23.0
+    }
+  },
+  {
+    "name": "Abdalla Nasr",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 12,
+    "totalEmv": 3913.0,
+    "engagementRate": 0,
+    "mention": {
+      "posts": 2,
+      "emv": 368.0,
+      "avgLikes": 765.0,
+      "avgComments": 15.5,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Grey Reebals",
+    "sport": "FOOTBALL",
+    "totalPosts": 14,
+    "totalEmv": 3876.6,
+    "engagementRate": 0.244148
+  },
+  {
+    "name": "Coco Croxford",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 18,
+    "totalEmv": 3861.0,
+    "engagementRate": 0.192244,
+    "mention": {
+      "posts": 2,
+      "emv": 1096.0,
+      "avgLikes": 1070.0,
+      "avgComments": 167.0,
+      "engagementRate": 0.393949,
+      "lift": 141.1
+    }
+  },
+  {
+    "name": "Connor Gibbs",
+    "sport": "FOOTBALL",
+    "totalPosts": 18,
+    "totalEmv": 3859.4,
+    "engagementRate": 0.216438,
+    "logo": {
+      "posts": 2,
+      "emv": 536.2,
+      "avgLikes": 910.5,
+      "avgComments": 43.0,
+      "engagementRate": 0.266639,
+      "lift": 27.8
+    }
+  },
+  {
+    "name": "Lauren Dreves",
+    "sport": "WOMENS_VOLLEYBALL",
+    "totalPosts": 26,
+    "totalEmv": 3826.0,
+    "engagementRate": 0.233293,
+    "logo": {
+      "posts": 8,
+      "emv": 1230.6,
+      "avgLikes": 582.9,
+      "avgComments": 18.6,
+      "engagementRate": 0.238937,
+      "lift": 1163.3
+    },
+    "mention": {
+      "posts": 18,
+      "emv": 3078.2,
+      "avgLikes": 684.5,
+      "avgComments": 17.1,
+      "engagementRate": 0.273489,
+      "lift": 1346.0
+    }
+  },
+  {
+    "name": "A'riel Jackson",
+    "sport": "WOMENS_BASKETBALL",
+    "totalPosts": 23,
+    "totalEmv": 3776.8,
+    "engagementRate": 0.076446,
+    "logo": {
+      "posts": 10,
+      "emv": 1249.6,
+      "avgLikes": 408.8,
+      "avgComments": 21.6,
+      "engagementRate": 0.071167,
+      "lift": 28.9
+    },
+    "mention": {
+      "posts": 8,
+      "emv": 1873.8,
+      "avgLikes": 728.6,
+      "avgComments": 44.2,
+      "engagementRate": 0.133221,
+      "lift": 141.4
+    }
+  },
+  {
+    "name": "Destiny Rodriguez",
+    "sport": "SOFTBALL",
+    "totalPosts": 14,
+    "totalEmv": 3772.0,
+    "engagementRate": 0.687851,
+    "logo": {
+      "posts": 1,
+      "emv": 40.0,
+      "avgLikes": 0.0,
+      "avgComments": 20.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 5,
+      "emv": 718.2,
+      "avgLikes": 440.2,
+      "avgComments": 27.8,
+      "engagementRate": 0.279681,
+      "lift": -70.9
+    }
+  },
+  {
+    "name": "Rachel Gourley",
+    "sport": "WOMENS_GOLF",
+    "totalPosts": 13,
+    "totalEmv": 3770.8,
+    "engagementRate": 0.208704,
+    "mention": {
+      "posts": 2,
+      "emv": 418.2,
+      "avgLikes": 830.5,
+      "avgComments": 21.5,
+      "engagementRate": 0.16015,
+      "lift": -26.4
+    }
+  },
+  {
+    "name": "Paul Thompson Jr.",
+    "sport": "FOOTBALL",
+    "totalPosts": 15,
+    "totalEmv": 3699.4,
+    "engagementRate": 0.145377,
+    "logo": {
+      "posts": 2,
+      "emv": 486.0,
+      "avgLikes": 890.0,
+      "avgComments": 32.5,
+      "engagementRate": 0.129437,
+      "lift": -33.1
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 168.0,
+      "avgLikes": 190.0,
+      "avgComments": 9.0,
+      "engagementRate": 0.027923,
+      "lift": -85.6
+    }
+  },
+  {
+    "name": "Favour Ebuka Edwin",
+    "sport": "FOOTBALL",
+    "totalPosts": 15,
+    "totalEmv": 3685.8,
+    "engagementRate": 0.252656,
+    "logo": {
+      "posts": 1,
+      "emv": 671.6,
+      "avgLikes": 988.0,
+      "avgComments": 237.0,
+      "engagementRate": 0.519949,
+      "lift": 122.1
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 186.2,
+      "avgLikes": 341.0,
+      "avgComments": 59.0,
+      "engagementRate": 0.17043,
+      "lift": -27.2
+    }
+  },
+  {
+    "name": "Taylor Belza",
+    "sport": "BASEBALL",
+    "totalPosts": 9,
+    "totalEmv": 3679.0,
+    "engagementRate": 0.338658,
+    "mention": {
+      "posts": 3,
+      "emv": 1812.0,
+      "avgLikes": 1700.0,
+      "avgComments": 132.0,
+      "engagementRate": 0.455155,
+      "lift": 62.3
+    }
+  },
+  {
+    "name": "Preston Howard",
+    "sport": "FOOTBALL",
+    "totalPosts": 21,
+    "totalEmv": 3677.0,
+    "engagementRate": 0.10168,
+    "mention": {
+      "posts": 5,
+      "emv": 86.2,
+      "avgLikes": 74.2,
+      "avgComments": 1.2,
+      "engagementRate": 0.01497,
+      "lift": -90.4
+    }
+  },
+  {
+    "name": "Omar Mabson II",
+    "sport": "FOOTBALL",
+    "totalPosts": 7,
+    "totalEmv": 3612.4,
+    "engagementRate": 0.932129,
+    "logo": {
+      "posts": 2,
+      "emv": 240.0,
+      "avgLikes": 0.0,
+      "avgComments": 60.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 1781.4,
+      "avgLikes": 4103.5,
+      "avgComments": 35.0,
+      "engagementRate": 0.812586,
+      "lift": -30.6
+    }
+  },
+  {
+    "name": "Gracie Brown",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 14,
+    "totalEmv": 3604.4,
+    "engagementRate": 0.357935,
+    "logo": {
+      "posts": 1,
+      "emv": 232.0,
+      "avgLikes": 530.0,
+      "avgComments": 63.0,
+      "engagementRate": 0.312599,
+      "lift": -10.9
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 606.0,
+      "avgLikes": 715.0,
+      "avgComments": 80.0,
+      "engagementRate": 0.419083,
+      "lift": 19.4
+    }
+  },
+  {
+    "name": "Xavier Chaplin",
+    "sport": "FOOTBALL",
+    "totalPosts": 14,
+    "totalEmv": 3489.4,
+    "engagementRate": 0.878078,
+    "logo": {
+      "posts": 3,
+      "emv": 1019.0,
+      "avgLikes": 1195.0,
+      "avgComments": 50.3,
+      "engagementRate": 0.805665,
+      "lift": -32.2
+    },
+    "mention": {
+      "posts": 6,
+      "emv": 1602.2,
+      "avgLikes": 1258.5,
+      "avgComments": 7.7,
+      "engagementRate": 0.833992,
+      "lift": -29.8
+    }
+  },
+  {
+    "name": "Eden Bower",
+    "sport": "WOMENS_VOLLEYBALL",
+    "totalPosts": 17,
+    "totalEmv": 3453.4,
+    "engagementRate": 0.175973,
+    "logo": {
+      "posts": 3,
+      "emv": 517.0,
+      "avgLikes": 658.3,
+      "avgComments": 20.3,
+      "engagementRate": 0.175684,
+      "lift": 57.3
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 1523.8,
+      "avgLikes": 1309.8,
+      "avgComments": 59.5,
+      "engagementRate": 0.355097,
+      "lift": 217.9
+    }
+  },
+  {
+    "name": "Lilly Gault Abdella",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 16,
+    "totalEmv": 3404.0,
+    "engagementRate": 0.278843,
+    "mention": {
+      "posts": 1,
+      "emv": 502.0,
+      "avgLikes": 1430.0,
+      "avgComments": 108.0,
+      "engagementRate": 0.686914,
+      "lift": 173.0
+    }
+  },
+  {
+    "name": "John Colvin",
+    "sport": "FOOTBALL",
+    "totalPosts": 12,
+    "totalEmv": 3280.6,
+    "engagementRate": 0.290851,
+    "logo": {
+      "posts": 3,
+      "emv": 991.8,
+      "avgLikes": 1013.0,
+      "avgComments": 64.0,
+      "engagementRate": 0.339962,
+      "lift": 23.9
+    }
+  },
+  {
+    "name": "Fleming Hall",
+    "sport": "BASEBALL",
+    "totalPosts": 19,
+    "totalEmv": 3189.8,
+    "engagementRate": 0.397764,
+    "mention": {
+      "posts": 5,
+      "emv": 1328.6,
+      "avgLikes": 932.6,
+      "avgComments": 39.6,
+      "engagementRate": 0.445836,
+      "lift": 24.1
+    }
+  },
+  {
+    "name": "Audrey Nuckols",
+    "sport": "WOMENS_VOLLEYBALL",
+    "totalPosts": 14,
+    "totalEmv": 3154.0,
+    "engagementRate": 0.250627,
+    "mention": {
+      "posts": 1,
+      "emv": 299.2,
+      "avgLikes": 886.0,
+      "avgComments": 61.0,
+      "engagementRate": 0.466043,
+      "lift": 99.1
+    }
+  },
+  {
+    "name": "Eric Winters",
+    "sport": "FOOTBALL",
+    "totalPosts": 4,
+    "totalEmv": 3129.4,
+    "engagementRate": 0.653042,
+    "logo": {
+      "posts": 1,
+      "emv": 601.8,
+      "avgLikes": 2329.0,
+      "avgComments": 68.0,
+      "engagementRate": 0.348655,
+      "lift": -56.7
+    }
+  },
+  {
+    "name": "Erin Flurey",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 16,
+    "totalEmv": 3113.4,
+    "engagementRate": 0.249984,
+    "logo": {
+      "posts": 3,
+      "emv": 916.6,
+      "avgLikes": 1057.7,
+      "avgComments": 47.0,
+      "engagementRate": 0.401405,
+      "lift": 93.9
+    },
+    "mention": {
+      "posts": 5,
+      "emv": 758.6,
+      "avgLikes": 606.6,
+      "avgComments": 15.2,
+      "engagementRate": 0.225488,
+      "lift": 8.9
+    }
+  },
+  {
+    "name": "Seth Wilfred",
+    "sport": "FOOTBALL",
+    "totalPosts": 18,
+    "totalEmv": 3106.0,
+    "engagementRate": 0.309381,
+    "logo": {
+      "posts": 3,
+      "emv": 1383.4,
+      "avgLikes": 1715.7,
+      "avgComments": 59.0,
+      "engagementRate": 0.465768,
+      "lift": 0.9
+    },
+    "mention": {
+      "posts": 6,
+      "emv": 1385.2,
+      "avgLikes": 859.3,
+      "avgComments": 29.5,
+      "engagementRate": 0.233266,
+      "lift": -49.5
+    }
+  },
+  {
+    "name": "Keyron Crawford",
+    "sport": "FOOTBALL",
+    "totalPosts": 19,
+    "totalEmv": 3078.6,
+    "engagementRate": 0.093349,
+    "logo": {
+      "posts": 4,
+      "emv": 715.6,
+      "avgLikes": 234.5,
+      "avgComments": 66.0,
+      "engagementRate": 0.067692,
+      "lift": -32.1
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 239.6,
+      "avgLikes": 938.0,
+      "avgComments": 26.0,
+      "engagementRate": 0.067692,
+      "lift": -32.1
+    }
+  },
+  {
+    "name": "Kate Mansfield",
+    "sport": "WOMENS_VOLLEYBALL",
+    "totalPosts": 14,
+    "totalEmv": 3051.0,
+    "engagementRate": 0.239644,
+    "logo": {
+      "posts": 1,
+      "emv": 198.4,
+      "avgLikes": 912.0,
+      "avgComments": 8.0,
+      "engagementRate": 0.297638,
+      "lift": 30.8
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 743.0,
+      "avgLikes": 733.8,
+      "avgComments": 19.5,
+      "engagementRate": 0.279845,
+      "lift": 23.0
+    }
+  },
+  {
+    "name": "Reed Trapp",
+    "sport": "MENS_BASKETBALL",
+    "totalPosts": 9,
+    "totalEmv": 3048.8,
+    "engagementRate": 1.321733,
+    "mention": {
+      "posts": 1,
+      "emv": 684.6,
+      "avgLikes": 2903.0,
+      "avgComments": 52.0,
+      "engagementRate": 0.970125,
+      "lift": -35.2
+    }
+  },
+  {
+    "name": "Grace Havlicek",
+    "sport": "WOMENS_VOLLEYBALL",
+    "totalPosts": 17,
+    "totalEmv": 3047.0,
+    "engagementRate": 0.150544,
+    "logo": {
+      "posts": 2,
+      "emv": 351.2,
+      "avgLikes": 803.0,
+      "avgComments": 7.5,
+      "engagementRate": 0.203439,
+      "lift": 35.0
+    },
+    "mention": {
+      "posts": 5,
+      "emv": 726.2,
+      "avgLikes": 584.2,
+      "avgComments": 14.2,
+      "engagementRate": 0.150201,
+      "lift": -0.3
+    }
+  },
+  {
+    "name": "Julianne Huff",
+    "sport": "WOMENS_GYMNASTICS",
+    "totalPosts": 23,
+    "totalEmv": 3044.6,
+    "engagementRate": 0.216009,
+    "logo": {
+      "posts": 6,
+      "emv": 635.4,
+      "avgLikes": 226.2,
+      "avgComments": 30.3,
+      "engagementRate": 0.299363,
+      "lift": 4966.8
+    },
+    "mention": {
+      "posts": 9,
+      "emv": 2083.4,
+      "avgLikes": 1045.2,
+      "avgComments": 11.2,
+      "engagementRate": 0.276038,
+      "lift": 4572.0
+    }
+  },
+  {
+    "name": "Adriana Consoli",
+    "sport": "WOMENS_GYMNASTICS",
+    "totalPosts": 19,
+    "totalEmv": 3010.4,
+    "engagementRate": 0.205879,
+    "logo": {
+      "posts": 2,
+      "emv": 345.2,
+      "avgLikes": 408.0,
+      "avgComments": 45.5,
+      "engagementRate": 0.191917,
+      "lift": 22.1
+    },
+    "mention": {
+      "posts": 5,
+      "emv": 864.6,
+      "avgLikes": 764.6,
+      "avgComments": 10.0,
+      "engagementRate": 0.328478,
+      "lift": 109.1
+    }
+  },
+  {
+    "name": "Wyllo Hanson",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 14,
+    "totalEmv": 2980.8,
+    "engagementRate": 0.189926
+  },
+  {
+    "name": "Merna Refaat",
+    "sport": "WOMENS_TENNIS",
+    "totalPosts": 13,
+    "totalEmv": 2973.6,
+    "engagementRate": 0.530186,
+    "mention": {
+      "posts": 7,
+      "emv": 1722.6,
+      "avgLikes": 951.9,
+      "avgComments": 27.9,
+      "engagementRate": 0.54131,
+      "lift": 7.4
+    }
+  },
+  {
+    "name": "Mya Petticord",
+    "sport": "WOMENS_BASKETBALL",
+    "totalPosts": 26,
+    "totalEmv": 2936.4,
+    "engagementRate": 0.055786,
+    "logo": {
+      "posts": 11,
+      "emv": 785.0,
+      "avgLikes": 210.5,
+      "avgComments": 14.6,
+      "engagementRate": 0.038695,
+      "lift": 253.8
+    },
+    "mention": {
+      "posts": 6,
+      "emv": 1683.2,
+      "avgLikes": 1132.7,
+      "avgComments": 27.0,
+      "engagementRate": 0.150618,
+      "lift": 1277.2
+    }
+  },
+  {
+    "name": "Quanirah Montague",
+    "sport": "WOMENS_BASKETBALL",
+    "totalPosts": 16,
+    "totalEmv": 2928.6,
+    "engagementRate": 0.192132,
+    "logo": {
+      "posts": 2,
+      "emv": 322.8,
+      "avgLikes": 412.0,
+      "avgComments": 39.5,
+      "engagementRate": 0.158644,
+      "lift": 13.3
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 1049.8,
+      "avgLikes": 794.8,
+      "avgComments": 51.8,
+      "engagementRate": 0.297695,
+      "lift": 112.6
+    }
+  },
+  {
+    "name": "Josiah Gilbert",
+    "sport": "MENS_GOLF",
+    "totalPosts": 17,
+    "totalEmv": 2919.8,
+    "engagementRate": 0.262231,
+    "logo": {
+      "posts": 5,
+      "emv": 902.8,
+      "avgLikes": 632.8,
+      "avgComments": 27.0,
+      "engagementRate": 0.282759,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 15,
+      "emv": 2611.2,
+      "avgLikes": 709.1,
+      "avgComments": 16.1,
+      "engagementRate": 0.261245,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Jeremiah Wright",
+    "sport": "FOOTBALL",
+    "totalPosts": 18,
+    "totalEmv": 2872.6,
+    "engagementRate": 0.08969,
+    "logo": {
+      "posts": 5,
+      "emv": 1660.6,
+      "avgLikes": 1222.6,
+      "avgComments": 43.8,
+      "engagementRate": 0.163283,
+      "lift": 111.4
+    },
+    "mention": {
+      "posts": 9,
+      "emv": 1642.8,
+      "avgLikes": 669.3,
+      "avgComments": 24.3,
+      "engagementRate": 0.080561,
+      "lift": 4.3
+    }
+  },
+  {
+    "name": "Gen\u00c3\u00a9 Coetzee",
+    "sport": "WOMENS_TRACK_AND_FIELD",
+    "totalPosts": 12,
+    "totalEmv": 2846.8,
+    "engagementRate": 0.147834
+  },
+  {
+    "name": "Kalle Makinen",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 13,
+    "totalEmv": 2832.6,
+    "engagementRate": 0.395989,
+    "mention": {
+      "posts": 1,
+      "emv": 133.6,
+      "avgLikes": 458.0,
+      "avgComments": 21.0,
+      "engagementRate": 0.223518,
+      "lift": -45.5
+    }
+  },
+  {
+    "name": "DeAndre Carter",
+    "sport": "FOOTBALL",
+    "totalPosts": 16,
+    "totalEmv": 2811.4,
+    "engagementRate": 0.674532,
+    "logo": {
+      "posts": 3,
+      "emv": 920.8,
+      "avgLikes": 1344.7,
+      "avgComments": 19.0,
+      "engagementRate": 1.319651,
+      "lift": -25.2
+    },
+    "mention": {
+      "posts": 10,
+      "emv": 970.6,
+      "avgLikes": 427.3,
+      "avgComments": 5.8,
+      "engagementRate": 0.311213,
+      "lift": -82.4
+    }
+  },
+  {
+    "name": "Arek Angui",
+    "sport": "WOMENS_BASKETBALL",
+    "totalPosts": 9,
+    "totalEmv": 2749.2,
+    "engagementRate": 0.053328,
+    "logo": {
+      "posts": 1,
+      "emv": 2548.4,
+      "avgLikes": 8172.0,
+      "avgComments": 457.0,
+      "engagementRate": 0.420824,
+      "lift": 50658.8
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 2548.4,
+      "avgLikes": 8172.0,
+      "avgComments": 457.0,
+      "engagementRate": 0.420824,
+      "lift": 50658.8
+    }
+  },
+  {
+    "name": "Emma Grace Boyd",
+    "sport": "WOMENS_GYMNASTICS",
+    "totalPosts": 19,
+    "totalEmv": 2640.8,
+    "engagementRate": 0.165235,
+    "logo": {
+      "posts": 3,
+      "emv": 637.6,
+      "avgLikes": 679.3,
+      "avgComments": 38.3,
+      "engagementRate": 0.436059,
+      "lift": 208.1
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 393.8,
+      "avgLikes": 296.3,
+      "avgComments": 36.0,
+      "engagementRate": 0.100927,
+      "lift": -28.7
+    }
+  },
+  {
+    "name": "Kate Barber",
+    "sport": "WOMENS_GOLF",
+    "totalPosts": 14,
+    "totalEmv": 2637.0,
+    "engagementRate": 0.221058,
+    "logo": {
+      "posts": 1,
+      "emv": 179.0,
+      "avgLikes": 435.0,
+      "avgComments": 46.0,
+      "engagementRate": 0.208586,
+      "lift": 0.6
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 603.6,
+      "avgLikes": 582.7,
+      "avgComments": 42.3,
+      "engagementRate": 0.271077,
+      "lift": 30.8
+    }
+  },
+  {
+    "name": "Sophia Greaves",
+    "sport": "WOMENS_GYMNASTICS",
+    "totalPosts": 21,
+    "totalEmv": 2635.4,
+    "engagementRate": 0.03567,
+    "logo": {
+      "posts": 1,
+      "emv": 40.0,
+      "avgLikes": 0.0,
+      "avgComments": 20.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 112.0,
+      "avgLikes": 300.0,
+      "avgComments": 26.0,
+      "engagementRate": 0.028447,
+      "lift": -21.2
+    }
+  },
+  {
+    "name": "DJ Bennett",
+    "sport": "WOMENS_TENNIS",
+    "totalPosts": 15,
+    "totalEmv": 2633.6,
+    "engagementRate": 0.282837,
+    "logo": {
+      "posts": 1,
+      "emv": 8.8,
+      "avgLikes": 44.0,
+      "avgComments": 0.0,
+      "engagementRate": 0.016884,
+      "lift": -92.2
+    },
+    "mention": {
+      "posts": 9,
+      "emv": 1983.0,
+      "avgLikes": 816.1,
+      "avgComments": 28.6,
+      "engagementRate": 0.327317,
+      "lift": 51.8
+    }
+  },
+  {
+    "name": "Luke Waldrep",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 15,
+    "totalEmv": 2557.4,
+    "engagementRate": 0.253491,
+    "logo": {
+      "posts": 2,
+      "emv": 23.2,
+      "avgLikes": 48.0,
+      "avgComments": 1.0,
+      "engagementRate": 0.023729,
+      "lift": -91.2
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 777.6,
+      "avgLikes": 699.0,
+      "avgComments": 124.5,
+      "engagementRate": 0.39989,
+      "lift": 48.9
+    }
+  },
+  {
+    "name": "Andreas Alvarez",
+    "sport": "BASEBALL",
+    "totalPosts": 15,
+    "totalEmv": 2547.8,
+    "engagementRate": 0.825245,
+    "logo": {
+      "posts": 1,
+      "emv": 54.0,
+      "avgLikes": 0.0,
+      "avgComments": 27.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 11,
+      "emv": 2299.8,
+      "avgLikes": 905.4,
+      "avgComments": 14.0,
+      "engagementRate": 0.825245,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Carissa Rinard",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 17,
+    "totalEmv": 2547.2,
+    "engagementRate": 0.202622,
+    "logo": {
+      "posts": 1,
+      "emv": 624.6,
+      "avgLikes": 2383.0,
+      "avgComments": 74.0,
+      "engagementRate": 0.476347,
+      "lift": 155.6
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 27.4,
+      "avgLikes": 137.0,
+      "avgComments": 0.0,
+      "engagementRate": 0.026612,
+      "lift": -85.7
+    }
+  },
+  {
+    "name": "Izzy Iwasyk",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 16,
+    "totalEmv": 2543.2,
+    "engagementRate": 0.350931,
+    "logo": {
+      "posts": 2,
+      "emv": 240.0,
+      "avgLikes": 0.0,
+      "avgComments": 60.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 337.8,
+      "avgLikes": 1129.0,
+      "avgComments": 56.0,
+      "engagementRate": 0.654696,
+      "lift": 112.9
+    }
+  },
+  {
+    "name": "Jamonta Waller",
+    "sport": "FOOTBALL",
+    "totalPosts": 6,
+    "totalEmv": 2531.6,
+    "engagementRate": 0.138718,
+    "logo": {
+      "posts": 3,
+      "emv": 1454.8,
+      "avgLikes": 1814.7,
+      "avgComments": 61.0,
+      "engagementRate": 0.212556,
+      "lift": 137.5
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 1212.4,
+      "avgLikes": 2196.0,
+      "avgComments": 83.5,
+      "engagementRate": 0.342996,
+      "lift": 283.3
+    }
+  },
+  {
+    "name": "Rex Green",
+    "sport": "MENS_TRACK_AND_FIELD",
+    "totalPosts": 13,
+    "totalEmv": 2522.0,
+    "engagementRate": 0.289597,
+    "logo": {
+      "posts": 1,
+      "emv": 106.4,
+      "avgLikes": 242.0,
+      "avgComments": 29.0,
+      "engagementRate": 0.137843,
+      "lift": -48.3
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 1045.4,
+      "avgLikes": 669.2,
+      "avgComments": 63.8,
+      "engagementRate": 0.373157,
+      "lift": 39.9
+    }
+  },
+  {
+    "name": "Emily Hallifax",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 17,
+    "totalEmv": 2518.6,
+    "engagementRate": 0.073005,
+    "mention": {
+      "posts": 4,
+      "emv": 680.6,
+      "avgLikes": 518.2,
+      "avgComments": 33.2,
+      "engagementRate": 0.081081,
+      "lift": 15.0
+    }
+  },
+  {
+    "name": "Lily Devereaux",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 16,
+    "totalEmv": 2517.6,
+    "engagementRate": 0.468823,
+    "logo": {
+      "posts": 3,
+      "emv": 281.4,
+      "avgLikes": 225.7,
+      "avgComments": 24.3,
+      "engagementRate": 0.332447,
+      "lift": -36.7
+    },
+    "mention": {
+      "posts": 8,
+      "emv": 1252.6,
+      "avgLikes": 297.9,
+      "avgComments": 48.5,
+      "engagementRate": 0.434824,
+      "lift": -17.2
+    }
+  },
+  {
+    "name": "Belle Patrick",
+    "sport": "WOMENS_VOLLEYBALL",
+    "totalPosts": 13,
+    "totalEmv": 2501.8,
+    "engagementRate": 0.300056,
+    "logo": {
+      "posts": 1,
+      "emv": 94.0,
+      "avgLikes": 420.0,
+      "avgComments": 5.0,
+      "engagementRate": 0.184702,
+      "lift": -37.4
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 1072.0,
+      "avgLikes": 640.0,
+      "avgComments": 70.0,
+      "engagementRate": 0.307766,
+      "lift": 4.4
+    }
+  },
+  {
+    "name": "Syriah Daniels",
+    "sport": "WOMENS_BASKETBALL",
+    "totalPosts": 22,
+    "totalEmv": 2494.4,
+    "engagementRate": 0.11515,
+    "logo": {
+      "posts": 6,
+      "emv": 533.4,
+      "avgLikes": 321.2,
+      "avgComments": 12.3,
+      "engagementRate": 0.097687,
+      "lift": 0.2
+    },
+    "mention": {
+      "posts": 8,
+      "emv": 1266.2,
+      "avgLikes": 472.6,
+      "avgComments": 31.9,
+      "engagementRate": 0.147841,
+      "lift": 51.7
+    }
+  },
+  {
+    "name": "Billy Davis",
+    "sport": "MENS_GOLF",
+    "totalPosts": 13,
+    "totalEmv": 2492.4,
+    "engagementRate": 0.13,
+    "mention": {
+      "posts": 8,
+      "emv": 1389.4,
+      "avgLikes": 723.4,
+      "avgComments": 14.5,
+      "engagementRate": 0.118655,
+      "lift": -19.9
+    }
+  },
+  {
+    "name": "Taylor Chism",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 18,
+    "totalEmv": 2468.0,
+    "engagementRate": 0.279123,
+    "logo": {
+      "posts": 6,
+      "emv": 879.4,
+      "avgLikes": 526.2,
+      "avgComments": 20.7,
+      "engagementRate": 0.348667,
+      "lift": 62.3
+    },
+    "mention": {
+      "posts": 5,
+      "emv": 589.4,
+      "avgLikes": 447.4,
+      "avgComments": 14.2,
+      "engagementRate": 0.211699,
+      "lift": -1.5
+    }
+  },
+  {
+    "name": "Khady Leye",
+    "sport": "WOMENS_BASKETBALL",
+    "totalPosts": 21,
+    "totalEmv": 2467.2,
+    "engagementRate": 0.221389,
+    "logo": {
+      "posts": 9,
+      "emv": 693.2,
+      "avgLikes": 292.9,
+      "avgComments": 9.2,
+      "engagementRate": 0.139014,
+      "lift": -55.2
+    },
+    "mention": {
+      "posts": 6,
+      "emv": 699.2,
+      "avgLikes": 449.3,
+      "avgComments": 13.3,
+      "engagementRate": 0.196257,
+      "lift": -36.8
+    }
+  },
+  {
+    "name": "Holly Engelking",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 19,
+    "totalEmv": 2458.4,
+    "engagementRate": 0.303589,
+    "logo": {
+      "posts": 2,
+      "emv": 238.0,
+      "avgLikes": 230.0,
+      "avgComments": 36.5,
+      "engagementRate": 0.398644,
+      "lift": 36.8
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 317.2,
+      "avgLikes": 378.0,
+      "avgComments": 41.5,
+      "engagementRate": 0.323047,
+      "lift": 10.9
+    }
+  },
+  {
+    "name": "Cady McPhail",
+    "sport": "WOMENS_TRACK_AND_FIELD",
+    "totalPosts": 12,
+    "totalEmv": 2454.2,
+    "engagementRate": 0,
+    "mention": {
+      "posts": 5,
+      "emv": 897.2,
+      "avgLikes": 629.2,
+      "avgComments": 26.8,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Justin Jones",
+    "sport": "FOOTBALL",
+    "totalPosts": 13,
+    "totalEmv": 2447.8,
+    "engagementRate": 0.412161,
+    "mention": {
+      "posts": 1,
+      "emv": 126.8,
+      "avgLikes": 634.0,
+      "avgComments": 0.0,
+      "engagementRate": 0.277219,
+      "lift": -34.7
+    }
+  },
+  {
+    "name": "Haven Roebuck",
+    "sport": "SOFTBALL",
+    "totalPosts": 17,
+    "totalEmv": 2438.6,
+    "engagementRate": 0.32403,
+    "logo": {
+      "posts": 4,
+      "emv": 228.8,
+      "avgLikes": 188.5,
+      "avgComments": 9.8,
+      "engagementRate": 0.175133,
+      "lift": -48.3
+    },
+    "mention": {
+      "posts": 7,
+      "emv": 976.4,
+      "avgLikes": 371.7,
+      "avgComments": 32.6,
+      "engagementRate": 0.357982,
+      "lift": 5.7
+    }
+  },
+  {
+    "name": "Hailey Howard",
+    "sport": "WOMENS_TRACK_AND_FIELD",
+    "totalPosts": 15,
+    "totalEmv": 2420.8,
+    "engagementRate": 0.146259,
+    "mention": {
+      "posts": 4,
+      "emv": 978.4,
+      "avgLikes": 643.0,
+      "avgComments": 58.0,
+      "engagementRate": 0.228619,
+      "lift": 96.6
+    }
+  },
+  {
+    "name": "Bel Zimmerman",
+    "sport": "WOMENS_VOLLEYBALL",
+    "totalPosts": 20,
+    "totalEmv": 2404.6,
+    "engagementRate": 0.138929,
+    "logo": {
+      "posts": 5,
+      "emv": 954.0,
+      "avgLikes": 672.0,
+      "avgComments": 28.2,
+      "engagementRate": 0.237678,
+      "lift": 1480.6
+    },
+    "mention": {
+      "posts": 11,
+      "emv": 1698.4,
+      "avgLikes": 589.3,
+      "avgComments": 18.3,
+      "engagementRate": 0.206507,
+      "lift": 1273.3
+    }
+  },
+  {
+    "name": "Christian Burnette",
+    "sport": "FOOTBALL",
+    "totalPosts": 16,
+    "totalEmv": 2401.0,
+    "engagementRate": 0.2858,
+    "logo": {
+      "posts": 1,
+      "emv": 126.0,
+      "avgLikes": 290.0,
+      "avgComments": 34.0,
+      "engagementRate": 0.234783,
+      "lift": -0.3
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 665.0,
+      "avgLikes": 702.5,
+      "avgComments": 96.0,
+      "engagementRate": 0.587393,
+      "lift": 149.3
+    }
+  },
+  {
+    "name": "Sofia Tieche",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 9,
+    "totalEmv": 2387.2,
+    "engagementRate": 1.238045,
+    "mention": {
+      "posts": 4,
+      "emv": 572.2,
+      "avgLikes": 387.8,
+      "avgComments": 32.8,
+      "engagementRate": 0.48669,
+      "lift": -73.5
+    }
+  },
+  {
+    "name": "Ava Caldwell",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 14,
+    "totalEmv": 2370.0,
+    "engagementRate": 0.462894
+  },
+  {
+    "name": "Isabella Kruger",
+    "sport": "WOMENS_TENNIS",
+    "totalPosts": 14,
+    "totalEmv": 2366.8,
+    "engagementRate": 0.159138,
+    "mention": {
+      "posts": 2,
+      "emv": 478.2,
+      "avgLikes": 690.5,
+      "avgComments": 50.5,
+      "engagementRate": 0.146501,
+      "lift": -10.0
+    }
+  },
+  {
+    "name": "Baileigh Carlsen",
+    "sport": "WOMENS_VOLLEYBALL",
+    "totalPosts": 13,
+    "totalEmv": 2299.4,
+    "engagementRate": 0.370863,
+    "mention": {
+      "posts": 3,
+      "emv": 728.4,
+      "avgLikes": 710.7,
+      "avgComments": 50.3,
+      "engagementRate": 0.559754,
+      "lift": 93.1
+    }
+  },
+  {
+    "name": "Hunter Ousley",
+    "sport": "FOOTBALL",
+    "totalPosts": 14,
+    "totalEmv": 2283.0,
+    "engagementRate": 0.209055,
+    "logo": {
+      "posts": 1,
+      "emv": 189.6,
+      "avgLikes": 568.0,
+      "avgComments": 38.0,
+      "engagementRate": 0.233077,
+      "lift": 13.0
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 325.8,
+      "avgLikes": 519.5,
+      "avgComments": 29.5,
+      "engagementRate": 0.211154,
+      "lift": 2.4
+    }
+  },
+  {
+    "name": "Christian Chatterton",
+    "sport": "BASEBALL",
+    "totalPosts": 12,
+    "totalEmv": 2277.8,
+    "engagementRate": 0.288189,
+    "mention": {
+      "posts": 8,
+      "emv": 1580.8,
+      "avgLikes": 961.8,
+      "avgComments": 2.6,
+      "engagementRate": 0.322621,
+      "lift": 41.5
+    }
+  },
+  {
+    "name": "Griffin Graves",
+    "sport": "BASEBALL",
+    "totalPosts": 16,
+    "totalEmv": 2230.4,
+    "engagementRate": 0.266289,
+    "logo": {
+      "posts": 3,
+      "emv": 644.0,
+      "avgLikes": 1033.3,
+      "avgComments": 4.0,
+      "engagementRate": 0.452391,
+      "lift": 76.5
+    },
+    "mention": {
+      "posts": 13,
+      "emv": 1676.2,
+      "avgLikes": 561.6,
+      "avgComments": 8.3,
+      "engagementRate": 0.26879,
+      "lift": 4.9
+    }
+  },
+  {
+    "name": "Dylan Senda",
+    "sport": "FOOTBALL",
+    "totalPosts": 22,
+    "totalEmv": 2228.4,
+    "engagementRate": 0.260318,
+    "logo": {
+      "posts": 5,
+      "emv": 1322.4,
+      "avgLikes": 990.4,
+      "avgComments": 33.2,
+      "engagementRate": 0.696801,
+      "lift": 196.4
+    },
+    "mention": {
+      "posts": 10,
+      "emv": 469.8,
+      "avgLikes": 130.9,
+      "avgComments": 10.4,
+      "engagementRate": 0.096174,
+      "lift": -59.1
+    }
+  },
+  {
+    "name": "Abigail Heizer",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 16,
+    "totalEmv": 2224.8,
+    "engagementRate": 0.135761,
+    "logo": {
+      "posts": 2,
+      "emv": 164.0,
+      "avgLikes": 0.0,
+      "avgComments": 41.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 146.0,
+      "avgLikes": 0.0,
+      "avgComments": 73.0,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Ryne Farber",
+    "sport": "BASEBALL",
+    "totalPosts": 14,
+    "totalEmv": 2220.2,
+    "engagementRate": 0.270276,
+    "logo": {
+      "posts": 1,
+      "emv": 194.6,
+      "avgLikes": 913.0,
+      "avgComments": 6.0,
+      "engagementRate": 0.433695,
+      "lift": 72.1
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 767.8,
+      "avgLikes": 637.2,
+      "avgComments": 32.2,
+      "engagementRate": 0.315951,
+      "lift": 25.4
+    }
+  },
+  {
+    "name": "Ella Harrison",
+    "sport": "SOFTBALL",
+    "totalPosts": 13,
+    "totalEmv": 2215.2,
+    "engagementRate": 0.366449,
+    "logo": {
+      "posts": 1,
+      "emv": 192.2,
+      "avgLikes": 401.0,
+      "avgComments": 56.0,
+      "engagementRate": 0.339021,
+      "lift": -3.9
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 585.2,
+      "avgLikes": 478.0,
+      "avgComments": 98.5,
+      "engagementRate": 0.427671,
+      "lift": 21.2
+    }
+  },
+  {
+    "name": "Caiden Combs",
+    "sport": "BASEBALL",
+    "totalPosts": 15,
+    "totalEmv": 2209.2,
+    "engagementRate": 0.273652,
+    "logo": {
+      "posts": 1,
+      "emv": 183.6,
+      "avgLikes": 378.0,
+      "avgComments": 54.0,
+      "engagementRate": 0.277635,
+      "lift": 8.1
+    },
+    "mention": {
+      "posts": 7,
+      "emv": 1238.8,
+      "avgLikes": 402.0,
+      "avgComments": 48.3,
+      "engagementRate": 0.289946,
+      "lift": 12.9
+    }
+  },
+  {
+    "name": "Hannah Hagle",
+    "sport": "WOMENS_GYMNASTICS",
+    "totalPosts": 17,
+    "totalEmv": 2203.0,
+    "engagementRate": 0.082247,
+    "logo": {
+      "posts": 4,
+      "emv": 552.0,
+      "avgLikes": 345.0,
+      "avgComments": 34.5,
+      "engagementRate": 0.079693,
+      "lift": -11.5
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 331.8,
+      "avgLikes": 252.2,
+      "avgComments": 16.2,
+      "engagementRate": 0.056384,
+      "lift": -37.4
+    }
+  },
+  {
+    "name": "Kalei Edson",
+    "sport": "WOMENS_VOLLEYBALL",
+    "totalPosts": 20,
+    "totalEmv": 2201.6,
+    "engagementRate": 0.089456,
+    "logo": {
+      "posts": 1,
+      "emv": 52.0,
+      "avgLikes": 0.0,
+      "avgComments": 26.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 399.2,
+      "avgLikes": 116.5,
+      "avgComments": 38.2,
+      "engagementRate": 0.090599,
+      "lift": 1.6
+    }
+  },
+  {
+    "name": "Ayana Yapo",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 13,
+    "totalEmv": 2182.6,
+    "engagementRate": 0.537092,
+    "mention": {
+      "posts": 2,
+      "emv": 322.8,
+      "avgLikes": 697.0,
+      "avgComments": 11.0,
+      "engagementRate": 0.977901,
+      "lift": 114.0
+    }
+  },
+  {
+    "name": "Kennedy Hamilton",
+    "sport": "WOMENS_TRACK_AND_FIELD",
+    "totalPosts": 16,
+    "totalEmv": 2172.6,
+    "engagementRate": 0.043166,
+    "logo": {
+      "posts": 1,
+      "emv": 108.0,
+      "avgLikes": 0.0,
+      "avgComments": 54.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 868.6,
+      "avgLikes": 0.8,
+      "avgComments": 108.5,
+      "engagementRate": 0.073735,
+      "lift": 107.6
+    }
+  },
+  {
+    "name": "Alexandra Walsh",
+    "sport": "WOMENS_TRACK_AND_FIELD",
+    "totalPosts": 13,
+    "totalEmv": 2163.6,
+    "engagementRate": 0.339879,
+    "logo": {
+      "posts": 1,
+      "emv": 61.6,
+      "avgLikes": 188.0,
+      "avgComments": 12.0,
+      "engagementRate": 0.136893,
+      "lift": -37.2
+    },
+    "mention": {
+      "posts": 5,
+      "emv": 1194.4,
+      "avgLikes": 696.4,
+      "avgComments": 49.8,
+      "engagementRate": 0.510746,
+      "lift": 134.5
+    }
+  },
+  {
+    "name": "Abby Herndon",
+    "sport": "SOFTBALL",
+    "totalPosts": 13,
+    "totalEmv": 2158.2,
+    "engagementRate": 0.334563,
+    "mention": {
+      "posts": 3,
+      "emv": 799.8,
+      "avgLikes": 896.3,
+      "avgComments": 43.7,
+      "engagementRate": 0.576334,
+      "lift": 119.9
+    }
+  },
+  {
+    "name": "Olivia Woodson",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 15,
+    "totalEmv": 2133.2,
+    "engagementRate": 0.449316,
+    "mention": {
+      "posts": 2,
+      "emv": 629.4,
+      "avgLikes": 1188.5,
+      "avgComments": 38.5,
+      "engagementRate": 0.598876,
+      "lift": 99.8
+    }
+  },
+  {
+    "name": "Jake Kennedy",
+    "sport": "MENS_TENNIS",
+    "totalPosts": 10,
+    "totalEmv": 2130.6,
+    "engagementRate": 0.337895,
+    "logo": {
+      "posts": 1,
+      "emv": 78.2,
+      "avgLikes": 221.0,
+      "avgComments": 17.0,
+      "engagementRate": 0.156579,
+      "lift": -49.3
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 887.8,
+      "avgLikes": 649.5,
+      "avgComments": 157.0,
+      "engagementRate": 0.530592,
+      "lift": 71.9
+    }
+  },
+  {
+    "name": "Wade Shelley",
+    "sport": "BASEBALL",
+    "totalPosts": 13,
+    "totalEmv": 2130.4,
+    "engagementRate": 0.642178,
+    "mention": {
+      "posts": 3,
+      "emv": 813.8,
+      "avgLikes": 689.7,
+      "avgComments": 66.7,
+      "engagementRate": 0.399753,
+      "lift": -54.8
+    }
+  },
+  {
+    "name": "Emma Moore",
+    "sport": "WOMENS_VOLLEYBALL",
+    "totalPosts": 16,
+    "totalEmv": 2128.4,
+    "engagementRate": 0.318887,
+    "logo": {
+      "posts": 1,
+      "emv": 104.0,
+      "avgLikes": 0.0,
+      "avgComments": 52.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 684.8,
+      "avgLikes": 796.0,
+      "avgComments": 6.0,
+      "engagementRate": 0.401063,
+      "lift": 69.4
+    }
+  },
+  {
+    "name": "Audrey Crawford",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 15,
+    "totalEmv": 2099.8,
+    "engagementRate": 0.1438,
+    "logo": {
+      "posts": 2,
+      "emv": 144.6,
+      "avgLikes": 156.5,
+      "avgComments": 20.5,
+      "engagementRate": 0.079551,
+      "lift": -29.8
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 895.2,
+      "avgLikes": 643.0,
+      "avgComments": 159.5,
+      "engagementRate": 0.360674,
+      "lift": 218.4
+    }
+  },
+  {
+    "name": "Mia Leverton",
+    "sport": "WOMENS_GYMNASTICS",
+    "totalPosts": 14,
+    "totalEmv": 2093.0,
+    "engagementRate": 0.665861,
+    "logo": {
+      "posts": 1,
+      "emv": 170.6,
+      "avgLikes": 723.0,
+      "avgComments": 13.0,
+      "engagementRate": 0.973545,
+      "lift": 181.5
+    },
+    "mention": {
+      "posts": 6,
+      "emv": 1396.2,
+      "avgLikes": 788.5,
+      "avgComments": 37.5,
+      "engagementRate": 1.092593,
+      "lift": 216.0
+    }
+  },
+  {
+    "name": "Jacoby Mathews",
+    "sport": "FOOTBALL",
+    "totalPosts": 2,
+    "totalEmv": 2057.8,
+    "engagementRate": 0,
+    "mention": {
+      "posts": 1,
+      "emv": 1733.2,
+      "avgLikes": 8166.0,
+      "avgComments": 50.0,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Camila Gomes",
+    "sport": "WOMENS_TRACK_AND_FIELD",
+    "totalPosts": 16,
+    "totalEmv": 1995.2,
+    "engagementRate": 0.293575,
+    "logo": {
+      "posts": 1,
+      "emv": 271.8,
+      "avgLikes": 849.0,
+      "avgComments": 51.0,
+      "engagementRate": 0.359281,
+      "lift": 13.9
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 516.2,
+      "avgLikes": 573.7,
+      "avgComments": 28.7,
+      "engagementRate": 0.242264,
+      "lift": -23.2
+    }
+  },
+  {
+    "name": "Hanna Schmidt",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 17,
+    "totalEmv": 1994.0,
+    "engagementRate": 0.124089,
+    "logo": {
+      "posts": 1,
+      "emv": 100.0,
+      "avgLikes": 0.0,
+      "avgComments": 50.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 66.0,
+      "avgLikes": 0.0,
+      "avgComments": 33.0,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Darrion Smith",
+    "sport": "FOOTBALL",
+    "totalPosts": 7,
+    "totalEmv": 1982.2,
+    "engagementRate": 0.223625,
+    "logo": {
+      "posts": 1,
+      "emv": 273.0,
+      "avgLikes": 575.0,
+      "avgComments": 79.0,
+      "engagementRate": 0.197822,
+      "lift": 6.7
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 564.6,
+      "avgLikes": 976.5,
+      "avgComments": 43.5,
+      "engagementRate": 0.312883,
+      "lift": 68.7
+    }
+  },
+  {
+    "name": "Emily Jurnovoy",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 13,
+    "totalEmv": 1970.4,
+    "engagementRate": 0.294281,
+    "mention": {
+      "posts": 3,
+      "emv": 588.2,
+      "avgLikes": 407.0,
+      "avgComments": 57.3,
+      "engagementRate": 0.441567,
+      "lift": 76.6
+    }
+  },
+  {
+    "name": "Bradley Pearson",
+    "sport": "MENS_BASKETBALL",
+    "totalPosts": 15,
+    "totalEmv": 1969.4,
+    "engagementRate": 0.640656,
+    "logo": {
+      "posts": 1,
+      "emv": 84.0,
+      "avgLikes": 0.0,
+      "avgComments": 42.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 1176.8,
+      "avgLikes": 1096.0,
+      "avgComments": 37.5,
+      "engagementRate": 0.954167,
+      "lift": 6898.6
+    }
+  },
+  {
+    "name": "Joey Phillips",
+    "sport": "MENS_TENNIS",
+    "totalPosts": 13,
+    "totalEmv": 1964.8,
+    "engagementRate": 0.163061,
+    "logo": {
+      "posts": 1,
+      "emv": 174.6,
+      "avgLikes": 313.0,
+      "avgComments": 56.0,
+      "engagementRate": 0.119495,
+      "lift": -10.2
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 1018.6,
+      "avgLikes": 558.2,
+      "avgComments": 71.5,
+      "engagementRate": 0.203935,
+      "lift": 53.2
+    }
+  },
+  {
+    "name": "Ava Ratliff",
+    "sport": "SOFTBALL",
+    "totalPosts": 16,
+    "totalEmv": 1959.4,
+    "engagementRate": 0.292239,
+    "logo": {
+      "posts": 3,
+      "emv": 169.2,
+      "avgLikes": 198.7,
+      "avgComments": 8.3,
+      "engagementRate": 0.176772,
+      "lift": -38.6
+    },
+    "mention": {
+      "posts": 5,
+      "emv": 574.2,
+      "avgLikes": 358.2,
+      "avgComments": 21.6,
+      "engagementRate": 0.324338,
+      "lift": 12.7
+    }
+  },
+  {
+    "name": "Luke Bedsole",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 12,
+    "totalEmv": 1949.0,
+    "engagementRate": 0.296564,
+    "mention": {
+      "posts": 4,
+      "emv": 1018.8,
+      "avgLikes": 601.0,
+      "avgComments": 67.2,
+      "engagementRate": 0.448791,
+      "lift": 103.6
+    }
+  },
+  {
+    "name": "Alexia Tordoff",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 15,
+    "totalEmv": 1943.6,
+    "engagementRate": 0.110948,
+    "logo": {
+      "posts": 2,
+      "emv": 199.8,
+      "avgLikes": 214.5,
+      "avgComments": 28.5,
+      "engagementRate": 0.096083,
+      "lift": -15.5
+    },
+    "mention": {
+      "posts": 8,
+      "emv": 1000.4,
+      "avgLikes": 491.5,
+      "avgComments": 13.4,
+      "engagementRate": 0.109201,
+      "lift": -4.0
+    }
+  },
+  {
+    "name": "Daigle Wilson",
+    "sport": "SOFTBALL",
+    "totalPosts": 24,
+    "totalEmv": 1939.2,
+    "engagementRate": 0.164122,
+    "logo": {
+      "posts": 1,
+      "emv": 1.2,
+      "avgLikes": 6.0,
+      "avgComments": 0.0,
+      "engagementRate": 0.001931,
+      "lift": -98.2
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 712.6,
+      "avgLikes": 1516.5,
+      "avgComments": 26.5,
+      "engagementRate": 0.495879,
+      "lift": 357.4
+    }
+  },
+  {
+    "name": "Jake Marciano",
+    "sport": "BASEBALL",
+    "totalPosts": 10,
+    "totalEmv": 1930.8,
+    "engagementRate": 0.434708,
+    "mention": {
+      "posts": 1,
+      "emv": 325.4,
+      "avgLikes": 567.0,
+      "avgComments": 106.0,
+      "engagementRate": 0.523735,
+      "lift": 23.3
+    }
+  },
+  {
+    "name": "Bradford Johnson",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 11,
+    "totalEmv": 1919.2,
+    "engagementRate": 0.342305,
+    "mention": {
+      "posts": 4,
+      "emv": 965.0,
+      "avgLikes": 618.8,
+      "avgComments": 58.8,
+      "engagementRate": 0.437944,
+      "lift": 52.2
+    }
+  },
+  {
+    "name": "Eddie Madrigal",
+    "sport": "BASEBALL",
+    "totalPosts": 12,
+    "totalEmv": 1917.6,
+    "engagementRate": 0.448679,
+    "logo": {
+      "posts": 2,
+      "emv": 451.6,
+      "avgLikes": 854.0,
+      "avgComments": 27.5,
+      "engagementRate": 0.741379,
+      "lift": 77.7
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 328.6,
+      "avgLikes": 761.5,
+      "avgComments": 6.0,
+      "engagementRate": 0.6455,
+      "lift": 54.7
+    }
+  },
+  {
+    "name": "Kate Hagerty",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 12,
+    "totalEmv": 1910.2,
+    "engagementRate": 0.280728,
+    "mention": {
+      "posts": 1,
+      "emv": 189.0,
+      "avgLikes": 795.0,
+      "avgComments": 15.0,
+      "engagementRate": 0.335543,
+      "lift": 23.5
+    }
+  },
+  {
+    "name": "Bryn Bartman",
+    "sport": "WOMENS_GYMNASTICS",
+    "totalPosts": 14,
+    "totalEmv": 1900.4,
+    "engagementRate": 0.163829,
+    "logo": {
+      "posts": 1,
+      "emv": 400.2,
+      "avgLikes": 1981.0,
+      "avgComments": 2.0,
+      "engagementRate": 0.638031,
+      "lift": 539.8
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 787.6,
+      "avgLikes": 954.5,
+      "avgComments": 3.0,
+      "engagementRate": 0.308076,
+      "lift": 208.9
+    }
+  },
+  {
+    "name": "Kylie Brockman",
+    "sport": "SOFTBALL",
+    "totalPosts": 17,
+    "totalEmv": 1888.0,
+    "engagementRate": 0.297165,
+    "logo": {
+      "posts": 1,
+      "emv": 60.0,
+      "avgLikes": 0.0,
+      "avgComments": 30.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 322.0,
+      "avgLikes": 1550.0,
+      "avgComments": 6.0,
+      "engagementRate": 0.832531,
+      "lift": 261.6
+    }
+  },
+  {
+    "name": "Shanelle Puetz",
+    "sport": "WOMENS_VOLLEYBALL",
+    "totalPosts": 15,
+    "totalEmv": 1872.8,
+    "engagementRate": 0.335683,
+    "logo": {
+      "posts": 2,
+      "emv": 142.8,
+      "avgLikes": 192.0,
+      "avgComments": 16.5,
+      "engagementRate": 0.227676,
+      "lift": -36.1
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 326.0,
+      "avgLikes": 493.3,
+      "avgComments": 5.0,
+      "engagementRate": 0.294697,
+      "lift": -17.3
+    }
+  },
+  {
+    "name": "Clayton Armah",
+    "sport": "BASEBALL",
+    "totalPosts": 10,
+    "totalEmv": 1854.4,
+    "engagementRate": 0.543943,
+    "logo": {
+      "posts": 1,
+      "emv": 673.6,
+      "avgLikes": 3278.0,
+      "avgComments": 9.0,
+      "engagementRate": 1.9519,
+      "lift": 400.5
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 1050.0,
+      "avgLikes": 1160.0,
+      "avgComments": 15.2,
+      "engagementRate": 0.697892,
+      "lift": 78.9
+    }
+  },
+  {
+    "name": "Charley Butler",
+    "sport": "SOFTBALL",
+    "totalPosts": 15,
+    "totalEmv": 1853.4,
+    "engagementRate": 0.29369,
+    "logo": {
+      "posts": 1,
+      "emv": 107.2,
+      "avgLikes": 306.0,
+      "avgComments": 23.0,
+      "engagementRate": 0.241734,
+      "lift": -16.2
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 384.0,
+      "avgLikes": 412.5,
+      "avgComments": 6.8,
+      "engagementRate": 0.308046,
+      "lift": 6.8
+    }
+  },
+  {
+    "name": "Ashton Bowers",
+    "sport": "WOMENS_TENNIS",
+    "totalPosts": 13,
+    "totalEmv": 1844.0,
+    "engagementRate": 0.251299,
+    "mention": {
+      "posts": 1,
+      "emv": 99.4,
+      "avgLikes": 437.0,
+      "avgComments": 6.0,
+      "engagementRate": 0.406795,
+      "lift": 324.6
+    }
+  },
+  {
+    "name": "Tanner Waldrop",
+    "sport": "BASEBALL",
+    "totalPosts": 15,
+    "totalEmv": 1839.4,
+    "engagementRate": 0.170973,
+    "logo": {
+      "posts": 4,
+      "emv": 552.2,
+      "avgLikes": 565.2,
+      "avgComments": 12.5,
+      "engagementRate": 0.230514,
+      "lift": 45.2
+    },
+    "mention": {
+      "posts": 7,
+      "emv": 821.4,
+      "avgLikes": 518.1,
+      "avgComments": 6.9,
+      "engagementRate": 0.15861,
+      "lift": -0.1
+    }
+  },
+  {
+    "name": "Sadie Berkhout",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 14,
+    "totalEmv": 1817.4,
+    "engagementRate": 0.172596,
+    "logo": {
+      "posts": 2,
+      "emv": 248.6,
+      "avgLikes": 261.5,
+      "avgComments": 36.0,
+      "engagementRate": 0.106554,
+      "lift": -28.9
+    },
+    "mention": {
+      "posts": 7,
+      "emv": 904.0,
+      "avgLikes": 548.6,
+      "avgComments": 9.7,
+      "engagementRate": 0.200391,
+      "lift": 33.8
+    }
+  },
+  {
+    "name": "Jordyn Crosby",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 19,
+    "totalEmv": 1815.4,
+    "engagementRate": 0.23514,
+    "logo": {
+      "posts": 4,
+      "emv": 460.2,
+      "avgLikes": 185.2,
+      "avgComments": 39.0,
+      "engagementRate": 0.256842,
+      "lift": 100.2
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 546.0,
+      "avgLikes": 543.3,
+      "avgComments": 36.7,
+      "engagementRate": 0.790106,
+      "lift": 515.7
+    }
+  },
+  {
+    "name": "Erin Houston",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 14,
+    "totalEmv": 1806.6,
+    "engagementRate": 0.223593,
+    "mention": {
+      "posts": 3,
+      "emv": 611.6,
+      "avgLikes": 586.0,
+      "avgComments": 43.3,
+      "engagementRate": 0.344086,
+      "lift": 127.4
+    }
+  },
+  {
+    "name": "Bobby Jamison-Travis",
+    "sport": "FOOTBALL",
+    "totalPosts": 15,
+    "totalEmv": 1802.0,
+    "engagementRate": 0.336395,
+    "logo": {
+      "posts": 3,
+      "emv": 1000.4,
+      "avgLikes": 1457.3,
+      "avgComments": 21.0,
+      "engagementRate": 1.080653,
+      "lift": 513.5
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 17.0,
+      "avgLikes": 27.5,
+      "avgComments": 1.5,
+      "engagementRate": 0.021199,
+      "lift": -88.0
+    }
+  },
+  {
+    "name": "Jeremiah Bowman",
+    "sport": "MENS_BASKETBALL",
+    "totalPosts": 7,
+    "totalEmv": 1800.4,
+    "engagementRate": 0.379498,
+    "collab": {
+      "posts": 1,
+      "emv": 372.6,
+      "avgLikes": 1783.0,
+      "avgComments": 8.0,
+      "engagementRate": 0.007831,
+      "lift": -91.9
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 1007.8,
+      "avgLikes": 1554.5,
+      "avgComments": 96.5,
+      "engagementRate": 1.033887,
+      "lift": 968.4
+    }
+  },
+  {
+    "name": "Ariana Marnell",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 12,
+    "totalEmv": 1798.0,
+    "engagementRate": 0
+  },
+  {
+    "name": "Tyler Clyburn",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 13,
+    "totalEmv": 1796.6,
+    "engagementRate": 0.500668,
+    "logo": {
+      "posts": 1,
+      "emv": 56.0,
+      "avgLikes": 250.0,
+      "avgComments": 3.0,
+      "engagementRate": 0.253507,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 824.0,
+      "avgLikes": 357.5,
+      "avgComments": 67.2,
+      "engagementRate": 0.500668,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Dylan Driver",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 17,
+    "totalEmv": 1784.6,
+    "engagementRate": 0.104987,
+    "logo": {
+      "posts": 2,
+      "emv": 194.2,
+      "avgLikes": 170.5,
+      "avgComments": 31.5,
+      "engagementRate": 0.138402,
+      "lift": 53.4
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 416.8,
+      "avgLikes": 316.0,
+      "avgComments": 20.5,
+      "engagementRate": 0.12957,
+      "lift": 43.6
+    }
+  },
+  {
+    "name": "Margey Brown",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 12,
+    "totalEmv": 1783.6,
+    "engagementRate": 0.250382,
+    "mention": {
+      "posts": 1,
+      "emv": 326.0,
+      "avgLikes": 0.0,
+      "avgComments": 163.0,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Frances Brown",
+    "sport": "WOMENS_GOLF",
+    "totalPosts": 14,
+    "totalEmv": 1780.4,
+    "engagementRate": 0.299707,
+    "logo": {
+      "posts": 1,
+      "emv": 144.0,
+      "avgLikes": 0.0,
+      "avgComments": 72.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 5,
+      "emv": 729.8,
+      "avgLikes": 177.8,
+      "avgComments": 55.2,
+      "engagementRate": 0.335078,
+      "lift": 46.3
+    }
+  },
+  {
+    "name": "Frankie Nicklaus",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 13,
+    "totalEmv": 1775.4,
+    "engagementRate": 0.292422,
+    "logo": {
+      "posts": 1,
+      "emv": 87.8,
+      "avgLikes": 179.0,
+      "avgComments": 26.0,
+      "engagementRate": 0.145907,
+      "lift": -47.9
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 391.2,
+      "avgLikes": 518.7,
+      "avgComments": 13.3,
+      "engagementRate": 0.378648,
+      "lift": 35.3
+    }
+  },
+  {
+    "name": "Kyla Stroud",
+    "sport": "SOFTBALL",
+    "totalPosts": 10,
+    "totalEmv": 1769.8,
+    "engagementRate": 0.408813,
+    "mention": {
+      "posts": 5,
+      "emv": 1082.0,
+      "avgLikes": 894.0,
+      "avgComments": 18.8,
+      "engagementRate": 0.493139,
+      "lift": 83.8
+    }
+  },
+  {
+    "name": "AnnaLea Adams",
+    "sport": "SOFTBALL",
+    "totalPosts": 14,
+    "totalEmv": 1764.6,
+    "engagementRate": 0.473718,
+    "logo": {
+      "posts": 2,
+      "emv": 173.8,
+      "avgLikes": 254.5,
+      "avgComments": 18.0,
+      "engagementRate": 0.264306,
+      "lift": -57.7
+    },
+    "mention": {
+      "posts": 8,
+      "emv": 959.0,
+      "avgLikes": 449.4,
+      "avgComments": 15.0,
+      "engagementRate": 0.450525,
+      "lift": -27.9
+    }
+  },
+  {
+    "name": "Jersie Woolsey",
+    "sport": "WOMENS_GYMNASTICS",
+    "totalPosts": 14,
+    "totalEmv": 1746.8,
+    "engagementRate": 0.165476,
+    "mention": {
+      "posts": 3,
+      "emv": 363.2,
+      "avgLikes": 452.0,
+      "avgComments": 15.3,
+      "engagementRate": 0.177223,
+      "lift": 9.2
+    }
+  },
+  {
+    "name": "Elizaveta Klevanovich",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 16,
+    "totalEmv": 1713.6,
+    "engagementRate": 0.139392,
+    "logo": {
+      "posts": 1,
+      "emv": 206.6,
+      "avgLikes": 563.0,
+      "avgComments": 47.0,
+      "engagementRate": 0.254485,
+      "lift": 93.2
+    }
+  },
+  {
+    "name": "Layla Sirdah",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 8,
+    "totalEmv": 1706.2,
+    "engagementRate": 0.308802
+  },
+  {
+    "name": "Daniel Krichevsky",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 17,
+    "totalEmv": 1703.6,
+    "engagementRate": 0.279518,
+    "mention": {
+      "posts": 5,
+      "emv": 489.8,
+      "avgLikes": 315.8,
+      "avgComments": 17.4,
+      "engagementRate": 0.336855,
+      "lift": 32.9
+    }
+  },
+  {
+    "name": "Connor Gatwood",
+    "sport": "BASEBALL",
+    "totalPosts": 12,
+    "totalEmv": 1698.4,
+    "engagementRate": 0.351087,
+    "mention": {
+      "posts": 5,
+      "emv": 1415.8,
+      "avgLikes": 1277.8,
+      "avgComments": 13.8,
+      "engagementRate": 0.437227,
+      "lift": 6596.9
+    }
+  },
+  {
+    "name": "Charlotte McLaughlin",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 13,
+    "totalEmv": 1696.0,
+    "engagementRate": 0.346907,
+    "mention": {
+      "posts": 5,
+      "emv": 858.6,
+      "avgLikes": 772.6,
+      "avgComments": 8.6,
+      "engagementRate": 0.450185,
+      "lift": 84.8
+    }
+  },
+  {
+    "name": "Cade Carlson",
+    "sport": "FOOTBALL",
+    "totalPosts": 8,
+    "totalEmv": 1692.0,
+    "engagementRate": 0.274832,
+    "logo": {
+      "posts": 2,
+      "emv": 536.0,
+      "avgLikes": 1055.0,
+      "avgComments": 28.5,
+      "engagementRate": 0.40535,
+      "lift": 75.2
+    }
+  },
+  {
+    "name": "Maddie Stoddard",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 17,
+    "totalEmv": 1671.6,
+    "engagementRate": 0.427249,
+    "logo": {
+      "posts": 1,
+      "emv": 132.0,
+      "avgLikes": 0.0,
+      "avgComments": 66.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 507.4,
+      "avgLikes": 868.5,
+      "avgComments": 40.0,
+      "engagementRate": 0.982604,
+      "lift": 556.9
+    }
+  },
+  {
+    "name": "Jessica Osborne",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 19,
+    "totalEmv": 1671.4,
+    "engagementRate": 0.106427,
+    "logo": {
+      "posts": 1,
+      "emv": 4.2,
+      "avgLikes": 21.0,
+      "avgComments": 0.0,
+      "engagementRate": 0.010443,
+      "lift": -85.7
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 282.6,
+      "avgLikes": 561.5,
+      "avgComments": 14.5,
+      "engagementRate": 0.287765,
+      "lift": 293.7
+    }
+  },
+  {
+    "name": "Julia Strojnowska",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 14,
+    "totalEmv": 1652.2,
+    "engagementRate": 0.301705
+  },
+  {
+    "name": "Clara Casajuana",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 12,
+    "totalEmv": 1646.8,
+    "engagementRate": 0.440459,
+    "logo": {
+      "posts": 4,
+      "emv": 425.4,
+      "avgLikes": 164.2,
+      "avgComments": 36.8,
+      "engagementRate": 0.377295,
+      "lift": 10.2
+    },
+    "mention": {
+      "posts": 5,
+      "emv": 730.0,
+      "avgLikes": 338.0,
+      "avgComments": 39.2,
+      "engagementRate": 0.5781,
+      "lift": 68.8
+    }
+  },
+  {
+    "name": "Kaleb Harris",
+    "sport": "FOOTBALL",
+    "totalPosts": 6,
+    "totalEmv": 1635.8,
+    "engagementRate": 0.584386,
+    "logo": {
+      "posts": 1,
+      "emv": 453.0,
+      "avgLikes": 2205.0,
+      "avgComments": 6.0,
+      "engagementRate": 0.581842,
+      "lift": -0.7
+    }
+  },
+  {
+    "name": "Molly Brown Davidson",
+    "sport": "WOMENS_GOLF",
+    "totalPosts": 15,
+    "totalEmv": 1633.8,
+    "engagementRate": 0.074637,
+    "logo": {
+      "posts": 1,
+      "emv": 58.6,
+      "avgLikes": 3.0,
+      "avgComments": 29.0,
+      "engagementRate": 0.01167,
+      "lift": -68.9
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 802.4,
+      "avgLikes": 418.0,
+      "avgComments": 58.5,
+      "engagementRate": 0.173778,
+      "lift": 362.5
+    }
+  },
+  {
+    "name": "Logan Gregorio",
+    "sport": "BASEBALL",
+    "totalPosts": 13,
+    "totalEmv": 1615.0,
+    "engagementRate": 0.299258,
+    "logo": {
+      "posts": 2,
+      "emv": 286.4,
+      "avgLikes": 421.0,
+      "avgComments": 29.5,
+      "engagementRate": 0.42661,
+      "lift": 43.3
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 457.6,
+      "avgLikes": 262.0,
+      "avgComments": 31.0,
+      "engagementRate": 0.277462,
+      "lift": -6.8
+    }
+  },
+  {
+    "name": "Erick Smith",
+    "sport": "FOOTBALL",
+    "totalPosts": 12,
+    "totalEmv": 1606.4,
+    "engagementRate": 0.652563
+  },
+  {
+    "name": "Emma Wehry",
+    "sport": "WOMENS_GYMNASTICS",
+    "totalPosts": 12,
+    "totalEmv": 1604.2,
+    "engagementRate": 0.00814,
+    "mention": {
+      "posts": 3,
+      "emv": 966.8,
+      "avgLikes": 1068.0,
+      "avgComments": 54.3,
+      "engagementRate": 0.02955,
+      "lift": 2844.9
+    }
+  },
+  {
+    "name": "Cayden Pope",
+    "sport": "MENS_GOLF",
+    "totalPosts": 14,
+    "totalEmv": 1599.0,
+    "engagementRate": 0.256708,
+    "logo": {
+      "posts": 1,
+      "emv": 58.2,
+      "avgLikes": 231.0,
+      "avgComments": 6.0,
+      "engagementRate": 0.12454,
+      "lift": -18.8
+    },
+    "mention": {
+      "posts": 10,
+      "emv": 1225.6,
+      "avgLikes": 507.8,
+      "avgComments": 10.5,
+      "engagementRate": 0.302622,
+      "lift": 97.3
+    }
+  },
+  {
+    "name": "Abby Eddy",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 15,
+    "totalEmv": 1594.2,
+    "engagementRate": 0.16018,
+    "logo": {
+      "posts": 1,
+      "emv": 138.0,
+      "avgLikes": 420.0,
+      "avgComments": 27.0,
+      "engagementRate": 0.182449,
+      "lift": 22.5
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 145.0,
+      "avgLikes": 695.0,
+      "avgComments": 3.0,
+      "engagementRate": 0.283625,
+      "lift": 90.4
+    }
+  },
+  {
+    "name": "Dallas Walker IV",
+    "sport": "FOOTBALL",
+    "totalPosts": 10,
+    "totalEmv": 1592.0,
+    "engagementRate": 0.799904,
+    "mention": {
+      "posts": 3,
+      "emv": 352.8,
+      "avgLikes": 268.0,
+      "avgComments": 32.0,
+      "engagementRate": 0.265835,
+      "lift": -80.1
+    }
+  },
+  {
+    "name": "Thomas Kennedy",
+    "sport": "MENS_TENNIS",
+    "totalPosts": 12,
+    "totalEmv": 1585.8,
+    "engagementRate": 0.221527,
+    "logo": {
+      "posts": 1,
+      "emv": 34.2,
+      "avgLikes": 171.0,
+      "avgComments": 0.0,
+      "engagementRate": 0.107009,
+      "lift": -50.4
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 276.2,
+      "avgLikes": 373.7,
+      "avgComments": 8.7,
+      "engagementRate": 0.239257,
+      "lift": 11.0
+    }
+  },
+  {
+    "name": "Abe Chancellor",
+    "sport": "BASEBALL",
+    "totalPosts": 13,
+    "totalEmv": 1584.4,
+    "engagementRate": 0.259634,
+    "mention": {
+      "posts": 5,
+      "emv": 599.6,
+      "avgLikes": 561.6,
+      "avgComments": 3.8,
+      "engagementRate": 0.322165,
+      "lift": 46.1
+    }
+  },
+  {
+    "name": "Annika Finzen",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 12,
+    "totalEmv": 1582.6,
+    "engagementRate": 0.319103,
+    "mention": {
+      "posts": 3,
+      "emv": 668.2,
+      "avgLikes": 393.7,
+      "avgComments": 72.0,
+      "engagementRate": 0.519717,
+      "lift": 106.0
+    }
+  },
+  {
+    "name": "Ellis Fox",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 14,
+    "totalEmv": 1562.4,
+    "engagementRate": 0.188791,
+    "logo": {
+      "posts": 1,
+      "emv": 106.0,
+      "avgLikes": 0.0,
+      "avgComments": 53.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 773.2,
+      "avgLikes": 702.0,
+      "avgComments": 58.7,
+      "engagementRate": 0.249563,
+      "lift": 3752.5
+    }
+  },
+  {
+    "name": "Uros Zivanovic",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 13,
+    "totalEmv": 1520.2,
+    "engagementRate": 0.324737,
+    "mention": {
+      "posts": 4,
+      "emv": 339.6,
+      "avgLikes": 354.5,
+      "avgComments": 7.0,
+      "engagementRate": 0.253329,
+      "lift": -28.9
+    }
+  },
+  {
+    "name": "Alex Petrovic",
+    "sport": "BASEBALL",
+    "totalPosts": 14,
+    "totalEmv": 1516.8,
+    "engagementRate": 0.43566,
+    "logo": {
+      "posts": 1,
+      "emv": 104.0,
+      "avgLikes": 0.0,
+      "avgComments": 52.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 7,
+      "emv": 942.8,
+      "avgLikes": 643.4,
+      "avgComments": 3.0,
+      "engagementRate": 0.43566,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Alex Irvine",
+    "sport": "WOMENS_GYMNASTICS",
+    "totalPosts": 21,
+    "totalEmv": 1513.6,
+    "engagementRate": 0.065839,
+    "logo": {
+      "posts": 4,
+      "emv": 206.0,
+      "avgLikes": 0.0,
+      "avgComments": 25.8,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 210.0,
+      "avgLikes": 0.0,
+      "avgComments": 26.2,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Mara Clennon",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 14,
+    "totalEmv": 1513.6,
+    "engagementRate": 0.257326,
+    "logo": {
+      "posts": 1,
+      "emv": 98.4,
+      "avgLikes": 222.0,
+      "avgComments": 27.0,
+      "engagementRate": 0.180043,
+      "lift": -19.6
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 378.4,
+      "avgLikes": 631.0,
+      "avgComments": 31.5,
+      "engagementRate": 0.479031,
+      "lift": 113.8
+    }
+  },
+  {
+    "name": "William Grier McDuffie",
+    "sport": "FOOTBALL",
+    "totalPosts": 9,
+    "totalEmv": 1496.4,
+    "engagementRate": 0.294729,
+    "mention": {
+      "posts": 1,
+      "emv": 73.2,
+      "avgLikes": 246.0,
+      "avgComments": 12.0,
+      "engagementRate": 0.144134,
+      "lift": -54.0
+    }
+  },
+  {
+    "name": "Blayne Godfrey",
+    "sport": "SOFTBALL",
+    "totalPosts": 15,
+    "totalEmv": 1495.6,
+    "engagementRate": 0.25815,
+    "logo": {
+      "posts": 2,
+      "emv": 58.0,
+      "avgLikes": 0.0,
+      "avgComments": 14.5,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Libby Wilhelm",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 12,
+    "totalEmv": 1488.0,
+    "engagementRate": 0.336241,
+    "mention": {
+      "posts": 4,
+      "emv": 612.2,
+      "avgLikes": 457.8,
+      "avgComments": 30.8,
+      "engagementRate": 0.487039,
+      "lift": 86.7
+    }
+  },
+  {
+    "name": "Garrett Brewer",
+    "sport": "BASEBALL",
+    "totalPosts": 17,
+    "totalEmv": 1480.2,
+    "engagementRate": 0.602637,
+    "logo": {
+      "posts": 2,
+      "emv": 60.0,
+      "avgLikes": 0.0,
+      "avgComments": 15.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 493.2,
+      "avgLikes": 2396.0,
+      "avgComments": 7.0,
+      "engagementRate": 2.084128,
+      "lift": 580.3
+    }
+  },
+  {
+    "name": "Hayden Colson",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 14,
+    "totalEmv": 1469.8,
+    "engagementRate": 0.091701,
+    "logo": {
+      "posts": 3,
+      "emv": 546.4,
+      "avgLikes": 267.3,
+      "avgComments": 64.3,
+      "engagementRate": 0.199559,
+      "lift": 657.4
+    },
+    "mention": {
+      "posts": 5,
+      "emv": 756.4,
+      "avgLikes": 278.4,
+      "avgComments": 47.8,
+      "engagementRate": 0.19627,
+      "lift": 645.0
+    }
+  },
+  {
+    "name": "Molly Segars",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 12,
+    "totalEmv": 1463.0,
+    "engagementRate": 0.510428,
+    "mention": {
+      "posts": 5,
+      "emv": 770.6,
+      "avgLikes": 700.6,
+      "avgComments": 7.0,
+      "engagementRate": 0.750371,
+      "lift": 121.3
+    }
+  },
+  {
+    "name": "Alyssa Hastings",
+    "sport": "SOFTBALL",
+    "totalPosts": 15,
+    "totalEmv": 1461.8,
+    "engagementRate": 0.24538,
+    "logo": {
+      "posts": 1,
+      "emv": 82.0,
+      "avgLikes": 0.0,
+      "avgComments": 41.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 5,
+      "emv": 854.8,
+      "avgLikes": 370.8,
+      "avgComments": 48.4,
+      "engagementRate": 0.374473,
+      "lift": 123.0
+    }
+  },
+  {
+    "name": "River Paulk",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 13,
+    "totalEmv": 1452.4,
+    "engagementRate": 0.21306,
+    "logo": {
+      "posts": 1,
+      "emv": 12.8,
+      "avgLikes": 64.0,
+      "avgComments": 0.0,
+      "engagementRate": 0.042867,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 693.6,
+      "avgLikes": 319.3,
+      "avgComments": 83.7,
+      "engagementRate": 0.269791,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Trevor Booton",
+    "sport": "BASEBALL",
+    "totalPosts": 12,
+    "totalEmv": 1446.4,
+    "engagementRate": 0.216086,
+    "mention": {
+      "posts": 2,
+      "emv": 178.0,
+      "avgLikes": 360.0,
+      "avgComments": 8.5,
+      "engagementRate": 0.20049,
+      "lift": -8.5
+    }
+  },
+  {
+    "name": "Grace Ivey",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 13,
+    "totalEmv": 1443.8,
+    "engagementRate": 0.188807,
+    "mention": {
+      "posts": 2,
+      "emv": 196.2,
+      "avgLikes": 425.5,
+      "avgComments": 6.5,
+      "engagementRate": 0.216108,
+      "lift": 26.7
+    }
+  },
+  {
+    "name": "Sydney Swallom",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 17,
+    "totalEmv": 1443.6,
+    "engagementRate": 0.107958,
+    "logo": {
+      "posts": 1,
+      "emv": 175.4,
+      "avgLikes": 637.0,
+      "avgComments": 24.0,
+      "engagementRate": 0.229753,
+      "lift": 338.1
+    },
+    "mention": {
+      "posts": 5,
+      "emv": 557.8,
+      "avgLikes": 397.8,
+      "avgComments": 16.0,
+      "engagementRate": 0.177355,
+      "lift": 238.2
+    }
+  },
+  {
+    "name": "Izavion Miller",
+    "sport": "FOOTBALL",
+    "totalPosts": 7,
+    "totalEmv": 1424.4,
+    "engagementRate": 0.321647,
+    "logo": {
+      "posts": 1,
+      "emv": 200.0,
+      "avgLikes": 590.0,
+      "avgComments": 41.0,
+      "engagementRate": 0.321939,
+      "lift": 26.3
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 583.6,
+      "avgLikes": 829.0,
+      "avgComments": 63.0,
+      "engagementRate": 0.455102,
+      "lift": 78.6
+    }
+  },
+  {
+    "name": "Hollis Davidson III",
+    "sport": "FOOTBALL",
+    "totalPosts": 7,
+    "totalEmv": 1403.4,
+    "engagementRate": 0.279879,
+    "logo": {
+      "posts": 1,
+      "emv": 865.2,
+      "avgLikes": 3436.0,
+      "avgComments": 89.0,
+      "engagementRate": 0.49753,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 963.4,
+      "avgLikes": 1928.5,
+      "avgComments": 48.0,
+      "engagementRate": 0.279879,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Kate Murray",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 12,
+    "totalEmv": 1403.2,
+    "engagementRate": 0.27284,
+    "mention": {
+      "posts": 1,
+      "emv": 274.2,
+      "avgLikes": 1121.0,
+      "avgComments": 25.0,
+      "engagementRate": 0.897416,
+      "lift": 315.4
+    }
+  },
+  {
+    "name": "Audrey Dunn",
+    "sport": "WOMENS_TRACK_AND_FIELD",
+    "totalPosts": 10,
+    "totalEmv": 1391.6,
+    "engagementRate": 0.366667,
+    "mention": {
+      "posts": 5,
+      "emv": 809.0,
+      "avgLikes": 413.0,
+      "avgComments": 39.6,
+      "engagementRate": 0.458561,
+      "lift": 66.9
+    }
+  },
+  {
+    "name": "Sam Empey",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 7,
+    "totalEmv": 1383.8,
+    "engagementRate": 0.385426,
+    "mention": {
+      "posts": 2,
+      "emv": 741.4,
+      "avgLikes": 703.5,
+      "avgComments": 115.0,
+      "engagementRate": 0.598319,
+      "lift": 99.3
+    }
+  },
+  {
+    "name": "Michelle Fumagalli",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 13,
+    "totalEmv": 1380.2,
+    "engagementRate": 0.299854,
+    "mention": {
+      "posts": 1,
+      "emv": 77.8,
+      "avgLikes": 269.0,
+      "avgComments": 12.0,
+      "engagementRate": 0.270452,
+      "lift": -10.5
+    }
+  },
+  {
+    "name": "Ava Esposito",
+    "sport": "WOMENS_TENNIS",
+    "totalPosts": 15,
+    "totalEmv": 1379.4,
+    "engagementRate": 0.145336,
+    "logo": {
+      "posts": 1,
+      "emv": 120.0,
+      "avgLikes": 0.0,
+      "avgComments": 60.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 227.6,
+      "avgLikes": 409.0,
+      "avgComments": 16.0,
+      "engagementRate": 0.317401,
+      "lift": 936.4
+    }
+  },
+  {
+    "name": "Casey Cullen",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 14,
+    "totalEmv": 1376.6,
+    "engagementRate": 0.028969,
+    "logo": {
+      "posts": 1,
+      "emv": 150.0,
+      "avgLikes": 0.0,
+      "avgComments": 75.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 152.0,
+      "avgLikes": 0.0,
+      "avgComments": 38.0,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Brooke Jolstad",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 15,
+    "totalEmv": 1359.6,
+    "engagementRate": 0.209525,
+    "logo": {
+      "posts": 2,
+      "emv": 144.0,
+      "avgLikes": 0.0,
+      "avgComments": 36.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 314.4,
+      "avgLikes": 275.5,
+      "avgComments": 11.8,
+      "engagementRate": 0.172626,
+      "lift": -27.2
+    }
+  },
+  {
+    "name": "Chloe Brothers",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 14,
+    "totalEmv": 1338.8,
+    "engagementRate": 0.062081,
+    "logo": {
+      "posts": 1,
+      "emv": 112.4,
+      "avgLikes": 492.0,
+      "avgComments": 7.0,
+      "engagementRate": 0.098714,
+      "lift": 2759.4
+    },
+    "mention": {
+      "posts": 7,
+      "emv": 808.2,
+      "avgLikes": 130.1,
+      "avgComments": 44.7,
+      "engagementRate": 0.091395,
+      "lift": 2547.4
+    }
+  },
+  {
+    "name": "Kaitlyn Duhon",
+    "sport": "WOMENS_BASKETBALL",
+    "totalPosts": 23,
+    "totalEmv": 1326.6,
+    "engagementRate": 0.112657,
+    "logo": {
+      "posts": 11,
+      "emv": 555.2,
+      "avgLikes": 151.5,
+      "avgComments": 10.1,
+      "engagementRate": 0.112549,
+      "lift": 74.0
+    },
+    "mention": {
+      "posts": 7,
+      "emv": 478.0,
+      "avgLikes": 270.0,
+      "avgComments": 7.1,
+      "engagementRate": 0.167218,
+      "lift": 158.5
+    }
+  },
+  {
+    "name": "Kendra Dick",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 14,
+    "totalEmv": 1324.8,
+    "engagementRate": 0.175244,
+    "mention": {
+      "posts": 4,
+      "emv": 521.8,
+      "avgLikes": 317.2,
+      "avgComments": 33.5,
+      "engagementRate": 0.180856,
+      "lift": 14.2
+    }
+  },
+  {
+    "name": "Hannah Thuss",
+    "sport": "WOMENS_TRACK_AND_FIELD",
+    "totalPosts": 13,
+    "totalEmv": 1316.8,
+    "engagementRate": 0.330238,
+    "mention": {
+      "posts": 7,
+      "emv": 1020.8,
+      "avgLikes": 370.6,
+      "avgComments": 35.9,
+      "engagementRate": 0.330238,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Antwon Fegans Jr.",
+    "sport": "FOOTBALL",
+    "totalPosts": 13,
+    "totalEmv": 1315.4,
+    "engagementRate": 0.078909,
+    "logo": {
+      "posts": 1,
+      "emv": 344.4,
+      "avgLikes": 882.0,
+      "avgComments": 84.0,
+      "engagementRate": 0.199216,
+      "lift": 84.9
+    },
+    "mention": {
+      "posts": 5,
+      "emv": 366.0,
+      "avgLikes": 198.0,
+      "avgComments": 16.8,
+      "engagementRate": 0.044298,
+      "lift": -58.9
+    }
+  },
+  {
+    "name": "Coleman Granberry",
+    "sport": "FOOTBALL",
+    "totalPosts": 16,
+    "totalEmv": 1308.6,
+    "engagementRate": 0.043023,
+    "logo": {
+      "posts": 3,
+      "emv": 184.0,
+      "avgLikes": 0.0,
+      "avgComments": 30.7,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 360.2,
+      "avgLikes": 150.5,
+      "avgComments": 75.0,
+      "engagementRate": 0.099439,
+      "lift": 310.6
+    }
+  },
+  {
+    "name": "Ryan Ghea",
+    "sport": "FOOTBALL",
+    "totalPosts": 17,
+    "totalEmv": 1300.6,
+    "engagementRate": 0.008755,
+    "logo": {
+      "posts": 4,
+      "emv": 410.0,
+      "avgLikes": 0.0,
+      "avgComments": 51.2,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 7,
+      "emv": 394.8,
+      "avgLikes": 40.6,
+      "avgComments": 24.1,
+      "engagementRate": 0.025685,
+      "lift": 725.3
+    }
+  },
+  {
+    "name": "Ma'Nia Womack",
+    "sport": "SOFTBALL",
+    "totalPosts": 10,
+    "totalEmv": 1298.4,
+    "engagementRate": 0.336082,
+    "logo": {
+      "posts": 2,
+      "emv": 233.0,
+      "avgLikes": 552.5,
+      "avgComments": 3.0,
+      "engagementRate": 0.381787,
+      "lift": 36.8
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 541.2,
+      "avgLikes": 606.5,
+      "avgComments": 7.0,
+      "engagementRate": 0.421649,
+      "lift": 51.1
+    }
+  },
+  {
+    "name": "Morgan Carteaux",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 15,
+    "totalEmv": 1291.4,
+    "engagementRate": 0.094894,
+    "logo": {
+      "posts": 1,
+      "emv": 40.0,
+      "avgLikes": 0.0,
+      "avgComments": 20.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 38.0,
+      "avgLikes": 0.0,
+      "avgComments": 19.0,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Taylor Bacher",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 15,
+    "totalEmv": 1272.8,
+    "engagementRate": 0.052084,
+    "mention": {
+      "posts": 3,
+      "emv": 200.2,
+      "avgLikes": 70.3,
+      "avgComments": 26.3,
+      "engagementRate": 0.08393,
+      "lift": 314.7
+    }
+  },
+  {
+    "name": "SJ Geurin",
+    "sport": "SOFTBALL",
+    "totalPosts": 15,
+    "totalEmv": 1268.4,
+    "engagementRate": 0.219587,
+    "logo": {
+      "posts": 2,
+      "emv": 40.0,
+      "avgLikes": 0.0,
+      "avgComments": 10.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 6,
+      "emv": 662.0,
+      "avgLikes": 423.3,
+      "avgComments": 12.8,
+      "engagementRate": 0.203323,
+      "lift": -28.6
+    }
+  },
+  {
+    "name": "Shelby Balding",
+    "sport": "WOMENS_TRACK_AND_FIELD",
+    "totalPosts": 13,
+    "totalEmv": 1265.8,
+    "engagementRate": 0.194949,
+    "mention": {
+      "posts": 1,
+      "emv": 117.8,
+      "avgLikes": 249.0,
+      "avgComments": 34.0,
+      "engagementRate": 0.214394,
+      "lift": 11.0
+    }
+  },
+  {
+    "name": "Callie Hogg",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 14,
+    "totalEmv": 1259.4,
+    "engagementRate": 0.258311,
+    "mention": {
+      "posts": 7,
+      "emv": 591.2,
+      "avgLikes": 333.7,
+      "avgComments": 8.9,
+      "engagementRate": 0.28172,
+      "lift": 19.9
+    }
+  },
+  {
+    "name": "Avery Gillahan",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 15,
+    "totalEmv": 1257.4,
+    "engagementRate": 0.304269,
+    "logo": {
+      "posts": 1,
+      "emv": 78.0,
+      "avgLikes": 0.0,
+      "avgComments": 39.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 210.6,
+      "avgLikes": 3.0,
+      "avgComments": 105.0,
+      "engagementRate": 0.099815,
+      "lift": -80.4
+    }
+  },
+  {
+    "name": "Christian Ose-Afiana",
+    "sport": "FOOTBALL",
+    "totalPosts": 12,
+    "totalEmv": 1239.2,
+    "engagementRate": 0.115963,
+    "logo": {
+      "posts": 1,
+      "emv": 88.0,
+      "avgLikes": 0.0,
+      "avgComments": 44.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 904.0,
+      "avgLikes": 612.5,
+      "avgComments": 51.8,
+      "engagementRate": 0.22859,
+      "lift": 6751.3
+    }
+  },
+  {
+    "name": "Caroline Olsen",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 12,
+    "totalEmv": 1229.4,
+    "engagementRate": 0.124372,
+    "mention": {
+      "posts": 3,
+      "emv": 458.4,
+      "avgLikes": 560.7,
+      "avgComments": 20.3,
+      "engagementRate": 0.19464,
+      "lift": 92.8
+    }
+  },
+  {
+    "name": "Ty Thompson",
+    "sport": "BASEBALL",
+    "totalPosts": 5,
+    "totalEmv": 1226.8,
+    "engagementRate": 0.281437,
+    "logo": {
+      "posts": 1,
+      "emv": 200.2,
+      "avgLikes": 451.0,
+      "avgComments": 55.0,
+      "engagementRate": 0.201513,
+      "lift": -26.7
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 378.6,
+      "avgLikes": 853.0,
+      "avgComments": 104.0,
+      "engagementRate": 0.381123,
+      "lift": 38.7
+    }
+  },
+  {
+    "name": "Jack Roberts",
+    "sport": "MENS_GOLF",
+    "totalPosts": 3,
+    "totalEmv": 1186.4,
+    "engagementRate": 0.386258,
+    "logo": {
+      "posts": 1,
+      "emv": 82.6,
+      "avgLikes": 393.0,
+      "avgComments": 2.0,
+      "engagementRate": 0.119915,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 1103.8,
+      "avgLikes": 1594.5,
+      "avgComments": 116.5,
+      "engagementRate": 0.519429,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Marcel Kulik",
+    "sport": "BASEBALL",
+    "totalPosts": 7,
+    "totalEmv": 1182.4,
+    "engagementRate": 0.30674,
+    "mention": {
+      "posts": 1,
+      "emv": 295.0,
+      "avgLikes": 465.0,
+      "avgComments": 101.0,
+      "engagementRate": 0.389271,
+      "lift": 32.9
+    }
+  },
+  {
+    "name": "Carys Worby",
+    "sport": "WOMENS_GOLF",
+    "totalPosts": 17,
+    "totalEmv": 1166.6,
+    "engagementRate": 0.136155,
+    "logo": {
+      "posts": 1,
+      "emv": 36.6,
+      "avgLikes": 3.0,
+      "avgComments": 18.0,
+      "engagementRate": 0.008229,
+      "lift": -94.9
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 100.6,
+      "avgLikes": 1.0,
+      "avgComments": 16.7,
+      "engagementRate": 0.008229,
+      "lift": -94.9
+    }
+  },
+  {
+    "name": "Danny Schmidt",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 12,
+    "totalEmv": 1165.2,
+    "engagementRate": 0.305408,
+    "mention": {
+      "posts": 9,
+      "emv": 867.6,
+      "avgLikes": 406.4,
+      "avgComments": 7.6,
+      "engagementRate": 0.313162,
+      "lift": 11.0
+    }
+  },
+  {
+    "name": "Maggie McGuire",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 13,
+    "totalEmv": 1164.6,
+    "engagementRate": 0.042094,
+    "mention": {
+      "posts": 1,
+      "emv": 66.0,
+      "avgLikes": 0.0,
+      "avgComments": 33.0,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Olivia Greaves",
+    "sport": "WOMENS_GYMNASTICS",
+    "totalPosts": 15,
+    "totalEmv": 1162.4,
+    "engagementRate": 0.002544,
+    "mention": {
+      "posts": 2,
+      "emv": 386.6,
+      "avgLikes": 706.5,
+      "avgComments": 26.0,
+      "engagementRate": 0.000634,
+      "lift": -76.6
+    }
+  },
+  {
+    "name": "Sandy Smith",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 13,
+    "totalEmv": 1161.6,
+    "engagementRate": 0.190708,
+    "logo": {
+      "posts": 1,
+      "emv": 134.2,
+      "avgLikes": 221.0,
+      "avgComments": 45.0,
+      "engagementRate": 0.236025,
+      "lift": 72.2
+    },
+    "mention": {
+      "posts": 6,
+      "emv": 742.2,
+      "avgLikes": 248.5,
+      "avgComments": 37.0,
+      "engagementRate": 0.253327,
+      "lift": 84.9
+    }
+  },
+  {
+    "name": "Jett Johnston",
+    "sport": "BASEBALL",
+    "totalPosts": 14,
+    "totalEmv": 1160.4,
+    "engagementRate": 0.133548,
+    "logo": {
+      "posts": 1,
+      "emv": 10.0,
+      "avgLikes": 0.0,
+      "avgComments": 5.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 489.2,
+      "avgLikes": 968.0,
+      "avgComments": 25.5,
+      "engagementRate": 0.38996,
+      "lift": 7199.3
+    }
+  },
+  {
+    "name": "Jourdin Crawford",
+    "sport": "FOOTBALL",
+    "totalPosts": 18,
+    "totalEmv": 1139.8,
+    "engagementRate": 0.050772,
+    "logo": {
+      "posts": 2,
+      "emv": 544.6,
+      "avgLikes": 1186.5,
+      "avgComments": 17.5,
+      "engagementRate": 0.216547,
+      "lift": 723.4
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 557.0,
+      "avgLikes": 1177.5,
+      "avgComments": 21.5,
+      "engagementRate": 0.215647,
+      "lift": 720.0
+    }
+  },
+  {
+    "name": "Brityan Godfrey",
+    "sport": "SOFTBALL",
+    "totalPosts": 12,
+    "totalEmv": 1127.2,
+    "engagementRate": 0.189903,
+    "mention": {
+      "posts": 1,
+      "emv": 14.0,
+      "avgLikes": 0.0,
+      "avgComments": 7.0,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Mason McCraine",
+    "sport": "BASEBALL",
+    "totalPosts": 2,
+    "totalEmv": 1103.8,
+    "engagementRate": 2.741986,
+    "mention": {
+      "posts": 2,
+      "emv": 1103.8,
+      "avgLikes": 2639.5,
+      "avgComments": 12.0,
+      "engagementRate": 2.741986,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Will Upton",
+    "sport": "FOOTBALL",
+    "totalPosts": 7,
+    "totalEmv": 1103.8,
+    "engagementRate": 0.202761
+  },
+  {
+    "name": "Rebekah Smith",
+    "sport": "WOMENS_GYMNASTICS",
+    "totalPosts": 10,
+    "totalEmv": 1102.0,
+    "engagementRate": 0.207487,
+    "logo": {
+      "posts": 1,
+      "emv": 77.6,
+      "avgLikes": 128.0,
+      "avgComments": 26.0,
+      "engagementRate": 0.138489,
+      "lift": -31.2
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 466.6,
+      "avgLikes": 224.3,
+      "avgComments": 55.3,
+      "engagementRate": 0.229053,
+      "lift": 13.8
+    }
+  },
+  {
+    "name": "Lauren Hall",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 13,
+    "totalEmv": 1088.8,
+    "engagementRate": 0.29281,
+    "mention": {
+      "posts": 5,
+      "emv": 477.8,
+      "avgLikes": 373.8,
+      "avgComments": 10.4,
+      "engagementRate": 0.308598,
+      "lift": 10.1
+    }
+  },
+  {
+    "name": "Charlotte Clark",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 13,
+    "totalEmv": 1086.8,
+    "engagementRate": 0.625837,
+    "logo": {
+      "posts": 1,
+      "emv": 51.8,
+      "avgLikes": 219.0,
+      "avgComments": 4.0,
+      "engagementRate": 0.473461,
+      "lift": 6.7
+    },
+    "mention": {
+      "posts": 6,
+      "emv": 610.6,
+      "avgLikes": 382.2,
+      "avgComments": 12.7,
+      "engagementRate": 0.838287,
+      "lift": 88.9
+    }
+  },
+  {
+    "name": "Joe Phillips",
+    "sport": "FOOTBALL",
+    "totalPosts": 3,
+    "totalEmv": 1064.8,
+    "engagementRate": 0.671341,
+    "logo": {
+      "posts": 1,
+      "emv": 796.0,
+      "avgLikes": 3450.0,
+      "avgComments": 53.0,
+      "engagementRate": 1.079507,
+      "lift": 310.2
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 17.0,
+      "avgLikes": 85.0,
+      "avgComments": 0.0,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Mason Koch",
+    "sport": "BASEBALL",
+    "totalPosts": 6,
+    "totalEmv": 1063.4,
+    "engagementRate": 0.395432
+  },
+  {
+    "name": "Harissoum Coulibaly",
+    "sport": "WOMENS_BASKETBALL",
+    "totalPosts": 14,
+    "totalEmv": 1045.6,
+    "engagementRate": 0.216509,
+    "logo": {
+      "posts": 4,
+      "emv": 259.4,
+      "avgLikes": 176.8,
+      "avgComments": 14.8,
+      "engagementRate": 0.153664,
+      "lift": 547.5
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 283.6,
+      "avgLikes": 878.0,
+      "avgComments": 54.0,
+      "engagementRate": 0.597819,
+      "lift": 2418.9
+    }
+  },
+  {
+    "name": "Drew Whalen",
+    "sport": "BASEBALL",
+    "totalPosts": 10,
+    "totalEmv": 1037.4,
+    "engagementRate": 0.400529,
+    "mention": {
+      "posts": 2,
+      "emv": 438.0,
+      "avgLikes": 700.0,
+      "avgComments": 39.5,
+      "engagementRate": 0.813531,
+      "lift": 173.7
+    }
+  },
+  {
+    "name": "Kailee Rife",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 13,
+    "totalEmv": 1037.0,
+    "engagementRate": 0.228114,
+    "mention": {
+      "posts": 6,
+      "emv": 648.8,
+      "avgLikes": 365.7,
+      "avgComments": 17.5,
+      "engagementRate": 0.293389,
+      "lift": 80.2
+    }
+  },
+  {
+    "name": "Todd Clay",
+    "sport": "BASEBALL",
+    "totalPosts": 7,
+    "totalEmv": 1035.6,
+    "engagementRate": 0.819522,
+    "logo": {
+      "posts": 3,
+      "emv": 407.6,
+      "avgLikes": 372.7,
+      "avgComments": 30.7,
+      "engagementRate": 0.566479,
+      "lift": -10.4
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 427.6,
+      "avgLikes": 904.0,
+      "avgComments": 16.5,
+      "engagementRate": 1.292837,
+      "lift": 104.6
+    }
+  },
+  {
+    "name": "Harrison Clemmer",
+    "sport": "FOOTBALL",
+    "totalPosts": 8,
+    "totalEmv": 1030.2,
+    "engagementRate": 0.196689
+  },
+  {
+    "name": "Clara Koulibaly",
+    "sport": "WOMENS_BASKETBALL",
+    "totalPosts": 13,
+    "totalEmv": 1028.8,
+    "engagementRate": 0.224594,
+    "logo": {
+      "posts": 1,
+      "emv": 98.0,
+      "avgLikes": 0.0,
+      "avgComments": 49.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 280.2,
+      "avgLikes": 373.7,
+      "avgComments": 9.3,
+      "engagementRate": 0.288621,
+      "lift": 787.7
+    }
+  },
+  {
+    "name": "Jackson Sanders",
+    "sport": "BASEBALL",
+    "totalPosts": 14,
+    "totalEmv": 1025.2,
+    "engagementRate": 0.130715,
+    "logo": {
+      "posts": 1,
+      "emv": 38.0,
+      "avgLikes": 0.0,
+      "avgComments": 19.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 5,
+      "emv": 578.4,
+      "avgLikes": 434.4,
+      "avgComments": 14.4,
+      "engagementRate": 0.149168,
+      "lift": 98.0
+    }
+  },
+  {
+    "name": "Kate Marie Davis",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 12,
+    "totalEmv": 1014.6,
+    "engagementRate": 0.163375,
+    "mention": {
+      "posts": 1,
+      "emv": 84.6,
+      "avgLikes": 3.0,
+      "avgComments": 42.0,
+      "engagementRate": 0.023697,
+      "lift": -86.5
+    }
+  },
+  {
+    "name": "Evan Hill",
+    "sport": "MENS_TRACK_AND_FIELD",
+    "totalPosts": 8,
+    "totalEmv": 984.4,
+    "engagementRate": 0.387339,
+    "mention": {
+      "posts": 3,
+      "emv": 473.4,
+      "avgLikes": 415.7,
+      "avgComments": 37.3,
+      "engagementRate": 0.486052,
+      "lift": 48.1
+    }
+  },
+  {
+    "name": "Lora Komoroczy",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 12,
+    "totalEmv": 965.6,
+    "engagementRate": 0.187356,
+    "logo": {
+      "posts": 1,
+      "emv": 106.4,
+      "avgLikes": 452.0,
+      "avgComments": 8.0,
+      "engagementRate": 0.18837,
+      "lift": -32.2
+    },
+    "mention": {
+      "posts": 7,
+      "emv": 525.8,
+      "avgLikes": 258.4,
+      "avgComments": 11.7,
+      "engagementRate": 0.151161,
+      "lift": -45.6
+    }
+  },
+  {
+    "name": "Mack Schumann",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 3,
+    "totalEmv": 923.8,
+    "engagementRate": 0.693318,
+    "mention": {
+      "posts": 2,
+      "emv": 749.8,
+      "avgLikes": 544.5,
+      "avgComments": 133.0,
+      "engagementRate": 0.76295,
+      "lift": 37.7
+    }
+  },
+  {
+    "name": "Rokas Jazdauskas",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 10,
+    "totalEmv": 914.4,
+    "engagementRate": 0.697662,
+    "mention": {
+      "posts": 3,
+      "emv": 316.4,
+      "avgLikes": 470.7,
+      "avgComments": 5.7,
+      "engagementRate": 0.856715,
+      "lift": 36.1
+    }
+  },
+  {
+    "name": "Fizz Hutton",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 7,
+    "totalEmv": 908.4,
+    "engagementRate": 0.420877,
+    "mention": {
+      "posts": 1,
+      "emv": 81.2,
+      "avgLikes": 306.0,
+      "avgComments": 10.0,
+      "engagementRate": 0.234074,
+      "lift": -54.5
+    }
+  },
+  {
+    "name": "Isabel McGovern",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 14,
+    "totalEmv": 907.4,
+    "engagementRate": 0.292778,
+    "logo": {
+      "posts": 1,
+      "emv": 70.2,
+      "avgLikes": 191.0,
+      "avgComments": 16.0,
+      "engagementRate": 0.319938,
+      "lift": 17.9
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 215.0,
+      "avgLikes": 215.0,
+      "avgComments": 14.3,
+      "engagementRate": 0.355329,
+      "lift": 31.0
+    }
+  },
+  {
+    "name": "Rosalie Reef",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 8,
+    "totalEmv": 902.0,
+    "engagementRate": 0.207088,
+    "mention": {
+      "posts": 3,
+      "emv": 398.8,
+      "avgLikes": 148.0,
+      "avgComments": 51.7,
+      "engagementRate": 0.517738,
+      "lift": 900.2
+    }
+  },
+  {
+    "name": "Brady Wilson",
+    "sport": "BASEBALL",
+    "totalPosts": 15,
+    "totalEmv": 898.0,
+    "engagementRate": 0.425756,
+    "mention": {
+      "posts": 3,
+      "emv": 446.0,
+      "avgLikes": 466.7,
+      "avgComments": 27.7,
+      "engagementRate": 0.425756,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Bella Ekk",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 13,
+    "totalEmv": 897.0,
+    "engagementRate": 0.019529,
+    "mention": {
+      "posts": 2,
+      "emv": 122.0,
+      "avgLikes": 0.0,
+      "avgComments": 30.5,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Ethan Swart",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 10,
+    "totalEmv": 892.8,
+    "engagementRate": 0.271708,
+    "logo": {
+      "posts": 2,
+      "emv": 144.6,
+      "avgLikes": 201.5,
+      "avgComments": 16.0,
+      "engagementRate": 0.175687,
+      "lift": -33.3
+    },
+    "mention": {
+      "posts": 7,
+      "emv": 737.6,
+      "avgLikes": 316.9,
+      "avgComments": 21.0,
+      "engagementRate": 0.272906,
+      "lift": 3.6
+    }
+  },
+  {
+    "name": "Elle Squires",
+    "sport": "WOMENS_GOLF",
+    "totalPosts": 15,
+    "totalEmv": 886.0,
+    "engagementRate": 0.017064,
+    "logo": {
+      "posts": 1,
+      "emv": 100.0,
+      "avgLikes": 0.0,
+      "avgComments": 50.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 133.4,
+      "avgLikes": 12.3,
+      "avgComments": 21.0,
+      "engagementRate": 0.012482,
+      "lift": -52.4
+    }
+  },
+  {
+    "name": "Elizabeth Klein",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 12,
+    "totalEmv": 880.8,
+    "engagementRate": 0.068164,
+    "mention": {
+      "posts": 2,
+      "emv": 224.8,
+      "avgLikes": 327.0,
+      "avgComments": 23.5,
+      "engagementRate": 0.271495,
+      "lift": 887.3
+    }
+  },
+  {
+    "name": "Holland Barnett",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 15,
+    "totalEmv": 868.4,
+    "engagementRate": 0.240231,
+    "logo": {
+      "posts": 2,
+      "emv": 74.0,
+      "avgLikes": 0.0,
+      "avgComments": 18.5,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 6,
+      "emv": 241.2,
+      "avgLikes": 1.0,
+      "avgComments": 20.0,
+      "engagementRate": 0.020724,
+      "lift": -96.9
+    }
+  },
+  {
+    "name": "Emerson Ricketts",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 12,
+    "totalEmv": 864.0,
+    "engagementRate": 0.325239,
+    "mention": {
+      "posts": 2,
+      "emv": 413.0,
+      "avgLikes": 787.5,
+      "avgComments": 24.5,
+      "engagementRate": 0.298749,
+      "lift": -21.0
+    }
+  },
+  {
+    "name": "Caroline Buchanan",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 12,
+    "totalEmv": 845.4,
+    "engagementRate": 0.480818,
+    "mention": {
+      "posts": 6,
+      "emv": 707.4,
+      "avgLikes": 561.2,
+      "avgComments": 2.8,
+      "engagementRate": 0.480818,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Tate Cutler",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 7,
+    "totalEmv": 811.2,
+    "engagementRate": 0.402213,
+    "mention": {
+      "posts": 3,
+      "emv": 403.0,
+      "avgLikes": 398.3,
+      "avgComments": 27.3,
+      "engagementRate": 0.484814,
+      "lift": 42.5
+    }
+  },
+  {
+    "name": "Manu Baptista Filipe",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 13,
+    "totalEmv": 809.4,
+    "engagementRate": 0.102312,
+    "logo": {
+      "posts": 1,
+      "emv": 24.0,
+      "avgLikes": 0.0,
+      "avgComments": 12.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 316.8,
+      "avgLikes": 198.0,
+      "avgComments": 33.0,
+      "engagementRate": 0.150049,
+      "lift": 2093.9
+    }
+  },
+  {
+    "name": "Melania Luostari",
+    "sport": "SOFTBALL",
+    "totalPosts": 14,
+    "totalEmv": 778.6,
+    "engagementRate": 0.261432,
+    "logo": {
+      "posts": 2,
+      "emv": 59.4,
+      "avgLikes": 128.5,
+      "avgComments": 2.0,
+      "engagementRate": 0.15704,
+      "lift": -32.8
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 385.6,
+      "avgLikes": 284.5,
+      "avgComments": 19.8,
+      "engagementRate": 0.366125,
+      "lift": 56.7
+    }
+  },
+  {
+    "name": "Tai Buster",
+    "sport": "FOOTBALL",
+    "totalPosts": 14,
+    "totalEmv": 771.8,
+    "engagementRate": 0.153853,
+    "logo": {
+      "posts": 1,
+      "emv": 46.0,
+      "avgLikes": 0.0,
+      "avgComments": 23.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 15.2,
+      "avgLikes": 38.0,
+      "avgComments": 0.0,
+      "engagementRate": 0.026063,
+      "lift": -87.3
+    }
+  },
+  {
+    "name": "Cade Barnett",
+    "sport": "FOOTBALL",
+    "totalPosts": 11,
+    "totalEmv": 747.2,
+    "engagementRate": 0.006591,
+    "logo": {
+      "posts": 1,
+      "emv": 92.0,
+      "avgLikes": 0.0,
+      "avgComments": 46.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 306.0,
+      "avgLikes": 0.0,
+      "avgComments": 76.5,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Mackenzie Roy",
+    "sport": "WOMENS_TRACK_AND_FIELD",
+    "totalPosts": 5,
+    "totalEmv": 743.2,
+    "engagementRate": 0.447591,
+    "mention": {
+      "posts": 4,
+      "emv": 644.2,
+      "avgLikes": 460.2,
+      "avgComments": 34.5,
+      "engagementRate": 0.48648,
+      "lift": 66.6
+    }
+  },
+  {
+    "name": "Georgia Lessmann",
+    "sport": "SOFTBALL",
+    "totalPosts": 15,
+    "totalEmv": 737.6,
+    "engagementRate": 0.208757,
+    "logo": {
+      "posts": 2,
+      "emv": 38.0,
+      "avgLikes": 0.0,
+      "avgComments": 9.5,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 2,
+      "emv": 145.0,
+      "avgLikes": 212.5,
+      "avgComments": 15.0,
+      "engagementRate": 0.36747,
+      "lift": 634.3
+    }
+  },
+  {
+    "name": "Olivia Dinehart",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 14,
+    "totalEmv": 729.0,
+    "engagementRate": 0.023451,
+    "logo": {
+      "posts": 1,
+      "emv": 90.0,
+      "avgLikes": 0.0,
+      "avgComments": 45.0,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Malachi Harris",
+    "sport": "FOOTBALL",
+    "totalPosts": 8,
+    "totalEmv": 727.8,
+    "engagementRate": 0.194836
+  },
+  {
+    "name": "Nickson Chebii",
+    "sport": "MENS_TRACK_AND_FIELD",
+    "totalPosts": 16,
+    "totalEmv": 714.2,
+    "engagementRate": 0.299113,
+    "mention": {
+      "posts": 3,
+      "emv": 501.8,
+      "avgLikes": 786.3,
+      "avgComments": 5.0,
+      "engagementRate": 1.295145,
+      "lift": 1770.0
+    }
+  },
+  {
+    "name": "Arianna Roy",
+    "sport": "WOMENS_TRACK_AND_FIELD",
+    "totalPosts": 4,
+    "totalEmv": 682.4,
+    "engagementRate": 0.363927,
+    "mention": {
+      "posts": 2,
+      "emv": 427.4,
+      "avgLikes": 378.5,
+      "avgComments": 69.0,
+      "engagementRate": 0.408676,
+      "lift": 28.0
+    }
+  },
+  {
+    "name": "Catie Reachard",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 14,
+    "totalEmv": 675.2,
+    "engagementRate": 0.076675,
+    "mention": {
+      "posts": 2,
+      "emv": 196.0,
+      "avgLikes": 235.0,
+      "avgComments": 25.5,
+      "engagementRate": 0.352503,
+      "lift": 1048.1
+    }
+  },
+  {
+    "name": "Eva Ionescu",
+    "sport": "WOMENS_TENNIS",
+    "totalPosts": 7,
+    "totalEmv": 656.8,
+    "engagementRate": 0.280519,
+    "mention": {
+      "posts": 1,
+      "emv": 156.8,
+      "avgLikes": 454.0,
+      "avgComments": 33.0,
+      "engagementRate": 0.338429,
+      "lift": 34.5
+    }
+  },
+  {
+    "name": "Eli Morton",
+    "sport": "FOOTBALL",
+    "totalPosts": 14,
+    "totalEmv": 655.2,
+    "engagementRate": 0.003069,
+    "logo": {
+      "posts": 1,
+      "emv": 68.0,
+      "avgLikes": 0.0,
+      "avgComments": 34.0,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Nora Weber",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 14,
+    "totalEmv": 649.4,
+    "engagementRate": 0.284449,
+    "logo": {
+      "posts": 2,
+      "emv": 211.6,
+      "avgLikes": 189.0,
+      "avgComments": 34.0,
+      "engagementRate": 0.465553,
+      "lift": 107.8
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 211.6,
+      "avgLikes": 378.0,
+      "avgComments": 68.0,
+      "engagementRate": 0.465553,
+      "lift": 107.8
+    }
+  },
+  {
+    "name": "Maston Ballew",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 5,
+    "totalEmv": 625.8,
+    "engagementRate": 0.344288,
+    "mention": {
+      "posts": 3,
+      "emv": 290.2,
+      "avgLikes": 353.7,
+      "avgComments": 13.0,
+      "engagementRate": 0.322203,
+      "lift": -14.6
+    }
+  },
+  {
+    "name": "Malik Autry",
+    "sport": "FOOTBALL",
+    "totalPosts": 5,
+    "totalEmv": 614.0,
+    "engagementRate": 0,
+    "logo": {
+      "posts": 2,
+      "emv": 344.0,
+      "avgLikes": 0.0,
+      "avgComments": 86.0,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Kiia Metsakonkola",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 5,
+    "totalEmv": 601.0,
+    "engagementRate": 0.407285,
+    "mention": {
+      "posts": 2,
+      "emv": 393.0,
+      "avgLikes": 642.5,
+      "avgComments": 34.0,
+      "engagementRate": 0.407285,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Malayna Tamborra",
+    "sport": "SOFTBALL",
+    "totalPosts": 16,
+    "totalEmv": 539.8,
+    "engagementRate": 0.006505,
+    "logo": {
+      "posts": 1,
+      "emv": 44.0,
+      "avgLikes": 0.0,
+      "avgComments": 22.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 44.0,
+      "avgLikes": 0.0,
+      "avgComments": 22.0,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Delaney Aumua",
+    "sport": "SOFTBALL",
+    "totalPosts": 5,
+    "totalEmv": 505.0,
+    "engagementRate": 0.377598,
+    "logo": {
+      "posts": 1,
+      "emv": 35.2,
+      "avgLikes": 116.0,
+      "avgComments": 6.0,
+      "engagementRate": 0.120912,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 4,
+      "emv": 413.0,
+      "avgLikes": 281.2,
+      "avgComments": 23.5,
+      "engagementRate": 0.377598,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Charley Schwinger",
+    "sport": "FOOTBALL",
+    "totalPosts": 5,
+    "totalEmv": 467.0,
+    "engagementRate": 0.368732
+  },
+  {
+    "name": "Benton Cantey",
+    "sport": "FOOTBALL",
+    "totalPosts": 6,
+    "totalEmv": 450.2,
+    "engagementRate": 0.264497
+  },
+  {
+    "name": "Jon Vanzandt",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 9,
+    "totalEmv": 445.4,
+    "engagementRate": 0.328316,
+    "mention": {
+      "posts": 1,
+      "emv": 179.4,
+      "avgLikes": 797.0,
+      "avgComments": 10.0,
+      "engagementRate": 0.328316,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Tyler Spielman",
+    "sport": "MENS_GOLF",
+    "totalPosts": 2,
+    "totalEmv": 431.8,
+    "engagementRate": 0.309389,
+    "mention": {
+      "posts": 2,
+      "emv": 431.8,
+      "avgLikes": 224.5,
+      "avgComments": 85.5,
+      "engagementRate": 0.309389,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Tate Johnson",
+    "sport": "FOOTBALL",
+    "totalPosts": 4,
+    "totalEmv": 430.6,
+    "engagementRate": 0.053275
+  },
+  {
+    "name": "Zykeivous Walker",
+    "sport": "FOOTBALL",
+    "totalPosts": 5,
+    "totalEmv": 424.0,
+    "engagementRate": 0,
+    "logo": {
+      "posts": 1,
+      "emv": 104.0,
+      "avgLikes": 0.0,
+      "avgComments": 52.0,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Thalia Martin",
+    "sport": "SOFTBALL",
+    "totalPosts": 4,
+    "totalEmv": 401.8,
+    "engagementRate": 0.256885
+  },
+  {
+    "name": "Tyler Brown",
+    "sport": "FOOTBALL",
+    "totalPosts": 14,
+    "totalEmv": 326.8,
+    "engagementRate": 0.035372,
+    "mention": {
+      "posts": 8,
+      "emv": 220.4,
+      "avgLikes": 72.8,
+      "avgComments": 6.5,
+      "engagementRate": 0.039526,
+      "lift": 32.5
+    }
+  },
+  {
+    "name": "Joshua Kosgei",
+    "sport": "MENS_TRACK_AND_FIELD",
+    "totalPosts": 10,
+    "totalEmv": 276.8,
+    "engagementRate": 0.087227
+  },
+  {
+    "name": "LJ Cormier",
+    "sport": "BASEBALL",
+    "totalPosts": 3,
+    "totalEmv": 260.0,
+    "engagementRate": 0
+  },
+  {
+    "name": "Elizabeth Noll",
+    "sport": "EQUESTRIAN",
+    "totalPosts": 5,
+    "totalEmv": 251.2,
+    "engagementRate": 0.754656,
+    "logo": {
+      "posts": 1,
+      "emv": 59.6,
+      "avgLikes": 278.0,
+      "avgComments": 2.0,
+      "engagementRate": 1.133603,
+      "lift": 73.4
+    },
+    "mention": {
+      "posts": 3,
+      "emv": 147.0,
+      "avgLikes": 198.3,
+      "avgComments": 4.7,
+      "engagementRate": 0.821862,
+      "lift": 25.7
+    }
+  },
+  {
+    "name": "Angena Belloso",
+    "sport": "WOMENS_BASKETBALL",
+    "totalPosts": 7,
+    "totalEmv": 231.0,
+    "engagementRate": 0.069938,
+    "logo": {
+      "posts": 2,
+      "emv": 87.8,
+      "avgLikes": 99.5,
+      "avgComments": 12.0,
+      "engagementRate": 0.092259,
+      "lift": 264.7
+    }
+  },
+  {
+    "name": "Zoey Zeller",
+    "sport": "SWIMMING_AND_DIVING",
+    "totalPosts": 9,
+    "totalEmv": 220.6,
+    "engagementRate": 0.01771,
+    "mention": {
+      "posts": 1,
+      "emv": 44.6,
+      "avgLikes": 3.0,
+      "avgComments": 22.0,
+      "engagementRate": 0.036443,
+      "lift": 149.8
+    }
+  },
+  {
+    "name": "Isaac Boulger",
+    "sport": "FOOTBALL",
+    "totalPosts": 3,
+    "totalEmv": 153.0,
+    "engagementRate": 0.301205
+  },
+  {
+    "name": "Katie Cranston",
+    "sport": "WOMENS_GOLF",
+    "totalPosts": 1,
+    "totalEmv": 66.0,
+    "engagementRate": 0
+  },
+  {
+    "name": "Tyler Johnson",
+    "sport": "FOOTBALL",
+    "totalPosts": 6,
+    "totalEmv": 59.6,
+    "engagementRate": 0.001096,
+    "logo": {
+      "posts": 1,
+      "emv": 8.0,
+      "avgLikes": 0.0,
+      "avgComments": 4.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 5,
+      "emv": 15.6,
+      "avgLikes": 3.6,
+      "avgComments": 1.2,
+      "engagementRate": 0.001096,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Billy Blaydes",
+    "sport": "MENS_TENNIS",
+    "totalPosts": 1,
+    "totalEmv": 40.6,
+    "engagementRate": 0.011448,
+    "logo": {
+      "posts": 1,
+      "emv": 40.6,
+      "avgLikes": 3.0,
+      "avgComments": 20.0,
+      "engagementRate": 0.011448,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Antonio Melendez",
+    "sport": "FOOTBALL",
+    "totalPosts": 2,
+    "totalEmv": 16.0,
+    "engagementRate": 0,
+    "mention": {
+      "posts": 1,
+      "emv": 0.0,
+      "avgLikes": 0.0,
+      "avgComments": 0.0,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Broderick Shull",
+    "sport": "FOOTBALL",
+    "totalPosts": 2,
+    "totalEmv": 1.4,
+    "engagementRate": 0.030702,
+    "mention": {
+      "posts": 2,
+      "emv": 1.4,
+      "avgLikes": 3.5,
+      "avgComments": 0.0,
+      "engagementRate": 0.030702,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Jacobe' Ward",
+    "sport": "FOOTBALL",
+    "totalPosts": 1,
+    "totalEmv": 0.0,
+    "engagementRate": 0,
+    "logo": {
+      "posts": 1,
+      "emv": 0.0,
+      "avgLikes": 0.0,
+      "avgComments": 0.0,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  },
+  {
+    "name": "Shelby Sallee",
+    "sport": "WOMENS_SOCCER",
+    "totalPosts": 8,
+    "totalEmv": 0.0,
+    "engagementRate": 0,
+    "logo": {
+      "posts": 4,
+      "emv": 0.0,
+      "avgLikes": 0.0,
+      "avgComments": 0.0,
+      "engagementRate": 0,
+      "lift": 0
+    },
+    "mention": {
+      "posts": 1,
+      "emv": 0.0,
+      "avgLikes": 0.0,
+      "avgComments": 0.0,
+      "engagementRate": 0,
+      "lift": 0
+    }
+  }
+]
