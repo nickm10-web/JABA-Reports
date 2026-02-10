@@ -154,16 +154,17 @@ export function AuburnCampaignOverview({ onBack }: AuburnCampaignOverviewProps) 
         )}
         <h1 className="text-4xl font-black tracking-tight">
           <span className="text-gray-900">CAMPAIGN</span>
+          {' '}
           <span className="text-[#E87722] italic">OVERVIEW</span>
         </h1>
       </div>
 
       <div className="max-w-7xl mx-auto px-8 py-8 space-y-8">
         {/* ─── Campaign Selector ─── */}
-        <div className="bg-white rounded-2xl border border-gray-200 p-6 inline-flex items-center gap-4 shadow-sm">
+        <div className="flex items-center justify-center gap-4">
           <div className="flex items-center gap-4">
             {/* School Logo & Info */}
-            <div className="w-16 h-16 rounded-lg bg-white p-2 flex items-center justify-center">
+            <div className="w-28 h-28 flex items-center justify-center">
               <img
                 src={campaignData.school.logo}
                 alt={campaignData.school.name}
@@ -178,26 +179,23 @@ export function AuburnCampaignOverview({ onBack }: AuburnCampaignOverviewProps) 
                 {campaignData.school.sport}
               </p>
             </div>
-
-            {/* Close button */}
-            <button className="ml-2 w-6 h-6 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-400 transition-colors">
-              <span className="text-lg leading-none">&times;</span>
-            </button>
           </div>
 
           {/* Brand Badge */}
           <div className="flex items-center gap-4">
-            <img
-              src="/baumhowers-logo.jpg"
-              alt="Baumhower's"
-              className="w-20 h-20 object-contain"
-            />
+            <div className="w-28 h-28 flex items-center justify-center">
+              <img
+                src="/Untitled%20design%20(53).png"
+                alt="Baumhower's"
+                className="w-full h-full object-contain"
+              />
+            </div>
             <div>
               <h2 className="text-xl font-black uppercase text-gray-900">
-                Auburn
+                Baumhower's
               </h2>
               <p className="text-sm text-gray-500 uppercase tracking-wide">
-                Baumhower's
+                Auburn
               </p>
             </div>
           </div>
