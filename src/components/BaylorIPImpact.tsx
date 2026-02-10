@@ -1677,7 +1677,7 @@ const ncaaD1Schools = [
   { name: 'Purdue', conf: 'Big 10', posts: 5142, adoption: 34.4, logo: 31.4, mention: 12.7, collab: 3.28 },
   { name: 'Mississippi', conf: 'SEC', posts: 2239, adoption: 34.3, logo: 34.3, mention: 0, collab: 0 },
   { name: 'Arkansas', conf: 'SEC', posts: 5597, adoption: 34.0, logo: 31.1, mention: 10.3, collab: 0.91 },
-  { name: 'Baylor', conf: 'SEC', posts: 5314, adoption: 33.7, logo: 12.3, mention: 25.9, collab: 0.39 },
+  { name: 'Auburn', conf: 'SEC', posts: 5314, adoption: 33.7, logo: 12.3, mention: 25.9, collab: 0.39 },
   { name: 'Iowa', conf: 'Big 10', posts: 2254, adoption: 33.4, logo: 33.4, mention: 0, collab: 0 },
   { name: 'Texas A&M', conf: 'SEC', posts: 3419, adoption: 32.3, logo: 15.4, mention: 24.5, collab: 0 },
   { name: 'Arizona State', conf: 'Big 12', posts: 6782, adoption: 31.0, logo: 27.4, mention: 10.9, collab: 3.05 },
@@ -1764,7 +1764,7 @@ function BenchmarkTab() {
           <span className="font-semibold">Benchmarks</span> shows how often Baylor athletes use IP elements (logos, mentions, collaborations) in social content compared to other schools.
         </p>
         <div className="flex gap-6 mt-2 text-xs text-gray-500">
-          <span><span className="inline-block w-2 h-2 rounded-full mr-1" style={{ backgroundColor: colors.green }}></span> {benchmarkLabel}: Compare against {isConference ? 'other SEC schools' : '71 NCAA D1 schools'}</span>
+          <span><span className="inline-block w-2 h-2 rounded-full mr-1" style={{ backgroundColor: colors.green }}></span> {benchmarkLabel}: Compare against {isConference ? 'other Big 12 schools' : '71 NCAA D1 schools'}</span>
         </div>
       </div>
 
@@ -1779,7 +1779,7 @@ function BenchmarkTab() {
               color: benchmarkType === 'conference' ? colors.white : colors.text,
             }}
           >
-            SEC
+            Big 12
           </button>
           <button
             onClick={() => setBenchmarkType('ncaa')}
@@ -1827,7 +1827,7 @@ function BenchmarkTab() {
           <p className="text-xs uppercase tracking-wider mb-2" style={{ color: colors.positive }}>💡 Key Insight</p>
           <p className="text-sm text-gray-700">
             {isConference
-              ? <>Baylor leads the SEC in <span className="font-semibold">mention rate</span> ({baylor.mention}%), outperforming the conference average by {mentionDelta.toFixed(1)}%.</>
+              ? <>Baylor leads the Big 12 in <span className="font-semibold">mention rate</span> ({baylor.mention}%), outperforming the conference average by {mentionDelta.toFixed(1)}%.</>
               : <>Baylor ranks <span className="font-semibold">#{ranks.mention} in mention rate</span> among {ranks.total} NCAA D1 schools, with {baylor.mention}% vs {avg.mention}% average.</>
             }
           </p>
@@ -1929,7 +1929,7 @@ function BenchmarkTab() {
               className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-semibold"
               style={{ backgroundColor: mentionDelta >= 0 ? `${colors.positive}20` : `${colors.negative}20`, color: mentionDelta >= 0 ? colors.positive : colors.negative }}
             >
-              {mentionDelta >= 0 ? '↑' : '↓'} {Math.abs(mentionDelta).toFixed(1)}% vs {benchmarkLabel.toLowerCase()} {isConference && '• #1 in SEC'}
+              {mentionDelta >= 0 ? '↑' : '↓'} {Math.abs(mentionDelta).toFixed(1)}% vs {benchmarkLabel.toLowerCase()} {isConference && '• #1 in Big 12'}
             </span>
           </div>
         </div>
@@ -2102,7 +2102,7 @@ function BenchmarkTab() {
                 <div className="w-0 h-0 border-l-[6px] border-r-[6px] border-b-[6px] border-transparent" style={{ borderBottomColor: colors.green }}></div>
                 <div className="px-3 py-2 rounded-lg shadow-lg whitespace-nowrap" style={{ backgroundColor: colors.green }}>
                   <p className="text-white font-bold text-sm">AUBURN — {baylorVal.toFixed(1)}%</p>
-                  <p className="text-white text-xs">#{rankVal} of {ranks.total} {isConference ? 'in SEC' : 'in NCAA D1'}</p>
+                  <p className="text-white text-xs">#{rankVal} of {ranks.total} {isConference ? 'in Big 12' : 'in NCAA D1'}</p>
                 </div>
               </div>
 
@@ -2224,7 +2224,7 @@ function BenchmarkTab() {
                 </tbody>
               </table>
             </div>
-            <p className="text-xs text-gray-400 mt-2">* Based on {schools.length} {isConference ? 'SEC' : 'NCAA D1'} schools with available IP data</p>
+            <p className="text-xs text-gray-400 mt-2">* Based on {schools.length} {isConference ? 'Big 12' : 'NCAA D1'} schools with available IP data</p>
           </div>
         );
       })()}
