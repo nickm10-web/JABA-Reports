@@ -738,27 +738,6 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
                 ))}
               </div>
 
-              {/* Engagement Metrics Row */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-                {[
-                  { label: 'Impressions', value: formatNumber(stats.totalImpressions), icon: <Eye className="w-5 h-5" /> },
-                  { label: 'Reach', value: formatNumber(stats.totalReach), icon: <Users className="w-5 h-5" /> },
-                  { label: 'Saves', value: formatNumber(stats.totalSaves), icon: <Bookmark className="w-5 h-5" /> },
-                  { label: 'Shares', value: formatNumber(stats.totalShares), icon: <Share2 className="w-5 h-5" /> },
-                ].map(kpi => (
-                  <div key={kpi.label} className="bg-white rounded-xl border border-gray-100 p-4 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                      style={{ backgroundColor: colors.green + '12', color: colors.green }}>
-                      {kpi.icon}
-                    </div>
-                    <div>
-                      <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-400">{kpi.label}</p>
-                      <p className="text-lg font-bold" style={{ color: colors.text }}>{kpi.value}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
               {/* Top 5s + Hashtags */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-white rounded-xl border border-gray-100 p-5">
@@ -1105,7 +1084,7 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
               <div>
                 <h2 className="text-2xl font-bold uppercase tracking-tight"
                   style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic', color: colors.green }}>
-                  Compliance Appendix
+                  IP Usage
                 </h2>
                 <p className="text-sm text-gray-500 mt-1">
                   Complete log of all {sportFilter !== 'all' ? `${formatSportName(sportFilter)} ` : ''}{posts.filter(p => sportFilter === 'all' || p.athlete.sport === sportFilter).length} sponsored posts in 2025.
