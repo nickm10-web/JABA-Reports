@@ -316,9 +316,9 @@ export function AuburnCampaignOverview({ onBack }: AuburnCampaignOverviewProps) 
               </div>
               <div>
                 <h3 className="text-lg font-extrabold text-[#0C2340] uppercase tracking-wide">
-                  How Auburn Partnerships Amplify Your Reach
+                  Partnership Performance Analysis
                 </h3>
-                <p className="text-sm text-gray-500">Strategic athlete collaborations create breakthrough visibility moments</p>
+                <p className="text-sm text-gray-500">Your top posts with Auburn vs without Auburn</p>
               </div>
             </div>
           </div>
@@ -333,7 +333,7 @@ export function AuburnCampaignOverview({ onBack }: AuburnCampaignOverviewProps) 
               <div className="bg-gradient-to-br from-[#0C2340] to-[#1a3a5c] rounded-xl p-6 text-center text-white">
                 <p className="text-5xl font-black mb-2">#3</p>
                 <p className="text-sm font-semibold uppercase tracking-wide opacity-90">All-Time Ranking</p>
-                <p className="text-xs opacity-75 mt-1">This campaign ranks 3rd out of {partnershipStats.partnershipPosts} partnership posts</p>
+                <p className="text-xs opacity-75 mt-1">Out of {partnershipStats.partnershipPosts} Baumhower's x Auburn posts</p>
               </div>
             </div>
 
@@ -552,11 +552,11 @@ function MetricCard({ label, value }: { label: string; value: string }) {
 function PostCard({ post }: { post: typeof athletePost }) {
   return (
     <div className="rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
-      <div className="relative h-52 bg-gray-100 overflow-hidden">
+      <div className="relative h-80 bg-gray-100 overflow-hidden">
         <img
           src={post.image}
           alt={post.label}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-top"
           onError={(e) => {
             e.currentTarget.src = 'https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=600&h=400&fit=crop';
           }}
