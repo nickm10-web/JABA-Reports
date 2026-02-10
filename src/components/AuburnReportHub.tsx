@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { ArrowLeft, Trophy, BarChart3 } from 'lucide-react';
+import { ArrowLeft, BarChart3 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { AuburnCampaignOverview } from './AuburnCampaignOverview';
-import { AuburnIPImpact } from './AuburnIPImpact';
 
-type View = 'hub' | 'campaign' | 'overview' | 'ip-report' | 'analytics' | 'insights';
+type View = 'hub' | 'campaign';
 
 interface AuburnReportHubProps {
   onBack?: () => void;
@@ -18,11 +17,6 @@ export function AuburnReportHub({ onBack }: AuburnReportHubProps) {
     return <AuburnCampaignOverview onBack={() => setActiveView('hub')} />;
   }
 
-  // IP Report view
-  if (activeView === 'ip-report') {
-    return <AuburnIPImpact onBack={() => setActiveView('hub')} />;
-  }
-
   // Hub view
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900 relative overflow-hidden">
@@ -30,13 +24,15 @@ export function AuburnReportHub({ onBack }: AuburnReportHubProps) {
       <div className="absolute inset-0 bg-gradient-to-br from-orange-600/10 via-blue-900/10 to-orange-500/10 opacity-30" />
 
       {/* Back button */}
-      <button
-        onClick={onBack}
-        className="fixed top-6 left-6 z-50 bg-white/10 hover:bg-white/20 backdrop-blur-lg text-white px-4 py-2 rounded-lg font-semibold text-sm transition-all border border-white/20 flex items-center gap-2"
-      >
-        <ArrowLeft className="w-4 h-4" />
-        Back
-      </button>
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="fixed top-6 left-6 z-50 bg-white/10 hover:bg-white/20 backdrop-blur-lg text-white px-4 py-2 rounded-lg font-semibold text-sm transition-all border border-white/20 flex items-center gap-2"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back
+        </button>
+      )}
 
       {/* Header */}
       <div className="pt-20 pb-12 px-6 relative z-10">
@@ -57,9 +53,9 @@ export function AuburnReportHub({ onBack }: AuburnReportHubProps) {
 
       {/* Cards */}
       <div className="max-w-7xl mx-auto px-6 pb-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6 max-w-xl mx-auto">
 
-          {/* Card 1: Campaign Dashboard */}
+          {/* Card: Campaign Dashboard */}
           <motion.button
             onClick={() => setActiveView('campaign')}
             className="group relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-orange-400/50 transition-all duration-300 text-left w-full"
@@ -67,57 +63,17 @@ export function AuburnReportHub({ onBack }: AuburnReportHubProps) {
             whileTap={{ scale: 0.98 }}
           >
             <div className="relative z-10">
-              {/* Icon */}
               <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
                 <BarChart3 className="w-7 h-7 text-white" />
               </div>
-
-              {/* Title */}
               <h2 className="text-2xl font-bold text-white mb-3">
                 Campaign Dashboard
               </h2>
-
-              {/* Description */}
               <p className="text-gray-300 text-base mb-6">
                 Baumhower's partnership campaign performance
               </p>
-
-              {/* View button */}
               <div className="flex items-center gap-2 text-orange-400 text-sm font-semibold">
                 <span>View Dashboard</span>
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-            </div>
-          </motion.button>
-
-          {/* Card 2: IP Report */}
-          <motion.button
-            onClick={() => setActiveView('ip-report')}
-            className="group relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-blue-400/50 transition-all duration-300 text-left w-full"
-            whileHover={{ scale: 1.02, y: -5 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <div className="relative z-10">
-              {/* Icon */}
-              <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
-                <Trophy className="w-7 h-7 text-white" />
-              </div>
-
-              {/* Title */}
-              <h2 className="text-2xl font-bold text-white mb-3">
-                IP Report
-              </h2>
-
-              {/* Description */}
-              <p className="text-gray-300 text-base mb-6">
-                IP impact analysis and brand partnership performance
-              </p>
-
-              {/* View button */}
-              <div className="flex items-center gap-2 text-blue-400 text-sm font-semibold">
-                <span>View Report</span>
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
