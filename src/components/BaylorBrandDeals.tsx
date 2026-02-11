@@ -399,7 +399,7 @@ const TABS: { id: TabId; label: string; icon: React.ReactNode }[] = [
   { id: 'brand-index', label: 'Brand Index', icon: <Tag className="w-4 h-4" /> },
   { id: 'content', label: 'Content', icon: <Camera className="w-4 h-4" /> },
   { id: 'athletes', label: 'Athletes', icon: <Users className="w-4 h-4" /> },
-  { id: 'compliance', label: 'Compliance', icon: <Shield className="w-4 h-4" /> },
+  { id: 'compliance', label: 'IP Usage', icon: <Shield className="w-4 h-4" /> },
 ];
 
 // ═══════════════════════════════════════════════════════════════
