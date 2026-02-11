@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { SchoolReportsPage } from './components/SchoolReportsPage';
-import { AuburnReportHub } from './components/AuburnReportHub';
+import { AuburnCampaignOverview } from './components/AuburnCampaignOverview';
 import { BaylorReportHub } from './components/BaylorReportHub';
 import { OhioStateReportHub } from './components/OhioStateReportHub';
 import { KentuckyReportHub } from './components/KentuckyReportHub';
@@ -9,7 +9,9 @@ import { PlayflyReportHub } from './components/PlayflyReportHub';
 // Wrapper components that provide navigation
 // Only show back button if user navigated from within the app
 function AuburnRoute() {
-  return <AuburnReportHub />;
+  const navigate = useNavigate();
+  const canGoBack = window.history.length > 2;
+  return <AuburnCampaignOverview onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
 function BaylorRoute() {

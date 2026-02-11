@@ -3,7 +3,7 @@ import { FileText } from 'lucide-react';
 import { SCHOOLS, SchoolConfig } from '../data/schoolConfig';
 import { SchoolReportView } from './SchoolReportView';
 import { PlayflyReportHub } from './PlayflyReportHub';
-import { AuburnReportHub } from './AuburnReportHub';
+import { AuburnCampaignOverview } from './AuburnCampaignOverview';
 import { BaylorReportHub } from './BaylorReportHub';
 import { KentuckyReportHub } from './KentuckyReportHub';
 import { OhioStateIPImpact } from './OhioStateIPImpact';
@@ -24,10 +24,10 @@ export function SchoolReportsPage() {
         />
       );
     }
-    // If Auburn is selected, show the hub with multiple report options
+    // If Auburn is selected, go directly to Campaign Overview
     if (selectedSchool.id === 'auburn') {
       return (
-        <AuburnReportHub onBack={() => setSelectedSchool(null)} />
+        <AuburnCampaignOverview onBack={() => setSelectedSchool(null)} />
       );
     }
     // If Ohio State is selected, show IP Impact report
