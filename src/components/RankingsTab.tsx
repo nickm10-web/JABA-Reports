@@ -88,6 +88,18 @@ export function RankingsTab({
   const [hoveredSchoolId, setHoveredSchoolId] = useState<string | null>(null);
   const rowRefs = useRef<Record<string, HTMLTableRowElement | null>>({});
 
+  const formatCompactNumber = (value: number) => {
+    if (value >= 1_000_000) return `${(value / 1_000_000).toFixed(2)}M`;
+    if (value >= 1_000) return `${(value / 1_000).toFixed(1)}k`;
+    return Math.round(value).toLocaleString();
+  };
+
+  const formatCompactEMV = (value: number) => {
+    if (value >= 1_000_000) return `$${(value / 1_000_000).toFixed(2)}M`;
+    if (value >= 1_000) return `$${Math.round(value / 1_000)}k`;
+    return `$${Math.round(value).toLocaleString()}`;
+  };
+
   // Max schools
   const maxSchools = ['Michigan State', 'University of Maryland', 'Auburn University', 'Texas A&M', 'Louisiana State University', 'Penn State University'];
 
@@ -317,8 +329,8 @@ export function RankingsTab({
       </GlassCard>
 
       {/* Leaderboard Table + Scatter */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <GlassCard className="lg:col-span-2 overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-6">
+        <GlassCard className="lg:col-span-1 overflow-hidden">
           <div className="p-4 border-b border-gray-200 flex items-center justify-between md:hidden" data-snapshot-hide="true">
             <div className="text-sm text-gray-600">Showing {sortedRankings.length} schools</div>
             <div className="flex gap-2">
@@ -363,18 +375,18 @@ export function RankingsTab({
           </div>
 
           <div className={`${leaderboardView === 'table' ? 'block' : 'hidden'} md:block overflow-x-auto md:overflow-visible`}>
-            <table className="w-full">
+            <table className="w-full table-fixed">
               <thead style={{ backgroundColor: '#f9fafb' }} className="border-b border-gray-200">
                 <tr>
-                  <th className="px-3 py-3 text-left text-xs font-semibold text-gray-700 w-12">
+                  <th className="px-2 py-2 text-center text-xs font-semibold text-gray-700 w-[52px]">
                     Rank
                   </th>
-                  <th className="px-3 py-3 text-left text-xs font-semibold text-gray-700">
+                  <th className="px-2 py-2 text-left text-xs font-semibold text-gray-700">
                     School
                   </th>
                   <th
                     onClick={() => handleSort('ipLift')}
-                    className="px-3 py-3 text-right text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
+                    className="px-2 py-2 text-right text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0] w-[92px]"
                   >
                     <div className="flex items-center justify-end gap-2">
                       IP Lift %
@@ -383,7 +395,7 @@ export function RankingsTab({
                   </th>
                   <th
                     onClick={() => handleSort('emv')}
-                    className="px-3 py-3 text-right text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
+                    className="px-2 py-2 text-right text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0] w-[90px]"
                   >
                     <div className="flex items-center justify-end gap-2">
                       EMV
@@ -392,16 +404,16 @@ export function RankingsTab({
                   </th>
                   <th
                     onClick={() => handleSort('posts')}
-                    className="px-3 py-3 text-right text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
+                    className="px-2 py-2 text-right text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0] w-[84px]"
                   >
                     <div className="flex items-center justify-end gap-2">
-                      Posts w/ IP
+                      Posts w/IP
                       {sortBy === 'posts' && <span style={{ color: '#1770C0' }}>{sortDirection === 'desc' ? ' ↓' : ' ↑'}</span>}
                     </div>
                   </th>
                   <th
                     onClick={() => handleSort('interactions')}
-                    className="px-3 py-3 text-right text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
+                    className="px-2 py-2 text-right text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0] w-[110px]"
                   >
                     <div className="flex items-center justify-end gap-2">
                       <div className="flex items-center gap-1.5">
@@ -430,34 +442,29 @@ export function RankingsTab({
                       setDrawerOpen(true);
                     }}
                   >
-                    <td className="px-3 py-3">
-                      <div className="flex items-center gap-3">
-                        {index < 3 ? (
-                          <div className={`text-2xl font-bold ${
-                            index === 0 ? 'text-yellow-400' :
-                            index === 1 ? 'text-gray-400' :
-                            'text-orange-400'
-                          }`}>
-                            ⭐{index + 1}
-                          </div>
-                        ) : (
-                          <div className="text-lg font-bold text-gray-600 w-8 text-center">
-                            {index + 1}
-                          </div>
-                        )}
-                      </div>
+                    <td className="px-2 py-2 text-center">
+                      {index < 3 ? (
+                        <div className={`text-base font-bold ${
+                          index === 0 ? 'text-yellow-400' :
+                          index === 1 ? 'text-gray-400' :
+                          'text-orange-400'
+                        }`}>
+                          {index + 1}
+                        </div>
+                      ) : (
+                        <div className="text-sm font-bold text-gray-600">
+                          {index + 1}
+                        </div>
+                      )}
                     </td>
-                    <td className="px-3 py-3">
+                    <td className="px-2 py-2">
                       <div className="flex items-center gap-2 min-w-0">
-                        <div className="w-8 h-8 bg-gradient-to-br from-[#1770C0] to-blue-600 rounded-lg flex items-center justify-center shrink-0">
+                        <div className="w-7 h-7 bg-gradient-to-br from-[#1770C0] to-blue-600 rounded-lg flex items-center justify-center shrink-0">
                           <span className="text-white font-bold text-[10px]">{rank.initials}</span>
                         </div>
                         <div className="min-w-0">
                           <div className="flex items-center gap-2 min-w-0">
                             <span className="text-gray-900 font-semibold truncate">{rank.displayName}</span>
-                            {rank.isPlayflyMax && (
-                              <span className="text-yellow-500 text-xs">⭐</span>
-                            )}
                           </div>
                           <div className="text-[11px] text-gray-500 truncate">
                             {quadrantLabel[getQuadrant(rank)]}
@@ -465,26 +472,26 @@ export function RankingsTab({
                         </div>
                       </div>
                     </td>
-                    <td className="px-3 py-3 text-right">
+                    <td className="px-2 py-2 text-right">
                       <div className={`text-lg font-bold ${
                         rank.ipLift > 0 ? 'text-green-600' : rank.ipLift < 0 ? 'text-red-600' : 'text-gray-600'
                       }`}>
                         {rank.ipLift > 0 ? '+' : ''}{rank.ipLift.toFixed(1)}%
                       </div>
                     </td>
-                    <td className="px-3 py-3 text-right">
-                      <div className="text-green-600 font-semibold text-lg">
-                        {formatEMV(rank.totalEMV)}
+                    <td className="px-2 py-2 text-right">
+                      <div className="text-green-600 font-semibold text-base">
+                        {formatCompactEMV(rank.totalEMV)}
                       </div>
                     </td>
-                    <td className="px-3 py-3 text-right">
-                      <div className="text-gray-900 font-medium text-base">
+                    <td className="px-2 py-2 text-right">
+                      <div className="text-gray-900 font-medium text-sm">
                         {formatNumber(rank.postsWithIP)}
                       </div>
                     </td>
-                    <td className="px-3 py-3 text-right">
+                    <td className="px-2 py-2 text-right">
                       <div className="text-gray-900 font-medium text-base">
-                        {formatNumber(rank.totalInteractions)}
+                        {formatCompactNumber(rank.totalInteractions)}
                       </div>
                     </td>
                   </tr>
@@ -494,8 +501,8 @@ export function RankingsTab({
           </div>
         </GlassCard>
 
-        <GlassCard className={`${showChart ? 'block' : 'hidden'} lg:block p-5`}>
-          <div className="flex items-center justify-between mb-3">
+        <GlassCard className={`${showChart ? 'block' : 'hidden'} lg:block p-3 min-w-[420px]`}>
+          <div className="flex items-center justify-between mb-2">
             <div>
               <div className="text-sm font-semibold text-gray-700">Competitive Landscape</div>
               <div className="text-xs text-gray-500">IP Lift (Y) vs IP Adoption (X)</div>
@@ -512,13 +519,13 @@ export function RankingsTab({
             <GlassPill className="pf-chip-compact" active={quadrantFilter === 'high-adoption-low-lift'} onClick={() => setQuadrantFilter('high-adoption-low-lift')}>High Adoption, Low Lift</GlassPill>
             <GlassPill className="pf-chip-compact" active={quadrantFilter === 'needs-strategy'} onClick={() => setQuadrantFilter('needs-strategy')}>Needs Strategy</GlassPill>
           </div>
-          <div className="w-full h-[440px]">
-            <svg viewBox="0 0 520 360" className="w-full h-full">
+          <div className="w-full h-[340px] lg:h-[460px] min-h-[340px] lg:min-h-[420px]">
+            <svg viewBox="0 0 560 400" className="w-full h-full">
               {(() => {
-                const left = 36;
-                const top = 16;
-                const width = 460;
-                const height = 300;
+                const left = 24;
+                const top = 10;
+                const width = 520;
+                const height = 350;
                 const xScale = (val: number) => left + ((val - adoptionRange.min) / (adoptionRange.max - adoptionRange.min)) * width;
                 const yScale = (val: number) => top + height - ((val - liftRange.min) / (liftRange.max - liftRange.min)) * height;
                 const medianX = xScale(adoptionMedian);
@@ -526,22 +533,30 @@ export function RankingsTab({
                 return (
                   <>
                     <rect x={left} y={top} width={width} height={height} fill="#f8fafc" stroke="#e5e7eb" />
-                    <line x1={medianX} y1={top} x2={medianX} y2={top + height} stroke="#cbd5f5" strokeDasharray="4 4" />
-                    <line x1={left} y1={medianY} x2={left + width} y2={medianY} stroke="#cbd5f5" strokeDasharray="4 4" />
-                    <text x={medianX + 6} y={top + 12} fontSize="10" fill="#94a3b8">Network median adoption</text>
-                    <text x={left + 6} y={medianY - 6} fontSize="10" fill="#94a3b8">Network median lift</text>
+                    <rect x={left} y={top} width={width / 2} height={height / 2} fill="rgba(23, 112, 192, 0.04)" />
+                    <rect x={left + width / 2} y={top} width={width / 2} height={height / 2} fill="rgba(16, 185, 129, 0.04)" />
+                    <rect x={left} y={top + height / 2} width={width / 2} height={height / 2} fill="rgba(148, 163, 184, 0.04)" />
+                    <rect x={left + width / 2} y={top + height / 2} width={width / 2} height={height / 2} fill="rgba(245, 158, 11, 0.04)" />
 
-                    <text x={left + 8} y={top + 16} fontSize="10" fill="#94a3b8">Underutilized</text>
-                    <text x={left + width - 90} y={top + 16} fontSize="10" fill="#94a3b8">Champions</text>
-                    <text x={left + 8} y={top + height - 6} fontSize="10" fill="#94a3b8">Needs Strategy</text>
-                    <text x={left + width - 140} y={top + height - 6} fontSize="10" fill="#94a3b8">High Adoption, Low Lift</text>
+                    <line x1={medianX} y1={top} x2={medianX} y2={top + height} stroke="#64748b" strokeDasharray="6 6" />
+                    <line x1={left} y1={medianY} x2={left + width} y2={medianY} stroke="#64748b" strokeDasharray="6 6" />
+                    <text x={medianX + 6} y={top + 12} fontSize="11" fill="#475569">Network median adoption</text>
+                    <text x={left + 6} y={medianY - 6} fontSize="11" fill="#475569">Network median lift</text>
+
+                    <text x={left + 8} y={top + 16} fontSize="11" fill="#475569">Underutilized</text>
+                    <text x={left + width - 96} y={top + 16} fontSize="11" fill="#475569">Champions</text>
+                    <text x={left + 8} y={top + height - 6} fontSize="11" fill="#475569">Needs Strategy</text>
+                    <text x={left + width - 160} y={top + height - 6} fontSize="11" fill="#475569">High Adoption, Low Lift</text>
 
                     {scatterData.map((point, idx) => {
                       const x = xScale(point.x) + jitter(point.id, 'x');
                       const y = yScale(point.y) + jitter(point.id, 'y');
                       const isSelected = selectedSchoolId === point.id;
                       const isHovered = hoveredSchoolId === point.id;
-                      const r = point.max ? 7 : 6;
+                      const r = point.max ? 9 : 8;
+                      const tooltipWidth = Math.max(80, point.label.length * 6.5);
+                      const tooltipX = Math.min(left + width - tooltipWidth - 6, Math.max(left + 6, x + 10));
+                      const tooltipY = Math.min(top + height - 24, Math.max(top + 6, y - 22));
                       return (
                         <g
                           key={idx}
@@ -558,10 +573,32 @@ export function RankingsTab({
                             cx={x}
                             cy={y}
                             r={isHovered ? r + 2 : r}
-                            fill={point.max ? 'rgba(245, 158, 11, 0.6)' : 'rgba(23, 112, 192, 0.6)'}
+                            fill={point.max ? 'rgba(245, 158, 11, 0.55)' : 'rgba(23, 112, 192, 0.55)'}
                             stroke={point.max ? '#F59E0B' : '#1770C0'}
-                            strokeWidth="1.5"
+                            strokeWidth="1.8"
                           />
+                          {isHovered && (
+                            <g>
+                              <rect
+                                x={tooltipX}
+                                y={tooltipY}
+                                rx={6}
+                                ry={6}
+                                width={tooltipWidth}
+                                height={20}
+                                fill="#111827"
+                                opacity={0.9}
+                              />
+                              <text
+                                x={tooltipX + 6}
+                                y={tooltipY + 14}
+                                fontSize="11"
+                                fill="#ffffff"
+                              >
+                                {point.label}
+                              </text>
+                            </g>
+                          )}
                           {point.max && <circle cx={x} cy={y} r={r + 4} fill="none" stroke="#F59E0B" strokeWidth="1" />}
                           {isSelected && <circle cx={x} cy={y} r={r + 6} fill="none" stroke="#1770C0" strokeWidth="2" />}
                         </g>
@@ -577,18 +614,18 @@ export function RankingsTab({
               {selectedRank.displayName}: {selectedRank.ipLift.toFixed(1)}% lift • {selectedRank.ipAdoption.toFixed(1)}% adoption • {formatEMV(selectedRank.totalEMV)} EMV
             </div>
           )}
-          <div className="text-xs text-gray-500 mt-3">Dashed lines show network medians for lift and adoption.</div>
+          <div className="text-xs text-gray-500 mt-2">Dashed lines show network medians for lift and adoption.</div>
 
           {/* Quadrant Summary */}
-          <div className="mt-5 border-t border-gray-200 pt-4">
-            <div className="text-sm font-semibold text-gray-700 mb-3">Quadrant Summary</div>
-            <div className="grid grid-cols-2 gap-3 text-sm text-gray-700">
+          <div className="mt-4 border-t border-gray-200 pt-3">
+            <div className="text-sm font-semibold text-gray-700 mb-2">Quadrant Summary</div>
+            <div className="grid grid-cols-2 gap-2 text-sm text-gray-700">
               <div>Champions: <span className="font-semibold">{quadrantCounts.champions}</span></div>
               <div>Underutilized: <span className="font-semibold">{quadrantCounts.underutilized}</span></div>
               <div>High Adoption, Low Lift: <span className="font-semibold">{quadrantCounts['high-adoption-low-lift']}</span></div>
               <div>Needs Strategy: <span className="font-semibold">{quadrantCounts['needs-strategy']}</span></div>
             </div>
-            <div className="mt-4 text-sm font-semibold text-gray-700">Top Opportunities</div>
+            <div className="mt-3 text-sm font-semibold text-gray-700">Top Opportunities</div>
             <div className="mt-2 space-y-2 text-sm text-gray-600">
               {topOpportunities.map((school) => (
                 <div key={school.schoolId} className="flex items-center justify-between">

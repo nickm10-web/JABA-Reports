@@ -5,7 +5,7 @@ import { RankingsTab } from './RankingsTab';
 import { AthletesTab } from './AthletesTab';
 import { ContentTab } from './ContentTab';
 import { loadPartnershipDataWithRecalculatedEMV } from '../utils/partnershipDataLoader';
-import { CommandBar, DrawerPanel, GlassCard, GlassPill, MetricCard, StatChip, TabTransition } from './playfly/PlayflyUI';
+import { CommandBar, DrawerPanel, GlassCard, GlassPill, MetricCard, TabTransition } from './playfly/PlayflyUI';
 
 /**
  * PLAYFLY IP PAGE
@@ -557,9 +557,9 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     <div className="text-xs uppercase tracking-[0.3em] text-gray-500 mb-4">Playfly Schools IP Performance</div>
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
                       <span>JABA analyzed </span>
-                      <StatChip className="mx-1.5">{formatNumber(networkTotals.totalContents)} posts</StatChip>
+                      <span className="mx-1.5 text-[#1770C0] font-bold">{formatNumber(networkTotals.totalContents)} posts</span>
                       <span> across </span>
-                      <StatChip className="mx-1.5">{networkTotals.totalSchools} Playfly schools</StatChip>
+                      <span className="mx-1.5 text-[#1770C0] font-bold">{networkTotals.totalSchools} Playfly schools</span>
                       <span> to show how IP drives engagement.</span>
                     </h2>
                     <p className="text-base md:text-lg text-gray-600 mt-4 max-w-3xl">
@@ -626,12 +626,13 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                 <MetricCard
                   title="Total EMV"
                   value={networkTotals.totalEMV}
-                  subtitle="Earned media value"
+                  subtitle="Estimated earned media value"
                   accent="#F59E0B"
                   icon={<Award className="w-5 h-5" />}
                   format={formatEMVMillions}
                   meta={(
                     <>
+                      <span className="metric-badge">Estimated</span>
                       <span>Median per school: {formatEMV(median(perSchool.emv))}</span>
                     </>
                   )}
@@ -1390,8 +1391,10 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                                         <span className="text-sm font-bold text-gray-900">{formatNumber(ipType.data.yes.contents)}</span>
                                       </div>
                                       <div className="flex justify-between items-center">
-                                        <span className="text-xs text-gray-600">Avg EMV</span>
-                                        <span className="text-sm font-bold text-green-600">{formatEMV(ipType.data.yes.emv)}</span>
+                                        <span className="text-xs text-gray-600">Total EMV (est.)</span>
+                                        <span className="text-sm font-bold text-green-600">
+                                          {formatEMV(ipType.data.yes.emv * ipType.data.yes.contents)}
+                                        </span>
                                       </div>
                                       <div className="flex justify-between items-center">
                                         <div className="flex items-center gap-1.5 text-xs text-gray-600">
@@ -1552,7 +1555,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                           </div>
                         </div>
                         <div>
-                          <div className="text-sm text-gray-600 mb-1">Avg EMV</div>
+                          <div className="text-sm text-gray-600 mb-1">Total EMV (est.)</div>
                           <div className="text-2xl font-bold text-green-600">
                             {formatEMV(totals.withIP.emv)}
                           </div>
@@ -1595,7 +1598,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                           </div>
                         </div>
                         <div>
-                          <div className="text-sm text-gray-600 mb-1">Avg EMV</div>
+                          <div className="text-sm text-gray-600 mb-1">Total EMV (est.)</div>
                           <div className="text-2xl font-bold text-gray-400">
                             N/A
                           </div>
@@ -1694,7 +1697,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         </div>
                       </div>
                       <div>
-                        <div className="text-sm text-gray-600 mb-1">Avg EMV</div>
+                        <div className="text-sm text-gray-600 mb-1">Total EMV (est.)</div>
                         <div className="text-2xl font-bold text-purple-600">
                           {formatEMV(totals.withIP.emv)}
                         </div>
@@ -1737,7 +1740,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         </div>
                       </div>
                       <div>
-                        <div className="text-sm text-gray-600 mb-1">Avg EMV</div>
+                        <div className="text-sm text-gray-600 mb-1">Total EMV (est.)</div>
                         <div className="text-2xl font-bold text-gray-400">
                           N/A
                         </div>
@@ -1835,7 +1838,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         </div>
                       </div>
                       <div>
-                        <div className="text-sm text-gray-600 mb-1">Avg EMV</div>
+                        <div className="text-sm text-gray-600 mb-1">Total EMV (est.)</div>
                         <div className="text-2xl font-bold text-yellow-600">
                           {formatEMV(totals.withIP.emv)}
                         </div>
@@ -1878,7 +1881,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         </div>
                       </div>
                       <div>
-                        <div className="text-sm text-gray-600 mb-1">Avg EMV</div>
+                        <div className="text-sm text-gray-600 mb-1">Total EMV (est.)</div>
                         <div className="text-2xl font-bold text-gray-400">
                           N/A
                         </div>

@@ -61,7 +61,6 @@ export function ContentTab({ contentData, isLoading, allowedSchools }: ContentTa
   const [ipMode, setIpMode] = useState<'all' | 'with-ip' | 'without-ip'>('all');
   const [sortBy, setSortBy] = useState<'interactions' | 'engagement' | 'emv'>('interactions');
   const [searchQuery, setSearchQuery] = useState('');
-  const [viewAll, setViewAll] = useState<{ [key: string]: boolean }>({});
 
   const hasEmv = useMemo(() => {
     return contentData.some(item => typeof item.metrics?.emv === 'number' && item.metrics.emv > 0);
@@ -74,13 +73,16 @@ export function ContentTab({ contentData, isLoading, allowedSchools }: ContentTa
   }, [hasEmv, sortBy]);
 
   const schools = useMemo(() => {
+    const allowedSet = allowedSchools && allowedSchools.length > 0 ? new Set(allowedSchools) : null;
     const names = new Set<string>();
     contentData.forEach(item => {
       const name = item.athlete?.school?.name;
-      if (name) names.add(name);
+      if (!name) return;
+      if (allowedSet && !allowedSet.has(name)) return;
+      names.add(name);
     });
     return Array.from(names).sort();
-  }, [contentData]);
+  }, [contentData, allowedSchools]);
 
   const filteredBase = useMemo(() => {
     const allowedSet = allowedSchools && allowedSchools.length > 0 ? new Set(allowedSchools) : null;
@@ -232,7 +234,7 @@ export function ContentTab({ contentData, isLoading, allowedSchools }: ContentTa
     const isSponsored = item.isSponsored ?? item.sponsored ?? false;
     const interactions = getInteractions(item);
     const dateLabel = formatDate(item.publishedAt);
-    const thumbSize = size === 'md' ? 'h-20 w-20' : 'h-14 w-14';
+    const thumbSize = size === 'md' ? 'h-24 w-24' : 'h-16 w-16';
     const thumb = item.url || '';
     return (
       <div className="flex items-start justify-between gap-4">
@@ -251,30 +253,30 @@ export function ContentTab({ contentData, isLoading, allowedSchools }: ContentTa
               <div className={`${thumbSize} rounded-xl bg-gray-100 border border-gray-200`} />
             )}
             <div className="min-w-0">
-              <div className="text-sm font-semibold text-gray-900 truncate">
+              <div className="text-base md:text-lg font-semibold text-gray-900 truncate">
                 {item.athlete?.school?.name || 'Unknown School'}
               </div>
-              <div className="text-xs text-gray-500 truncate">
+              <div className="text-[13px] md:text-sm text-gray-600 truncate">
                 {item.athlete?.name || 'Athlete'}
                 {dateLabel ? ` • ${dateLabel}` : ''}
               </div>
               {item.caption && (
-                <div className="text-xs text-gray-500 line-clamp-2 mt-1">{item.caption}</div>
+                <div className="text-sm text-gray-600 line-clamp-2 mt-1">{item.caption}</div>
               )}
-              <div className="flex flex-wrap gap-1 mt-2">
+              <div className="flex flex-wrap gap-1.5 mt-3">
                 {ipChips.map((chip) => (
-                  <span key={chip} className="metric-badge">{chip}</span>
+                  <span key={chip} className="content-chip">{chip}</span>
                 ))}
-                {isSponsored && <span className="metric-badge">Sponsored</span>}
-                {item.sponsorPartner && <span className="metric-badge">{item.sponsorPartner}</span>}
+                {isSponsored && <span className="content-chip">Sponsored</span>}
+                {item.sponsorPartner && <span className="content-chip">{item.sponsorPartner}</span>}
               </div>
             </div>
           </div>
         </div>
-        <div className="text-right text-sm">
-          <div className="font-semibold text-gray-900">{formatNumber(interactions)}</div>
-          <div className="text-xs text-gray-500">Interactions</div>
-          <div className="text-xs text-gray-500 mt-1">Engagement: {formatPercent(getEngagement(item), 2)}</div>
+        <div className="text-right">
+          <div className="text-base md:text-lg font-bold text-gray-900">{formatNumber(interactions)}</div>
+          <div className="text-xs text-gray-600 mt-1">Interactions</div>
+          <div className="text-[13px] text-gray-600 mt-2">Engagement: {formatPercent(getEngagement(item), 2)}</div>
         </div>
       </div>
     );
@@ -288,13 +290,13 @@ export function ContentTab({ contentData, isLoading, allowedSchools }: ContentTa
   ];
 
   return (
-    <div className="space-y-8">
+    <div className="content-tab space-y-8">
       <div>
-        <h3 className="text-3xl pf-section-header">
+        <h3 className="text-2xl md:text-3xl pf-section-header">
           <span className="pf-header-primary">Content </span>
           <span className="pf-header-secondary">Performance</span>
         </h3>
-        <p className="text-gray-600 mt-2">Top posts and IP signal benchmarks across Playfly schools</p>
+        <p className="text-gray-700 mt-2 text-sm md:text-base">Top posts and IP signal benchmarks across Playfly schools</p>
       </div>
 
       {isLoading && (
@@ -302,10 +304,10 @@ export function ContentTab({ contentData, isLoading, allowedSchools }: ContentTa
       )}
 
       {/* Control Strip */}
-      <GlassCard className="p-4">
+      <GlassCard className="p-5 content-section">
         <div className="flex flex-col md:flex-row gap-3 items-start md:items-end">
           <div className="w-full md:w-56">
-            <label className="text-xs text-gray-500 mb-1 block">Section view</label>
+              <label className="text-xs text-gray-600 mb-1 block">Section view</label>
             <select
               value={sectionScope}
               onChange={(e) => setSectionScope(e.target.value)}
@@ -330,7 +332,7 @@ export function ContentTab({ contentData, isLoading, allowedSchools }: ContentTa
             )}
           </div>
           <div className="w-full md:w-40">
-            <label className="text-xs text-gray-500 mb-1 block">Sponsored</label>
+              <label className="text-xs text-gray-600 mb-1 block">Sponsored</label>
             <select
               value={sponsoredFilter}
               onChange={(e) => setSponsoredFilter(e.target.value as any)}
@@ -342,7 +344,7 @@ export function ContentTab({ contentData, isLoading, allowedSchools }: ContentTa
             </select>
           </div>
           <div className="w-full md:w-40">
-            <label className="text-xs text-gray-500 mb-1 block">IP Mode</label>
+              <label className="text-xs text-gray-600 mb-1 block">IP Mode</label>
             <select
               value={ipMode}
               onChange={(e) => setIpMode(e.target.value as any)}
@@ -354,7 +356,7 @@ export function ContentTab({ contentData, isLoading, allowedSchools }: ContentTa
             </select>
           </div>
           <div className="w-full md:w-44">
-            <label className="text-xs text-gray-500 mb-1 block">Sort</label>
+              <label className="text-xs text-gray-600 mb-1 block">Sort</label>
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as any)}
@@ -370,7 +372,7 @@ export function ContentTab({ contentData, isLoading, allowedSchools }: ContentTa
             </select>
           </div>
           <div className="w-full md:flex-1">
-            <label className="text-xs text-gray-500 mb-1 block">Search</label>
+              <label className="text-xs text-gray-600 mb-1 block">Search</label>
             <input
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -379,7 +381,7 @@ export function ContentTab({ contentData, isLoading, allowedSchools }: ContentTa
             />
           </div>
         </div>
-        <div className="mt-3 text-xs text-gray-500">
+        <div className="mt-3 text-xs text-gray-600">
           Pool: {sectionScope === 'all' ? 'All Schools' : sectionScope} • {sponsoredFilter === 'all' ? 'All posts' : sponsoredFilter === 'sponsored' ? 'Sponsored only' : 'Non-sponsored only'} • {ipMode === 'all' ? 'All IP modes' : ipMode === 'with-ip' ? 'With Playfly IP' : 'Without Playfly IP'}
         </div>
       </GlassCard>
@@ -389,15 +391,15 @@ export function ContentTab({ contentData, isLoading, allowedSchools }: ContentTa
       )}
 
       {/* Champion Faceoff */}
-      <GlassCard className="p-6">
-        <div className="text-sm font-semibold text-gray-700 mb-4">Champion Faceoff</div>
+      <GlassCard className="p-6 content-section">
+        <div className="text-base font-semibold text-gray-900 mb-4">Champion Faceoff</div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <GlassCard className="p-4">
-            <div className="text-xs uppercase tracking-wide text-gray-500 mb-2">Best WITH Playfly IP</div>
+          <GlassCard className="p-5 content-post-card">
+            <div className="text-xs uppercase tracking-wide text-gray-600 mb-3">Best WITH Playfly IP</div>
             {championWithIp ? renderPostRow(championWithIp, 'md') : <div className="text-sm text-gray-500">No posts</div>}
           </GlassCard>
-          <GlassCard className="p-4">
-            <div className="text-xs uppercase tracking-wide text-gray-500 mb-2">Best WITHOUT Playfly IP</div>
+          <GlassCard className="p-5 content-post-card">
+            <div className="text-xs uppercase tracking-wide text-gray-600 mb-3">Best WITHOUT Playfly IP</div>
             {championWithoutIp ? renderPostRow(championWithoutIp, 'md') : <div className="text-sm text-gray-500">No posts</div>}
           </GlassCard>
         </div>
@@ -408,7 +410,6 @@ export function ContentTab({ contentData, isLoading, allowedSchools }: ContentTa
         {leaderboards.map((board) => {
           const stats = getStats(board.items);
           const lift = liftLabel(board.items, board.counterpart);
-          const limit = viewAll[board.id] ? board.items.length : 10;
           const statLine = (() => {
             if (sortBy === 'engagement') {
               return `Median engagement/post: ${formatPercent(stats.medianEngagement, 2)} • P75: ${formatPercent(stats.p75Engagement, 2)}`;
@@ -419,23 +420,17 @@ export function ContentTab({ contentData, isLoading, allowedSchools }: ContentTa
             return `Median interactions: ${formatNumber(stats.medianInteractions)} • P75: ${formatNumber(stats.p75Interactions)}`;
           })();
           return (
-            <GlassCard key={board.id} className="p-5">
+            <GlassCard key={board.id} className="p-6 content-section">
               <div className="flex items-start justify-between gap-3">
                 <div>
-                  <div className="text-sm font-semibold text-gray-900">{board.title}</div>
-                  <div className="text-xs text-gray-500 mt-1">{statLine}</div>
-                  <div className="text-xs text-gray-500">Lift vs counterpart: {lift}</div>
+                  <div className="text-base font-semibold text-gray-900">{board.title}</div>
+                  <div className="text-xs text-gray-600 mt-1">{statLine}</div>
+                  <div className="text-xs text-gray-600">Lift vs counterpart: {lift}</div>
                 </div>
-                <button
-                  onClick={() => setViewAll(prev => ({ ...prev, [board.id]: !prev[board.id] }))}
-                  className="text-xs font-semibold text-[#1770C0]"
-                >
-                  {viewAll[board.id] ? 'View top 10' : 'View all'}
-                </button>
               </div>
               <div className="mt-4 flex gap-3 overflow-x-auto pb-2 md:block md:overflow-visible md:space-y-3">
-                {board.items.slice(0, limit).map(item => (
-                  <GlassCard key={item._id} className="p-3 min-w-[260px] md:min-w-0">
+                {board.items.slice(0, 10).map(item => (
+                  <GlassCard key={item._id} className="p-4 min-w-[260px] md:min-w-0 content-post-card">
                     {renderPostRow(item)}
                   </GlassCard>
                 ))}
@@ -446,8 +441,8 @@ export function ContentTab({ contentData, isLoading, allowedSchools }: ContentTa
       </div>
 
       {/* Signals Benchmark Matrix */}
-      <GlassCard className="p-6">
-        <div className="text-sm font-semibold text-gray-700 mb-3">Signals Benchmark Matrix</div>
+      <GlassCard className="p-6 content-section">
+        <div className="text-base font-semibold text-gray-900 mb-3">Signals Benchmark Matrix</div>
         <div className="hidden md:block overflow-x-auto">
           <table className="min-w-full text-sm">
             <thead className="text-xs uppercase tracking-wide text-gray-500">
@@ -468,9 +463,9 @@ export function ContentTab({ contentData, isLoading, allowedSchools }: ContentTa
                       {row.sample >= 20 && row.lift > 0 && <span className="metric-badge">Playbook</span>}
                     </div>
                   </td>
-                  <td className="py-3 text-right text-gray-700">{row.sample}</td>
-                  <td className="py-3 text-right text-gray-700">{formatNumber(row.medianInteractions)}</td>
-                  <td className="py-3 text-right text-gray-700">{row.medianEngagement.toFixed(2)}</td>
+                  <td className="py-3 text-right text-gray-800">{row.sample}</td>
+                  <td className="py-3 text-right text-gray-800">{formatNumber(row.medianInteractions)}</td>
+                  <td className="py-3 text-right text-gray-800">{row.medianEngagement.toFixed(2)}</td>
                   <td className={`py-3 text-right font-semibold ${row.lift >= 0 ? 'text-green-600' : 'text-red-500'}`}>
                     {row.lift > 0 ? '+' : ''}{row.lift.toFixed(1)}%
                   </td>
@@ -481,7 +476,7 @@ export function ContentTab({ contentData, isLoading, allowedSchools }: ContentTa
         </div>
         <div className="grid grid-cols-1 md:hidden gap-3">
           {signalsMatrix.map((row) => (
-            <GlassCard key={row.label} className="p-4">
+            <GlassCard key={row.label} className="p-4 content-post-card">
               <div className="flex items-center justify-between">
                 <div className="font-semibold text-gray-900">{row.label}</div>
                 {row.sample >= 20 && row.lift > 0 && <span className="metric-badge">Playbook</span>}
@@ -504,22 +499,22 @@ export function ContentTab({ contentData, isLoading, allowedSchools }: ContentTa
       </GlassCard>
 
       {/* Sponsor Partner Intelligence */}
-      <GlassCard className="p-6">
-        <div className="text-sm font-semibold text-gray-700 mb-4">Sponsor Partner Intelligence</div>
+      <GlassCard className="p-6 content-section">
+        <div className="text-base font-semibold text-gray-900 mb-4">Sponsor Partner Intelligence</div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <GlassCard className="p-4">
+          <GlassCard className="p-5 content-post-card">
             <div className="text-xs uppercase tracking-wide text-gray-500 mb-2">Top Sponsored + IP (Median Interactions)</div>
             {sponsorIntel.ranked.slice(0, 5).map((item) => (
-              <div key={item.name} className="flex items-center justify-between text-sm text-gray-700 py-1">
+              <div key={item.name} className="flex items-center justify-between text-sm text-gray-800 py-1">
                 <span className="truncate">{item.name}</span>
                 <span className="font-semibold">{formatNumber(item.medianInteractions)}</span>
               </div>
             ))}
           </GlassCard>
-          <GlassCard className="p-4">
+          <GlassCard className="p-5 content-post-card">
             <div className="text-xs uppercase tracking-wide text-gray-500 mb-2">Missed Opportunity (Sponsored without IP)</div>
             {sponsorIntel.missedList.slice(0, 5).map(([name, count]) => (
-              <div key={name} className="flex items-center justify-between text-sm text-gray-700 py-1">
+              <div key={name} className="flex items-center justify-between text-sm text-gray-800 py-1">
                 <span className="truncate">{name}</span>
                 <span className="font-semibold">{count} posts</span>
               </div>
