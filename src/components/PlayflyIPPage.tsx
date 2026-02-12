@@ -318,9 +318,16 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
           return response.json() as Promise<SchoolAthleteData>;
         });
 
-        const contentPromise = fetch('/data/NCAA_contents%20(2).json')
-          .then(res => res.ok ? res.json() : [])
-          .catch(() => []);
+        // Load per-school content files in parallel
+        const contentPromise = Promise.all(
+          Object.values(SCHOOL_FILE_MAP).map(async (fileName) => {
+            try {
+              const res = await fetch(`/data/${fileName}-contents.json`);
+              if (!res.ok) return [];
+              return res.json();
+            } catch { return []; }
+          })
+        ).then(arrays => arrays.flat());
 
         const [schoolResults, brandResult, partnershipResults, athleteResults, contentResults] = await Promise.all([
           Promise.all(schoolPromises),
