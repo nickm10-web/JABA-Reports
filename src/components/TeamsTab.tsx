@@ -3,7 +3,7 @@ import { GlassCard, GlassPill, DrawerPanel } from './playfly/PlayflyUI';
 
 type Timeframe = 'sevenDays' | 'thirtyDays' | 'ninetyDays';
 type Platform = 'all' | 'instagram' | 'tiktok';
-type SortKey = 'adoption' | 'engagementRate' | 'interactions' | 'followers';
+type SortKey = 'engagementRate' | 'interactions' | 'followers';
 
 interface TeamMetricsSlice {
   followers: number;
@@ -104,7 +104,6 @@ export function TeamsTab({ playflySchools }: TeamsTabProps) {
   const [selectedTeamId, setSelectedTeamId] = useState<string | null>(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [leaderboardView, setLeaderboardView] = useState<'cards' | 'table'>('table');
-  const [hoveredTeamId, setHoveredTeamId] = useState<string | null>(null);
   const [filtersOpen, setFiltersOpen] = useState(false);
 
   const tableRef = useRef<HTMLDivElement | null>(null);
@@ -199,28 +198,14 @@ export function TeamsTab({ playflySchools }: TeamsTabProps) {
     });
   }, [baseTeams, timeframe, platform, playflySet]);
 
-  const median = (values: number[]) => {
-    if (!values.length) return 0;
-    const sorted = [...values].sort((a, b) => a - b);
-    const mid = Math.floor(sorted.length / 2);
-    return sorted.length % 2 === 0 ? (sorted[mid - 1] + sorted[mid]) / 2 : sorted[mid];
-  };
-
-  const adoptionMedian = useMemo(() => median(baseRows.map(t => t.logoAdoption)), [baseRows]);
-  const liftMedian = useMemo(() => median(baseRows.map(t => t.slice.engagementRateLogoLift || 0)), [baseRows]);
-
   const sortedTeams = useMemo(() => {
     const sorted = [...teamRows].sort((a, b) => {
-      const aVal = sortKey === 'adoption'
-        ? a.logoAdoption
-        : sortKey === 'engagementRate'
+      const aVal = sortKey === 'engagementRate'
           ? a.slice.engagementRate
           : sortKey === 'interactions'
             ? a.interactions
             : a.slice.followers;
-      const bVal = sortKey === 'adoption'
-        ? b.logoAdoption
-        : sortKey === 'engagementRate'
+      const bVal = sortKey === 'engagementRate'
           ? b.slice.engagementRate
           : sortKey === 'interactions'
             ? b.interactions
@@ -378,7 +363,7 @@ export function TeamsTab({ playflySchools }: TeamsTabProps) {
       </div>
 
 
-      <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-6">
+      <div className="grid grid-cols-1 gap-6">
         <GlassCard className="overflow-hidden">
           <div className="p-4 border-b border-gray-200 flex items-center justify-between md:hidden">
             <div className="text-sm text-gray-600">Showing {sortedTeams.length} teams</div>
@@ -389,7 +374,6 @@ export function TeamsTab({ playflySchools }: TeamsTabProps) {
           </div>
 
           <div className="p-4 flex flex-wrap gap-2">
-            <GlassPill className="pf-chip-compact" active={sortKey === 'adoption'} onClick={() => handleSort('adoption')}>Adoption</GlassPill>
             <GlassPill className="pf-chip-compact" active={sortKey === 'engagementRate'} onClick={() => handleSort('engagementRate')}>Engagement Rate</GlassPill>
             <GlassPill className="pf-chip-compact" active={sortKey === 'interactions'} onClick={() => handleSort('interactions')}>Interactions</GlassPill>
             <GlassPill className="pf-chip-compact" active={sortKey === 'followers'} onClick={() => handleSort('followers')}>Followers</GlassPill>
@@ -455,84 +439,6 @@ export function TeamsTab({ playflySchools }: TeamsTabProps) {
           </div>
         </GlassCard>
 
-        <GlassCard className="p-4 min-w-[420px]">
-          <div className="mb-2">
-            <div className="text-sm font-semibold text-gray-900">Team Landscape</div>
-            <div className="text-xs text-gray-500">Each dot is a team. Right/up is better: higher adoption and higher lift.</div>
-          </div>
-          <div className="w-full h-[360px] min-h-[340px]">
-            <svg viewBox="0 0 560 380" className="w-full h-full">
-              {(() => {
-                const left = 44;
-                const top = 18;
-                const width = 486;
-                const height = 320;
-                const plotRows = baseRows.filter(r => r.isPlayfly);
-                const adoptionVals = plotRows.map(r => r.logoAdoption);
-                const liftVals = plotRows.map(r => r.slice.engagementRateLogoLift || 0);
-                const minX = Math.min(...adoptionVals);
-                const maxX = Math.max(...adoptionVals);
-                const minY = Math.min(...liftVals);
-                const maxY = Math.max(...liftVals);
-                const padX = (maxX - minX) * 0.1 || 1;
-                const padY = (maxY - minY) * 0.1 || 1;
-                const xScale = (val: number) => left + ((val - (minX - padX)) / ((maxX + padX) - (minX - padX))) * width;
-                const yScale = (val: number) => top + height - ((val - (minY - padY)) / ((maxY + padY) - (minY - padY))) * height;
-                return (
-                  <>
-                    <rect x={left} y={top} width={width} height={height} fill="#f8fafc" stroke="#e5e7eb" />
-                    <line x1={xScale(adoptionMedian)} y1={top} x2={xScale(adoptionMedian)} y2={top + height} stroke="#64748b" strokeDasharray="6 6" />
-                    <line x1={left} y1={yScale(liftMedian)} x2={left + width} y2={yScale(liftMedian)} stroke="#64748b" strokeDasharray="6 6" />
-                    <text x={xScale(adoptionMedian) + 6} y={top + 12} fontSize="10" fill="#64748b">Median Adoption</text>
-                    <text x={left + 6} y={yScale(liftMedian) - 6} fontSize="10" fill="#64748b">Median Lift</text>
-                    <text x={left + width / 2} y={top + height + 30} fontSize="11" fill="#1f2937" textAnchor="middle">Logo Adoption (%)</text>
-                    <text x={left - 32} y={top + height / 2} fontSize="11" fill="#1f2937" textAnchor="middle" transform={`rotate(-90 ${left - 32} ${top + height / 2})`}>Logo Lift (%)</text>
-                    {plotRows.map((row, idx) => {
-                      const density = plotRows.length;
-                      const jitterX = density > 250 ? ((idx % 7) - 3) * 1.5 : 0;
-                      const jitterY = density > 250 ? ((idx % 5) - 2) * 1.5 : 0;
-                      const x = xScale(row.logoAdoption) + jitterX;
-                      const y = yScale(row.slice.engagementRateLogoLift || 0) + jitterY;
-                      const r = 7;
-                      const color = 'rgba(23,112,192,0.7)';
-                      const stroke = '#1770C0';
-                      const isSelected = selectedTeamId === row.id;
-                      const tooltipX = Math.min(left + width - 210 - 6, Math.max(left + 6, x + 10));
-                      const tooltipY = Math.min(top + height - 78, Math.max(top + 6, y - 22));
-                      const platformLabel = platform === 'all' ? 'All Platforms' : platform === 'instagram' ? 'Instagram' : 'TikTok';
-                      return (
-                        <g
-                          key={row.id}
-                          onMouseEnter={() => setHoveredTeamId(row.id)}
-                          onMouseLeave={() => setHoveredTeamId(null)}
-                          onClick={() => { setSelectedTeamId(row.id); setDrawerOpen(true); }}
-                        >
-                          <circle cx={x} cy={y} r={r} fill={color} stroke={stroke} strokeWidth="1.3" />
-                          {isSelected && <circle cx={x} cy={y} r={r + 4} fill="none" stroke="#1770C0" strokeWidth="2" />}
-                          {hoveredTeamId === row.id && (
-                            <g>
-                              <rect x={tooltipX} y={tooltipY} rx={8} ry={8} width={210} height={72} fill="#0f172a" opacity={0.95} />
-                              <text x={tooltipX + 10} y={tooltipY + 16} fontSize="11" fill="#ffffff" fontWeight="600">
-                                {row.team.schoolName} • {row.team.sport}
-                              </text>
-                              <text x={tooltipX + 10} y={tooltipY + 30} fontSize="10" fill="#cbd5f5">{platformLabel}</text>
-                              <text x={tooltipX + 10} y={tooltipY + 44} fontSize="10" fill="#cbd5f5">
-                                Logo Adoption {row.logoAdoption.toFixed(1)}% • Logo Lift {formatPercent(row.slice.engagementRateLogoLift || 0, 1)}
-                              </text>
-                              <text x={tooltipX + 10} y={tooltipY + 58} fontSize="10" fill="#cbd5f5">
-                                Engagement {formatPercent(row.slice.engagementRate, 2)} • Interactions {formatShort(row.interactions)}
-                              </text>
-                            </g>
-                          )}
-                        </g>
-                      );
-                    })}
-                  </>
-                );
-              })()}
-            </svg>
-          </div>
-        </GlassCard>
       </div>
 
       <GlassCard className="p-6 content-section">

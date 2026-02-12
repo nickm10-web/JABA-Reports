@@ -271,6 +271,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
   const [schoolsData, setSchoolsData] = useState<SchoolIPData[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const firstSectionRef = useRef<HTMLDivElement | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   // Brand partnership data
   const [brandData, setBrandData] = useState<BrandPartnershipData | null>(null);
@@ -352,6 +353,15 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
     }
 
     loadData();
+  }, []);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setIsScrolled(window.scrollY > 40);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   // report scope is fixed to all schools
@@ -495,8 +505,8 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
     <div className="playfly-theme min-h-screen bg-[#F3F6FB] px-4 pb-16 md:px-8">
       <div className="max-w-7xl mx-auto relative">
         {/* Sticky Command Bar */}
-        <div className="sticky top-4 z-40 mb-8">
-          <GlassCard className="p-4 md:p-5">
+        <div className="sticky top-0 z-40">
+          <GlassCard className={`p-4 md:p-5 nav-glass ${isScrolled ? 'nav-glass-scrolled' : ''}`}>
             <CommandBar
               left={(
                 <div className="flex items-center gap-3">
@@ -520,17 +530,31 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
 
             <div className="mt-4 flex flex-col gap-4">
               <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-                <div className="w-full md:w-auto" />
+                <div className="flex items-center gap-3 w-full md:w-auto">
+                  <span className="text-sm font-semibold text-gray-700">Viewing:</span>
+                  <select
+                    value={selectedSchool}
+                    onChange={(e) => setSelectedSchool(e.target.value)}
+                    className="bg-white/90 border border-gray-200 rounded-full px-4 py-2 text-gray-900 text-sm focus:border-[#1770C0] focus:outline-none w-full md:w-auto"
+                  >
+                    <option value="all">All Playfly Schools</option>
+                    {schoolsData.map((school) => (
+                      <option key={school.school._id} value={school.school.name}>
+                        {getDisplayName(school.school.name)}
+                      </option>
+                    ))}
+                  </select>
+                </div>
               </div>
 
               <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-2 snap-x snap-mandatory">
                 <GlassPill className="snap-start" active={activeTab === 'overview'} onClick={() => setActiveTab('overview')}>Overview</GlassPill>
                 <GlassPill className="snap-start" active={activeTab === 'with-vs-without'} onClick={() => setActiveTab('with-vs-without')}>IP Comparison</GlassPill>
-                <GlassPill className="snap-start" active={activeTab === 'partnerships'} onClick={() => setActiveTab('partnerships')}>Partnerships</GlassPill>
+                <GlassPill className="snap-start" active={activeTab === 'partnerships'} onClick={() => setActiveTab('partnerships')}>Sponsored Posts</GlassPill>
                 <GlassPill className="snap-start" active={activeTab === 'athletes'} onClick={() => setActiveTab('athletes')}>Athletes</GlassPill>
                 <GlassPill className="snap-start" active={activeTab === 'rankings'} onClick={() => setActiveTab('rankings')}>Rankings</GlassPill>
                 <GlassPill className="snap-start" active={activeTab === 'content'} onClick={() => setActiveTab('content')}>Content</GlassPill>
-                <GlassPill className="snap-start" active={activeTab === 'teams'} onClick={() => setActiveTab('teams')}>Teams</GlassPill>
+                <GlassPill className="snap-start" active={activeTab === 'teams'} onClick={() => setActiveTab('teams')}>Team Socials</GlassPill>
               </div>
             </div>
           </GlassCard>
@@ -1475,15 +1499,12 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                   ))}
                 </select>
                 {withVsWithoutScope !== 'all' && (
-                  <>
-                    <span className="metric-badge">Override active</span>
-                    <button
-                      onClick={() => setWithVsWithoutScope('all')}
-                      className="text-xs font-semibold text-[#1770C0] hover:text-[#3B9FD9]"
-                    >
-                      Reset to All Schools
-                    </button>
-                  </>
+                  <button
+                    onClick={() => setWithVsWithoutScope('all')}
+                    className="text-xs font-semibold text-[#1770C0] hover:text-[#3B9FD9]"
+                  >
+                    Reset to All Schools
+                  </button>
                 )}
               </div>
             </div>
@@ -1540,20 +1561,20 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     </details>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     {/* With Logo */}
-                    <GlassCard className="p-8">
-                      <div className="flex items-center gap-3 mb-6">
-                        <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                          <Award className="w-6 h-6 text-green-600" />
+                    <GlassCard className="p-6">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                          <Award className="w-5 h-5 text-green-600" />
                         </div>
-                        <h4 className="text-2xl font-bold text-gray-900">With Visual IP</h4>
+                        <h4 className="text-xl font-bold text-gray-900">With Visual IP</h4>
                       </div>
 
-                      <div className="space-y-4">
+                      <div className="space-y-3">
                         <div>
                           <div className="text-sm text-gray-600 mb-1">Posts</div>
-                          <div className="text-2xl md:text-3xl font-bold text-gray-900">{formatNumber(totals.withIP.contents)}</div>
+                          <div className="text-2xl font-bold text-gray-900">{formatNumber(totals.withIP.contents)}</div>
                         </div>
                         <div>
                           <div className="flex items-center gap-1.5 text-sm text-gray-600 mb-1">
@@ -1565,7 +1586,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                               </div>
                             </div>
                           </div>
-                          <div className="text-2xl md:text-3xl font-bold text-gray-900">
+                          <div className="text-2xl font-bold text-gray-900">
                             {formatNumber(totals.withIP.likes + totals.withIP.comments)}
                           </div>
                         </div>
@@ -1585,18 +1606,18 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     </GlassCard>
 
                     {/* Without Logo */}
-                    <GlassCard className="p-8">
-                      <div className="flex items-center gap-3 mb-6">
-                        <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
-                          <BarChart3 className="w-6 h-6 text-gray-600" />
+                    <GlassCard className="p-6">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                          <BarChart3 className="w-5 h-5 text-gray-600" />
                         </div>
-                        <h4 className="text-2xl font-bold text-gray-900">Without Visual IP</h4>
+                        <h4 className="text-xl font-bold text-gray-900">Without Visual IP</h4>
                       </div>
 
-                      <div className="space-y-4">
+                      <div className="space-y-3">
                         <div>
                           <div className="text-sm text-gray-600 mb-1">Posts</div>
-                          <div className="text-2xl md:text-3xl font-bold text-gray-900">{formatNumber(totals.withoutIP.contents)}</div>
+                          <div className="text-2xl font-bold text-gray-900">{formatNumber(totals.withoutIP.contents)}</div>
                         </div>
                         <div>
                           <div className="flex items-center gap-1.5 text-sm text-gray-600 mb-1">
@@ -1608,7 +1629,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                               </div>
                             </div>
                           </div>
-                          <div className="text-2xl md:text-3xl font-bold text-gray-900">
+                          <div className="text-2xl font-bold text-gray-900">
                             {formatNumber(totals.withoutIP.likes + totals.withoutIP.comments)}
                           </div>
                         </div>
@@ -1628,8 +1649,8 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     </GlassCard>
 
                     {/* Impact Summary */}
-                    <GlassCard className="md:col-span-2 p-8">
-                      <h4 className="text-xl font-bold text-gray-900 mb-4">Impact Summary</h4>
+                    <GlassCard className="md:col-span-2 p-6">
+                      <h4 className="text-lg font-bold text-gray-900 mb-3">Impact Summary</h4>
                       <div className="flex flex-col md:flex-row md:items-center gap-6">
                         <div>
                           <div className="text-sm text-gray-700 mb-1">Average Engagement Lift</div>
@@ -1954,6 +1975,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                 schoolsData={schoolsData}
                 athleteData={athleteData}
                 formatNumber={formatNumber}
+                formatEMV={formatEMV}
               />
             )}
 

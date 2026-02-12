@@ -54,6 +54,20 @@ export function PartnershipsTab({
   formatNumber,
   formatEMV
 }: PartnershipsTabProps) {
+  const EMV_LIKE_RATE = 0.5;
+  const EMV_COMMENT_RATE = 1.5;
+  const calcEstimatedEmv = (likes: number, comments: number) =>
+    (likes * EMV_LIKE_RATE) + (comments * EMV_COMMENT_RATE);
+  const calcNetworkEstimatedEmv = () =>
+    schoolPartnershipData.reduce((sum, school) => {
+      const schoolTotal = school.sponsorPartners.reduce((pSum, p) => {
+        const totalLikes = p.avgLikes * p.totalContents;
+        const totalComments = p.avgComments * p.totalContents;
+        return pSum + calcEstimatedEmv(totalLikes, totalComments);
+      }, 0);
+      return sum + schoolTotal;
+    }, 0);
+
   const [partnershipSearchQuery, setPartnershipSearchQuery] = useState('');
   const [engagementFilter, setEngagementFilter] = useState<'all' | 'high' | 'mid' | 'low'>('all');
   const [sortBy, setSortBy] = useState<'emv' | 'posts' | 'engagement' | 'lift'>('emv');
@@ -506,7 +520,7 @@ export function PartnershipsTab({
           </div>
         </div>
 
-        {/* Posts & EMV Row */}
+        {/* Posts & Estimated EMV Row */}
         <div className="flex items-center justify-between mb-3">
           <div className="text-[#1770C0] font-semibold">
             {formatNumber(brand.totalPosts)} posts
@@ -550,7 +564,6 @@ export function PartnershipsTab({
       name: string;
       totalPosts: number;
       schools: Set<string>;
-      totalEMV: number;
       avgEngagement: number;
       engagementLift: number[];
       totalLikes: number;
@@ -564,7 +577,6 @@ export function PartnershipsTab({
         if (existing) {
           existing.totalPosts += partner.totalContents;
           existing.schools.add(school.school.name);
-          existing.totalEMV += partner.emv * partner.totalContents;
           existing.avgEngagement += partner.engagementRate;
           existing.engagementLift.push(partner.engagementRateLift);
           existing.totalLikes += partner.avgLikes * partner.totalContents;
@@ -574,7 +586,6 @@ export function PartnershipsTab({
             name: partner.sponsorPartner,
             totalPosts: partner.totalContents,
             schools: new Set([school.school.name]),
-            totalEMV: partner.emv * partner.totalContents,
             avgEngagement: partner.engagementRate,
             engagementLift: [partner.engagementRateLift],
             totalLikes: partner.avgLikes * partner.totalContents,
@@ -589,7 +600,7 @@ export function PartnershipsTab({
       name: brand.name,
       totalPosts: brand.totalPosts,
       schoolCount: brand.schools.size,
-      totalEMV: brand.totalEMV,
+      totalEMV: calcEstimatedEmv(brand.totalLikes, brand.totalComments),
       avgEngagement: brand.avgEngagement / brand.engagementLift.length,
       avgLift: brand.engagementLift.reduce((sum, lift) => sum + lift, 0) / brand.engagementLift.length,
       avgLikes: brand.totalLikes / brand.totalPosts,
@@ -687,7 +698,7 @@ export function PartnershipsTab({
               onChange={(e) => setSortBy(e.target.value as any)}
               className="w-full bg-white border border-gray-200 rounded-full px-4 py-2 text-gray-900 focus:border-blue-500 focus:outline-none"
             >
-              <option value="emv">Total EMV</option>
+              <option value="emv">Estimated EMV</option>
               <option value="posts">Total Posts</option>
               <option value="engagement">Total Interactions</option>
               <option value="lift">Avg Lift %</option>
@@ -716,10 +727,10 @@ export function PartnershipsTab({
         <div className="flex items-center justify-between">
           <div>
             <h3 className="text-2xl md:text-3xl pf-section-header">
-              <span className="pf-header-primary">Brand </span>
-              <span className="pf-header-secondary">Partnerships</span>
+              <span className="pf-header-primary">Sponsored </span>
+              <span className="pf-header-secondary">Posts</span>
             </h3>
-            <p className="text-gray-600 mt-2">Brands leveraging school IP across your network</p>
+            <p className="text-gray-600 mt-2">Sponsored posts leveraging school IP across your network</p>
           </div>
           <div className="text-sm text-gray-600">
             {brandsArray.length} total brands
@@ -747,15 +758,12 @@ export function PartnershipsTab({
               ))}
             </select>
             {sectionScope !== 'all' && (
-              <>
-                <span className="metric-badge">Override active</span>
-                <button
-                  onClick={() => setSectionScope('all')}
-                  className="text-xs font-semibold text-[#1770C0] hover:text-[#3B9FD9]"
-                >
-                  Reset to All Schools
-                </button>
-              </>
+              <button
+                onClick={() => setSectionScope('all')}
+                className="text-xs font-semibold text-[#1770C0] hover:text-[#3B9FD9]"
+              >
+                Reset to All Schools
+              </button>
             )}
           </div>
         </div>
@@ -778,9 +786,9 @@ export function PartnershipsTab({
             <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">{schoolPartnershipData.length}</div>
           </GlassCard>
           <GlassCard className="p-6">
-            <div className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-2">Total EMV</div>
+            <div className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-2">Estimated EMV</div>
             <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-600">
-              {formatEMV(brandsArray.reduce((sum, b) => sum + b.totalEMV, 0))}
+              ${Math.round(calcNetworkEstimatedEmv()).toLocaleString('en-US')}
             </div>
           </GlassCard>
         </div>
@@ -807,9 +815,9 @@ export function PartnershipsTab({
         <div className="space-y-6">
           <div className="flex items-center justify-between">
             <div>
-              <h4 className="text-xl font-bold text-gray-900">Brand Partners</h4>
+              <h4 className="text-xl font-bold text-gray-900">Sponsored Posts</h4>
               <p className="text-sm text-gray-600 mt-1">
-                Showing top {cardsToShow} brands sorted by {sortBy === 'emv' ? 'Total EMV' : sortBy === 'posts' ? 'Total Posts' : sortBy === 'engagement' ? 'Total Interactions' : 'Avg Lift'}
+                Showing top {cardsToShow} brands sorted by {sortBy === 'emv' ? 'Estimated EMV' : sortBy === 'posts' ? 'Total Posts' : sortBy === 'engagement' ? 'Total Interactions' : 'Avg Lift'}
               </p>
             </div>
           </div>
@@ -902,8 +910,8 @@ export function PartnershipsTab({
                   <span className="font-semibold text-gray-900">{formatNumber(selectedBrand.totalComments)}</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-500">Total EMV</span>
-                  <span className="font-semibold text-green-600">{formatEMV(selectedBrand.totalEMV)}</span>
+              <span className="text-gray-500">Estimated EMV</span>
+              <span className="font-semibold text-green-600">{formatEMV(selectedBrand.totalEMV)}</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-gray-500">Avg Lift</span>
@@ -925,9 +933,9 @@ export function PartnershipsTab({
   if (!schoolData) {
     return (
       <div className="space-y-8">
-        <h3 className="text-2xl md:text-3xl font-bold text-gray-900">{sectionScope} - Brand Partnerships</h3>
+        <h3 className="text-2xl md:text-3xl font-bold text-gray-900">{sectionScope} - Sponsored Posts</h3>
         <GlassCard className="p-8 text-center">
-          <p className="text-gray-600">No partnership data available for this school</p>
+          <p className="text-gray-600">No sponsored post data available for this school</p>
         </GlassCard>
       </div>
     );
@@ -941,16 +949,22 @@ export function PartnershipsTab({
     : schoolData.sponsorPartners
   ).filter(p => !isExcludedBrand(p.sponsorPartner, schoolData.school.name));
 
-  const sortedPartners = [...filteredPartners].sort((a, b) => (b.emv * b.totalContents) - (a.emv * a.totalContents));
+  const getPartnerEstimatedEmv = (partner: SchoolPartnershipData['sponsorPartners'][number]) => {
+    const totalLikes = partner.avgLikes * partner.totalContents;
+    const totalComments = partner.avgComments * partner.totalContents;
+    return calcEstimatedEmv(totalLikes, totalComments);
+  };
+
+  const sortedPartners = [...filteredPartners].sort((a, b) => getPartnerEstimatedEmv(b) - getPartnerEstimatedEmv(a));
 
   return (
     <div className="space-y-8">
       <div>
         <h3 className="text-2xl md:text-3xl pf-section-header">
           <span className="pf-header-primary">{sectionScope} </span>
-          <span className="pf-header-secondary">Brand Partnerships</span>
+          <span className="pf-header-secondary">Sponsored Posts</span>
         </h3>
-        <p className="text-gray-600 mt-2">Brands working with your school's athletes</p>
+        <p className="text-gray-600 mt-2">Sponsored posts featuring your school's athletes</p>
       </div>
 
       {/* Section Scope */}
@@ -974,15 +988,12 @@ export function PartnershipsTab({
             ))}
           </select>
           {sectionScope !== 'all' && (
-            <>
-              <span className="metric-badge">Override active</span>
-              <button
-                onClick={() => setSectionScope('all')}
-                className="text-xs font-semibold text-[#1770C0] hover:text-[#3B9FD9]"
-              >
-                Reset to All Schools
-              </button>
-            </>
+            <button
+              onClick={() => setSectionScope('all')}
+              className="text-xs font-semibold text-[#1770C0] hover:text-[#3B9FD9]"
+            >
+              Reset to All Schools
+            </button>
           )}
         </div>
       </div>
@@ -998,9 +1009,13 @@ export function PartnershipsTab({
           <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">{formatNumber(schoolData.overall.totalContents)}</div>
         </GlassCard>
         <GlassCard className="p-6">
-          <div className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-2">Total EMV</div>
+          <div className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-2">Estimated EMV</div>
           <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-600">
-            {formatEMV(schoolData.sponsorPartners.reduce((sum, p) => sum + (p.emv * p.totalContents), 0))}
+            {formatEMV(schoolData.sponsorPartners.reduce((sum, p) => {
+              const totalLikes = p.avgLikes * p.totalContents;
+              const totalComments = p.avgComments * p.totalContents;
+              return sum + calcEstimatedEmv(totalLikes, totalComments);
+            }, 0))}
           </div>
         </GlassCard>
       </div>
@@ -1020,7 +1035,7 @@ export function PartnershipsTab({
       <GlassCard className="overflow-hidden">
         <div className="p-6 border-b border-gray-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
-            <h4 className="text-xl font-bold text-gray-900">Brand Partners</h4>
+            <h4 className="text-xl font-bold text-gray-900">Sponsored Posts</h4>
             <p className="text-sm text-gray-600 mt-1">Showing {sortedPartners.length} brands</p>
           </div>
           <div className="flex gap-2 md:hidden" data-snapshot-hide="true">
@@ -1044,7 +1059,7 @@ export function PartnershipsTab({
                     avgLikes: partner.avgLikes,
                     avgComments: partner.avgComments,
                     engagementRate: partner.engagementRate,
-                    emv: partner.emv * partner.totalContents,
+                    emv: getPartnerEstimatedEmv(partner),
                     engagementRateLift: partner.engagementRateLift
                   });
                   setSchoolPartnerDrawerOpen(true);
@@ -1065,8 +1080,8 @@ export function PartnershipsTab({
                   <div className="text-right text-gray-900 font-semibold">{avgInteractionsPerPost.toFixed(1)}</div>
                   <div>Engagement Rate</div>
                   <div className="text-right text-gray-900 font-semibold">{(partner.engagementRate * 100).toFixed(2)}%</div>
-                  <div>EMV</div>
-                  <div className="text-right text-green-600 font-semibold">{formatEMV(partner.emv * partner.totalContents)}</div>
+                  <div>Estimated EMV</div>
+                  <div className="text-right text-green-600 font-semibold">{formatEMV(getPartnerEstimatedEmv(partner))}</div>
                   <div>Engagement Lift</div>
                   <div className={`text-right font-semibold ${partner.engagementRateLift > 0 ? 'text-green-600' : partner.engagementRateLift < 0 ? 'text-red-600' : 'text-gray-600'}`}>
                     {partner.engagementRateLift > 0 ? '+' : ''}{partner.engagementRateLift.toFixed(1)}%
@@ -1098,7 +1113,7 @@ export function PartnershipsTab({
                   </div>
                 </th>
                 <th className="px-6 py-4 text-right text-xs font-semibold text-gray-700">Engagement Rate</th>
-                <th className="px-6 py-4 text-right text-xs font-semibold text-gray-700">EMV</th>
+                <th className="px-6 py-4 text-right text-xs font-semibold text-gray-700">Estimated EMV</th>
                 <th className="px-6 py-4 text-right text-xs font-semibold text-gray-700">Engagement Lift</th>
               </tr>
             </thead>
@@ -1116,7 +1131,7 @@ export function PartnershipsTab({
                         avgLikes: partner.avgLikes,
                         avgComments: partner.avgComments,
                         engagementRate: partner.engagementRate,
-                        emv: partner.emv * partner.totalContents,
+                        emv: getPartnerEstimatedEmv(partner),
                         engagementRateLift: partner.engagementRateLift
                       });
                       setSchoolPartnerDrawerOpen(true);
@@ -1144,7 +1159,7 @@ export function PartnershipsTab({
                       {(partner.engagementRate * 100).toFixed(2)}%
                     </td>
                     <td className="px-6 py-4 text-right text-green-600 font-bold text-base">
-                      {formatEMV(partner.emv * partner.totalContents)}
+                      {formatEMV(getPartnerEstimatedEmv(partner))}
                     </td>
                     <td className="px-6 py-4 text-right">
                       <div className={`font-semibold ${
@@ -1186,7 +1201,7 @@ export function PartnershipsTab({
               <span className="font-semibold text-gray-900">{(selectedSchoolPartner.engagementRate * 100).toFixed(2)}%</span>
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-gray-500">EMV</span>
+              <span className="text-gray-500">Estimated EMV</span>
               <span className="font-semibold text-green-600">{formatEMV(selectedSchoolPartner.emv)}</span>
             </div>
             <div className="flex items-center justify-between">

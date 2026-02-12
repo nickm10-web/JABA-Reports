@@ -119,6 +119,22 @@ body {
   border-color: rgba(23, 112, 192, 0.3);
 }
 
+.playfly-theme .nav-glass {
+  margin: 0;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: none;
+  border: 1px solid transparent;
+  border-radius: 0 0 20px 20px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.playfly-theme .nav-glass-scrolled {
+  background: rgba(255, 255, 255, 0.86);
+  border-color: rgba(148, 163, 184, 0.35);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12);
+}
+
 .playfly-theme .content-section.glass-card {
   background: #f1f5f9;
   border: 1px solid rgba(148, 163, 184, 0.18);
