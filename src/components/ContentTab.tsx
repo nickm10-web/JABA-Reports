@@ -147,8 +147,6 @@ export function ContentTab() {
   if (!scope) return <GlassCard className="p-6 text-sm text-gray-500">No content data available.</GlassCard>;
 
   const leaderboards = [
-    { id: 'with-ip', title: 'Top posts WITH Playfly IP', items: scope.topWithIp, stats: scope.statsWithIp, counterStats: scope.statsWithoutIp },
-    { id: 'without-ip', title: 'Top posts WITHOUT Playfly IP', items: scope.topWithoutIp, stats: scope.statsWithoutIp, counterStats: scope.statsWithIp },
     { id: 'sponsored-with-ip', title: 'Top Sponsored posts WITH Playfly IP', items: scope.topSponsoredWithIp, stats: scope.statsSponsoredWithIp, counterStats: scope.statsSponsoredWithoutIp },
     { id: 'sponsored-without-ip', title: 'Top Sponsored posts WITHOUT Playfly IP', items: scope.topSponsoredWithoutIp, stats: scope.statsSponsoredWithoutIp, counterStats: scope.statsSponsoredWithIp },
   ];
@@ -226,83 +224,6 @@ export function ContentTab() {
         })}
       </div>
 
-      {/* Signals Benchmark Matrix */}
-      <GlassCard className="p-6 content-section">
-        <div className="text-base font-semibold text-gray-900 mb-3">Signals Benchmark Matrix</div>
-        <div className="hidden md:block overflow-x-auto">
-          <table className="min-w-full text-sm">
-            <thead className="text-xs uppercase tracking-wide text-gray-500">
-              <tr className="border-b border-gray-200">
-                <th className="text-left py-2">Signal Combination</th>
-                <th className="text-right py-2">Sample size</th>
-                <th className="text-right py-2">Median interactions</th>
-                <th className="text-right py-2">Median engagement/post</th>
-                <th className="text-right py-2">Lift vs No IP</th>
-              </tr>
-            </thead>
-            <tbody>
-              {scope.signalsMatrix.map(row => (
-                <tr key={row.label} className="border-b border-gray-100">
-                  <td className="py-3 font-semibold text-gray-900">
-                    <div className="flex items-center gap-2">
-                      {row.label}
-                      {row.sample >= 20 && row.lift > 0 && <span className="metric-badge">Playbook</span>}
-                    </div>
-                  </td>
-                  <td className="py-3 text-right text-gray-800">{row.sample}</td>
-                  <td className="py-3 text-right text-gray-800">{formatNumber(row.medianInteractions)}</td>
-                  <td className="py-3 text-right text-gray-800">{row.medianEngagement.toFixed(2)}</td>
-                  <td className={`py-3 text-right font-semibold ${row.lift >= 0 ? 'text-green-600' : 'text-red-500'}`}>
-                    {row.lift > 0 ? '+' : ''}{row.lift.toFixed(1)}%
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <div className="grid grid-cols-1 md:hidden gap-3">
-          {scope.signalsMatrix.map(row => (
-            <GlassCard key={row.label} className="p-4 content-post-card">
-              <div className="flex items-center justify-between">
-                <div className="font-semibold text-gray-900">{row.label}</div>
-                {row.sample >= 20 && row.lift > 0 && <span className="metric-badge">Playbook</span>}
-              </div>
-              <div className="grid grid-cols-2 gap-2 text-xs text-gray-600 mt-3">
-                <div>Sample size</div><div className="text-right font-semibold text-gray-900">{row.sample}</div>
-                <div>Median interactions</div><div className="text-right font-semibold text-gray-900">{formatNumber(row.medianInteractions)}</div>
-                <div>Median engagement/post</div><div className="text-right font-semibold text-gray-900">{row.medianEngagement.toFixed(2)}</div>
-                <div>Lift vs No IP</div>
-                <div className={`text-right font-semibold ${row.lift >= 0 ? 'text-green-600' : 'text-red-500'}`}>{row.lift > 0 ? '+' : ''}{row.lift.toFixed(1)}%</div>
-              </div>
-            </GlassCard>
-          ))}
-        </div>
-      </GlassCard>
-
-      {/* Sponsor Partner Intelligence */}
-      <GlassCard className="p-6 content-section">
-        <div className="text-base font-semibold text-gray-900 mb-4">Sponsor Partner Intelligence</div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <GlassCard className="p-5 content-post-card">
-            <div className="text-xs uppercase tracking-wide text-gray-500 mb-2">Top Sponsored + IP (Median Interactions)</div>
-            {scope.sponsorIntel.ranked.slice(0, 5).map(item => (
-              <div key={item.name} className="flex items-center justify-between text-sm text-gray-800 py-1">
-                <span className="truncate">{item.name}</span>
-                <span className="font-semibold">{formatNumber(item.medianInteractions)}</span>
-              </div>
-            ))}
-          </GlassCard>
-          <GlassCard className="p-5 content-post-card">
-            <div className="text-xs uppercase tracking-wide text-gray-500 mb-2">Missed Opportunity (Sponsored without IP)</div>
-            {scope.sponsorIntel.missedList.slice(0, 5).map(([name, count]) => (
-              <div key={name} className="flex items-center justify-between text-sm text-gray-800 py-1">
-                <span className="truncate">{name}</span>
-                <span className="font-semibold">{count} posts</span>
-              </div>
-            ))}
-          </GlassCard>
-        </div>
-      </GlassCard>
     </div>
   );
 }

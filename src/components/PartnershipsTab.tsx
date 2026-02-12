@@ -83,12 +83,138 @@ export function PartnershipsTab({
     engagementRateLift: number;
   } | null>(null);
   const [schoolPartnerDrawerOpen, setSchoolPartnerDrawerOpen] = useState(false);
+  const [brandLogoMap, setBrandLogoMap] = useState<Record<string, string>>({});
+
+  const normalizeBrandKey = (value: string) =>
+    value.toLowerCase().replace(/^@/, '').replace(/[\s._-]+/g, '');
+
+  const getSchoolAliases = (schoolName: string) => {
+    const stop = new Set(['university', 'college', 'state', 'of', 'the', 'at', 'and']);
+    const tokens = schoolName
+      .toLowerCase()
+      .replace(/[^a-z0-9\s]/g, ' ')
+      .split(/\s+/)
+      .filter(t => t && !stop.has(t));
+    const initials = tokens.map(t => t[0]).join('');
+    const aliases = new Set<string>([...tokens, initials]);
+
+    const lower = schoolName.toLowerCase();
+    if (lower.includes('texas a') || lower.includes('a&m')) {
+      aliases.add('tamu');
+      aliases.add('aggie');
+      aliases.add('aggies');
+    }
+    if (lower.includes('nebraska')) {
+      aliases.add('husker');
+      aliases.add('huskers');
+    }
+    if (lower.includes('louisiana state')) {
+      aliases.add('lsu');
+      aliases.add('tigers');
+    }
+    if (lower.includes('michigan state')) {
+      aliases.add('msu');
+      aliases.add('spartan');
+      aliases.add('spartans');
+    }
+    if (lower.includes('penn state')) {
+      aliases.add('psu');
+      aliases.add('pennstate');
+      aliases.add('nittany');
+    }
+    if (lower.includes('auburn')) {
+      aliases.add('auburn');
+      aliases.add('tigers');
+    }
+    if (lower.includes('baylor')) {
+      aliases.add('baylor');
+      aliases.add('bears');
+    }
+    if (lower.includes('virginia tech')) {
+      aliases.add('vt');
+      aliases.add('hokie');
+      aliases.add('hokies');
+    }
+    if (lower.includes('washington state')) {
+      aliases.add('wsu');
+      aliases.add('wazzu');
+      aliases.add('cougar');
+      aliases.add('cougars');
+    }
+    if (lower.includes('cincinnati')) {
+      aliases.add('uc');
+      aliases.add('cincy');
+      aliases.add('bearcats');
+    }
+    if (lower.includes('central florida')) {
+      aliases.add('ucf');
+      aliases.add('knights');
+    }
+    if (lower.includes('virginia')) {
+      aliases.add('uva');
+      aliases.add('cavs');
+      aliases.add('cavalier');
+    }
+    if (lower.includes('old dominion')) {
+      aliases.add('odu');
+      aliases.add('monarch');
+      aliases.add('monarchs');
+    }
+    if (lower.includes('texas at san antonio') || lower.includes('utsa')) {
+      aliases.add('utsa');
+      aliases.add('roadrunners');
+    }
+
+    return [...aliases].filter(a => a.length >= 2);
+  };
+
+  const isTeamPagePartner = (partner: string, schoolName: string) => {
+    const key = normalizeBrandKey(partner);
+    const sportTokens = [
+      'football','fb','basketball','mbb','wbb','baseball','softball','soccer','volleyball','vb','vball',
+      'tfxc','track','xc','crosscountry','wrest','wrestling','golf','tennis','lacrosse','hockey','swim',
+      'swimming','gym','gymnastics','fieldhockey','rowing','crew','athletics'
+    ];
+    const hasSport = sportTokens.some(t => key.includes(t));
+    if (!hasSport) return false;
+    const aliases = getSchoolAliases(schoolName);
+    return aliases.some(a => key.includes(a));
+  };
+
+  const isExcludedBrand = (value: string, schoolName: string) => {
+    const key = normalizeBrandKey(value);
+    if (key === 'huskerfootball' || key === 'huskervb' || key === 'aggiefootball') return true;
+    return isTeamPagePartner(value, schoolName);
+  };
 
   useEffect(() => {
     const update = () => setIsMobile(window.innerWidth < 768);
     update();
     window.addEventListener('resize', update);
     return () => window.removeEventListener('resize', update);
+  }, []);
+
+  useEffect(() => {
+    const loadBrandLogos = async () => {
+      try {
+        const res = await fetch('/data/socialMedia.brands.json');
+        if (!res.ok) return;
+        const data = await res.json();
+        if (!Array.isArray(data)) return;
+        const normalize = (value: string) =>
+          value.toLowerCase().replace(/^@/, '').replace(/[\s._-]+/g, '');
+        const map: Record<string, string> = {};
+        data.forEach((item: { name?: string; logo?: string }) => {
+          if (!item?.name || !item?.logo) return;
+          const key = normalize(item.name);
+          if (!map[key]) map[key] = item.logo;
+        });
+        setBrandLogoMap(map);
+      } catch {
+        setBrandLogoMap({});
+      }
+    };
+    loadBrandLogos();
   }, []);
 
   // section scope only
@@ -299,14 +425,17 @@ export function PartnershipsTab({
 
     // Get brand logo URLs with fallbacks
     const getBrandLogoUrls = (brandName: string): string[] => {
+      const normalized = normalizeBrandKey(brandName);
+      const mappedLogo = brandLogoMap[normalized];
       const domain = getBrandDomain(brandName);
-      if (!domain) return [];
+      if (!domain && !mappedLogo) return mappedLogo ? [mappedLogo] : [];
 
-      return [
+      const fallbacks = domain ? [
         `https://img.logo.dev/${domain}?token=pk_X-rzlmGCT0i6D7TnyHJpfQ`, // Logo.dev (higher quality)
         `https://logo.clearbit.com/${domain}`, // Clearbit fallback
         `https://www.google.com/s2/favicons?domain=${domain}&sz=128` // Google favicon fallback
-      ];
+      ] : [];
+      return mappedLogo ? [mappedLogo, ...fallbacks] : fallbacks;
     };
 
     // Get brand initials
@@ -430,6 +559,7 @@ export function PartnershipsTab({
 
     schoolPartnershipData.forEach(school => {
       school.sponsorPartners.forEach(partner => {
+        if (isExcludedBrand(partner.sponsorPartner, school.school.name)) return;
         const existing = allBrands.get(partner.sponsorPartner);
         if (existing) {
           existing.totalPosts += partner.totalContents;
@@ -804,11 +934,12 @@ export function PartnershipsTab({
   }
 
   // Filter brands
-  const filteredPartners = partnershipSearchQuery
+  const filteredPartners = (partnershipSearchQuery
     ? schoolData.sponsorPartners.filter(p =>
         p.sponsorPartner.toLowerCase().includes(partnershipSearchQuery.toLowerCase())
       )
-    : schoolData.sponsorPartners;
+    : schoolData.sponsorPartners
+  ).filter(p => !isExcludedBrand(p.sponsorPartner, schoolData.school.name));
 
   const sortedPartners = [...filteredPartners].sort((a, b) => (b.emv * b.totalContents) - (a.emv * a.totalContents));
 

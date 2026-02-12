@@ -7,7 +7,6 @@ interface AthleteData {
     sport: string;
   };
   posts: number;
-  emv: number;
   engagementRate: number;
   lift: number;
 }
@@ -43,10 +42,9 @@ interface AthletesTabProps {
   schoolsData: { school: { _id: string; name: string } }[];
   athleteData: SchoolAthleteData[];
   formatNumber: (num: number) => string;
-  formatEMV: (emv: number) => string;
 }
 
-type SortMetric = 'engagement' | 'avgLikes' | 'emv' | 'lift' | 'posts';
+type SortMetric = 'engagement' | 'avgLikes' | 'lift' | 'posts';
 type IPModeFilter = 'all' | 'collaboration' | 'logo' | 'mention' | 'partnership';
 type ViewMode = 'leaderboard' | 'by-ip-type';
 
@@ -70,8 +68,7 @@ function formatSport(sport: string): string {
 export function AthletesTab({
   schoolsData,
   athleteData,
-  formatNumber,
-  formatEMV
+  formatNumber
 }: AthletesTabProps) {
   const [viewMode, setViewMode] = useState<ViewMode>('leaderboard');
   const [searchQuery, setSearchQuery] = useState('');
@@ -85,7 +82,6 @@ export function AthletesTab({
     school: string;
     sport: string;
     engagement: number;
-    emv: number;
     avgLift: number;
     posts: number;
   } | null>(null);
@@ -113,7 +109,6 @@ export function AthletesTab({
       sport: string;
       school: string;
       totalPosts: number;
-      totalEMV: number;
       avgEngagement: number;
       avgLift: number;
       ipTypes: Set<string>;
@@ -132,7 +127,6 @@ export function AthletesTab({
 
           if (existing) {
             existing.totalPosts += athlete.posts;
-            existing.totalEMV += athlete.emv;
             existing.engagementSum += athlete.engagementRate;
             existing.liftSum += athlete.lift;
             existing.dataPoints += 1;
@@ -143,7 +137,6 @@ export function AthletesTab({
               sport: athlete.athlete.sport,
               school: schoolData.school.name,
               totalPosts: athlete.posts,
-              totalEMV: athlete.emv,
               avgEngagement: athlete.engagementRate,
               avgLift: athlete.lift,
               ipTypes: new Set([ipType]),
@@ -162,7 +155,6 @@ export function AthletesTab({
       sport: athlete.sport,
       school: athlete.school,
       posts: athlete.totalPosts,
-      emv: athlete.totalEMV,
       engagement: athlete.engagementSum / athlete.dataPoints,
       avgLift: athlete.liftSum / athlete.dataPoints,
       ipTypes: Array.from(athlete.ipTypes)
@@ -188,10 +180,6 @@ export function AthletesTab({
       case 'avgLikes':
         aVal = a.engagement; // Using engagement as proxy for likes
         bVal = b.engagement;
-        break;
-      case 'emv':
-        aVal = a.emv;
-        bVal = b.emv;
         break;
       case 'lift':
         aVal = a.avgLift;
@@ -338,7 +326,6 @@ export function AthletesTab({
                     school: athlete.school,
                     sport: athlete.sport,
                     engagement: athlete.engagement,
-                    emv: athlete.emv,
                     avgLift: athlete.avgLift,
                     posts: athlete.posts
                   });
@@ -353,8 +340,6 @@ export function AthletesTab({
                 <div className="grid grid-cols-2 gap-3 mt-4 text-xs text-gray-600">
                   <div>Engagement</div>
                   <div className="text-right text-[#00C4A7] font-semibold">{(athlete.engagement * 100).toFixed(2)}%</div>
-                  <div>EMV</div>
-                  <div className="text-right text-yellow-600 font-semibold">{formatEMV(athlete.emv)}</div>
                   <div>IP Lift</div>
                   <div className={`text-right font-semibold ${athlete.avgLift > 0 ? 'text-green-600' : 'text-red-600'}`}>
                     {athlete.avgLift > 0 ? '+' : ''}{(athlete.avgLift * 100).toFixed(1)}%
@@ -379,15 +364,6 @@ export function AthletesTab({
                     <div className="flex items-center justify-end gap-2">
                       ENGAGEMENT
                       {sortBy === 'engagement' && <span style={{ color: '#1770C0' }}>{sortDirection === 'desc' ? ' ↓' : ' ↑'}</span>}
-                    </div>
-                  </th>
-                  <th
-                    onClick={() => handleSort('emv')}
-                    className="px-6 py-4 text-right text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
-                  >
-                    <div className="flex items-center justify-end gap-2">
-                      EMV
-                      {sortBy === 'emv' && <span style={{ color: '#1770C0' }}>{sortDirection === 'desc' ? ' ↓' : ' ↑'}</span>}
                     </div>
                   </th>
                   <th
@@ -421,7 +397,6 @@ export function AthletesTab({
                         school: athlete.school,
                         sport: athlete.sport,
                         engagement: athlete.engagement,
-                        emv: athlete.emv,
                         avgLift: athlete.avgLift,
                         posts: athlete.posts
                       });
@@ -441,11 +416,6 @@ export function AthletesTab({
                     <td className="px-6 py-4 text-right">
                       <div className="text-[#00C4A7] font-bold text-base">
                         {(athlete.engagement * 100).toFixed(2)}%
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 text-right">
-                      <div className="text-yellow-600 font-bold text-base">
-                        {formatEMV(athlete.emv)}
                       </div>
                     </td>
                     <td className="px-6 py-4 text-right">
@@ -495,10 +465,9 @@ export function AthletesTab({
           {ipTypeData?.map(ipType => {
             // Aggregate data for this IP type across selected schools
             const ipData = filteredAthleteData.map(d => d[ipType.key as keyof Omit<SchoolAthleteData, 'school'>]);
-            const avgEMV = ipData.reduce((sum, d) => sum + d.avgEmv, 0) / ipData.length;
             const avgLift = ipData.reduce((sum, d) => sum + d.avgLift, 0) / ipData.length;
 
-            // Get all athletes for this IP type and sort by EMV
+            // Get all athletes for this IP type and sort by engagement rate
             const allAthletesWithSchool = filteredAthleteData.flatMap(schoolData =>
               schoolData[ipType.key as keyof Omit<SchoolAthleteData, 'school'>].top5Athletes.map(athlete => ({
                 ...athlete,
@@ -506,7 +475,7 @@ export function AthletesTab({
               }))
             );
             const topAthletes = allAthletesWithSchool
-              .sort((a, b) => b.emv - a.emv)
+              .sort((a, b) => b.engagementRate - a.engagementRate)
               .slice(0, 5);
 
             return (
@@ -518,7 +487,6 @@ export function AthletesTab({
                     <h4 className="text-2xl font-bold text-gray-900">{ipType.label}</h4>
                   </div>
                   <p className="text-gray-600">
-                    <span className="text-yellow-600 font-bold">{formatEMV(avgEMV)}</span> avg EMV •{' '}
                     <span className="text-[#00C4A7] font-bold">{avgLift > 0 ? '+' : ''}{(avgLift * 100).toFixed(1)}%</span> lift
                   </p>
                 </div>
@@ -544,10 +512,6 @@ export function AthletesTab({
                           <div>
                             <div className="text-gray-600 text-xs">POSTS</div>
                             <div className="text-gray-900 font-bold text-base">{athlete.posts}</div>
-                          </div>
-                          <div>
-                            <div className="text-gray-600 text-xs">EMV</div>
-                            <div className="text-yellow-600 font-bold text-base">{formatEMV(athlete.emv)}</div>
                           </div>
                           <div>
                             <div className="text-gray-600 text-xs">LIFT</div>
@@ -588,10 +552,6 @@ export function AthletesTab({
             <div className="flex items-center justify-between">
               <span className="text-gray-500">Engagement</span>
               <span className="font-semibold text-[#00C4A7]">{(selectedAthlete.engagement * 100).toFixed(2)}%</span>
-            </div>
-            <div className="flex items-center justify-between">
-              <span className="text-gray-500">EMV</span>
-              <span className="font-semibold text-yellow-600">{formatEMV(selectedAthlete.emv)}</span>
             </div>
             <div className="flex items-center justify-between">
               <span className="text-gray-500">IP Lift</span>

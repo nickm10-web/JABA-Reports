@@ -4,6 +4,7 @@ import { PartnershipsTab } from './PartnershipsTab';
 import { RankingsTab } from './RankingsTab';
 import { AthletesTab } from './AthletesTab';
 import { ContentTab } from './ContentTab';
+import { TeamsTab } from './TeamsTab';
 import { loadPartnershipDataWithRecalculatedEMV } from '../utils/partnershipDataLoader';
 import { CommandBar, DrawerPanel, GlassCard, GlassPill, MetricCard, TabTransition } from './playfly/PlayflyUI';
 
@@ -29,6 +30,13 @@ const colors = {
   textMuted: '#6b7280',
   headerGray: '#6b7280',   // Gray color for two-tone headers
   white: '#ffffff',
+};
+
+const EST_EMV_LIKE = 0.5;
+const EST_EMV_COMMENT = 1.5;
+
+const estimateEmvFromTotals = (likes: number, comments: number) => {
+  return (likes * EST_EMV_LIKE) + (comments * EST_EMV_COMMENT);
 };
 
 // Two-tone header component matching JABA style
@@ -209,7 +217,7 @@ interface PlayflyIPPageProps {
   onBack?: () => void;
 }
 
-type TabType = 'overview' | 'with-vs-without' | 'partnerships' | 'athletes' | 'rankings' | 'content';
+type TabType = 'overview' | 'with-vs-without' | 'partnerships' | 'athletes' | 'rankings' | 'content' | 'teams';
 
 
 // Map school names (as they appear in data) to their JSON file names
@@ -277,6 +285,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
   const [baselineSortDirection, setBaselineSortDirection] = useState<'asc' | 'desc'>('asc');
   const [baselineSearchQuery, setBaselineSearchQuery] = useState('');
   const [baselineMobileView, setBaselineMobileView] = useState<'cards' | 'table'>('cards');
+  const [baselineIpScope, setBaselineIpScope] = useState<'all' | 'logo' | 'caption' | 'collaboration'>('all');
   const [baselineDrawerOpen, setBaselineDrawerOpen] = useState(false);
   const [baselineSelected, setBaselineSelected] = useState<{
     schoolName: string;
@@ -372,7 +381,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
       totalContents: filteredSchools.reduce((sum, s) => sum + s.overall.totalContents, 0),
       totalLikes: filteredSchools.reduce((sum, s) => sum + s.overall.totalLikes, 0),
       totalComments: filteredSchools.reduce((sum, s) => sum + s.overall.totalComments, 0),
-      totalEMV: filteredSchools.reduce((sum, s) => sum + s.overall.emv, 0),
+      totalEMV: filteredSchools.reduce((sum, s) => sum + estimateEmvFromTotals(s.overall.totalLikes, s.overall.totalComments), 0),
       totalFollowers: filteredSchools.reduce((sum, s) => sum + s.followers, 0),
 
       // IP usage totals
@@ -424,7 +433,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
       followers: schoolsData.map(s => s.followers),
       posts: schoolsData.map(s => s.overall.totalContents),
       interactions: schoolsData.map(s => s.overall.totalLikes + s.overall.totalComments),
-      emv: schoolsData.map(s => s.overall.emv),
+      emv: schoolsData.map(s => estimateEmvFromTotals(s.overall.totalLikes, s.overall.totalComments)),
       adoption: schoolsData.map(s => (s.counts.withIp / Math.max(s.overall.totalContents, 1)) * 100),
       bestLift: schoolsData.map(s => Math.max(s.logo.avgLift, s.collaboration.avgLift, s.orgInCaption.avgLift))
     };
@@ -516,11 +525,12 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
 
               <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-2 snap-x snap-mandatory">
                 <GlassPill className="snap-start" active={activeTab === 'overview'} onClick={() => setActiveTab('overview')}>Overview</GlassPill>
-                <GlassPill className="snap-start" active={activeTab === 'with-vs-without'} onClick={() => setActiveTab('with-vs-without')}>With vs Without</GlassPill>
+                <GlassPill className="snap-start" active={activeTab === 'with-vs-without'} onClick={() => setActiveTab('with-vs-without')}>IP Comparison</GlassPill>
                 <GlassPill className="snap-start" active={activeTab === 'partnerships'} onClick={() => setActiveTab('partnerships')}>Partnerships</GlassPill>
                 <GlassPill className="snap-start" active={activeTab === 'athletes'} onClick={() => setActiveTab('athletes')}>Athletes</GlassPill>
                 <GlassPill className="snap-start" active={activeTab === 'rankings'} onClick={() => setActiveTab('rankings')}>Rankings</GlassPill>
                 <GlassPill className="snap-start" active={activeTab === 'content'} onClick={() => setActiveTab('content')}>Content</GlassPill>
+                <GlassPill className="snap-start" active={activeTab === 'teams'} onClick={() => setActiveTab('teams')}>Teams</GlassPill>
               </div>
             </div>
           </GlassCard>
@@ -547,7 +557,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                       <span> to show how IP drives engagement.</span>
                     </h2>
                     <p className="text-base md:text-lg text-gray-600 mt-4 max-w-3xl">
-                      Executive view of intellectual property impact, performance lift, and brand partnership value across all the Playfly schools.
+                      A comparative analysis of IP performance, engagement lift, and post impact across 15 Playfly schools.
                     </p>
                   </div>
                 </GlassCard>
@@ -608,7 +618,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                   )}
                 />
                 <MetricCard
-                  title="Total EMV"
+                  title="Total Estimated EMV"
                   value={networkTotals.totalEMV}
                   subtitle="Estimated earned media value"
                   accent="#F59E0B"
@@ -637,34 +647,40 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                   ? partnershipData.sponsorPartners.reduce((sum, partner) => sum + partner.totalContents, 0)
                   : 0;
 
-                // Calculate engagement from posts WITH IP only
-                // Posts without any IP
-                const postsWithoutIP = school.overall.totalContents - school.counts.withIp;
-                // Use collaboration.no as proxy for average engagement per "no IP" post (covers most posts)
-                const avgEngagementPerNoIPPost = school.collaboration.no.likes + school.collaboration.no.comments;
-                // Total engagement from posts without IP
-                const engagementFromNoIP = avgEngagementPerNoIPPost * postsWithoutIP;
-                // Total engagement from posts WITH IP (subtract no-IP from overall)
-                const totalEngagementOverall = school.overall.totalLikes + school.overall.totalComments;
-                const engagementFromWithIP = totalEngagementOverall - engagementFromNoIP;
+                const scopeData = baselineIpScope === 'logo'
+                  ? school.logo.yes
+                  : baselineIpScope === 'caption'
+                  ? school.orgInCaption.yes
+                  : baselineIpScope === 'collaboration'
+                  ? school.collaboration.yes
+                  : null;
 
-                // Calculate total likes/comments from IP posts (proportional split)
-                const ipEngagementRatio = engagementFromWithIP / totalEngagementOverall;
-                const totalLikesFromIP = school.overall.totalLikes * ipEngagementRatio;
-                const totalCommentsFromIP = school.overall.totalComments * ipEngagementRatio;
+                const totalPosts = baselineIpScope === 'all'
+                  ? school.overall.totalContents
+                  : scopeData?.contents || 0;
+
+                const avgLikesPerPost = baselineIpScope === 'all'
+                  ? (school.overall.totalLikes / Math.max(school.overall.totalContents, 1))
+                  : (scopeData?.likes || 0);
+
+                const avgCommentsPerPost = baselineIpScope === 'all'
+                  ? (school.overall.totalComments / Math.max(school.overall.totalContents, 1))
+                  : (scopeData?.comments || 0);
+
+                const avgEngagementPerPost = avgLikesPerPost + avgCommentsPerPost;
 
                 return {
                   rank: index + 1,
                   schoolName: getDisplayName(school.school.name),
                   schoolId: school.school._id,
                   isPlayflyMax: maxSchools.includes(school.school.name),
-                  totalPosts: school.overall.totalContents,
+                  totalPosts,
                   sponsoredPosts: sponsoredPosts,
-                  totalLikes: totalLikesFromIP,
-                  totalComments: totalCommentsFromIP,
-                  totalEngagement: engagementFromWithIP,
-                  avgEngagementPerPost: engagementFromWithIP / school.counts.withIp,
-                  avgLikesPerPost: totalLikesFromIP / school.counts.withIp,
+                  totalLikes: avgLikesPerPost * totalPosts,
+                  totalComments: avgCommentsPerPost * totalPosts,
+                  totalEngagement: avgEngagementPerPost * totalPosts,
+                  avgEngagementPerPost,
+                  avgLikesPerPost,
                   engagementRate: school.overall.engagementRate,
                   adoptionPct: (school.counts.withIp / Math.max(school.overall.totalContents, 1)) * 100,
                   bestLift: Math.max(school.logo.avgLift, school.collaboration.avgLift, school.orgInCaption.avgLift),
@@ -673,7 +689,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     { type: 'Collaboration', lift: school.collaboration.avgLift },
                     { type: 'Caption Mentions', lift: school.orgInCaption.avgLift }
                   ].sort((a, b) => b.lift - a.lift)[0].type,
-                  emv: school.overall.emv
+                  emv: estimateEmvFromTotals(school.overall.totalLikes, school.overall.totalComments)
                 };
               });
 
@@ -762,6 +778,12 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                           <GlassPill active={baselineMobileView === 'table'} onClick={() => setBaselineMobileView('table')}>View Full Table</GlassPill>
                         </div>
                       </div>
+                    </div>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      <GlassPill className="pf-chip-compact" active={baselineIpScope === 'all'} onClick={() => setBaselineIpScope('all')}>All Posts</GlassPill>
+                      <GlassPill className="pf-chip-compact" active={baselineIpScope === 'logo'} onClick={() => setBaselineIpScope('logo')}>Visual IP</GlassPill>
+                      <GlassPill className="pf-chip-compact" active={baselineIpScope === 'caption'} onClick={() => setBaselineIpScope('caption')}>Caption</GlassPill>
+                      <GlassPill className="pf-chip-compact" active={baselineIpScope === 'collaboration'} onClick={() => setBaselineIpScope('collaboration')}>Collaboration</GlassPill>
                     </div>
                   </div>
 
@@ -1021,9 +1043,13 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     </div>
 
                     <div>
-                      <div className="text-sm text-gray-600 mb-1">EMV Generated</div>
+                      <div className="text-sm text-gray-600 mb-1">Estimated EMV</div>
                       <div className="text-2xl font-bold text-green-600">
-                        {formatEMV(filteredSchools.reduce((sum, s) => sum + (s.logo.yes.emv * s.logo.yes.contents), 0))}
+                        {formatEMV(filteredSchools.reduce((sum, s) => {
+                          const likes = s.logo.yes.likes * s.logo.yes.contents;
+                          const comments = s.logo.yes.comments * s.logo.yes.contents;
+                          return sum + estimateEmvFromTotals(likes, comments);
+                        }, 0))}
                       </div>
                     </div>
 
@@ -1087,9 +1113,13 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     </div>
 
                     <div>
-                      <div className="text-sm text-gray-600 mb-1">EMV Generated</div>
+                      <div className="text-sm text-gray-600 mb-1">Estimated EMV</div>
                       <div className="text-2xl font-bold text-yellow-600">
-                        {formatEMV(filteredSchools.reduce((sum, s) => sum + (s.orgInCaption.yes.emv * s.orgInCaption.yes.contents), 0))}
+                        {formatEMV(filteredSchools.reduce((sum, s) => {
+                          const likes = s.orgInCaption.yes.likes * s.orgInCaption.yes.contents;
+                          const comments = s.orgInCaption.yes.comments * s.orgInCaption.yes.contents;
+                          return sum + estimateEmvFromTotals(likes, comments);
+                        }, 0))}
                       </div>
                     </div>
 
@@ -1155,9 +1185,13 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     </div>
 
                     <div>
-                      <div className="text-sm text-gray-600 mb-1">EMV Generated</div>
+                      <div className="text-sm text-gray-600 mb-1">Estimated EMV</div>
                       <div className="text-2xl font-bold text-purple-600">
-                        {formatEMV(filteredSchools.reduce((sum, s) => sum + (s.collaboration.yes.emv * s.collaboration.yes.contents), 0))}
+                        {formatEMV(filteredSchools.reduce((sum, s) => {
+                          const likes = s.collaboration.yes.likes * s.collaboration.yes.contents;
+                          const comments = s.collaboration.yes.comments * s.collaboration.yes.contents;
+                          return sum + estimateEmvFromTotals(likes, comments);
+                        }, 0))}
                       </div>
                     </div>
 
@@ -1375,9 +1409,12 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                                         <span className="text-sm font-bold text-gray-900">{formatNumber(ipType.data.yes.contents)}</span>
                                       </div>
                                       <div className="flex justify-between items-center">
-                                        <span className="text-xs text-gray-600">Total EMV (est.)</span>
+                                        <span className="text-xs text-gray-600">Total Estimated EMV</span>
                                         <span className="text-sm font-bold text-green-600">
-                                          {formatEMV(ipType.data.yes.emv * ipType.data.yes.contents)}
+                                          {formatEMV(estimateEmvFromTotals(
+                                            ipType.data.yes.likes * ipType.data.yes.contents,
+                                            ipType.data.yes.comments * ipType.data.yes.contents
+                                          ))}
                                         </span>
                                       </div>
                                       <div className="flex justify-between items-center">
@@ -1539,9 +1576,9 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                           </div>
                         </div>
                         <div>
-                          <div className="text-sm text-gray-600 mb-1">Total EMV (est.)</div>
+                          <div className="text-sm text-gray-600 mb-1">Total Estimated EMV</div>
                           <div className="text-2xl font-bold text-green-600">
-                            {formatEMV(totals.withIP.emv)}
+                            {formatEMV(estimateEmvFromTotals(totals.withIP.likes, totals.withIP.comments))}
                           </div>
                         </div>
                       </div>
@@ -1582,7 +1619,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                           </div>
                         </div>
                         <div>
-                          <div className="text-sm text-gray-600 mb-1">Total EMV (est.)</div>
+                          <div className="text-sm text-gray-600 mb-1">Total Estimated EMV</div>
                           <div className="text-2xl font-bold text-gray-400">
                             N/A
                           </div>
@@ -1680,12 +1717,12 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                           {formatNumber(withEngagementRate)}
                         </div>
                       </div>
-                      <div>
-                        <div className="text-sm text-gray-600 mb-1">Total EMV (est.)</div>
-                        <div className="text-2xl font-bold text-purple-600">
-                          {formatEMV(totals.withIP.emv)}
+                        <div>
+                          <div className="text-sm text-gray-600 mb-1">Total Estimated EMV</div>
+                          <div className="text-2xl font-bold text-purple-600">
+                            {formatEMV(estimateEmvFromTotals(totals.withIP.likes, totals.withIP.comments))}
+                          </div>
                         </div>
-                      </div>
                     </div>
                   </GlassCard>
 
@@ -1723,12 +1760,12 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                           {formatNumber(withoutEngagementRate)}
                         </div>
                       </div>
-                      <div>
-                        <div className="text-sm text-gray-600 mb-1">Total EMV (est.)</div>
-                        <div className="text-2xl font-bold text-gray-400">
-                          N/A
+                        <div>
+                          <div className="text-sm text-gray-600 mb-1">Total Estimated EMV</div>
+                          <div className="text-2xl font-bold text-gray-400">
+                            N/A
+                          </div>
                         </div>
-                      </div>
                     </div>
                   </GlassCard>
 
@@ -1821,12 +1858,12 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                           {formatNumber(withEngagementRate)}
                         </div>
                       </div>
-                      <div>
-                        <div className="text-sm text-gray-600 mb-1">Total EMV (est.)</div>
-                        <div className="text-2xl font-bold text-yellow-600">
-                          {formatEMV(totals.withIP.emv)}
+                        <div>
+                          <div className="text-sm text-gray-600 mb-1">Total Estimated EMV</div>
+                          <div className="text-2xl font-bold text-yellow-600">
+                            {formatEMV(estimateEmvFromTotals(totals.withIP.likes, totals.withIP.comments))}
+                          </div>
                         </div>
-                      </div>
                     </div>
                   </GlassCard>
 
@@ -1864,12 +1901,12 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                           {formatNumber(withoutEngagementRate)}
                         </div>
                       </div>
-                      <div>
-                        <div className="text-sm text-gray-600 mb-1">Total EMV (est.)</div>
-                        <div className="text-2xl font-bold text-gray-400">
-                          N/A
+                        <div>
+                          <div className="text-sm text-gray-600 mb-1">Total Estimated EMV</div>
+                          <div className="text-2xl font-bold text-gray-400">
+                            N/A
+                          </div>
                         </div>
-                      </div>
                     </div>
                   </GlassCard>
 
@@ -1917,7 +1954,6 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                 schoolsData={schoolsData}
                 athleteData={athleteData}
                 formatNumber={formatNumber}
-                formatEMV={formatEMV}
               />
             )}
 
@@ -1932,6 +1968,10 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
 
             {activeTab === 'content' && (
               <ContentTab />
+            )}
+
+            {activeTab === 'teams' && (
+              <TeamsTab playflySchools={Object.keys(SCHOOL_FILE_MAP)} />
             )}
           </div>
         </TabTransition>

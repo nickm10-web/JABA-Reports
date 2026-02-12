@@ -136,7 +136,7 @@ export function RankingsTab({
 
       // Key metrics
       ipLift: avgIPLift,
-      totalEMV: school.overall.emv,
+      totalEMV: estimateEmvFromTotals(school.overall.totalLikes, school.overall.totalComments),
       postsWithIP: school.counts.withIp,
       totalInteractions: school.overall.totalLikes + school.overall.totalComments,
       engagementRate: school.overall.engagementRate,
@@ -398,7 +398,7 @@ export function RankingsTab({
                     className="px-2 py-2 text-right text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0] w-[90px]"
                   >
                     <div className="flex items-center justify-end gap-2">
-                      EMV
+                      Est. EMV
                       {sortBy === 'emv' && <span style={{ color: '#1770C0' }}>{sortDirection === 'desc' ? ' ↓' : ' ↑'}</span>}
                     </div>
                   </th>
@@ -727,3 +727,4 @@ export function RankingsTab({
     </div>
   );
 }
+  const estimateEmvFromTotals = (likes: number, comments: number) => (likes * 0.5) + (comments * 1.5);
