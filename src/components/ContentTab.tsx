@@ -153,7 +153,6 @@ export function ContentTab({ contentData, isLoading, allowedSchools }: ContentTa
   const withIp = (items: ContentItem[]) => items.filter(i => i.hasOrganizationLogo || i.hasOrganizationInCaption || i.isOrganizationCollaboration);
   const withoutIp = (items: ContentItem[]) => items.filter(i => !(i.hasOrganizationLogo || i.hasOrganizationInCaption || i.isOrganizationCollaboration));
   const sponsored = (items: ContentItem[]) => items.filter(i => i.isSponsored ?? i.sponsored);
-  const notSponsored = (items: ContentItem[]) => items.filter(i => !(i.isSponsored ?? i.sponsored));
 
   const topWithIp = useMemo(() => withIp(filteredPool).sort(sorter), [filteredPool, sortBy]);
   const topWithoutIp = useMemo(() => withoutIp(filteredPool).sort(sorter), [filteredPool, sortBy]);

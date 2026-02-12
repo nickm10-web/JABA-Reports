@@ -211,34 +211,6 @@ interface PlayflyIPPageProps {
 
 type TabType = 'overview' | 'with-vs-without' | 'partnerships' | 'athletes' | 'rankings' | 'content';
 
-function useCountUp(value: number, duration = 700) {
-  const [display, setDisplay] = useState(0);
-  const startRef = useRef<number | null>(null);
-  const doneRef = useRef(false);
-
-  useEffect(() => {
-    if (doneRef.current) {
-      setDisplay(value);
-      return;
-    }
-
-    const step = (timestamp: number) => {
-      if (startRef.current === null) startRef.current = timestamp;
-      const progress = Math.min((timestamp - startRef.current) / duration, 1);
-      setDisplay(value * progress);
-      if (progress < 1) {
-        requestAnimationFrame(step);
-      } else {
-        doneRef.current = true;
-      }
-    };
-
-    const id = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(id);
-  }, [value, duration]);
-
-  return display;
-}
 
 // Map school names (as they appear in data) to their JSON file names
 const SCHOOL_FILE_MAP: Record<string, string> = {
@@ -438,19 +410,6 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
     };
   }, [filteredSchools]);
 
-  const kpiSparklines = useMemo(() => {
-    return {
-      followers: schoolsData.map(s => s.followers),
-      posts: schoolsData.map(s => s.overall.totalContents),
-      interactions: schoolsData.map(s => s.overall.totalLikes + s.overall.totalComments),
-      emv: schoolsData.map(s => s.overall.emv)
-    };
-  }, [schoolsData]);
-
-  const heroInteractions = useCountUp(networkTotals.totalLikes + networkTotals.totalComments);
-  const heroEmv = useCountUp(networkTotals.totalEMV);
-  const heroFollowers = useCountUp(networkTotals.totalFollowers);
-  const heroPosts = useCountUp(networkTotals.totalContents);
 
   const percentile = (values: number[], value: number) => {
     if (!values.length) return 0;

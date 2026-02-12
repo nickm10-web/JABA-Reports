@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState, type ReactNode, type HTMLAttributes, type ButtonHTMLAttributes } from 'react';
+import React, { useEffect, useMemo, useRef, useState, type ReactNode, type HTMLAttributes, type ButtonHTMLAttributes } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 
@@ -40,7 +40,7 @@ export function GlassCard({
   children: ReactNode;
   className?: string;
   hover?: boolean;
-  as?: keyof JSX.IntrinsicElements;
+  as?: React.ElementType;
   onClick?: () => void;
 } & HTMLAttributes<HTMLElement>) {
   return (
