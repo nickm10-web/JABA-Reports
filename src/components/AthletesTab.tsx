@@ -39,6 +39,21 @@ interface SchoolAthleteData {
   };
 }
 
+interface AthleteEngagementData {
+  name: string;
+  school: string;
+  sport: string;
+  followers: number;
+  totalLikes: number;
+  totalComments: number;
+  postCount: number;
+  engagementRate: number;
+  emv: number;
+  orgInCaptionLift: number | null;
+  collaborationLift: number | null;
+  logoLift: number | null;
+}
+
 interface AthletesTabProps {
   schoolsData: { school: { _id: string; name: string } }[];
   athleteData: SchoolAthleteData[];
@@ -80,14 +95,14 @@ export function AthletesTab({
   const [ipModeFilter, setIPModeFilter] = useState<IPModeFilter>('all');
   const [isMobile, setIsMobile] = useState(false);
   const [leaderboardView, setLeaderboardView] = useState<'cards' | 'table'>('cards');
-  const [athleteEmvMap, setAthleteEmvMap] = useState<Map<string, { likes: number; comments: number }>>(new Map());
+  const [realEngagementData, setRealEngagementData] = useState<AthleteEngagementData[]>([]);
   const [selectedAthlete, setSelectedAthlete] = useState<{
     name: string;
     school: string;
     sport: string;
     engagement: number;
-    avgLift: number;
-    emv?: number | null;
+    avgLift: number | null;
+    emv: number;
     posts: number;
   } | null>(null);
   const [athleteDrawerOpen, setAthleteDrawerOpen] = useState(false);
@@ -101,172 +116,44 @@ export function AthletesTab({
   }, []);
 
   useEffect(() => {
-    const loadAthleteContent = async () => {
-      const playflySchools = new Set(schoolsData.map(s => s.school.name));
-      const normalize = (value: string) =>
-        value.toLowerCase().replace(/[^a-z0-9]+/g, '');
-      const toKey = (name: string, school: string) =>
-        `${normalize(name)}|${normalize(school)}`;
-      const map = new Map<string, { likes: number; comments: number }>();
-      const addToMap = (name?: string, school?: string, likes = 0, comments = 0) => {
-        if (!name || !school) return;
-        if (!playflySchools.has(school)) return;
-        const key = toKey(name, school);
-        const existing = map.get(key) || { likes: 0, comments: 0 };
-        existing.likes += likes;
-        existing.comments += comments;
-        map.set(key, existing);
-      };
-
-      try {
-        const [playflyRes, ncaaRes] = await Promise.all([
-          fetch('/data/playfly-content-processed.json').then(r => r.ok ? r.json() : null),
-          fetch('/data/NCAA_contents (2).json').then(r => r.ok ? r.json() : null)
-        ]);
-
-        if (playflyRes?.all) {
-          const lists = [
-            playflyRes.all.topWithIp,
-            playflyRes.all.topWithoutIp,
-            playflyRes.all.topSponsoredWithIp,
-            playflyRes.all.topSponsoredWithoutIp
-          ].filter(Boolean);
-          lists.flat().forEach((post: any) => {
-            addToMap(
-              post.athlete?.name,
-              post.athlete?.school?.name,
-              post.metrics?.likes || 0,
-              post.metrics?.comments || 0
-            );
-          });
-        }
-        if (playflyRes?.bySchool) {
-          Object.values(playflyRes.bySchool).forEach((schoolBlock: any) => {
-            const lists = [
-              schoolBlock?.topWithIp,
-              schoolBlock?.topWithoutIp,
-              schoolBlock?.topSponsoredWithIp,
-              schoolBlock?.topSponsoredWithoutIp
-            ].filter(Boolean);
-            lists.flat().forEach((post: any) => {
-              addToMap(
-                post.athlete?.name,
-                post.athlete?.school?.name,
-                post.metrics?.likes || 0,
-                post.metrics?.comments || 0
-              );
-            });
-          });
-        }
-
-        if (Array.isArray(ncaaRes)) {
-          ncaaRes.forEach((post: any) => {
-            addToMap(
-              post.athlete?.name,
-              post.athlete?.school?.name,
-              post.metrics?.likes || 0,
-              post.metrics?.comments || 0
-            );
-          });
-        }
-
-        setAthleteEmvMap(map);
-      } catch {
-        setAthleteEmvMap(new Map());
-      }
-    };
-
-    if (schoolsData.length > 0) {
-      loadAthleteContent();
-    }
-  }, [schoolsData]);
-
-  // section scope only
+    fetch('/data/playfly-athletes-metrics.json')
+      .then(r => r.ok ? r.json() : [])
+      .then((data: AthleteEngagementData[]) => setRealEngagementData(data))
+      .catch(() => setRealEngagementData([]));
+  }, []);
 
   // Filter to selected school or all schools
   const filteredAthleteData = sectionScope === 'all'
     ? athleteData
     : athleteData.filter(d => d.school.name === sectionScope);
 
-  // Aggregate all athletes from all IP types into a leaderboard
-  const aggregateAthletes = () => {
-    const normalize = (value: string) =>
-      value.toLowerCase().replace(/[^a-z0-9]+/g, '');
-    const getEmv = (name: string, school: string) => {
-      const key = `${normalize(name)}|${normalize(school)}`;
-      const totals = athleteEmvMap.get(key);
-      if (!totals || (totals.likes === 0 && totals.comments === 0)) return null;
-      return totals.likes * 0.5 + totals.comments * 1.5;
-    };
+  // Build table athletes from realEngagementData, with IP lift averaged from the 3 categories
+  const buildAthletes = () => {
+    // Filter by school scope
+    const scoped = sectionScope === 'all'
+      ? realEngagementData
+      : realEngagementData.filter(a => a.school === sectionScope);
 
-    const athleteMap = new Map<string, {
-      name: string;
-      sport: string;
-      school: string;
-      totalPosts: number;
-      avgEngagement: number;
-      avgLift: number;
-      emv: number | null;
-      totalLikes: number;
-      totalComments: number;
-      ipTypes: Set<string>;
-      engagementSum: number;
-      liftSum: number;
-      dataPoints: number;
-    }>();
-
-    filteredAthleteData.forEach(schoolData => {
-      // Process each IP type
-      ['collaboration', 'logo', 'mention (in caption)', 'partnership'].forEach(ipType => {
-        const ipData = schoolData[ipType as keyof Omit<SchoolAthleteData, 'school'>];
-        ipData.top5Athletes.forEach(athlete => {
-          const key = `${athlete.athlete.name}-${athlete.athlete.sport}-${schoolData.school.name}`;
-          const existing = athleteMap.get(key);
-
-          if (existing) {
-            existing.totalPosts += athlete.posts;
-            existing.engagementSum += athlete.engagementRate;
-            existing.liftSum += athlete.lift;
-            existing.dataPoints += 1;
-            existing.ipTypes.add(ipType);
-          } else {
-            const totals = athleteEmvMap.get(`${normalize(athlete.athlete.name)}|${normalize(schoolData.school.name)}`);
-            athleteMap.set(key, {
-              name: athlete.athlete.name,
-              sport: athlete.athlete.sport,
-              school: schoolData.school.name,
-              totalPosts: athlete.posts,
-              avgEngagement: athlete.engagementRate,
-              avgLift: athlete.lift,
-              emv: getEmv(athlete.athlete.name, schoolData.school.name),
-              totalLikes: totals?.likes || 0,
-              totalComments: totals?.comments || 0,
-              ipTypes: new Set([ipType]),
-              engagementSum: athlete.engagementRate,
-              liftSum: athlete.lift,
-              dataPoints: 1
-            });
-          }
-        });
-      });
+    return scoped.map(a => {
+      const lifts = [a.orgInCaptionLift, a.collaborationLift, a.logoLift].filter(
+        (v): v is number => v != null
+      );
+      const avgLift = lifts.length > 0 ? lifts.reduce((s, v) => s + v, 0) / lifts.length : null;
+      return {
+        name: a.name,
+        sport: a.sport,
+        school: a.school,
+        posts: a.postCount,
+        emv: a.emv,
+        totalLikes: a.totalLikes,
+        totalComments: a.totalComments,
+        engagement: a.engagementRate,
+        avgLift,
+      };
     });
-
-    // Calculate averages and return array
-    return Array.from(athleteMap.values()).map(athlete => ({
-      name: athlete.name,
-      sport: athlete.sport,
-      school: athlete.school,
-      posts: athlete.totalPosts,
-      emv: athlete.emv,
-      totalLikes: athlete.totalLikes,
-      totalComments: athlete.totalComments,
-      engagement: athlete.engagementSum / athlete.dataPoints,
-      avgLift: athlete.liftSum / athlete.dataPoints,
-      ipTypes: Array.from(athlete.ipTypes)
-    }));
   };
 
-  const athletes = aggregateAthletes();
+  const athletes = buildAthletes();
 
   // Filter by search
   const filteredAthletes = searchQuery
@@ -291,8 +178,8 @@ export function AthletesTab({
         bVal = b.emv || 0;
         break;
       case 'lift':
-        aVal = a.avgLift;
-        bVal = b.avgLift;
+        aVal = a.avgLift ?? 0;
+        bVal = b.avgLift ?? 0;
         break;
       case 'posts':
         aVal = a.posts;
@@ -415,11 +302,18 @@ export function AthletesTab({
         {/* Multi Leaderboards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {(() => {
-            const topEngagement = [...sortedAthletes].sort((a, b) => b.engagement - a.engagement).slice(0, 5);
-            const topLift = [...sortedAthletes].sort((a, b) => b.avgLift - a.avgLift).slice(0, 5);
-            const topLikes = [...sortedAthletes].sort((a, b) => (b.totalLikes || 0) - (a.totalLikes || 0)).slice(0, 5);
-            const topComments = [...sortedAthletes].sort((a, b) => (b.totalComments || 0) - (a.totalComments || 0)).slice(0, 5);
-            const renderList = (items: typeof topEngagement, metric: (a: typeof topEngagement[number]) => string) => (
+            const topEngagementFromReal = realEngagementData.length > 0
+              ? realEngagementData
+                  .filter(a => sectionScope === 'all' || a.school === sectionScope)
+                  .slice(0, 5)
+                  .map(a => ({ name: a.name, school: a.school, engagement: a.engagementRate }))
+              : [...sortedAthletes].sort((a, b) => b.engagement - a.engagement).slice(0, 5)
+                  .map(a => ({ name: a.name, school: a.school, engagement: a.engagement }));
+            const topLift = [...sortedAthletes].sort((a, b) => (b.avgLift ?? 0) - (a.avgLift ?? 0)).slice(0, 5);
+            const filteredReal = realEngagementData.filter(a => sectionScope === 'all' || a.school === sectionScope);
+            const topLikes = [...filteredReal].sort((a, b) => b.totalLikes - a.totalLikes).slice(0, 5);
+            const topComments = [...filteredReal].sort((a, b) => b.totalComments - a.totalComments).slice(0, 5);
+            const renderList = (items: Array<{ name: string; school: string; [key: string]: any }>, metric: (a: any) => string) => (
               <div className="space-y-2">
                 {items.map((athlete, index) => (
                   <div key={`${athlete.name}-${index}`} className="flex items-center justify-between text-sm">
@@ -436,19 +330,19 @@ export function AthletesTab({
               <>
                 <GlassCard className="p-4">
                   <div className="text-sm font-semibold text-gray-900 mb-3">Top Engagement</div>
-                  {renderList(topEngagement, (a) => `${(a.engagement * 100).toFixed(2)}%`)}
+                  {renderList(topEngagementFromReal, (a) => `${(a.engagement * 100).toFixed(2)}%`)}
                 </GlassCard>
                 <GlassCard className="p-4">
                   <div className="text-sm font-semibold text-gray-900 mb-3">Top IP Lift</div>
-                  {renderList(topLift, (a) => `${a.avgLift > 0 ? '+' : ''}${(a.avgLift * 100).toFixed(1)}%`)}
+                  {renderList(topLift, (a) => `${a.avgLift > 0 ? '+' : ''}${(a.avgLift).toFixed(1)}%`)}
                 </GlassCard>
                 <GlassCard className="p-4">
                   <div className="text-sm font-semibold text-gray-900 mb-3">Top Total Likes</div>
-                  {renderList(topLikes, (a) => formatNumber(a.totalLikes || 0))}
+                  {renderList(topLikes, (a) => formatNumber(a.totalLikes))}
                 </GlassCard>
                 <GlassCard className="p-4">
                   <div className="text-sm font-semibold text-gray-900 mb-3">Top Total Comments</div>
-                  {renderList(topComments, (a) => formatNumber(a.totalComments || 0))}
+                  {renderList(topComments, (a) => formatNumber(a.totalComments))}
                 </GlassCard>
               </>
             );
@@ -495,8 +389,8 @@ export function AthletesTab({
                   <div>Estimated EMV</div>
                   <div className="text-right text-yellow-600 font-semibold">{athlete.emv ? formatEMV(athlete.emv) : 'N/A'}</div>
                   <div>IP Lift</div>
-                  <div className={`text-right font-semibold ${athlete.avgLift > 0 ? 'text-green-600' : 'text-red-600'}`}>
-                    {athlete.avgLift > 0 ? '+' : ''}{(athlete.avgLift * 100).toFixed(1)}%
+                  <div className={`text-right font-semibold ${athlete.avgLift != null ? (athlete.avgLift > 0 ? 'text-green-600' : 'text-red-600') : 'text-gray-400'}`}>
+                    {athlete.avgLift != null ? `${athlete.avgLift > 0 ? '+' : ''}${(athlete.avgLift).toFixed(1)}%` : 'N/A'}
                   </div>
                   <div>Posts</div>
                   <div className="text-right text-gray-900 font-semibold">{formatNumber(athlete.posts)}</div>
@@ -600,14 +494,15 @@ export function AthletesTab({
                       </div>
                     </td>
                     <td className="px-6 py-4 text-right">
-                      <div className={`font-semibold ${
-                        athlete.avgLift > 0 ? 'text-green-600' : 'text-red-600'
-                      }`}>
-                        {athlete.avgLift > 0 ? '+' : ''}{(athlete.avgLift * 100).toFixed(1)}% {athlete.avgLift > 0 ? '↑' : '↓'}
-                        <span className="text-gray-600 text-xs ml-2">
-                          ({athlete.posts} IP)
-                        </span>
-                      </div>
+                      {athlete.avgLift != null ? (
+                        <div className={`font-semibold ${
+                          athlete.avgLift > 0 ? 'text-green-600' : 'text-red-600'
+                        }`}>
+                          {athlete.avgLift > 0 ? '+' : ''}{(athlete.avgLift).toFixed(1)}% {athlete.avgLift > 0 ? '↑' : '↓'}
+                        </div>
+                      ) : (
+                        <div className="font-semibold text-gray-400">N/A</div>
+                      )}
                     </td>
                     <td className="px-6 py-4 text-right">
                       <div className="text-gray-900 font-medium text-base">
@@ -662,9 +557,10 @@ export function AthletesTab({
                 const normalize = (value: string) =>
                   value.toLowerCase().replace(/[^a-z0-9]+/g, '');
                 const key = `${normalize(athlete.athlete.name)}|${normalize(athlete.schoolName)}`;
-                const totals = athleteEmvMap.get(key);
-                const emv = totals ? totals.likes * 0.5 + totals.comments * 1.5 : null;
-                return { ...athlete, emv };
+                const realData = realEngagementData.find(a =>
+                  `${normalize(a.name)}|${normalize(a.school)}` === key
+                );
+                return { ...athlete, emv: realData?.emv ?? null };
               });
 
             return (
@@ -752,9 +648,13 @@ export function AthletesTab({
             </div>
             <div className="flex items-center justify-between">
               <span className="text-gray-500">IP Lift</span>
-              <span className={`font-semibold ${selectedAthlete.avgLift > 0 ? 'text-green-600' : 'text-red-600'}`}>
-                {selectedAthlete.avgLift > 0 ? '+' : ''}{(selectedAthlete.avgLift * 100).toFixed(1)}%
-              </span>
+              {selectedAthlete.avgLift != null ? (
+                <span className={`font-semibold ${selectedAthlete.avgLift > 0 ? 'text-green-600' : 'text-red-600'}`}>
+                  {selectedAthlete.avgLift > 0 ? '+' : ''}{(selectedAthlete.avgLift).toFixed(1)}%
+                </span>
+              ) : (
+                <span className="font-semibold text-gray-400">N/A</span>
+              )}
             </div>
             <div className="flex items-center justify-between">
               <span className="text-gray-500">Posts</span>
