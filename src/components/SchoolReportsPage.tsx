@@ -7,12 +7,13 @@ import { AuburnCampaignOverview } from './AuburnCampaignOverview';
 import { BaylorReportHub } from './BaylorReportHub';
 import { KentuckyReportHub } from './KentuckyReportHub';
 import { OhioStateIPImpact } from './OhioStateIPImpact';
+import { UCLABrandDeals } from './UCLABrandDeals';
 
 export function SchoolReportsPage() {
   const [selectedSchool, setSelectedSchool] = useState<SchoolConfig | null>(null);
 
   // Show Playfly, Auburn, Baylor, Kentucky, and Ohio State
-  const allSchools = [SCHOOLS['playfly'], SCHOOLS['auburn'], SCHOOLS['baylor'], SCHOOLS['kentucky'], SCHOOLS['ohio-state']].filter(Boolean);
+  const allSchools = [SCHOOLS['playfly'], SCHOOLS['auburn'], SCHOOLS['baylor'], SCHOOLS['kentucky'], SCHOOLS['ohio-state'], SCHOOLS['ucla']].filter(Boolean);
 
   // If a school is selected, show the appropriate view
   if (selectedSchool) {
@@ -40,6 +41,12 @@ export function SchoolReportsPage() {
     if (selectedSchool.id === 'baylor') {
       return (
         <BaylorReportHub onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    // If UCLA is selected, show blank report
+    if (selectedSchool.id === 'ucla') {
+      return (
+        <UCLABrandDeals onBack={() => setSelectedSchool(null)} />
       );
     }
     // If Kentucky is selected, show the hub with multiple report options

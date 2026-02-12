@@ -24,14 +24,16 @@ export function PlayflyReportHub({ onBack }: PlayflyReportHubProps) {
       {/* Subtle Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#1770C0]/10 via-blue-500/10 to-purple-500/10 opacity-30" />
 
-      {/* Back button */}
-      <button
-        onClick={onBack}
-        className="fixed top-6 left-6 z-50 bg-white/10 hover:bg-white/20 backdrop-blur-lg text-white px-4 py-2 rounded-lg font-semibold text-sm transition-all border border-white/20 flex items-center gap-2"
-      >
-        <ArrowLeft className="w-4 h-4" />
-        Back
-      </button>
+      {/* Back button - only show when navigated from within the app */}
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="fixed top-6 left-6 z-50 bg-white/10 hover:bg-white/20 backdrop-blur-lg text-white px-4 py-2 rounded-lg font-semibold text-sm transition-all border border-white/20 flex items-center gap-2"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back
+        </button>
+      )}
 
       {/* Header - Clean and Simple */}
       <div className="pt-20 pb-12 px-6 relative z-10">
@@ -139,27 +141,6 @@ export function PlayflyReportHub({ onBack }: PlayflyReportHubProps) {
 
         </div>
 
-        {/* Stats Bar at Bottom */}
-        <div className="mt-12 pt-8 border-t border-white/20">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[#3B9FD9] mb-2">20</div>
-              <div className="text-sm text-gray-400 uppercase tracking-wide">Partner Schools</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[#3B9FD9] mb-2">2,487+</div>
-              <div className="text-sm text-gray-400 uppercase tracking-wide">NIL Opportunities</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[#3B9FD9] mb-2">5,277</div>
-              <div className="text-sm text-gray-400 uppercase tracking-wide">Revenue-Generating Posts</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[#3B9FD9] mb-2">150+</div>
-              <div className="text-sm text-gray-400 uppercase tracking-wide">Active Brands</div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

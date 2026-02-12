@@ -1,64 +1,68 @@
 {
-  "followers": 5543153,
+  "followers": 5545693,
   "school": {
     "_id": "68e5c539c5a108ee73bb8419",
     "name": "Ohio State"
   },
   "overall": {
-    "totalContents": 8918,
-    "totalLikes": 15258768,
-    "totalComments": 401948,
-    "engagementRate": 2.825236106598537
+    "totalContents": 8966,
+    "totalLikes": 15401524,
+    "totalComments": 404486,
+    "engagementRate": 2.850141542274338,
+    "emv": 348479.08
   },
   "counts": {
-    "hasOrganizationInCaption": 1929,
-    "isOrganizationCollaboration": 23,
-    "hasOrganizationLogo": 735,
-    "withIp": 2401
+    "hasOrganizationInCaption": 1932,
+    "isOrganizationCollaboration": 102,
+    "hasOrganizationLogo": 3925,
+    "withIp": 4366
   },
   "orgInCaption": {
     "yes": {
-      "contents": 1929,
-      "likes": 5106584,
-      "comments": 91387,
-      "engagementRate": 0.9377282207436815
+      "contents": 1932,
+      "likes": 2646.80900621118,
+      "comments": 47.32453416149068,
+      "engagementRate": 0.00048580647006112146,
+      "emv": 57.67
     },
     "no": {
-      "contents": 6989,
-      "likes": 10152184,
-      "comments": 310561,
-      "engagementRate": 1.8875078858548555
+      "contents": 7034,
+      "likes": 1462.5943986352004,
+      "comments": 44.505970998009666,
+      "engagementRate": 0.00027176051210068967
     },
-    "liftPct": -50.31924222563008
+    "avgLift": 78.76271512217562
   },
   "collaboration": {
     "yes": {
-      "contents": 23,
-      "likes": 347756,
-      "comments": 4696,
-      "engagementRate": 0.06358330718996932
+      "contents": 102,
+      "likes": 13686.127450980392,
+      "comments": 115.80392156862744,
+      "engagementRate": 0.0024887658535279575,
+      "emv": 285.3
     },
     "no": {
-      "contents": 8895,
-      "likes": 14911012,
-      "comments": 397252,
-      "engagementRate": 2.7616527994085676
+      "contents": 8864,
+      "likes": 1580.0472698555957,
+      "comments": 44.29986462093863,
+      "engagementRate": 0.0002929024622308762
     },
-    "liftPct": -97.69763573452875
+    "avgLift": 749.6909976694642
   },
   "logo": {
     "yes": {
-      "contents": 735,
-      "likes": 3316932,
-      "comments": 56104,
-      "engagementRate": 0.6085049429449269
+      "contents": 3925,
+      "likes": 2880.771719745223,
+      "comments": 58.23923566878981,
+      "engagementRate": 0.0005299627937237082,
+      "emv": 63.44
     },
     "no": {
-      "contents": 8183,
-      "likes": 11941836,
-      "comments": 345844,
-      "engagementRate": 2.21673116365361
+      "contents": 5041,
+      "likes": 812.2386431263639,
+      "comments": 34.893275143820674,
+      "engagementRate": 0.000152754924996783
     },
-    "liftPct": -72.54944790228912
+    "avgLift": 246.93663312974633
   }
 }

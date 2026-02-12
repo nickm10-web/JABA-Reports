@@ -1,68 +1,68 @@
 {
-  "followers": 1817133,
+  "followers": 1878379,
   "school": {
     "_id": "68e4810537aba442a4462956",
     "name": "Texas A&M"
   },
   "overall": {
-    "totalContents": 3419,
-    "totalLikes": 5934200,
-    "totalComments": 140702,
-    "engagementRate": 3.343124581414789,
-    "emv": 132754.2
+    "totalContents": 3805,
+    "totalLikes": 6917451,
+    "totalComments": 157684,
+    "engagementRate": 3.766617386587052,
+    "emv": 154117.42
   },
   "counts": {
-    "hasOrganizationInCaption": 839,
-    "isOrganizationCollaboration": 0,
-    "hasOrganizationLogo": 529,
-    "withIp": 1107
+    "hasOrganizationInCaption": 844,
+    "isOrganizationCollaboration": 102,
+    "hasOrganizationLogo": 2041,
+    "withIp": 2192
   },
   "orgInCaption": {
     "yes": {
-      "contents": 839,
-      "likes": 3706.954707985697,
-      "comments": 43.6150178784267,
-      "engagementRate": 0.002064003969915314,
-      "emv": 78.5
+      "contents": 844,
+      "likes": 3737.5177725118483,
+      "comments": 43.62440758293839,
+      "engagementRate": 0.002012981501653706,
+      "emv": 79.11
     },
     "no": {
-      "contents": 2580,
-      "likes": 1094.5988372093022,
-      "comments": 40.35232558139535,
-      "engagementRate": 0.00062458343048676
+      "contents": 2961,
+      "likes": 1270.8497129348193,
+      "comments": 40.818980074299226,
+      "engagementRate": 0.0006982982097910584
     },
-    "avgLift": 230.4608910785165
+    "avgLift": 188.26960651324328
   },
   "collaboration": {
     "yes": {
-      "contents": 0,
-      "likes": 0,
-      "comments": 0,
-      "engagementRate": 0,
-      "emv": 0
+      "contents": 102,
+      "likes": 6019.745098039216,
+      "comments": 58.627450980392155,
+      "engagementRate": 0.00323596704872638,
+      "emv": 126.26
     },
     "no": {
-      "contents": 3419,
-      "likes": 1735.653699912255,
-      "comments": 41.152968704299504,
-      "engagementRate": 0.0009778077161201489
+      "contents": 3703,
+      "likes": 1702.251417769376,
+      "comments": 40.96786389413989,
+      "engagementRate": 0.0009280444903097383
     },
-    "avgLift": -100
+    "avgLift": 248.68662898331132
   },
   "logo": {
     "yes": {
-      "contents": 529,
-      "likes": 3023.351606805293,
-      "comments": 44.587901701323254,
-      "engagementRate": 0.0016883406489820042,
-      "emv": 64.93
+      "contents": 2041,
+      "likes": 2428.5227829495348,
+      "comments": 44.88094071533562,
+      "engagementRate": 0.001316775647334681,
+      "emv": 53.06
     },
     "no": {
-      "contents": 2890,
-      "likes": 1499.9470588235295,
-      "comments": 40.5242214532872,
-      "engagementRate": 0.000847748227717408
+      "contents": 1764,
+      "likes": 1111.5850340136055,
+      "comments": 37.461451247165535,
+      "engagementRate": 0.0006117223868350163
     },
-    "avgLift": 99.15590428633757
+    "avgLift": 115.25706360813963
   }
 }

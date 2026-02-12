@@ -1,15 +1,17 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import { TrendingUp, Award, Users, BarChart3, Info } from 'lucide-react';
 import { PartnershipsTab } from './PartnershipsTab';
 import { RankingsTab } from './RankingsTab';
 import { AthletesTab } from './AthletesTab';
+import { ContentTab } from './ContentTab';
 import { loadPartnershipDataWithRecalculatedEMV } from '../utils/partnershipDataLoader';
+import { CommandBar, DrawerPanel, GlassCard, GlassPill, MetricCard, StatChip, TabTransition } from './playfly/PlayflyUI';
 
 /**
  * PLAYFLY IP PAGE
  *
  * Displays school IP impact data with tabbed interface
- * Tabs: Overview, With vs Without, Partnerships, Benchmark
+ * Tabs: Overview, With vs Without, Partnerships, Athletes, Rankings, Content
  */
 
 // ═══════════════════════════════════════════════════════════════
@@ -207,7 +209,36 @@ interface PlayflyIPPageProps {
   onBack?: () => void;
 }
 
-type TabType = 'overview' | 'with-vs-without' | 'partnerships' | 'athletes' | 'rankings';
+type TabType = 'overview' | 'with-vs-without' | 'partnerships' | 'athletes' | 'rankings' | 'content';
+
+function useCountUp(value: number, duration = 700) {
+  const [display, setDisplay] = useState(0);
+  const startRef = useRef<number | null>(null);
+  const doneRef = useRef(false);
+
+  useEffect(() => {
+    if (doneRef.current) {
+      setDisplay(value);
+      return;
+    }
+
+    const step = (timestamp: number) => {
+      if (startRef.current === null) startRef.current = timestamp;
+      const progress = Math.min((timestamp - startRef.current) / duration, 1);
+      setDisplay(value * progress);
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        doneRef.current = true;
+      }
+    };
+
+    const id = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(id);
+  }, [value, duration]);
+
+  return display;
+}
 
 // Map school names (as they appear in data) to their JSON file names
 const SCHOOL_FILE_MAP: Record<string, string> = {
@@ -256,8 +287,12 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
   const [activeTab, setActiveTab] = useState<TabType>('overview');
   const [ipTypeTab, setIpTypeTab] = useState<'logo' | 'collaboration' | 'caption'>('logo');
   const [selectedSchool, setSelectedSchool] = useState<string>('all');
+  const [withVsWithoutScope, setWithVsWithoutScope] = useState<string>('all');
   const [schoolsData, setSchoolsData] = useState<SchoolIPData[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [contentData, setContentData] = useState<any[]>([]);
+  const [isContentLoading, setIsContentLoading] = useState(false);
+  const firstSectionRef = useRef<HTMLDivElement | null>(null);
 
   // Brand partnership data
   const [brandData, setBrandData] = useState<BrandPartnershipData | null>(null);
@@ -271,12 +306,21 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
   const [baselineSortBy, setBaselineSortBy] = useState<BaselineSortMetric>('rank');
   const [baselineSortDirection, setBaselineSortDirection] = useState<'asc' | 'desc'>('asc');
   const [baselineSearchQuery, setBaselineSearchQuery] = useState('');
+  const [baselineMobileView, setBaselineMobileView] = useState<'cards' | 'table'>('cards');
+  const [baselineDrawerOpen, setBaselineDrawerOpen] = useState(false);
+  const [baselineSelected, setBaselineSelected] = useState<{
+    schoolName: string;
+    bestIPType: string;
+    bestLift: number;
+    adoptionPct: number;
+  } | null>(null);
 
   // Load school-specific IP impact data and brand partnership data
   useEffect(() => {
     async function loadData() {
       try {
         setIsLoading(true);
+        setIsContentLoading(true);
 
         // Load school IP data
         const schoolPromises = Object.values(SCHOOL_FILE_MAP).map(async (fileName) => {
@@ -302,11 +346,16 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
           return response.json() as Promise<SchoolAthleteData>;
         });
 
-        const [schoolResults, brandResult, partnershipResults, athleteResults] = await Promise.all([
+        const contentPromise = fetch('/data/NCAA_contents%20(2).json')
+          .then(res => res.ok ? res.json() : [])
+          .catch(() => []);
+
+        const [schoolResults, brandResult, partnershipResults, athleteResults, contentResults] = await Promise.all([
           Promise.all(schoolPromises),
           brandPromise,
           partnershipDataPromise,
-          Promise.all(athletePromises)
+          Promise.all(athletePromises),
+          contentPromise
         ]);
 
         const validSchools = schoolResults.filter((school): school is SchoolIPData => school !== null);
@@ -321,18 +370,28 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
 
         const validAthletes = athleteResults.filter((a): a is SchoolAthleteData => a !== null);
         setAthleteData(validAthletes);
+
+        if (Array.isArray(contentResults)) {
+          setContentData(contentResults);
+        } else {
+          setContentData([]);
+        }
       } catch (error) {
         console.error('Error loading data:', error);
         setSchoolsData([]);
+        setContentData([]);
       } finally {
         setIsLoading(false);
+        setIsContentLoading(false);
       }
     }
 
     loadData();
   }, []);
 
-  // Filter data based on selected school
+  // report scope is fixed to all schools
+
+  // Filter data based on report scope
   const filteredSchools = useMemo(() => {
     if (selectedSchool === 'all') {
       return schoolsData;
@@ -340,6 +399,15 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
     const school = schoolsData.find(s => s.school.name === selectedSchool);
     return school ? [school] : [];
   }, [schoolsData, selectedSchool]);
+
+  // Filter data based on section scope (With vs Without)
+  const sectionSchools = useMemo(() => {
+    if (withVsWithoutScope === 'all') {
+      return schoolsData;
+    }
+    const school = schoolsData.find(s => s.school.name === withVsWithoutScope);
+    return school ? [school] : [];
+  }, [schoolsData, withVsWithoutScope]);
 
   // Calculate network-wide or school-specific totals
   const networkTotals = useMemo(() => {
@@ -369,6 +437,56 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
         : 0
     };
   }, [filteredSchools]);
+
+  const kpiSparklines = useMemo(() => {
+    return {
+      followers: schoolsData.map(s => s.followers),
+      posts: schoolsData.map(s => s.overall.totalContents),
+      interactions: schoolsData.map(s => s.overall.totalLikes + s.overall.totalComments),
+      emv: schoolsData.map(s => s.overall.emv)
+    };
+  }, [schoolsData]);
+
+  const heroInteractions = useCountUp(networkTotals.totalLikes + networkTotals.totalComments);
+  const heroEmv = useCountUp(networkTotals.totalEMV);
+  const heroFollowers = useCountUp(networkTotals.totalFollowers);
+  const heroPosts = useCountUp(networkTotals.totalContents);
+
+  const percentile = (values: number[], value: number) => {
+    if (!values.length) return 0;
+    const sorted = [...values].sort((a, b) => a - b);
+    const idx = sorted.findIndex(v => v >= value);
+    const rank = idx === -1 ? sorted.length : idx + 1;
+    return Math.round((rank / sorted.length) * 100);
+  };
+
+  const median = (values: number[]) => {
+    if (!values.length) return 0;
+    const sorted = [...values].sort((a, b) => a - b);
+    const mid = Math.floor(sorted.length / 2);
+    return sorted.length % 2 === 0
+      ? (sorted[mid - 1] + sorted[mid]) / 2
+      : sorted[mid];
+  };
+
+  const percentileValue = (values: number[], p: number) => {
+    if (!values.length) return 0;
+    const sorted = [...values].sort((a, b) => a - b);
+    const idx = Math.min(sorted.length - 1, Math.max(0, Math.ceil(p * sorted.length) - 1));
+    return sorted[idx];
+  };
+
+  const perSchool = useMemo(() => {
+    return {
+      followers: schoolsData.map(s => s.followers),
+      posts: schoolsData.map(s => s.overall.totalContents),
+      interactions: schoolsData.map(s => s.overall.totalLikes + s.overall.totalComments),
+      emv: schoolsData.map(s => s.overall.emv),
+      adoption: schoolsData.map(s => (s.counts.withIp / Math.max(s.overall.totalContents, 1)) * 100),
+      bestLift: schoolsData.map(s => Math.max(s.logo.avgLift, s.collaboration.avgLift, s.orgInCaption.avgLift))
+    };
+  }, [schoolsData]);
+
 
   // Format numbers
   const formatNumber = (num: number): string => {
@@ -422,136 +540,74 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-white p-4 md:p-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Back button */}
-        {onBack && (
-          <button
-            onClick={onBack}
-            className="text-gray-600 hover:text-[#1770C0] mb-8 flex items-center gap-2"
-          >
-            ← Back to Reports
-          </button>
-        )}
+    <div className="playfly-theme min-h-screen bg-[#F3F6FB] px-4 pb-16 md:px-8">
+      <div className="max-w-7xl mx-auto relative">
+        {/* Sticky Command Bar */}
+        <div className="sticky top-4 z-40 mb-8">
+          <GlassCard className="p-4 md:p-5">
+            <CommandBar
+              left={(
+                <div className="flex items-center gap-3">
+                  {onBack && (
+                    <button
+                      onClick={onBack}
+                      className="text-sm font-semibold text-gray-600 hover:text-[#1770C0] flex items-center gap-2"
+                    >
+                      ← Back to Reports
+                    </button>
+                  )}
+                  <div className="flex items-center gap-2">
+                    <img src="/playfly-logo.jpg" alt="Playfly" className="h-6 w-6 rounded-full object-contain" />
+                    <div className="text-sm font-semibold text-gray-900">Playfly IP Report</div>
+                  </div>
+                </div>
+              )}
+              center={null}
+              right={null}
+            />
 
-        {/* JABA Hero Section */}
-        <div className="relative overflow-hidden rounded-2xl shadow-sm mb-8 bg-white">
-          {/* Content */}
-          <div className="p-6 md:p-12">
-            {/* Headline with highlighted stats */}
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 leading-tight text-gray-900">
-              <span>JABA analyzed </span>
-              <span className="px-3 py-1 rounded-lg" style={{ color: colors.primary, backgroundColor: `${colors.primary}15` }}>{formatNumber(networkTotals.totalContents)} posts</span>
-              <span> across </span>
-              <span className="px-3 py-1 rounded-lg" style={{ color: colors.primary, backgroundColor: `${colors.primary}15` }}>{networkTotals.totalSchools} Playfly schools</span>
-              <span> to show how IP drives engagement.</span>
-            </h2>
+            <div className="mt-4 flex flex-col gap-4">
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                <div className="w-full md:w-auto" />
+              </div>
 
-            {/* Accent bar */}
-            <div className="h-1 w-40 mb-8" style={{ background: `linear-gradient(90deg, ${colors.primary}, ${colors.secondary})` }} />
-
-            {/* CTA section */}
-            <div className="flex items-center gap-2 font-semibold text-lg" style={{ color: colors.primary }}>
-              <span>Explore the data below</span>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
+              <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-2 snap-x snap-mandatory">
+                <GlassPill className="snap-start" active={activeTab === 'overview'} onClick={() => setActiveTab('overview')}>Overview</GlassPill>
+                <GlassPill className="snap-start" active={activeTab === 'with-vs-without'} onClick={() => setActiveTab('with-vs-without')}>With vs Without</GlassPill>
+                <GlassPill className="snap-start" active={activeTab === 'partnerships'} onClick={() => setActiveTab('partnerships')}>Partnerships</GlassPill>
+                <GlassPill className="snap-start" active={activeTab === 'athletes'} onClick={() => setActiveTab('athletes')}>Athletes</GlassPill>
+                <GlassPill className="snap-start" active={activeTab === 'rankings'} onClick={() => setActiveTab('rankings')}>Rankings</GlassPill>
+                <GlassPill className="snap-start" active={activeTab === 'content'} onClick={() => setActiveTab('content')}>Content</GlassPill>
+              </div>
             </div>
-          </div>
+          </GlassCard>
         </div>
 
-        {/* Sticky Header: School Selector + Tabs */}
-        <div className="sticky top-0 z-40 bg-white pb-4 -mx-6 px-6 mb-8 shadow-md">
-          {/* School Selector */}
-          <div className="pt-4 pb-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-            <div className="w-full md:w-auto">
-              <label className="text-base font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                <span className="text-xl">🏫</span>
-                Filter by School:
-              </label>
-              <select
-                value={selectedSchool}
-                onChange={(e) => setSelectedSchool(e.target.value)}
-                className="bg-white border-2 border-gray-300 rounded-lg px-5 py-3 text-gray-900 text-base font-medium focus:outline-none focus:border-blue-500 transition-colors w-full md:min-w-[350px] cursor-pointer"
-              >
-                <option value="all">All Schools ({schoolsData.length})</option>
-                <optgroup label="Individual Schools">
-                  {schoolsData.map((school) => (
-                    <option key={school.school._id} value={school.school.name}>
-                      {getDisplayName(school.school.name)}
-                    </option>
-                  ))}
-                </optgroup>
-              </select>
-            </div>
-            {selectedSchool !== 'all' && (
-              <button
-                onClick={() => setSelectedSchool('all')}
-                className="text-[#1770C0] hover:text-[#3B9FD9] text-sm font-semibold"
-              >
-                ← Back to All Schools
-              </button>
-            )}
-          </div>
-
-          {/* Tabbed Navigation */}
-          <div className="flex gap-2 md:gap-4 border-b border-gray-200 overflow-x-auto scrollbar-hide -mx-6 px-6">
-            <button
-              onClick={() => setActiveTab('overview')}
-              className={`px-4 md:px-6 py-3 font-semibold transition-all whitespace-nowrap text-sm md:text-base ${
-                activeTab === 'overview'
-                  ? 'text-[#1770C0] border-b-2 border-[#1770C0]'
-                  : 'text-gray-600 hover:text-[#1770C0]'
-              }`}
-            >
-              Overview
-            </button>
-            <button
-              onClick={() => setActiveTab('with-vs-without')}
-              className={`px-4 md:px-6 py-3 font-semibold transition-all whitespace-nowrap text-sm md:text-base ${
-                activeTab === 'with-vs-without'
-                  ? 'text-[#1770C0] border-b-2 border-[#1770C0]'
-                  : 'text-gray-600 hover:text-[#1770C0]'
-              }`}
-            >
-              With vs Without
-            </button>
-            <button
-              onClick={() => setActiveTab('partnerships')}
-              className={`px-4 md:px-6 py-3 font-semibold transition-all whitespace-nowrap text-sm md:text-base ${
-                activeTab === 'partnerships'
-                  ? 'text-[#1770C0] border-b-2 border-[#1770C0]'
-                  : 'text-gray-600 hover:text-[#1770C0]'
-              }`}
-            >
-              Partnerships
-            </button>
-            <button
-              onClick={() => setActiveTab('athletes')}
-              className={`px-4 md:px-6 py-3 font-semibold transition-all whitespace-nowrap text-sm md:text-base ${
-                activeTab === 'athletes'
-                  ? 'text-[#1770C0] border-b-2 border-[#1770C0]'
-                  : 'text-gray-600 hover:text-[#1770C0]'
-              }`}
-            >
-              Athletes
-            </button>
-            <button
-              onClick={() => setActiveTab('rankings')}
-              className={`px-4 md:px-6 py-3 font-semibold transition-all whitespace-nowrap text-sm md:text-base ${
-                activeTab === 'rankings'
-                  ? 'text-[#1770C0] border-b-2 border-[#1770C0]'
-                  : 'text-gray-600 hover:text-[#1770C0]'
-              }`}
-            >
-              Rankings
-            </button>
-          </div>
-        </div>
+        <div ref={firstSectionRef} />
 
         {/* Tab Content */}
-        {activeTab === 'overview' && (
-          <div className="space-y-8">
+        <TabTransition tabKey={activeTab}>
+          <div>
+            {activeTab === 'overview' && (
+              <div className="space-y-8">
+                {/* Hero */}
+                <GlassCard className="p-6 md:p-10 mb-8 relative overflow-hidden">
+                  <div className="absolute -top-24 -right-24 h-60 w-60 rounded-full bg-blue-200/40 blur-3xl" />
+                  <div className="absolute bottom-0 left-16 h-40 w-40 rounded-full bg-sky-200/40 blur-3xl" />
+                  <div className="relative">
+                    <div className="text-xs uppercase tracking-[0.3em] text-gray-500 mb-4">Playfly Schools IP Performance</div>
+                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
+                      <span>JABA analyzed </span>
+                      <StatChip className="mx-1.5">{formatNumber(networkTotals.totalContents)} posts</StatChip>
+                      <span> across </span>
+                      <StatChip className="mx-1.5">{networkTotals.totalSchools} Playfly schools</StatChip>
+                      <span> to show how IP drives engagement.</span>
+                    </h2>
+                    <p className="text-base md:text-lg text-gray-600 mt-4 max-w-3xl">
+                      Executive view of intellectual property impact, performance lift, and brand partnership value across all the Playfly schools.
+                    </p>
+                  </div>
+                </GlassCard>
             <div className="flex items-center justify-between">
               <h3 style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }} className="text-2xl md:text-3xl font-bold uppercase tracking-tight">
                 <span style={{ color: colors.primary }}>
@@ -568,62 +624,59 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
 
             {/* Combined Performance Cards - Only show in network view */}
             {selectedSchool === 'all' && (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                {/* Total Followers */}
-                <div className="bg-white border-2 border-[#1770C0] rounded-xl p-6 shadow-lg">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <Users className="w-6 h-6 text-[#1770C0]" />
-                    </div>
-                    <h5 className="text-lg font-bold text-gray-900">Total Followers</h5>
-                  </div>
-                  <div className="text-3xl font-bold text-[#1770C0]">
-                    {formatMillions(networkTotals.totalFollowers)}
-                  </div>
-                  <p className="text-sm text-gray-600 mt-2">Across all {schoolsData.length} schools</p>
-                </div>
-
-                {/* Total Posts */}
-                <div className="bg-white border-2 border-[#1770C0] rounded-xl p-6 shadow-lg">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                      <BarChart3 className="w-6 h-6 text-purple-600" />
-                    </div>
-                    <h5 className="text-lg font-bold text-gray-900">Total Posts</h5>
-                  </div>
-                  <div className="text-3xl font-bold text-gray-900">
-                    {formatNumber(networkTotals.totalContents)}
-                  </div>
-                  <p className="text-sm text-gray-600 mt-2">Content analyzed</p>
-                </div>
-
-                {/* Total Interactions */}
-                <div className="bg-white border-2 border-[#1770C0] rounded-xl p-6 shadow-lg">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                      <TrendingUp className="w-6 h-6 text-green-600" />
-                    </div>
-                    <h5 className="text-lg font-bold text-gray-900">Total Interactions</h5>
-                  </div>
-                  <div className="text-3xl font-bold text-green-600">
-                    {formatMillions(networkTotals.totalLikes + networkTotals.totalComments)}
-                  </div>
-                  <p className="text-sm text-gray-600 mt-2">Likes + Comments</p>
-                </div>
-
-                {/* Total EMV */}
-                <div className="bg-white border-2 border-[#1770C0] rounded-xl p-6 shadow-lg">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
-                      <Award className="w-6 h-6 text-yellow-600" />
-                    </div>
-                    <h5 className="text-lg font-bold text-gray-900">Total EMV</h5>
-                  </div>
-                  <div className="text-3xl font-bold text-yellow-600">
-                    {formatEMVMillions(networkTotals.totalEMV)}
-                  </div>
-                  <p className="text-sm text-gray-600 mt-2">Earned media value</p>
-                </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 mb-8">
+                <MetricCard
+                  title="Total Followers"
+                  value={networkTotals.totalFollowers}
+                  subtitle={`Across all ${schoolsData.length} schools`}
+                  accent={colors.primary}
+                  icon={<Users className="w-5 h-5" />}
+                  format={formatMillions}
+                  meta={(
+                    <>
+                      <span>Median per school: {formatMillions(median(perSchool.followers))}</span>
+                    </>
+                  )}
+                />
+                <MetricCard
+                  title="Total Posts"
+                  value={networkTotals.totalContents}
+                  subtitle="Content analyzed"
+                  accent="#6366F1"
+                  icon={<BarChart3 className="w-5 h-5" />}
+                  format={formatNumber}
+                  meta={(
+                    <>
+                      <span>Median per school: {formatNumber(median(perSchool.posts))}</span>
+                    </>
+                  )}
+                />
+                <MetricCard
+                  title="Total Interactions"
+                  value={networkTotals.totalLikes + networkTotals.totalComments}
+                  subtitle="Likes + Comments"
+                  accent="#10B981"
+                  icon={<TrendingUp className="w-5 h-5" />}
+                  format={formatMillions}
+                  meta={(
+                    <>
+                      <span>Median per school: {formatMillions(median(perSchool.interactions))}</span>
+                    </>
+                  )}
+                />
+                <MetricCard
+                  title="Total EMV"
+                  value={networkTotals.totalEMV}
+                  subtitle="Earned media value"
+                  accent="#F59E0B"
+                  icon={<Award className="w-5 h-5" />}
+                  format={formatEMVMillions}
+                  meta={(
+                    <>
+                      <span>Median per school: {formatEMV(median(perSchool.emv))}</span>
+                    </>
+                  )}
+                />
               </div>
             )}
 
@@ -668,7 +721,15 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                   totalEngagement: engagementFromWithIP,
                   avgEngagementPerPost: engagementFromWithIP / school.counts.withIp,
                   avgLikesPerPost: totalLikesFromIP / school.counts.withIp,
-                  engagementRate: school.overall.engagementRate
+                  engagementRate: school.overall.engagementRate,
+                  adoptionPct: (school.counts.withIp / Math.max(school.overall.totalContents, 1)) * 100,
+                  bestLift: Math.max(school.logo.avgLift, school.collaboration.avgLift, school.orgInCaption.avgLift),
+                  bestIPType: [
+                    { type: 'Visual IP', lift: school.logo.avgLift },
+                    { type: 'Collaboration', lift: school.collaboration.avgLift },
+                    { type: 'Caption Mentions', lift: school.orgInCaption.avgLift }
+                  ].sort((a, b) => b.lift - a.lift)[0].type,
+                  emv: school.overall.emv
                 };
               });
 
@@ -720,6 +781,10 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                 return baselineSortDirection === 'asc' ? (aVal as number) - (bVal as number) : (bVal as number) - (aVal as number);
               });
 
+              const adoptionP75 = percentileValue(baselineData.map(s => s.adoptionPct), 0.75);
+              const liftP75 = percentileValue(baselineData.map(s => s.bestLift), 0.75);
+              const emvP75 = percentileValue(baselineData.map(s => s.emv), 0.75);
+
               const handleBaselineSort = (metric: BaselineSortMetric) => {
                 if (baselineSortBy === metric) {
                   setBaselineSortDirection(baselineSortDirection === 'asc' ? 'desc' : 'asc');
@@ -730,37 +795,79 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
               };
 
               return (
-                <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg mb-8">
-                  {/* Table Header */}
-                  <div className="p-6 border-b border-gray-200 bg-gray-50">
-                    <div className="flex items-center justify-between mb-4">
+                <GlassCard className="overflow-hidden mb-8">
+                  <div className="p-6 border-b border-gray-200 bg-white/70">
+                    <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
                       <div>
                         <SectionHeader primary="SCHOOL BASELINE " secondary="METRICS" />
                         <p className="text-sm text-gray-600 mt-2">Raw engagement data for all {schoolsData.length} Playfly schools</p>
                       </div>
-                      <div className="flex items-center gap-3">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                         <input
                           type="text"
                           placeholder="Search schools..."
                           value={baselineSearchQuery}
                           onChange={(e) => setBaselineSearchQuery(e.target.value)}
-                          className="bg-white border border-gray-300 rounded-lg px-4 py-2 text-gray-900 text-sm focus:border-blue-500 focus:outline-none w-64"
+                          className="bg-white border border-gray-200 rounded-full px-4 py-2 text-gray-900 text-sm focus:border-blue-500 focus:outline-none w-full sm:w-64"
                         />
                         <span className="text-xs text-gray-600">
                           Showing {sortedData.length} of {schoolsData.length} schools
                         </span>
+                        <div className="flex gap-2 md:hidden">
+                          <GlassPill active={baselineMobileView === 'cards'} onClick={() => setBaselineMobileView('cards')}>Card View</GlassPill>
+                          <GlassPill active={baselineMobileView === 'table'} onClick={() => setBaselineMobileView('table')}>View Full Table</GlassPill>
+                        </div>
                       </div>
                     </div>
                   </div>
 
+                  {/* Mobile Cards */}
+                  <div className={`${baselineMobileView === 'cards' ? 'block' : 'hidden'} md:hidden p-4 space-y-4`}>
+                    {sortedData.map((school) => (
+                      <GlassCard
+                        key={school.schoolId}
+                        className="p-4"
+                        onClick={() => {
+                          setBaselineSelected({
+                            schoolName: school.schoolName,
+                            bestIPType: school.bestIPType,
+                            bestLift: school.bestLift,
+                            adoptionPct: school.adoptionPct
+                          });
+                          setBaselineDrawerOpen(true);
+                        }}
+                      >
+                        <div className="flex items-center justify-between">
+                          <div className="text-sm font-semibold text-gray-900">{school.schoolName}</div>
+                          <div className="text-xs font-semibold text-[#1770C0]">#{school.rank}</div>
+                        </div>
+                        <div className="flex flex-wrap gap-2 mt-3 text-[10px] font-semibold uppercase tracking-wide">
+                          {school.adoptionPct >= adoptionP75 && <span className="metric-badge">High Adoption</span>}
+                          {school.bestLift >= liftP75 && <span className="metric-badge">High Lift</span>}
+                          {school.emv >= emvP75 && <span className="metric-badge">High EMV</span>}
+                        </div>
+                        <div className="grid grid-cols-2 gap-3 mt-4 text-xs text-gray-600">
+                          <div>Total Posts</div>
+                          <div className="text-right text-gray-900 font-semibold">{formatFullNumber(school.totalPosts)}</div>
+                          <div>Sponsored Posts</div>
+                          <div className="text-right text-gray-900 font-semibold">{formatFullNumber(school.sponsoredPosts)}</div>
+                          <div>Avg Likes/Post</div>
+                          <div className="text-right text-gray-900 font-semibold">{formatFullNumber(school.avgLikesPerPost)}</div>
+                          <div>Avg Interactions/Post</div>
+                          <div className="text-right text-gray-900 font-semibold">{formatFullNumber(school.avgEngagementPerPost)}</div>
+                        </div>
+                      </GlassCard>
+                    ))}
+                  </div>
+
                   {/* Table */}
-                  <div className="overflow-x-auto">
+                  <div className={`${baselineMobileView === 'table' ? 'block' : 'hidden'} md:block overflow-x-auto`}>
                     <table className="w-full">
-                      <thead style={{ backgroundColor: '#f9fafb' }} className="border-b border-gray-300">
+                      <thead style={{ backgroundColor: 'rgba(248,250,252,0.9)' }} className="border-b border-gray-200 sticky top-0">
                         <tr>
                           <th
                             onClick={() => handleBaselineSort('rank')}
-                            className="px-6 py-4 text-left text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0] hover:underline"
+                            className="px-6 py-4 text-left text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
                           >
                             <div className="flex items-center gap-2">
                               Rank
@@ -771,7 +878,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                           </th>
                           <th
                             onClick={() => handleBaselineSort('school')}
-                            className="px-6 py-4 text-left text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0] hover:underline"
+                            className="px-6 py-4 text-left text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
                           >
                             <div className="flex items-center gap-2">
                               School Name
@@ -782,7 +889,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                           </th>
                           <th
                             onClick={() => handleBaselineSort('totalPosts')}
-                            className="px-6 py-4 text-right text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0] hover:underline"
+                            className="px-6 py-4 text-right text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
                           >
                             <div className="flex items-center justify-end gap-2">
                               Total Posts
@@ -793,7 +900,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                           </th>
                           <th
                             onClick={() => handleBaselineSort('sponsoredPosts')}
-                            className="px-6 py-4 text-right text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0] hover:underline"
+                            className="px-6 py-4 text-right text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
                           >
                             <div className="flex items-center justify-end gap-2">
                               Sponsored Posts
@@ -804,7 +911,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                           </th>
                           <th
                             onClick={() => handleBaselineSort('totalLikes')}
-                            className="px-6 py-4 text-right text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0] hover:underline"
+                            className="px-6 py-4 text-right text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
                           >
                             <div className="flex items-center justify-end gap-2">
                               Avg Likes Per Post
@@ -815,7 +922,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                           </th>
                           <th
                             onClick={() => handleBaselineSort('totalEngagement')}
-                            className="px-6 py-4 text-right text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0] hover:underline"
+                            className="px-6 py-4 text-right text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
                           >
                             <div className="flex items-center justify-end gap-2">
                               <div className="flex items-center gap-1.5">
@@ -839,9 +946,9 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                           return (
                             <tr
                               key={school.schoolId}
-                              className={`border-b border-gray-200 hover:bg-blue-50 transition-colors ${
-                                index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
-                              }`}
+                              className={`border-b border-gray-100 hover:bg-blue-50/60 transition-colors ${
+                                index % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'
+                              } ${index < 3 ? 'bg-blue-50/40' : ''}`}
                               title={`Avg Engagement/Post: ${formatNumber(school.avgEngagementPerPost)} | Engagement Rate: ${(school.engagementRate * 100).toFixed(2)}%`}
                             >
                               <td className={`px-6 py-4 font-semibold text-sm ${baselineSortBy === 'rank' ? 'text-green-600' : ''}`} style={{ color: baselineSortBy === 'rank' ? undefined : colors.primary }}>
@@ -853,6 +960,9 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                                   {school.isPlayflyMax && (
                                     <span className="px-2 py-0.5 bg-yellow-100 text-yellow-700 text-xs font-bold rounded border border-yellow-300">⭐ MAX</span>
                                   )}
+                                  {school.adoptionPct >= adoptionP75 && <span className="metric-badge">High Adoption</span>}
+                                  {school.bestLift >= liftP75 && <span className="metric-badge">High Lift</span>}
+                                  {school.emv >= emvP75 && <span className="metric-badge">High EMV</span>}
                                 </div>
                               </td>
                               <td className={`px-6 py-4 text-right ${baselineSortBy === 'totalPosts' ? 'text-green-600 font-semibold' : 'text-gray-700'}`}>
@@ -873,23 +983,84 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                       </tbody>
                     </table>
                   </div>
-                </div>
+                </GlassCard>
               );
             })()}
+
+            <DrawerPanel
+              open={baselineDrawerOpen}
+              onClose={() => setBaselineDrawerOpen(false)}
+              title={baselineSelected ? baselineSelected.schoolName : 'School Overview'}
+              side="bottom"
+            >
+              {baselineSelected && (() => {
+                const adoptionMedian = median(perSchool.adoption);
+                const summary =
+                  baselineSelected.bestLift > 0 && baselineSelected.adoptionPct < adoptionMedian
+                    ? `High lift in ${baselineSelected.bestIPType}, adoption below median.`
+                    : baselineSelected.bestLift > 0 && baselineSelected.adoptionPct >= adoptionMedian
+                    ? `Strong lift in ${baselineSelected.bestIPType} with healthy adoption.`
+                    : `Lift is muted; adoption sits at ${baselineSelected.adoptionPct.toFixed(1)}%.`;
+
+                return (
+                  <div className="space-y-3 text-sm">
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-500">Best IP Type</span>
+                      <span className="font-semibold text-gray-900">{baselineSelected.bestIPType}</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-500">Lift %</span>
+                      <span className="font-semibold text-green-600">{baselineSelected.bestLift.toFixed(1)}%</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-500">Adoption %</span>
+                      <span className="font-semibold text-gray-900">{baselineSelected.adoptionPct.toFixed(1)}%</span>
+                    </div>
+                    <div className="text-gray-600">{summary}</div>
+                  </div>
+                );
+              })()}
+            </DrawerPanel>
 
             {/* Performance by IP Type - Three Cards */}
             <div>
               <SectionHeader primary="PERFORMANCE BY " secondary="IP TYPE" />
               <p className="text-sm text-gray-600 mt-2 mb-6">How different IP types drive engagement across all schools</p>
+              {(() => {
+                const adoption = {
+                  logo: networkTotals.totalContents > 0 ? (networkTotals.totalWithLogo / networkTotals.totalContents) * 100 : 0,
+                  caption: networkTotals.totalContents > 0 ? (networkTotals.totalWithCaption / networkTotals.totalContents) * 100 : 0,
+                  collab: networkTotals.totalContents > 0 ? (networkTotals.totalWithCollaboration / networkTotals.totalContents) * 100 : 0
+                };
+
+                const lifts = {
+                  logo: networkTotals.avgLogoLift,
+                  caption: networkTotals.avgCaptionLift,
+                  collab: networkTotals.avgCollabLift
+                };
+
+                const liftRank = Object.entries(lifts).sort((a, b) => b[1] - a[1]).map(([k]) => k);
+                const adoptionRank = Object.entries(adoption).sort((a, b) => b[1] - a[1]).map(([k]) => k);
+
+                const opportunitySignal = (key: 'logo' | 'caption' | 'collab') => {
+                  const isHighestLift = liftRank[0] === key;
+                  const isLowestAdoption = adoptionRank[adoptionRank.length - 1] === key;
+                  if (isHighestLift && isLowestAdoption) return 'Highest lift, lowest adoption';
+                  if (isHighestLift) return 'Highest lift opportunity';
+                  if (isLowestAdoption) return 'Lowest adoption opportunity';
+                  return 'Balanced lift and adoption';
+                };
+
+                return (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
                 {/* Logo Card */}
-                <div className="bg-white border-2 border-[#1770C0] rounded-xl p-6 shadow-lg">
+                <GlassCard className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
                       <Award className="w-6 h-6 text-green-600" />
                     </div>
-                    <h5 className="text-xl font-bold text-gray-900">Visual IP (Logo, Uniform with marks)</h5>
+                    <h5 className="text-lg font-bold text-gray-900">Visual IP (Logo, Uniform with marks)</h5>
                   </div>
 
                   <div className="space-y-4">
@@ -913,12 +1084,28 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     </div>
 
                     <div>
-                      <div className="text-sm text-gray-600 mb-1">Engagement Lift</div>
+                      <div className="text-sm text-gray-600 mb-1 flex items-center gap-1.5">
+                        <span>Engagement Lift</span>
+                        <div className="relative group">
+                          <Info className="w-3 h-3 cursor-help" />
+                          <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-3 py-1.5 bg-gray-900 text-white text-xs rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+                            Lift vs posts without this IP
+                          </div>
+                        </div>
+                      </div>
                       <div className="text-2xl font-bold text-green-600">
                         {networkTotals.avgLogoLift > 0 ? '+' : ''}{networkTotals.avgLogoLift.toFixed(2)}%
                       </div>
                       <div className="text-xs text-gray-600 mt-1">
                         vs posts without visual IP
+                      </div>
+                      <div className="text-xs text-gray-600 mt-1">Adoption: {adoption.logo.toFixed(1)}%</div>
+                      <div className="text-xs text-gray-500 mt-2">Opportunity Signal: <span className="font-semibold text-gray-700">{opportunitySignal('logo')}</span></div>
+                      <div className="mt-3 h-2 rounded-full bg-gray-100 overflow-hidden">
+                        <div
+                          className="h-full bg-green-500"
+                          style={{ width: `${Math.min(Math.abs(networkTotals.avgLogoLift) * 2, 100)}%` }}
+                        />
                       </div>
                     </div>
 
@@ -931,15 +1118,15 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                       </p>
                     </div>
                   </div>
-                </div>
+                </GlassCard>
 
                 {/* Caption Mention Card */}
-                <div className="bg-white border-2 border-[#1770C0] rounded-xl p-6 shadow-lg">
+                <GlassCard className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
                       <TrendingUp className="w-6 h-6 text-yellow-600" />
                     </div>
-                    <h5 className="text-xl font-bold text-gray-900">Caption Mentions</h5>
+                    <h5 className="text-lg font-bold text-gray-900">Caption Mentions</h5>
                   </div>
 
                   <div className="space-y-4">
@@ -963,12 +1150,28 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     </div>
 
                     <div>
-                      <div className="text-sm text-gray-600 mb-1">Engagement Lift</div>
+                      <div className="text-sm text-gray-600 mb-1 flex items-center gap-1.5">
+                        <span>Engagement Lift</span>
+                        <div className="relative group">
+                          <Info className="w-3 h-3 cursor-help" />
+                          <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-3 py-1.5 bg-gray-900 text-white text-xs rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+                            Lift vs posts without this IP
+                          </div>
+                        </div>
+                      </div>
                       <div className="text-2xl font-bold text-yellow-600">
                         {networkTotals.avgCaptionLift > 0 ? '+' : ''}{networkTotals.avgCaptionLift.toFixed(2)}%
                       </div>
                       <div className="text-xs text-gray-600 mt-1">
                         vs posts without mentions
+                      </div>
+                      <div className="text-xs text-gray-600 mt-1">Adoption: {adoption.caption.toFixed(1)}%</div>
+                      <div className="text-xs text-gray-500 mt-2">Opportunity Signal: <span className="font-semibold text-gray-700">{opportunitySignal('caption')}</span></div>
+                      <div className="mt-3 h-2 rounded-full bg-gray-100 overflow-hidden">
+                        <div
+                          className="h-full bg-yellow-500"
+                          style={{ width: `${Math.min(Math.abs(networkTotals.avgCaptionLift) * 2, 100)}%` }}
+                        />
                       </div>
                     </div>
 
@@ -983,15 +1186,15 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                       </p>
                     </div>
                   </div>
-                </div>
+                </GlassCard>
 
                 {/* Collaboration Card */}
-                <div className="bg-white border-2 border-[#1770C0] rounded-xl p-6 shadow-lg">
+                <GlassCard className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
                       <Users className="w-6 h-6 text-purple-600" />
                     </div>
-                    <h5 className="text-xl font-bold text-gray-900">Collaborations</h5>
+                    <h5 className="text-lg font-bold text-gray-900">Collaborations</h5>
                   </div>
 
                   <div className="space-y-4">
@@ -1015,12 +1218,28 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     </div>
 
                     <div>
-                      <div className="text-sm text-gray-600 mb-1">Engagement Lift</div>
+                      <div className="text-sm text-gray-600 mb-1 flex items-center gap-1.5">
+                        <span>Engagement Lift</span>
+                        <div className="relative group">
+                          <Info className="w-3 h-3 cursor-help" />
+                          <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-3 py-1.5 bg-gray-900 text-white text-xs rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+                            Lift vs posts without this IP
+                          </div>
+                        </div>
+                      </div>
                       <div className="text-2xl font-bold text-purple-600">
                         {networkTotals.avgCollabLift > 0 ? '+' : ''}{networkTotals.avgCollabLift.toFixed(2)}%
                       </div>
                       <div className="text-xs text-gray-600 mt-1">
                         vs non-collaboration posts
+                      </div>
+                      <div className="text-xs text-gray-600 mt-1">Adoption: {adoption.collab.toFixed(1)}%</div>
+                      <div className="text-xs text-gray-500 mt-2">Opportunity Signal: <span className="font-semibold text-gray-700">{opportunitySignal('collab')}</span></div>
+                      <div className="mt-3 h-2 rounded-full bg-gray-100 overflow-hidden">
+                        <div
+                          className="h-full bg-purple-500"
+                          style={{ width: `${Math.min(Math.abs(networkTotals.avgCollabLift) * 2, 100)}%` }}
+                        />
                       </div>
                     </div>
 
@@ -1035,8 +1254,10 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                       </p>
                     </div>
                   </div>
-                </div>
+                </GlassCard>
               </div>
+                );
+              })()}
             </div>
 
             {/* School-by-School Performance - Only show in network view */}
@@ -1053,7 +1274,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                 </div>
 
                 {/* Scrollable School Cards */}
-                <div className="space-y-8 max-h-[2000px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent">
+                <div className="flex md:block gap-6 md:gap-0 md:space-y-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-4 md:pb-0">
                   {(() => {
                     // ═══════════════════════════════════════════════════════════════
                     // CALCULATE IP IMPACT (Total Engagement from IP Posts)
@@ -1070,6 +1291,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
 
                     // Sort schools by IP Impact (highest engagement first)
                     const sortedSchools = schoolsWithImpact.sort((a, b) => b.totalIPEngagement - a.totalIPEngagement);
+                    const impactValues = schoolsWithImpact.map(s => s.totalIPEngagement);
 
                     // Max schools (schools with premium tier)
                     const maxSchools = ['Michigan State', 'University of Maryland', 'Auburn University', 'Texas A&M', 'Louisiana State University', 'Penn State University'];
@@ -1087,6 +1309,9 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
 
                       const isMaxSchool = maxSchools.includes(school.school.name);
                       const ipAdoption = (school.counts.withIp / school.overall.totalContents) * 100;
+                      const impactPercentile = percentile(impactValues, totalIPEngagement);
+                      const adoptionTier = ipAdoption >= 66 ? 'high' : ipAdoption >= 33 ? 'mid' : 'low';
+                      const strategicSentence = `Top ${impactPercentile >= 80 ? '5' : impactPercentile >= 60 ? '10' : '20'} in IP impact, ${adoptionTier}-tier adoption.`;
 
                       // Get school initials
                       const getInitials = (name: string) => {
@@ -1101,9 +1326,9 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                       };
 
                       return (
-                        <div key={school.school._id} className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg">
+                        <GlassCard key={school.school._id} className="min-w-[85%] md:min-w-0 snap-start overflow-hidden">
                           {/* School Header */}
-                          <div className="p-6 border-b border-gray-200 bg-gray-50 flex items-center justify-between">
+                          <div className="p-6 border-b border-gray-200 bg-white/70 flex items-center justify-between">
                             <div className="flex items-center gap-4">
                               {/* School Logo Box */}
                               <div className="w-16 h-16 bg-gradient-to-br from-[#1770C0] to-blue-600 rounded-lg flex items-center justify-center">
@@ -1118,6 +1343,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                                       ⭐ MAX
                                     </span>
                                   )}
+                                  <span className="metric-badge">P{impactPercentile}</span>
                                 </div>
                                 <p className="text-sm text-gray-600 mt-1">
                                   Best: <span className="text-green-600 font-semibold">{bestIPType} IP</span> ({ipTypes.find(t => t.type === bestIPType)!.lift > 0 ? '+' : ''}{ipTypes.find(t => t.type === bestIPType)!.lift.toFixed(1)}% lift)
@@ -1125,6 +1351,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                                 <p className="text-xs text-gray-500 mt-1">
                                   IP Adoption: <span className="font-semibold text-gray-700">{ipAdoption.toFixed(1)}%</span> • {formatNumber(school.counts.withIp)} IP Posts
                                 </p>
+                                <p className="text-xs text-gray-500 mt-1">{strategicSentence}</p>
                               </div>
                             </div>
 
@@ -1158,7 +1385,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                                     className={`rounded-xl p-5 ${
                                       isBest
                                         ? 'bg-gradient-to-br from-purple-50 to-purple-100 border-2 border-purple-400'
-                                        : 'bg-gray-50 border border-gray-200'
+                                        : 'bg-white/70 border border-gray-200'
                                     }`}
                                   >
                                     {/* Best Performing Badge */}
@@ -1229,71 +1456,78 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                               })}
                             </div>
                           </div>
-                        </div>
+                        </GlassCard>
                       );
                     });
                   })()}
                 </div>
               </div>
             )}
-          </div>
-        )}
+              </div>
+            )}
 
-        {activeTab === 'with-vs-without' && (
-          <div className="space-y-8">
+            {activeTab === 'with-vs-without' && (
+              <div className="space-y-8">
             <SectionHeader primary="IP IMPACT " secondary="ANALYSIS" />
             <p className="text-gray-600">Compare performance of posts with and without IP usage</p>
 
+            {/* Section Scope */}
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-3">
+                <label className="text-sm font-semibold text-gray-700" htmlFor="with-vs-without-scope">
+                  Section view:
+                </label>
+                <select
+                  id="with-vs-without-scope"
+                  value={withVsWithoutScope}
+                  onChange={(e) => setWithVsWithoutScope(e.target.value)}
+                  className="bg-white border border-gray-200 rounded-full px-4 py-2 text-gray-900 text-sm focus:border-[#1770C0] focus:outline-none w-full md:max-w-[320px]"
+                  aria-label="Change school for this section only"
+                >
+                  <option value="all">All Schools ({schoolsData.length})</option>
+                  {schoolsData.map((school) => (
+                    <option key={school.school._id} value={school.school.name}>
+                      {getDisplayName(school.school.name)}
+                    </option>
+                  ))}
+                </select>
+                {withVsWithoutScope !== 'all' && (
+                  <>
+                    <span className="metric-badge">Override active</span>
+                    <button
+                      onClick={() => setWithVsWithoutScope('all')}
+                      className="text-xs font-semibold text-[#1770C0] hover:text-[#3B9FD9]"
+                    >
+                      Reset to All Schools
+                    </button>
+                  </>
+                )}
+              </div>
+            </div>
+
             {/* IP Type Sub-tabs */}
-            <div className="flex gap-4 border-b border-gray-200">
-              <button
-                onClick={() => setIpTypeTab('logo')}
-                className={`px-6 py-3 font-semibold transition-all ${
-                  ipTypeTab === 'logo'
-                    ? 'text-blue-400 border-b-2 border-blue-400'
-                    : 'text-gray-600 hover:text-[#1770C0]'
-                }`}
-              >
-                Visual IP
-              </button>
-              <button
-                onClick={() => setIpTypeTab('collaboration')}
-                className={`px-6 py-3 font-semibold transition-all ${
-                  ipTypeTab === 'collaboration'
-                    ? 'text-blue-400 border-b-2 border-blue-400'
-                    : 'text-gray-600 hover:text-[#1770C0]'
-                }`}
-              >
-                Collaboration
-              </button>
-              <button
-                onClick={() => setIpTypeTab('caption')}
-                className={`px-6 py-3 font-semibold transition-all ${
-                  ipTypeTab === 'caption'
-                    ? 'text-blue-400 border-b-2 border-blue-400'
-                    : 'text-gray-600 hover:text-[#1770C0]'
-                }`}
-              >
-                Caption
-              </button>
+            <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-2">
+              <GlassPill active={ipTypeTab === 'logo'} onClick={() => setIpTypeTab('logo')}>Visual IP</GlassPill>
+              <GlassPill active={ipTypeTab === 'collaboration'} onClick={() => setIpTypeTab('collaboration')}>Collaboration</GlassPill>
+              <GlassPill active={ipTypeTab === 'caption'} onClick={() => setIpTypeTab('caption')}>Caption</GlassPill>
             </div>
 
             {/* Logo Comparison */}
             {ipTypeTab === 'logo' && (() => {
               const totals = {
                 withIP: {
-                  contents: filteredSchools.reduce((sum, s) => sum + s.logo.yes.contents, 0),
-                  likes: filteredSchools.reduce((sum, s) => sum + (s.logo.yes.likes * s.logo.yes.contents), 0),
-                  comments: filteredSchools.reduce((sum, s) => sum + (s.logo.yes.comments * s.logo.yes.contents), 0),
-                  emv: filteredSchools.reduce((sum, s) => sum + (s.logo.yes.emv * s.logo.yes.contents), 0),
+                  contents: sectionSchools.reduce((sum, s) => sum + s.logo.yes.contents, 0),
+                  likes: sectionSchools.reduce((sum, s) => sum + (s.logo.yes.likes * s.logo.yes.contents), 0),
+                  comments: sectionSchools.reduce((sum, s) => sum + (s.logo.yes.comments * s.logo.yes.contents), 0),
+                  emv: sectionSchools.reduce((sum, s) => sum + (s.logo.yes.emv * s.logo.yes.contents), 0),
                 },
                 withoutIP: {
-                  contents: filteredSchools.reduce((sum, s) => sum + s.logo.no.contents, 0),
-                  likes: filteredSchools.reduce((sum, s) => sum + (s.logo.no.likes * s.logo.no.contents), 0),
-                  comments: filteredSchools.reduce((sum, s) => sum + (s.logo.no.comments * s.logo.no.contents), 0),
+                  contents: sectionSchools.reduce((sum, s) => sum + s.logo.no.contents, 0),
+                  likes: sectionSchools.reduce((sum, s) => sum + (s.logo.no.likes * s.logo.no.contents), 0),
+                  comments: sectionSchools.reduce((sum, s) => sum + (s.logo.no.comments * s.logo.no.contents), 0),
                 },
-                avgLift: filteredSchools.length > 0
-                  ? filteredSchools.reduce((sum, s) => sum + s.logo.avgLift, 0) / filteredSchools.length
+                avgLift: sectionSchools.length > 0
+                  ? sectionSchools.reduce((sum, s) => sum + s.logo.avgLift, 0) / sectionSchools.length
                   : 0
               };
 
@@ -1307,103 +1541,113 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
               return (
                 <div className="space-y-6">
                   {/* Visual IP Explanation */}
-                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                    <p className="text-sm text-gray-700">
-                      <span className="font-semibold text-gray-900">Visual IP</span> refers to posts where school intellectual property is visible in the content, including logos, uniforms with marks, and other branded visual elements.
-                    </p>
+                  <div className="hidden md:block">
+                    <GlassCard className="p-4">
+                      <p className="text-sm text-gray-700">
+                        <span className="font-semibold text-gray-900">Visual IP</span> refers to posts where school intellectual property is visible in the content, including logos, uniforms with marks, and other branded visual elements.
+                      </p>
+                    </GlassCard>
+                  </div>
+                  <div className="md:hidden">
+                    <details className="glass-card p-4">
+                      <summary className="text-sm font-semibold text-gray-900 cursor-pointer">Research note: Visual IP definition</summary>
+                      <p className="text-sm text-gray-700 mt-2">
+                        Visual IP refers to posts where school intellectual property is visible in the content, including logos, uniforms with marks, and other branded visual elements.
+                      </p>
+                    </details>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* With Logo */}
-                  <div className="bg-white border-2 border-green-400 rounded-xl p-8 shadow-lg">
-                    <div className="flex items-center gap-3 mb-6">
-                      <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                        <Award className="w-6 h-6 text-green-600" />
+                    {/* With Logo */}
+                    <GlassCard className="p-8">
+                      <div className="flex items-center gap-3 mb-6">
+                        <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                          <Award className="w-6 h-6 text-green-600" />
+                        </div>
+                        <h4 className="text-2xl font-bold text-gray-900">With Visual IP</h4>
                       </div>
-                      <h4 className="text-2xl font-bold text-gray-900">With Visual IP</h4>
-                    </div>
 
-                    <div className="space-y-4">
-                      <div>
-                        <div className="text-sm text-gray-600 mb-1">Posts</div>
-                        <div className="text-2xl md:text-3xl font-bold text-gray-900">{formatNumber(totals.withIP.contents)}</div>
-                      </div>
-                      <div>
-                        <div className="flex items-center gap-1.5 text-sm text-gray-600 mb-1">
-                          <span>Avg Interactions</span>
-                          <div className="relative group">
-                            <Info className="w-3.5 h-3.5 cursor-help" />
-                            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-gray-900 border border-gray-700 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
-                              Likes + Comments
+                      <div className="space-y-4">
+                        <div>
+                          <div className="text-sm text-gray-600 mb-1">Posts</div>
+                          <div className="text-2xl md:text-3xl font-bold text-gray-900">{formatNumber(totals.withIP.contents)}</div>
+                        </div>
+                        <div>
+                          <div className="flex items-center gap-1.5 text-sm text-gray-600 mb-1">
+                            <span>Avg Interactions</span>
+                            <div className="relative group">
+                              <Info className="w-3.5 h-3.5 cursor-help" />
+                              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-gray-900 border border-gray-700 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
+                                Likes + Comments
+                              </div>
                             </div>
                           </div>
-                        </div>
-                        <div className="text-2xl md:text-3xl font-bold text-gray-900">
-                          {formatNumber(totals.withIP.likes + totals.withIP.comments)}
-                        </div>
-                      </div>
-                      <div>
-                        <div className="text-sm text-gray-600 mb-1">Avg Engagement/Post</div>
-                        <div className="text-2xl font-bold text-gray-900">
-                          {formatNumber(withEngagementRate)}
-                        </div>
-                      </div>
-                      <div>
-                        <div className="text-sm text-gray-600 mb-1">Avg EMV</div>
-                        <div className="text-2xl font-bold text-green-600">
-                          {formatEMV(totals.withIP.emv)}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Without Logo */}
-                  <div className="bg-white border-2 border-gray-300 rounded-xl p-8 shadow-lg">
-                    <div className="flex items-center gap-3 mb-6">
-                      <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
-                        <BarChart3 className="w-6 h-6 text-gray-600" />
-                      </div>
-                      <h4 className="text-2xl font-bold text-gray-900">Without Visual IP</h4>
-                    </div>
-
-                    <div className="space-y-4">
-                      <div>
-                        <div className="text-sm text-gray-600 mb-1">Posts</div>
-                        <div className="text-2xl md:text-3xl font-bold text-gray-900">{formatNumber(totals.withoutIP.contents)}</div>
-                      </div>
-                      <div>
-                        <div className="flex items-center gap-1.5 text-sm text-gray-600 mb-1">
-                          <span>Avg Interactions</span>
-                          <div className="relative group">
-                            <Info className="w-3.5 h-3.5 cursor-help" />
-                            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-gray-900 border border-gray-700 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
-                              Likes + Comments
-                            </div>
+                          <div className="text-2xl md:text-3xl font-bold text-gray-900">
+                            {formatNumber(totals.withIP.likes + totals.withIP.comments)}
                           </div>
                         </div>
-                        <div className="text-2xl md:text-3xl font-bold text-gray-900">
-                          {formatNumber(totals.withoutIP.likes + totals.withoutIP.comments)}
+                        <div>
+                          <div className="text-sm text-gray-600 mb-1">Avg Engagement/Post</div>
+                          <div className="text-2xl font-bold text-gray-900">
+                            {formatNumber(withEngagementRate)}
+                          </div>
+                        </div>
+                        <div>
+                          <div className="text-sm text-gray-600 mb-1">Avg EMV</div>
+                          <div className="text-2xl font-bold text-green-600">
+                            {formatEMV(totals.withIP.emv)}
+                          </div>
                         </div>
                       </div>
-                      <div>
-                        <div className="text-sm text-gray-600 mb-1">Avg Engagement/Post</div>
-                        <div className="text-2xl font-bold text-gray-900">
-                          {formatNumber(withoutEngagementRate)}
+                    </GlassCard>
+
+                    {/* Without Logo */}
+                    <GlassCard className="p-8">
+                      <div className="flex items-center gap-3 mb-6">
+                        <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                          <BarChart3 className="w-6 h-6 text-gray-600" />
+                        </div>
+                        <h4 className="text-2xl font-bold text-gray-900">Without Visual IP</h4>
+                      </div>
+
+                      <div className="space-y-4">
+                        <div>
+                          <div className="text-sm text-gray-600 mb-1">Posts</div>
+                          <div className="text-2xl md:text-3xl font-bold text-gray-900">{formatNumber(totals.withoutIP.contents)}</div>
+                        </div>
+                        <div>
+                          <div className="flex items-center gap-1.5 text-sm text-gray-600 mb-1">
+                            <span>Avg Interactions</span>
+                            <div className="relative group">
+                              <Info className="w-3.5 h-3.5 cursor-help" />
+                              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-gray-900 border border-gray-700 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
+                                Likes + Comments
+                              </div>
+                            </div>
+                          </div>
+                          <div className="text-2xl md:text-3xl font-bold text-gray-900">
+                            {formatNumber(totals.withoutIP.likes + totals.withoutIP.comments)}
+                          </div>
+                        </div>
+                        <div>
+                          <div className="text-sm text-gray-600 mb-1">Avg Engagement/Post</div>
+                          <div className="text-2xl font-bold text-gray-900">
+                            {formatNumber(withoutEngagementRate)}
+                          </div>
+                        </div>
+                        <div>
+                          <div className="text-sm text-gray-600 mb-1">Avg EMV</div>
+                          <div className="text-2xl font-bold text-gray-400">
+                            N/A
+                          </div>
                         </div>
                       </div>
-                      <div>
-                        <div className="text-sm text-gray-600 mb-1">Avg EMV</div>
-                        <div className="text-2xl font-bold text-gray-400">
-                          N/A
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                    </GlassCard>
 
                     {/* Impact Summary */}
-                    <div className="md:col-span-2 bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/30 rounded-xl p-8">
+                    <GlassCard className="md:col-span-2 p-8">
                       <h4 className="text-xl font-bold text-gray-900 mb-4">Impact Summary</h4>
-                      <div className="flex items-center gap-6">
+                      <div className="flex flex-col md:flex-row md:items-center gap-6">
                         <div>
                           <div className="text-sm text-gray-700 mb-1">Average Engagement Lift</div>
                           <div className="text-4xl font-bold text-green-600">
@@ -1416,7 +1660,13 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                           </p>
                         </div>
                       </div>
-                    </div>
+                      <div className="mt-6 h-3 rounded-full bg-gray-100 overflow-hidden">
+                        <div
+                          className="h-full bg-green-500"
+                          style={{ width: `${Math.min(Math.abs(totals.avgLift) * 2, 100)}%` }}
+                        />
+                      </div>
+                    </GlassCard>
                   </div>
                 </div>
               );
@@ -1426,18 +1676,18 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
             {ipTypeTab === 'collaboration' && (() => {
               const totals = {
                 withIP: {
-                  contents: filteredSchools.reduce((sum, s) => sum + s.collaboration.yes.contents, 0),
-                  likes: filteredSchools.reduce((sum, s) => sum + (s.collaboration.yes.likes * s.collaboration.yes.contents), 0),
-                  comments: filteredSchools.reduce((sum, s) => sum + (s.collaboration.yes.comments * s.collaboration.yes.contents), 0),
-                  emv: filteredSchools.reduce((sum, s) => sum + (s.collaboration.yes.emv * s.collaboration.yes.contents), 0),
+                  contents: sectionSchools.reduce((sum, s) => sum + s.collaboration.yes.contents, 0),
+                  likes: sectionSchools.reduce((sum, s) => sum + (s.collaboration.yes.likes * s.collaboration.yes.contents), 0),
+                  comments: sectionSchools.reduce((sum, s) => sum + (s.collaboration.yes.comments * s.collaboration.yes.contents), 0),
+                  emv: sectionSchools.reduce((sum, s) => sum + (s.collaboration.yes.emv * s.collaboration.yes.contents), 0),
                 },
                 withoutIP: {
-                  contents: filteredSchools.reduce((sum, s) => sum + s.collaboration.no.contents, 0),
-                  likes: filteredSchools.reduce((sum, s) => sum + (s.collaboration.no.likes * s.collaboration.no.contents), 0),
-                  comments: filteredSchools.reduce((sum, s) => sum + (s.collaboration.no.comments * s.collaboration.no.contents), 0),
+                  contents: sectionSchools.reduce((sum, s) => sum + s.collaboration.no.contents, 0),
+                  likes: sectionSchools.reduce((sum, s) => sum + (s.collaboration.no.likes * s.collaboration.no.contents), 0),
+                  comments: sectionSchools.reduce((sum, s) => sum + (s.collaboration.no.comments * s.collaboration.no.contents), 0),
                 },
-                avgLift: filteredSchools.length > 0
-                  ? filteredSchools.reduce((sum, s) => sum + s.collaboration.avgLift, 0) / filteredSchools.length
+                avgLift: sectionSchools.length > 0
+                  ? sectionSchools.reduce((sum, s) => sum + s.collaboration.avgLift, 0) / sectionSchools.length
                   : 0
               };
 
@@ -1451,7 +1701,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
               return (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* With Collaboration */}
-                  <div className="bg-white border-2 border-purple-400 rounded-xl p-8 shadow-lg">
+                  <GlassCard className="p-8">
                     <div className="flex items-center gap-3 mb-6">
                       <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
                         <Users className="w-6 h-6 text-purple-600" />
@@ -1491,10 +1741,10 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </GlassCard>
 
                   {/* Without Collaboration */}
-                  <div className="bg-white border-2 border-gray-300 rounded-xl p-8 shadow-lg">
+                  <GlassCard className="p-8">
                     <div className="flex items-center gap-3 mb-6">
                       <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
                         <BarChart3 className="w-6 h-6 text-gray-600" />
@@ -1534,12 +1784,12 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </GlassCard>
 
                   {/* Impact Summary */}
-                  <div className="md:col-span-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/30 rounded-xl p-8">
+                  <GlassCard className="md:col-span-2 p-8">
                     <h4 className="text-xl font-bold text-gray-900 mb-4">Impact Summary</h4>
-                    <div className="flex items-center gap-6">
+                    <div className="flex flex-col md:flex-row md:items-center gap-6">
                       <div>
                         <div className="text-sm text-gray-700 mb-1">Average Engagement Lift</div>
                         <div className="text-4xl font-bold text-purple-600">
@@ -1552,7 +1802,13 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         </p>
                       </div>
                     </div>
-                  </div>
+                    <div className="mt-6 h-3 rounded-full bg-gray-100 overflow-hidden">
+                      <div
+                        className="h-full bg-purple-500"
+                        style={{ width: `${Math.min(Math.abs(totals.avgLift) * 2, 100)}%` }}
+                      />
+                    </div>
+                  </GlassCard>
                 </div>
               );
             })()}
@@ -1561,18 +1817,18 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
             {ipTypeTab === 'caption' && (() => {
               const totals = {
                 withIP: {
-                  contents: filteredSchools.reduce((sum, s) => sum + s.orgInCaption.yes.contents, 0),
-                  likes: filteredSchools.reduce((sum, s) => sum + (s.orgInCaption.yes.likes * s.orgInCaption.yes.contents), 0),
-                  comments: filteredSchools.reduce((sum, s) => sum + (s.orgInCaption.yes.comments * s.orgInCaption.yes.contents), 0),
-                  emv: filteredSchools.reduce((sum, s) => sum + (s.orgInCaption.yes.emv * s.orgInCaption.yes.contents), 0),
+                  contents: sectionSchools.reduce((sum, s) => sum + s.orgInCaption.yes.contents, 0),
+                  likes: sectionSchools.reduce((sum, s) => sum + (s.orgInCaption.yes.likes * s.orgInCaption.yes.contents), 0),
+                  comments: sectionSchools.reduce((sum, s) => sum + (s.orgInCaption.yes.comments * s.orgInCaption.yes.contents), 0),
+                  emv: sectionSchools.reduce((sum, s) => sum + (s.orgInCaption.yes.emv * s.orgInCaption.yes.contents), 0),
                 },
                 withoutIP: {
-                  contents: filteredSchools.reduce((sum, s) => sum + s.orgInCaption.no.contents, 0),
-                  likes: filteredSchools.reduce((sum, s) => sum + (s.orgInCaption.no.likes * s.orgInCaption.no.contents), 0),
-                  comments: filteredSchools.reduce((sum, s) => sum + (s.orgInCaption.no.comments * s.orgInCaption.no.contents), 0),
+                  contents: sectionSchools.reduce((sum, s) => sum + s.orgInCaption.no.contents, 0),
+                  likes: sectionSchools.reduce((sum, s) => sum + (s.orgInCaption.no.likes * s.orgInCaption.no.contents), 0),
+                  comments: sectionSchools.reduce((sum, s) => sum + (s.orgInCaption.no.comments * s.orgInCaption.no.contents), 0),
                 },
-                avgLift: filteredSchools.length > 0
-                  ? filteredSchools.reduce((sum, s) => sum + s.orgInCaption.avgLift, 0) / filteredSchools.length
+                avgLift: sectionSchools.length > 0
+                  ? sectionSchools.reduce((sum, s) => sum + s.orgInCaption.avgLift, 0) / sectionSchools.length
                   : 0
               };
 
@@ -1586,7 +1842,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
               return (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* With Caption */}
-                  <div className="bg-white border-2 border-yellow-400 rounded-xl p-8 shadow-lg">
+                  <GlassCard className="p-8">
                     <div className="flex items-center gap-3 mb-6">
                       <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
                         <TrendingUp className="w-6 h-6 text-yellow-600" />
@@ -1626,10 +1882,10 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </GlassCard>
 
                   {/* Without Caption */}
-                  <div className="bg-white border-2 border-gray-300 rounded-xl p-8 shadow-lg">
+                  <GlassCard className="p-8">
                     <div className="flex items-center gap-3 mb-6">
                       <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
                         <BarChart3 className="w-6 h-6 text-gray-600" />
@@ -1669,12 +1925,12 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </GlassCard>
 
                   {/* Impact Summary */}
-                  <div className="md:col-span-2 bg-gradient-to-r from-yellow-500/10 to-blue-500/10 border border-yellow-500/30 rounded-xl p-8">
+                  <GlassCard className="md:col-span-2 p-8">
                     <h4 className="text-xl font-bold text-gray-900 mb-4">Impact Summary</h4>
-                    <div className="flex items-center gap-6">
+                    <div className="flex flex-col md:flex-row md:items-center gap-6">
                       <div>
                         <div className="text-sm text-gray-700 mb-1">Average Engagement Lift</div>
                         <div className="text-4xl font-bold text-yellow-600">
@@ -1687,40 +1943,56 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         </p>
                       </div>
                     </div>
-                  </div>
+                    <div className="mt-6 h-3 rounded-full bg-gray-100 overflow-hidden">
+                      <div
+                        className="h-full bg-yellow-500"
+                        style={{ width: `${Math.min(Math.abs(totals.avgLift) * 2, 100)}%` }}
+                      />
+                    </div>
+                  </GlassCard>
                 </div>
               );
             })()}
+              </div>
+            )}
+
+            {activeTab === 'partnerships' && (
+              <PartnershipsTab
+                schoolsData={schoolsData}
+                schoolPartnershipData={_schoolPartnershipData}
+                brandData={brandData}
+                formatNumber={formatNumber}
+                formatEMV={formatEMV}
+              />
+            )}
+
+            {activeTab === 'athletes' && (
+              <AthletesTab
+                schoolsData={schoolsData}
+                athleteData={athleteData}
+                formatNumber={formatNumber}
+                formatEMV={formatEMV}
+              />
+            )}
+
+            {activeTab === 'rankings' && (
+              <RankingsTab
+                schoolsData={schoolsData}
+                setSelectedSchool={setSelectedSchool}
+                formatNumber={formatNumber}
+                formatEMV={formatEMV}
+              />
+            )}
+
+            {activeTab === 'content' && (
+              <ContentTab
+                contentData={contentData}
+                isLoading={isContentLoading}
+                allowedSchools={Object.keys(SCHOOL_FILE_MAP)}
+              />
+            )}
           </div>
-        )}
-
-        {activeTab === 'partnerships' && (
-          <PartnershipsTab
-            selectedSchool={selectedSchool}
-            schoolPartnershipData={_schoolPartnershipData}
-            brandData={brandData}
-            formatNumber={formatNumber}
-            formatEMV={formatEMV}
-          />
-        )}
-
-        {activeTab === 'athletes' && (
-          <AthletesTab
-            selectedSchool={selectedSchool}
-            athleteData={athleteData}
-            formatNumber={formatNumber}
-            formatEMV={formatEMV}
-          />
-        )}
-
-        {activeTab === 'rankings' && (
-          <RankingsTab
-            schoolsData={schoolsData}
-            setSelectedSchool={setSelectedSchool}
-            formatNumber={formatNumber}
-            formatEMV={formatEMV}
-          />
-        )}
+        </TabTransition>
       </div>
     </div>
   );

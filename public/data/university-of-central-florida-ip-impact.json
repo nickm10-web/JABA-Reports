@@ -5,64 +5,64 @@
     "name": "University of Central Florida"
   },
   "overall": {
-    "totalContents": 1756,
-    "totalLikes": 2002211,
-    "totalComments": 85523,
-    "engagementRate": 1.8345705960302146,
-    "emv": 48596.52
+    "totalContents": 2034,
+    "totalLikes": 2312758,
+    "totalComments": 99387,
+    "engagementRate": 2.119642775545784,
+    "emv": 56172.61
   },
   "counts": {
     "hasOrganizationInCaption": 193,
-    "isOrganizationCollaboration": 0,
-    "hasOrganizationLogo": 293,
-    "withIp": 421
+    "isOrganizationCollaboration": 141,
+    "hasOrganizationLogo": 974,
+    "withIp": 1037
   },
   "orgInCaption": {
     "yes": {
       "contents": 193,
-      "likes": 1231.4663212435232,
-      "comments": 41.373056994818654,
-      "engagementRate": 0.001118491961516861,
-      "emv": 28.77
+      "likes": 1232.917098445596,
+      "comments": 41.4559585492228,
+      "engagementRate": 0.0011198396628765116,
+      "emv": 29.2
     },
     "no": {
-      "contents": 1563,
-      "likes": 1128.9430582213693,
-      "comments": 49.6084452975048,
-      "engagementRate": 0.001035637650324671
+      "contents": 1841,
+      "likes": 1126.9989136338945,
+      "comments": 49.63932645301467,
+      "engagementRate": 0.001033956393596207
     },
-    "avgLift": 8.000318563757837
+    "avgLift": 8.306275759037932
   },
   "collaboration": {
     "yes": {
-      "contents": 0,
-      "likes": 0,
-      "comments": 0,
-      "engagementRate": 0,
-      "emv": 0
+      "contents": 141,
+      "likes": 2005.0425531914893,
+      "comments": 51.148936170212764,
+      "engagementRate": 0.0018068530024373567,
+      "emv": 46.44
     },
     "no": {
-      "contents": 1756,
-      "likes": 1140.2112756264237,
-      "comments": 48.703302961275625,
-      "engagementRate": 0.0010447440751880492
+      "contents": 1893,
+      "likes": 1072.3967247754886,
+      "comments": 48.69255150554675,
+      "engagementRate": 0.000985143424301171
     },
-    "avgLift": -100
+    "avgLift": 83.41014697622126
   },
   "logo": {
     "yes": {
-      "contents": 293,
-      "likes": 571.9761092150171,
-      "comments": 47.389078498293514,
-      "engagementRate": 0.0005442595472333037,
-      "emv": 16.18
+      "contents": 974,
+      "likes": 1033.105749486653,
+      "comments": 47.72279260780287,
+      "engagementRate": 0.0009497647989047903,
+      "emv": 25.31
     },
     "no": {
-      "contents": 1463,
-      "likes": 1254.0136705399864,
-      "comments": 48.96650717703349,
-      "engagementRate": 0.0011449778186540373
+      "contents": 1060,
+      "likes": 1232.5594339622642,
+      "comments": 49.910377358490564,
+      "engagementRate": 0.0011269545862382245
     },
-    "avgLift": -52.46549423349525
+    "avgLift": -15.722886218946403
   }
 }

@@ -6,16 +6,16 @@
   },
   "overall": {
     "totalContents": 5926,
-    "totalLikes": 10488187,
+    "totalLikes": 10488186,
     "totalComments": 262988,
-    "engagementRate": 5.238718130756783,
-    "emv": 236062.54
+    "engagementRate": 5.238717643487425,
+    "emv": 236062.52
   },
   "counts": {
     "hasOrganizationInCaption": 1070,
-    "isOrganizationCollaboration": 36,
-    "hasOrganizationLogo": 459,
-    "withIp": 1344
+    "isOrganizationCollaboration": 71,
+    "hasOrganizationLogo": 2256,
+    "withIp": 2450
   },
   "orgInCaption": {
     "yes": {
@@ -27,42 +27,42 @@
     },
     "no": {
       "contents": 4856,
-      "likes": 1935.0838138385502,
+      "likes": 1935.083607907743,
       "comments": 44.00185337726524,
-      "engagementRate": 0.0009643478007905533
+      "engagementRate": 0.0009643477004467813
     },
-    "avgLift": -46.13131233801931
+    "avgLift": -46.13130673279278
   },
   "collaboration": {
     "yes": {
-      "contents": 36,
-      "likes": 1775.638888888889,
-      "comments": 22.083333333333332,
-      "engagementRate": 0.0008759749515397089,
-      "emv": 37.72
+      "contents": 71,
+      "likes": 1804.1267605633802,
+      "comments": 23.464788732394368,
+      "engagementRate": 0.000890529359341063,
+      "emv": 38.43
     },
     "no": {
-      "contents": 5890,
-      "likes": 1769.8241086587436,
-      "comments": 44.514940577249575,
-      "engagementRate": 0.0008840718221564267
+      "contents": 5855,
+      "likes": 1769.4437233134074,
+      "comments": 44.632280102476514,
+      "engagementRate": 0.0008839436479887635
     },
-    "avgLift": -0.9158611793516868
+    "avgLift": 0.7450374655990726
   },
   "logo": {
     "yes": {
-      "contents": 459,
-      "likes": 960.4705882352941,
-      "comments": 41.947712418300654,
-      "engagementRate": 0.0004884477209455144,
-      "emv": 23.4
+      "contents": 2256,
+      "likes": 1882.428634751773,
+      "comments": 51.44547872340426,
+      "engagementRate": 0.000942317596064022,
+      "emv": 42.79
     },
     "no": {
-      "contents": 5467,
-      "likes": 1837.8143405889884,
-      "comments": 44.58276934333272,
-      "engagementRate": 0.0009172344296401668
+      "contents": 3670,
+      "likes": 1700.6613079019073,
+      "comments": 40.034604904632154,
+      "engagementRate": 0.0008481877784106246
     },
-    "avgLift": -46.74777732262694
+    "avgLift": 11.097756894090406
   }
 }

@@ -67,15 +67,15 @@ export function BaylorReportHub({ onBack }: BaylorReportHubProps) {
         <div className="mt-12 pt-8 border-t border-white/20">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">215</div>
+              <div className="text-4xl font-bold text-green-400 mb-2">212</div>
               <div className="text-sm text-gray-400 uppercase tracking-wide">Brand Posts</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">117</div>
+              <div className="text-4xl font-bold text-green-400 mb-2">115</div>
               <div className="text-sm text-gray-400 uppercase tracking-wide">Athletes</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">121</div>
+              <div className="text-4xl font-bold text-green-400 mb-2">116</div>
               <div className="text-sm text-gray-400 uppercase tracking-wide">Brands</div>
             </div>
             <div className="text-center">

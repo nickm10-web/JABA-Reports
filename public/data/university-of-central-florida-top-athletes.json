@@ -4,9 +4,60 @@
     "name": "University of Central Florida"
   },
   "collaboration": {
-    "avgEmv": 0,
-    "avgLift": 0,
-    "top5Athletes": []
+    "avgEmv": 19.07,
+    "avgLift": 2.2017,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Jaden Nixon",
+          "sport": "FOOTBALL"
+        },
+        "posts": 7,
+        "emv": 25.04,
+        "engagementRate": 0.0009951,
+        "lift": -0.5733
+      },
+      {
+        "athlete": {
+          "name": "Paul Rubelt",
+          "sport": "FOOTBALL"
+        },
+        "posts": 6,
+        "emv": 20.56,
+        "engagementRate": 0.0008092,
+        "lift": -0.249
+      },
+      {
+        "athlete": {
+          "name": "Duane Thomas Jr.",
+          "sport": "FOOTBALL"
+        },
+        "posts": 5,
+        "emv": 26.98,
+        "engagementRate": 0.0010055,
+        "lift": 8.5053
+      },
+      {
+        "athlete": {
+          "name": "Ashleigh Griffin",
+          "sport": "SOFTBALL"
+        },
+        "posts": 5,
+        "emv": 12.38,
+        "engagementRate": 0.0004924,
+        "lift": 2.7113
+      },
+      {
+        "athlete": {
+          "name": "Isabella Vega",
+          "sport": "SOFTBALL"
+        },
+        "posts": 5,
+        "emv": 10.38,
+        "engagementRate": 0.0003951,
+        "lift": 0.6144
+      }
+    ]
   },
   "logo": {
     "avgEmv": 232.83,

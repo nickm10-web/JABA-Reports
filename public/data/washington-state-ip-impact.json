@@ -14,8 +14,8 @@
   "counts": {
     "hasOrganizationInCaption": 184,
     "isOrganizationCollaboration": 45,
-    "hasOrganizationLogo": 115,
-    "withIp": 267
+    "hasOrganizationLogo": 437,
+    "withIp": 478
   },
   "orgInCaption": {
     "yes": {
@@ -51,18 +51,18 @@
   },
   "logo": {
     "yes": {
-      "contents": 115,
-      "likes": 978.0782608695653,
-      "comments": 48.834782608695654,
-      "engagementRate": 0.005506619997524015,
-      "emv": 24.45
+      "contents": 437,
+      "likes": 731.1784897025171,
+      "comments": 44.66590389016018,
+      "engagementRate": 0.004160313553184283,
+      "emv": 19.09
     },
     "no": {
-      "contents": 833,
-      "likes": 513.3301320528211,
-      "comments": 37.921968787515006,
-      "engagementRate": 0.00295598138658639
+      "contents": 511,
+      "likes": 431.62035225048925,
+      "comments": 34.6105675146771,
+      "engagementRate": 0.0025000719608614347
     },
-    "avgLift": 86.28737049941776
+    "avgLift": 66.40775218929254
   }
 }

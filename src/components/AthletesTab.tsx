@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { DrawerPanel, GlassCard, GlassPill } from './playfly/PlayflyUI';
 
 interface AthleteData {
   athlete: {
@@ -39,7 +40,7 @@ interface SchoolAthleteData {
 }
 
 interface AthletesTabProps {
-  selectedSchool: string;
+  schoolsData: { school: { _id: string; name: string } }[];
   athleteData: SchoolAthleteData[];
   formatNumber: (num: number) => string;
   formatEMV: (emv: number) => string;
@@ -67,7 +68,7 @@ function formatSport(sport: string): string {
 }
 
 export function AthletesTab({
-  selectedSchool,
+  schoolsData,
   athleteData,
   formatNumber,
   formatEMV
@@ -77,11 +78,33 @@ export function AthletesTab({
   const [sortBy, setSortBy] = useState<SortMetric>('engagement');
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('desc');
   const [ipModeFilter, setIPModeFilter] = useState<IPModeFilter>('all');
+  const [isMobile, setIsMobile] = useState(false);
+  const [leaderboardView, setLeaderboardView] = useState<'cards' | 'table'>('cards');
+  const [selectedAthlete, setSelectedAthlete] = useState<{
+    name: string;
+    school: string;
+    sport: string;
+    engagement: number;
+    emv: number;
+    avgLift: number;
+    posts: number;
+  } | null>(null);
+  const [athleteDrawerOpen, setAthleteDrawerOpen] = useState(false);
+  const [sectionScope, setSectionScope] = useState<string>('all');
+
+  useEffect(() => {
+    const update = () => setIsMobile(window.innerWidth < 768);
+    update();
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
+  }, []);
+
+  // section scope only
 
   // Filter to selected school or all schools
-  const filteredAthleteData = selectedSchool === 'all'
+  const filteredAthleteData = sectionScope === 'all'
     ? athleteData
-    : athleteData.filter(d => d.school.name === selectedSchool);
+    : athleteData.filter(d => d.school.name === sectionScope);
 
   // Aggregate all athletes from all IP types into a leaderboard
   const aggregateAthletes = () => {
@@ -221,11 +244,14 @@ export function AthletesTab({
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="text-3xl font-bold text-gray-900">Athletes Performance</h3>
+            <h3 className="text-3xl pf-section-header">
+              <span className="pf-header-primary">Athletes </span>
+              <span className="pf-header-secondary">Performance</span>
+            </h3>
             <p className="text-gray-600 mt-2">
-              {selectedSchool === 'all'
+              {sectionScope === 'all'
                 ? 'Top performing athletes across all schools'
-                : `Top performing athletes at ${selectedSchool}`
+                : `Top performing athletes at ${sectionScope}`
               }
             </p>
           </div>
@@ -234,28 +260,44 @@ export function AthletesTab({
           </div>
         </div>
 
-        {/* View Mode Toggle - Similar to With vs Without tabs */}
-        <div className="flex gap-4 border-b border-gray-200">
-          <button
-            onClick={() => setViewMode('leaderboard')}
-            className={`px-6 py-3 font-semibold transition-all ${
-              viewMode === 'leaderboard'
-                ? 'text-[#1770C0] border-b-2 border-[#1770C0]'
-                : 'text-gray-600 hover:text-[#1770C0]'
-            }`}
-          >
-            Leaderboard
-          </button>
-          <button
-            onClick={() => setViewMode('by-ip-type')}
-            className={`px-6 py-3 font-semibold transition-all ${
-              viewMode === 'by-ip-type'
-                ? 'text-[#1770C0] border-b-2 border-[#1770C0]'
-                : 'text-gray-600 hover:text-[#1770C0]'
-            }`}
-          >
-            By IP Type
-          </button>
+        {/* Section Scope */}
+        <div className="flex flex-col gap-2">
+          <div className="flex flex-col md:flex-row md:items-center gap-3">
+            <label className="text-sm font-semibold text-gray-700" htmlFor="athletes-scope">
+              Section view:
+            </label>
+            <select
+              id="athletes-scope"
+              value={sectionScope}
+              onChange={(e) => setSectionScope(e.target.value)}
+              className="bg-white border border-gray-200 rounded-full px-4 py-2 text-gray-900 text-sm focus:border-[#1770C0] focus:outline-none w-full md:max-w-[320px]"
+              aria-label="Change school for this section only"
+            >
+              <option value="all">All Schools ({schoolsData.length})</option>
+              {schoolsData.map((school) => (
+                <option key={school.school._id} value={school.school.name}>
+                  {school.school.name}
+                </option>
+              ))}
+            </select>
+            {sectionScope !== 'all' && (
+              <>
+                <span className="metric-badge">Override active</span>
+                <button
+                  onClick={() => setSectionScope('all')}
+                  className="text-xs font-semibold text-[#1770C0] hover:text-[#3B9FD9]"
+                >
+                  Reset to All Schools
+                </button>
+              </>
+            )}
+          </div>
+        </div>
+
+        {/* View Mode Toggle */}
+        <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-2" data-snapshot-hide="true">
+          <GlassPill active={viewMode === 'leaderboard'} onClick={() => setViewMode('leaderboard')}>Leaderboard</GlassPill>
+          <GlassPill active={viewMode === 'by-ip-type'} onClick={() => setViewMode('by-ip-type')}>By IP Type</GlassPill>
         </div>
       </div>
 
@@ -264,27 +306,75 @@ export function AthletesTab({
         <div className="space-y-6">
 
         {/* Search */}
-        <div className="bg-white border border-gray-200 rounded-xl p-4 shadow-lg">
+        <GlassCard className="p-4" data-snapshot-hide="true">
           <input
             type="text"
             placeholder="Search athletes..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2 text-gray-900 focus:border-blue-500 focus:outline-none"
+            className="w-full bg-white border border-gray-200 rounded-full px-4 py-2 text-gray-900 focus:border-blue-500 focus:outline-none"
           />
-        </div>
+        </GlassCard>
 
         {/* Athletes Table */}
-        <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg">
-          <div className="overflow-x-auto">
+        <GlassCard className="overflow-hidden">
+          <div className="p-4 border-b border-gray-200 flex items-center justify-between md:hidden" data-snapshot-hide="true">
+            <div className="text-sm text-gray-600">Showing top {Math.min(50, sortedAthletes.length)}</div>
+            <div className="flex gap-2">
+              <GlassPill active={leaderboardView === 'cards'} onClick={() => setLeaderboardView('cards')}>Cards</GlassPill>
+              <GlassPill active={leaderboardView === 'table'} onClick={() => setLeaderboardView('table')}>Table</GlassPill>
+            </div>
+          </div>
+
+          {/* Mobile Cards */}
+          <div className={`${leaderboardView === 'cards' ? 'block' : 'hidden'} md:hidden p-4 space-y-4`}>
+            {sortedAthletes.slice(0, 50).map((athlete, index) => (
+              <GlassCard
+                key={`${athlete.name}-${athlete.sport}-card`}
+                className="p-4"
+                onClick={() => {
+                  setSelectedAthlete({
+                    name: athlete.name,
+                    school: athlete.school,
+                    sport: athlete.sport,
+                    engagement: athlete.engagement,
+                    emv: athlete.emv,
+                    avgLift: athlete.avgLift,
+                    posts: athlete.posts
+                  });
+                  setAthleteDrawerOpen(true);
+                }}
+              >
+                <div className="flex items-center justify-between">
+                  <div className="font-semibold text-gray-900">{athlete.name}</div>
+                  <div className="text-xs text-gray-500">#{index + 1}</div>
+                </div>
+                <div className="text-xs text-gray-600 mt-1">{athlete.school} • {formatSport(athlete.sport)}</div>
+                <div className="grid grid-cols-2 gap-3 mt-4 text-xs text-gray-600">
+                  <div>Engagement</div>
+                  <div className="text-right text-[#00C4A7] font-semibold">{(athlete.engagement * 100).toFixed(2)}%</div>
+                  <div>EMV</div>
+                  <div className="text-right text-yellow-600 font-semibold">{formatEMV(athlete.emv)}</div>
+                  <div>IP Lift</div>
+                  <div className={`text-right font-semibold ${athlete.avgLift > 0 ? 'text-green-600' : 'text-red-600'}`}>
+                    {athlete.avgLift > 0 ? '+' : ''}{(athlete.avgLift * 100).toFixed(1)}%
+                  </div>
+                  <div>Posts</div>
+                  <div className="text-right text-gray-900 font-semibold">{formatNumber(athlete.posts)}</div>
+                </div>
+              </GlassCard>
+            ))}
+          </div>
+
+          <div className={`${leaderboardView === 'table' ? 'block' : 'hidden'} md:block overflow-x-auto`}>
             <table className="w-full">
-              <thead style={{ backgroundColor: '#f9fafb' }} className="border-b border-gray-300">
+              <thead style={{ backgroundColor: '#f9fafb' }} className="border-b border-gray-200">
                 <tr>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">#</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">ATHLETE</th>
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700">#</th>
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700">ATHLETE</th>
                   <th
                     onClick={() => handleSort('engagement')}
-                    className="px-6 py-4 text-right text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
+                    className="px-6 py-4 text-right text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
                   >
                     <div className="flex items-center justify-end gap-2">
                       ENGAGEMENT
@@ -293,7 +383,7 @@ export function AthletesTab({
                   </th>
                   <th
                     onClick={() => handleSort('emv')}
-                    className="px-6 py-4 text-right text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
+                    className="px-6 py-4 text-right text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
                   >
                     <div className="flex items-center justify-end gap-2">
                       EMV
@@ -302,7 +392,7 @@ export function AthletesTab({
                   </th>
                   <th
                     onClick={() => handleSort('lift')}
-                    className="px-6 py-4 text-right text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
+                    className="px-6 py-4 text-right text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
                   >
                     <div className="flex items-center justify-end gap-2">
                       IP LIFT
@@ -311,7 +401,7 @@ export function AthletesTab({
                   </th>
                   <th
                     onClick={() => handleSort('posts')}
-                    className="px-6 py-4 text-right text-sm font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
+                    className="px-6 py-4 text-right text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
                   >
                     <div className="flex items-center justify-end gap-2">
                       POSTS
@@ -324,7 +414,19 @@ export function AthletesTab({
                 {sortedAthletes.slice(0, 50).map((athlete, index) => (
                   <tr
                     key={`${athlete.name}-${athlete.sport}`}
-                    className={`border-b border-gray-200 hover:bg-blue-50 transition-colors ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
+                    className={`border-b border-gray-100 hover:bg-blue-50/60 transition-colors cursor-pointer ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}`}
+                    onClick={() => {
+                      setSelectedAthlete({
+                        name: athlete.name,
+                        school: athlete.school,
+                        sport: athlete.sport,
+                        engagement: athlete.engagement,
+                        emv: athlete.emv,
+                        avgLift: athlete.avgLift,
+                        posts: athlete.posts
+                      });
+                      setAthleteDrawerOpen(true);
+                    }}
                   >
                     <td className="px-6 py-4 font-medium text-sm" style={{ color: '#1770C0' }}>
                       {index + 1}
@@ -367,10 +469,10 @@ export function AthletesTab({
             </table>
           </div>
 
-          <div className="p-4 border-t border-gray-200 text-center text-sm text-gray-600">
+          <div className="p-4 border-t border-gray-200 text-center text-sm text-gray-600 hidden md:block">
             Showing top {Math.min(50, sortedAthletes.length)} of {sortedAthletes.length} athletes
           </div>
-        </div>
+        </GlassCard>
         </div>
       )}
 
@@ -379,50 +481,14 @@ export function AthletesTab({
         <div className="space-y-6">
 
         {/* Filter Bar */}
-        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
-          <div className="flex flex-wrap gap-3">
-            <button
-              onClick={() => setIPModeFilter('all')}
-              className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
-                ipModeFilter === 'all'
-                  ? 'bg-[#1770C0] text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
-              All Modes
-            </button>
-            <button
-              onClick={() => setIPModeFilter('collaboration')}
-              className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
-                ipModeFilter === 'collaboration'
-                  ? 'bg-[#1770C0] text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
-              🤝 Collab
-            </button>
-            <button
-              onClick={() => setIPModeFilter('logo')}
-              className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
-                ipModeFilter === 'logo'
-                  ? 'bg-[#1770C0] text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
-              🏫 Logo
-            </button>
-            <button
-              onClick={() => setIPModeFilter('mention')}
-              className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
-                ipModeFilter === 'mention'
-                  ? 'bg-[#1770C0] text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
-              💬 Mention
-            </button>
+        <GlassCard className="p-4" data-snapshot-hide="true">
+          <div className="flex flex-wrap gap-2">
+            <GlassPill active={ipModeFilter === 'all'} onClick={() => setIPModeFilter('all')}>All Modes</GlassPill>
+            <GlassPill active={ipModeFilter === 'collaboration'} onClick={() => setIPModeFilter('collaboration')}>🤝 Collab</GlassPill>
+            <GlassPill active={ipModeFilter === 'logo'} onClick={() => setIPModeFilter('logo')}>🏫 Visual</GlassPill>
+            <GlassPill active={ipModeFilter === 'mention'} onClick={() => setIPModeFilter('mention')}>💬 Mention</GlassPill>
           </div>
-        </div>
+        </GlassCard>
 
         {/* IP Type Sections */}
         <div className="space-y-8">
@@ -444,7 +510,7 @@ export function AthletesTab({
               .slice(0, 5);
 
             return (
-              <div key={ipType.key} className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
+              <GlassCard key={ipType.key} className="p-6">
                 {/* IP Type Header */}
                 <div className="mb-6">
                   <div className="flex items-center gap-3 mb-2">
@@ -462,9 +528,9 @@ export function AthletesTab({
                   <h5 className="text-sm font-bold text-gray-700 mb-4">TOP 5 ATHLETES</h5>
                   <div className="space-y-3">
                     {topAthletes.map((athlete, index) => (
-                      <div
+                      <GlassCard
                         key={`${athlete.athlete.name}-${index}`}
-                        className="bg-gray-50 rounded-lg p-4 flex items-center justify-between hover:bg-blue-50 transition-colors"
+                        className="p-4"
                       >
                         <div className="flex items-center gap-4">
                           <div className="text-2xl font-bold text-gray-400">#{index + 1}</div>
@@ -492,16 +558,54 @@ export function AthletesTab({
                             </div>
                           </div>
                         </div>
-                      </div>
+                      </GlassCard>
                     ))}
                   </div>
                 </div>
-              </div>
+              </GlassCard>
             );
           })}
         </div>
         </div>
       )}
+
+      <DrawerPanel
+        open={athleteDrawerOpen}
+        onClose={() => setAthleteDrawerOpen(false)}
+        title={selectedAthlete ? selectedAthlete.name : 'Athlete'}
+        side={isMobile ? 'bottom' : 'right'}
+      >
+        {selectedAthlete && (
+          <div className="space-y-3 text-sm">
+            <div className="flex items-center justify-between">
+              <span className="text-gray-500">School</span>
+              <span className="font-semibold text-gray-900">{selectedAthlete.school}</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-500">Sport</span>
+              <span className="font-semibold text-gray-900">{formatSport(selectedAthlete.sport)}</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-500">Engagement</span>
+              <span className="font-semibold text-[#00C4A7]">{(selectedAthlete.engagement * 100).toFixed(2)}%</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-500">EMV</span>
+              <span className="font-semibold text-yellow-600">{formatEMV(selectedAthlete.emv)}</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-500">IP Lift</span>
+              <span className={`font-semibold ${selectedAthlete.avgLift > 0 ? 'text-green-600' : 'text-red-600'}`}>
+                {selectedAthlete.avgLift > 0 ? '+' : ''}{(selectedAthlete.avgLift * 100).toFixed(1)}%
+              </span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-500">Posts</span>
+              <span className="font-semibold text-gray-900">{formatNumber(selectedAthlete.posts)}</span>
+            </div>
+          </div>
+        )}
+      </DrawerPanel>
     </div>
   );
 }

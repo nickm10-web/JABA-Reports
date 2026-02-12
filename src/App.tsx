@@ -1,10 +1,11 @@
-import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useNavigate, useSearchParams } from 'react-router-dom';
 import { SchoolReportsPage } from './components/SchoolReportsPage';
 import { AuburnCampaignOverview } from './components/AuburnCampaignOverview';
 import { BaylorBrandDeals } from './components/BaylorBrandDeals';
 import { OhioStateReportHub } from './components/OhioStateReportHub';
 import { KentuckyReportHub } from './components/KentuckyReportHub';
 import { PlayflyReportHub } from './components/PlayflyReportHub';
+import { UCLABrandDeals } from './components/UCLABrandDeals';
 
 // Wrapper components that provide navigation
 // Only show back button if user navigated from within the app
@@ -28,21 +29,33 @@ function KentuckyRoute() {
   return <KentuckyReportHub onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
+function UCLARoute() {
+  return <UCLABrandDeals />;
+}
+
 function PlayflyRoute() {
-  const navigate = useNavigate();
-  const canGoBack = window.history.length > 2;
-  return <PlayflyReportHub onBack={canGoBack ? () => navigate('/') : undefined} />;
+  return <PlayflyReportHub />;
+}
+
+// Handle ?playfly query param - show Playfly hub without back button
+function HomeRoute() {
+  const [searchParams] = useSearchParams();
+  if (searchParams.has('playfly')) {
+    return <PlayflyReportHub />;
+  }
+  return <SchoolReportsPage />;
 }
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<SchoolReportsPage />} />
+        <Route path="/" element={<HomeRoute />} />
         <Route path="/auburn" element={<AuburnRoute />} />
         <Route path="/baylor" element={<BaylorRoute />} />
         <Route path="/ohio-state" element={<OhioStateRoute />} />
         <Route path="/kentucky" element={<KentuckyRoute />} />
+        <Route path="/ucla" element={<UCLARoute />} />
         <Route path="/playfly" element={<PlayflyRoute />} />
         {/* Redirect any unknown routes to home */}
         <Route path="*" element={<Navigate to="/" replace />} />

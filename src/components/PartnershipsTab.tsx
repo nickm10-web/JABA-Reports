@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Info, TrendingUp, TrendingDown } from 'lucide-react';
+import { DrawerPanel, GlassCard, GlassPill } from './playfly/PlayflyUI';
 
 interface SchoolPartnershipData {
   school: {
@@ -40,7 +41,7 @@ interface BrandPartnershipData {
 }
 
 interface PartnershipsTabProps {
-  selectedSchool: string;
+  schoolsData?: { school: { _id: string; name: string } }[];
   schoolPartnershipData: SchoolPartnershipData[];
   brandData: BrandPartnershipData | null;
   formatNumber: (num: number) => string;
@@ -48,7 +49,7 @@ interface PartnershipsTabProps {
 }
 
 export function PartnershipsTab({
-  selectedSchool,
+  schoolsData = [],
   schoolPartnershipData,
   formatNumber,
   formatEMV
@@ -58,6 +59,39 @@ export function PartnershipsTab({
   const [sortBy, setSortBy] = useState<'emv' | 'posts' | 'engagement' | 'lift'>('emv');
   const [cardsToShow, setCardsToShow] = useState(20);
   const [selectedIndustry, setSelectedIndustry] = useState<string>('All Industries');
+  const [sectionScope, setSectionScope] = useState<string>('all');
+  const [selectedBrand, setSelectedBrand] = useState<{
+    name: string;
+    totalPosts: number;
+    totalEMV: number;
+    totalLikes: number;
+    totalComments: number;
+    avgLift: number;
+    industry: string;
+  } | null>(null);
+  const [brandDrawerOpen, setBrandDrawerOpen] = useState(false);
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [schoolTableView, setSchoolTableView] = useState<'cards' | 'table'>('cards');
+  const [selectedSchoolPartner, setSelectedSchoolPartner] = useState<{
+    name: string;
+    totalContents: number;
+    avgLikes: number;
+    avgComments: number;
+    engagementRate: number;
+    emv: number;
+    engagementRateLift: number;
+  } | null>(null);
+  const [schoolPartnerDrawerOpen, setSchoolPartnerDrawerOpen] = useState(false);
+
+  useEffect(() => {
+    const update = () => setIsMobile(window.innerWidth < 768);
+    update();
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
+  }, []);
+
+  // section scope only
 
   // Industry categorization function
   const categorizeByIndustry = (brandName: string): string => {
@@ -143,7 +177,7 @@ export function PartnershipsTab({
   };
 
   // Brand Card Component
-  const BrandCard = ({ brand }: { brand: {
+  const BrandCard = ({ brand, onSelect }: { brand: {
     name: string;
     totalPosts: number;
     totalEMV: number;
@@ -151,7 +185,7 @@ export function PartnershipsTab({
     totalComments: number;
     avgLift: number;
     industry: string;
-  }}) => {
+  }; onSelect: () => void }) => {
     // Map brand names to their company domains
     const getBrandDomain = (brandName: string): string | null => {
       const cleanName = brandName.replace('@', '').toLowerCase();
@@ -310,7 +344,7 @@ export function PartnershipsTab({
     const [showLogo, setShowLogo] = useState(logoUrls.length > 0);
 
     return (
-      <div className="bg-white border border-gray-200 rounded-xl p-6 hover:border-[#1770C0] transition-all shadow-lg">
+      <GlassCard className="p-6 hover:border-[#1770C0] transition-all cursor-pointer" onClick={onSelect}>
         {/* Industry Pill, Logo & Brand Name */}
         <div className="mb-4">
           <IndustryPill industry={brand.industry} />
@@ -376,12 +410,12 @@ export function PartnershipsTab({
             <TrendingDown className="w-4 h-4" />
           ) : null}
         </div>
-      </div>
+      </GlassCard>
     );
   };
 
   // Network view - show all brands from school partnership data
-  if (selectedSchool === 'all') {
+  if (sectionScope === 'all') {
     // Aggregate all brands across schools
     const allBrands = new Map<string, {
       name: string;
@@ -481,11 +515,80 @@ export function PartnershipsTab({
     // Get unique industries for filter pills
     const availableIndustries = ['All Industries', ...Array.from(new Set(brandsArray.map(b => b.industry))).sort()];
 
+    const filtersPanel = (
+      <div className="space-y-4">
+        <div>
+          <label className="text-sm text-gray-600 mb-3 block">Filter by Industry</label>
+          <div className="flex flex-wrap gap-2">
+            {availableIndustries.map(industry => {
+              const isSelected = industry === selectedIndustry;
+              return (
+                <GlassPill
+                  key={industry}
+                  active={isSelected}
+                  onClick={() => {
+                    setSelectedIndustry(industry);
+                    setCardsToShow(20);
+                  }}
+                >
+                  {industry}
+                </GlassPill>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label className="text-sm text-gray-600 mb-2 block">Search Brands</label>
+            <input
+              type="text"
+              placeholder="Search brands..."
+              value={partnershipSearchQuery}
+              onChange={(e) => setPartnershipSearchQuery(e.target.value)}
+              className="w-full bg-white border border-gray-200 rounded-full px-4 py-2 text-gray-900 focus:border-blue-500 focus:outline-none"
+            />
+          </div>
+
+          <div>
+            <label className="text-sm text-gray-600 mb-2 block">Sort By</label>
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value as any)}
+              className="w-full bg-white border border-gray-200 rounded-full px-4 py-2 text-gray-900 focus:border-blue-500 focus:outline-none"
+            >
+              <option value="emv">Total EMV</option>
+              <option value="posts">Total Posts</option>
+              <option value="engagement">Total Interactions</option>
+              <option value="lift">Avg Lift %</option>
+            </select>
+          </div>
+
+          <div>
+            <label className="text-sm text-gray-600 mb-2 block">Engagement Level</label>
+            <select
+              value={engagementFilter}
+              onChange={(e) => setEngagementFilter(e.target.value as any)}
+              className="w-full bg-white border border-gray-200 rounded-full px-4 py-2 text-gray-900 focus:border-blue-500 focus:outline-none"
+            >
+              <option value="all">All Engagement</option>
+              <option value="high">High (&gt;100% lift)</option>
+              <option value="mid">Mid (0-100% lift)</option>
+              <option value="low">Low (&lt;0% lift)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    );
+
     return (
       <div className="space-y-8">
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Brand Partnerships</h3>
+            <h3 className="text-2xl md:text-3xl pf-section-header">
+              <span className="pf-header-primary">Brand </span>
+              <span className="pf-header-secondary">Partnerships</span>
+            </h3>
             <p className="text-gray-600 mt-2">Brands leveraging school IP across your network</p>
           </div>
           <div className="text-sm text-gray-600">
@@ -493,108 +596,82 @@ export function PartnershipsTab({
           </div>
         </div>
 
+        {/* Section Scope */}
+        <div className="flex flex-col gap-2">
+          <div className="flex flex-col md:flex-row md:items-center gap-3">
+            <label className="text-sm font-semibold text-gray-700" htmlFor="partnerships-scope">
+              Section view:
+            </label>
+            <select
+              id="partnerships-scope"
+              value={sectionScope}
+              onChange={(e) => setSectionScope(e.target.value)}
+              className="bg-white border border-gray-200 rounded-full px-4 py-2 text-gray-900 text-sm focus:border-[#1770C0] focus:outline-none w-full md:max-w-[320px]"
+              aria-label="Change school for this section only"
+            >
+              <option value="all">All Schools ({schoolsData.length})</option>
+              {schoolsData.map((school) => (
+                <option key={school.school._id} value={school.school.name}>
+                  {school.school.name}
+                </option>
+              ))}
+            </select>
+            {sectionScope !== 'all' && (
+              <>
+                <span className="metric-badge">Override active</span>
+                <button
+                  onClick={() => setSectionScope('all')}
+                  className="text-xs font-semibold text-[#1770C0] hover:text-[#3B9FD9]"
+                >
+                  Reset to All Schools
+                </button>
+              </>
+            )}
+          </div>
+        </div>
+
         {/* Network Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div className="bg-white border-2 border-[#1770C0] rounded-xl p-6 shadow-lg">
-            <div className="text-sm text-gray-600 mb-2">Sponsored Posts</div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+          <GlassCard className="p-6">
+            <div className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-2">Sponsored Posts</div>
             <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1770C0]">
               {formatNumber(schoolPartnershipData.reduce((sum, s) =>
                 sum + s.sponsorPartners.reduce((pSum, p) => pSum + p.totalContents, 0), 0))}
             </div>
-          </div>
-          <div className="bg-white border-2 border-[#1770C0] rounded-xl p-6 shadow-lg">
-            <div className="text-sm text-gray-600 mb-2">Active Brands</div>
+          </GlassCard>
+          <GlassCard className="p-6">
+            <div className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-2">Active Brands</div>
             <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">{brandsArray.length}</div>
-          </div>
-          <div className="bg-white border-2 border-[#1770C0] rounded-xl p-6 shadow-lg">
-            <div className="text-sm text-gray-600 mb-2">Active Schools</div>
+          </GlassCard>
+          <GlassCard className="p-6">
+            <div className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-2">Active Schools</div>
             <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">{schoolPartnershipData.length}</div>
-          </div>
-          <div className="bg-white border-2 border-[#1770C0] rounded-xl p-6 shadow-lg">
-            <div className="text-sm text-gray-600 mb-2">Total EMV</div>
+          </GlassCard>
+          <GlassCard className="p-6">
+            <div className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-2">Total EMV</div>
             <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-600">
               {formatEMV(brandsArray.reduce((sum, b) => sum + b.totalEMV, 0))}
             </div>
-          </div>
+          </GlassCard>
         </div>
 
-        {/* Industry Filter Pills */}
-        <div className="bg-white border border-gray-200 rounded-xl p-4 md:p-6 shadow-lg">
-          <label className="text-sm text-gray-600 mb-3 block">Filter by Industry</label>
-          <div className="flex flex-wrap gap-2">
-            {availableIndustries.map(industry => {
-              const isSelected = industry === selectedIndustry;
-              const bgColor = industry === 'All Industries' ? '#1770C0' : industryColors[industry] || industryColors['Other'];
-              return (
-                <button
-                  key={industry}
-                  onClick={() => {
-                    setSelectedIndustry(industry);
-                    setCardsToShow(20); // Reset pagination when filtering
-                  }}
-                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
-                    isSelected
-                      ? 'text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
-                  style={isSelected ? { backgroundColor: bgColor } : {}}
-                >
-                  {industry}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Search and Filters */}
-        <div className="bg-white border border-gray-200 rounded-xl p-4 md:p-6 shadow-lg">
-          <div className="flex flex-col gap-4">
-            <div className="flex flex-col md:flex-row gap-4">
-              <div className="flex-1">
-                <label className="text-sm text-gray-600 mb-2 block">Search Brands</label>
-                <input
-                  type="text"
-                  placeholder="Search brands..."
-                  value={partnershipSearchQuery}
-                  onChange={(e) => setPartnershipSearchQuery(e.target.value)}
-                  className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2 text-gray-900 focus:border-blue-500 focus:outline-none"
-                />
-              </div>
-
-              <div className="w-full md:w-auto md:min-w-[200px]">
-                <label className="text-sm text-gray-600 mb-2 block">Sort By</label>
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as any)}
-                  className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2 text-gray-900 focus:border-blue-500 focus:outline-none"
-                >
-                  <option value="emv">Total EMV</option>
-                  <option value="posts">Total Posts</option>
-                  <option value="engagement">Total Interactions</option>
-                  <option value="lift">Avg Lift %</option>
-                </select>
-              </div>
-
-              <div className="w-full md:w-auto md:min-w-[200px]">
-                <label className="text-sm text-gray-600 mb-2 block">Engagement Level</label>
-                <select
-                  value={engagementFilter}
-                  onChange={(e) => setEngagementFilter(e.target.value as any)}
-                  className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2 text-gray-900 focus:border-blue-500 focus:outline-none"
-                >
-                  <option value="all">All Engagement</option>
-                  <option value="high">High (&gt;100% lift)</option>
-                  <option value="mid">Mid (0-100% lift)</option>
-                  <option value="low">Low (&lt;0% lift)</option>
-                </select>
-              </div>
-            </div>
-
-            <div className="text-sm text-gray-600 text-center md:text-left">
-              Showing {displayedBrands.length} of {industryFilteredBrands.length} brands
-            </div>
-          </div>
-        </div>
+        {/* Filters */}
+        {isMobile ? (
+          <GlassCard className="p-4 flex items-center justify-between" data-snapshot-hide="true">
+            <div className="text-sm text-gray-600">Showing {displayedBrands.length} of {industryFilteredBrands.length} brands</div>
+            <button
+              onClick={() => setFiltersOpen(true)}
+              className="px-4 py-2 rounded-full bg-[#1770C0] text-white text-sm font-semibold"
+            >
+              Filters
+            </button>
+          </GlassCard>
+        ) : (
+          <GlassCard className="p-6 space-y-4" data-snapshot-hide="true">
+            {filtersPanel}
+            <div className="text-sm text-gray-600">Showing {displayedBrands.length} of {industryFilteredBrands.length} brands</div>
+          </GlassCard>
+        )}
 
         {/* Brand Cards Grid */}
         <div className="space-y-6">
@@ -621,13 +698,25 @@ export function PartnershipsTab({
                   avgLift: brand.avgLift,
                   industry: brand.industry
                 }}
+                onSelect={() => {
+                  setSelectedBrand({
+                    name: brand.name,
+                    totalPosts: brand.totalPosts,
+                    totalEMV: brand.totalEMV,
+                    totalLikes: brand.totalLikes,
+                    totalComments: brand.totalComments,
+                    avgLift: brand.avgLift,
+                    industry: brand.industry
+                  });
+                  setBrandDrawerOpen(true);
+                }}
               />
             ))}
           </div>
 
           {/* Load More / Pagination */}
           {displayedBrands.length < industryFilteredBrands.length && (
-            <div className="flex justify-center pt-4">
+            <div className="flex justify-center pt-4" data-snapshot-hide="true">
               <button
                 onClick={() => setCardsToShow(prev => prev + 20)}
                 className="px-8 py-3 bg-[#1770C0] hover:bg-[#1770C0]/80 text-white rounded-lg font-semibold transition-all"
@@ -639,7 +728,7 @@ export function PartnershipsTab({
 
           {/* Reset button if showing more than 20 */}
           {cardsToShow > 20 && (
-            <div className="flex justify-center">
+            <div className="flex justify-center" data-snapshot-hide="true">
               <button
                 onClick={() => setCardsToShow(20)}
                 className="px-8 py-3 bg-gray-200 hover:bg-gray-300 text-gray-900 rounded-lg font-semibold transition-all"
@@ -648,21 +737,68 @@ export function PartnershipsTab({
               </button>
             </div>
           )}
+
+          <DrawerPanel
+            open={filtersOpen}
+            onClose={() => setFiltersOpen(false)}
+            title="Filter & Search"
+            side="bottom"
+          >
+            {filtersPanel}
+          </DrawerPanel>
+
+          <DrawerPanel
+            open={brandDrawerOpen}
+            onClose={() => setBrandDrawerOpen(false)}
+            title={selectedBrand ? selectedBrand.name.replace(/_/g, ' ') : 'Brand'}
+            side={isMobile ? 'bottom' : 'right'}
+          >
+            {selectedBrand && (
+              <div className="space-y-3 text-sm">
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-500">Industry</span>
+                  <span className="font-semibold text-gray-900">{selectedBrand.industry}</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-500">Total Posts</span>
+                  <span className="font-semibold text-gray-900">{formatNumber(selectedBrand.totalPosts)}</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-500">Total Likes</span>
+                  <span className="font-semibold text-gray-900">{formatNumber(selectedBrand.totalLikes)}</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-500">Total Comments</span>
+                  <span className="font-semibold text-gray-900">{formatNumber(selectedBrand.totalComments)}</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-500">Total EMV</span>
+                  <span className="font-semibold text-green-600">{formatEMV(selectedBrand.totalEMV)}</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-500">Avg Lift</span>
+                  <span className={`font-semibold ${selectedBrand.avgLift > 0 ? 'text-green-600' : selectedBrand.avgLift < 0 ? 'text-red-600' : 'text-gray-600'}`}>
+                    {selectedBrand.avgLift > 0 ? '+' : ''}{selectedBrand.avgLift.toFixed(1)}%
+                  </span>
+                </div>
+              </div>
+            )}
+          </DrawerPanel>
         </div>
       </div>
     );
   }
 
   // Individual school view
-  const schoolData = schoolPartnershipData.find(s => s.school.name === selectedSchool);
+  const schoolData = schoolPartnershipData.find(s => s.school.name === sectionScope);
 
   if (!schoolData) {
     return (
       <div className="space-y-8">
-        <h3 className="text-2xl md:text-3xl font-bold text-white">{selectedSchool} - Brand Partnerships</h3>
-        <div className="bg-black/40 border border-white/10 rounded-xl p-8 text-center">
-          <p className="text-white/60">No partnership data available for this school</p>
-        </div>
+        <h3 className="text-2xl md:text-3xl font-bold text-gray-900">{sectionScope} - Brand Partnerships</h3>
+        <GlassCard className="p-8 text-center">
+          <p className="text-gray-600">No partnership data available for this school</p>
+        </GlassCard>
       </div>
     );
   }
@@ -679,68 +815,160 @@ export function PartnershipsTab({
   return (
     <div className="space-y-8">
       <div>
-        <h3 className="text-2xl md:text-3xl font-bold text-white">{selectedSchool} - Brand Partnerships</h3>
-        <p className="text-white/60 mt-2">Brands working with your school's athletes</p>
+        <h3 className="text-2xl md:text-3xl pf-section-header">
+          <span className="pf-header-primary">{sectionScope} </span>
+          <span className="pf-header-secondary">Brand Partnerships</span>
+        </h3>
+        <p className="text-gray-600 mt-2">Brands working with your school's athletes</p>
+      </div>
+
+      {/* Section Scope */}
+      <div className="flex flex-col gap-2">
+        <div className="flex flex-col md:flex-row md:items-center gap-3">
+          <label className="text-sm font-semibold text-gray-700" htmlFor="partnerships-scope-single">
+            Section view:
+          </label>
+          <select
+            id="partnerships-scope-single"
+            value={sectionScope}
+            onChange={(e) => setSectionScope(e.target.value)}
+            className="bg-white border border-gray-200 rounded-full px-4 py-2 text-gray-900 text-sm focus:border-[#1770C0] focus:outline-none w-full md:max-w-[320px]"
+            aria-label="Change school for this section only"
+          >
+            <option value="all">All Schools ({schoolsData.length})</option>
+            {schoolsData.map((school) => (
+              <option key={school.school._id} value={school.school.name}>
+                {school.school.name}
+              </option>
+            ))}
+          </select>
+          {sectionScope !== 'all' && (
+            <>
+              <span className="metric-badge">Override active</span>
+              <button
+                onClick={() => setSectionScope('all')}
+                className="text-xs font-semibold text-[#1770C0] hover:text-[#3B9FD9]"
+              >
+                Reset to All Schools
+              </button>
+            </>
+          )}
+        </div>
       </div>
 
       {/* School Stats */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
-          <div className="text-sm text-white/60 mb-2">Total Brands</div>
-          <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">{schoolData.sponsorPartners.length}</div>
-        </div>
-        <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
-          <div className="text-sm text-white/60 mb-2">Total Posts</div>
-          <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">{formatNumber(schoolData.overall.totalContents)}</div>
-        </div>
-        <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
-          <div className="text-sm text-white/60 mb-2">Total EMV</div>
-          <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-400">
+        <GlassCard className="p-6">
+          <div className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-2">Total Brands</div>
+          <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">{schoolData.sponsorPartners.length}</div>
+        </GlassCard>
+        <GlassCard className="p-6">
+          <div className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-2">Total Posts</div>
+          <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">{formatNumber(schoolData.overall.totalContents)}</div>
+        </GlassCard>
+        <GlassCard className="p-6">
+          <div className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-2">Total EMV</div>
+          <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-600">
             {formatEMV(schoolData.sponsorPartners.reduce((sum, p) => sum + (p.emv * p.totalContents), 0))}
           </div>
-        </div>
+        </GlassCard>
       </div>
 
       {/* Search */}
-      <div className="bg-black/40 border border-white/10 rounded-xl p-6">
+      <GlassCard className="p-6" data-snapshot-hide="true">
         <input
           type="text"
           placeholder="Search brands..."
           value={partnershipSearchQuery}
           onChange={(e) => setPartnershipSearchQuery(e.target.value)}
-          className="w-full bg-black/60 border border-white/20 rounded-lg px-4 py-2 text-white focus:border-[#3B9FD9] focus:outline-none"
+          className="w-full bg-white border border-gray-200 rounded-full px-4 py-2 text-gray-900 focus:border-[#3B9FD9] focus:outline-none"
         />
-      </div>
+      </GlassCard>
 
       {/* School Brands Table */}
-      <div className="bg-black/40 border border-white/10 rounded-xl overflow-hidden">
-        <div className="p-6 border-b border-white/10">
-          <h4 className="text-xl font-bold text-white">Brand Partners</h4>
-          <p className="text-sm text-white/60 mt-1">Showing {sortedPartners.length} brands</p>
+      <GlassCard className="overflow-hidden">
+        <div className="p-6 border-b border-gray-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <h4 className="text-xl font-bold text-gray-900">Brand Partners</h4>
+            <p className="text-sm text-gray-600 mt-1">Showing {sortedPartners.length} brands</p>
+          </div>
+          <div className="flex gap-2 md:hidden" data-snapshot-hide="true">
+            <GlassPill active={schoolTableView === 'cards'} onClick={() => setSchoolTableView('cards')}>Cards</GlassPill>
+            <GlassPill active={schoolTableView === 'table'} onClick={() => setSchoolTableView('table')}>Table</GlassPill>
+          </div>
         </div>
-        <div className="overflow-x-auto">
+
+        {/* Mobile Cards */}
+        <div className={`${schoolTableView === 'cards' ? 'block' : 'hidden'} md:hidden p-4 space-y-4`}>
+          {sortedPartners.map((partner, index) => {
+            const avgInteractionsPerPost = partner.avgLikes + partner.avgComments;
+            return (
+              <GlassCard
+                key={`${partner.sponsorPartner}-${index}`}
+                className="p-4"
+                onClick={() => {
+                  setSelectedSchoolPartner({
+                    name: partner.sponsorPartner,
+                    totalContents: partner.totalContents,
+                    avgLikes: partner.avgLikes,
+                    avgComments: partner.avgComments,
+                    engagementRate: partner.engagementRate,
+                    emv: partner.emv * partner.totalContents,
+                    engagementRateLift: partner.engagementRateLift
+                  });
+                  setSchoolPartnerDrawerOpen(true);
+                }}
+              >
+                <div className="flex items-center justify-between">
+                  <div className="font-semibold text-gray-900 capitalize">{partner.sponsorPartner.replace(/_/g, ' ')}</div>
+                  <div className="text-xs text-gray-500">#{index + 1}</div>
+                </div>
+                <div className="grid grid-cols-2 gap-3 mt-4 text-xs text-gray-600">
+                  <div>Posts</div>
+                  <div className="text-right text-gray-900 font-semibold">{formatNumber(partner.totalContents)}</div>
+                  <div>Avg Likes</div>
+                  <div className="text-right text-gray-900 font-semibold">{partner.avgLikes.toFixed(1)}</div>
+                  <div>Avg Comments</div>
+                  <div className="text-right text-gray-900 font-semibold">{partner.avgComments.toFixed(1)}</div>
+                  <div>Avg Interactions</div>
+                  <div className="text-right text-gray-900 font-semibold">{avgInteractionsPerPost.toFixed(1)}</div>
+                  <div>Engagement Rate</div>
+                  <div className="text-right text-gray-900 font-semibold">{(partner.engagementRate * 100).toFixed(2)}%</div>
+                  <div>EMV</div>
+                  <div className="text-right text-green-600 font-semibold">{formatEMV(partner.emv * partner.totalContents)}</div>
+                  <div>Engagement Lift</div>
+                  <div className={`text-right font-semibold ${partner.engagementRateLift > 0 ? 'text-green-600' : partner.engagementRateLift < 0 ? 'text-red-600' : 'text-gray-600'}`}>
+                    {partner.engagementRateLift > 0 ? '+' : ''}{partner.engagementRateLift.toFixed(1)}%
+                  </div>
+                </div>
+              </GlassCard>
+            );
+          })}
+        </div>
+
+        <div className={`${schoolTableView === 'table' ? 'block' : 'hidden'} md:block overflow-x-auto`}>
           <table className="w-full">
-            <thead className="bg-[#1770C0]/20 border-b border-white/10">
+            <thead className="bg-gray-50 border-b border-gray-200">
               <tr>
-                <th className="px-6 py-4 text-left text-sm font-semibold text-white/80">#</th>
-                <th className="px-6 py-4 text-left text-sm font-semibold text-white/80">Brand</th>
-                <th className="px-6 py-4 text-right text-sm font-semibold text-white/80">Posts</th>
-                <th className="px-6 py-4 text-right text-sm font-semibold text-white/80">Avg Likes</th>
-                <th className="px-6 py-4 text-right text-sm font-semibold text-white/80">Avg Comments</th>
-                <th className="px-6 py-4 text-right text-sm font-semibold text-white/80">
+                <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700">#</th>
+                <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700">Brand</th>
+                <th className="px-6 py-4 text-right text-xs font-semibold text-gray-700">Posts</th>
+                <th className="px-6 py-4 text-right text-xs font-semibold text-gray-700">Avg Likes</th>
+                <th className="px-6 py-4 text-right text-xs font-semibold text-gray-700">Avg Comments</th>
+                <th className="px-6 py-4 text-right text-xs font-semibold text-gray-700">
                   <div className="flex items-center justify-end gap-1.5">
                     <span>Avg Interactions Per Post</span>
                     <div className="relative group">
                       <Info className="w-3 h-3 cursor-help" />
-                      <div className="absolute bottom-full right-0 mb-2 px-3 py-1.5 bg-black/90 text-white text-xs rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+                      <div className="absolute bottom-full right-0 mb-2 px-3 py-1.5 bg-gray-900 text-white text-xs rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
                         Likes + Comments
                       </div>
                     </div>
                   </div>
                 </th>
-                <th className="px-6 py-4 text-right text-sm font-semibold text-white/80">Engagement Rate</th>
-                <th className="px-6 py-4 text-right text-sm font-semibold text-white/80">EMV</th>
-                <th className="px-6 py-4 text-right text-sm font-semibold text-white/80">Engagement Lift</th>
+                <th className="px-6 py-4 text-right text-xs font-semibold text-gray-700">Engagement Rate</th>
+                <th className="px-6 py-4 text-right text-xs font-semibold text-gray-700">EMV</th>
+                <th className="px-6 py-4 text-right text-xs font-semibold text-gray-700">Engagement Lift</th>
               </tr>
             </thead>
             <tbody>
@@ -749,15 +977,27 @@ export function PartnershipsTab({
                 return (
                   <tr
                     key={partner.sponsorPartner}
-                    className="border-b border-white/5 hover:bg-white/5 transition-colors"
+                    className="border-b border-gray-100 hover:bg-blue-50/50 transition-colors cursor-pointer"
+                    onClick={() => {
+                      setSelectedSchoolPartner({
+                        name: partner.sponsorPartner,
+                        totalContents: partner.totalContents,
+                        avgLikes: partner.avgLikes,
+                        avgComments: partner.avgComments,
+                        engagementRate: partner.engagementRate,
+                        emv: partner.emv * partner.totalContents,
+                        engagementRateLift: partner.engagementRateLift
+                      });
+                      setSchoolPartnerDrawerOpen(true);
+                    }}
                   >
-                    <td className="px-6 py-4 text-white/60 font-mono text-sm">
+                    <td className="px-6 py-4 text-gray-500 font-mono text-sm">
                       {index + 1}
                     </td>
-                    <td className="px-6 py-4 text-white font-semibold capitalize">
+                    <td className="px-6 py-4 text-gray-900 font-semibold capitalize">
                       {partner.sponsorPartner.replace(/_/g, ' ')}
                     </td>
-                    <td className="px-6 py-4 text-right text-white/80 font-mono">
+                    <td className="px-6 py-4 text-right text-gray-700 font-mono">
                       {formatNumber(partner.totalContents)}
                     </td>
                     <td className="px-6 py-4 text-right text-[#3B9FD9] font-medium">
@@ -766,18 +1006,18 @@ export function PartnershipsTab({
                     <td className="px-6 py-4 text-right text-[#3B9FD9] font-medium">
                       {partner.avgComments.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 })}
                     </td>
-                    <td className="px-6 py-4 text-right text-white font-bold text-base">
+                    <td className="px-6 py-4 text-right text-gray-900 font-bold text-base">
                       {avgInteractionsPerPost.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 })}
                     </td>
-                    <td className="px-6 py-4 text-right text-white/80 font-medium">
+                    <td className="px-6 py-4 text-right text-gray-700 font-medium">
                       {(partner.engagementRate * 100).toFixed(2)}%
                     </td>
-                    <td className="px-6 py-4 text-right text-green-400 font-bold text-base">
+                    <td className="px-6 py-4 text-right text-green-600 font-bold text-base">
                       {formatEMV(partner.emv * partner.totalContents)}
                     </td>
                     <td className="px-6 py-4 text-right">
                       <div className={`font-semibold ${
-                        partner.engagementRateLift > 0 ? 'text-green-400' : partner.engagementRateLift < 0 ? 'text-red-400' : 'text-white/60'
+                        partner.engagementRateLift > 0 ? 'text-green-600' : partner.engagementRateLift < 0 ? 'text-red-600' : 'text-gray-600'
                       }`}>
                         {partner.engagementRateLift > 0 ? '+' : ''}{partner.engagementRateLift.toFixed(1)}%
                       </div>
@@ -788,7 +1028,45 @@ export function PartnershipsTab({
             </tbody>
           </table>
         </div>
-      </div>
+      </GlassCard>
+
+      <DrawerPanel
+        open={schoolPartnerDrawerOpen}
+        onClose={() => setSchoolPartnerDrawerOpen(false)}
+        title={selectedSchoolPartner ? selectedSchoolPartner.name.replace(/_/g, ' ') : 'Brand Partner'}
+        side={isMobile ? 'bottom' : 'right'}
+      >
+        {selectedSchoolPartner && (
+          <div className="space-y-3 text-sm">
+            <div className="flex items-center justify-between">
+              <span className="text-gray-500">Posts</span>
+              <span className="font-semibold text-gray-900">{formatNumber(selectedSchoolPartner.totalContents)}</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-500">Avg Likes</span>
+              <span className="font-semibold text-gray-900">{selectedSchoolPartner.avgLikes.toFixed(1)}</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-500">Avg Comments</span>
+              <span className="font-semibold text-gray-900">{selectedSchoolPartner.avgComments.toFixed(1)}</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-500">Engagement Rate</span>
+              <span className="font-semibold text-gray-900">{(selectedSchoolPartner.engagementRate * 100).toFixed(2)}%</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-500">EMV</span>
+              <span className="font-semibold text-green-600">{formatEMV(selectedSchoolPartner.emv)}</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-500">Engagement Lift</span>
+              <span className={`font-semibold ${selectedSchoolPartner.engagementRateLift > 0 ? 'text-green-600' : selectedSchoolPartner.engagementRateLift < 0 ? 'text-red-600' : 'text-gray-600'}`}>
+                {selectedSchoolPartner.engagementRateLift > 0 ? '+' : ''}{selectedSchoolPartner.engagementRateLift.toFixed(1)}%
+              </span>
+            </div>
+          </div>
+        )}
+      </DrawerPanel>
     </div>
   );
 }

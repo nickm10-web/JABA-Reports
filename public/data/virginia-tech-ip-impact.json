@@ -1,68 +1,68 @@
 {
-  "followers": 1787521,
+  "followers": 1872147,
   "school": {
     "_id": "697c00f4a3ae1605b1d014e8",
     "name": "Virginia Tech"
   },
   "overall": {
-    "totalContents": 3735,
-    "totalLikes": 2536869,
-    "totalComments": 139048,
-    "engagementRate": 1.496998916376367,
-    "emv": 64642.18
+    "totalContents": 3946,
+    "totalLikes": 2646755,
+    "totalComments": 145659,
+    "engagementRate": 1.491557019828037,
+    "emv": 67501
   },
   "counts": {
     "hasOrganizationInCaption": 600,
     "isOrganizationCollaboration": 4,
-    "hasOrganizationLogo": 1715,
-    "withIp": 1856
+    "hasOrganizationLogo": 1924,
+    "withIp": 2033
   },
   "orgInCaption": {
     "yes": {
       "contents": 600,
-      "likes": 983.8666666666667,
-      "comments": 35.748333333333335,
-      "engagementRate": 0.000570407284725606,
-      "emv": 23.25
+      "likes": 987.285,
+      "comments": 35.778333333333336,
+      "engagementRate": 0.0005464652793468319,
+      "emv": 23.32
     },
     "no": {
-      "contents": 3135,
-      "likes": 620.9087719298245,
-      "comments": 37.51164274322169,
-      "engagementRate": 0.00036834275774832645
+      "contents": 3346,
+      "likes": 613.9820681410639,
+      "comments": 37.11655708308428,
+      "engagementRate": 0.00034778178488342434
     },
-    "avgLift": 54.857743969909144
+    "avgLift": 57.12878106310421
   },
   "collaboration": {
     "yes": {
       "contents": 4,
       "likes": 934.25,
       "comments": 25.75,
-      "engagementRate": 0.0005370566275864731,
+      "engagementRate": 0.0005127802464229571,
       "emv": 21.26
     },
     "no": {
-      "contents": 3731,
-      "likes": 678.9418386491557,
-      "comments": 37.24068614312517,
-      "engagementRate": 0.00040065684531386247
+      "contents": 3942,
+      "likes": 670.4764079147641,
+      "comments": 36.924403855910704,
+      "engagementRate": 0.0003778553776870485
     },
-    "avgLift": 34.044041395513695
+    "avgLift": 35.70807158067169
   },
   "logo": {
     "yes": {
-      "contents": 1715,
-      "likes": 895.9475218658893,
-      "comments": 40.74402332361516,
-      "engagementRate": 0.0005240170857794143,
-      "emv": 21.99
+      "contents": 1924,
+      "likes": 888.1538461538462,
+      "comments": 40.15488565488565,
+      "engagementRate": 0.0004958524794306921,
+      "emv": 21.78
     },
     "no": {
-      "contents": 2020,
-      "likes": 495.20742574257423,
-      "comments": 34.24356435643564,
-      "engagementRate": 0.00029619287834884735
+      "contents": 2022,
+      "likes": 463.8709198813056,
+      "comments": 33.82838773491593,
+      "engagementRate": 0.00026584413917081376
     },
-    "avgLift": 76.91751695739363
+    "avgLift": 86.5199966330987
   }
 }
