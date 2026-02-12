@@ -896,14 +896,21 @@ function ContentTab({ teamContent, athletePosts }: { teamContent: UCLATeamConten
                 ))}
               </div>
               {contentScope === 'athlete' && (
-                <button
-                  onClick={() => setSponsoredOnly(!sponsoredOnly)}
-                  className={`px-3 py-1.5 rounded-full text-xs font-semibold border ${
-                    sponsoredOnly ? 'bg-[#FFD100]/20 border-[#FFD100]/60 text-[#0F1D2E]' : 'bg-white border-[#E1E7F0] text-[#1E2A3B]'
-                  }`}
-                >
-                  Sponsored only
-                </button>
+                <label className="flex items-center gap-2 cursor-pointer select-none">
+                  <span className="text-xs text-[#5B6B82]">Sponsored only</span>
+                  <button
+                    role="switch"
+                    aria-checked={sponsoredOnly}
+                    onClick={() => setSponsoredOnly(!sponsoredOnly)}
+                    className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
+                      sponsoredOnly ? 'bg-[#2774AE]' : 'bg-[#D1D5DB]'
+                    }`}
+                  >
+                    <span className={`inline-block h-3.5 w-3.5 rounded-full bg-white shadow transition-transform ${
+                      sponsoredOnly ? 'translate-x-[18px]' : 'translate-x-[3px]'
+                    }`} />
+                  </button>
+                </label>
               )}
               <div className="flex items-center gap-2">
                 <span className="text-xs text-[#5B6B82]">Metric</span>
