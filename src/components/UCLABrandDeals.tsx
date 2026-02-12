@@ -125,6 +125,8 @@ interface UCLASponsoredPost {
   isSponsored?: boolean;
 }
 
+type UCLAAthletePost = UCLASponsoredPost;
+
 interface BenchmarkSchool {
   school: string;
   shortName: string;
@@ -226,6 +228,7 @@ export function UCLABrandDeals({ onBack }: { onBack?: () => void }) {
   const [roster, setRoster] = useState<UCLARoster | null>(null);
   const [teamContent, setTeamContent] = useState<UCLATeamContent | null>(null);
   const [sponsoredPosts, setSponsoredPosts] = useState<UCLASponsoredPost[]>([]);
+  const [athletePosts, setAthletePosts] = useState<UCLAAthletePost[]>([]);
   const [benchmarks, setBenchmarks] = useState<BenchmarksData | null>(null);
   const [selectedAthlete, setSelectedAthlete] = useState<UCLAAthlete | null>(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -241,21 +244,33 @@ export function UCLABrandDeals({ onBack }: { onBack?: () => void }) {
   useEffect(() => {
     const load = async () => {
       try {
-        const [ipRes, rosterRes, teamRes, topRes, sponsoredRes] = await Promise.all([
-          fetch('/data/ucla-ip-impact.json'),
-          fetch('/data/ucla-roster.json'),
-          fetch('/data/ucla-team-content.json'),
-          fetch('/data/ucla-top-athletes.json'),
-          fetch('/data/ucla-sponsored-posts.json')
+        const fetchJson = async <T,>(path: string): Promise<T | null> => {
+          const res = await fetch(path);
+          if (!res.ok) return null;
+          return res.json();
+        };
+
+        const [ipData, rosterData, teamData, sponsoredData, athleteData] = await Promise.allSettled([
+          fetchJson<UCLAIPImpact>('/data/ucla-ip-impact.json'),
+          fetchJson<UCLARoster>('/data/ucla-roster.json'),
+          fetchJson<UCLATeamContent>('/data/ucla-team-content.json'),
+          fetchJson<UCLASponsoredPost[]>('/data/ucla-sponsored-posts.json'),
+          fetchJson<UCLAAthletePost[]>('/data/ucla-all-posts.json')
         ]);
-        const [ipData, rosterData, teamData, , sponsoredData] = await Promise.all([
-          ipRes.json(), rosterRes.json(), teamRes.json(), topRes.json(),
-          sponsoredRes.ok ? sponsoredRes.json() : []
-        ]);
-        setIpImpact(ipData);
-        setRoster(rosterData);
-        setTeamContent(teamData);
-        setSponsoredPosts(Array.isArray(sponsoredData) ? sponsoredData : []);
+
+        if (ipData.status === 'fulfilled' && ipData.value) setIpImpact(ipData.value);
+        if (rosterData.status === 'fulfilled' && rosterData.value) setRoster(rosterData.value);
+        if (teamData.status === 'fulfilled' && teamData.value) setTeamContent(teamData.value);
+        if (sponsoredData.status === 'fulfilled' && Array.isArray(sponsoredData.value)) {
+          setSponsoredPosts(sponsoredData.value);
+        } else {
+          setSponsoredPosts([]);
+        }
+        if (athleteData.status === 'fulfilled' && Array.isArray(athleteData.value)) {
+          setAthletePosts(athleteData.value);
+        } else {
+          setAthletePosts([]);
+        }
       } catch (err) {
         console.error('Failed to load UCLA data', err);
       } finally {
@@ -275,7 +290,7 @@ export function UCLABrandDeals({ onBack }: { onBack?: () => void }) {
   const totalLikes = ipImpact?.overall.totalLikes ?? 0;
   const totalComments = ipImpact?.overall.totalComments ?? 0;
   const totalEmv = estimateEmv(totalLikes, totalComments);
-  const athletePosts = ipImpact?.overall.totalContents ?? 0;
+  const athletePostsCount = ipImpact?.overall.totalContents ?? 0;
   const teamFollowers = teamContent?.totalFollowers ?? null;
 
   if (loading) {
@@ -333,7 +348,7 @@ export function UCLABrandDeals({ onBack }: { onBack?: () => void }) {
         <TabTransition tabKey={activeTab}>
           {activeTab === 'overview' && (
             <OverviewTab
-              athletePosts={athletePosts}
+              athletePosts={athletePostsCount}
               totalLikes={totalLikes}
               totalEmv={totalEmv}
               teamFollowers={teamFollowers}
@@ -355,6 +370,7 @@ export function UCLABrandDeals({ onBack }: { onBack?: () => void }) {
           {activeTab === 'content' && teamContent && (
             <ContentTab
               teamContent={teamContent}
+              athletePosts={athletePosts}
             />
           )}
           {activeTab === 'sponsored' && (
@@ -790,21 +806,58 @@ function TeamsTab({ teamContent }: { teamContent: UCLATeamContent }) {
   );
 }
 
-function ContentTab({ teamContent }: { teamContent: UCLATeamContent }) {
-  const [teamFilter, setTeamFilter] = useState('All');
-  const [sportFilter, setSportFilter] = useState('All');
+function ContentTab({ teamContent, athletePosts }: { teamContent: UCLATeamContent; athletePosts: UCLAAthletePost[] }) {
+  const [contentScope, setContentScope] = useState<'team' | 'athlete'>('team');
+  const [teamFilter] = useState('All');
+  const [sportFilter] = useState('All');
   const [mediaType, setMediaType] = useState('N/A');
   const [sortKey, setSortKey] = useState<'likes' | 'engagement' | 'comments'>('likes');
+  const [sponsoredOnly, setSponsoredOnly] = useState(false);
 
-  const teamOptions = ['All', ...new Set(teamContent.topPosts.map(p => p.team))];
-  const sportOptions = ['All', ...new Set(teamContent.teamAccounts.map(t => t.sport))];
+  const normalizedAthletePosts = useMemo(() => {
+    return athletePosts.map(p => ({
+      id: p._id,
+      title: p.athlete?.name || 'Unknown athlete',
+      sport: p.athlete?.sport || 'Unknown',
+      caption: p.caption,
+      likes: p.metrics?.likes || 0,
+      comments: p.metrics?.comments || 0,
+      engagementRate: p.metrics?.engagementRate || 0,
+      url: p.url,
+      permalink: p.permalink,
+      publishedAt: typeof p.publishedAt === 'string' ? p.publishedAt : p.publishedAt?.$date,
+      isSponsored: p.isSponsored
+    }));
+  }, [athletePosts]);
+
+  const teamPosts = useMemo(() => {
+    return teamContent.topPosts.map(p => ({
+      id: `${p.permalink || p.team}-${p.publishedAt || ''}`,
+      teamKey: p.team,
+      title: formatTeamName(p.team),
+      sport: p.team,
+      caption: p.caption,
+      likes: p.likes,
+      comments: p.comments,
+      engagementRate: p.engagementRate || 0,
+      url: p.url,
+      permalink: p.permalink,
+      publishedAt: p.publishedAt
+    }));
+  }, [teamContent.topPosts]);
 
   const filteredPosts = useMemo(() => {
-    let list = [...teamContent.topPosts];
-    if (teamFilter !== 'All') list = list.filter(p => p.team === teamFilter);
-    if (sportFilter !== 'All') list = list.filter(p => p.team === sportFilter);
+    if (contentScope === 'team') {
+      let list = [...teamPosts];
+      if (teamFilter !== 'All') list = list.filter(p => p.teamKey === teamFilter);
+      if (sportFilter !== 'All') list = list.filter(p => p.sport === sportFilter);
+      return list;
+    }
+    let list = [...normalizedAthletePosts];
+    if (sportFilter !== 'All') list = list.filter(p => p.sport === sportFilter);
+    if (sponsoredOnly) list = list.filter(p => p.isSponsored);
     return list;
-  }, [teamContent.topPosts, teamFilter, sportFilter]);
+  }, [contentScope, teamPosts, normalizedAthletePosts, teamFilter, sportFilter, sponsoredOnly]);
 
   const sortedByMetric = [...filteredPosts].sort((a, b) => {
     if (sortKey === 'likes') return b.likes - a.likes;
@@ -816,56 +869,84 @@ function ContentTab({ teamContent }: { teamContent: UCLATeamContent }) {
 
   return (
     <div className="space-y-8">
-      <GlassPanel className="p-6">
-        <div className="flex flex-col md:flex-row md:items-center gap-4 justify-between">
-          <div>
-            <h2 style={headerStyle} className="text-lg font-bold uppercase tracking-tight text-[#0F1D2E]">UCLA’s Highest Performing Content</h2>
-            <p className="text-sm text-[#5B6B82]">Top posts across UCLA team accounts</p>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            <select value={teamFilter} onChange={(e) => setTeamFilter(e.target.value)} className="bg-white border border-[#E1E7F0] rounded-full px-3 py-2 text-sm text-[#1E2A3B]">
-              {teamOptions.map(team => <option key={team} value={team}>{formatTeamName(team)}</option>)}
-            </select>
-            <select value={sportFilter} onChange={(e) => setSportFilter(e.target.value)} className="bg-white border border-[#E1E7F0] rounded-full px-3 py-2 text-sm text-[#1E2A3B]">
-              {sportOptions.map(sport => <option key={sport} value={sport}>{formatTeamName(sport)}</option>)}
-            </select>
-            <div className="relative">
-              <select value={mediaType} onChange={(e) => setMediaType(e.target.value)} className="bg-white border border-[#E1E7F0] rounded-full px-3 py-2 text-sm text-[#9AA7BC]" disabled>
-                <option value="N/A">MediaType (N/A)</option>
-              </select>
+      <GlassPanel className="p-6 bg-[#F3F6FB]">
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
+            <div>
+              <h2 style={headerStyle} className="text-lg font-bold uppercase tracking-tight text-[#0F1D2E]">UCLA’s Highest Performing Content</h2>
+              <p className="text-sm text-[#5B6B82]">Top posts across UCLA team + athlete accounts</p>
             </div>
-            <div className="flex items-center gap-2">
-              {[
-                { key: 'likes', label: 'Likes' },
-                { key: 'engagement', label: 'Engagement Rate' },
-                { key: 'comments', label: 'Comments' }
-              ].map(chip => (
+            <div className="flex flex-wrap items-center gap-2">
+              <div className="flex items-center rounded-full border border-[#E1E7F0] bg-white p-1 text-xs font-semibold">
+                {[
+                  { key: 'team', label: 'Team' },
+                  { key: 'athlete', label: 'Athlete' }
+                ].map(item => (
+                  <button
+                    key={item.key}
+                    onClick={() => setContentScope(item.key as typeof contentScope)}
+                    className={`px-3 py-1 rounded-full transition ${
+                      (item.key === 'team' && contentScope === 'team') || (item.key === 'athlete' && contentScope === 'athlete')
+                        ? 'bg-[#2774AE]/10 text-[#2774AE] border border-[#2774AE]/30'
+                        : 'text-[#1E2A3B]'
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                ))}
+              </div>
+              {contentScope === 'athlete' && (
                 <button
-                  key={chip.key}
-                  onClick={() => setSortKey(chip.key as typeof sortKey)}
-                  className={`px-3 py-1.5 rounded-full text-xs font-semibold border ${sortKey === chip.key ? 'bg-[#2774AE]/10 border-[#2774AE]/40 text-[#2774AE]' : 'bg-white border-[#E1E7F0] text-[#1E2A3B]'}`}
+                  onClick={() => setSponsoredOnly(!sponsoredOnly)}
+                  className={`px-3 py-1.5 rounded-full text-xs font-semibold border ${
+                    sponsoredOnly ? 'bg-[#FFD100]/20 border-[#FFD100]/60 text-[#0F1D2E]' : 'bg-white border-[#E1E7F0] text-[#1E2A3B]'
+                  }`}
                 >
-                  {chip.label}
+                  Sponsored only
                 </button>
-              ))}
+              )}
+              <div className="flex items-center gap-2">
+                <span className="text-xs text-[#5B6B82]">Metric</span>
+                <select
+                  value={sortKey}
+                  onChange={(e) => setSortKey(e.target.value as typeof sortKey)}
+                  className="bg-white border border-[#E1E7F0] rounded-full px-3 py-2 text-sm text-[#1E2A3B] h-9"
+                >
+                  <option value="likes">Likes</option>
+                  <option value="engagement">Engagement Rate</option>
+                  <option value="comments">Comments</option>
+                </select>
+              </div>
             </div>
+          </div>
+
+          <div className="flex flex-col md:flex-row md:items-center gap-3">
+            {mediaType !== 'N/A' && (
+              <select
+                value={mediaType}
+                onChange={(e) => setMediaType(e.target.value)}
+                className="bg-white border border-[#E1E7F0] rounded-full px-3 py-2 text-sm text-[#1E2A3B] h-9 min-w-[160px]"
+              >
+                <option value="All">All Media</option>
+              </select>
+            )}
           </div>
         </div>
       </GlassPanel>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {top3.map((post, idx) => (
-          <GlassPanel key={`${post.permalink}-${idx}`} className="p-5 hover:border-[#FFD100]/60 transition-colors">
+          <GlassPanel key={`${post.id}-${idx}`} className="p-5 hover:border-[#FFD100]/60 transition-colors">
             <div className="w-full h-48 rounded-xl bg-[#F0F4FA] overflow-hidden">
               {post.url ? (
-                <img src={post.url} alt={post.team} className="w-full h-full object-cover" />
+                <img src={post.url} alt={post.title} className="w-full h-full object-cover" />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-xs text-[#9AA7BC]">N/A</div>
               )}
             </div>
             <div className="mt-4 flex items-center justify-between text-xs text-[#7A8AA3]">
-              <span className="px-2 py-0.5 rounded-full bg-[#F3F6FB] border border-[#E1E7F0]">{formatTeamName(post.team)}</span>
-              <span>{formatDate(post.publishedAt)}</span>
+              <span className="px-2 py-0.5 rounded-full bg-[#F3F6FB] border border-[#E1E7F0]">{post.title}</span>
+              <span>{formatDate(post.publishedAt as string)}</span>
             </div>
             <p className="text-sm font-semibold text-[#0F1D2E] mt-2">{post.caption ? post.caption.slice(0, 90) : 'No caption'}</p>
             <div className="grid grid-cols-3 gap-2 text-xs text-[#5B6B82] mt-3">
@@ -901,20 +982,20 @@ function ContentTab({ teamContent }: { teamContent: UCLATeamContent }) {
             </thead>
             <tbody>
               {top10.map((post, idx) => (
-                <tr key={`${post.permalink}-${idx}`} className="border-t border-[#E1E7F0] hover:bg-[#F3F6FB]">
+                <tr key={`${post.id}-${idx}`} className="border-t border-[#E1E7F0] hover:bg-[#F3F6FB]">
                   <td className="py-3 px-3 text-sm text-[#5B6B82]">#{idx + 1}</td>
                   <td className="py-3 px-3 text-sm text-[#0F1D2E]">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-lg bg-[#F0F4FA] overflow-hidden">
-                        {post.url ? <img src={post.url} alt={post.team} className="w-full h-full object-cover" /> : null}
+                        {post.url ? <img src={post.url} alt={post.title} className="w-full h-full object-cover" /> : null}
                       </div>
                       <span className="line-clamp-1">{post.caption ? post.caption.slice(0, 60) : 'No caption'}</span>
                     </div>
                   </td>
-                  <td className="py-3 px-3 text-sm text-[#5B6B82]">{formatTeamName(post.team)}</td>
+                  <td className="py-3 px-3 text-sm text-[#5B6B82]">{formatTeamName(post.sport)}</td>
                   <td className="py-3 px-3 text-sm text-right">{formatNumber(post.likes)}</td>
                   <td className="py-3 px-3 text-sm text-right">{formatPercent((post.engagementRate || 0) * 100)}</td>
-                  <td className="py-3 px-3 text-sm text-right">{formatDate(post.publishedAt)}</td>
+                  <td className="py-3 px-3 text-sm text-right">{formatDate(post.publishedAt as string)}</td>
                   <td className="py-3 px-3 text-right">
                     {post.permalink && (
                       <a href={post.permalink} target="_blank" rel="noreferrer" className="text-[#2774AE]">
@@ -963,6 +1044,8 @@ function SponsoredTab({ posts }: { posts: UCLASponsoredPost[] }) {
   const sports = ['All', ...new Set(normalizedPosts.map(p => p.athlete?.sport).filter(Boolean) as string[])];
 
   const filtered = normalizedPosts.filter(p => {
+    const sponsor = (p.sponsorPartner || '').toLowerCase();
+    if (sponsor.includes('unrivaled') || sponsor.includes('uniravaled')) return false;
     if (sportFilter !== 'All' && p.athlete?.sport !== sportFilter) return false;
     if (!search) return true;
     const q = search.toLowerCase();
