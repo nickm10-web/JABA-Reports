@@ -5,6 +5,7 @@ import { BaylorBrandDeals } from './components/BaylorBrandDeals';
 import { OhioStateReportHub } from './components/OhioStateReportHub';
 import { KentuckyReportHub } from './components/KentuckyReportHub';
 import { PlayflyReportHub } from './components/PlayflyReportHub';
+import { UCLABrandDeals } from './components/UCLABrandDeals';
 
 // Wrapper components that provide navigation
 // Only show back button if user navigated from within the app
@@ -32,6 +33,10 @@ function PlayflyRoute() {
   return <PlayflyReportHub />;
 }
 
+function UCLARoute() {
+  return <UCLABrandDeals />;
+}
+
 // Handle ?playfly query param - show Playfly hub without back button
 function HomeRoute() {
   const [searchParams] = useSearchParams();
@@ -51,6 +56,7 @@ function App() {
         <Route path="/ohio-state" element={<OhioStateRoute />} />
         <Route path="/kentucky" element={<KentuckyRoute />} />
         <Route path="/playfly" element={<PlayflyRoute />} />
+        <Route path="/ucla" element={<UCLARoute />} />
         {/* Redirect any unknown routes to home */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

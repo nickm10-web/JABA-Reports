@@ -1,0 +1,68 @@
+{
+  "followers": 7806,
+  "school": {
+    "_id": "68e47e6537aba442a4462951",
+    "name": "University of California, Los Angeles"
+  },
+  "overall": {
+    "totalContents": 7077,
+    "totalLikes": 12326245,
+    "totalComments": 341183,
+    "engagementRate": 22.929245,
+    "emv": 154657.36
+  },
+  "counts": {
+    "hasOrganizationInCaption": 5,
+    "isOrganizationCollaboration": 243,
+    "hasOrganizationLogo": 622,
+    "withIp": 811
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 5,
+      "likes": 1826.8,
+      "comments": 50.2,
+      "engagementRate": 0.21795158413397436,
+      "emv": 114.54
+    },
+    "no": {
+      "contents": 7072,
+      "likes": 1741.672935520362,
+      "comments": 48.20871040723982,
+      "engagementRate": 0.229300471034868
+    },
+    "avgLift": -4.9494
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 243,
+      "likes": 3740.625514403292,
+      "comments": 40.49794238683128,
+      "engagementRate": 0.5661035596163871,
+      "emv": 10872.46
+    },
+    "no": {
+      "contents": 6834,
+      "likes": 1670.6574480538484,
+      "comments": 48.484342990927715,
+      "engagementRate": 0.21731628974136266
+    },
+    "avgLift": 160.4975
+  },
+  "logo": {
+    "yes": {
+      "contents": 622,
+      "likes": 2664.9887459807073,
+      "comments": 59.049839228295816,
+      "engagementRate": 0.24378732373065964,
+      "emv": 20480.08
+    },
+    "no": {
+      "contents": 6455,
+      "likes": 1652.7687064291247,
+      "comments": 47.16560805577072,
+      "engagementRate": 0.22789573566518728
+    },
+    "avgLift": 6.9732
+  }
+}

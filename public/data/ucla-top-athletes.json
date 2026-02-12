@@ -1,0 +1,179 @@
+{
+  "school": {
+    "_id": "68e47e6537aba442a4462951",
+    "name": "University of California, Los Angeles"
+  },
+  "collaboration": {
+    "avgEmv": 10872.46,
+    "avgLift": 1.605,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Sergi Solans Ormo",
+          "sport": "MENS_SOCCER"
+        },
+        "posts": 8,
+        "emv": 94.59,
+        "engagementRate": 0.27441,
+        "lift": -0.3421
+      },
+      {
+        "athlete": {
+          "name": "Trent Perry",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 7,
+        "emv": 169.64,
+        "engagementRate": 0.1090263,
+        "lift": -0.559
+      },
+      {
+        "athlete": {
+          "name": "Roch Cholowsky",
+          "sport": "BASEBALL"
+        },
+        "posts": 5,
+        "emv": 361.05,
+        "engagementRate": 0.3713914,
+        "lift": 0.2426
+      },
+      {
+        "athlete": {
+          "name": "Mika WebsteLongin",
+          "sport": "WOMENS_GYMNASTICS"
+        },
+        "posts": 5,
+        "emv": 353.01,
+        "engagementRate": 1.5654186,
+        "lift": 4.245
+      },
+      {
+        "athlete": {
+          "name": "Anthony Frias II",
+          "sport": "FOOTBALL"
+        },
+        "posts": 5,
+        "emv": 189.95,
+        "engagementRate": 0.9181662,
+        "lift": 0.7889
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 20480.08,
+    "avgLift": 0.0697,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Cash Peterman",
+          "sport": "FOOTBALL"
+        },
+        "posts": 30,
+        "emv": 4308.8,
+        "engagementRate": 0.0217188,
+        "lift": -0.028
+      },
+      {
+        "athlete": {
+          "name": "Zeke Johnson",
+          "sport": "FOOTBALL"
+        },
+        "posts": 15,
+        "emv": 41.71,
+        "engagementRate": 0.0789661,
+        "lift": -0.3184
+      },
+      {
+        "athlete": {
+          "name": "Lola Schumacher",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 11,
+        "emv": 631.49,
+        "engagementRate": 0.2353024,
+        "lift": 0.0076
+      },
+      {
+        "athlete": {
+          "name": "Sergi Solans Ormo",
+          "sport": "MENS_SOCCER"
+        },
+        "posts": 11,
+        "emv": 113.34,
+        "engagementRate": 0.2517522,
+        "lift": -0.4491
+      },
+      {
+        "athlete": {
+          "name": "Scooter Jackson",
+          "sport": "FOOTBALL"
+        },
+        "posts": 10,
+        "emv": 175.83,
+        "engagementRate": 0.0694521,
+        "lift": -0.0468
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 114.54,
+    "avgLift": -0.0495,
+    "top5Athletes": []
+  },
+  "partnership": {
+    "avgEmv": 10519.91,
+    "avgLift": -0.5747,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Jordan Chiles",
+          "sport": "WOMENS_GYMNASTICS"
+        },
+        "posts": 13,
+        "emv": 5707.94,
+        "engagementRate": 0.0225415,
+        "lift": -0.504
+      },
+      {
+        "athlete": {
+          "name": "Sophia Hartwell",
+          "sport": "WOMENS_TRACK_AND_FIELD"
+        },
+        "posts": 10,
+        "emv": 34.43,
+        "engagementRate": 0.0057244,
+        "lift": 5.6402
+      },
+      {
+        "athlete": {
+          "name": "Tessa Van Winkle",
+          "sport": "WOMENS_BEACH_VOLLEYBALL"
+        },
+        "posts": 10,
+        "emv": 16.72,
+        "engagementRate": 0.0034567,
+        "lift": -0.703
+      },
+      {
+        "athlete": {
+          "name": "Gabriela Jaquez",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 8,
+        "emv": 717.27,
+        "engagementRate": 0.1666202,
+        "lift": 1.2983
+      },
+      {
+        "athlete": {
+          "name": "Tamaal Myers",
+          "sport": "MENS_TRACK_AND_FIELD"
+        },
+        "posts": 8,
+        "emv": 6.74,
+        "engagementRate": 0.0211097,
+        "lift": -0.954
+      }
+    ]
+  }
+}
