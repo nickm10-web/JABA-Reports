@@ -262,8 +262,6 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
   const [withVsWithoutScope, setWithVsWithoutScope] = useState<string>('all');
   const [schoolsData, setSchoolsData] = useState<SchoolIPData[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [contentData, setContentData] = useState<any[]>([]);
-  const [isContentLoading, setIsContentLoading] = useState(false);
   const firstSectionRef = useRef<HTMLDivElement | null>(null);
 
   // Brand partnership data
@@ -292,7 +290,6 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
     async function loadData() {
       try {
         setIsLoading(true);
-        setIsContentLoading(true);
 
         // Load school IP data
         const schoolPromises = Object.values(SCHOOL_FILE_MAP).map(async (fileName) => {
@@ -318,23 +315,11 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
           return response.json() as Promise<SchoolAthleteData>;
         });
 
-        // Load per-school content files in parallel
-        const contentPromise = Promise.all(
-          Object.values(SCHOOL_FILE_MAP).map(async (fileName) => {
-            try {
-              const res = await fetch(`/data/${fileName}-contents.json`);
-              if (!res.ok) return [];
-              return res.json();
-            } catch { return []; }
-          })
-        ).then(arrays => arrays.flat());
-
-        const [schoolResults, brandResult, partnershipResults, athleteResults, contentResults] = await Promise.all([
+        const [schoolResults, brandResult, partnershipResults, athleteResults] = await Promise.all([
           Promise.all(schoolPromises),
           brandPromise,
           partnershipDataPromise,
           Promise.all(athletePromises),
-          contentPromise
         ]);
 
         const validSchools = schoolResults.filter((school): school is SchoolIPData => school !== null);
@@ -349,19 +334,11 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
 
         const validAthletes = athleteResults.filter((a): a is SchoolAthleteData => a !== null);
         setAthleteData(validAthletes);
-
-        if (Array.isArray(contentResults)) {
-          setContentData(contentResults);
-        } else {
-          setContentData([]);
-        }
       } catch (error) {
         console.error('Error loading data:', error);
         setSchoolsData([]);
-        setContentData([]);
       } finally {
         setIsLoading(false);
-        setIsContentLoading(false);
       }
     }
 
@@ -1954,11 +1931,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
             )}
 
             {activeTab === 'content' && (
-              <ContentTab
-                contentData={contentData}
-                isLoading={isContentLoading}
-                allowedSchools={Object.keys(SCHOOL_FILE_MAP)}
-              />
+              <ContentTab />
             )}
           </div>
         </TabTransition>
