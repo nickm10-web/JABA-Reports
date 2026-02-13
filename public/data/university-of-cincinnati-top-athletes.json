@@ -4,226 +4,226 @@
     "name": "University of Cincinnati"
   },
   "collaboration": {
-    "avgEmv": 34.52,
-    "avgLift": 0.3284,
+    "avgEmv": 636.3,
+    "avgLift": 2.4074,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Sydney Nolan",
+          "name": "Ligia Williams",
           "sport": "WOMENS_VOLLEYBALL"
         },
-        "posts": 3,
-        "emv": 25.1,
-        "engagementRate": 0.001087,
-        "lift": 0.679
+        "posts": 1,
+        "emv": 4637.5,
+        "engagementRate": 0.008873,
+        "lift": 5.6623
       },
       {
         "athlete": {
-          "name": "Mya Perry",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 3,
-        "emv": 123.62,
-        "engagementRate": 0.001874,
-        "lift": 0.9956
-      },
-      {
-        "athlete": {
-          "name": "Caliyah DeVillasee",
-          "sport": "WOMENS_BASKETBALL"
+          "name": "Joe Royer",
+          "sport": "FOOTBALL"
         },
         "posts": 2,
-        "emv": 13.2,
-        "engagementRate": 0.000969,
-        "lift": -0.6787000000000001
+        "emv": 2344.5,
+        "engagementRate": 0.004285,
+        "lift": 0.7233
       },
       {
         "athlete": {
-          "name": "Delaney Snyder",
-          "sport": "WOMENS_BASKETBALL"
+          "name": "Dontay Corleone",
+          "sport": "FOOTBALL"
         },
         "posts": 2,
-        "emv": 8.76,
-        "engagementRate": 0.000613,
-        "lift": 1.4526
+        "emv": 1926,
+        "engagementRate": 0.003634,
+        "lift": 3.5109
       },
       {
         "athlete": {
-          "name": "Destiny Thomas",
-          "sport": "WOMENS_BASKETBALL"
+          "name": "Juliette Laracuente-Huebner",
+          "sport": "WOMENS_TRACK_AND_FIELD"
         },
         "posts": 1,
-        "emv": 1.9,
-        "engagementRate": 0.000202,
-        "lift": -0.8066
+        "emv": 1822.5,
+        "engagementRate": 0.00332,
+        "lift": 0.9224
+      },
+      {
+        "athlete": {
+          "name": "Jake Golday",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 1388.5,
+        "engagementRate": 0.002641,
+        "lift": 1.5797
       }
     ]
   },
   "logo": {
-    "avgEmv": 201.78,
-    "avgLift": -0.5858,
+    "avgEmv": 416.52,
+    "avgLift": 2.5669,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Juliette Laracuente-Huebner",
+          "name": "Shon Abaev",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 6,
+        "emv": 10073.33,
+        "engagementRate": 0.018862,
+        "lift": 1.5749
+      },
+      {
+        "athlete": {
+          "name": "Omolola Kuponiyi",
           "sport": "WOMENS_TRACK_AND_FIELD"
         },
-        "posts": 14,
-        "emv": 66.98,
-        "engagementRate": 0.000126,
-        "lift": -0.9551999999999999
+        "posts": 7,
+        "emv": 9357.93,
+        "engagementRate": 0.017491,
+        "lift": 15.3618
       },
       {
         "athlete": {
-          "name": "Caliyah DeVillasee",
-          "sport": "WOMENS_BASKETBALL"
+          "name": "Kayla Hostetler",
+          "sport": "WOMENS_VOLLEYBALL"
         },
-        "posts": 13,
-        "emv": 132.64,
-        "engagementRate": 0.001377,
-        "lift": -0.6904
+        "posts": 3,
+        "emv": 5215.83,
+        "engagementRate": 0.009701,
+        "lift": 11.263
       },
       {
         "athlete": {
-          "name": "Cyrus Allen",
+          "name": "Kerr Kriisa",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 2,
+        "emv": 4997.75,
+        "engagementRate": 0.009514,
+        "lift": 1.5028
+      },
+      {
+        "athlete": {
+          "name": "Tawee Walker",
           "sport": "FOOTBALL"
         },
-        "posts": 12,
-        "emv": 482.42,
-        "engagementRate": 0.001411,
-        "lift": -0.836
-      },
-      {
-        "athlete": {
-          "name": "Mya Perry",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 11,
-        "emv": 198.88,
-        "engagementRate": 0.000793,
-        "lift": -0.36829999999999996
-      },
-      {
-        "athlete": {
-          "name": "Brenden Garula",
-          "sport": "BASEBALL"
-        },
-        "posts": 9,
-        "emv": 128,
-        "engagementRate": 0.0038150000000000002,
-        "lift": -0.0789
+        "posts": 4,
+        "emv": 4534.63,
+        "engagementRate": 0.008447,
+        "lift": 1.5701
       }
     ]
   },
   "mention (in caption)": {
-    "avgEmv": 375.54,
-    "avgLift": 2.603,
+    "avgEmv": 550.32,
+    "avgLift": 1.9683,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Juliette Laracuente-Huebner",
+          "name": "Tawee Walker",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 17769.5,
+        "engagementRate": 0.03355,
+        "lift": 10.2716
+      },
+      {
+        "athlete": {
+          "name": "Kerr Kriisa",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 7911.5,
+        "engagementRate": 0.015087,
+        "lift": 2.8977
+      },
+      {
+        "athlete": {
+          "name": "Shon Abaev",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 4,
+        "emv": 7812.25,
+        "engagementRate": 0.01473,
+        "lift": 0.2563
+      },
+      {
+        "athlete": {
+          "name": "Omolola Kuponiyi",
           "sport": "WOMENS_TRACK_AND_FIELD"
         },
-        "posts": 16,
-        "emv": 117.76,
-        "engagementRate": 0.000258,
-        "lift": -0.9151
+        "posts": 1,
+        "emv": 6578,
+        "engagementRate": 0.012191,
+        "lift": 0.8658
       },
       {
         "athlete": {
-          "name": "Charlie Niehaus",
-          "sport": "BASEBALL"
+          "name": "Christian Harrison",
+          "sport": "FOOTBALL"
         },
-        "posts": 12,
-        "emv": 358.4,
-        "engagementRate": 0.006734,
-        "lift": 1.0451000000000001
-      },
-      {
-        "athlete": {
-          "name": "Carly Glendinning",
-          "sport": "WOMENS_VOLLEYBALL"
-        },
-        "posts": 12,
-        "emv": 124.3,
-        "engagementRate": 0.00165,
-        "lift": -0.2981
-      },
-      {
-        "athlete": {
-          "name": "Robert Hart",
-          "sport": "MENS_TRACK_AND_FIELD"
-        },
-        "posts": 12,
-        "emv": 1119.02,
-        "engagementRate": 0.006292,
-        "lift": 13.1474
-      },
-      {
-        "athlete": {
-          "name": "Lauden Brooks",
-          "sport": "BASEBALL"
-        },
-        "posts": 11,
-        "emv": 158.2,
-        "engagementRate": 0.002051,
-        "lift": 0.0359
+        "posts": 2,
+        "emv": 5417.75,
+        "engagementRate": 0.010125,
+        "lift": 7.515
       }
     ]
   },
   "partnership": {
-    "avgEmv": 25.66,
-    "avgLift": -0.6071,
+    "avgEmv": 261.71,
+    "avgLift": -0.1308,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Evan Tengesdahl",
+          "name": "Jeff Caldwell",
           "sport": "FOOTBALL"
         },
-        "posts": 10,
-        "emv": 13.72,
-        "engagementRate": 0.000033,
-        "lift": -0.9541
+        "posts": 1,
+        "emv": 3050.5,
+        "engagementRate": 0.005671,
+        "lift": 3.9672
       },
       {
         "athlete": {
-          "name": "Janelle Green",
-          "sport": "WOMENS_VOLLEYBALL"
-        },
-        "posts": 6,
-        "emv": 52.78,
-        "engagementRate": 0.00033099999999999997,
-        "lift": -0.6494
-      },
-      {
-        "athlete": {
-          "name": "Cam Roetherford",
+          "name": "Matthew McDoom",
           "sport": "FOOTBALL"
         },
-        "posts": 6,
-        "emv": 9.8,
-        "engagementRate": 0.000567,
-        "lift": -0.6238
+        "posts": 1,
+        "emv": 2646.5,
+        "engagementRate": 0.004925,
+        "lift": 2.5127
       },
       {
         "athlete": {
-          "name": "Oliver Mayer",
-          "sport": "MENS_TRACK_AND_FIELD"
-        },
-        "posts": 5,
-        "emv": 22.26,
-        "engagementRate": 0.0013189999999999999,
-        "lift": -0.4583
-      },
-      {
-        "athlete": {
-          "name": "Quinn Staten",
+          "name": "Tayden Barnes",
           "sport": "FOOTBALL"
         },
-        "posts": 4,
-        "emv": 29.74,
-        "engagementRate": 0.002533,
-        "lift": -0.35009999999999997
+        "posts": 1,
+        "emv": 1626,
+        "engagementRate": 0.003083,
+        "lift": 5.7857
+      },
+      {
+        "athlete": {
+          "name": "Evan Pryor",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 1462.5,
+        "engagementRate": 0.002716,
+        "lift": 1.0736
+      },
+      {
+        "athlete": {
+          "name": "Kye Stokes",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 608.5,
+        "engagementRate": 0.00104,
+        "lift": 0.1174
       }
     ]
   }

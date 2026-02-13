@@ -4,196 +4,216 @@
     "name": "University of Texas at San Antonio (UTSA)"
   },
   "collaboration": {
-    "avgEmv": 119.03,
-    "avgLift": 0.5596,
-    "top5Athletes": [
-      {
-        "athlete": {
-          "name": "Conor Myles",
-          "sport": "BASEBALL"
-        },
-        "posts": 10,
-        "emv": 107.54,
-        "engagementRate": 0.004356,
-        "lift": 0.6148
-      },
-      {
-        "athlete": {
-          "name": "Cheyenne Rowe",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 9,
-        "emv": 90.16,
-        "engagementRate": 0.002319,
-        "lift": 0.2563
-      },
-      {
-        "athlete": {
-          "name": "Adriana Robles",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 9,
-        "emv": 92.75,
-        "engagementRate": 0.002091,
-        "lift": -0.451
-      },
-      {
-        "athlete": {
-          "name": "Miranda Putnicki",
-          "sport": "WOMENS_VOLLEYBALL"
-        },
-        "posts": 8,
-        "emv": 116.6,
-        "engagementRate": 0.00114,
-        "lift": 2.0804
-      },
-      {
-        "athlete": {
-          "name": "Jamir Simpson",
-          "sport": "MENS_BASKETBALL"
-        },
-        "posts": 8,
-        "emv": 188.1,
-        "engagementRate": 0.001047,
-        "lift": 0.2977
-      }
-    ]
-  },
-  "logo": {
-    "avgEmv": 623.13,
-    "avgLift": 0.9314,
+    "avgEmv": 383.56,
+    "avgLift": 2.9448,
     "top5Athletes": [
       {
         "athlete": {
           "name": "Shad Banks Jr.",
           "sport": "FOOTBALL"
         },
-        "posts": 19,
-        "emv": 1675.54,
-        "engagementRate": 0.001457,
-        "lift": -0.2069
+        "posts": 2,
+        "emv": 4944.5,
+        "engagementRate": 0.011574,
+        "lift": 7.6167
       },
       {
         "athlete": {
-          "name": "Robert Henry Jr.",
+          "name": "Kendrick Blackshire",
           "sport": "FOOTBALL"
         },
-        "posts": 11,
-        "emv": 269.93,
-        "engagementRate": 0.0033239999999999997,
-        "lift": 2.6853
+        "posts": 1,
+        "emv": 2096.5,
+        "engagementRate": 0.004927,
+        "lift": -0.0158
       },
       {
         "athlete": {
-          "name": "Owen McCown",
+          "name": "Mike Roth",
+          "sport": "MENS_TRACK_AND_FIELD"
+        },
+        "posts": 2,
+        "emv": 1992.5,
+        "engagementRate": 0.004656,
+        "lift": 9.8178
+      },
+      {
+        "athlete": {
+          "name": "Owen Pewee",
           "sport": "FOOTBALL"
         },
-        "posts": 10,
-        "emv": 734.49,
-        "engagementRate": 0.001084,
-        "lift": -0.4679
+        "posts": 1,
+        "emv": 1474,
+        "engagementRate": 0.003448,
+        "lift": 5.1451
+      },
+      {
+        "athlete": {
+          "name": "Jaren Randle",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 1320,
+        "engagementRate": 0.003113,
+        "lift": 8.883
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 257.72,
+    "avgLift": 2.0479,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Taryn Madlock",
+          "sport": "SOFTBALL"
+        },
+        "posts": 2,
+        "emv": 4773.5,
+        "engagementRate": 0.011252,
+        "lift": 75.3501
+      },
+      {
+        "athlete": {
+          "name": "Jaffer Murphy",
+          "sport": "FOOTBALL"
+        },
+        "posts": 17,
+        "emv": 3042.59,
+        "engagementRate": 0.007192,
+        "lift": 12.2669
+      },
+      {
+        "athlete": {
+          "name": "Davin Martin",
+          "sport": "FOOTBALL"
+        },
+        "posts": 5,
+        "emv": 2062.1,
+        "engagementRate": 0.004801,
+        "lift": 13.3892
+      },
+      {
+        "athlete": {
+          "name": "Kendrick Blackshire",
+          "sport": "FOOTBALL"
+        },
+        "posts": 13,
+        "emv": 1747.19,
+        "engagementRate": 0.004086,
+        "lift": -0.3903
+      },
+      {
+        "athlete": {
+          "name": "Max Gerlich",
+          "sport": "FOOTBALL"
+        },
+        "posts": 6,
+        "emv": 1686.33,
+        "engagementRate": 0.003869,
+        "lift": 3.2336
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 285.7,
+    "avgLift": 1.807,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Davin Martin",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 3207.5,
+        "engagementRate": 0.007429,
+        "lift": 1.9588
       },
       {
         "athlete": {
           "name": "Devin McCuin",
           "sport": "FOOTBALL"
         },
-        "posts": 10,
-        "emv": 346.07,
-        "engagementRate": 0.00637,
-        "lift": 2.7518000000000002
+        "posts": 5,
+        "emv": 3173.5,
+        "engagementRate": 0.007349,
+        "lift": 8.1493
       },
       {
         "athlete": {
-          "name": "Ezekiel Saldana",
+          "name": "Mike Roth",
+          "sport": "MENS_TRACK_AND_FIELD"
+        },
+        "posts": 2,
+        "emv": 1992.5,
+        "engagementRate": 0.004656,
+        "lift": 9.8178
+      },
+      {
+        "athlete": {
+          "name": "Kendrick Blackshire",
           "sport": "FOOTBALL"
         },
-        "posts": 10,
-        "emv": 89.62,
-        "engagementRate": 0.003237,
-        "lift": -0.10550000000000001
-      }
-    ]
-  },
-  "mention (in caption)": {
-    "avgEmv": 419.62,
-    "avgLift": 0.767,
-    "top5Athletes": [
-      {
-        "athlete": {
-          "name": "Jasmine Kessler",
-          "sport": "WOMENS_SOCCER"
-        },
-        "posts": 21,
-        "emv": 108.58,
-        "engagementRate": 0.008938,
-        "lift": 2.8642000000000003
+        "posts": 2,
+        "emv": 1354.25,
+        "engagementRate": 0.003162,
+        "lift": -0.3925
       },
       {
         "athlete": {
-          "name": "Ally Tribe",
-          "sport": "WOMENS_VOLLEYBALL"
-        },
-        "posts": 13,
-        "emv": 354.95,
-        "engagementRate": 0.000967,
-        "lift": -0.3607
-      },
-      {
-        "athlete": {
-          "name": "Shad Banks Jr.",
+          "name": "Max Gerlich",
           "sport": "FOOTBALL"
         },
-        "posts": 13,
-        "emv": 1211.42,
-        "engagementRate": 0.0023899999999999998,
-        "lift": 0.9737
-      },
-      {
-        "athlete": {
-          "name": "Jamir Simpson",
-          "sport": "MENS_BASKETBALL"
-        },
-        "posts": 13,
-        "emv": 306.57,
-        "engagementRate": 0.001095,
-        "lift": 0.6436
-      },
-      {
-        "athlete": {
-          "name": "Adriana Robles",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 11,
-        "emv": 116.56,
-        "engagementRate": 0.0025719999999999996,
-        "lift": -0.28600000000000003
+        "posts": 3,
+        "emv": 1352.5,
+        "engagementRate": 0.003095,
+        "lift": 0.2321
       }
     ]
   },
   "partnership": {
-    "avgEmv": 279.01,
-    "avgLift": -0.3628,
+    "avgEmv": 102.67,
+    "avgLift": 0.1606,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Bella Bickham",
-          "sport": "WOMENS_TRACK_AND_FIELD"
+          "name": "Owen McCown",
+          "sport": "FOOTBALL"
         },
-        "posts": 12,
-        "emv": 848.85,
-        "engagementRate": 0.00008,
-        "lift": -0.7767000000000001
+        "posts": 1,
+        "emv": 1242,
+        "engagementRate": 0.002888,
+        "lift": 1.4115
       },
       {
         "athlete": {
-          "name": "Diego Ramirez",
-          "sport": "MENS_CROSS_COUNTRY"
+          "name": "Lauren Rios",
+          "sport": "WOMENS_GOLF"
         },
-        "posts": 6,
-        "emv": 125.13,
-        "engagementRate": 0.0012720000000000001,
-        "lift": -0.5678
+        "posts": 2,
+        "emv": 997,
+        "engagementRate": 0.002359,
+        "lift": 53.4199
+      },
+      {
+        "athlete": {
+          "name": "Broc Parmer",
+          "sport": "BASEBALL"
+        },
+        "posts": 2,
+        "emv": 639.5,
+        "engagementRate": 0.001524,
+        "lift": 2.8989
+      },
+      {
+        "athlete": {
+          "name": "Max Gerlich",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 629.5,
+        "engagementRate": 0.001488,
+        "lift": -0.4723
       },
       {
         "athlete": {
@@ -201,29 +221,9 @@
           "sport": "MENS_BASKETBALL"
         },
         "posts": 5,
-        "emv": 294.49,
-        "engagementRate": 0.001087,
-        "lift": -0.5935
-      },
-      {
-        "athlete": {
-          "name": "O.J. Ruiz",
-          "sport": "MENS_CROSS_COUNTRY"
-        },
-        "posts": 5,
-        "emv": 62.73,
-        "engagementRate": 0.000043,
-        "lift": -0.9316
-      },
-      {
-        "athlete": {
-          "name": "Charlie Staddon",
-          "sport": "MENS_TRACK_AND_FIELD"
-        },
-        "posts": 5,
-        "emv": 63.84,
-        "engagementRate": 0.002974,
-        "lift": 1.0558
+        "emv": 334.9,
+        "engagementRate": 0.00079,
+        "lift": -0.2694
       }
     ]
   }

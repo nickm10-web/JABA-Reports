@@ -1,0 +1,179 @@
+{
+  "school": {
+    "_id": "68d240206f71af5707a79f24",
+    "name": "Kansas"
+  },
+  "collaboration": {
+    "avgEmv": 1730.26,
+    "avgLift": 2.3472,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Melvin Council Jr.",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 5949,
+        "engagementRate": 0.009213,
+        "lift": 1.0473
+      },
+      {
+        "athlete": {
+          "name": "Dariel Osoria",
+          "sport": "MENS_BASEBALL"
+        },
+        "posts": 1,
+        "emv": 5338,
+        "engagementRate": 0.008253,
+        "lift": 3.5448
+      },
+      {
+        "athlete": {
+          "name": "Katie Dalton",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 1,
+        "emv": 3912.5,
+        "engagementRate": 0.005911,
+        "lift": 8.2604
+      },
+      {
+        "athlete": {
+          "name": "Laquan Robinson",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 1654,
+        "engagementRate": 0.002592,
+        "lift": 5.1197
+      },
+      {
+        "athlete": {
+          "name": "Caleb Redd",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 1417,
+        "engagementRate": 0.002216,
+        "lift": 4.6414
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 669.77,
+    "avgLift": 2.5963,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Garrett Martin",
+          "sport": "FOOTBALL"
+        },
+        "posts": 3,
+        "emv": 10517.67,
+        "engagementRate": 0.016479,
+        "lift": 76.2519
+      },
+      {
+        "athlete": {
+          "name": "Kohl Rosario",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 2,
+        "emv": 8411.5,
+        "engagementRate": 0.013079,
+        "lift": 1.7616
+      },
+      {
+        "athlete": {
+          "name": "Darryn Peterson",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 16,
+        "emv": 7286.22,
+        "engagementRate": 0.011313,
+        "lift": 2.8892
+      },
+      {
+        "athlete": {
+          "name": "Madi Hays",
+          "sport": "SOFTBALL"
+        },
+        "posts": 2,
+        "emv": 5603.75,
+        "engagementRate": 0.008745,
+        "lift": 0.5098
+      },
+      {
+        "athlete": {
+          "name": "Melvin Council Jr.",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 8,
+        "emv": 5044.5,
+        "engagementRate": 0.00777,
+        "lift": 1.7262
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 0,
+    "avgLift": 0,
+    "top5Athletes": []
+  },
+  "partnership": {
+    "avgEmv": 485.64,
+    "avgLift": -0.2571,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Darryn Peterson",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 9316,
+        "engagementRate": 0.014368,
+        "lift": 0.3559
+      },
+      {
+        "athlete": {
+          "name": "Flory Bidunga",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 1107.5,
+        "engagementRate": 0.001726,
+        "lift": -0.6392
+      },
+      {
+        "athlete": {
+          "name": "Madi Hays",
+          "sport": "SOFTBALL"
+        },
+        "posts": 2,
+        "emv": 981.25,
+        "engagementRate": 0.001499,
+        "lift": -0.7745
+      },
+      {
+        "athlete": {
+          "name": "Cole Ballard",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 968,
+        "engagementRate": 0.001503,
+        "lift": 2.3688
+      },
+      {
+        "athlete": {
+          "name": "Isaiah Marshall",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 892.5,
+        "engagementRate": 0.00133,
+        "lift": -0.3539
+      }
+    ]
+  }
+}

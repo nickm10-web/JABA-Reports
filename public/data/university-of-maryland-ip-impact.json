@@ -1,68 +1,68 @@
 {
-  "followers": 862566,
+  "followers": 0,
   "school": {
     "_id": "68fc8b6f7804265f86eb4183",
     "name": "University of Maryland"
   },
   "overall": {
-    "totalContents": 2379,
-    "totalLikes": 1572893,
-    "totalComments": 97861,
-    "engagementRate": 1.9369578675718728,
-    "emv": 41243.96
+    "totalContents": 2392,
+    "totalLikes": 1576319,
+    "totalComments": 98146,
+    "engagementRate": 0,
+    "emv": 935378.5
   },
   "counts": {
     "hasOrganizationInCaption": 392,
     "isOrganizationCollaboration": 67,
-    "hasOrganizationLogo": 1126,
-    "withIp": 1201
+    "hasOrganizationLogo": 1131,
+    "withIp": 1206
   },
   "orgInCaption": {
     "yes": {
       "contents": 392,
       "likes": 974.4107142857143,
       "comments": 46.798469387755105,
-      "engagementRate": 0.0011839200521159764,
-      "emv": 24.17
+      "engagementRate": 0,
+      "emv": 557.4
     },
     "no": {
-      "contents": 1987,
-      "likes": 599.357825868143,
-      "comments": 40.018117765475594,
-      "engagementRate": 0.0007412487202528486
+      "contents": 2000,
+      "likes": 597.175,
+      "comments": 39.9005,
+      "engagementRate": 0
     },
-    "avgLift": 59.71967569969328
+    "avgLift": 0
   },
   "collaboration": {
     "yes": {
       "contents": 67,
-      "likes": 1645.134328358209,
+      "likes": 1645.597014925373,
       "comments": 46.19402985074627,
-      "engagementRate": 0.00196081037069506,
-      "emv": 37.52
+      "engagementRate": 0,
+      "emv": 892.09
     },
     "no": {
-      "contents": 2312,
-      "likes": 632.6423010380623,
-      "comments": 40.988754325259514,
-      "engagementRate": 0.0007809617529131936
+      "contents": 2325,
+      "likes": 630.5651612903226,
+      "comments": 40.88215053763441,
+      "engagementRate": 0
     },
-    "avgLift": 151.0763636478636
+    "avgLift": 0
   },
   "logo": {
     "yes": {
-      "contents": 1126,
-      "likes": 829.8809946714032,
-      "comments": 45.58170515097691,
-      "engagementRate": 0.0010149515513275275,
-      "emv": 21.16
+      "contents": 1131,
+      "likes": 832.9274977895667,
+      "comments": 45.805481874447395,
+      "engagementRate": 0,
+      "emv": 485.17
     },
     "no": {
-      "contents": 1253,
-      "likes": 509.5347166799681,
-      "comments": 37.13966480446928,
-      "engagementRate": 0.0006337768721285529
+      "contents": 1261,
+      "likes": 502.99603489294213,
+      "comments": 36.748612212529736,
+      "engagementRate": 0
     },
-    "avgLift": 60.143355802617315
+    "avgLift": 0
   }
 }

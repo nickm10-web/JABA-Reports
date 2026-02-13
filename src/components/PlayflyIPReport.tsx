@@ -6,7 +6,7 @@ import {
 import { ExportModal } from './ExportModal';
 import { exportToPDF, exportToCSV, exportToExcel, ExportData } from '../utils/exportUtils';
 import { loadPlayflySchoolData, loadTopBrandPartners, BrandPerformance } from '../utils/playflyDataLoader';
-import { calculatePostEMV, formatEMV } from '../utils/emvCalculator';
+import { formatEMV } from '../utils/emvCalculator';
 import { ComparisonBarChart } from './charts/ComparisonBarChart';
 import { IPTypeBreakdownChart } from './charts/IPTypeBreakdownChart';
 
@@ -119,65 +119,8 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
           loadTopBrandPartners()
         ]);
 
-        // Enhance loaded data with EMV calculations
-        const schoolsWithEMV = loadedSchools.map(school => {
-          // For EMV calculation, we need athlete followers
-          // Using rough estimate: team followers / estimated athletes per school
-          const estimatedFollowersPerAthlete = 50000; // Conservative estimate
-
-          // Calculate average engagement per post WITHOUT IP
-          const avgEngagementWithoutIP = school.postsWithoutIP > 0
-            ? school.engagementWithoutIP / school.postsWithoutIP
-            : 0;
-          const avgLikesWithoutIP = avgEngagementWithoutIP * 0.7; // Estimate 70% is likes
-          const avgCommentsWithoutIP = avgEngagementWithoutIP * 0.3; // Estimate 30% is comments
-
-          // Calculate EMV for posts without IP
-          const emvWithoutIP = school.postsWithoutIP > 0
-            ? calculatePostEMV({
-                athleteFollowers: estimatedFollowersPerAthlete,
-                likes: avgLikesWithoutIP,
-                comments: avgCommentsWithoutIP
-              }) * school.postsWithoutIP
-            : 0;
-
-          // Calculate EMV for posts with IP (higher engagement)
-          const avgEngagementWithIP = school.postsWithIP > 0
-            ? school.engagementWithIP / school.postsWithIP
-            : 0;
-          const avgLikesWithIP = avgEngagementWithIP * 0.7;
-          const avgCommentsWithIP = avgEngagementWithIP * 0.3;
-
-          const emvWithIP = school.postsWithIP > 0
-            ? calculatePostEMV({
-                athleteFollowers: estimatedFollowersPerAthlete,
-                likes: avgLikesWithIP,
-                comments: avgCommentsWithIP
-              }) * school.postsWithIP
-            : 0;
-
-          const totalEMV = emvWithoutIP + emvWithIP;
-          const avgEMVPerPost = school.totalSponsoredPosts > 0
-            ? totalEMV / school.totalSponsoredPosts
-            : 0;
-
-          const avgEMVWithoutIP = school.postsWithoutIP > 0 ? emvWithoutIP / school.postsWithoutIP : 0;
-          const avgEMVWithIP = school.postsWithIP > 0 ? emvWithIP / school.postsWithIP : 0;
-          const emvLiftPercent = avgEMVWithoutIP > 0
-            ? Math.round(((avgEMVWithIP - avgEMVWithoutIP) / avgEMVWithoutIP) * 100)
-            : 0;
-
-          return {
-            ...school,
-            totalEMV,
-            emvWithoutIP,
-            emvWithIP,
-            avgEMVPerPost,
-            emvLiftPercent
-          };
-        });
-
-        setSchoolsData(schoolsWithEMV);
+        // EMV data is now pre-computed and included directly from the data loader
+        setSchoolsData(loadedSchools as SchoolPerformance[]);
         setTopBrandPartners(loadedBrands);
       } catch (error) {
         console.error('Error loading Playfly school data:', error);

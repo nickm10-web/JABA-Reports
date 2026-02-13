@@ -4,175 +4,226 @@
     "name": "Texas A&M"
   },
   "collaboration": {
-    "avgEmv": 0,
-    "avgLift": 0,
-    "top5Athletes": []
-  },
-  "logo": {
-    "avgEmv": 1994.93,
-    "avgLift": 0.9849,
+    "avgEmv": 2691.99,
+    "avgLift": 4.8396,
     "top5Athletes": [
-      {
-        "athlete": {
-          "name": "Ifenna Cos-Okpalla",
-          "sport": "WOMENS_VOLLEYBALL"
-        },
-        "posts": 19,
-        "emv": 2189.39,
-        "engagementRate": 0.002864,
-        "lift": 0.5121
-      },
-      {
-        "athlete": {
-          "name": "Rashaun Agee",
-          "sport": "MENS_BASKETBALL"
-        },
-        "posts": 17,
-        "emv": 463.69,
-        "engagementRate": 0.0032129999999999997,
-        "lift": 0.22690000000000002
-      },
-      {
-        "athlete": {
-          "name": "KC Concepcion",
-          "sport": "FOOTBALL"
-        },
-        "posts": 17,
-        "emv": 5830.1,
-        "engagementRate": 0.002062,
-        "lift": 1.2068
-      },
-      {
-        "athlete": {
-          "name": "Tatum Thomas",
-          "sport": "WOMENS_VOLLEYBALL"
-        },
-        "posts": 12,
-        "emv": 668.81,
-        "engagementRate": 0.006991000000000001,
-        "lift": 1.9938999999999998
-      },
-      {
-        "athlete": {
-          "name": "Justin Lamkin",
-          "sport": "BASEBALL"
-        },
-        "posts": 12,
-        "emv": 822.64,
-        "engagementRate": 0.004635,
-        "lift": 0
-      }
-    ]
-  },
-  "mention (in caption)": {
-    "avgEmv": 2621.75,
-    "avgLift": 1.3780000000000001,
-    "top5Athletes": [
-      {
-        "athlete": {
-          "name": "Ifenna Cos-Okpalla",
-          "sport": "WOMENS_VOLLEYBALL"
-        },
-        "posts": 39,
-        "emv": 4159.37,
-        "engagementRate": 0.001782,
-        "lift": -0.5306000000000001
-      },
-      {
-        "athlete": {
-          "name": "Rashaun Agee",
-          "sport": "MENS_BASKETBALL"
-        },
-        "posts": 18,
-        "emv": 528.14,
-        "engagementRate": 0.004592,
-        "lift": 3.0854000000000004
-      },
-      {
-        "athlete": {
-          "name": "Mario Craver",
-          "sport": "FOOTBALL"
-        },
-        "posts": 18,
-        "emv": 6279.69,
-        "engagementRate": 0.0012330000000000002,
-        "lift": -0.3379
-      },
-      {
-        "athlete": {
-          "name": "Ava Underwood",
-          "sport": "WOMENS_VOLLEYBALL"
-        },
-        "posts": 16,
-        "emv": 1760.58,
-        "engagementRate": 0.001616,
-        "lift": 2.1474
-      },
-      {
-        "athlete": {
-          "name": "Maddie Waak",
-          "sport": "WOMENS_VOLLEYBALL"
-        },
-        "posts": 12,
-        "emv": 380.95,
-        "engagementRate": 0.006631000000000001,
-        "lift": 2.5259
-      }
-    ]
-  },
-  "partnership": {
-    "avgEmv": 2006.97,
-    "avgLift": -0.3822,
-    "top5Athletes": [
-      {
-        "athlete": {
-          "name": "Rueben Owens II",
-          "sport": "FOOTBALL"
-        },
-        "posts": 9,
-        "emv": 1856.56,
-        "engagementRate": 0.000945,
-        "lift": -0.478
-      },
-      {
-        "athlete": {
-          "name": "Mario Craver",
-          "sport": "FOOTBALL"
-        },
-        "posts": 7,
-        "emv": 2369.78,
-        "engagementRate": 0.000851,
-        "lift": -0.4993
-      },
-      {
-        "athlete": {
-          "name": "Scarlett Schremmer",
-          "sport": "WOMENS_GOLF"
-        },
-        "posts": 7,
-        "emv": 667.3,
-        "engagementRate": 0.001767,
-        "lift": 0.4329
-      },
       {
         "athlete": {
           "name": "Marcel Reed",
           "sport": "FOOTBALL"
         },
-        "posts": 7,
-        "emv": 3816.61,
-        "engagementRate": 0.00046300000000000003,
-        "lift": -0.6346
+        "posts": 1,
+        "emv": 17445.5,
+        "engagementRate": 0.018071,
+        "lift": 1.8504
       },
       {
         "athlete": {
           "name": "Jace LaViolette",
           "sport": "BASEBALL"
         },
-        "posts": 6,
-        "emv": 1324.58,
-        "engagementRate": 0.0007779999999999999,
-        "lift": -0.7322
+        "posts": 1,
+        "emv": 15660,
+        "engagementRate": 0.016023,
+        "lift": 3.8852
+      },
+      {
+        "athlete": {
+          "name": "Rueben Owens II",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 10303,
+        "engagementRate": 0.010904,
+        "lift": 4.307
+      },
+      {
+        "athlete": {
+          "name": "Kyndal Stowers",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 8,
+        "emv": 8493.94,
+        "engagementRate": 0.00898,
+        "lift": 5.6906
+      },
+      {
+        "athlete": {
+          "name": "Logan Lednicky",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 11,
+        "emv": 5881,
+        "engagementRate": 0.006206,
+        "lift": 2.4903
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 983.71,
+    "avgLift": 4.0955,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Marcel Reed",
+          "sport": "FOOTBALL"
+        },
+        "posts": 24,
+        "emv": 7698.04,
+        "engagementRate": 0.008045,
+        "lift": 0.9645
+      },
+      {
+        "athlete": {
+          "name": "Jacob Zeno",
+          "sport": "FOOTBALL"
+        },
+        "posts": 3,
+        "emv": 6935.17,
+        "engagementRate": 0.007207,
+        "lift": 19.577
+      },
+      {
+        "athlete": {
+          "name": "Kyndal Stowers",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 8,
+        "emv": 6792.25,
+        "engagementRate": 0.007173,
+        "lift": 2.8202
+      },
+      {
+        "athlete": {
+          "name": "Jonte Newman",
+          "sport": "FOOTBALL"
+        },
+        "posts": 3,
+        "emv": 5554.83,
+        "engagementRate": 0.005699,
+        "lift": 26.7623
+      },
+      {
+        "athlete": {
+          "name": "Miles O'Neill",
+          "sport": "FOOTBALL"
+        },
+        "posts": 10,
+        "emv": 5208.4,
+        "engagementRate": 0.005439,
+        "lift": 0
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 1651.84,
+    "avgLift": 5.3039,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Julio Humphrey",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 29739,
+        "engagementRate": 0.030971,
+        "lift": 5.8201
+      },
+      {
+        "athlete": {
+          "name": "Nana Boadi-Owusu",
+          "sport": "FOOTBALL"
+        },
+        "posts": 9,
+        "emv": 29103.39,
+        "engagementRate": 0.030673,
+        "lift": 60.0538
+      },
+      {
+        "athlete": {
+          "name": "T.J. Searcy",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 13321,
+        "engagementRate": 0.013872,
+        "lift": 18.8795
+      },
+      {
+        "athlete": {
+          "name": "Solomon Williams",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 8941.5,
+        "engagementRate": 0.009133,
+        "lift": 11.3313
+      },
+      {
+        "athlete": {
+          "name": "Miles O'Neill",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 8434.75,
+        "engagementRate": 0.00888,
+        "lift": 0.9395
+      }
+    ]
+  },
+  "partnership": {
+    "avgEmv": 801.48,
+    "avgLift": 1.3761,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Dayon Hayes",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 30129,
+        "engagementRate": 0.03133,
+        "lift": 20.2139
+      },
+      {
+        "athlete": {
+          "name": "AJ DiNota",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 6399.5,
+        "engagementRate": 0.006776,
+        "lift": 33.1849
+      },
+      {
+        "athlete": {
+          "name": "KC Concepcion",
+          "sport": "FOOTBALL"
+        },
+        "posts": 5,
+        "emv": 5508.8,
+        "engagementRate": 0.005706,
+        "lift": 0.5891
+      },
+      {
+        "athlete": {
+          "name": "Miles O'Neill",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 3947.5,
+        "engagementRate": 0.004147,
+        "lift": -0.2571
+      },
+      {
+        "athlete": {
+          "name": "Justin Lamkin",
+          "sport": "BASEBALL"
+        },
+        "posts": 1,
+        "emv": 3131,
+        "engagementRate": 0.003304,
+        "lift": 1.5532
       }
     ]
   }

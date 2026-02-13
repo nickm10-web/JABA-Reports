@@ -1,0 +1,68 @@
+{
+  "followers": 465010,
+  "school": {
+    "_id": "68f86b817804265f86eb36f7",
+    "name": "Robert Morris University"
+  },
+  "overall": {
+    "totalContents": 2687,
+    "totalLikes": 631193,
+    "totalComments": 86972,
+    "engagementRate": 0.0005747702445654533,
+    "emv": 446054.5
+  },
+  "counts": {
+    "hasOrganizationInCaption": 0,
+    "isOrganizationCollaboration": 0,
+    "hasOrganizationLogo": 198,
+    "withIp": 198
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 0,
+      "likes": 0,
+      "comments": 0,
+      "engagementRate": 0,
+      "emv": 0
+    },
+    "no": {
+      "contents": 2687,
+      "likes": 234.90621510978787,
+      "comments": 32.3676963155936,
+      "engagementRate": 0.0005747702445654533
+    },
+    "avgLift": -100
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 0,
+      "likes": 0,
+      "comments": 0,
+      "engagementRate": 0,
+      "emv": 0
+    },
+    "no": {
+      "contents": 2687,
+      "likes": 234.90621510978787,
+      "comments": 32.3676963155936,
+      "engagementRate": 0.0005747702445654533
+    },
+    "avgLift": -100
+  },
+  "logo": {
+    "yes": {
+      "contents": 198,
+      "likes": 180.36868686868686,
+      "comments": 28.707070707070706,
+      "engagementRate": 0.00044961561595612475,
+      "emv": 133.24
+    },
+    "no": {
+      "contents": 2489,
+      "likes": 239.24467657693853,
+      "comments": 32.65889915628767,
+      "engagementRate": 0.0005847262977854803
+    },
+    "avgLift": -23.106653889359343
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "school": {
+    "_id": "68b5ead47555f0835995a0bd",
+    "name": "University of Wisconsin"
+  },
+  "collaboration": {
+    "avgEmv": 2404.84,
+    "avgLift": 3.581,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Laila Edwards",
+          "sport": "WOMENS_HOCKEY"
+        },
+        "posts": 1,
+        "emv": 36017,
+        "engagementRate": 0.038927,
+        "lift": 0.0281
+      },
+      {
+        "athlete": {
+          "name": "Sean West",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 14971.5,
+        "engagementRate": 0.0163,
+        "lift": 6.6649
+      },
+      {
+        "athlete": {
+          "name": "Jack Janicki",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 7385.5,
+        "engagementRate": 0.008046,
+        "lift": 4.6697
+      },
+      {
+        "athlete": {
+          "name": "Tyrell Henry",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 6934.5,
+        "engagementRate": 0.007449,
+        "lift": 19.4329
+      },
+      {
+        "athlete": {
+          "name": "John Blackwell",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 2,
+        "emv": 6683.25,
+        "engagementRate": 0.007238,
+        "lift": 3.5561
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 610.07,
+    "avgLift": 1.2191,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Sean West",
+          "sport": "FOOTBALL"
+        },
+        "posts": 3,
+        "emv": 7988.5,
+        "engagementRate": 0.008731,
+        "lift": 4.2702
+      },
+      {
+        "athlete": {
+          "name": "Mason Reiger",
+          "sport": "FOOTBALL"
+        },
+        "posts": 23,
+        "emv": 7149.46,
+        "engagementRate": 0.007822,
+        "lift": 0.9587
+      },
+      {
+        "athlete": {
+          "name": "Taiko Torepe-Ormsby",
+          "sport": "MENS_SWIM"
+        },
+        "posts": 1,
+        "emv": 3514.5,
+        "engagementRate": 0.003827,
+        "lift": -0.5948
+      },
+      {
+        "athlete": {
+          "name": "John Blackwell",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 4,
+        "emv": 3507.75,
+        "engagementRate": 0.003807,
+        "lift": 0.9103
+      },
+      {
+        "athlete": {
+          "name": "Caroline Harvey",
+          "sport": "WOMENS_HOCKEY"
+        },
+        "posts": 2,
+        "emv": 3045.25,
+        "engagementRate": 0.003336,
+        "lift": -0.1498
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 401.18,
+    "avgLift": -0.2804,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Mason Reiger",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 2140.5,
+        "engagementRate": 0.002328,
+        "lift": -0.6001
+      },
+      {
+        "athlete": {
+          "name": "Archie Noakes",
+          "sport": "MENS_CROSS_COUNTRY"
+        },
+        "posts": 1,
+        "emv": 468,
+        "engagementRate": 0.000487,
+        "lift": 0.2119
+      },
+      {
+        "athlete": {
+          "name": "Nicolas Clayton",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 348,
+        "engagementRate": 0.000331,
+        "lift": 0.4664
+      },
+      {
+        "athlete": {
+          "name": "Braxton Amos",
+          "sport": "MENS_WRESTLING"
+        },
+        "posts": 1,
+        "emv": 320,
+        "engagementRate": 0.000351,
+        "lift": -0.1478
+      },
+      {
+        "athlete": {
+          "name": "Zan Fugitt",
+          "sport": "MENS_WRESTLING"
+        },
+        "posts": 1,
+        "emv": 197.5,
+        "engagementRate": 0.000201,
+        "lift": -0.3549
+      }
+    ]
+  },
+  "partnership": {
+    "avgEmv": 379.98,
+    "avgLift": 0.211,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Charlie Jones",
+          "sport": "MENS_SWIM"
+        },
+        "posts": 2,
+        "emv": 9192.75,
+        "engagementRate": 0.009959,
+        "lift": -0.3075
+      },
+      {
+        "athlete": {
+          "name": "Laila Edwards",
+          "sport": "WOMENS_HOCKEY"
+        },
+        "posts": 9,
+        "emv": 4773.94,
+        "engagementRate": 0.005146,
+        "lift": -0.9127
+      },
+      {
+        "athlete": {
+          "name": "Joe Palodichuk",
+          "sport": "MENS_HOCKEY"
+        },
+        "posts": 1,
+        "emv": 3508,
+        "engagementRate": 0.003825,
+        "lift": 9.7393
+      },
+      {
+        "athlete": {
+          "name": "Jacob Beckman",
+          "sport": "MENS_GOLF"
+        },
+        "posts": 2,
+        "emv": 2429.75,
+        "engagementRate": 0.002673,
+        "lift": 14.3886
+      },
+      {
+        "athlete": {
+          "name": "Caroline Harvey",
+          "sport": "WOMENS_HOCKEY"
+        },
+        "posts": 3,
+        "emv": 1603.5,
+        "engagementRate": 0.001753,
+        "lift": -0.5904
+      }
+    ]
+  }
+}

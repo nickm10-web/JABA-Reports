@@ -1,0 +1,179 @@
+{
+  "school": {
+    "_id": "69023623f719b77ba3f097f9",
+    "name": "Kentucky"
+  },
+  "collaboration": {
+    "avgEmv": 2266.74,
+    "avgLift": 11.2631,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Collin Chandler",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 3,
+        "emv": 19868.5,
+        "engagementRate": 0.023452,
+        "lift": 5.3234
+      },
+      {
+        "athlete": {
+          "name": "Otega Oweh",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 19836.5,
+        "engagementRate": 0.022039,
+        "lift": 5.2916
+      },
+      {
+        "athlete": {
+          "name": "Jasper Johnson",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 6,
+        "emv": 15187.83,
+        "engagementRate": 0.018025,
+        "lift": 1.8596
+      },
+      {
+        "athlete": {
+          "name": "Emory Donaldson",
+          "sport": "SOFTBALL"
+        },
+        "posts": 1,
+        "emv": 10041,
+        "engagementRate": 0.011984,
+        "lift": 591.0197
+      },
+      {
+        "athlete": {
+          "name": "Malachi Moreno",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 6,
+        "emv": 7436,
+        "engagementRate": 0.008723,
+        "lift": 3.5299
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 898.47,
+    "avgLift": 4.0221,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Teonni Key",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 7,
+        "emv": 19416.86,
+        "engagementRate": 0.022861,
+        "lift": 11.7513
+      },
+      {
+        "athlete": {
+          "name": "Kendrick Law",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 9699.75,
+        "engagementRate": 0.01143,
+        "lift": 0.1571
+      },
+      {
+        "athlete": {
+          "name": "Jasper Johnson",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 16,
+        "emv": 9519.81,
+        "engagementRate": 0.011286,
+        "lift": 1.1999
+      },
+      {
+        "athlete": {
+          "name": "Collin Chandler",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 11,
+        "emv": 8246.59,
+        "engagementRate": 0.009708,
+        "lift": 2.3908
+      },
+      {
+        "athlete": {
+          "name": "Otega Oweh",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 9,
+        "emv": 5193.22,
+        "engagementRate": 0.005874,
+        "lift": 1.0958
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 0,
+    "avgLift": 0,
+    "top5Athletes": []
+  },
+  "partnership": {
+    "avgEmv": 210.86,
+    "avgLift": -0.6077,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Elijah Brown",
+          "sport": "FOOTBALL"
+        },
+        "posts": 6,
+        "emv": 1609.33,
+        "engagementRate": 0.001879,
+        "lift": -0.8942
+      },
+      {
+        "athlete": {
+          "name": "Jasper Johnson",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 3,
+        "emv": 987.17,
+        "engagementRate": 0.001166,
+        "lift": -0.8877
+      },
+      {
+        "athlete": {
+          "name": "Eva Hudson",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 2,
+        "emv": 979.5,
+        "engagementRate": 0.001152,
+        "lift": -0.5795
+      },
+      {
+        "athlete": {
+          "name": "Brian Robinson",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 515.25,
+        "engagementRate": 0.000599,
+        "lift": -0.136
+      },
+      {
+        "athlete": {
+          "name": "Malachi Moreno",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 7,
+        "emv": 448.79,
+        "engagementRate": 0.000529,
+        "lift": -0.9001
+      }
+    ]
+  }
+}

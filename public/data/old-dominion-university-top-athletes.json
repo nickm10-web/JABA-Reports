@@ -4,48 +4,48 @@
     "name": "Old Dominion University"
   },
   "collaboration": {
-    "avgEmv": 62.49,
-    "avgLift": 0.5611999999999999,
+    "avgEmv": 561.31,
+    "avgLift": 2.2651,
     "top5Athletes": [
-      {
-        "athlete": {
-          "name": "Trequan Jones",
-          "sport": "FOOTBALL"
-        },
-        "posts": 3,
-        "emv": 69.88,
-        "engagementRate": 0.005325,
-        "lift": 1.0995
-      },
       {
         "athlete": {
           "name": "Colton Joseph",
           "sport": "FOOTBALL"
         },
         "posts": 3,
-        "emv": 131.75,
-        "engagementRate": 0.00788,
+        "emv": 2657.5,
+        "engagementRate": 0.012708,
         "lift": 1.05
       },
       {
         "athlete": {
-          "name": "Quinn Henicle",
-          "sport": "FOOTBALL"
-        },
-        "posts": 3,
-        "emv": 74.71,
-        "engagementRate": 0.001019,
-        "lift": -0.6989
-      },
-      {
-        "athlete": {
-          "name": "Brandon Crutchfield",
+          "name": "Na'eem Abdul-Rahim Gladding",
           "sport": "FOOTBALL"
         },
         "posts": 1,
-        "emv": 20.5,
-        "engagementRate": 0.00008999999999999999,
-        "lift": -0.8884000000000001
+        "emv": 1076.5,
+        "engagementRate": 0.005075,
+        "lift": 0.8442
+      },
+      {
+        "athlete": {
+          "name": "Jason Henderson",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 897,
+        "engagementRate": 0.00431,
+        "lift": 3.8563
+      },
+      {
+        "athlete": {
+          "name": "Maurki James",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 658,
+        "engagementRate": 0.0032,
+        "lift": 0.9559
       },
       {
         "athlete": {
@@ -53,101 +53,111 @@
           "sport": "FOOTBALL"
         },
         "posts": 1,
-        "emv": 15.61,
-        "engagementRate": 0.010708,
+        "emv": 573.5,
+        "engagementRate": 0.00275,
         "lift": 2.244
       }
     ]
   },
   "logo": {
-    "avgEmv": 570.65,
-    "avgLift": 1.1701000000000001,
+    "avgEmv": 232.42,
+    "avgLift": 5.2272,
     "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Colton Joseph",
+          "sport": "FOOTBALL"
+        },
+        "posts": 12,
+        "emv": 1532.75,
+        "engagementRate": 0.007217,
+        "lift": 0.0147
+      },
+      {
+        "athlete": {
+          "name": "Devin Roche",
+          "sport": "FOOTBALL"
+        },
+        "posts": 15,
+        "emv": 952.07,
+        "engagementRate": 0.00428,
+        "lift": 0.5515
+      },
+      {
+        "athlete": {
+          "name": "Drew McKenna",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 11,
+        "emv": 865.14,
+        "engagementRate": 0.004006,
+        "lift": 5.7228
+      },
       {
         "athlete": {
           "name": "Na'eem Abdul-Rahim Gladding",
           "sport": "FOOTBALL"
         },
         "posts": 17,
-        "emv": 386.8,
-        "engagementRate": 0.005621,
+        "emv": 631.5,
+        "engagementRate": 0.002927,
         "lift": 0.1308
+      },
+      {
+        "athlete": {
+          "name": "Ryan Huff",
+          "sport": "FOOTBALL"
+        },
+        "posts": 5,
+        "emv": 561.5,
+        "engagementRate": 0.002461,
+        "lift": 0.2029
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 234.86,
+    "avgLift": 0.5674,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Colton Joseph",
+          "sport": "FOOTBALL"
+        },
+        "posts": 7,
+        "emv": 2097.14,
+        "engagementRate": 0.009903,
+        "lift": 0.7354
       },
       {
         "athlete": {
           "name": "Jahleel Culbreath",
           "sport": "FOOTBALL"
         },
-        "posts": 16,
-        "emv": 508.8,
-        "engagementRate": 0.003126,
-        "lift": 4.5508
+        "posts": 2,
+        "emv": 1224.25,
+        "engagementRate": 0.005897,
+        "lift": 2.742
       },
       {
         "athlete": {
-          "name": "Robert Davis Jr.",
-          "sport": "MENS_BASKETBALL"
-        },
-        "posts": 16,
-        "emv": 1427.51,
-        "engagementRate": 0.000479,
-        "lift": -0.0492
-      },
-      {
-        "athlete": {
-          "name": "Simaru Fields",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 16,
-        "emv": 85.93,
-        "engagementRate": 0.0022470000000000003,
-        "lift": 0
-      },
-      {
-        "athlete": {
-          "name": "Stephon Dubose-Bourne",
+          "name": "Devin Roche",
           "sport": "FOOTBALL"
         },
-        "posts": 15,
-        "emv": 444.2,
-        "engagementRate": 0.0014299999999999998,
-        "lift": 0.0481
-      }
-    ]
-  },
-  "mention (in caption)": {
-    "avgEmv": 162.92,
-    "avgLift": 0.1335,
-    "top5Athletes": [
-      {
-        "athlete": {
-          "name": "Hama'ya Fielder",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 8,
-        "emv": 138.75,
-        "engagementRate": 0.0008649999999999999,
-        "lift": -0.4485
+        "posts": 2,
+        "emv": 1072,
+        "engagementRate": 0.005003,
+        "lift": 0.3246
       },
       {
         "athlete": {
-          "name": "Jerome Carter",
+          "name": "Mason Forte",
           "sport": "FOOTBALL"
         },
-        "posts": 8,
-        "emv": 244.56,
-        "engagementRate": 0.000957,
-        "lift": -0.4892
-      },
-      {
-        "athlete": {
-          "name": "Donovan Raymond",
-          "sport": "MENS_BASKETBALL"
-        },
-        "posts": 8,
-        "emv": 92.33,
-        "engagementRate": 0.001668,
-        "lift": 1.1932
+        "posts": 1,
+        "emv": 851,
+        "engagementRate": 0.002693,
+        "lift": 11.287
       },
       {
         "athlete": {
@@ -155,35 +165,45 @@
           "sport": "FOOTBALL"
         },
         "posts": 7,
-        "emv": 174.49,
-        "engagementRate": 0.007591,
+        "emv": 840.14,
+        "engagementRate": 0.003953,
         "lift": 0.7061
-      },
-      {
-        "athlete": {
-          "name": "Kris Trinidad",
-          "sport": "FOOTBALL"
-        },
-        "posts": 7,
-        "emv": 164.47,
-        "engagementRate": 0.001938,
-        "lift": -0.2939
       }
     ]
   },
   "partnership": {
-    "avgEmv": 158.94,
-    "avgLift": -0.4852,
+    "avgEmv": 100.91,
+    "avgLift": -0.4571,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Robert Davis Jr.",
-          "sport": "MENS_BASKETBALL"
+          "name": "Devin Roche",
+          "sport": "FOOTBALL"
         },
-        "posts": 6,
-        "emv": 521.74,
-        "engagementRate": 0.000171,
-        "lift": -0.6911
+        "posts": 1,
+        "emv": 2135.5,
+        "engagementRate": 0.009965,
+        "lift": 1.783
+      },
+      {
+        "athlete": {
+          "name": "Colton Joseph",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 341.25,
+        "engagementRate": 0.001677,
+        "lift": -0.7846
+      },
+      {
+        "athlete": {
+          "name": "Koa Naotala",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 316,
+        "engagementRate": 0.00144,
+        "lift": -0.344
       },
       {
         "athlete": {
@@ -191,39 +211,19 @@
           "sport": "FOOTBALL"
         },
         "posts": 5,
-        "emv": 126.19,
-        "engagementRate": 0.002218,
+        "emv": 309.7,
+        "engagementRate": 0.001478,
         "lift": 0.5516
       },
       {
         "athlete": {
-          "name": "Dirrick Goodman",
+          "name": "Daevon Iles",
           "sport": "FOOTBALL"
         },
-        "posts": 3,
-        "emv": 57.41,
-        "engagementRate": 0.000017,
-        "lift": -0.6995
-      },
-      {
-        "athlete": {
-          "name": "Gabe Dombek",
-          "sport": "FOOTBALL"
-        },
-        "posts": 2,
-        "emv": 48.14,
-        "engagementRate": 0.000514,
-        "lift": -0.79
-      },
-      {
-        "athlete": {
-          "name": "Brandon Crutchfield",
-          "sport": "FOOTBALL"
-        },
-        "posts": 2,
-        "emv": 41.22,
-        "engagementRate": 0.000171,
-        "lift": -0.7972
+        "posts": 1,
+        "emv": 234,
+        "engagementRate": 0.000944,
+        "lift": 6.3243
       }
     ]
   }

@@ -1,0 +1,5357 @@
+{
+  "networkTotals": {
+    "overview": {
+      "schools": 27,
+      "totalFollowers": 35875601,
+      "uniqueAthletes": 8554,
+      "athletesWithContent": 7163,
+      "totalPosts": 98192,
+      "totalLikes": 132706867,
+      "totalComments": 3833315,
+      "totalEMV": 72103406,
+      "engagementRate": 0.0039
+    },
+    "brandDeals": {
+      "sponsoredPosts": 4966,
+      "uniqueBrands": 2143,
+      "sponsoredAthletes": 2388
+    },
+    "ipEffectiveness": {
+      "postsWithoutIP": 61031,
+      "postsWithIP": 37161,
+      "totalEngagementWithoutIP": 67357974,
+      "totalEngagementWithIP": 69182208,
+      "avgEngagementWithoutIP": 1103.67,
+      "avgEngagementWithIP": 1861.69,
+      "engagementLiftPercent": 68.68
+    },
+    "ipTypeBreakdown": {
+      "logo": {
+        "posts": 33850,
+        "totalEngagement": 61261116,
+        "avgEngagement": 1809.78,
+        "liftPercent": 63.98
+      },
+      "collaboration": {
+        "posts": 2945,
+        "totalEngagement": 11538302,
+        "avgEngagement": 3917.93,
+        "liftPercent": 254.99
+      },
+      "mention": {
+        "posts": 11868,
+        "totalEngagement": 23164857,
+        "avgEngagement": 1951.88,
+        "liftPercent": 76.85
+      }
+    },
+    "emvBreakdown": {
+      "totalEMV": 72103406,
+      "emvWithoutIP": 35840305,
+      "emvWithIP": 36263101,
+      "avgEMVPerPost": 734.31,
+      "avgEMVWithIP": 975.84,
+      "avgEMVWithoutIP": 587.25,
+      "emvLiftPercent": 66.17
+    },
+    "brandsUsingIPCount": 883
+  },
+  "schools": {
+    "Auburn University": {
+      "overview": {
+        "totalFollowers": 2323541,
+        "uniqueAthletes": 417,
+        "athletesWithContent": 384,
+        "totalPosts": 6405,
+        "totalLikes": 9148165,
+        "totalComments": 265034,
+        "totalEMV": 4971633.5,
+        "engagementRate": 0.0633
+      },
+      "brandDeals": {
+        "sponsoredPosts": 306,
+        "uniqueBrands": 164,
+        "sponsoredAthletes": 158
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 3326,
+        "postsWithIP": 3079,
+        "totalEngagementWithoutIP": 3288721,
+        "totalEngagementWithIP": 6124478,
+        "avgEngagementWithoutIP": 988.79,
+        "avgEngagementWithIP": 1989.11,
+        "engagementLiftPercent": 101.17
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 2564,
+          "totalEngagement": 5256580,
+          "avgEngagement": 2050.15,
+          "liftPercent": 107.34
+        },
+        "collaboration": {
+          "posts": 568,
+          "totalEngagement": 1635276,
+          "avgEngagement": 2879.01,
+          "liftPercent": 191.16
+        },
+        "mention": {
+          "posts": 1387,
+          "totalEngagement": 2671532,
+          "avgEngagement": 1926.12,
+          "liftPercent": 94.8
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 4971633.5,
+        "emvWithoutIP": 1768209.5,
+        "emvWithIP": 3203424,
+        "avgEMVPerPost": 776.21,
+        "avgEMVWithIP": 1040.41,
+        "avgEMVWithoutIP": 531.63,
+        "emvLiftPercent": 95.7
+      },
+      "topBrands": [
+        {
+          "name": "@oneman.us",
+          "posts": 1,
+          "engagement": 39009,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@on3recruits",
+          "posts": 1,
+          "engagement": 24218,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@wingstop",
+          "posts": 1,
+          "engagement": 22772,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@seatgeek",
+          "posts": 3,
+          "engagement": 19166,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@usnikefootball",
+          "posts": 1,
+          "engagement": 11368,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@dudewipes",
+          "posts": 2,
+          "engagement": 10510,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@drinkdripdrop",
+          "posts": 1,
+          "engagement": 10322,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@postgame.official",
+          "posts": 1,
+          "engagement": 8157,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@att",
+          "posts": 1,
+          "engagement": 7844,
+          "ipTypesUsed": [
+            "collaboration"
+          ]
+        },
+        {
+          "name": "@humanityandhope",
+          "posts": 2,
+          "engagement": 7752,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@inlinelighting",
+          "posts": 2,
+          "engagement": 7374,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@crocs",
+          "posts": 1,
+          "engagement": 7082,
+          "ipTypesUsed": [
+            "mention"
+          ]
+        },
+        {
+          "name": "@unbridledcouture",
+          "posts": 1,
+          "engagement": 6759,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@crackerbarrel",
+          "posts": 2,
+          "engagement": 6682,
+          "ipTypesUsed": [
+            "logo",
+            "collaboration"
+          ]
+        },
+        {
+          "name": "@auburnfootball",
+          "posts": 1,
+          "engagement": 5235,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@auburnthread",
+          "posts": 34,
+          "engagement": 4633,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@bcmegabasket",
+          "posts": 1,
+          "engagement": 4548,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@allstate",
+          "posts": 2,
+          "engagement": 4442,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@room2roommovers",
+          "posts": 3,
+          "engagement": 4363,
+          "ipTypesUsed": [
+            "mention"
+          ]
+        },
+        {
+          "name": "@easportscollege",
+          "posts": 1,
+          "engagement": 4280,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        }
+      ],
+      "brandsUsingIPCount": 66
+    },
+    "Baylor": {
+      "overview": {
+        "totalFollowers": 2109973,
+        "uniqueAthletes": 537,
+        "athletesWithContent": 421,
+        "totalPosts": 7298,
+        "totalLikes": 6937989,
+        "totalComments": 237326,
+        "totalEMV": 3824983.5,
+        "engagementRate": 0.0466
+      },
+      "brandDeals": {
+        "sponsoredPosts": 406,
+        "uniqueBrands": 226,
+        "sponsoredAthletes": 193
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 4003,
+        "postsWithIP": 3295,
+        "totalEngagementWithoutIP": 2839234,
+        "totalEngagementWithIP": 4336081,
+        "avgEngagementWithoutIP": 709.28,
+        "avgEngagementWithIP": 1315.96,
+        "engagementLiftPercent": 85.54
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 2995,
+          "totalEngagement": 3822081,
+          "avgEngagement": 1276.15,
+          "liftPercent": 79.92
+        },
+        "collaboration": {
+          "posts": 332,
+          "totalEngagement": 1298065,
+          "avgEngagement": 3909.83,
+          "liftPercent": 451.24
+        },
+        "mention": {
+          "posts": 1565,
+          "totalEngagement": 2956578,
+          "avgEngagement": 1889.19,
+          "liftPercent": 166.35
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 3824983.5,
+        "emvWithoutIP": 1536739,
+        "emvWithIP": 2288244.5,
+        "avgEMVPerPost": 524.11,
+        "avgEMVWithIP": 694.46,
+        "avgEMVWithoutIP": 383.9,
+        "emvLiftPercent": 80.9
+      },
+      "topBrands": [
+        {
+          "name": "@nikeeyb",
+          "posts": 1,
+          "engagement": 119855,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@on3recruits",
+          "posts": 2,
+          "engagement": 76926,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@nfinityshoes",
+          "posts": 1,
+          "engagement": 59829,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@nikebasketball",
+          "posts": 1,
+          "engagement": 56091,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@undrdogathletix",
+          "posts": 1,
+          "engagement": 19214,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@raid",
+          "posts": 5,
+          "engagement": 7983,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@armanibeauty",
+          "posts": 1,
+          "engagement": 6048,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@phenomelite",
+          "posts": 1,
+          "engagement": 5898,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@baylorthreads",
+          "posts": 56,
+          "engagement": 5559,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@ellechina",
+          "posts": 1,
+          "engagement": 4706,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@yeti",
+          "posts": 1,
+          "engagement": 4471,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@nashcampofficial",
+          "posts": 3,
+          "engagement": 3864,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@nike",
+          "posts": 4,
+          "engagement": 3851,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@nikerunning",
+          "posts": 1,
+          "engagement": 3540,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@lamborghini",
+          "posts": 1,
+          "engagement": 3518,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@usnikefootball",
+          "posts": 1,
+          "engagement": 3410,
+          "ipTypesUsed": [
+            "logo",
+            "collaboration"
+          ]
+        },
+        {
+          "name": "@baylor_plus",
+          "posts": 2,
+          "engagement": 3353,
+          "ipTypesUsed": [
+            "logo",
+            "collaboration",
+            "mention"
+          ]
+        },
+        {
+          "name": "@drinkolipop",
+          "posts": 16,
+          "engagement": 3292,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@bassproshops",
+          "posts": 1,
+          "engagement": 3277,
+          "ipTypesUsed": [
+            "logo",
+            "collaboration",
+            "mention"
+          ]
+        },
+        {
+          "name": "@on",
+          "posts": 4,
+          "engagement": 2922,
+          "ipTypesUsed": []
+        }
+      ],
+      "brandsUsingIPCount": 85
+    },
+    "Louisiana State University": {
+      "overview": {
+        "totalFollowers": 5170563,
+        "uniqueAthletes": 338,
+        "athletesWithContent": 306,
+        "totalPosts": 5454,
+        "totalLikes": 14209103,
+        "totalComments": 324737,
+        "totalEMV": 7591657,
+        "engagementRate": 0.0515
+      },
+      "brandDeals": {
+        "sponsoredPosts": 366,
+        "uniqueBrands": 219,
+        "sponsoredAthletes": 146
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 2940,
+        "postsWithIP": 2514,
+        "totalEngagementWithoutIP": 5531324,
+        "totalEngagementWithIP": 9002516,
+        "avgEngagementWithoutIP": 1881.4,
+        "avgEngagementWithIP": 3580.95,
+        "engagementLiftPercent": 90.33
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 2221,
+          "totalEngagement": 7884952,
+          "avgEngagement": 3550.18,
+          "liftPercent": 88.7
+        },
+        "collaboration": {
+          "posts": 178,
+          "totalEngagement": 1170082,
+          "avgEngagement": 6573.49,
+          "liftPercent": 249.39
+        },
+        "mention": {
+          "posts": 802,
+          "totalEngagement": 3182287,
+          "avgEngagement": 3967.94,
+          "liftPercent": 110.9
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 7591657,
+        "emvWithoutIP": 2910290,
+        "emvWithIP": 4681367,
+        "avgEMVPerPost": 1391.94,
+        "avgEMVWithIP": 1862.12,
+        "avgEMVWithoutIP": 989.89,
+        "emvLiftPercent": 88.11
+      },
+      "topBrands": [
+        {
+          "name": "@nike",
+          "posts": 11,
+          "engagement": 55825,
+          "ipTypesUsed": [
+            "logo",
+            "collaboration",
+            "mention"
+          ]
+        },
+        {
+          "name": "@audemarspiguet",
+          "posts": 1,
+          "engagement": 45795,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@walkons",
+          "posts": 2,
+          "engagement": 45728,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@invisalign",
+          "posts": 1,
+          "engagement": 37923,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@academy",
+          "posts": 2,
+          "engagement": 25547,
+          "ipTypesUsed": [
+            "collaboration",
+            "mention"
+          ]
+        },
+        {
+          "name": "@on3recruits",
+          "posts": 1,
+          "engagement": 24976,
+          "ipTypesUsed": [
+            "mention"
+          ]
+        },
+        {
+          "name": "@seatgeek",
+          "posts": 3,
+          "engagement": 21840,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@crocs",
+          "posts": 4,
+          "engagement": 15981,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@getgordon",
+          "posts": 9,
+          "engagement": 14610,
+          "ipTypesUsed": [
+            "mention",
+            "logo"
+          ]
+        },
+        {
+          "name": "@powerade_us",
+          "posts": 1,
+          "engagement": 14063,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@jumpman23",
+          "posts": 3,
+          "engagement": 13834,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@raisingcanes",
+          "posts": 4,
+          "engagement": 13152,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@dovemencare",
+          "posts": 3,
+          "engagement": 11935,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@lsuwbkb",
+          "posts": 1,
+          "engagement": 11193,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@kia",
+          "posts": 1,
+          "engagement": 11057,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@swipathefox",
+          "posts": 1,
+          "engagement": 7701,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@easportscollege",
+          "posts": 2,
+          "engagement": 7650,
+          "ipTypesUsed": [
+            "collaboration"
+          ]
+        },
+        {
+          "name": "@perfectgameusa",
+          "posts": 1,
+          "engagement": 5985,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@dickssportinggoods",
+          "posts": 8,
+          "engagement": 5900,
+          "ipTypesUsed": [
+            "mention",
+            "logo"
+          ]
+        },
+        {
+          "name": "@onwardreserve",
+          "posts": 1,
+          "engagement": 5821,
+          "ipTypesUsed": [
+            "mention"
+          ]
+        }
+      ],
+      "brandsUsingIPCount": 100
+    },
+    "Texas A&M": {
+      "overview": {
+        "totalFollowers": 1878601,
+        "uniqueAthletes": 293,
+        "athletesWithContent": 274,
+        "totalPosts": 4316,
+        "totalLikes": 8154008,
+        "totalComments": 169923,
+        "totalEMV": 4331888.5,
+        "engagementRate": 0.1027
+      },
+      "brandDeals": {
+        "sponsoredPosts": 281,
+        "uniqueBrands": 163,
+        "sponsoredAthletes": 121
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 2096,
+        "postsWithIP": 2220,
+        "totalEngagementWithoutIP": 2190784,
+        "totalEngagementWithIP": 6133147,
+        "avgEngagementWithoutIP": 1045.22,
+        "avgEngagementWithIP": 2762.68,
+        "engagementLiftPercent": 164.32
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 2022,
+          "totalEngagement": 5016270,
+          "avgEngagement": 2480.85,
+          "liftPercent": 137.35
+        },
+        "collaboration": {
+          "posts": 138,
+          "totalEngagement": 834305,
+          "avgEngagement": 6045.69,
+          "liftPercent": 478.41
+        },
+        "mention": {
+          "posts": 855,
+          "totalEngagement": 3272140,
+          "avgEngagement": 3827.06,
+          "liftPercent": 266.15
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 4331888.5,
+        "emvWithoutIP": 1164995,
+        "emvWithIP": 3166893.5,
+        "avgEMVPerPost": 1003.68,
+        "avgEMVWithIP": 1426.53,
+        "avgEMVWithoutIP": 555.82,
+        "emvLiftPercent": 156.65
+      },
+      "topBrands": [
+        {
+          "name": "@brookshirebrothers",
+          "posts": 1,
+          "engagement": 58856,
+          "ipTypesUsed": [
+            "mention"
+          ]
+        },
+        {
+          "name": "@thefamilie_",
+          "posts": 1,
+          "engagement": 49822,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@wellsfargo",
+          "posts": 3,
+          "engagement": 30364,
+          "ipTypesUsed": [
+            "mention",
+            "logo"
+          ]
+        },
+        {
+          "name": "@sonicdrivein",
+          "posts": 3,
+          "engagement": 19111,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@survivorcbs",
+          "posts": 1,
+          "engagement": 17288,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@citrusbowl",
+          "posts": 1,
+          "engagement": 16584,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@portersdiningbar",
+          "posts": 1,
+          "engagement": 16075,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@lvbowl",
+          "posts": 1,
+          "engagement": 12729,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@adidas",
+          "posts": 10,
+          "engagement": 11344,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@anwagolf",
+          "posts": 3,
+          "engagement": 9177,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@texasfarmbureau",
+          "posts": 1,
+          "engagement": 9131,
+          "ipTypesUsed": [
+            "logo",
+            "collaboration",
+            "mention"
+          ]
+        },
+        {
+          "name": "12thmanfoundation",
+          "posts": 3,
+          "engagement": 9039,
+          "ipTypesUsed": [
+            "collaboration",
+            "mention",
+            "logo"
+          ]
+        },
+        {
+          "name": "@adidasusfootball",
+          "posts": 5,
+          "engagement": 8510,
+          "ipTypesUsed": [
+            "mention",
+            "logo"
+          ]
+        },
+        {
+          "name": "@craverrr",
+          "posts": 1,
+          "engagement": 7791,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@optimum",
+          "posts": 3,
+          "engagement": 7509,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@rhoback",
+          "posts": 2,
+          "engagement": 6314,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@dollarshaveclub",
+          "posts": 4,
+          "engagement": 6191,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@7eleven",
+          "posts": 2,
+          "engagement": 5755,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@capitolranch",
+          "posts": 2,
+          "engagement": 5602,
+          "ipTypesUsed": [
+            "mention"
+          ]
+        },
+        {
+          "name": "@callawaygolf",
+          "posts": 2,
+          "engagement": 5509,
+          "ipTypesUsed": []
+        }
+      ],
+      "brandsUsingIPCount": 80
+    },
+    "University of Central Florida": {
+      "overview": {
+        "totalFollowers": 1202431,
+        "uniqueAthletes": 178,
+        "athletesWithContent": 170,
+        "totalPosts": 2409,
+        "totalLikes": 2897005,
+        "totalComments": 110739,
+        "totalEMV": 1614611,
+        "engagementRate": 0.1038
+      },
+      "brandDeals": {
+        "sponsoredPosts": 164,
+        "uniqueBrands": 75,
+        "sponsoredAthletes": 80
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 1342,
+        "postsWithIP": 1067,
+        "totalEngagementWithoutIP": 1773971,
+        "totalEngagementWithIP": 1233773,
+        "avgEngagementWithoutIP": 1321.89,
+        "avgEngagementWithIP": 1156.3,
+        "engagementLiftPercent": -12.53
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 975,
+          "totalEngagement": 1059985,
+          "avgEngagement": 1087.16,
+          "liftPercent": -17.76
+        },
+        "collaboration": {
+          "posts": 170,
+          "totalEngagement": 368557,
+          "avgEngagement": 2167.98,
+          "liftPercent": 64.01
+        },
+        "mention": {
+          "posts": 193,
+          "totalEngagement": 246006,
+          "avgEngagement": 1274.64,
+          "liftPercent": -3.57
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 1614611,
+        "emvWithoutIP": 947492.5,
+        "emvWithIP": 667118.5,
+        "avgEMVPerPost": 670.24,
+        "avgEMVWithIP": 625.23,
+        "avgEMVWithoutIP": 706.03,
+        "emvLiftPercent": -11.44
+      },
+      "topBrands": [
+        {
+          "name": "@ShopIDC",
+          "posts": 1,
+          "engagement": 5249,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@kiausa",
+          "posts": 3,
+          "engagement": 3891,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@powerade_us",
+          "posts": 2,
+          "engagement": 3005,
+          "ipTypesUsed": [
+            "collaboration",
+            "logo"
+          ]
+        },
+        {
+          "name": "@threatlocker",
+          "posts": 2,
+          "engagement": 2552,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@raisingcanes",
+          "posts": 6,
+          "engagement": 2469,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@ucfthreads",
+          "posts": 23,
+          "engagement": 2446,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@TitosVodka",
+          "posts": 1,
+          "engagement": 2257,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@nobull",
+          "posts": 13,
+          "engagement": 1792,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@phillips66gas",
+          "posts": 4,
+          "engagement": 1694,
+          "ipTypesUsed": [
+            "logo",
+            "collaboration"
+          ]
+        },
+        {
+          "name": "dalton.riggs",
+          "posts": 1,
+          "engagement": 1479,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@millersalehouse",
+          "posts": 5,
+          "engagement": 1474,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@rockinprotein",
+          "posts": 1,
+          "engagement": 1160,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@vukgripz",
+          "posts": 1,
+          "engagement": 1155,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@incrediwear",
+          "posts": 5,
+          "engagement": 1068,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@recruitgfx",
+          "posts": 1,
+          "engagement": 950,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@daves_pest_control",
+          "posts": 2,
+          "engagement": 864,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "ucf.volleyball",
+          "posts": 1,
+          "engagement": 843,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@drinkolipop",
+          "posts": 3,
+          "engagement": 827,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@snaggedbaitshop",
+          "posts": 2,
+          "engagement": 753,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@vuoriclothing",
+          "posts": 4,
+          "engagement": 736,
+          "ipTypesUsed": []
+        }
+      ],
+      "brandsUsingIPCount": 32
+    },
+    "Washington State": {
+      "overview": {
+        "totalFollowers": 186487,
+        "uniqueAthletes": 375,
+        "athletesWithContent": 79,
+        "totalPosts": 948,
+        "totalLikes": 540083,
+        "totalComments": 37205,
+        "totalEMV": 325849,
+        "engagementRate": 0.3265
+      },
+      "brandDeals": {
+        "sponsoredPosts": 43,
+        "uniqueBrands": 30,
+        "sponsoredAthletes": 24
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 470,
+        "postsWithIP": 478,
+        "totalEngagementWithoutIP": 214168,
+        "totalEngagementWithIP": 363120,
+        "avgEngagementWithoutIP": 455.68,
+        "avgEngagementWithIP": 759.67,
+        "engagementLiftPercent": 66.71
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 437,
+          "totalEngagement": 339044,
+          "avgEngagement": 775.84,
+          "liftPercent": 70.26
+        },
+        "collaboration": {
+          "posts": 45,
+          "totalEngagement": 67204,
+          "avgEngagement": 1493.42,
+          "liftPercent": 227.74
+        },
+        "mention": {
+          "posts": 184,
+          "totalEngagement": 172105,
+          "avgEngagement": 935.35,
+          "liftPercent": 105.27
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 325849,
+        "emvWithoutIP": 123588,
+        "emvWithIP": 202261,
+        "avgEMVPerPost": 343.72,
+        "avgEMVWithIP": 423.14,
+        "avgEMVWithoutIP": 262.95,
+        "emvLiftPercent": 60.92
+      },
+      "topBrands": [
+        {
+          "name": "@mcdonaldsinlandnw",
+          "posts": 3,
+          "engagement": 14526,
+          "ipTypesUsed": [
+            "logo",
+            "mention",
+            "collaboration"
+          ]
+        },
+        {
+          "name": "@allstate",
+          "posts": 1,
+          "engagement": 1565,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@washingtonstatethreads",
+          "posts": 10,
+          "engagement": 1275,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@baloncestoesp",
+          "posts": 1,
+          "engagement": 1275,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "rutgerson3",
+          "posts": 1,
+          "engagement": 1241,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@aceglass21",
+          "posts": 1,
+          "engagement": 597,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@gatorade",
+          "posts": 1,
+          "engagement": 592,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@adidasfballus",
+          "posts": 1,
+          "engagement": 445,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@dutchbros",
+          "posts": 1,
+          "engagement": 388,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@playtoscoresportsgear",
+          "posts": 1,
+          "engagement": 234,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@myhappycurves_",
+          "posts": 2,
+          "engagement": 226,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@nil_threads",
+          "posts": 1,
+          "engagement": 222,
+          "ipTypesUsed": [
+            "mention"
+          ]
+        },
+        {
+          "name": "@teamvktry",
+          "posts": 1,
+          "engagement": 214,
+          "ipTypesUsed": [
+            "mention"
+          ]
+        },
+        {
+          "name": "@clutchicons",
+          "posts": 2,
+          "engagement": 146,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@hudson_cedarland",
+          "posts": 1,
+          "engagement": 137,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@marketpryce",
+          "posts": 1,
+          "engagement": 110,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@myplayerathlete",
+          "posts": 1,
+          "engagement": 103,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@getjams",
+          "posts": 1,
+          "engagement": 85,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@cardstockexchange",
+          "posts": 1,
+          "engagement": 71,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@getjoggy",
+          "posts": 1,
+          "engagement": 69,
+          "ipTypesUsed": [
+            "mention"
+          ]
+        }
+      ],
+      "brandsUsingIPCount": 16
+    },
+    "University of Nebraska": {
+      "overview": {
+        "totalFollowers": 3126161,
+        "uniqueAthletes": 273,
+        "athletesWithContent": 255,
+        "totalPosts": 4026,
+        "totalLikes": 13802888,
+        "totalComments": 147403,
+        "totalEMV": 7122548.5,
+        "engagementRate": 0.1108
+      },
+      "brandDeals": {
+        "sponsoredPosts": 354,
+        "uniqueBrands": 155,
+        "sponsoredAthletes": 124
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 1979,
+        "postsWithIP": 2047,
+        "totalEngagementWithoutIP": 4996786,
+        "totalEngagementWithIP": 8953505,
+        "avgEngagementWithoutIP": 2524.9,
+        "avgEngagementWithIP": 4373.96,
+        "engagementLiftPercent": 73.23
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 1911,
+          "totalEngagement": 8249964,
+          "avgEngagement": 4317.09,
+          "liftPercent": 70.98
+        },
+        "collaboration": {
+          "posts": 118,
+          "totalEngagement": 1030018,
+          "avgEngagement": 8728.97,
+          "liftPercent": 245.71
+        },
+        "mention": {
+          "posts": 618,
+          "totalEngagement": 3038250,
+          "avgEngagement": 4916.26,
+          "liftPercent": 94.71
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 7122548.5,
+        "emvWithoutIP": 2561082,
+        "emvWithIP": 4561466.5,
+        "avgEMVPerPost": 1769.14,
+        "avgEMVWithIP": 2228.37,
+        "avgEMVWithoutIP": 1294.13,
+        "emvLiftPercent": 72.19
+      },
+      "topBrands": [
+        {
+          "name": "@huskerfootball",
+          "posts": 2,
+          "engagement": 94959,
+          "ipTypesUsed": [
+            "logo",
+            "collaboration",
+            "mention"
+          ]
+        },
+        {
+          "name": "@victoryplustv",
+          "posts": 1,
+          "engagement": 68309,
+          "ipTypesUsed": [
+            "collaboration"
+          ]
+        },
+        {
+          "name": "@teamavoli",
+          "posts": 3,
+          "engagement": 57040,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@ashandash.co",
+          "posts": 1,
+          "engagement": 47089,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@ipsy",
+          "posts": 10,
+          "engagement": 46680,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@luxuryautomall",
+          "posts": 1,
+          "engagement": 45788,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@she.sports.inc",
+          "posts": 2,
+          "engagement": 45196,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@adidas",
+          "posts": 10,
+          "engagement": 40464,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@huskervb",
+          "posts": 1,
+          "engagement": 33059,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@hamiltonbusinesstechnologies",
+          "posts": 6,
+          "engagement": 32751,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@Dove",
+          "posts": 2,
+          "engagement": 31892,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@redbullusa",
+          "posts": 2,
+          "engagement": 28252,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@on3recruits",
+          "posts": 1,
+          "engagement": 27564,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@lovbmad",
+          "posts": 1,
+          "engagement": 26723,
+          "ipTypesUsed": [
+            "mention"
+          ]
+        },
+        {
+          "name": "@mizunofastpitchusa",
+          "posts": 2,
+          "engagement": 25580,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@teamvktry",
+          "posts": 9,
+          "engagement": 22068,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@countrytireautomotive",
+          "posts": 1,
+          "engagement": 20395,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@huskermbb",
+          "posts": 4,
+          "engagement": 19516,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@flexworkmgt",
+          "posts": 1,
+          "engagement": 19502,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@abbottglobal",
+          "posts": 2,
+          "engagement": 17468,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        }
+      ],
+      "brandsUsingIPCount": 69
+    },
+    "Michigan State": {
+      "overview": {
+        "totalFollowers": 0,
+        "uniqueAthletes": 0,
+        "athletesWithContent": 185,
+        "totalPosts": 2867,
+        "totalLikes": 2994108,
+        "totalComments": 108281,
+        "totalEMV": 1659475.5,
+        "engagementRate": 0
+      },
+      "brandDeals": {
+        "sponsoredPosts": 258,
+        "uniqueBrands": 91,
+        "sponsoredAthletes": 87
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 1569,
+        "postsWithIP": 1298,
+        "totalEngagementWithoutIP": 1161129,
+        "totalEngagementWithIP": 1941260,
+        "avgEngagementWithoutIP": 740.04,
+        "avgEngagementWithIP": 1495.58,
+        "engagementLiftPercent": 102.09
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 1149,
+          "totalEngagement": 1693757,
+          "avgEngagement": 1474.11,
+          "liftPercent": 99.19
+        },
+        "collaboration": {
+          "posts": 113,
+          "totalEngagement": 360971,
+          "avgEngagement": 3194.43,
+          "liftPercent": 331.65
+        },
+        "mention": {
+          "posts": 446,
+          "totalEngagement": 702707,
+          "avgEngagement": 1575.58,
+          "liftPercent": 112.9
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 1659475.5,
+        "emvWithoutIP": 632430.5,
+        "emvWithIP": 1027045,
+        "avgEMVPerPost": 578.82,
+        "avgEMVWithIP": 791.25,
+        "avgEMVWithoutIP": 403.08,
+        "emvLiftPercent": 96.3
+      },
+      "topBrands": [
+        {
+          "name": "@on3recruits",
+          "posts": 1,
+          "engagement": 29382,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@msufcu",
+          "posts": 51,
+          "engagement": 16645,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@mission",
+          "posts": 2,
+          "engagement": 6923,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "seatgeek",
+          "posts": 1,
+          "engagement": 5925,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "hapmichigan",
+          "posts": 1,
+          "engagement": 5534,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@usglove",
+          "posts": 2,
+          "engagement": 5375,
+          "ipTypesUsed": [
+            "mention",
+            "logo"
+          ]
+        },
+        {
+          "name": "@hapmichigan",
+          "posts": 1,
+          "engagement": 4725,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@c4energy",
+          "posts": 13,
+          "engagement": 3654,
+          "ipTypesUsed": [
+            "mention",
+            "logo"
+          ]
+        },
+        {
+          "name": "msu_football",
+          "posts": 2,
+          "engagement": 3651,
+          "ipTypesUsed": [
+            "logo",
+            "collaboration",
+            "mention"
+          ]
+        },
+        {
+          "name": "@snackfanatics",
+          "posts": 1,
+          "engagement": 3373,
+          "ipTypesUsed": [
+            "mention"
+          ]
+        },
+        {
+          "name": "@dripathletes",
+          "posts": 1,
+          "engagement": 3282,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@charitablegiftamerica",
+          "posts": 16,
+          "engagement": 3240,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@hollister",
+          "posts": 12,
+          "engagement": 2524,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@_houseoflavish",
+          "posts": 1,
+          "engagement": 2218,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@scottre_humphrey",
+          "posts": 1,
+          "engagement": 2150,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@capitolhoops",
+          "posts": 1,
+          "engagement": 2085,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@homefieldapparel",
+          "posts": 1,
+          "engagement": 1685,
+          "ipTypesUsed": [
+            "mention"
+          ]
+        },
+        {
+          "name": "@thrivbio",
+          "posts": 1,
+          "engagement": 1203,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@seatgeek",
+          "posts": 1,
+          "engagement": 1150,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@actiontreksperu",
+          "posts": 1,
+          "engagement": 1147,
+          "ipTypesUsed": []
+        }
+      ],
+      "brandsUsingIPCount": 55
+    },
+    "Penn State University": {
+      "overview": {
+        "totalFollowers": 4114531,
+        "uniqueAthletes": 699,
+        "athletesWithContent": 572,
+        "totalPosts": 8247,
+        "totalLikes": 15331527,
+        "totalComments": 316825,
+        "totalEMV": 8141001,
+        "engagementRate": 0.0461
+      },
+      "brandDeals": {
+        "sponsoredPosts": 459,
+        "uniqueBrands": 280,
+        "sponsoredAthletes": 215
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 4656,
+        "postsWithIP": 3591,
+        "totalEngagementWithoutIP": 6190500,
+        "totalEngagementWithIP": 9457852,
+        "avgEngagementWithoutIP": 1329.57,
+        "avgEngagementWithIP": 2633.77,
+        "engagementLiftPercent": 98.09
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 3273,
+          "totalEngagement": 8795910,
+          "avgEngagement": 2687.42,
+          "liftPercent": 102.13
+        },
+        "collaboration": {
+          "posts": 172,
+          "totalEngagement": 920619,
+          "avgEngagement": 5352.44,
+          "liftPercent": 302.57
+        },
+        "mention": {
+          "posts": 1384,
+          "totalEngagement": 3108540,
+          "avgEngagement": 2246.05,
+          "liftPercent": 68.93
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 8141001,
+        "emvWithoutIP": 3241996,
+        "emvWithIP": 4899005,
+        "avgEMVPerPost": 987.15,
+        "avgEMVWithIP": 1364.25,
+        "avgEMVWithoutIP": 696.3,
+        "emvLiftPercent": 95.93
+      },
+      "topBrands": [
+        {
+          "name": "@c4energy",
+          "posts": 2,
+          "engagement": 63791,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@tmobile",
+          "posts": 1,
+          "engagement": 35660,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@foxnation",
+          "posts": 2,
+          "engagement": 27930,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@americaneagle",
+          "posts": 2,
+          "engagement": 26688,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@easportsnhl",
+          "posts": 1,
+          "engagement": 24048,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@LiamCliff2",
+          "posts": 1,
+          "engagement": 17717,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@OlaivaVega_",
+          "posts": 1,
+          "engagement": 17416,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@gymshark",
+          "posts": 1,
+          "engagement": 15201,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@on3recruits",
+          "posts": 1,
+          "engagement": 14878,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@Wuerffel_Trophy",
+          "posts": 2,
+          "engagement": 11046,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@pennstatetfxc",
+          "posts": 1,
+          "engagement": 8802,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@gianarosecouture",
+          "posts": 1,
+          "engagement": 8041,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@arenastore_cl",
+          "posts": 3,
+          "engagement": 7678,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@sohoodie",
+          "posts": 1,
+          "engagement": 7530,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@rhoback",
+          "posts": 4,
+          "engagement": 7029,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@hollister",
+          "posts": 19,
+          "engagement": 6963,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@evo_gymnastics",
+          "posts": 1,
+          "engagement": 6119,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@Pepsi",
+          "posts": 1,
+          "engagement": 6088,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@primalharvest",
+          "posts": 1,
+          "engagement": 5396,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "happyvalleyutd",
+          "posts": 1,
+          "engagement": 5370,
+          "ipTypesUsed": [
+            "logo",
+            "collaboration",
+            "mention"
+          ]
+        }
+      ],
+      "brandsUsingIPCount": 116
+    },
+    "University of Virginia": {
+      "overview": {
+        "totalFollowers": 2044598,
+        "uniqueAthletes": 683,
+        "athletesWithContent": 468,
+        "totalPosts": 6496,
+        "totalLikes": 11697311,
+        "totalComments": 276144,
+        "totalEMV": 6262871.5,
+        "engagementRate": 0.0901
+      },
+      "brandDeals": {
+        "sponsoredPosts": 299,
+        "uniqueBrands": 178,
+        "sponsoredAthletes": 158
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 3897,
+        "postsWithIP": 2599,
+        "totalEngagementWithoutIP": 7215088,
+        "totalEngagementWithIP": 4758367,
+        "avgEngagementWithoutIP": 1851.45,
+        "avgEngagementWithIP": 1830.85,
+        "engagementLiftPercent": -1.11
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 2412,
+          "totalEngagement": 4580247,
+          "avgEngagement": 1898.94,
+          "liftPercent": 2.57
+        },
+        "collaboration": {
+          "posts": 89,
+          "totalEngagement": 172584,
+          "avgEngagement": 1939.15,
+          "liftPercent": 4.74
+        },
+        "mention": {
+          "posts": 1070,
+          "totalEngagement": 1141833,
+          "avgEngagement": 1067.13,
+          "liftPercent": -42.36
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 6262871.5,
+        "emvWithoutIP": 3758586,
+        "emvWithIP": 2504285.5,
+        "avgEMVPerPost": 964.11,
+        "avgEMVWithIP": 963.56,
+        "avgEMVWithoutIP": 964.48,
+        "emvLiftPercent": -0.1
+      },
+      "topBrands": [
+        {
+          "name": "@athletenarrative",
+          "posts": 1,
+          "engagement": 1123419,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@ussteelcorp",
+          "posts": 1,
+          "engagement": 504972,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@dominionenergy",
+          "posts": 11,
+          "engagement": 62102,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@arenaracing",
+          "posts": 2,
+          "engagement": 41025,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@arenainternational",
+          "posts": 3,
+          "engagement": 18384,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@cliffkeenathletic",
+          "posts": 1,
+          "engagement": 16051,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@arenausa",
+          "posts": 1,
+          "engagement": 14767,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@tyrsport",
+          "posts": 4,
+          "engagement": 11791,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@accnetwork",
+          "posts": 1,
+          "engagement": 11525,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@mcdlacrosse",
+          "posts": 1,
+          "engagement": 10505,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@ecdlax",
+          "posts": 2,
+          "engagement": 9143,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@nevadastatebank",
+          "posts": 4,
+          "engagement": 8391,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@risingballersusa",
+          "posts": 1,
+          "engagement": 6496,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@brooksrunning",
+          "posts": 3,
+          "engagement": 6330,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@titleist",
+          "posts": 1,
+          "engagement": 6006,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@nikesportswear",
+          "posts": 1,
+          "engagement": 5601,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@hoka",
+          "posts": 1,
+          "engagement": 5140,
+          "ipTypesUsed": [
+            "logo",
+            "collaboration"
+          ]
+        },
+        {
+          "name": "@spaldingboyslax",
+          "posts": 1,
+          "engagement": 5031,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@maurten_official",
+          "posts": 2,
+          "engagement": 4227,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@getgamechanger",
+          "posts": 1,
+          "engagement": 4062,
+          "ipTypesUsed": []
+        }
+      ],
+      "brandsUsingIPCount": 62
+    },
+    "University of Maryland": {
+      "overview": {
+        "totalFollowers": 0,
+        "uniqueAthletes": 0,
+        "athletesWithContent": 204,
+        "totalPosts": 2392,
+        "totalLikes": 1576319,
+        "totalComments": 98146,
+        "totalEMV": 935378.5,
+        "engagementRate": 0
+      },
+      "brandDeals": {
+        "sponsoredPosts": 97,
+        "uniqueBrands": 67,
+        "sponsoredAthletes": 64
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 1186,
+        "postsWithIP": 1206,
+        "totalEngagementWithoutIP": 636084,
+        "totalEngagementWithIP": 1038381,
+        "avgEngagementWithoutIP": 536.33,
+        "avgEngagementWithIP": 861.01,
+        "engagementLiftPercent": 60.54
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 1131,
+          "totalEngagement": 993847,
+          "avgEngagement": 878.73,
+          "liftPercent": 63.84
+        },
+        "collaboration": {
+          "posts": 67,
+          "totalEngagement": 113350,
+          "avgEngagement": 1691.79,
+          "liftPercent": 215.44
+        },
+        "mention": {
+          "posts": 392,
+          "totalEngagement": 400314,
+          "avgEngagement": 1021.21,
+          "liftPercent": 90.41
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 935378.5,
+        "emvWithoutIP": 361353,
+        "emvWithIP": 574025.5,
+        "avgEMVPerPost": 391.04,
+        "avgEMVWithIP": 475.97,
+        "avgEMVWithoutIP": 304.68,
+        "emvLiftPercent": 56.22
+      },
+      "topBrands": [
+        {
+          "name": "@on3recruits",
+          "posts": 1,
+          "engagement": 21238,
+          "ipTypesUsed": [
+            "logo",
+            "collaboration",
+            "mention"
+          ]
+        },
+        {
+          "name": "@brownboy.nation",
+          "posts": 3,
+          "engagement": 2257,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "terpswbb",
+          "posts": 6,
+          "engagement": 2224,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@crocs",
+          "posts": 1,
+          "engagement": 1917,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@nikeeyb",
+          "posts": 1,
+          "engagement": 1684,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@herculesfence",
+          "posts": 3,
+          "engagement": 1380,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@nexupbaseball",
+          "posts": 2,
+          "engagement": 1338,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@marylandthreadss",
+          "posts": 12,
+          "engagement": 1251,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@fifththirdbank",
+          "posts": 1,
+          "engagement": 1037,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "marylandterrapins",
+          "posts": 1,
+          "engagement": 983,
+          "ipTypesUsed": [
+            "logo",
+            "collaboration"
+          ]
+        },
+        {
+          "name": "@heyymountain",
+          "posts": 1,
+          "engagement": 963,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@marylandterrapins",
+          "posts": 1,
+          "engagement": 955,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@eastonbaseball",
+          "posts": 1,
+          "engagement": 948,
+          "ipTypesUsed": [
+            "logo",
+            "collaboration",
+            "mention"
+          ]
+        },
+        {
+          "name": "@terrapinhoops",
+          "posts": 1,
+          "engagement": 807,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@herbalife24",
+          "posts": 1,
+          "engagement": 748,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@chc.baseball",
+          "posts": 1,
+          "engagement": 709,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@atworthapartments",
+          "posts": 1,
+          "engagement": 696,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@topps",
+          "posts": 1,
+          "engagement": 680,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@brotherton_cadillac",
+          "posts": 1,
+          "engagement": 395,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@terpsfootball",
+          "posts": 2,
+          "engagement": 381,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        }
+      ],
+      "brandsUsingIPCount": 31
+    },
+    "Virginia Tech": {
+      "overview": {
+        "totalFollowers": 1872167,
+        "uniqueAthletes": 509,
+        "athletesWithContent": 367,
+        "totalPosts": 3978,
+        "totalLikes": 2895044,
+        "totalComments": 147910,
+        "totalEMV": 1669387,
+        "engagementRate": 0.0409
+      },
+      "brandDeals": {
+        "sponsoredPosts": 119,
+        "uniqueBrands": 82,
+        "sponsoredAthletes": 85
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 1937,
+        "postsWithIP": 2041,
+        "totalEngagementWithoutIP": 1185892,
+        "totalEngagementWithIP": 1857062,
+        "avgEngagementWithoutIP": 612.23,
+        "avgEngagementWithIP": 909.88,
+        "engagementLiftPercent": 48.62
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 1927,
+          "totalEngagement": 1795183,
+          "avgEngagement": 931.59,
+          "liftPercent": 52.16
+        },
+        "collaboration": {
+          "posts": 4,
+          "totalEngagement": 3840,
+          "avgEngagement": 960,
+          "liftPercent": 56.8
+        },
+        "mention": {
+          "posts": 605,
+          "totalEngagement": 615245,
+          "avgEngagement": 1016.93,
+          "liftPercent": 66.1
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 1669387,
+        "emvWithoutIP": 660634,
+        "emvWithIP": 1008753,
+        "avgEMVPerPost": 419.65,
+        "avgEMVWithIP": 494.24,
+        "avgEMVWithoutIP": 341.06,
+        "emvLiftPercent": 44.91
+      },
+      "topBrands": [
+        {
+          "name": "@flowrestling",
+          "posts": 1,
+          "engagement": 7326,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@carilionclinic",
+          "posts": 5,
+          "engagement": 6912,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@paycomsoftware",
+          "posts": 1,
+          "engagement": 6569,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@vafarmbureau",
+          "posts": 4,
+          "engagement": 4021,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@kyrondrones",
+          "posts": 1,
+          "engagement": 3180,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@siriusxm",
+          "posts": 1,
+          "engagement": 2566,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "tmobile",
+          "posts": 1,
+          "engagement": 1945,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "coxcommunications",
+          "posts": 5,
+          "engagement": 1871,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "carilionclinic",
+          "posts": 1,
+          "engagement": 1632,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@nike_wrestling",
+          "posts": 1,
+          "engagement": 1456,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@shrewdoutdoorsva",
+          "posts": 3,
+          "engagement": 1293,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@life_ring_foundation",
+          "posts": 3,
+          "engagement": 1065,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "adidasfootball",
+          "posts": 1,
+          "engagement": 969,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@kinatraxinc",
+          "posts": 1,
+          "engagement": 962,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@reeses",
+          "posts": 1,
+          "engagement": 926,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@gatorade",
+          "posts": 1,
+          "engagement": 809,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@carterbank",
+          "posts": 1,
+          "engagement": 801,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@shockdoctor",
+          "posts": 1,
+          "engagement": 765,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@virginiatechthreads",
+          "posts": 6,
+          "engagement": 717,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@nintendo",
+          "posts": 1,
+          "engagement": 711,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        }
+      ],
+      "brandsUsingIPCount": 46
+    },
+    "George Mason": {
+      "overview": {
+        "totalFollowers": 0,
+        "uniqueAthletes": 0,
+        "athletesWithContent": 204,
+        "totalPosts": 1959,
+        "totalLikes": 578267,
+        "totalComments": 55419,
+        "totalEMV": 372262,
+        "engagementRate": 0
+      },
+      "brandDeals": {
+        "sponsoredPosts": 5,
+        "uniqueBrands": 2,
+        "sponsoredAthletes": 4
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 1296,
+        "postsWithIP": 663,
+        "totalEngagementWithoutIP": 360389,
+        "totalEngagementWithIP": 273297,
+        "avgEngagementWithoutIP": 278.08,
+        "avgEngagementWithIP": 412.21,
+        "engagementLiftPercent": 48.24
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 634,
+          "totalEngagement": 264543,
+          "avgEngagement": 417.26,
+          "liftPercent": 50.05
+        },
+        "collaboration": {
+          "posts": 5,
+          "totalEngagement": 1393,
+          "avgEngagement": 278.6,
+          "liftPercent": 0.19
+        },
+        "mention": {
+          "posts": 235,
+          "totalEngagement": 95948,
+          "avgEngagement": 408.29,
+          "liftPercent": 46.83
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 372262,
+        "emvWithoutIP": 214417.5,
+        "emvWithIP": 157844.5,
+        "avgEMVPerPost": 190.03,
+        "avgEMVWithIP": 238.08,
+        "avgEMVWithoutIP": 165.45,
+        "emvLiftPercent": 43.9
+      },
+      "topBrands": [
+        {
+          "name": "@ornery_beer_public_house",
+          "posts": 1,
+          "engagement": 171,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@aiavitalitynz",
+          "posts": 1,
+          "engagement": 89,
+          "ipTypesUsed": []
+        }
+      ],
+      "brandsUsingIPCount": 0
+    },
+    "Old Dominion University": {
+      "overview": {
+        "totalFollowers": 406916,
+        "uniqueAthletes": 155,
+        "athletesWithContent": 137,
+        "totalPosts": 1577,
+        "totalLikes": 2319020,
+        "totalComments": 58050,
+        "totalEMV": 1246585,
+        "engagementRate": 0.3704
+      },
+      "brandDeals": {
+        "sponsoredPosts": 84,
+        "uniqueBrands": 29,
+        "sponsoredAthletes": 59
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 630,
+        "postsWithIP": 947,
+        "totalEngagementWithoutIP": 1943435,
+        "totalEngagementWithIP": 433635,
+        "avgEngagementWithoutIP": 3084.82,
+        "avgEngagementWithIP": 457.9,
+        "engagementLiftPercent": -85.16
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 912,
+          "totalEngagement": 408468,
+          "avgEngagement": 447.88,
+          "liftPercent": -85.48
+        },
+        "collaboration": {
+          "posts": 21,
+          "totalEngagement": 29310,
+          "avgEngagement": 1395.71,
+          "liftPercent": -54.76
+        },
+        "mention": {
+          "posts": 229,
+          "totalEngagement": 111199,
+          "avgEngagement": 485.59,
+          "liftPercent": -84.26
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 1246585,
+        "emvWithoutIP": 996990.5,
+        "emvWithIP": 249594.5,
+        "avgEMVPerPost": 790.48,
+        "avgEMVWithIP": 263.56,
+        "avgEMVWithoutIP": 1582.52,
+        "emvLiftPercent": -83.35
+      },
+      "topBrands": [
+        {
+          "name": "@EASPORTSCollege",
+          "posts": 1,
+          "engagement": 4055,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@dickshouseofsport",
+          "posts": 2,
+          "engagement": 2690,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@popeyes",
+          "posts": 2,
+          "engagement": 1365,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@olddominionthreads",
+          "posts": 23,
+          "engagement": 1132,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@underarmour",
+          "posts": 18,
+          "engagement": 941,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@r0be4t",
+          "posts": 2,
+          "engagement": 724,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@theprideofodu",
+          "posts": 1,
+          "engagement": 586,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@lovesupremacy_",
+          "posts": 4,
+          "engagement": 526,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@thenilrealestate",
+          "posts": 2,
+          "engagement": 482,
+          "ipTypesUsed": [
+            "mention"
+          ]
+        },
+        {
+          "name": "@odu_nilhub",
+          "posts": 2,
+          "engagement": 430,
+          "ipTypesUsed": [
+            "mention",
+            "logo"
+          ]
+        },
+        {
+          "name": "@atlasempowersports",
+          "posts": 1,
+          "engagement": 427,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@odufootball",
+          "posts": 1,
+          "engagement": 384,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@chevy",
+          "posts": 1,
+          "engagement": 314,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "odufootball",
+          "posts": 1,
+          "engagement": 293,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@defeatxsports",
+          "posts": 1,
+          "engagement": 272,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@odu_wbb",
+          "posts": 1,
+          "engagement": 248,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@hardees",
+          "posts": 1,
+          "engagement": 165,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@aldis",
+          "posts": 2,
+          "engagement": 160,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@wearstand",
+          "posts": 1,
+          "engagement": 103,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@prideofodunil",
+          "posts": 5,
+          "engagement": 68,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        }
+      ],
+      "brandsUsingIPCount": 17
+    },
+    "University of Texas at San Antonio (UTSA)": {
+      "overview": {
+        "totalFollowers": 835260,
+        "uniqueAthletes": 338,
+        "athletesWithContent": 272,
+        "totalPosts": 3773,
+        "totalLikes": 1699391,
+        "totalComments": 109126,
+        "totalEMV": 1013384.5,
+        "engagementRate": 0.0574
+      },
+      "brandDeals": {
+        "sponsoredPosts": 176,
+        "uniqueBrands": 91,
+        "sponsoredAthletes": 90
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 2036,
+        "postsWithIP": 1737,
+        "totalEngagementWithoutIP": 911995,
+        "totalEngagementWithIP": 896522,
+        "avgEngagementWithoutIP": 447.93,
+        "avgEngagementWithIP": 516.13,
+        "engagementLiftPercent": 15.22
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 1497,
+          "totalEngagement": 785185,
+          "avgEngagement": 524.51,
+          "liftPercent": 17.09
+        },
+        "collaboration": {
+          "posts": 407,
+          "totalEngagement": 245328,
+          "avgEngagement": 602.77,
+          "liftPercent": 34.57
+        },
+        "mention": {
+          "posts": 639,
+          "totalEngagement": 337882,
+          "avgEngagement": 528.77,
+          "liftPercent": 18.05
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 1013384.5,
+        "emvWithoutIP": 513747.5,
+        "emvWithIP": 499637,
+        "avgEMVPerPost": 268.59,
+        "avgEMVWithIP": 287.64,
+        "avgEMVWithoutIP": 252.33,
+        "emvLiftPercent": 13.99
+      },
+      "topBrands": [
+        {
+          "name": "@utsawgolf",
+          "posts": 1,
+          "engagement": 3929,
+          "ipTypesUsed": [
+            "logo",
+            "collaboration",
+            "mention"
+          ]
+        },
+        {
+          "name": "@nike",
+          "posts": 6,
+          "engagement": 3466,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@hollister",
+          "posts": 2,
+          "engagement": 3061,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@eastonbaseball",
+          "posts": 2,
+          "engagement": 2546,
+          "ipTypesUsed": [
+            "mention",
+            "collaboration"
+          ]
+        },
+        {
+          "name": "@Nextiva",
+          "posts": 1,
+          "engagement": 2412,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@nationalguard",
+          "posts": 1,
+          "engagement": 1243,
+          "ipTypesUsed": [
+            "mention"
+          ]
+        },
+        {
+          "name": "@utsathreads",
+          "posts": 19,
+          "engagement": 1046,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@cvspharmacy",
+          "posts": 5,
+          "engagement": 665,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@gameone_usa",
+          "posts": 2,
+          "engagement": 589,
+          "ipTypesUsed": [
+            "collaboration",
+            "mention"
+          ]
+        },
+        {
+          "name": "@easportscollege",
+          "posts": 1,
+          "engagement": 532,
+          "ipTypesUsed": [
+            "mention"
+          ]
+        },
+        {
+          "name": "@myplayersports",
+          "posts": 6,
+          "engagement": 489,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@flatlandcavalry",
+          "posts": 2,
+          "engagement": 463,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@fedmexgolf",
+          "posts": 1,
+          "engagement": 459,
+          "ipTypesUsed": [
+            "mention"
+          ]
+        },
+        {
+          "name": "@greatclips",
+          "posts": 1,
+          "engagement": 454,
+          "ipTypesUsed": [
+            "logo",
+            "collaboration",
+            "mention"
+          ]
+        },
+        {
+          "name": "@jawbats",
+          "posts": 1,
+          "engagement": 434,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@chefboyardee",
+          "posts": 1,
+          "engagement": 422,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@leonessachocolatier",
+          "posts": 3,
+          "engagement": 408,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@aloft_utsasanantonio",
+          "posts": 1,
+          "engagement": 353,
+          "ipTypesUsed": [
+            "logo",
+            "collaboration",
+            "mention"
+          ]
+        },
+        {
+          "name": "@drinkprime",
+          "posts": 1,
+          "engagement": 329,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@jprimesteakhouse",
+          "posts": 2,
+          "engagement": 301,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        }
+      ],
+      "brandsUsingIPCount": 42
+    },
+    "Brigham Young University (BYU)": {
+      "overview": {
+        "totalFollowers": 0,
+        "uniqueAthletes": 0,
+        "athletesWithContent": 220,
+        "totalPosts": 2469,
+        "totalLikes": 3022096,
+        "totalComments": 76286,
+        "totalEMV": 1625477,
+        "engagementRate": 0
+      },
+      "brandDeals": {
+        "sponsoredPosts": 123,
+        "uniqueBrands": 87,
+        "sponsoredAthletes": 75
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 2469,
+        "postsWithIP": 0,
+        "totalEngagementWithoutIP": 3098382,
+        "totalEngagementWithIP": 0,
+        "avgEngagementWithoutIP": 1254.91,
+        "avgEngagementWithIP": 0,
+        "engagementLiftPercent": -100
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 0,
+          "totalEngagement": 0,
+          "avgEngagement": 0,
+          "liftPercent": -100
+        },
+        "collaboration": {
+          "posts": 0,
+          "totalEngagement": 0,
+          "avgEngagement": 0,
+          "liftPercent": -100
+        },
+        "mention": {
+          "posts": 0,
+          "totalEngagement": 0,
+          "avgEngagement": 0,
+          "liftPercent": -100
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 1625477,
+        "emvWithoutIP": 1625477,
+        "emvWithIP": 0,
+        "avgEMVPerPost": 658.35,
+        "avgEMVWithIP": 0,
+        "avgEMVWithoutIP": 658.35,
+        "emvLiftPercent": -100
+      },
+      "topBrands": [
+        {
+          "name": "@treehut",
+          "posts": 1,
+          "engagement": 86996,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@Nike",
+          "posts": 7,
+          "engagement": 18293,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@garminrunning",
+          "posts": 1,
+          "engagement": 10834,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@nyxcosmetics",
+          "posts": 1,
+          "engagement": 8786,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@GarminRunning",
+          "posts": 1,
+          "engagement": 7553,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@hoka",
+          "posts": 2,
+          "engagement": 7030,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@brooksrunning",
+          "posts": 4,
+          "engagement": 5691,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@nikerunning",
+          "posts": 3,
+          "engagement": 3926,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@arena_mexico",
+          "posts": 2,
+          "engagement": 3160,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "james_corrigan_",
+          "posts": 1,
+          "engagement": 2459,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@faves.xyz",
+          "posts": 3,
+          "engagement": 2041,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "therunningeffect",
+          "posts": 1,
+          "engagement": 2003,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@clifbar",
+          "posts": 1,
+          "engagement": 1887,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "isaachedengren",
+          "posts": 1,
+          "engagement": 1861,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "thestridereport",
+          "posts": 1,
+          "engagement": 1771,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@voiceinsport",
+          "posts": 1,
+          "engagement": 1355,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@brooks",
+          "posts": 1,
+          "engagement": 1065,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@byucheerandstunt",
+          "posts": 3,
+          "engagement": 1057,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@royalbluecollective",
+          "posts": 3,
+          "engagement": 925,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@gat_sport",
+          "posts": 2,
+          "engagement": 874,
+          "ipTypesUsed": []
+        }
+      ],
+      "brandsUsingIPCount": 0
+    },
+    "University of Cincinnati": {
+      "overview": {
+        "totalFollowers": 1043067,
+        "uniqueAthletes": 390,
+        "athletesWithContent": 345,
+        "totalPosts": 4968,
+        "totalLikes": 3190508,
+        "totalComments": 184270,
+        "totalEMV": 1871659,
+        "engagementRate": 0.0651
+      },
+      "brandDeals": {
+        "sponsoredPosts": 150,
+        "uniqueBrands": 71,
+        "sponsoredAthletes": 64
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 2795,
+        "postsWithIP": 2173,
+        "totalEngagementWithoutIP": 1576715,
+        "totalEngagementWithIP": 1798063,
+        "avgEngagementWithoutIP": 564.12,
+        "avgEngagementWithIP": 827.46,
+        "engagementLiftPercent": 46.68
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 1969,
+          "totalEngagement": 1605620,
+          "avgEngagement": 815.45,
+          "liftPercent": 44.55
+        },
+        "collaboration": {
+          "posts": 56,
+          "totalEngagement": 66124,
+          "avgEngagement": 1180.79,
+          "liftPercent": 109.31
+        },
+        "mention": {
+          "posts": 803,
+          "totalEngagement": 757781,
+          "avgEngagement": 943.69,
+          "liftPercent": 67.28
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 1871659,
+        "emvWithoutIP": 882793.5,
+        "emvWithIP": 988865.5,
+        "avgEMVPerPost": 376.74,
+        "avgEMVWithIP": 455.07,
+        "avgEMVWithoutIP": 315.85,
+        "emvLiftPercent": 44.08
+      },
+      "topBrands": [
+        {
+          "name": "@lifeattql",
+          "posts": 9,
+          "engagement": 10492,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@gobearcatsfb",
+          "posts": 3,
+          "engagement": 7161,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@tql",
+          "posts": 1,
+          "engagement": 2833,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@imblackowned",
+          "posts": 1,
+          "engagement": 1085,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@hollister",
+          "posts": 3,
+          "engagement": 1076,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@savetheanimalsfoundation",
+          "posts": 3,
+          "engagement": 1036,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@meas_active",
+          "posts": 10,
+          "engagement": 935,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@altafiber",
+          "posts": 4,
+          "engagement": 908,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@yeslywater",
+          "posts": 3,
+          "engagement": 627,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@CincyChildrens",
+          "posts": 1,
+          "engagement": 600,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@drink_phx",
+          "posts": 3,
+          "engagement": 598,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@themotzgroup",
+          "posts": 1,
+          "engagement": 530,
+          "ipTypesUsed": [
+            "mention"
+          ]
+        },
+        {
+          "name": "@broricewarriors",
+          "posts": 1,
+          "engagement": 484,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@graeters",
+          "posts": 1,
+          "engagement": 477,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@mondayhaircare",
+          "posts": 2,
+          "engagement": 469,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@TQL",
+          "posts": 1,
+          "engagement": 467,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@easportscollege",
+          "posts": 1,
+          "engagement": 464,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@topperspizza",
+          "posts": 1,
+          "engagement": 451,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@proactiv",
+          "posts": 1,
+          "engagement": 416,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@workatmedpace",
+          "posts": 1,
+          "engagement": 339,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        }
+      ],
+      "brandsUsingIPCount": 32
+    },
+    "Clemson": {
+      "overview": {
+        "totalFollowers": 1726437,
+        "uniqueAthletes": 256,
+        "athletesWithContent": 240,
+        "totalPosts": 3351,
+        "totalLikes": 6996394,
+        "totalComments": 174543,
+        "totalEMV": 3760011.5,
+        "engagementRate": 0.124
+      },
+      "brandDeals": {
+        "sponsoredPosts": 265,
+        "uniqueBrands": 134,
+        "sponsoredAthletes": 121
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 2666,
+        "postsWithIP": 685,
+        "totalEngagementWithoutIP": 4091601,
+        "totalEngagementWithIP": 3079336,
+        "avgEngagementWithoutIP": 1534.73,
+        "avgEngagementWithIP": 4495.38,
+        "engagementLiftPercent": 192.91
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 585,
+          "totalEngagement": 1775950,
+          "avgEngagement": 3035.81,
+          "liftPercent": 97.81
+        },
+        "collaboration": {
+          "posts": 86,
+          "totalEngagement": 1834694,
+          "avgEngagement": 21333.65,
+          "liftPercent": 1290.06
+        },
+        "mention": {
+          "posts": 41,
+          "totalEngagement": 42401,
+          "avgEngagement": 1034.17,
+          "liftPercent": -32.62
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 3760011.5,
+        "emvWithoutIP": 2162018.5,
+        "emvWithIP": 1597993,
+        "avgEMVPerPost": 1122.06,
+        "avgEMVWithIP": 2332.84,
+        "avgEMVWithoutIP": 810.96,
+        "emvLiftPercent": 187.66
+      },
+      "topBrands": [
+        {
+          "name": "@rhoback",
+          "posts": 2,
+          "engagement": 25319,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@heydude",
+          "posts": 4,
+          "engagement": 16375,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "clemsonfb",
+          "posts": 6,
+          "engagement": 14303,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@maven.baseball",
+          "posts": 1,
+          "engagement": 14056,
+          "ipTypesUsed": [
+            "collaboration"
+          ]
+        },
+        {
+          "name": "@clemsonfb",
+          "posts": 6,
+          "engagement": 12644,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@fortnite",
+          "posts": 1,
+          "engagement": 12332,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@celsiusofficial",
+          "posts": 2,
+          "engagement": 6330,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@samsungmobileusa",
+          "posts": 5,
+          "engagement": 5363,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@subwaytakes",
+          "posts": 1,
+          "engagement": 4205,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@bananaball",
+          "posts": 1,
+          "engagement": 4131,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@easportscollege",
+          "posts": 2,
+          "engagement": 3820,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@higo_apparel",
+          "posts": 3,
+          "engagement": 3506,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@allstate",
+          "posts": 5,
+          "engagement": 3304,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@pawjourney",
+          "posts": 2,
+          "engagement": 3178,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@nike",
+          "posts": 1,
+          "engagement": 2915,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@thedistrictclemson",
+          "posts": 4,
+          "engagement": 2800,
+          "ipTypesUsed": [
+            "mention"
+          ]
+        },
+        {
+          "name": "@CELSIUSBrandPartner",
+          "posts": 1,
+          "engagement": 2526,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@diamondkast",
+          "posts": 1,
+          "engagement": 2499,
+          "ipTypesUsed": [
+            "mention"
+          ]
+        },
+        {
+          "name": "@hardeespartner",
+          "posts": 1,
+          "engagement": 2061,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@novanthealth",
+          "posts": 3,
+          "engagement": 1969,
+          "ipTypesUsed": []
+        }
+      ],
+      "brandsUsingIPCount": 30
+    },
+    "Creighton University": {
+      "overview": {
+        "totalFollowers": 438009,
+        "uniqueAthletes": 280,
+        "athletesWithContent": 189,
+        "totalPosts": 2592,
+        "totalLikes": 1263206,
+        "totalComments": 95676,
+        "totalEMV": 775117,
+        "engagementRate": 0.1197
+      },
+      "brandDeals": {
+        "sponsoredPosts": 136,
+        "uniqueBrands": 67,
+        "sponsoredAthletes": 69
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 1954,
+        "postsWithIP": 638,
+        "totalEngagementWithoutIP": 882651,
+        "totalEngagementWithIP": 476231,
+        "avgEngagementWithoutIP": 451.71,
+        "avgEngagementWithIP": 746.44,
+        "engagementLiftPercent": 65.25
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 537,
+          "totalEngagement": 410488,
+          "avgEngagement": 764.41,
+          "liftPercent": 69.22
+        },
+        "collaboration": {
+          "posts": 53,
+          "totalEngagement": 66005,
+          "avgEngagement": 1245.38,
+          "liftPercent": 175.7
+        },
+        "mention": {
+          "posts": 222,
+          "totalEngagement": 226495,
+          "avgEngagement": 1020.25,
+          "liftPercent": 125.86
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 775117,
+        "emvWithoutIP": 511080.5,
+        "emvWithIP": 264036.5,
+        "avgEMVPerPost": 299.04,
+        "avgEMVWithIP": 413.85,
+        "avgEMVWithoutIP": 261.56,
+        "emvLiftPercent": 58.23
+      },
+      "topBrands": [
+        {
+          "name": "@countrytireautomotive",
+          "posts": 3,
+          "engagement": 5438,
+          "ipTypesUsed": [
+            "logo",
+            "collaboration"
+          ]
+        },
+        {
+          "name": "@omahasteaks",
+          "posts": 7,
+          "engagement": 3623,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@mcdonalds.nebraska",
+          "posts": 13,
+          "engagement": 3256,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@pinnbank",
+          "posts": 2,
+          "engagement": 2240,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@hurrdatbrandgoods",
+          "posts": 1,
+          "engagement": 1922,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@myplayersports",
+          "posts": 15,
+          "engagement": 1907,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@rocketroofing",
+          "posts": 1,
+          "engagement": 1699,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@courtsidefilms",
+          "posts": 1,
+          "engagement": 1661,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@borsheims",
+          "posts": 2,
+          "engagement": 1520,
+          "ipTypesUsed": [
+            "mention"
+          ]
+        },
+        {
+          "name": "@livvaudio",
+          "posts": 1,
+          "engagement": 1277,
+          "ipTypesUsed": [
+            "logo",
+            "mention"
+          ]
+        },
+        {
+          "name": "@OmahaSteaks",
+          "posts": 1,
+          "engagement": 1202,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@marchmadnesswbb",
+          "posts": 1,
+          "engagement": 1117,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@kinatraxinc",
+          "posts": 2,
+          "engagement": 1097,
+          "ipTypesUsed": [
+            "logo",
+            "mention",
+            "collaboration"
+          ]
+        },
+        {
+          "name": "@vuoriclothing",
+          "posts": 4,
+          "engagement": 1023,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@taravandewater",
+          "posts": 1,
+          "engagement": 930,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@cvspharmacy",
+          "posts": 5,
+          "engagement": 620,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@phenom_hoops",
+          "posts": 1,
+          "engagement": 576,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@nfmpics",
+          "posts": 2,
+          "engagement": 522,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@torrentcf",
+          "posts": 1,
+          "engagement": 501,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@hgpbase",
+          "posts": 1,
+          "engagement": 483,
+          "ipTypesUsed": []
+        }
+      ],
+      "brandsUsingIPCount": 13
+    },
+    "Depaul": {
+      "overview": {
+        "totalFollowers": 121473,
+        "uniqueAthletes": 71,
+        "athletesWithContent": 57,
+        "totalPosts": 746,
+        "totalLikes": 238272,
+        "totalComments": 27305,
+        "totalEMV": 160093.5,
+        "engagementRate": 0.2931
+      },
+      "brandDeals": {
+        "sponsoredPosts": 36,
+        "uniqueBrands": 23,
+        "sponsoredAthletes": 22
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 474,
+        "postsWithIP": 272,
+        "totalEngagementWithoutIP": 156406,
+        "totalEngagementWithIP": 109171,
+        "avgEngagementWithoutIP": 329.97,
+        "avgEngagementWithIP": 401.36,
+        "engagementLiftPercent": 21.64
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 266,
+          "totalEngagement": 104079,
+          "avgEngagement": 391.27,
+          "liftPercent": 18.58
+        },
+        "collaboration": {
+          "posts": 23,
+          "totalEngagement": 15575,
+          "avgEngagement": 677.17,
+          "liftPercent": 105.22
+        },
+        "mention": {
+          "posts": 0,
+          "totalEngagement": 0,
+          "avgEngagement": 0,
+          "liftPercent": -100
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 160093.5,
+        "emvWithoutIP": 95484,
+        "emvWithIP": 64609.5,
+        "avgEMVPerPost": 214.6,
+        "avgEMVWithIP": 237.53,
+        "avgEMVWithoutIP": 201.44,
+        "emvLiftPercent": 17.92
+      },
+      "topBrands": [
+        {
+          "name": "@depaulhoops",
+          "posts": 1,
+          "engagement": 739,
+          "ipTypesUsed": [
+            "logo",
+            "collaboration"
+          ]
+        },
+        {
+          "name": "@_luxerae",
+          "posts": 1,
+          "engagement": 710,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@hellomolly",
+          "posts": 1,
+          "engagement": 661,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@dispartilaw",
+          "posts": 4,
+          "engagement": 637,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@waupacaboatride",
+          "posts": 1,
+          "engagement": 533,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@jovanifashions",
+          "posts": 3,
+          "engagement": 334,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@shaada_llc",
+          "posts": 1,
+          "engagement": 326,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@depaulthreads",
+          "posts": 6,
+          "engagement": 287,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@myplayerathlete",
+          "posts": 2,
+          "engagement": 274,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@thomasrhettakins",
+          "posts": 1,
+          "engagement": 256,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@myplayersports",
+          "posts": 3,
+          "engagement": 247,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@servpro",
+          "posts": 1,
+          "engagement": 243,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@subway",
+          "posts": 1,
+          "engagement": 213,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@drinkolipop",
+          "posts": 1,
+          "engagement": 132,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@drinkbiolyte",
+          "posts": 1,
+          "engagement": 117,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@teamvktry",
+          "posts": 1,
+          "engagement": 96,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@grandstandbuckets",
+          "posts": 1,
+          "engagement": 90,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@eliteladyvolleyball",
+          "posts": 1,
+          "engagement": 56,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@raisingcanes",
+          "posts": 1,
+          "engagement": 35,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "depaulthreads",
+          "posts": 1,
+          "engagement": 24,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        }
+      ],
+      "brandsUsingIPCount": 7
+    },
+    "University of Wisconsin": {
+      "overview": {
+        "totalFollowers": 1812655,
+        "uniqueAthletes": 673,
+        "athletesWithContent": 475,
+        "totalPosts": 5982,
+        "totalLikes": 8120303,
+        "totalComments": 208248,
+        "totalEMV": 4372523.5,
+        "engagementRate": 0.0768
+      },
+      "brandDeals": {
+        "sponsoredPosts": 363,
+        "uniqueBrands": 182,
+        "sponsoredAthletes": 175
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 5264,
+        "postsWithIP": 718,
+        "totalEngagementWithoutIP": 6960518,
+        "totalEngagementWithIP": 1368033,
+        "avgEngagementWithoutIP": 1322.29,
+        "avgEngagementWithIP": 1905.34,
+        "engagementLiftPercent": 44.09
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 660,
+          "totalEngagement": 1115635,
+          "avgEngagement": 1690.36,
+          "liftPercent": 27.84
+        },
+        "collaboration": {
+          "posts": 80,
+          "totalEngagement": 301742,
+          "avgEngagement": 3771.78,
+          "liftPercent": 185.25
+        },
+        "mention": {
+          "posts": 12,
+          "totalEngagement": 12292,
+          "avgEngagement": 1024.33,
+          "liftPercent": -22.53
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 4372523.5,
+        "emvWithoutIP": 3661320,
+        "emvWithIP": 711203.5,
+        "avgEMVPerPost": 730.95,
+        "avgEMVWithIP": 990.53,
+        "avgEMVWithoutIP": 695.54,
+        "emvLiftPercent": 42.41
+      },
+      "topBrands": [
+        {
+          "name": "@discover",
+          "posts": 1,
+          "engagement": 70562,
+          "ipTypesUsed": [
+            "collaboration"
+          ]
+        },
+        {
+          "name": "@nextgenstats",
+          "posts": 2,
+          "engagement": 36105,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@nicolet_law",
+          "posts": 12,
+          "engagement": 22159,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@exactsciences",
+          "posts": 24,
+          "engagement": 12284,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@olivmadison_",
+          "posts": 5,
+          "engagement": 10095,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@rule13apparel",
+          "posts": 1,
+          "engagement": 9460,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@travelwisconsin",
+          "posts": 6,
+          "engagement": 8715,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@target",
+          "posts": 9,
+          "engagement": 7511,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@jfahernco",
+          "posts": 2,
+          "engagement": 5906,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@vcconnect.wi",
+          "posts": 2,
+          "engagement": 5633,
+          "ipTypesUsed": [
+            "collaboration"
+          ]
+        },
+        {
+          "name": "@uw_health",
+          "posts": 5,
+          "engagement": 5534,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@newbalance",
+          "posts": 2,
+          "engagement": 4439,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@dickssportinggoods",
+          "posts": 1,
+          "engagement": 4071,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@bauerhockey",
+          "posts": 2,
+          "engagement": 3777,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@a3performance",
+          "posts": 3,
+          "engagement": 3769,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@hoka",
+          "posts": 7,
+          "engagement": 3667,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@laceden",
+          "posts": 2,
+          "engagement": 3564,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@lightspeedlift",
+          "posts": 4,
+          "engagement": 3545,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@uscellular",
+          "posts": 2,
+          "engagement": 3148,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@nyislanders",
+          "posts": 1,
+          "engagement": 3033,
+          "ipTypesUsed": []
+        }
+      ],
+      "brandsUsingIPCount": 36
+    },
+    "Robert Morris University": {
+      "overview": {
+        "totalFollowers": 465010,
+        "uniqueAthletes": 455,
+        "athletesWithContent": 239,
+        "totalPosts": 2687,
+        "totalLikes": 631193,
+        "totalComments": 86972,
+        "totalEMV": 446054.5,
+        "engagementRate": 0.0575
+      },
+      "brandDeals": {
+        "sponsoredPosts": 57,
+        "uniqueBrands": 27,
+        "sponsoredAthletes": 33
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 2489,
+        "postsWithIP": 198,
+        "totalEngagementWithoutIP": 676768,
+        "totalEngagementWithIP": 41397,
+        "avgEngagementWithoutIP": 271.9,
+        "avgEngagementWithIP": 209.08,
+        "engagementLiftPercent": -23.11
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 198,
+          "totalEngagement": 41397,
+          "avgEngagement": 209.08,
+          "liftPercent": -23.11
+        },
+        "collaboration": {
+          "posts": 0,
+          "totalEngagement": 0,
+          "avgEngagement": 0,
+          "liftPercent": -100
+        },
+        "mention": {
+          "posts": 0,
+          "totalEngagement": 0,
+          "avgEngagement": 0,
+          "liftPercent": -100
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 446054.5,
+        "emvWithoutIP": 419672,
+        "emvWithIP": 26382.5,
+        "avgEMVPerPost": 166,
+        "avgEMVWithIP": 133.24,
+        "avgEMVWithoutIP": 168.61,
+        "emvLiftPercent": -20.97
+      },
+      "topBrands": [
+        {
+          "name": "@joinpaguard",
+          "posts": 13,
+          "engagement": 672,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@subway",
+          "posts": 1,
+          "engagement": 347,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@influxermerch",
+          "posts": 2,
+          "engagement": 304,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@brightsidenil",
+          "posts": 1,
+          "engagement": 287,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@empwruathletes",
+          "posts": 1,
+          "engagement": 168,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@myplayersports",
+          "posts": 1,
+          "engagement": 144,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@heartbreakersbrand",
+          "posts": 1,
+          "engagement": 108,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@dgy_sports",
+          "posts": 1,
+          "engagement": 81,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@boyardee",
+          "posts": 1,
+          "engagement": 72,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@underarmour",
+          "posts": 1,
+          "engagement": 67,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@pantherthread",
+          "posts": 1,
+          "engagement": 57,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@PAArmyNationalGuard",
+          "posts": 1,
+          "engagement": 52,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@Tunnel2Towers",
+          "posts": 4,
+          "engagement": 44,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@ftfcanada",
+          "posts": 1,
+          "engagement": 37,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@murryave",
+          "posts": 1,
+          "engagement": 30,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@macsports",
+          "posts": 1,
+          "engagement": 20,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@rmuthreads",
+          "posts": 6,
+          "engagement": 15,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@influxerrmu",
+          "posts": 5,
+          "engagement": 10,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@sportsid_",
+          "posts": 1,
+          "engagement": 10,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@paarmyguard",
+          "posts": 2,
+          "engagement": 9,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        }
+      ],
+      "brandsUsingIPCount": 7
+    },
+    "San Diego State University": {
+      "overview": {
+        "totalFollowers": 907225,
+        "uniqueAthletes": 418,
+        "athletesWithContent": 311,
+        "totalPosts": 3406,
+        "totalLikes": 1461809,
+        "totalComments": 132033,
+        "totalEMV": 928954,
+        "engagementRate": 0.0516
+      },
+      "brandDeals": {
+        "sponsoredPosts": 124,
+        "uniqueBrands": 66,
+        "sponsoredAthletes": 67
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 2494,
+        "postsWithIP": 912,
+        "totalEngagementWithoutIP": 963167,
+        "totalEngagementWithIP": 630675,
+        "avgEngagementWithoutIP": 386.19,
+        "avgEngagementWithIP": 691.53,
+        "engagementLiftPercent": 79.06
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 911,
+          "totalEngagement": 629659,
+          "avgEngagement": 691.17,
+          "liftPercent": 78.97
+        },
+        "collaboration": {
+          "posts": 1,
+          "totalEngagement": 1016,
+          "avgEngagement": 1016,
+          "liftPercent": 163.08
+        },
+        "mention": {
+          "posts": 0,
+          "totalEngagement": 0,
+          "avgEngagement": 0,
+          "liftPercent": -100
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 928954,
+        "emvWithoutIP": 570076.5,
+        "emvWithIP": 358877.5,
+        "avgEMVPerPost": 272.74,
+        "avgEMVWithIP": 393.51,
+        "avgEMVWithoutIP": 228.58,
+        "emvLiftPercent": 72.15
+      },
+      "topBrands": [
+        {
+          "name": "@jlabaudio",
+          "posts": 2,
+          "engagement": 13535,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@caixaesportes",
+          "posts": 1,
+          "engagement": 4110,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@978.jerseys",
+          "posts": 20,
+          "engagement": 2862,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@adidasmy",
+          "posts": 4,
+          "engagement": 2780,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@blenders",
+          "posts": 3,
+          "engagement": 2279,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@dexcom",
+          "posts": 2,
+          "engagement": 2164,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@raisingcanes",
+          "posts": 3,
+          "engagement": 1626,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@tendergreens",
+          "posts": 1,
+          "engagement": 1586,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "summer.garrison",
+          "posts": 1,
+          "engagement": 1438,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@adidasph",
+          "posts": 1,
+          "engagement": 1049,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@sdsu.nil.store",
+          "posts": 3,
+          "engagement": 933,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@playersera",
+          "posts": 1,
+          "engagement": 919,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "kyle_crum02",
+          "posts": 1,
+          "engagement": 839,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@beejmoneyy",
+          "posts": 1,
+          "engagement": 761,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@statsports",
+          "posts": 2,
+          "engagement": 673,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@lexussg",
+          "posts": 1,
+          "engagement": 551,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@adidas",
+          "posts": 1,
+          "engagement": 529,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@sdsu.978jerseys",
+          "posts": 6,
+          "engagement": 519,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@ocriptidebaseball",
+          "posts": 1,
+          "engagement": 503,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@atmosrewards",
+          "posts": 1,
+          "engagement": 456,
+          "ipTypesUsed": []
+        }
+      ],
+      "brandsUsingIPCount": 17
+    },
+    "University of San Diego": {
+      "overview": {
+        "totalFollowers": 411303,
+        "uniqueAthletes": 521,
+        "athletesWithContent": 150,
+        "totalPosts": 2024,
+        "totalLikes": 2660153,
+        "totalComments": 76647,
+        "totalEMV": 1445047,
+        "engagementRate": 0.3288
+      },
+      "brandDeals": {
+        "sponsoredPosts": 85,
+        "uniqueBrands": 56,
+        "sponsoredAthletes": 36
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 1513,
+        "postsWithIP": 511,
+        "totalEngagementWithoutIP": 2583726,
+        "totalEngagementWithIP": 153074,
+        "avgEngagementWithoutIP": 1707.68,
+        "avgEngagementWithIP": 299.56,
+        "engagementLiftPercent": -82.46
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 470,
+          "totalEngagement": 143776,
+          "avgEngagement": 305.91,
+          "liftPercent": -82.09
+        },
+        "collaboration": {
+          "posts": 1,
+          "totalEngagement": 921,
+          "avgEngagement": 921,
+          "liftPercent": -46.07
+        },
+        "mention": {
+          "posts": 186,
+          "totalEngagement": 73322,
+          "avgEngagement": 394.2,
+          "liftPercent": -76.92
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 1445047,
+        "emvWithoutIP": 1349155,
+        "emvWithIP": 95892,
+        "avgEMVPerPost": 713.96,
+        "avgEMVWithIP": 187.66,
+        "avgEMVWithoutIP": 891.71,
+        "emvLiftPercent": -78.96
+      },
+      "topBrands": [
+        {
+          "name": "@nationalpeanutboard",
+          "posts": 1,
+          "engagement": 93706,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "nationalpeanutboard",
+          "posts": 1,
+          "engagement": 79731,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@12Status",
+          "posts": 3,
+          "engagement": 26211,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@Lincoln",
+          "posts": 1,
+          "engagement": 7937,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@honeystinger",
+          "posts": 2,
+          "engagement": 7566,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@ysl",
+          "posts": 1,
+          "engagement": 3253,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@fabletics",
+          "posts": 4,
+          "engagement": 1792,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@strangerthingstv",
+          "posts": 1,
+          "engagement": 713,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@teamvktry",
+          "posts": 4,
+          "engagement": 712,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@laces.athletes",
+          "posts": 1,
+          "engagement": 600,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@rollthequadnil",
+          "posts": 1,
+          "engagement": 545,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@drinkplezi",
+          "posts": 2,
+          "engagement": 489,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "gods.economy",
+          "posts": 1,
+          "engagement": 394,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@hoka",
+          "posts": 1,
+          "engagement": 376,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@whenskiesarentblue",
+          "posts": 1,
+          "engagement": 353,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@IHOP",
+          "posts": 1,
+          "engagement": 323,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@nocco.usa",
+          "posts": 3,
+          "engagement": 298,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@habits_365",
+          "posts": 1,
+          "engagement": 296,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@usd.threads",
+          "posts": 6,
+          "engagement": 291,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@aravaiparunning",
+          "posts": 1,
+          "engagement": 291,
+          "ipTypesUsed": []
+        }
+      ],
+      "brandsUsingIPCount": 14
+    },
+    "Pittsburgh": {
+      "overview": {
+        "totalFollowers": 740916,
+        "uniqueAthletes": 236,
+        "athletesWithContent": 211,
+        "totalPosts": 2475,
+        "totalLikes": 3173487,
+        "totalComments": 101276,
+        "totalEMV": 1738657.5,
+        "engagementRate": 0.1786
+      },
+      "brandDeals": {
+        "sponsoredPosts": 35,
+        "uniqueBrands": 22,
+        "sponsoredAthletes": 27
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 2183,
+        "postsWithIP": 292,
+        "totalEngagementWithoutIP": 2568804,
+        "totalEngagementWithIP": 705959,
+        "avgEngagementWithoutIP": 1176.73,
+        "avgEngagementWithIP": 2417.67,
+        "engagementLiftPercent": 105.46
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 288,
+          "totalEngagement": 674950,
+          "avgEngagement": 2343.58,
+          "liftPercent": 99.16
+        },
+        "collaboration": {
+          "posts": 4,
+          "totalEngagement": 31009,
+          "avgEngagement": 7752.25,
+          "liftPercent": 558.8
+        },
+        "mention": {
+          "posts": 0,
+          "totalEngagement": 0,
+          "avgEngagement": 0,
+          "liftPercent": -100
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 1738657.5,
+        "emvWithoutIP": 1370762,
+        "emvWithIP": 367895.5,
+        "avgEMVPerPost": 702.49,
+        "avgEMVWithIP": 1259.92,
+        "avgEMVWithoutIP": 627.93,
+        "emvLiftPercent": 100.65
+      },
+      "topBrands": [
+        {
+          "name": "@pitt_fb",
+          "posts": 1,
+          "engagement": 7945,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@easportscollege",
+          "posts": 1,
+          "engagement": 5872,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@poppi_era",
+          "posts": 1,
+          "engagement": 2787,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@redbullusa",
+          "posts": 1,
+          "engagement": 2100,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@bwwings",
+          "posts": 1,
+          "engagement": 1951,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@bowserauto",
+          "posts": 7,
+          "engagement": 1498,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@pantherthread",
+          "posts": 7,
+          "engagement": 937,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@mcdonaldsofthreerivers",
+          "posts": 1,
+          "engagement": 811,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@kinatraxinc",
+          "posts": 1,
+          "engagement": 710,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@jacksnbrown",
+          "posts": 1,
+          "engagement": 593,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@totalskills_baseball",
+          "posts": 1,
+          "engagement": 420,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@athletesthread",
+          "posts": 1,
+          "engagement": 128,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "pantherthread",
+          "posts": 2,
+          "engagement": 73,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@tulipenoireclothing",
+          "posts": 1,
+          "engagement": 56,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@buccees",
+          "posts": 1,
+          "engagement": 52,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@athlete_asset_protection",
+          "posts": 1,
+          "engagement": 50,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@wrightautomotivegroup",
+          "posts": 1,
+          "engagement": 29,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@buy.vlm",
+          "posts": 1,
+          "engagement": 16,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@axiotraining",
+          "posts": 1,
+          "engagement": 14,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@murryave",
+          "posts": 1,
+          "engagement": 9,
+          "ipTypesUsed": []
+        }
+      ],
+      "brandsUsingIPCount": 4
+    },
+    "Kansas": {
+      "overview": {
+        "totalFollowers": 1266884,
+        "uniqueAthletes": 225,
+        "athletesWithContent": 210,
+        "totalPosts": 2423,
+        "totalLikes": 2405700,
+        "totalComments": 85080,
+        "totalEMV": 1330470,
+        "engagementRate": 0.0811
+      },
+      "brandDeals": {
+        "sponsoredPosts": 77,
+        "uniqueBrands": 36,
+        "sponsoredAthletes": 42
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 1864,
+        "postsWithIP": 559,
+        "totalEngagementWithoutIP": 1529337,
+        "totalEngagementWithIP": 961443,
+        "avgEngagementWithoutIP": 820.46,
+        "avgEngagementWithIP": 1719.93,
+        "engagementLiftPercent": 109.63
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 544,
+          "totalEngagement": 925773,
+          "avgEngagement": 1701.79,
+          "liftPercent": 107.42
+        },
+        "collaboration": {
+          "posts": 20,
+          "totalEngagement": 49799,
+          "avgEngagement": 2489.95,
+          "liftPercent": 203.48
+        },
+        "mention": {
+          "posts": 0,
+          "totalEngagement": 0,
+          "avgEngagement": 0,
+          "liftPercent": -100
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 1330470,
+        "emvWithoutIP": 828052.5,
+        "emvWithIP": 502417.5,
+        "avgEMVPerPost": 549.1,
+        "avgEMVWithIP": 898.78,
+        "avgEMVWithoutIP": 444.23,
+        "emvLiftPercent": 102.32
+      },
+      "topBrands": [
+        {
+          "name": "@sportsillustrated",
+          "posts": 1,
+          "engagement": 18202,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@lockton_usa",
+          "posts": 13,
+          "engagement": 3800,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@sprouts",
+          "posts": 1,
+          "engagement": 2860,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@kuhospital",
+          "posts": 2,
+          "engagement": 2644,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "seatgeek",
+          "posts": 1,
+          "engagement": 2187,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@athlazon",
+          "posts": 1,
+          "engagement": 1685,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@meritrustcu",
+          "posts": 2,
+          "engagement": 1518,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@integrapartnernetwork",
+          "posts": 5,
+          "engagement": 1321,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@deucebrand",
+          "posts": 1,
+          "engagement": 1261,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@adidas",
+          "posts": 4,
+          "engagement": 1218,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@the32approach",
+          "posts": 1,
+          "engagement": 937,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@hollister",
+          "posts": 1,
+          "engagement": 784,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@ShotTracker",
+          "posts": 3,
+          "engagement": 750,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@whataburger",
+          "posts": 1,
+          "engagement": 743,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@microsoft",
+          "posts": 1,
+          "engagement": 706,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@Wendys",
+          "posts": 1,
+          "engagement": 599,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@kslottery",
+          "posts": 1,
+          "engagement": 583,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@raisingcanes",
+          "posts": 1,
+          "engagement": 413,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@charliehustleco",
+          "posts": 2,
+          "engagement": 413,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@wendys",
+          "posts": 1,
+          "engagement": 305,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        }
+      ],
+      "brandsUsingIPCount": 14
+    },
+    "Kentucky": {
+      "overview": {
+        "totalFollowers": 1671393,
+        "uniqueAthletes": 234,
+        "athletesWithContent": 218,
+        "totalPosts": 2924,
+        "totalLikes": 4763518,
+        "totalComments": 122711,
+        "totalEMV": 2565825.5,
+        "engagementRate": 0.1
+      },
+      "brandDeals": {
+        "sponsoredPosts": 98,
+        "uniqueBrands": 58,
+        "sponsoredAthletes": 49
+      },
+      "ipEffectiveness": {
+        "postsWithoutIP": 1503,
+        "postsWithIP": 1421,
+        "totalEngagementWithoutIP": 1830399,
+        "totalEngagementWithIP": 3055830,
+        "avgEngagementWithoutIP": 1217.83,
+        "avgEngagementWithIP": 2150.48,
+        "engagementLiftPercent": 76.58
+      },
+      "ipTypeBreakdown": {
+        "logo": {
+          "posts": 1362,
+          "totalEngagement": 2887773,
+          "avgEngagement": 2120.24,
+          "liftPercent": 74.1
+        },
+        "collaboration": {
+          "posts": 194,
+          "totalEngagement": 920515,
+          "avgEngagement": 4744.92,
+          "liftPercent": 289.62
+        },
+        "mention": {
+          "posts": 0,
+          "totalEngagement": 0,
+          "avgEngagement": 0,
+          "liftPercent": -100
+        }
+      },
+      "emvBreakdown": {
+        "totalEMV": 2565825.5,
+        "emvWithoutIP": 971862.5,
+        "emvWithIP": 1593963,
+        "avgEMVPerPost": 877.51,
+        "avgEMVWithIP": 1121.72,
+        "avgEMVWithoutIP": 646.62,
+        "emvLiftPercent": 73.48
+      },
+      "topBrands": [
+        {
+          "name": "@starcitytalentmgmt",
+          "posts": 1,
+          "engagement": 12346,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@TMobile",
+          "posts": 1,
+          "engagement": 4685,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@paulmillerford",
+          "posts": 5,
+          "engagement": 4145,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@blackouttransportation",
+          "posts": 2,
+          "engagement": 3943,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@allstate",
+          "posts": 1,
+          "engagement": 3832,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@drinkaccelerator",
+          "posts": 3,
+          "engagement": 2141,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@paulmillerky",
+          "posts": 2,
+          "engagement": 2048,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@betterblendofficial",
+          "posts": 4,
+          "engagement": 1833,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@masasakegrill",
+          "posts": 2,
+          "engagement": 1812,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@underarmour",
+          "posts": 1,
+          "engagement": 1369,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@kentuckybranded",
+          "posts": 1,
+          "engagement": 1147,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@saintthejeweler",
+          "posts": 2,
+          "engagement": 1028,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@kentucky.thread",
+          "posts": 10,
+          "engagement": 1018,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@coach",
+          "posts": 2,
+          "engagement": 996,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@kaizen_luxurylife",
+          "posts": 1,
+          "engagement": 741,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@playabowlslexington",
+          "posts": 3,
+          "engagement": 735,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@ukgymnastics",
+          "posts": 1,
+          "engagement": 722,
+          "ipTypesUsed": []
+        },
+        {
+          "name": "@specialteamsu",
+          "posts": 2,
+          "engagement": 719,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@the15club_nil",
+          "posts": 1,
+          "engagement": 632,
+          "ipTypesUsed": [
+            "logo"
+          ]
+        },
+        {
+          "name": "@brucewaltersford",
+          "posts": 1,
+          "engagement": 560,
+          "ipTypesUsed": []
+        }
+      ],
+      "brandsUsingIPCount": 22
+    }
+  }
+}

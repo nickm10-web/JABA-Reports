@@ -4,226 +4,226 @@
     "name": "University of Central Florida"
   },
   "collaboration": {
-    "avgEmv": 19.07,
-    "avgLift": 2.2017,
+    "avgEmv": 1472.65,
+    "avgLift": 5.8311,
     "top5Athletes": [
-      {
-        "athlete": {
-          "name": "Jaden Nixon",
-          "sport": "FOOTBALL"
-        },
-        "posts": 7,
-        "emv": 25.04,
-        "engagementRate": 0.0009951,
-        "lift": -0.5733
-      },
-      {
-        "athlete": {
-          "name": "Paul Rubelt",
-          "sport": "FOOTBALL"
-        },
-        "posts": 6,
-        "emv": 20.56,
-        "engagementRate": 0.0008092,
-        "lift": -0.249
-      },
-      {
-        "athlete": {
-          "name": "Duane Thomas Jr.",
-          "sport": "FOOTBALL"
-        },
-        "posts": 5,
-        "emv": 26.98,
-        "engagementRate": 0.0010055,
-        "lift": 8.5053
-      },
-      {
-        "athlete": {
-          "name": "Ashleigh Griffin",
-          "sport": "SOFTBALL"
-        },
-        "posts": 5,
-        "emv": 12.38,
-        "engagementRate": 0.0004924,
-        "lift": 2.7113
-      },
-      {
-        "athlete": {
-          "name": "Isabella Vega",
-          "sport": "SOFTBALL"
-        },
-        "posts": 5,
-        "emv": 10.38,
-        "engagementRate": 0.0003951,
-        "lift": 0.6144
-      }
-    ]
-  },
-  "logo": {
-    "avgEmv": 232.83,
-    "avgLift": 0.4819,
-    "top5Athletes": [
-      {
-        "athlete": {
-          "name": "Lena Elkins",
-          "sport": "SOFTBALL"
-        },
-        "posts": 10,
-        "emv": 161.24,
-        "engagementRate": 0.0022270000000000002,
-        "lift": 0.8284
-      },
-      {
-        "athlete": {
-          "name": "Avah Armour",
-          "sport": "WOMENS_VOLLEYBALL"
-        },
-        "posts": 9,
-        "emv": 393.28,
-        "engagementRate": 0.001152,
-        "lift": -0.7121
-      },
-      {
-        "athlete": {
-          "name": "Ethan Higgins",
-          "sport": "FOOTBALL"
-        },
-        "posts": 9,
-        "emv": 82.23,
-        "engagementRate": 0.001919,
-        "lift": 2.5084
-      },
-      {
-        "athlete": {
-          "name": "Mikayla Porter",
-          "sport": "WOMENS_VOLLEYBALL"
-        },
-        "posts": 8,
-        "emv": 158.13,
-        "engagementRate": 0.002122,
-        "lift": 0.1321
-      },
-      {
-        "athlete": {
-          "name": "Taevion Swint",
-          "sport": "FOOTBALL"
-        },
-        "posts": 8,
-        "emv": 369.28,
-        "engagementRate": 0.001912,
-        "lift": -0.3472
-      }
-    ]
-  },
-  "mention (in caption)": {
-    "avgEmv": 865.8,
-    "avgLift": 0.1399,
-    "top5Athletes": [
-      {
-        "athlete": {
-          "name": "Connor Meadows",
-          "sport": "FOOTBALL"
-        },
-        "posts": 9,
-        "emv": 174.11,
-        "engagementRate": 0.002883,
-        "lift": 0.3726
-      },
       {
         "athlete": {
           "name": "Devan Cambridge",
           "sport": "MENS_BASKETBALL"
         },
-        "posts": 6,
-        "emv": 3790.91,
-        "engagementRate": 0.000007,
-        "lift": -0.9876
+        "posts": 1,
+        "emv": 44526,
+        "engagementRate": 0.073425,
+        "lift": 346.5221
       },
       {
         "athlete": {
-          "name": "Taevion Swint",
+          "name": "Lewis Carter",
           "sport": "FOOTBALL"
         },
-        "posts": 6,
-        "emv": 281.71,
-        "engagementRate": 0.002202,
-        "lift": -0.1042
+        "posts": 1,
+        "emv": 9454.5,
+        "engagementRate": 0.015365,
+        "lift": 4.6439
       },
       {
         "athlete": {
-          "name": "Noah Senka",
+          "name": "John Bol",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 7651.5,
+        "engagementRate": 0.012659,
+        "lift": 1.3274
+      },
+      {
+        "athlete": {
+          "name": "Davi Belfort",
           "sport": "FOOTBALL"
         },
-        "posts": 6,
-        "emv": 51.78,
-        "engagementRate": 0.000349,
-        "lift": 0.4203
+        "posts": 4,
+        "emv": 5514.5,
+        "engagementRate": 0.008877,
+        "lift": -0.504
       },
       {
         "athlete": {
-          "name": "Tyreek'e Robinson",
+          "name": "Cam Fancher",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 4954,
+        "engagementRate": 0.007997,
+        "lift": 4.9115
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 627.12,
+    "avgLift": 2.3471,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Ric'Darious \"DayDay\" Farmer",
+          "sport": "FOOTBALL"
+        },
+        "posts": 3,
+        "emv": 7866.5,
+        "engagementRate": 0.01281,
+        "lift": 0.2866
+      },
+      {
+        "athlete": {
+          "name": "John Bol",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 3,
+        "emv": 6506.83,
+        "engagementRate": 0.010725,
+        "lift": 1.1334
+      },
+      {
+        "athlete": {
+          "name": "DJ Bell",
           "sport": "FOOTBALL"
         },
         "posts": 5,
-        "emv": 30.49,
-        "engagementRate": 0.005044,
-        "lift": 0.9984999999999999
+        "emv": 5413.3,
+        "engagementRate": 0.008926,
+        "lift": 33.2348
+      },
+      {
+        "athlete": {
+          "name": "Davi Belfort",
+          "sport": "FOOTBALL"
+        },
+        "posts": 7,
+        "emv": 4985.86,
+        "engagementRate": 0.008007,
+        "lift": -0.5905
+      },
+      {
+        "athlete": {
+          "name": "Lewis Carter",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 4807.5,
+        "engagementRate": 0.007727,
+        "lift": 1.5321
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 853.78,
+    "avgLift": 3.2962,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Samantha Rey",
+          "sport": "SOFTBALL"
+        },
+        "posts": 1,
+        "emv": 10942,
+        "engagementRate": 0.01817,
+        "lift": 51.7135
+      },
+      {
+        "athlete": {
+          "name": "Lewis Carter",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 9454.5,
+        "engagementRate": 0.015365,
+        "lift": 4.6439
+      },
+      {
+        "athlete": {
+          "name": "John Bol",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 2,
+        "emv": 9154.25,
+        "engagementRate": 0.015132,
+        "lift": 2.0972
+      },
+      {
+        "athlete": {
+          "name": "Sierra Humphreys",
+          "sport": "SOFTBALL"
+        },
+        "posts": 1,
+        "emv": 8874,
+        "engagementRate": 0.014727,
+        "lift": 28.0512
+      },
+      {
+        "athlete": {
+          "name": "Cam Fancher",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 7292,
+        "engagementRate": 0.011979,
+        "lift": 9.2984
       }
     ]
   },
   "partnership": {
-    "avgEmv": 108.39,
-    "avgLift": -0.6119,
+    "avgEmv": 215.85,
+    "avgLift": -0.3547,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Gaard Memmelaar",
-          "sport": "FOOTBALL"
+          "name": "Poohpha Warakulnukroh",
+          "sport": "MENS_BASKETBALL"
         },
-        "posts": 8,
-        "emv": 141.21,
-        "engagementRate": 0.00013299999999999998,
-        "lift": -0.9664
+        "posts": 1,
+        "emv": 2684.5,
+        "engagementRate": 0.004365,
+        "lift": 3.0484
       },
       {
         "athlete": {
-          "name": "Sarah Mendoza",
-          "sport": "WOMENS_VOLLEYBALL"
+          "name": "Dallan 'Deebo' Coleman",
+          "sport": "FOOTBALL"
         },
-        "posts": 7,
-        "emv": 98.5,
-        "engagementRate": 0.000656,
-        "lift": -0.5177
+        "posts": 1,
+        "emv": 1146.5,
+        "engagementRate": 0.001877,
+        "lift": 3.0682
       },
       {
         "athlete": {
-          "name": "Keegan Smith",
-          "sport": "FOOTBALL"
+          "name": "Jamichael Stillwell",
+          "sport": "MENS_BASKETBALL"
         },
-        "posts": 5,
-        "emv": 127.03,
-        "engagementRate": 0.001489,
-        "lift": -0.2924
+        "posts": 1,
+        "emv": 922.5,
+        "engagementRate": 0.001421,
+        "lift": 1.088
       },
       {
         "athlete": {
-          "name": "Carter Miller",
+          "name": "Dalton Riggs",
           "sport": "FOOTBALL"
         },
-        "posts": 5,
-        "emv": 88.81,
-        "engagementRate": 0.001725,
-        "lift": -0.6718000000000001
+        "posts": 1,
+        "emv": 796.5,
+        "engagementRate": 0.00123,
+        "lift": -0.5879
       },
       {
         "athlete": {
-          "name": "Owen Spell",
-          "sport": "FOOTBALL"
+          "name": "Chris Johnson",
+          "sport": "MENS_BASKETBALL"
         },
-        "posts": 5,
-        "emv": 86.38,
-        "engagementRate": 0.000691,
-        "lift": -0.6113000000000001
+        "posts": 1,
+        "emv": 771,
+        "engagementRate": 0.001242,
+        "lift": -0.9112
       }
     ]
   }

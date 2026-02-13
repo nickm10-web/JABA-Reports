@@ -1,0 +1,68 @@
+{
+  "followers": 1812655,
+  "school": {
+    "_id": "68b5ead47555f0835995a0bd",
+    "name": "University of Wisconsin"
+  },
+  "overall": {
+    "totalContents": 5982,
+    "totalLikes": 8120303,
+    "totalComments": 208248,
+    "engagementRate": 0.0007680825304600636,
+    "emv": 4372523.5
+  },
+  "counts": {
+    "hasOrganizationInCaption": 12,
+    "isOrganizationCollaboration": 80,
+    "hasOrganizationLogo": 660,
+    "withIp": 718
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 12,
+      "likes": 1007.9166666666666,
+      "comments": 16.416666666666668,
+      "engagementRate": 0.0005651010994002351,
+      "emv": 528.58
+    },
+    "no": {
+      "contents": 5970,
+      "likes": 1358.1587939698493,
+      "comments": 34.84941373534338,
+      "engagementRate": 0.0007684905333365658
+    },
+    "avgLift": -26.466094911185433
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 80,
+      "likes": 3729.9375,
+      "comments": 41.8375,
+      "engagementRate": 0.002080801365952153,
+      "emv": 1927.72
+    },
+    "no": {
+      "contents": 5902,
+      "likes": 1325.2978651304643,
+      "comments": 34.71721450355812,
+      "engagementRate": 0.0007502889847400759
+    },
+    "avgLift": 177.33332199632505
+  },
+  "logo": {
+    "yes": {
+      "contents": 660,
+      "likes": 1653.428787878788,
+      "comments": 36.92727272727273,
+      "engagementRate": 0.0009325304928991234,
+      "emv": 882.11
+    },
+    "no": {
+      "contents": 5322,
+      "likes": 1320.751597143931,
+      "comments": 34.550169109357384,
+      "engagementRate": 0.0007476887583424801
+    },
+    "avgLift": 24.72174852092349
+  }
+}

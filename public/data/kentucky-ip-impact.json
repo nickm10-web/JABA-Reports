@@ -1,0 +1,68 @@
+{
+  "followers": 1671393,
+  "school": {
+    "_id": "69023623f719b77ba3f097f9",
+    "name": "Kentucky"
+  },
+  "overall": {
+    "totalContents": 2924,
+    "totalLikes": 4763518,
+    "totalComments": 122711,
+    "engagementRate": 0.0009998109058637944,
+    "emv": 2565825.5
+  },
+  "counts": {
+    "hasOrganizationInCaption": 0,
+    "isOrganizationCollaboration": 194,
+    "hasOrganizationLogo": 1362,
+    "withIp": 1421
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 0,
+      "likes": 0,
+      "comments": 0,
+      "engagementRate": 0,
+      "emv": 0
+    },
+    "no": {
+      "contents": 2924,
+      "likes": 1629.110123119015,
+      "comments": 41.96682626538988,
+      "engagementRate": 0.0009998109058637944
+    },
+    "avgLift": -100
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 194,
+      "likes": 4692.077319587629,
+      "comments": 52.845360824742265,
+      "engagementRate": 0.0028389030469867776,
+      "emv": 2425.31
+    },
+    "no": {
+      "contents": 2730,
+      "likes": 1411.448717948718,
+      "comments": 41.193772893772895,
+      "engagementRate": 0.0008691208416228205
+    },
+    "avgLift": 226.64077433535988
+  },
+  "logo": {
+    "yes": {
+      "contents": 1362,
+      "likes": 2073.1336270190895,
+      "comments": 47.11086637298091,
+      "engagementRate": 0.001268549343806077,
+      "emv": 1107.23
+    },
+    "no": {
+      "contents": 1562,
+      "likes": 1241.9398207426377,
+      "comments": 37.48143405889885,
+      "engagementRate": 0.0007654819990280781
+    },
+    "avgLift": 65.71903002510008
+  }
+}

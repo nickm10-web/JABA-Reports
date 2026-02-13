@@ -1,0 +1,230 @@
+{
+  "school": {
+    "_id": "68cdc205c12fa69f3fe2db91",
+    "name": "Creighton University"
+  },
+  "collaboration": {
+    "avgEmv": 690.77,
+    "avgLift": 1.769,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Saige Damrow",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 2,
+        "emv": 4007.5,
+        "engagementRate": 0.01818,
+        "lift": 4.1806
+      },
+      {
+        "athlete": {
+          "name": "Austin Swartz",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 2,
+        "emv": 2204.75,
+        "engagementRate": 0.009903,
+        "lift": 1.441
+      },
+      {
+        "athlete": {
+          "name": "Eloise Brandewie",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 2,
+        "emv": 1454.25,
+        "engagementRate": 0.00599,
+        "lift": 12.0622
+      },
+      {
+        "athlete": {
+          "name": "Miguel Arilla",
+          "sport": "MENS_SOCCER"
+        },
+        "posts": 1,
+        "emv": 1127,
+        "engagementRate": 0.004991,
+        "lift": 2.3034
+      },
+      {
+        "athlete": {
+          "name": "Fedor Å½ugiÄ‡",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 1091,
+        "engagementRate": 0.004927,
+        "lift": 0.5911
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 391.64,
+    "avgLift": 1.1091,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Owen Freeman",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 3,
+        "emv": 7708.17,
+        "engagementRate": 0.034501,
+        "lift": 3.5266
+      },
+      {
+        "athlete": {
+          "name": "Liam McChesney",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 3,
+        "emv": 3488.67,
+        "engagementRate": 0.015697,
+        "lift": 25.0581
+      },
+      {
+        "athlete": {
+          "name": "Josh Dix",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 2,
+        "emv": 2156.25,
+        "engagementRate": 0.009174,
+        "lift": 0.5672
+      },
+      {
+        "athlete": {
+          "name": "Aleksa Dimitrijevic",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 1908,
+        "engagementRate": 0.008598,
+        "lift": -0.5165
+      },
+      {
+        "athlete": {
+          "name": "Jackson McAndrew",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 7,
+        "emv": 1816.5,
+        "engagementRate": 0.007887,
+        "lift": -0.0093
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 580.46,
+    "avgLift": 1.761,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Owen Freeman",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 2,
+        "emv": 10629.75,
+        "engagementRate": 0.047699,
+        "lift": 5.2224
+      },
+      {
+        "athlete": {
+          "name": "Saige Damrow",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 1,
+        "emv": 6764.5,
+        "engagementRate": 0.030837,
+        "lift": 7.4833
+      },
+      {
+        "athlete": {
+          "name": "Liam McChesney",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 3,
+        "emv": 3488.67,
+        "engagementRate": 0.015697,
+        "lift": 25.0581
+      },
+      {
+        "athlete": {
+          "name": "Austin Swartz",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 6,
+        "emv": 1588.92,
+        "engagementRate": 0.007135,
+        "lift": 1.018
+      },
+      {
+        "athlete": {
+          "name": "Ava Martin",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 2,
+        "emv": 1193,
+        "engagementRate": 0.005178,
+        "lift": 0.1
+      }
+    ]
+  },
+  "partnership": {
+    "avgEmv": 146.27,
+    "avgLift": -0.0335,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Norah Gessert",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 2,
+        "emv": 859.75,
+        "engagementRate": 0.003917,
+        "lift": 0.7501
+      },
+      {
+        "athlete": {
+          "name": "Kiara Reinhardt",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 4,
+        "emv": 704.88,
+        "engagementRate": 0.003144,
+        "lift": 2.79
+      },
+      {
+        "athlete": {
+          "name": "Austin Swartz",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 2,
+        "emv": 570.25,
+        "engagementRate": 0.002554,
+        "lift": -0.4811
+      },
+      {
+        "athlete": {
+          "name": "Grace Boffeli",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 566.5,
+        "engagementRate": 0.00255,
+        "lift": 6.4883
+      },
+      {
+        "athlete": {
+          "name": "Jasen Green",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 4,
+        "emv": 473.38,
+        "engagementRate": 0.002109,
+        "lift": -0.3296
+      }
+    ]
+  }
+}

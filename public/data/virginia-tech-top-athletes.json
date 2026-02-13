@@ -4,8 +4,8 @@
     "name": "Virginia Tech"
   },
   "collaboration": {
-    "avgEmv": 42.52,
-    "avgLift": 0.7631999999999999,
+    "avgEmv": 505.75,
+    "avgLift": 0.676,
     "top5Athletes": [
       {
         "athlete": {
@@ -13,9 +13,9 @@
           "sport": "MENS_WRESTLING"
         },
         "posts": 2,
-        "emv": 68.84,
-        "engagementRate": 0,
-        "lift": 1.1781
+        "emv": 851.5,
+        "engagementRate": 0.0009,
+        "lift": 0.8874
       },
       {
         "athlete": {
@@ -23,147 +23,167 @@
           "sport": "WOMENS_TRACK_AND_FIELD"
         },
         "posts": 2,
-        "emv": 16.2,
-        "engagementRate": 0.001126,
-        "lift": 0.3483
+        "emv": 160,
+        "engagementRate": 0.000126,
+        "lift": 0.4646
       }
     ]
   },
   "logo": {
-    "avgEmv": 250.47,
-    "avgLift": 24.7221,
+    "avgEmv": 432.59,
+    "avgLift": 3.3465,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Kody Huisman",
+          "name": "Neoklis Avdalas",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 8,
+        "emv": 7238.5,
+        "engagementRate": 0.007472,
+        "lift": 1.2103
+      },
+      {
+        "athlete": {
+          "name": "Kemari Copeland",
           "sport": "FOOTBALL"
         },
-        "posts": 13,
-        "emv": 278.14,
-        "engagementRate": 0.006585,
-        "lift": 1.5525
+        "posts": 17,
+        "emv": 4735.32,
+        "engagementRate": 0.005004,
+        "lift": -0.6737
       },
       {
         "athlete": {
-          "name": "Isaiah Cash",
+          "name": "Gabe Williams",
           "sport": "FOOTBALL"
         },
-        "posts": 12,
-        "emv": 188.6,
-        "engagementRate": 0.003367,
-        "lift": 95.30950000000001
+        "posts": 2,
+        "emv": 4551.25,
+        "engagementRate": 0.004773,
+        "lift": -0.1382
       },
       {
         "athlete": {
-          "name": "Mackenzie Nelson",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 12,
-        "emv": 329.26,
-        "engagementRate": 0.004031,
-        "lift": 0
-      },
-      {
-        "athlete": {
-          "name": "Noah Chambers",
+          "name": "Caleb Woodson",
           "sport": "FOOTBALL"
         },
-        "posts": 12,
-        "emv": 303.6,
-        "engagementRate": 0.003402,
-        "lift": -0.3522
+        "posts": 5,
+        "emv": 2724.1,
+        "engagementRate": 0.002807,
+        "lift": 3.5458
       },
       {
         "athlete": {
-          "name": "Andy Sullins",
-          "sport": "MENS_SOCCER"
+          "name": "William \"Pop\" Watson III",
+          "sport": "FOOTBALL"
         },
-        "posts": 11,
-        "emv": 152.74,
-        "engagementRate": 0.002307,
-        "lift": 2.3785
+        "posts": 6,
+        "emv": 2673.58,
+        "engagementRate": 0.002725,
+        "lift": 0.6589
       }
     ]
   },
   "mention (in caption)": {
-    "avgEmv": 150.16,
-    "avgLift": -0.1607,
+    "avgEmv": 677.58,
+    "avgLift": 2.1172,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Katrin Brzyszkowska",
-          "sport": "WOMENS_TRACK_AND_FIELD"
+          "name": "Kemari Copeland",
+          "sport": "FOOTBALL"
         },
-        "posts": 10,
-        "emv": 47.44,
-        "engagementRate": 0.002121,
-        "lift": 0.0123
+        "posts": 1,
+        "emv": 54043,
+        "engagementRate": 0.057285,
+        "lift": 8.1388
       },
       {
         "athlete": {
-          "name": "Anderson French",
-          "sport": "BASEBALL"
+          "name": "Isaiah Spencer",
+          "sport": "FOOTBALL"
         },
-        "posts": 8,
-        "emv": 154.12,
-        "engagementRate": 0.002244,
-        "lift": -0.3531
+        "posts": 1,
+        "emv": 7529.5,
+        "engagementRate": 0.007782,
+        "lift": 5.5138
       },
       {
         "athlete": {
-          "name": "Ivy Cooper",
-          "sport": "WOMENS_VOLLEYBALL"
+          "name": "William \"Pop\" Watson III",
+          "sport": "FOOTBALL"
         },
-        "posts": 8,
-        "emv": 46.82,
-        "engagementRate": 0.002914,
-        "lift": -0.0547
+        "posts": 1,
+        "emv": 4309.5,
+        "engagementRate": 0.004405,
+        "lift": 1.2231
       },
       {
         "athlete": {
-          "name": "Anna Weir",
-          "sport": "WOMENS_SOCCER"
+          "name": "Annika Rohs",
+          "sport": "SOFTBALL"
         },
-        "posts": 7,
-        "emv": 76.64,
-        "engagementRate": 0.002147,
-        "lift": -0.0915
+        "posts": 2,
+        "emv": 3624.25,
+        "engagementRate": 0.003855,
+        "lift": 20.6482
       },
       {
         "athlete": {
-          "name": "Jaden Schutt",
+          "name": "Neoklis Avdalas",
           "sport": "MENS_BASKETBALL"
         },
-        "posts": 7,
-        "emv": 425.78,
-        "engagementRate": 0.001342,
-        "lift": -0.31670000000000004
+        "posts": 2,
+        "emv": 3078.5,
+        "engagementRate": 0.003212,
+        "lift": -0.5196
       }
     ]
   },
   "partnership": {
-    "avgEmv": 33.84,
-    "avgLift": -0.2705,
+    "avgEmv": 267.04,
+    "avgLift": 0.2324,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Tucker Holloway",
+          "name": "Aaron Seidel",
+          "sport": "MENS_WRESTLING"
+        },
+        "posts": 1,
+        "emv": 3676,
+        "engagementRate": 0.003913,
+        "lift": 2.5674
+      },
+      {
+        "athlete": {
+          "name": "Sonny Sasso",
+          "sport": "MENS_WRESTLING"
+        },
+        "posts": 1,
+        "emv": 3317.5,
+        "engagementRate": 0.003509,
+        "lift": 2.5159
+      },
+      {
+        "athlete": {
+          "name": "Kyron Drones",
           "sport": "FOOTBALL"
         },
         "posts": 3,
-        "emv": 28.24,
-        "engagementRate": 0.00038899999999999997,
-        "lift": -0.9803000000000001
+        "emv": 954.83,
+        "engagementRate": 0.001009,
+        "lift": -0.1869
       },
       {
         "athlete": {
           "name": "Kyle Lowe",
           "sport": "FOOTBALL"
         },
-        "posts": 2,
-        "emv": 67.04,
-        "engagementRate": 0.00782,
-        "lift": 1.1016
+        "posts": 3,
+        "emv": 855.83,
+        "engagementRate": 0.000906,
+        "lift": 1.5239
       },
       {
         "athlete": {
@@ -171,29 +191,9 @@
           "sport": "FOOTBALL"
         },
         "posts": 2,
-        "emv": 61.2,
-        "engagementRate": 0.004114,
-        "lift": -0.2082
-      },
-      {
-        "athlete": {
-          "name": "Ilyas Fahim",
-          "sport": "MENS_TENNIS"
-        },
-        "posts": 2,
-        "emv": 8.28,
-        "engagementRate": 0.000845,
-        "lift": -0.5872999999999999
-      },
-      {
-        "athlete": {
-          "name": "Lucas Austin",
-          "sport": "FOOTBALL"
-        },
-        "posts": 1,
-        "emv": 4.44,
-        "engagementRate": 0.001325,
-        "lift": -0.6783
+        "emv": 755.5,
+        "engagementRate": 0.000797,
+        "lift": -0.2084
       }
     ]
   }

@@ -12,29 +12,33 @@ if (!fs.existsSync(dataDir)) {
   process.exit(0);
 }
 
-const ncaaFiles = fs
-  .readdirSync(dataDir)
-  .filter((name) => /^NCAA_contents.*\.json$/i.test(name))
-  .map((name) => ({
-    name,
-    mtimeMs: fs.statSync(path.join(dataDir, name)).mtimeMs,
-  }))
-  .sort((a, b) => b.mtimeMs - a.mtimeMs);
+// Prefer newer data files, fall back to legacy
+const contentsFileCandidates = [
+  'ncaa_roster_contents_feb_12.json',
+  ...fs.readdirSync(dataDir).filter((name) => /^NCAA_contents.*\.json$/i.test(name))
+    .map((name) => ({ name, mtimeMs: fs.statSync(path.join(dataDir, name)).mtimeMs }))
+    .sort((a, b) => b.mtimeMs - a.mtimeMs)
+    .map((f) => f.name),
+];
 
-if (ncaaFiles.length === 0) {
-  console.log('No NCAA_contents*.json found, skipping generation.');
+const rosterFileCandidates = ['ncaa_roster_feb_12.json', 'ncaa_roster.json'];
+
+const sourceFile = contentsFileCandidates.find((f) => fs.existsSync(path.join(dataDir, f)));
+const rosterFile = rosterFileCandidates.find((f) => fs.existsSync(path.join(dataDir, f)));
+
+if (!sourceFile) {
+  console.log('No contents file found, skipping generation.');
   process.exit(0);
 }
 
-if (!fs.existsSync(path.join(dataDir, 'ncaa_roster.json'))) {
-  console.log('ncaa_roster.json not found, skipping generation.');
+if (!rosterFile) {
+  console.log('No roster file found, skipping generation.');
   process.exit(0);
 }
 
-const sourceFile = ncaaFiles[0].name;
-const sourcePath = path.join(dataDir, sourceFile);
-const rows = JSON.parse(fs.readFileSync(sourcePath, 'utf8'));
-const rosterRows = JSON.parse(fs.readFileSync(path.join(dataDir, 'ncaa_roster.json'), 'utf8'));
+console.log(`Using contents: ${sourceFile}, roster: ${rosterFile}`);
+const rows = JSON.parse(fs.readFileSync(path.join(dataDir, sourceFile), 'utf8'));
+const rosterRows = JSON.parse(fs.readFileSync(path.join(dataDir, rosterFile), 'utf8'));
 
 const targetSchoolNames = new Set(['Ohio State', 'Ohio']);
 const ohioPosts = rows.filter((row) => targetSchoolNames.has(row?.athlete?.school?.name));

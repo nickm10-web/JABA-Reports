@@ -1,0 +1,139 @@
+{
+  "school": {
+    "_id": "68912b639f13cc870a6ab468",
+    "name": "San Diego State University"
+  },
+  "collaboration": {
+    "avgEmv": 593,
+    "avgLift": 2.398,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Rory Schank",
+          "sport": "WOMENS_SOCCER"
+        },
+        "posts": 1,
+        "emv": 593,
+        "engagementRate": 0.00112,
+        "lift": 2.398
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 378.85,
+    "avgLift": 1.4805,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Sydney Ash",
+          "sport": "WOMENS_TRACK_AND_FIELD"
+        },
+        "posts": 4,
+        "emv": 20710,
+        "engagementRate": 0.045403,
+        "lift": 12.052
+      },
+      {
+        "athlete": {
+          "name": "Cincere Rhaney",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 4623.5,
+        "engagementRate": 0.009686,
+        "lift": 2.0248
+      },
+      {
+        "athlete": {
+          "name": "Mimi Okano",
+          "sport": "SWIMMING_AND_DIVING"
+        },
+        "posts": 4,
+        "emv": 4498.13,
+        "engagementRate": 0.009608,
+        "lift": 7.054
+      },
+      {
+        "athlete": {
+          "name": "Magoon Gwath",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 8,
+        "emv": 2620.88,
+        "engagementRate": 0.005531,
+        "lift": 2.0384
+      },
+      {
+        "athlete": {
+          "name": "Owen Chambliss",
+          "sport": "FOOTBALL"
+        },
+        "posts": 3,
+        "emv": 1633.5,
+        "engagementRate": 0.003442,
+        "lift": -0.5224
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 0,
+    "avgLift": 0,
+    "top5Athletes": []
+  },
+  "partnership": {
+    "avgEmv": 188.37,
+    "avgLift": 0.0612,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Chris Johnson",
+          "sport": "FOOTBALL"
+        },
+        "posts": 3,
+        "emv": 2250.67,
+        "engagementRate": 0.004928,
+        "lift": 2.9775
+      },
+      {
+        "athlete": {
+          "name": "Ana Luisa Couto Soares Ferraz",
+          "sport": "WOMENS_TRACK_AND_FIELD"
+        },
+        "posts": 1,
+        "emv": 2201,
+        "engagementRate": 0.00453,
+        "lift": 3.5446
+      },
+      {
+        "athlete": {
+          "name": "Miles Byrd",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 3,
+        "emv": 544.17,
+        "engagementRate": 0.001133,
+        "lift": -0.4797
+      },
+      {
+        "athlete": {
+          "name": "Naomi Panganiban",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 3,
+        "emv": 496.67,
+        "engagementRate": 0.001074,
+        "lift": -0.4679
+      },
+      {
+        "athlete": {
+          "name": "Magoon Gwath",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 3,
+        "emv": 422.33,
+        "engagementRate": 0.000885,
+        "lift": -0.8631
+      }
+    ]
+  }
+}

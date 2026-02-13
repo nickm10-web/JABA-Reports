@@ -1,0 +1,68 @@
+{
+  "followers": 121473,
+  "school": {
+    "_id": "68fc5bbd7804265f86eb4177",
+    "name": "Depaul"
+  },
+  "overall": {
+    "totalContents": 746,
+    "totalLikes": 238272,
+    "totalComments": 27305,
+    "engagementRate": 0.0029307034524756427,
+    "emv": 160093.5
+  },
+  "counts": {
+    "hasOrganizationInCaption": 0,
+    "isOrganizationCollaboration": 23,
+    "hasOrganizationLogo": 266,
+    "withIp": 272
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 0,
+      "likes": 0,
+      "comments": 0,
+      "engagementRate": 0,
+      "emv": 0
+    },
+    "no": {
+      "contents": 746,
+      "likes": 319.3994638069705,
+      "comments": 36.601876675603215,
+      "engagementRate": 0.0029307034524756427
+    },
+    "avgLift": -100
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 23,
+      "likes": 656.5652173913044,
+      "comments": 20.608695652173914,
+      "engagementRate": 0.005574686663237742,
+      "emv": 359.2
+    },
+    "no": {
+      "contents": 723,
+      "likes": 308.6735822959889,
+      "comments": 37.11065006915629,
+      "engagementRate": 0.0028465933365039576
+    },
+    "avgLift": 95.83712895514226
+  },
+  "logo": {
+    "yes": {
+      "contents": 266,
+      "likes": 353.8646616541353,
+      "comments": 37.409774436090224,
+      "engagementRate": 0.0032210815250321104,
+      "emv": 233.05
+    },
+    "no": {
+      "contents": 480,
+      "likes": 300.3,
+      "comments": 36.15416666666667,
+      "engagementRate": 0.002769785603933933
+    },
+    "avgLift": 16.29353262783952
+  }
+}

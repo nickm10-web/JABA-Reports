@@ -1,0 +1,68 @@
+{
+  "followers": 740916,
+  "school": {
+    "_id": "68f9d1f47804265f86eb396b",
+    "name": "Pittsburgh"
+  },
+  "overall": {
+    "totalContents": 2475,
+    "totalLikes": 3173487,
+    "totalComments": 101276,
+    "engagementRate": 0.0017858118405548883,
+    "emv": 1738657.5
+  },
+  "counts": {
+    "hasOrganizationInCaption": 0,
+    "isOrganizationCollaboration": 4,
+    "hasOrganizationLogo": 288,
+    "withIp": 292
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 0,
+      "likes": 0,
+      "comments": 0,
+      "engagementRate": 0,
+      "emv": 0
+    },
+    "no": {
+      "contents": 2475,
+      "likes": 1282.2169696969697,
+      "comments": 40.91959595959596,
+      "engagementRate": 0.0017858118405548883
+    },
+    "avgLift": -100
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 4,
+      "likes": 7660.75,
+      "comments": 91.5,
+      "engagementRate": 0.010463061939545104,
+      "emv": 3967.63
+    },
+    "no": {
+      "contents": 2471,
+      "likes": 1271.8915418858762,
+      "comments": 40.83771752326993,
+      "engagementRate": 0.0017717653005322413
+    },
+    "avgLift": 490.5444663806195
+  },
+  "logo": {
+    "yes": {
+      "contents": 288,
+      "likes": 2293.0555555555557,
+      "comments": 50.520833333333336,
+      "engagementRate": 0.003163079740333437,
+      "emv": 1222.31
+    },
+    "no": {
+      "contents": 2187,
+      "likes": 1149.1024234110653,
+      "comments": 39.65523548239597,
+      "engagementRate": 0.0016044432282383717
+    },
+    "avgLift": 97.14500860254178
+  }
+}

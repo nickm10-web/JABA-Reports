@@ -224,38 +224,62 @@ type TabType = 'overview' | 'with-vs-without' | 'partnerships' | 'athletes' | 'r
 const SCHOOL_FILE_MAP: Record<string, string> = {
   'Auburn University': 'auburn-university',
   'Baylor': 'baylor',
+  'Brigham Young University (BYU)': 'brigham-young-university-byu',
+  'Clemson': 'clemson',
+  'Creighton University': 'creighton-university',
+  'Depaul': 'depaul',
+  'George Mason': 'george-mason',
+  'Kansas': 'kansas',
+  'Kentucky': 'kentucky',
   'Louisiana State University': 'louisiana-state-university',
   'Michigan State': 'michigan-state',
   'Old Dominion University': 'old-dominion-university',
   'Penn State University': 'penn-state-university',
+  'Pittsburgh': 'pittsburgh',
+  'Robert Morris University': 'robert-morris-university',
+  'San Diego State University': 'san-diego-state-university',
   'Texas A&M': 'texas-a-m',
   'University of Central Florida': 'university-of-central-florida',
   'University of Cincinnati': 'university-of-cincinnati',
   'University of Maryland': 'university-of-maryland',
   'University of Nebraska': 'university-of-nebraska',
+  'University of San Diego': 'university-of-san-diego',
   'University of Texas at San Antonio (UTSA)': 'university-of-texas-at-san-antonio-utsa',
   'University of Virginia': 'university-of-virginia',
+  'University of Wisconsin': 'university-of-wisconsin',
   'Virginia Tech': 'virginia-tech',
-  'Washington State': 'washington-state'
+  'Washington State': 'washington-state',
 };
 
 // Standardized display names - ensures consistent formatting across the UI
 const SCHOOL_DISPLAY_NAMES: Record<string, string> = {
   'Auburn University': 'Auburn University',
   'Baylor': 'Baylor University',
+  'Brigham Young University (BYU)': 'Brigham Young University (BYU)',
+  'Clemson': 'Clemson University',
+  'Creighton University': 'Creighton University',
+  'Depaul': 'DePaul University',
+  'George Mason': 'George Mason University',
+  'Kansas': 'University of Kansas',
+  'Kentucky': 'University of Kentucky',
   'Louisiana State University': 'Louisiana State University (LSU)',
   'Michigan State': 'Michigan State University',
   'Old Dominion University': 'Old Dominion University (ODU)',
   'Penn State University': 'Penn State University',
+  'Pittsburgh': 'University of Pittsburgh',
+  'Robert Morris University': 'Robert Morris University',
+  'San Diego State University': 'San Diego State University (SDSU)',
   'Texas A&M': 'Texas A&M University',
   'University of Central Florida': 'University of Central Florida (UCF)',
   'University of Cincinnati': 'University of Cincinnati',
   'University of Maryland': 'University of Maryland',
   'University of Nebraska': 'University of Nebraska',
+  'University of San Diego': 'University of San Diego',
   'University of Texas at San Antonio (UTSA)': 'University of Texas at San Antonio (UTSA)',
   'University of Virginia': 'University of Virginia (UVA)',
+  'University of Wisconsin': 'University of Wisconsin',
   'Virginia Tech': 'Virginia Tech',
-  'Washington State': 'Washington State University'
+  'Washington State': 'Washington State University',
 };
 
 // Helper function to get standardized display name
@@ -581,7 +605,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                       <span> to show how IP drives engagement.</span>
                     </h2>
                     <p className="text-base md:text-lg text-gray-600 mt-4 max-w-3xl">
-                      A comparative analysis of IP performance, engagement lift, and post impact across 15 Playfly schools.
+                      A comparative analysis of IP performance, engagement lift, and post impact across 27 Playfly schools.
                     </p>
                   </div>
                 </GlassCard>

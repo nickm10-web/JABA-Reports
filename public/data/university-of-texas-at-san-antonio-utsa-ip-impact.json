@@ -1,68 +1,68 @@
 {
-  "followers": 832689,
+  "followers": 835260,
   "school": {
     "_id": "68f290a8a227133e83ce9dbf",
     "name": "University of Texas at San Antonio (UTSA)"
   },
   "overall": {
-    "totalContents": 3339,
-    "totalLikes": 1372276,
-    "totalComments": 102022,
-    "engagementRate": 1.7705265711448093,
-    "emv": 37647.72
+    "totalContents": 3773,
+    "totalLikes": 1699391,
+    "totalComments": 109126,
+    "engagementRate": 0.0005738707723962713,
+    "emv": 1013384.5
   },
   "counts": {
     "hasOrganizationInCaption": 639,
-    "isOrganizationCollaboration": 318,
-    "hasOrganizationLogo": 1494,
-    "withIp": 1645
+    "isOrganizationCollaboration": 407,
+    "hasOrganizationLogo": 1497,
+    "withIp": 1737
   },
   "orgInCaption": {
     "yes": {
       "contents": 639,
-      "likes": 504.0078247261346,
-      "comments": 19.01095461658842,
-      "engagementRate": 0.0006281081884625868,
-      "emv": 11.98
+      "likes": 509.69170579029736,
+      "comments": 19.07511737089202,
+      "engagementRate": 0.000633056561024339,
+      "emv": 283.46
     },
     "no": {
-      "contents": 2700,
-      "likes": 388.9685185185185,
-      "comments": 33.28666666666667,
-      "engagementRate": 0.0005070983106360061
+      "contents": 3134,
+      "likes": 438.32099553286537,
+      "comments": 30.930759412890875,
+      "engagementRate": 0.0005618032168974406
     },
-    "avgLift": 23.863198770039165
+    "avgLift": 12.682971899020998
   },
   "collaboration": {
     "yes": {
-      "contents": 318,
-      "likes": 626.6509433962265,
-      "comments": 10.122641509433961,
-      "engagementRate": 0.000764719583068421,
-      "emv": 13.55
+      "contents": 407,
+      "likes": 593.7248157248157,
+      "comments": 9.046683046683047,
+      "engagementRate": 0.0007216573267862686,
+      "emv": 310.43
     },
     "no": {
-      "contents": 3021,
-      "likes": 388.28235683548496,
-      "comments": 32.705395564382655,
-      "engagementRate": 0.0005055762144088221
+      "contents": 3366,
+      "likes": 433.07932263814615,
+      "comments": 31.32620320855615,
+      "engagementRate": 0.0005560011563425787
     },
-    "avgLift": 51.25703331645441
+    "avgLift": 29.79421329505676
   },
   "logo": {
     "yes": {
-      "contents": 1494,
-      "likes": 481.54551539491297,
-      "comments": 32.44846050870147,
-      "engagementRate": 0.0006172700442825767,
-      "emv": 12.88
+      "contents": 1497,
+      "likes": 491.999331997328,
+      "comments": 32.506346025384104,
+      "engagementRate": 0.000627954981709542,
+      "emv": 294.76
     },
     "no": {
-      "contents": 1845,
-      "likes": 353.84661246612467,
-      "comments": 29.021138211382112,
-      "engagementRate": 0.0004597968157109158
+      "contents": 2276,
+      "likes": 423.05272407732866,
+      "comments": 26.56590509666081,
+      "engagementRate": 0.0005382978104709785
     },
-    "avgLift": 34.24843826466769
+    "avgLift": 16.655681946786824
   }
 }

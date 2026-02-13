@@ -1,0 +1,68 @@
+{
+  "followers": 1266884,
+  "school": {
+    "_id": "68d240206f71af5707a79f24",
+    "name": "Kansas"
+  },
+  "overall": {
+    "totalContents": 2423,
+    "totalLikes": 2405700,
+    "totalComments": 85080,
+    "engagementRate": 0.0008114188721801383,
+    "emv": 1330470
+  },
+  "counts": {
+    "hasOrganizationInCaption": 0,
+    "isOrganizationCollaboration": 20,
+    "hasOrganizationLogo": 544,
+    "withIp": 559
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 0,
+      "likes": 0,
+      "comments": 0,
+      "engagementRate": 0,
+      "emv": 0
+    },
+    "no": {
+      "contents": 2423,
+      "likes": 992.8600907965332,
+      "comments": 35.1134956665291,
+      "engagementRate": 0.0008114188721801383
+    },
+    "avgLift": -100
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 20,
+      "likes": 2465.6,
+      "comments": 24.35,
+      "engagementRate": 0.001965412776544656,
+      "emv": 1269.33
+    },
+    "no": {
+      "contents": 2403,
+      "likes": 980.6025801081981,
+      "comments": 35.203079483978364,
+      "engagementRate": 0.0008018142620730679
+    },
+    "avgLift": 145.12070556878564
+  },
+  "logo": {
+    "yes": {
+      "contents": 544,
+      "likes": 1662.5606617647059,
+      "comments": 39.22794117647059,
+      "engagementRate": 0.0013432868383697137,
+      "emv": 890.12
+    },
+    "no": {
+      "contents": 1879,
+      "likes": 798.9712613092071,
+      "comments": 33.92229909526344,
+      "engagementRate": 0.0006574347457261047
+    },
+    "avgLift": 104.32245893637986
+  }
+}

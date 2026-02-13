@@ -1,68 +1,68 @@
 {
-  "followers": 406830,
+  "followers": 406916,
   "school": {
     "_id": "691b2b339ee7e60ca0923d6b",
     "name": "Old Dominion University"
   },
   "overall": {
-    "totalContents": 1564,
-    "totalLikes": 2314481,
-    "totalComments": 57189,
-    "engagementRate": 5.829633999459234,
-    "emv": 52008.52
+    "totalContents": 1577,
+    "totalLikes": 2319020,
+    "totalComments": 58050,
+    "engagementRate": 0.0037042945356834858,
+    "emv": 1246585
   },
   "counts": {
     "hasOrganizationInCaption": 229,
     "isOrganizationCollaboration": 21,
-    "hasOrganizationLogo": 907,
-    "withIp": 942
+    "hasOrganizationLogo": 912,
+    "withIp": 947
   },
   "orgInCaption": {
     "yes": {
       "contents": 229,
-      "likes": 463.94323144104806,
+      "likes": 464.0349344978166,
       "comments": 21.550218340611355,
-      "engagementRate": 0.0011933570527779649,
-      "emv": 11.43
+      "engagementRate": 0.001193330202888134,
+      "emv": 264.34
     },
     "no": {
-      "contents": 1335,
-      "likes": 1654.110861423221,
-      "comments": 39.141573033707864,
-      "engagementRate": 0.004162063845972344
+      "contents": 1348,
+      "likes": 1641.5103857566767,
+      "comments": 39.402818991097924,
+      "engagementRate": 0.004130860434949165
     },
-    "avgLift": -71.32775716708949
+    "avgLift": -71.11182472319912
   },
   "collaboration": {
     "yes": {
       "contents": 21,
-      "likes": 1371.1904761904761,
+      "likes": 1371.2380952380952,
       "comments": 24.476190476190474,
-      "engagementRate": 0.003430589353456398,
-      "emv": 29.87
+      "engagementRate": 0.0034299813369695112,
+      "emv": 722.33
     },
     "no": {
-      "contents": 1543,
-      "likes": 1481.3259883344135,
-      "comments": 36.730395333765394,
-      "engagementRate": 0.003731426845778775
+      "contents": 1556,
+      "likes": 1471.8663239074551,
+      "comments": 36.976863753213365,
+      "engagementRate": 0.0037079967061031476
     },
-    "avgLift": -8.062264242502923
+    "avgLift": -7.497724274566889
   },
   "logo": {
     "yes": {
-      "contents": 907,
-      "likes": 415.77618522601983,
-      "comments": 34.936052921719956,
-      "engagementRate": 0.001107863820632057,
-      "emv": 11.81
+      "contents": 912,
+      "likes": 412.79824561403507,
+      "comments": 35.083333333333336,
+      "engagementRate": 0.0011006733059092501,
+      "emv": 259.02
     },
     "no": {
-      "contents": 657,
-      "likes": 2948.8158295281582,
-      "comments": 38.8158295281583,
-      "engagementRate": 0.007343685714072995
+      "contents": 665,
+      "likes": 2921.124812030075,
+      "comments": 39.17894736842105,
+      "engagementRate": 0.007274975079373866
     },
-    "avgLift": -84.91406272317708
+    "avgLift": -84.87041819524718
   }
 }

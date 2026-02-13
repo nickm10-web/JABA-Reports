@@ -4,28 +4,140 @@
     "name": "Michigan State"
   },
   "collaboration": {
-    "avgEmv": 477.7,
-    "avgLift": 1.0722,
+    "avgEmv": 1642.4,
+    "avgLift": 0,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Grady Kelly",
-          "sport": "FOOTBALL"
+          "name": "Jeremy Fears Jr.",
+          "sport": "MENS_BASKETBALL"
         },
-        "posts": 4,
-        "emv": 102.88,
-        "engagementRate": 0.003958,
-        "lift": 0.7292000000000001
+        "posts": 3,
+        "emv": 17227,
+        "engagementRate": 0,
+        "lift": 0
       },
       {
         "athlete": {
-          "name": "Malayah Long",
-          "sport": "WOMENS_VOLLEYBALL"
+          "name": "Cam Ward",
+          "sport": "MENS_BASKETBALL"
         },
-        "posts": 4,
-        "emv": 102.56,
-        "engagementRate": 0.0033090000000000003,
-        "lift": -0.5473
+        "posts": 3,
+        "emv": 7634.17,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Brandon Tullis",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 5403.5,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Shawn Foster",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 5171,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Aidan Chiles",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 5169.5,
+        "engagementRate": 0,
+        "lift": 0
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 734.72,
+    "avgLift": 0,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Jace Clarizio",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 15014,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Jeremy Fears Jr.",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 9,
+        "emv": 10273.44,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Cam Ward",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 9,
+        "emv": 5717.67,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Nick Marsh",
+          "sport": "FOOTBALL"
+        },
+        "posts": 12,
+        "emv": 5263.38,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Divine Ugochukwu",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 7,
+        "emv": 3198.36,
+        "engagementRate": 0,
+        "lift": 0
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 1008.17,
+    "avgLift": 0,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Cam Ward",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 2,
+        "emv": 16095.75,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Jace Clarizio",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 15014,
+        "engagementRate": 0,
+        "lift": 0
       },
       {
         "athlete": {
@@ -33,197 +145,85 @@
           "sport": "MENS_BASKETBALL"
         },
         "posts": 3,
-        "emv": 2095.34,
-        "engagementRate": 0.004783,
-        "lift": 2.5602
-      },
-      {
-        "athlete": {
-          "name": "Kennedy Blair",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 3,
-        "emv": 44.42,
-        "engagementRate": 0.003592,
-        "lift": 2.6136
-      },
-      {
-        "athlete": {
-          "name": "Evie Doezema",
-          "sport": "WOMENS_VOLLEYBALL"
-        },
-        "posts": 2,
-        "emv": 43.32,
-        "engagementRate": 0.002702,
-        "lift": 0.0054
-      }
-    ]
-  },
-  "logo": {
-    "avgEmv": 513.32,
-    "avgLift": 2.0615,
-    "top5Athletes": [
-      {
-        "athlete": {
-          "name": "Jaxon Kohler",
-          "sport": "MENS_BASKETBALL"
-        },
-        "posts": 18,
-        "emv": 1250.54,
-        "engagementRate": 0.0016389999999999998,
-        "lift": 0.1497
-      },
-      {
-        "athlete": {
-          "name": "Kennedy Blair",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 18,
-        "emv": 112.24,
-        "engagementRate": 0.0014269999999999999,
+        "emv": 14686.5,
+        "engagementRate": 0,
         "lift": 0
       },
       {
         "athlete": {
-          "name": "Grace VanSlooten",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 17,
-        "emv": 124.42,
-        "engagementRate": 0.000319,
-        "lift": -0.36210000000000003
-      },
-      {
-        "athlete": {
-          "name": "Jalen Thompson",
+          "name": "Evan Boyd",
           "sport": "FOOTBALL"
         },
-        "posts": 16,
-        "emv": 687.18,
-        "engagementRate": 0.0026019999999999997,
-        "lift": 8.7404
+        "posts": 1,
+        "emv": 14109,
+        "engagementRate": 0,
+        "lift": 0
       },
       {
         "athlete": {
-          "name": "Michael Masunas",
+          "name": "Nick Marsh",
           "sport": "FOOTBALL"
         },
-        "posts": 15,
-        "emv": 392.2,
-        "engagementRate": 0.004449,
-        "lift": -0.28190000000000004
-      }
-    ]
-  },
-  "mention (in caption)": {
-    "avgEmv": 164.48,
-    "avgLift": -0.2427,
-    "top5Athletes": [
-      {
-        "athlete": {
-          "name": "Jalen Thompson",
-          "sport": "FOOTBALL"
-        },
-        "posts": 13,
-        "emv": 472.24,
-        "engagementRate": 0.002248,
-        "lift": 0.4446
-      },
-      {
-        "athlete": {
-          "name": "Juliann Woodard",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 11,
-        "emv": 80.74,
-        "engagementRate": 0.002267,
-        "lift": -0.42469999999999997
-      },
-      {
-        "athlete": {
-          "name": "Lilia Cosman",
-          "sport": "WOMENS_GYMNASTICS"
-        },
-        "posts": 9,
-        "emv": 177.72,
-        "engagementRate": 0.002038,
-        "lift": -0.8070999999999999
-      },
-      {
-        "athlete": {
-          "name": "Cam Berger",
-          "sport": "WOMENS_VOLLEYBALL"
-        },
-        "posts": 9,
-        "emv": 49.26,
-        "engagementRate": 0.0022489999999999997,
-        "lift": -0.0334
-      },
-      {
-        "athlete": {
-          "name": "Kennedy Blair",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 9,
-        "emv": 42.46,
-        "engagementRate": 0.001078,
-        "lift": -0.39270000000000005
+        "posts": 6,
+        "emv": 5368.92,
+        "engagementRate": 0,
+        "lift": 0
       }
     ]
   },
   "partnership": {
-    "avgEmv": 23.05,
-    "avgLift": -0.7109000000000001,
+    "avgEmv": 410.31,
+    "avgLift": 0,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Juliann Woodard",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 9,
-        "emv": 63.44,
-        "engagementRate": 0.002178,
-        "lift": -0.3654
-      },
-      {
-        "athlete": {
-          "name": "Natalia Kenyatta",
-          "sport": "SOFTBALL"
-        },
-        "posts": 6,
-        "emv": 16.68,
-        "engagementRate": 0.000847,
-        "lift": -0.47409999999999997
-      },
-      {
-        "athlete": {
-          "name": "Malayah Long",
-          "sport": "WOMENS_VOLLEYBALL"
-        },
-        "posts": 6,
-        "emv": 3.12,
-        "engagementRate": 0.000017,
-        "lift": -0.9983
-      },
-      {
-        "athlete": {
-          "name": "Jaxson Wilson",
+          "name": "Jace Clarizio",
           "sport": "FOOTBALL"
         },
-        "posts": 6,
-        "emv": 29.44,
-        "engagementRate": 0.001056,
-        "lift": -0.7279000000000001
+        "posts": 1,
+        "emv": 15014,
+        "engagementRate": 0,
+        "lift": 0
       },
       {
         "athlete": {
-          "name": "Kennedy Blair",
-          "sport": "WOMENS_BASKETBALL"
+          "name": "Armorion Smith",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 2649.75,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Cady Duplissis",
+          "sport": "WOMENS_GYMNASTICS"
+        },
+        "posts": 2,
+        "emv": 1402.5,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Jeremy Fears Jr.",
+          "sport": "MENS_BASKETBALL"
         },
         "posts": 6,
-        "emv": 2.56,
-        "engagementRate": 0.000023,
-        "lift": -0.9890000000000001
+        "emv": 1299.08,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Aidan Chiles",
+          "sport": "FOOTBALL"
+        },
+        "posts": 3,
+        "emv": 1226.33,
+        "engagementRate": 0,
+        "lift": 0
       }
     ]
   }

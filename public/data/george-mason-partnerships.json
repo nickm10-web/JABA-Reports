@@ -1,0 +1,34 @@
+{
+  "school": {
+    "_id": "698263f3a7033318b33da125",
+    "name": "George Mason"
+  },
+  "followers": 0,
+  "overall": {
+    "totalContents": 1959,
+    "avgLikes": 295.18478815722307,
+    "avgComments": 28.289433384379784,
+    "engagementRate": 0,
+    "emv": 190.03
+  },
+  "sponsorPartners": [
+    {
+      "sponsorPartner": "@ornery_beer_public_house",
+      "totalContents": 1,
+      "avgLikes": 165,
+      "avgComments": 6,
+      "engagementRate": 0,
+      "emv": 91.5,
+      "engagementRateLift": 0
+    },
+    {
+      "sponsorPartner": "@aiavitalitynz",
+      "totalContents": 1,
+      "avgLikes": 88,
+      "avgComments": 1,
+      "engagementRate": 0,
+      "emv": 45.5,
+      "engagementRateLift": 0
+    }
+  ]
+}

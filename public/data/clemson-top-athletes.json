@@ -1,0 +1,230 @@
+{
+  "school": {
+    "_id": "68f9cc6d7804265f86eb3963",
+    "name": "Clemson"
+  },
+  "collaboration": {
+    "avgEmv": 10351.92,
+    "avgLift": 18.3023,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Lleyton Lackey",
+          "sport": "BASEBALL"
+        },
+        "posts": 1,
+        "emv": 283388.5,
+        "engagementRate": 0.318495,
+        "lift": 452.2755
+      },
+      {
+        "athlete": {
+          "name": "Jack Crighton",
+          "sport": "BASEBALL"
+        },
+        "posts": 1,
+        "emv": 49885,
+        "engagementRate": 0.057288,
+        "lift": 62.1757
+      },
+      {
+        "athlete": {
+          "name": "RJ Godfrey",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 6,
+        "emv": 41216.58,
+        "engagementRate": 0.046419,
+        "lift": 44.1673
+      },
+      {
+        "athlete": {
+          "name": "Tryston McCladdie",
+          "sport": "BASEBALL"
+        },
+        "posts": 3,
+        "emv": 34131.83,
+        "engagementRate": 0.038937,
+        "lift": 77.1733
+      },
+      {
+        "athlete": {
+          "name": "Brie Clark",
+          "sport": "WOMENS_GYMNASTICS"
+        },
+        "posts": 3,
+        "emv": 24983.17,
+        "engagementRate": 0.028691,
+        "lift": 48.7826
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 1346.66,
+    "avgLift": 1.8254,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "RJ Godfrey",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 8,
+        "emv": 31216.75,
+        "engagementRate": 0.03514,
+        "lift": 34.6687
+      },
+      {
+        "athlete": {
+          "name": "Vic Burley",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 20609,
+        "engagementRate": 0.023388,
+        "lift": 36.2049
+      },
+      {
+        "athlete": {
+          "name": "Tristan Smith",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 13616,
+        "engagementRate": 0.015581,
+        "lift": 2.3291
+      },
+      {
+        "athlete": {
+          "name": "Sarah Rocheleau",
+          "sport": "SOFTBALL"
+        },
+        "posts": 2,
+        "emv": 13023.75,
+        "engagementRate": 0.014724,
+        "lift": 29.8958
+      },
+      {
+        "athlete": {
+          "name": "Avieon Terrell",
+          "sport": "FOOTBALL"
+        },
+        "posts": 9,
+        "emv": 7214.39,
+        "engagementRate": 0.00777,
+        "lift": 0.9597
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 619.64,
+    "avgLift": -0.054,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Jamal Anderson",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 3553.5,
+        "engagementRate": 0.004057,
+        "lift": 5.1084
+      },
+      {
+        "athlete": {
+          "name": "Wade Woodaz",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 1434,
+        "engagementRate": 0.001622,
+        "lift": -0.0851
+      },
+      {
+        "athlete": {
+          "name": "Stephiylan Green",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 1304.5,
+        "engagementRate": 0.001307,
+        "lift": 0.0847
+      },
+      {
+        "athlete": {
+          "name": "Talan Bell",
+          "sport": "BASEBALL"
+        },
+        "posts": 1,
+        "emv": 1253.5,
+        "engagementRate": 0.001447,
+        "lift": 0.7956
+      },
+      {
+        "athlete": {
+          "name": "Michael Gillen",
+          "sport": "BASEBALL"
+        },
+        "posts": 1,
+        "emv": 938.5,
+        "engagementRate": 0.001078,
+        "lift": 3.0545
+      }
+    ]
+  },
+  "partnership": {
+    "avgEmv": 420.94,
+    "avgLift": -0.1191,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Luke Gaffney",
+          "sport": "BASEBALL"
+        },
+        "posts": 1,
+        "emv": 7160,
+        "engagementRate": 0.008142,
+        "lift": 18.0741
+      },
+      {
+        "athlete": {
+          "name": "Kiley Channell",
+          "sport": "SOFTBALL"
+        },
+        "posts": 1,
+        "emv": 6201,
+        "engagementRate": 0.007143,
+        "lift": 8.512
+      },
+      {
+        "athlete": {
+          "name": "Cade Klubnik",
+          "sport": "FOOTBALL"
+        },
+        "posts": 13,
+        "emv": 2183.23,
+        "engagementRate": 0.002472,
+        "lift": -0.6594
+      },
+      {
+        "athlete": {
+          "name": "Holden Caspersen",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 2143.5,
+        "engagementRate": 0.002436,
+        "lift": 4.0998
+      },
+      {
+        "athlete": {
+          "name": "Jay Dillard",
+          "sport": "BASEBALL"
+        },
+        "posts": 1,
+        "emv": 2090.5,
+        "engagementRate": 0.002393,
+        "lift": 1.9454
+      }
+    ]
+  }
+}

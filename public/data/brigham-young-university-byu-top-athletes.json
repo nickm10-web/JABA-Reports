@@ -1,0 +1,77 @@
+{
+  "school": {
+    "_id": "698233c6ced13833410d419a",
+    "name": "Brigham Young University (BYU)"
+  },
+  "collaboration": {
+    "avgEmv": 0,
+    "avgLift": 0,
+    "top5Athletes": []
+  },
+  "logo": {
+    "avgEmv": 0,
+    "avgLift": 0,
+    "top5Athletes": []
+  },
+  "mention (in caption)": {
+    "avgEmv": 0,
+    "avgLift": 0,
+    "top5Athletes": []
+  },
+  "partnership": {
+    "avgEmv": 511.8,
+    "avgLift": 0,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Hailey Bills",
+          "sport": "CHEER"
+        },
+        "posts": 3,
+        "emv": 16305.83,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Jane Hedengren",
+          "sport": "WOMENS_CROSS_COUNTRY"
+        },
+        "posts": 4,
+        "emv": 4201.63,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Joey Nokes",
+          "sport": "MENS_TRACK_AND_FIELD"
+        },
+        "posts": 1,
+        "emv": 1782,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "James Corrigan",
+          "sport": "MENS_CROSS_COUNTRY"
+        },
+        "posts": 1,
+        "emv": 1257.5,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Kylie Mantz",
+          "sport": "WOMENS_TRACK_AND_FIELD"
+        },
+        "posts": 1,
+        "emv": 1011.5,
+        "engagementRate": 0,
+        "lift": 0
+      }
+    ]
+  }
+}

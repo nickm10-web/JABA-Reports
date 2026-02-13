@@ -1,0 +1,200 @@
+{
+  "school": {
+    "_id": "698263f3a7033318b33da125",
+    "name": "George Mason"
+  },
+  "collaboration": {
+    "avgEmv": 198.9,
+    "avgLift": 0,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Zahirah Walton",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 366.5,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Nicholas Novitski",
+          "sport": "MENS_TENNIS"
+        },
+        "posts": 1,
+        "emv": 363,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Louis Volker",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 196,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Ekansh Kumar",
+          "sport": "MENS_TENNIS"
+        },
+        "posts": 1,
+        "emv": 46.5,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Kennedy Harris",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 22.5,
+        "engagementRate": 0,
+        "lift": 0
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 299.85,
+    "avgLift": 0,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Daniella Jimenez",
+          "sport": "WOMENS_LACROSSE"
+        },
+        "posts": 2,
+        "emv": 19780,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Charles Bunting",
+          "sport": "MENS_WRESTLING"
+        },
+        "posts": 3,
+        "emv": 1145.5,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Nia Thompson",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 1,
+        "emv": 1044.5,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "James Blackman",
+          "sport": "MENS_WRESTLING"
+        },
+        "posts": 3,
+        "emv": 850.5,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Kasey Maida",
+          "sport": "WOMENS_SOCCER"
+        },
+        "posts": 1,
+        "emv": 710,
+        "engagementRate": 0,
+        "lift": 0
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 253.57,
+    "avgLift": 0,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "James Blackman",
+          "sport": "MENS_WRESTLING"
+        },
+        "posts": 2,
+        "emv": 1200.5,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Charles Bunting",
+          "sport": "MENS_WRESTLING"
+        },
+        "posts": 3,
+        "emv": 1168.67,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Nia Thompson",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 1,
+        "emv": 1044.5,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Isaiah Skinn",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 2,
+        "emv": 881.75,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Isabella Yousefi",
+          "sport": "WOMENS_SOCCER"
+        },
+        "posts": 1,
+        "emv": 706,
+        "engagementRate": 0,
+        "lift": 0
+      }
+    ]
+  },
+  "partnership": {
+    "avgEmv": 68.5,
+    "avgLift": 0,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Kennedy Harris",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 91.5,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Ian Jones",
+          "sport": "SWIMMING_AND_DIVING"
+        },
+        "posts": 1,
+        "emv": 45.5,
+        "engagementRate": 0,
+        "lift": 0
+      }
+    ]
+  }
+}

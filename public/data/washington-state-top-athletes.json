@@ -4,28 +4,18 @@
     "name": "Washington State"
   },
   "collaboration": {
-    "avgEmv": 130.84,
-    "avgLift": 3.8487999999999998,
+    "avgEmv": 714.3,
+    "avgLift": 38.3518,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Joshua Meredith",
+          "name": "Kenny Worthy III",
           "sport": "FOOTBALL"
         },
-        "posts": 6,
-        "emv": 147.98,
-        "engagementRate": 0.001792,
-        "lift": -0.7404000000000001
-      },
-      {
-        "athlete": {
-          "name": "Leo Pulalasi",
-          "sport": "FOOTBALL"
-        },
-        "posts": 4,
-        "emv": 121.87,
-        "engagementRate": 0.012657,
-        "lift": 13.0173
+        "posts": 1,
+        "emv": 1629,
+        "engagementRate": 0.016548,
+        "lift": 1.2343
       },
       {
         "athlete": {
@@ -33,177 +23,167 @@
           "sport": "FOOTBALL"
         },
         "posts": 3,
-        "emv": 151.47,
-        "engagementRate": 0.008258,
+        "emv": 1584.83,
+        "engagementRate": 0.016021,
         "lift": 3.3391
       },
       {
         "athlete": {
-          "name": "Tucker Large",
+          "name": "Dylan Paine",
           "sport": "FOOTBALL"
         },
         "posts": 3,
-        "emv": 139.53,
-        "engagementRate": 0.004202,
-        "lift": 0.573
+        "emv": 1519.17,
+        "engagementRate": 0.015749,
+        "lift": 1.3993
       },
       {
         "athlete": {
-          "name": "Trey Leckner",
+          "name": "Caleb Francl",
           "sport": "FOOTBALL"
         },
-        "posts": 3,
-        "emv": 93.37,
-        "engagementRate": 0.007881,
-        "lift": 3.0551999999999997
-      }
-    ]
-  },
-  "logo": {
-    "avgEmv": 358.24,
-    "avgLift": 1.0147,
-    "top5Athletes": [
-      {
-        "athlete": {
-          "name": "Ace Glass",
-          "sport": "MENS_BASKETBALL"
-        },
-        "posts": 14,
-        "emv": 897.24,
-        "engagementRate": 0.006248,
-        "lift": 3.2809
+        "posts": 1,
+        "emv": 1407,
+        "engagementRate": 0.014414,
+        "lift": 5.8478
       },
       {
         "athlete": {
           "name": "Tony Freeman",
           "sport": "FOOTBALL"
         },
-        "posts": 13,
-        "emv": 459.55,
-        "engagementRate": 0.004911,
-        "lift": 0.6412
-      },
-      {
-        "athlete": {
-          "name": "Elliotte Kortus",
-          "sport": "WOMENS_SOCCER"
-        },
-        "posts": 6,
-        "emv": 67.16,
-        "engagementRate": 0.00031600000000000004,
-        "lift": 0.3276
-      },
-      {
-        "athlete": {
-          "name": "Jaxon Potter",
-          "sport": "FOOTBALL"
-        },
-        "posts": 4,
-        "emv": 194.69,
-        "engagementRate": 0.0015279999999999998,
-        "lift": 1.5773
-      },
-      {
-        "athlete": {
-          "name": "Maxwell Woods",
-          "sport": "FOOTBALL"
-        },
-        "posts": 4,
-        "emv": 172.57,
-        "engagementRate": 0.001007,
-        "lift": -0.7534000000000001
+        "posts": 2,
+        "emv": 1300.5,
+        "engagementRate": 0.012923,
+        "lift": 0.9774
       }
     ]
   },
-  "mention (in caption)": {
-    "avgEmv": 237.41,
-    "avgLift": 0.4083,
+  "logo": {
+    "avgEmv": 382.21,
+    "avgLift": 2.2389,
     "top5Athletes": [
       {
         "athlete": {
           "name": "Ace Glass",
           "sport": "MENS_BASKETBALL"
         },
-        "posts": 16,
-        "emv": 836.33,
-        "engagementRate": 0.00233,
-        "lift": -0.6295000000000001
+        "posts": 17,
+        "emv": 1449.32,
+        "engagementRate": 0.015002,
+        "lift": 3.7028
       },
       {
         "athlete": {
-          "name": "Avery Bulkley",
-          "sport": "SWIMMING_AND_DIVING"
-        },
-        "posts": 8,
-        "emv": 56.87,
-        "engagementRate": 0.003199,
-        "lift": 0.7978000000000001
-      },
-      {
-        "athlete": {
-          "name": "Lily Herman",
-          "sport": "WOMENS_TRACK_AND_FIELD"
-        },
-        "posts": 8,
-        "emv": 50.62,
-        "engagementRate": 0.001325,
-        "lift": -0.2011
-      },
-      {
-        "athlete": {
-          "name": "Dalton Anderson",
+          "name": "Ajani Sheppard",
           "sport": "FOOTBALL"
         },
-        "posts": 7,
-        "emv": 142.19,
-        "engagementRate": 0.00335,
-        "lift": 0.5667
+        "posts": 3,
+        "emv": 1385.67,
+        "engagementRate": 0.014382,
+        "lift": 1.3724
       },
       {
         "athlete": {
-          "name": "Skylar Brgoch",
-          "sport": "SWIMMING_AND_DIVING"
+          "name": "Julian Dugger",
+          "sport": "FOOTBALL"
         },
-        "posts": 7,
-        "emv": 101.05,
-        "engagementRate": 0.004035,
-        "lift": 1.5074
+        "posts": 2,
+        "emv": 1241.25,
+        "engagementRate": 0.012824,
+        "lift": -0.1111
+      },
+      {
+        "athlete": {
+          "name": "Kenny Worthy III",
+          "sport": "FOOTBALL"
+        },
+        "posts": 5,
+        "emv": 1115.7,
+        "engagementRate": 0.010584,
+        "lift": 15.0472
+      },
+      {
+        "athlete": {
+          "name": "Zevi Eckhaus",
+          "sport": "FOOTBALL"
+        },
+        "posts": 8,
+        "emv": 992.88,
+        "engagementRate": 0.009774,
+        "lift": 3.3764
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 525.37,
+    "avgLift": 14.9381,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Tony Freeman",
+          "sport": "FOOTBALL"
+        },
+        "posts": 5,
+        "emv": 1579.2,
+        "engagementRate": 0.016331,
+        "lift": 4.6026
+      },
+      {
+        "athlete": {
+          "name": "Jeremiah Noga",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 1535.5,
+        "engagementRate": 0.015883,
+        "lift": -0.2985
+      },
+      {
+        "athlete": {
+          "name": "Ajani Sheppard",
+          "sport": "FOOTBALL"
+        },
+        "posts": 3,
+        "emv": 1497.5,
+        "engagementRate": 0.015638,
+        "lift": 1.6996
+      },
+      {
+        "athlete": {
+          "name": "Kayo Patu",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 1346,
+        "engagementRate": 0.013754,
+        "lift": 1.3101
+      },
+      {
+        "athlete": {
+          "name": "Zevi Eckhaus",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 1302,
+        "engagementRate": 0.013604,
+        "lift": 1.7662
       }
     ]
   },
   "partnership": {
-    "avgEmv": 55.93,
-    "avgLift": -0.1449,
+    "avgEmv": 322.22,
+    "avgLift": 0.0459,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Lily Herman",
-          "sport": "WOMENS_TRACK_AND_FIELD"
-        },
-        "posts": 9,
-        "emv": 57.6,
-        "engagementRate": 0.001512,
-        "lift": -0.0401
-      },
-      {
-        "athlete": {
-          "name": "Christian Hilborn",
+          "name": "Tony Freeman",
           "sport": "FOOTBALL"
         },
-        "posts": 4,
-        "emv": 64.77,
-        "engagementRate": 0.0009229999999999999,
-        "lift": -0.6714
-      },
-      {
-        "athlete": {
-          "name": "Jenna Studer",
-          "sport": "WOMENS_SOCCER"
-        },
-        "posts": 3,
-        "emv": 71.7,
-        "engagementRate": 0.00021999999999999998,
-        "lift": 0.7169
+        "posts": 2,
+        "emv": 2891.5,
+        "engagementRate": 0.030372,
+        "lift": 6.8869
       },
       {
         "athlete": {
@@ -211,19 +191,39 @@
           "sport": "FOOTBALL"
         },
         "posts": 2,
-        "emv": 51.15,
-        "engagementRate": 0.009328999999999999,
-        "lift": 0.050300000000000004
+        "emv": 844.25,
+        "engagementRate": 0.008765,
+        "lift": 0.0503
       },
       {
         "athlete": {
-          "name": "Carter Pabst",
+          "name": "Zevi Eckhaus",
           "sport": "FOOTBALL"
         },
-        "posts": 2,
-        "emv": 34.45,
-        "engagementRate": 0.001001,
-        "lift": -0.7802
+        "posts": 1,
+        "emv": 812.5,
+        "engagementRate": 0.008392,
+        "lift": 0.4359
+      },
+      {
+        "athlete": {
+          "name": "Ajani Sheppard",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 659.5,
+        "engagementRate": 0.006655,
+        "lift": -0.1227
+      },
+      {
+        "athlete": {
+          "name": "Adrià Rodriguez",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 647.5,
+        "engagementRate": 0.006837,
+        "lift": 1.1504
       }
     ]
   }

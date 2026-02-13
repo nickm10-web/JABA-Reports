@@ -1,0 +1,68 @@
+{
+  "followers": 1726437,
+  "school": {
+    "_id": "68f9cc6d7804265f86eb3963",
+    "name": "Clemson"
+  },
+  "overall": {
+    "totalContents": 3351,
+    "totalLikes": 6996394,
+    "totalComments": 174543,
+    "engagementRate": 0.0012395120245154256,
+    "emv": 3760011.5
+  },
+  "counts": {
+    "hasOrganizationInCaption": 41,
+    "isOrganizationCollaboration": 86,
+    "hasOrganizationLogo": 585,
+    "withIp": 685
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 41,
+      "likes": 1006.3170731707318,
+      "comments": 27.853658536585368,
+      "engagementRate": 0.0005990202548412233,
+      "emv": 544.94
+    },
+    "no": {
+      "contents": 3310,
+      "likes": 2101.2492447129907,
+      "comments": 52.38700906344411,
+      "engagementRate": 0.0012474456083693961
+    },
+    "avgLift": -51.9802506159579
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 86,
+      "likes": 21074.662790697676,
+      "comments": 258.98837209302326,
+      "engagementRate": 0.012357040055785817,
+      "emv": 10925.81
+    },
+    "no": {
+      "contents": 3265,
+      "likes": 1587.740581929556,
+      "comments": 46.63705972434916,
+      "engagementRate": 0.0009466766766779819
+    },
+    "avgLift": 1205.3073303916563
+  },
+  "logo": {
+    "yes": {
+      "contents": 585,
+      "likes": 2962.7470085470086,
+      "comments": 73.06495726495727,
+      "engagementRate": 0.0017584261492379772,
+      "emv": 1590.97
+    },
+    "no": {
+      "contents": 2766,
+      "likes": 1902.8152566883587,
+      "comments": 47.650036153289946,
+      "engagementRate": 0.0011297633755773587
+    },
+    "avgLift": 55.64552606773469
+  }
+}

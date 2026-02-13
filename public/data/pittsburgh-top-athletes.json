@@ -1,0 +1,159 @@
+{
+  "school": {
+    "_id": "68f9d1f47804265f86eb396b",
+    "name": "Pittsburgh"
+  },
+  "collaboration": {
+    "avgEmv": 4881.08,
+    "avgLift": 2.9696,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Ryla Jones",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 1,
+        "emv": 10345,
+        "engagementRate": 0.027237,
+        "lift": 6.2844
+      },
+      {
+        "athlete": {
+          "name": "Emery Dupes",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 1,
+        "emv": 3071,
+        "engagementRate": 0.008055,
+        "lift": 0.7639
+      },
+      {
+        "athlete": {
+          "name": "Gavin Miller",
+          "sport": "BASEBALL"
+        },
+        "posts": 2,
+        "emv": 1227.25,
+        "engagementRate": 0.00328,
+        "lift": 1.8604
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 831.63,
+    "avgLift": 2.327,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Lauren Rust",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 2,
+        "emv": 11090,
+        "engagementRate": 0.027323,
+        "lift": 77.0617
+      },
+      {
+        "athlete": {
+          "name": "Brooke Mosher",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 4,
+        "emv": 10144.88,
+        "engagementRate": 0.027235,
+        "lift": 8.9291
+      },
+      {
+        "athlete": {
+          "name": "Olivia Babcock",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 7,
+        "emv": 7804.07,
+        "engagementRate": 0.020787,
+        "lift": -0.0907
+      },
+      {
+        "athlete": {
+          "name": "Ryla Jones",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 3,
+        "emv": 4128.83,
+        "engagementRate": 0.010909,
+        "lift": 1.8111
+      },
+      {
+        "athlete": {
+          "name": "Mason Heintschel",
+          "sport": "FOOTBALL"
+        },
+        "posts": 3,
+        "emv": 3568.33,
+        "engagementRate": 0.009262,
+        "lift": 1.1349
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 0,
+    "avgLift": 0,
+    "top5Athletes": []
+  },
+  "partnership": {
+    "avgEmv": 435.12,
+    "avgLift": -0.2417,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Rashad Battle",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 4040.5,
+        "engagementRate": 0.010723,
+        "lift": 7.8416
+      },
+      {
+        "athlete": {
+          "name": "Kenny Johnson",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 2964,
+        "engagementRate": 0.007925,
+        "lift": 1.5927
+      },
+      {
+        "athlete": {
+          "name": "Raphael \"Poppi\" Williams Jr.",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 1460.5,
+        "engagementRate": 0.003762,
+        "lift": 0.3594
+      },
+      {
+        "athlete": {
+          "name": "Olivia Babcock",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 2,
+        "emv": 570.75,
+        "engagementRate": 0.001437,
+        "lift": -0.9408
+      },
+      {
+        "athlete": {
+          "name": "Braylan Lovelace",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 543.75,
+        "engagementRate": 0.001403,
+        "lift": -0.4125
+      }
+    ]
+  }
+}

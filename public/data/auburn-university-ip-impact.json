@@ -1,68 +1,68 @@
 {
-  "followers": 2321350,
+  "followers": 2323541,
   "school": {
     "_id": "68ae4b4073bfe6b9db3b4862",
     "name": "Auburn University"
   },
   "overall": {
-    "totalContents": 5638,
-    "totalLikes": 8023916,
-    "totalComments": 250627,
-    "engagementRate": 3.5645391690180284,
-    "emv": 185541.02
+    "totalContents": 6405,
+    "totalLikes": 9148165,
+    "totalComments": 265034,
+    "engagementRate": 0.0006325105382768227,
+    "emv": 4971633.5
   },
   "counts": {
-    "hasOrganizationInCaption": 1378,
-    "isOrganizationCollaboration": 432,
-    "hasOrganizationLogo": 2575,
-    "withIp": 2945
+    "hasOrganizationInCaption": 1387,
+    "isOrganizationCollaboration": 568,
+    "hasOrganizationLogo": 2564,
+    "withIp": 3079
   },
   "orgInCaption": {
     "yes": {
-      "contents": 1378,
-      "likes": 1892.333091436865,
-      "comments": 41.32510885341074,
-      "engagementRate": 0.0008329886489716224,
-      "emv": 41.98
+      "contents": 1387,
+      "likes": 1884.9351117519827,
+      "comments": 41.187454938716655,
+      "engagementRate": 0.0008289600083195,
+      "emv": 1004.25
     },
     "no": {
-      "contents": 4260,
-      "likes": 1271.4274647887323,
-      "comments": 45.4650234741784,
-      "engagementRate": 0.0005672959649612987
+      "contents": 5018,
+      "likes": 1302.0645675567955,
+      "comments": 41.43224392188123,
+      "engagementRate": 0.0005782109338628743
     },
-    "avgLift": 46.83493280768346
+    "avgLift": 43.36636679999071
   },
   "collaboration": {
     "yes": {
-      "contents": 432,
-      "likes": 3034.6018518518517,
-      "comments": 48.067129629629626,
-      "engagementRate": 0.001327963892339148,
-      "emv": 65.5
+      "contents": 568,
+      "likes": 2837.4084507042253,
+      "comments": 41.598591549295776,
+      "engagementRate": 0.0012390601423661219,
+      "emv": 1481.1
     },
     "no": {
-      "contents": 5206,
-      "likes": 1289.4675374567807,
-      "comments": 44.153284671532845,
-      "engagementRate": 0.0005745022603779325
+      "contents": 5837,
+      "likes": 1291.162754839815,
+      "comments": 41.35788932670893,
+      "engagementRate": 0.000573487037313533
     },
-    "avgLift": 131.1503337629265
+    "avgLift": 116.05721868979421
   },
   "logo": {
     "yes": {
-      "contents": 2575,
-      "likes": 1991.6617475728156,
-      "comments": 48.79184466019417,
-      "engagementRate": 0.0008789943749253708,
-      "emv": 44.71
+      "contents": 2564,
+      "likes": 2001.253120124805,
+      "comments": 48.89508580343214,
+      "engagementRate": 0.0008823378653220396,
+      "emv": 1073.97
     },
     "no": {
-      "contents": 3063,
-      "likes": 945.2781586679725,
-      "comments": 40.80574600065295,
-      "engagementRate": 0.0004247889825612792
+      "contents": 3841,
+      "likes": 1045.8089039312679,
+      "comments": 36.36214527466805,
+      "engagementRate": 0.00046574217937447025
     },
-    "avgLift": 106.92494650530841
+    "avgLift": 89.44770398659003
   }
 }

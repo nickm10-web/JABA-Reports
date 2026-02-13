@@ -4,186 +4,226 @@
     "name": "Penn State University"
   },
   "collaboration": {
-    "avgEmv": 79.24,
-    "avgLift": 3.3080000000000003,
+    "avgEmv": 2865.15,
+    "avgLift": 5.0517,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Matt DiMarsico",
+          "name": "Anthony Donkoh",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 43057.75,
+        "engagementRate": 0.020778,
+        "lift": 49.4486
+      },
+      {
+        "athlete": {
+          "name": "Gavin McKenna",
           "sport": "MENS_HOCKEY"
         },
         "posts": 1,
-        "emv": 79.24,
-        "engagementRate": 0.024387,
-        "lift": 3.3080000000000003
+        "emv": 19315.5,
+        "engagementRate": 0.0093,
+        "lift": 0.0389
+      },
+      {
+        "athlete": {
+          "name": "Drew Allar",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 18566,
+        "engagementRate": 0.009025,
+        "lift": 0.482
+      },
+      {
+        "athlete": {
+          "name": "Tony Rojas",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 10819.75,
+        "engagementRate": 0.00515,
+        "lift": 3.5786
+      },
+      {
+        "athlete": {
+          "name": "Dominic DeLuca",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 9744,
+        "engagementRate": 0.00465,
+        "lift": 2.7608
       }
     ]
   },
   "logo": {
-    "avgEmv": 2471.1,
-    "avgLift": 0.1321,
+    "avgEmv": 1068.02,
+    "avgLift": 3.778,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Kiyomi McMiller",
-          "sport": "WOMENS_BASKETBALL"
+          "name": "Kacper Garnczarek",
+          "sport": "MENS_GYMNASTICS"
         },
-        "posts": 19,
-        "emv": 8502.81,
-        "engagementRate": 0.00009400000000000001,
-        "lift": -0.6272
+        "posts": 11,
+        "emv": 89364.91,
+        "engagementRate": 0.043382,
+        "lift": 13.8555
       },
       {
         "athlete": {
-          "name": "Addie Lyon",
-          "sport": "WOMENS_VOLLEYBALL"
+          "name": "Gavin McKenna",
+          "sport": "MENS_HOCKEY"
         },
-        "posts": 9,
-        "emv": 370.5,
-        "engagementRate": 0.009698,
-        "lift": -0.1555
+        "posts": 4,
+        "emv": 43992.38,
+        "engagementRate": 0.020822,
+        "lift": 2.9096
       },
       {
         "athlete": {
-          "name": "Andrew Rappleyea",
-          "sport": "FOOTBALL"
-        },
-        "posts": 9,
-        "emv": 535.44,
-        "engagementRate": 0.004835,
-        "lift": 2.0326
-      },
-      {
-        "athlete": {
-          "name": "Dani Dennis-Sutton",
-          "sport": "FOOTBALL"
+          "name": "Carter Starocci",
+          "sport": "MENS_WRESTLING"
         },
         "posts": 8,
-        "emv": 1037.35,
-        "engagementRate": 0.001475,
-        "lift": -0.4611
+        "emv": 30206.94,
+        "engagementRate": 0.014605,
+        "lift": 1.3975
       },
       {
         "athlete": {
-          "name": "Kaytron Allen",
+          "name": "Drew Allar",
           "sport": "FOOTBALL"
         },
-        "posts": 8,
-        "emv": 1909.42,
-        "engagementRate": 0.0025779999999999996,
-        "lift": -0.1281
+        "posts": 9,
+        "emv": 20065.22,
+        "engagementRate": 0.009536,
+        "lift": 1.2002
+      },
+      {
+        "athlete": {
+          "name": "Andrew Olesh",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 19575,
+        "engagementRate": 0.009169,
+        "lift": 6.3052
       }
     ]
   },
   "mention (in caption)": {
-    "avgEmv": 2756.23,
-    "avgLift": 0.1184,
+    "avgEmv": 1326.63,
+    "avgLift": 4.651,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Gracie Merkle",
-          "sport": "WOMENS_BASKETBALL"
+          "name": "Michael Jaroh",
+          "sport": "MENS_GYMNASTICS"
         },
-        "posts": 18,
-        "emv": 438.68,
-        "engagementRate": 0.002463,
-        "lift": 0.7214
+        "posts": 1,
+        "emv": 42187,
+        "engagementRate": 0.02034,
+        "lift": 14.2606
       },
       {
         "athlete": {
-          "name": "Kennedy Martin",
-          "sport": "WOMENS_VOLLEYBALL"
+          "name": "Gavin McKenna",
+          "sport": "MENS_HOCKEY"
         },
-        "posts": 17,
-        "emv": 2841.58,
-        "engagementRate": 0.0016309999999999999,
-        "lift": -0.0227
+        "posts": 1,
+        "emv": 36773.5,
+        "engagementRate": 0.017581,
+        "lift": 1.0846
       },
       {
         "athlete": {
-          "name": "Kaytron Allen",
+          "name": "Carter Starocci",
+          "sport": "MENS_WRESTLING"
+        },
+        "posts": 1,
+        "emv": 28718.5,
+        "engagementRate": 0.013902,
+        "lift": 0.5955
+      },
+      {
+        "athlete": {
+          "name": "Andrew Olesh",
           "sport": "FOOTBALL"
         },
-        "posts": 16,
-        "emv": 3979.43,
-        "engagementRate": 0.0031769999999999997,
-        "lift": 0.3178
+        "posts": 1,
+        "emv": 20240,
+        "engagementRate": 0.009303,
+        "lift": 2.3095
       },
       {
         "athlete": {
-          "name": "Liliah Gordon",
-          "sport": "WOMENS_CROSS_COUNTRY"
+          "name": "Izzy Starck",
+          "sport": "WOMENS_VOLLEYBALL"
         },
-        "posts": 15,
-        "emv": 241.9,
-        "engagementRate": 0.001684,
-        "lift": 0.009899999999999999
-      },
-      {
-        "athlete": {
-          "name": "Kiyomi McMiller",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 14,
-        "emv": 6279.57,
-        "engagementRate": 0.000111,
-        "lift": -0.43439999999999995
+        "posts": 2,
+        "emv": 17314.25,
+        "engagementRate": 0.008388,
+        "lift": 2.6245
       }
     ]
   },
   "partnership": {
-    "avgEmv": 1165.77,
-    "avgLift": -0.7159,
+    "avgEmv": 687.48,
+    "avgLift": 0.0158,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Liliah Gordon",
-          "sport": "WOMENS_CROSS_COUNTRY"
+          "name": "Bobby Alessio",
+          "sport": "MENS_GYMNASTICS"
         },
-        "posts": 19,
-        "emv": 298.18,
-        "engagementRate": 0.0012360000000000001,
-        "lift": -0.4667
+        "posts": 1,
+        "emv": 31956,
+        "engagementRate": 0.015467,
+        "lift": 1.3574
       },
       {
         "athlete": {
-          "name": "Maggie Mendelson",
-          "sport": "WOMENS_VOLLEYBALL"
+          "name": "Gavin McKenna",
+          "sport": "MENS_HOCKEY"
         },
-        "posts": 10,
-        "emv": 2052,
-        "engagementRate": 0.000166,
-        "lift": -0.8804000000000001
+        "posts": 1,
+        "emv": 12420,
+        "engagementRate": 0.005845,
+        "lift": -0.3624
       },
       {
         "athlete": {
-          "name": "Sydney Manning",
-          "sport": "WOMENS_LACROSSE"
+          "name": "Carter Starocci",
+          "sport": "MENS_WRESTLING"
+        },
+        "posts": 1,
+        "emv": 10794.5,
+        "engagementRate": 0.005227,
+        "lift": -0.425
+      },
+      {
+        "athlete": {
+          "name": "Olaivavega Ioane",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 8801,
+        "engagementRate": 0.004233,
+        "lift": 9.1874
+      },
+      {
+        "athlete": {
+          "name": "Drew Allar",
+          "sport": "FOOTBALL"
         },
         "posts": 7,
-        "emv": 114.57,
-        "engagementRate": 0.000624,
-        "lift": -0.8109000000000001
-      },
-      {
-        "athlete": {
-          "name": "Eduardo Cisternas",
-          "sport": "SWIMMING_AND_DIVING"
-        },
-        "posts": 7,
-        "emv": 777.62,
-        "engagementRate": 0.001103,
-        "lift": -0.5640999999999999
-      },
-      {
-        "athlete": {
-          "name": "Maggie Golder",
-          "sport": "WOMENS_LACROSSE"
-        },
-        "posts": 7,
-        "emv": 2586.49,
-        "engagementRate": 0.000889,
-        "lift": -0.8573999999999999
+        "emv": 4963.93,
+        "engagementRate": 0.002392,
+        "lift": -0.6889
       }
     ]
   }

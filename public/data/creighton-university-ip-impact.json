@@ -1,0 +1,68 @@
+{
+  "followers": 438009,
+  "school": {
+    "_id": "68cdc205c12fa69f3fe2db91",
+    "name": "Creighton University"
+  },
+  "overall": {
+    "totalContents": 2592,
+    "totalLikes": 1263206,
+    "totalComments": 95676,
+    "engagementRate": 0.0011969161155688526,
+    "emv": 775117
+  },
+  "counts": {
+    "hasOrganizationInCaption": 222,
+    "isOrganizationCollaboration": 53,
+    "hasOrganizationLogo": 537,
+    "withIp": 638
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 222,
+      "likes": 975.6126126126126,
+      "comments": 44.63513513513514,
+      "engagementRate": 0.0023292848953965508,
+      "emv": 554.76
+    },
+    "no": {
+      "contents": 2370,
+      "likes": 441.61181434599155,
+      "comments": 36.188607594936705,
+      "engagementRate": 0.0010908461285976505
+    },
+    "avgLift": 113.53010606463711
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 53,
+      "likes": 1222.8490566037735,
+      "comments": 22.528301886792452,
+      "engagementRate": 0.0028432688791567434,
+      "emv": 645.22
+    },
+    "no": {
+      "contents": 2539,
+      "likes": 471.9948798739661,
+      "comments": 37.21228830248129,
+      "engagementRate": 0.0011625495553206611
+    },
+    "avgLift": 144.57184350928566
+  },
+  "logo": {
+    "yes": {
+      "contents": 537,
+      "likes": 723.4543761638733,
+      "comments": 40.95530726256983,
+      "engagementRate": 0.0017451917276276132,
+      "emv": 423.16
+    },
+    "no": {
+      "contents": 2055,
+      "likes": 425.6501216545012,
+      "comments": 35.855474452554745,
+      "engagementRate": 0.0010536440943155413
+    },
+    "avgLift": 65.63389260595712
+  }
+}

@@ -4,99 +4,140 @@
     "name": "Louisiana State University"
   },
   "collaboration": {
-    "avgEmv": 0,
-    "avgLift": 0,
-    "top5Athletes": []
-  },
-  "logo": {
-    "avgEmv": 13199.59,
-    "avgLift": 0.09519999999999999,
+    "avgEmv": 2934.8,
+    "avgLift": 2.3114,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Flau'Jae Johnson",
+          "name": "MiLaysia Fulwiley",
           "sport": "WOMENS_BASKETBALL"
         },
-        "posts": 9,
-        "emv": 57330.71,
-        "engagementRate": 0.000078,
-        "lift": 1.6671
+        "posts": 3,
+        "emv": 30440,
+        "engagementRate": 0.010507,
+        "lift": 2.3101
       },
       {
         "athlete": {
-          "name": "Paytn Monticelli",
-          "sport": "SOFTBALL"
-        },
-        "posts": 9,
-        "emv": 489.23,
-        "engagementRate": 0.000037000000000000005,
-        "lift": -0.8918
-      },
-      {
-        "athlete": {
-          "name": "Damian Ramos",
+          "name": "Whit Weeks",
           "sport": "FOOTBALL"
         },
-        "posts": 9,
-        "emv": 3556.25,
-        "engagementRate": 0.001043,
-        "lift": -0.0784
+        "posts": 2,
+        "emv": 15033.75,
+        "engagementRate": 0.005653,
+        "lift": 0.8794
       },
       {
         "athlete": {
-          "name": "Mansoor Delane",
+          "name": "Carius Curne",
           "sport": "FOOTBALL"
         },
-        "posts": 8,
-        "emv": 2505.95,
-        "engagementRate": 0.0046429999999999996,
-        "lift": 0.4214
+        "posts": 1,
+        "emv": 14857.5,
+        "engagementRate": 0.005602,
+        "lift": 11.2511
       },
       {
         "athlete": {
-          "name": "Zavion Thomas",
+          "name": "Caden Durham",
           "sport": "FOOTBALL"
         },
-        "posts": 7,
-        "emv": 2115.83,
-        "engagementRate": 0.000854,
-        "lift": -0.6420999999999999
+        "posts": 2,
+        "emv": 14460,
+        "engagementRate": 0.005443,
+        "lift": 1.6185
+      },
+      {
+        "athlete": {
+          "name": "Barion Brown",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 13456.5,
+        "engagementRate": 0.005045,
+        "lift": 1.9783
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 1397.42,
+    "avgLift": 4.3221,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Kaleb Jackson",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 28050,
+        "engagementRate": 0.010514,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Whit Weeks",
+          "sport": "FOOTBALL"
+        },
+        "posts": 14,
+        "emv": 11519.71,
+        "engagementRate": 0.00439,
+        "lift": 1.062
+      },
+      {
+        "athlete": {
+          "name": "MiLaysia Fulwiley",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 18,
+        "emv": 10514.22,
+        "engagementRate": 0.00379,
+        "lift": -0.0173
+      },
+      {
+        "athlete": {
+          "name": "Aaron Anderson",
+          "sport": "FOOTBALL"
+        },
+        "posts": 17,
+        "emv": 8682.06,
+        "engagementRate": 0.003274,
+        "lift": 0.8142
+      },
+      {
+        "athlete": {
+          "name": "West Weeks",
+          "sport": "FOOTBALL"
+        },
+        "posts": 11,
+        "emv": 8663.45,
+        "engagementRate": 0.003304,
+        "lift": 6.4208
       }
     ]
   },
   "mention (in caption)": {
-    "avgEmv": 12847.63,
-    "avgLift": 5.5502,
+    "avgEmv": 1788.96,
+    "avgLift": 3.5759,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Badger Hargett",
+          "name": "Kaleb Jackson",
           "sport": "FOOTBALL"
         },
-        "posts": 12,
-        "emv": 420.44,
-        "engagementRate": 0.0013800000000000002,
-        "lift": 0.1391
+        "posts": 1,
+        "emv": 28050,
+        "engagementRate": 0.010514,
+        "lift": 0
       },
       {
         "athlete": {
-          "name": "Alessio Vasquez",
+          "name": "Andrej Loncarevic",
           "sport": "MENS_TENNIS"
         },
-        "posts": 11,
-        "emv": 1400.56,
-        "engagementRate": 0.008363,
-        "lift": 17.0094
-      },
-      {
-        "athlete": {
-          "name": "CJ Jimcoily",
-          "sport": "FOOTBALL"
-        },
-        "posts": 11,
-        "emv": 1572.54,
-        "engagementRate": 0.018959999999999998,
-        "lift": 7.3497
+        "posts": 1,
+        "emv": 22672.5,
+        "engagementRate": 0.008739,
+        "lift": 107.0933
       },
       {
         "athlete": {
@@ -104,75 +145,85 @@
           "sport": "BASEBALL"
         },
         "posts": 9,
-        "emv": 4123.55,
-        "engagementRate": 0.010327,
-        "lift": 3.5902999999999996
+        "emv": 18025.72,
+        "engagementRate": 0.006939,
+        "lift": 5.0074
       },
       {
         "athlete": {
-          "name": "Flau'Jae Johnson",
+          "name": "MiLaysia Fulwiley",
           "sport": "WOMENS_BASKETBALL"
         },
-        "posts": 9,
-        "emv": 56721.05,
-        "engagementRate": 0.000023999999999999997,
-        "lift": -0.33770000000000006
+        "posts": 8,
+        "emv": 13283.5,
+        "engagementRate": 0.004643,
+        "lift": 0.3012
+      },
+      {
+        "athlete": {
+          "name": "Ja'Keem Jackson",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 13074.5,
+        "engagementRate": 0.004807,
+        "lift": 11.4102
       }
     ]
   },
   "partnership": {
-    "avgEmv": 28054.25,
-    "avgLift": -0.4736,
+    "avgEmv": 591.83,
+    "avgLift": 0.2498,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Flau'Jae Johnson",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 20,
-        "emv": 125820.97,
-        "engagementRate": 0.000015,
-        "lift": -0.6470999999999999
-      },
-      {
-        "athlete": {
-          "name": "Princeton Malbrue",
+          "name": "Zach Weeks",
           "sport": "FOOTBALL"
         },
-        "posts": 16,
-        "emv": 9242.99,
-        "engagementRate": 0.00006,
-        "lift": 0.5855
+        "posts": 1,
+        "emv": 12696,
+        "engagementRate": 0.00483,
+        "lift": 4.0776
       },
       {
         "athlete": {
-          "name": "Amaya Messier",
-          "sport": "WOMENS_BEACH_VOLLEYBALL"
-        },
-        "posts": 12,
-        "emv": 146.26,
-        "engagementRate": 0.000297,
-        "lift": -0.6811
-      },
-      {
-        "athlete": {
-          "name": "Bella Hines",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 7,
-        "emv": 1617.31,
-        "engagementRate": 0.000784,
-        "lift": -0.8012
-      },
-      {
-        "athlete": {
-          "name": "Whit Weeks",
+          "name": "GiVanni Peterson",
           "sport": "FOOTBALL"
         },
-        "posts": 6,
-        "emv": 3443.72,
-        "engagementRate": 0.00037400000000000004,
-        "lift": -0.8240999999999999
+        "posts": 2,
+        "emv": 11588.5,
+        "engagementRate": 0.004422,
+        "lift": 106.988
+      },
+      {
+        "athlete": {
+          "name": "Derek Curiel",
+          "sport": "BASEBALL"
+        },
+        "posts": 2,
+        "emv": 3763.5,
+        "engagementRate": 0.001428,
+        "lift": -0.6043
+      },
+      {
+        "athlete": {
+          "name": "Jake Brown",
+          "sport": "BASEBALL"
+        },
+        "posts": 3,
+        "emv": 3090.83,
+        "engagementRate": 0.00118,
+        "lift": 0.4071
+      },
+      {
+        "athlete": {
+          "name": "Garrett Nussmeier",
+          "sport": "FOOTBALL"
+        },
+        "posts": 4,
+        "emv": 3013.75,
+        "engagementRate": 0.001146,
+        "lift": -0.4502
       }
     ]
   }

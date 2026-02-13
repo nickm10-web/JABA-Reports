@@ -1,0 +1,68 @@
+{
+  "followers": 907225,
+  "school": {
+    "_id": "68912b639f13cc870a6ab468",
+    "name": "San Diego State University"
+  },
+  "overall": {
+    "totalContents": 3406,
+    "totalLikes": 1461809,
+    "totalComments": 132033,
+    "engagementRate": 0.0005158050786497066,
+    "emv": 928954
+  },
+  "counts": {
+    "hasOrganizationInCaption": 0,
+    "isOrganizationCollaboration": 1,
+    "hasOrganizationLogo": 911,
+    "withIp": 912
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 0,
+      "likes": 0,
+      "comments": 0,
+      "engagementRate": 0,
+      "emv": 0
+    },
+    "no": {
+      "contents": 3406,
+      "likes": 429.18643570170286,
+      "comments": 38.76482677627716,
+      "engagementRate": 0.0005158050786497066
+    },
+    "avgLift": -100
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 1,
+      "likes": 931,
+      "comments": 85,
+      "engagementRate": 0.0011198985918597923,
+      "emv": 593
+    },
+    "no": {
+      "contents": 3405,
+      "likes": 429.03906020558003,
+      "comments": 38.75124816446402,
+      "engagementRate": 0.0005156276649894393
+    },
+    "avgLift": 117.19133163321041
+  },
+  "logo": {
+    "yes": {
+      "contents": 911,
+      "likes": 643.4731064763996,
+      "comments": 47.70032930845225,
+      "engagementRate": 0.0007618544856952264,
+      "emv": 393.29
+    },
+    "no": {
+      "contents": 2495,
+      "likes": 350.9438877755511,
+      "comments": 35.50220440881763,
+      "engagementRate": 0.00042596499455412794
+    },
+    "avgLift": 78.8537779947588
+  }
+}

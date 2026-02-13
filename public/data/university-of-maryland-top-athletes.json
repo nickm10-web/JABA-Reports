@@ -4,175 +4,226 @@
     "name": "University of Maryland"
   },
   "collaboration": {
-    "avgEmv": 0,
+    "avgEmv": 803.37,
     "avgLift": 0,
-    "top5Athletes": []
-  },
-  "logo": {
-    "avgEmv": 769.15,
-    "avgLift": 1.304,
     "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Zahir Mathis",
+          "sport": "FOOTBALL"
+        },
+        "posts": 3,
+        "emv": 4033,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Myles Rice",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 3157,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Kaylene Smikle",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 2513.5,
+        "engagementRate": 0,
+        "lift": 0
+      },
       {
         "athlete": {
           "name": "Addi Mack",
           "sport": "WOMENS_BASKETBALL"
         },
-        "posts": 17,
-        "emv": 347.7,
-        "engagementRate": 0.001339,
+        "posts": 1,
+        "emv": 1968,
+        "engagementRate": 0,
         "lift": 0
       },
       {
         "athlete": {
-          "name": "Saylor Poffenbarger",
-          "sport": "WOMENS_BASKETBALL"
+          "name": "Brayden Martin",
+          "sport": "MENS_BASEBALL"
         },
-        "posts": 17,
-        "emv": 511.7,
-        "engagementRate": 0.000414,
-        "lift": -0.1023
+        "posts": 1,
+        "emv": 1880.5,
+        "engagementRate": 0,
+        "lift": 0
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 452.53,
+    "avgLift": 0,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Solomon Washington",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 12725,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Messiah Delhomme",
+          "sport": "FOOTBALL"
+        },
+        "posts": 14,
+        "emv": 2160.14,
+        "engagementRate": 0,
+        "lift": 0
       },
       {
         "athlete": {
           "name": "Malik Washington",
           "sport": "FOOTBALL"
         },
-        "posts": 15,
-        "emv": 1467.84,
-        "engagementRate": 0.0014810000000000001,
-        "lift": 2.2963999999999998
+        "posts": 18,
+        "emv": 2071.08,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Darius Adams",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 9,
+        "emv": 2030.22,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "La'khi Roland",
+          "sport": "FOOTBALL"
+        },
+        "posts": 6,
+        "emv": 1853.58,
+        "engagementRate": 0,
+        "lift": 0
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 505.98,
+    "avgLift": 0,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Darius Adams",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 2,
+        "emv": 5555.5,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "La'khi Roland",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 4624,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Malik Washington",
+          "sport": "FOOTBALL"
+        },
+        "posts": 6,
+        "emv": 3783.42,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Joel Starlings",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 2923.5,
+        "engagementRate": 0,
+        "lift": 0
       },
       {
         "athlete": {
           "name": "Zahir Mathis",
           "sport": "FOOTBALL"
         },
-        "posts": 15,
-        "emv": 852,
-        "engagementRate": 0.005322,
-        "lift": 0.8795000000000001
-      },
-      {
-        "athlete": {
-          "name": "Cam Rice",
-          "sport": "FOOTBALL"
-        },
-        "posts": 14,
-        "emv": 666.52,
-        "engagementRate": 0.001806,
-        "lift": 2.1423
-      }
-    ]
-  },
-  "mention (in caption)": {
-    "avgEmv": 186.39,
-    "avgLift": 0.18289999999999998,
-    "top5Athletes": [
-      {
-        "athlete": {
-          "name": "Addi Mack",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 12,
-        "emv": 275.92,
-        "engagementRate": 0.0015170000000000001,
-        "lift": 0.9987999999999999
-      },
-      {
-        "athlete": {
-          "name": "Bri McDaniel",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 9,
-        "emv": 59.52,
-        "engagementRate": 0.000303,
-        "lift": -0.7404000000000001
-      },
-      {
-        "athlete": {
-          "name": "Yarden Garzon",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 9,
-        "emv": 300.68,
-        "engagementRate": 0.001575,
-        "lift": -0.16920000000000002
-      },
-      {
-        "athlete": {
-          "name": "Oluchi Okananwa",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 9,
-        "emv": 70.36,
-        "engagementRate": 0.000494,
-        "lift": 1.0822
-      },
-      {
-        "athlete": {
-          "name": "Saylor Poffenbarger",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 9,
-        "emv": 225.46,
-        "engagementRate": 0.00035299999999999996,
-        "lift": -0.2571
+        "posts": 8,
+        "emv": 1895.5,
+        "engagementRate": 0,
+        "lift": 0
       }
     ]
   },
   "partnership": {
-    "avgEmv": 17.03,
-    "avgLift": -0.3178,
+    "avgEmv": 314.91,
+    "avgLift": 0,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Jamare Glasker",
+          "name": "Zahir Mathis",
           "sport": "FOOTBALL"
         },
-        "posts": 4,
-        "emv": 32.6,
-        "engagementRate": 0.000823,
-        "lift": -0.6998000000000001
+        "posts": 1,
+        "emv": 10943,
+        "engagementRate": 0,
+        "lift": 0
       },
       {
         "athlete": {
-          "name": "Josephine Kogler",
-          "sport": "WOMENS_GYMNASTICS"
+          "name": "Aleks Alston",
+          "sport": "MENS_BASKETBALL"
         },
-        "posts": 4,
-        "emv": 13.26,
-        "engagementRate": 0.00046,
-        "lift": 0.4042
+        "posts": 1,
+        "emv": 874,
+        "engagementRate": 0,
+        "lift": 0
       },
       {
         "athlete": {
-          "name": "Oluchi Okananwa",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 3,
-        "emv": 22.8,
-        "engagementRate": 0.0005070000000000001,
-        "lift": 0.5588000000000001
-      },
-      {
-        "athlete": {
-          "name": "Octavian Smith Jr.",
+          "name": "Malik Washington",
           "sport": "FOOTBALL"
         },
         "posts": 2,
-        "emv": 13.3,
-        "engagementRate": 0.000196,
-        "lift": -0.9245
+        "emv": 752,
+        "engagementRate": 0,
+        "lift": 0
       },
       {
         "athlete": {
-          "name": "Bri McDaniel",
-          "sport": "WOMENS_BASKETBALL"
+          "name": "Joseph Fredericks",
+          "sport": "MENS_BASEBALL"
         },
-        "posts": 2,
-        "emv": 3.2,
-        "engagementRate": 0.000054999999999999995,
-        "lift": -0.9279000000000001
+        "posts": 1,
+        "emv": 657,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Ryan Howerton",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 521.5,
+        "engagementRate": 0,
+        "lift": 0
       }
     ]
   }

@@ -1,68 +1,68 @@
 {
-  "followers": 1031767,
+  "followers": 1043067,
   "school": {
     "_id": "68f876c47804265f86eb36fb",
     "name": "University of Cincinnati"
   },
   "overall": {
-    "totalContents": 4309,
-    "totalLikes": 2555683,
-    "totalComments": 167355,
-    "engagementRate": 2.6391985787488843,
-    "emv": 67849.16
+    "totalContents": 4968,
+    "totalLikes": 3190508,
+    "totalComments": 184270,
+    "engagementRate": 0.00065125551867389,
+    "emv": 1871659
   },
   "counts": {
     "hasOrganizationInCaption": 803,
-    "isOrganizationCollaboration": 22,
-    "hasOrganizationLogo": 1963,
-    "withIp": 2134
+    "isOrganizationCollaboration": 56,
+    "hasOrganizationLogo": 1969,
+    "withIp": 2173
   },
   "orgInCaption": {
     "yes": {
       "contents": 803,
-      "likes": 905.1531755915317,
-      "comments": 36.94769613947696,
-      "engagementRate": 0.0009130945957091172,
-      "emv": 21.8
+      "likes": 906.708592777086,
+      "comments": 36.978829389788295,
+      "engagementRate": 0.0009047236871331124,
+      "emv": 508.82
     },
     "no": {
-      "contents": 3506,
-      "likes": 521.6329150028522,
-      "comments": 39.27153451226469,
-      "engagementRate": 0.0005436348027365838
+      "contents": 4165,
+      "likes": 591.2175270108044,
+      "comments": 37.11308523409364,
+      "engagementRate": 0.0006023875860753892
     },
-    "avgLift": 67.96102661432325
+    "avgLift": 50.189630073134616
   },
   "collaboration": {
     "yes": {
-      "contents": 22,
-      "likes": 748.7272727272727,
-      "comments": 22.954545454545453,
-      "engagementRate": 0.0007479225621499992,
-      "emv": 17.27
+      "contents": 56,
+      "likes": 1158.7142857142858,
+      "comments": 22.071428571428573,
+      "engagementRate": 0.0011320324718217664,
+      "emv": 612.46
     },
     "no": {
-      "contents": 4287,
-      "likes": 592.3048752041054,
-      "comments": 38.919990669465825,
-      "engagementRate": 0.0006117901288503812
+      "contents": 4912,
+      "likes": 636.3232899022802,
+      "comments": 37.262622149837135,
+      "engagementRate": 0.0006457743481982626
     },
-    "avgLift": 22.25149228141771
+    "avgLift": 75.2984575773541
   },
   "logo": {
     "yes": {
-      "contents": 1963,
-      "likes": 767.7524197656649,
-      "comments": 42.679572083545594,
-      "engagementRate": 0.0007854796595056932,
-      "emv": 19.62
+      "contents": 1969,
+      "likes": 772.8100558659218,
+      "comments": 42.63941086846115,
+      "engagementRate": 0.0007817805248698146,
+      "emv": 450.36
     },
     "no": {
-      "contents": 2346,
-      "likes": 446.9671781756181,
-      "comments": 35.62446717817562,
-      "engagementRate": 0.0004677331658734905
+      "contents": 2999,
+      "likes": 556.4671557185728,
+      "comments": 33.448816272090696,
+      "engagementRate": 0.0005655590407813338
     },
-    "avgLift": 67.93328265247385
+    "avgLift": 38.23146099649747
   }
 }

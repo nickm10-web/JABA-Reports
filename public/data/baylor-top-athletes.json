@@ -4,226 +4,226 @@
     "name": "Baylor"
   },
   "collaboration": {
-    "avgEmv": 441.99,
-    "avgLift": 1.2337,
+    "avgEmv": 2059.04,
+    "avgLift": 3.2249,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Gabe Craig",
-          "sport": "BASEBALL"
+          "name": "Jordan Gruendler",
+          "sport": "WOMENS_GYMNASTICS"
         },
-        "posts": 9,
-        "emv": 165.08,
-        "engagementRate": 0.0027429999999999998,
-        "lift": 0.6675
+        "posts": 3,
+        "emv": 104676.17,
+        "engagementRate": 0.099193,
+        "lift": 68.4939
       },
       {
         "athlete": {
-          "name": "Bailey Warren",
-          "sport": "WOMENS_VOLLEYBALL"
+          "name": "Isaac Williams IV",
+          "sport": "MENS_BASKETBALL"
         },
-        "posts": 7,
-        "emv": 154.41,
-        "engagementRate": 0.009908,
-        "lift": 2.246
+        "posts": 1,
+        "emv": 29500.5,
+        "engagementRate": 0.027489,
+        "lift": 2.7985
+      },
+      {
+        "athlete": {
+          "name": "Walker White",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 7787.5,
+        "engagementRate": 0.00692,
+        "lift": 1.6807
+      },
+      {
+        "athlete": {
+          "name": "Maikcol Perez",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 5079.5,
+        "engagementRate": 0.004588,
+        "lift": 0.4248
       },
       {
         "athlete": {
           "name": "Tounde Yessoufou",
           "sport": "MENS_BASKETBALL"
         },
-        "posts": 5,
-        "emv": 1589.39,
-        "engagementRate": 0.0038050000000000002,
-        "lift": 2.2089
-      },
-      {
-        "athlete": {
-          "name": "Jacob Redding",
-          "sport": "FOOTBALL"
-        },
-        "posts": 5,
-        "emv": 182.83,
-        "engagementRate": 0.011033,
-        "lift": 1.361
-      },
-      {
-        "athlete": {
-          "name": "Yuting Deng",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 5,
-        "emv": 118.26,
-        "engagementRate": 0.003852,
-        "lift": -0.3148
+        "posts": 10,
+        "emv": 4667.5,
+        "engagementRate": 0.004374,
+        "lift": 0.3347
       }
     ]
   },
   "logo": {
-    "avgEmv": 838.02,
-    "avgLift": -0.0571,
+    "avgEmv": 569.02,
+    "avgLift": 1.6777,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Taliah Scott",
-          "sport": "WOMENS_BASKETBALL"
+          "name": "Jordan Gruendler",
+          "sport": "WOMENS_GYMNASTICS"
         },
-        "posts": 36,
-        "emv": 2709.34,
-        "engagementRate": 0.0005290000000000001,
-        "lift": 0.364
+        "posts": 7,
+        "emv": 47152.36,
+        "engagementRate": 0.044561,
+        "lift": 94.3362
       },
       {
         "athlete": {
-          "name": "Yuting Deng",
-          "sport": "WOMENS_BASKETBALL"
+          "name": "Andre Iguodala II",
+          "sport": "MENS_BASKETBALL"
         },
-        "posts": 14,
-        "emv": 325.96,
-        "engagementRate": 0.003558,
-        "lift": -0.49560000000000004
+        "posts": 5,
+        "emv": 13214,
+        "engagementRate": 0.012373,
+        "lift": 1.0368
       },
       {
         "athlete": {
-          "name": "Josh Cameron",
+          "name": "Isaac Williams IV",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 9,
+        "emv": 8557.67,
+        "engagementRate": 0.007995,
+        "lift": -0.0245
+      },
+      {
+        "athlete": {
+          "name": "Payton Washington",
+          "sport": "WOMENS_GYMNASTICS"
+        },
+        "posts": 13,
+        "emv": 7012.77,
+        "engagementRate": 0.006627,
+        "lift": 19.0448
+      },
+      {
+        "athlete": {
+          "name": "Taz Williams",
           "sport": "FOOTBALL"
         },
         "posts": 13,
-        "emv": 568.38,
-        "engagementRate": 0.001974,
-        "lift": -0.5295000000000001
-      },
-      {
-        "athlete": {
-          "name": "Palmer Williams",
-          "sport": "FOOTBALL"
-        },
-        "posts": 12,
-        "emv": 326.91,
-        "engagementRate": 0.0065390000000000005,
-        "lift": 0.1485
-      },
-      {
-        "athlete": {
-          "name": "Ty Johnson",
-          "sport": "BASEBALL"
-        },
-        "posts": 12,
-        "emv": 259.52,
-        "engagementRate": 0.002756,
-        "lift": 0.22719999999999999
+        "emv": 5206.23,
+        "engagementRate": 0.004749,
+        "lift": 0.057
       }
     ]
   },
   "mention (in caption)": {
-    "avgEmv": 1521.24,
-    "avgLift": -0.0326,
+    "avgEmv": 695.02,
+    "avgLift": 2.5313,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Taliah Scott",
-          "sport": "WOMENS_BASKETBALL"
+          "name": "Jordan Gruendler",
+          "sport": "WOMENS_GYMNASTICS"
         },
-        "posts": 40,
-        "emv": 3007.42,
-        "engagementRate": 0.000517,
-        "lift": 0.349
+        "posts": 8,
+        "emv": 41648.63,
+        "engagementRate": 0.039365,
+        "lift": 258.8662
       },
       {
         "athlete": {
-          "name": "Cameron Carr",
+          "name": "Andre Iguodala II",
           "sport": "MENS_BASKETBALL"
         },
-        "posts": 24,
-        "emv": 2143.9,
-        "engagementRate": 0.0018,
-        "lift": 0.06860000000000001
+        "posts": 3,
+        "emv": 14829.67,
+        "engagementRate": 0.013943,
+        "lift": 1.1553
       },
       {
         "athlete": {
-          "name": "Tyler Isgrig",
-          "sport": "WOMENS_SOCCER"
+          "name": "Isaac Williams IV",
+          "sport": "MENS_BASKETBALL"
         },
-        "posts": 19,
-        "emv": 1602.19,
-        "engagementRate": 0.0008179999999999999,
-        "lift": -0.7159
+        "posts": 7,
+        "emv": 9706.86,
+        "engagementRate": 0.009071,
+        "lift": 0.178
       },
       {
         "athlete": {
-          "name": "Yuting Deng",
-          "sport": "WOMENS_BASKETBALL"
+          "name": "Taz Williams",
+          "sport": "FOOTBALL"
         },
-        "posts": 19,
-        "emv": 440.63,
-        "engagementRate": 0.003485,
-        "lift": -0.6192
+        "posts": 4,
+        "emv": 7910.5,
+        "engagementRate": 0.007218,
+        "lift": 0.672
       },
       {
         "athlete": {
-          "name": "Alyssa Jones",
-          "sport": "WOMENS_TRACK_AND_FIELD"
+          "name": "Payton Washington",
+          "sport": "WOMENS_GYMNASTICS"
         },
-        "posts": 18,
-        "emv": 412.06,
-        "engagementRate": 0.001661,
-        "lift": 0.7543000000000001
+        "posts": 12,
+        "emv": 7506.58,
+        "engagementRate": 0.0071,
+        "lift": 15.355
       }
     ]
   },
   "partnership": {
-    "avgEmv": 281.91,
-    "avgLift": -0.14800000000000002,
+    "avgEmv": 475.28,
+    "avgLift": -0.084,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Josh Cameron",
-          "sport": "FOOTBALL"
+          "name": "Andre Iguodala II",
+          "sport": "MENS_BASKETBALL"
         },
-        "posts": 9,
-        "emv": 483.67,
-        "engagementRate": 0.005864,
-        "lift": 1.5644
+        "posts": 3,
+        "emv": 29562.67,
+        "engagementRate": 0.027861,
+        "lift": 5.359
       },
       {
         "athlete": {
-          "name": "Callie Conrad",
-          "sport": "WOMENS_SOCCER"
-        },
-        "posts": 7,
-        "emv": 112.27,
-        "engagementRate": 0.000328,
-        "lift": -0.5814
-      },
-      {
-        "athlete": {
-          "name": "Tiriah Kelley",
-          "sport": "WOMENS_TRACK_AND_FIELD"
-        },
-        "posts": 6,
-        "emv": 172.06,
-        "engagementRate": 0.000543,
-        "lift": -0.8439
-      },
-      {
-        "athlete": {
-          "name": "Gigi Lindsey",
-          "sport": "SOFTBALL"
-        },
-        "posts": 6,
-        "emv": 593.51,
-        "engagementRate": 0.00034,
-        "lift": -0.7078
-      },
-      {
-        "athlete": {
-          "name": "Makayla Vasquez",
+          "name": "Lele Adams-Mayfield",
           "sport": "WOMENS_GYMNASTICS"
         },
-        "posts": 5,
-        "emv": 48.06,
-        "engagementRate": 0.001447,
-        "lift": -0.1711
+        "posts": 2,
+        "emv": 15430.25,
+        "engagementRate": 0.014558,
+        "lift": 8.161
+      },
+      {
+        "athlete": {
+          "name": "Michael Turner",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 5264.25,
+        "engagementRate": 0.004843,
+        "lift": 6.9122
+      },
+      {
+        "athlete": {
+          "name": "Taz Williams",
+          "sport": "FOOTBALL"
+        },
+        "posts": 8,
+        "emv": 3942.44,
+        "engagementRate": 0.003593,
+        "lift": -0.2456
+      },
+      {
+        "athlete": {
+          "name": "Isaac Williams IV",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 3108,
+        "engagementRate": 0.002866,
+        "lift": -0.657
       }
     ]
   }

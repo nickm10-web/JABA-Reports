@@ -93,7 +93,7 @@ export function TeamsTab({ playflySchools }: TeamsTabProps) {
   const [teamContents, setTeamContents] = useState<TeamContent[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [scope] = useState<'playfly'>('playfly');
-  const [timeframe, setTimeframe] = useState<Timeframe>('thirtyDays');
+  const [timeframe] = useState<Timeframe>('thirtyDays');
   const [platform] = useState<Platform>('instagram');
   const [schoolFilter, setSchoolFilter] = useState('all');
   const [sportFilter, setSportFilter] = useState('all');
@@ -309,17 +309,12 @@ export function TeamsTab({ playflySchools }: TeamsTabProps) {
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
             <div>
               <h3 className="text-2xl font-semibold text-gray-900">Teams</h3>
-              <p className="text-sm text-gray-600">Team account performance across the 15 Playfly schools.</p>
+              <p className="text-sm text-gray-600">Team account performance across all Playfly schools.</p>
             </div>
             <div className="flex flex-wrap gap-2 items-center">
               <div className="flex gap-2">
                 <div className="text-xs text-gray-500 uppercase tracking-wide">Scope</div>
                 <div className="text-sm font-semibold text-gray-900">Playfly Schools ({playflySchools.length})</div>
-              </div>
-              <div className="flex gap-2">
-                <GlassPill className="pf-chip-compact" active={timeframe === 'sevenDays'} onClick={() => setTimeframe('sevenDays')}>7D</GlassPill>
-                <GlassPill className="pf-chip-compact" active={timeframe === 'thirtyDays'} onClick={() => setTimeframe('thirtyDays')}>30D</GlassPill>
-                <GlassPill className="pf-chip-compact" active={timeframe === 'ninetyDays'} onClick={() => setTimeframe('ninetyDays')}>90D</GlassPill>
               </div>
               <div className="flex gap-2">
                 <div className="text-xs text-gray-500 uppercase tracking-wide">Platform</div>

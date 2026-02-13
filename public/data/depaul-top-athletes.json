@@ -1,0 +1,179 @@
+{
+  "school": {
+    "_id": "68fc5bbd7804265f86eb4177",
+    "name": "Depaul"
+  },
+  "collaboration": {
+    "avgEmv": 337.65,
+    "avgLift": 0.844,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Jeremy Lorenz",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 731.5,
+        "engagementRate": 0.011171,
+        "lift": 1.8485
+      },
+      {
+        "athlete": {
+          "name": "Kendall Timme",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 4,
+        "emv": 567.5,
+        "engagementRate": 0.009039,
+        "lift": 2.7455
+      },
+      {
+        "athlete": {
+          "name": "Amsal Delalić",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 503,
+        "engagementRate": 0.007689,
+        "lift": 0.5728
+      },
+      {
+        "athlete": {
+          "name": "NJ Benson",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 2,
+        "emv": 493.5,
+        "engagementRate": 0.007788,
+        "lift": 0.9677
+      },
+      {
+        "athlete": {
+          "name": "CJ Gunn",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 4,
+        "emv": 428.38,
+        "engagementRate": 0.006711,
+        "lift": 1.5063
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 232.6,
+    "avgLift": 0.7963,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Khaman Maker",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 3,
+        "emv": 852,
+        "engagementRate": 0.01343,
+        "lift": 0.2112
+      },
+      {
+        "athlete": {
+          "name": "Jonas Johnson",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 7,
+        "emv": 574.36,
+        "engagementRate": 0.008074,
+        "lift": 0.0893
+      },
+      {
+        "athlete": {
+          "name": "Nate Kasher",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 4,
+        "emv": 543.13,
+        "engagementRate": 0.007563,
+        "lift": 0.3713
+      },
+      {
+        "athlete": {
+          "name": "Ryan Gorski",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 1,
+        "emv": 540.5,
+        "engagementRate": 0.00554,
+        "lift": 1.9671
+      },
+      {
+        "athlete": {
+          "name": "Kruz McClure",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 6,
+        "emv": 481.17,
+        "engagementRate": 0.00686,
+        "lift": 0.3181
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 0,
+    "avgLift": 0,
+    "top5Athletes": []
+  },
+  "partnership": {
+    "avgEmv": 109.15,
+    "avgLift": -0.4177,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Faith Okorie",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 2,
+        "emv": 462.25,
+        "engagementRate": 0.005643,
+        "lift": -0.0482
+      },
+      {
+        "athlete": {
+          "name": "NJ Benson",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 382.5,
+        "engagementRate": 0.006084,
+        "lift": 0.3975
+      },
+      {
+        "athlete": {
+          "name": "Morgan Stewart",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 1,
+        "emv": 269.5,
+        "engagementRate": 0.004388,
+        "lift": 0.0777
+      },
+      {
+        "athlete": {
+          "name": "Justis Odom",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 198,
+        "engagementRate": 0.002684,
+        "lift": 1.238
+      },
+      {
+        "athlete": {
+          "name": "Layden Blocker",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 142.5,
+        "engagementRate": 0.002247,
+        "lift": -0.4843
+      }
+    ]
+  }
+}

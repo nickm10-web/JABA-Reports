@@ -1,0 +1,128 @@
+{
+  "school": {
+    "_id": "68f86b817804265f86eb36f7",
+    "name": "Robert Morris University"
+  },
+  "collaboration": {
+    "avgEmv": 0,
+    "avgLift": 0,
+    "top5Athletes": []
+  },
+  "logo": {
+    "avgEmv": 159.83,
+    "avgLift": 0.148,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Jennica Suggs",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 806.5,
+        "engagementRate": 0.002867,
+        "lift": -0.6718
+      },
+      {
+        "athlete": {
+          "name": "Noel Roach",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 775,
+        "engagementRate": 0.00286,
+        "lift": 0.8332
+      },
+      {
+        "athlete": {
+          "name": "Jarvis Williams",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 604.5,
+        "engagementRate": 0.002368,
+        "lift": 0.7726
+      },
+      {
+        "athlete": {
+          "name": "Morgan Alisesky",
+          "sport": "SOFTBALL"
+        },
+        "posts": 1,
+        "emv": 551.5,
+        "engagementRate": 0.00174,
+        "lift": 4.5907
+      },
+      {
+        "athlete": {
+          "name": "Taj Dyches",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 383.75,
+        "engagementRate": 0.001272,
+        "lift": 0.2891
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 0,
+    "avgLift": 0,
+    "top5Athletes": []
+  },
+  "partnership": {
+    "avgEmv": 40.43,
+    "avgLift": -0.5528,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Blake Allen",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 214.5,
+        "engagementRate": 0.000746,
+        "lift": 0.1418
+      },
+      {
+        "athlete": {
+          "name": "Ryan Prather Jr.",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 158.5,
+        "engagementRate": 0.000617,
+        "lift": 2.1998
+      },
+      {
+        "athlete": {
+          "name": "Rowyn Ringor",
+          "sport": "WOMENS_HOCKEY"
+        },
+        "posts": 1,
+        "emv": 108,
+        "engagementRate": 0.000155,
+        "lift": 0.0467
+      },
+      {
+        "athlete": {
+          "name": "Roman Galioto",
+          "sport": "MENS_CROSS_COUNTRY"
+        },
+        "posts": 1,
+        "emv": 105,
+        "engagementRate": 0.000361,
+        "lift": -0.543
+      },
+      {
+        "athlete": {
+          "name": "Malia Kearns",
+          "sport": "WOMENS_SOCCER"
+        },
+        "posts": 1,
+        "emv": 100.5,
+        "engagementRate": 0.000144,
+        "lift": -0.658
+      }
+    ]
+  }
+}

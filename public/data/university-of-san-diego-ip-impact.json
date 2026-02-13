@@ -1,0 +1,68 @@
+{
+  "followers": 411303,
+  "school": {
+    "_id": "688ab8ef085510cc39ecb92a",
+    "name": "University of San Diego"
+  },
+  "overall": {
+    "totalContents": 2024,
+    "totalLikes": 2660153,
+    "totalComments": 76647,
+    "engagementRate": 0.0032875372001747575,
+    "emv": 1445047
+  },
+  "counts": {
+    "hasOrganizationInCaption": 186,
+    "isOrganizationCollaboration": 1,
+    "hasOrganizationLogo": 470,
+    "withIp": 511
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 186,
+      "likes": 365.0268817204301,
+      "comments": 29.177419354838708,
+      "engagementRate": 0.0009584279742070172,
+      "emv": 226.28
+    },
+    "no": {
+      "contents": 1838,
+      "likes": 1410.3688792165397,
+      "comments": 38.74863982589771,
+      "engagementRate": 0.0035232359575360197
+    },
+    "avgLift": -72.79694048997798
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 1,
+      "likes": 902,
+      "comments": 19,
+      "engagementRate": 0.002239225096826427,
+      "emv": 479.5
+    },
+    "no": {
+      "contents": 2023,
+      "likes": 1314.508650519031,
+      "comments": 37.878398418190805,
+      "engagementRate": 0.0032880553969633626
+    },
+    "avgLift": -31.89819432803863
+  },
+  "logo": {
+    "yes": {
+      "contents": 470,
+      "likes": 265.6255319148936,
+      "comments": 40.280851063829786,
+      "engagementRate": 0.0007437494571610793,
+      "emv": 193.23
+    },
+    "no": {
+      "contents": 1554,
+      "likes": 1631.472972972973,
+      "comments": 37.13963963963964,
+      "engagementRate": 0.004056893853467183
+    },
+    "avgLift": -81.66702201179257
+  }
+}

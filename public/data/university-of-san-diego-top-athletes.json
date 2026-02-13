@@ -1,0 +1,190 @@
+{
+  "school": {
+    "_id": "688ab8ef085510cc39ecb92a",
+    "name": "University of San Diego"
+  },
+  "collaboration": {
+    "avgEmv": 479.5,
+    "avgLift": 0.7746,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Kylie Ray",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 479.5,
+        "engagementRate": 0.002239,
+        "lift": 0.7746
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 193.47,
+    "avgLift": 0.5304,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "CJ Ceron",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 841.5,
+        "engagementRate": 0.002959,
+        "lift": 0.5436
+      },
+      {
+        "athlete": {
+          "name": "Josh Heverly",
+          "sport": "FOOTBALL"
+        },
+        "posts": 7,
+        "emv": 816.57,
+        "engagementRate": 0.00368,
+        "lift": 0.5473
+      },
+      {
+        "athlete": {
+          "name": "Adrian Beltre Jr.",
+          "sport": "BASEBALL"
+        },
+        "posts": 8,
+        "emv": 742.31,
+        "engagementRate": 0.003335,
+        "lift": 1.405
+      },
+      {
+        "athlete": {
+          "name": "Belle Groomes",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 4,
+        "emv": 662.75,
+        "engagementRate": 0.002685,
+        "lift": 0.582
+      },
+      {
+        "athlete": {
+          "name": "Jonathan Guerrero",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 517,
+        "engagementRate": 0.002008,
+        "lift": 3.7884
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 234.43,
+    "avgLift": 1.6744,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "CJ Ceron",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 841.5,
+        "engagementRate": 0.002959,
+        "lift": 0.5436
+      },
+      {
+        "athlete": {
+          "name": "Nick Felago",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 663,
+        "engagementRate": 0.002169,
+        "lift": 1.4548
+      },
+      {
+        "athlete": {
+          "name": "Belle Groomes",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 4,
+        "emv": 662.75,
+        "engagementRate": 0.002685,
+        "lift": 0.582
+      },
+      {
+        "athlete": {
+          "name": "Dalia Powell",
+          "sport": "SOFTBALL"
+        },
+        "posts": 3,
+        "emv": 643.17,
+        "engagementRate": 0.003082,
+        "lift": 11.8047
+      },
+      {
+        "athlete": {
+          "name": "Nick Struempf",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 568.5,
+        "engagementRate": 0.001909,
+        "lift": 14.9661
+      }
+    ]
+  },
+  "partnership": {
+    "avgEmv": 495.52,
+    "avgLift": 0.0259,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Matt Colombo",
+          "sport": "FOOTBALL"
+        },
+        "posts": 8,
+        "emv": 11551.81,
+        "engagementRate": 0.056005,
+        "lift": 21.4952
+      },
+      {
+        "athlete": {
+          "name": "Dylan Tapley",
+          "sport": "FOOTBALL"
+        },
+        "posts": 4,
+        "emv": 4370.5,
+        "engagementRate": 0.020756,
+        "lift": -0.8151
+      },
+      {
+        "athlete": {
+          "name": "Ty-Laur Johnson",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 278.5,
+        "engagementRate": 0.001325,
+        "lift": -0.7267
+      },
+      {
+        "athlete": {
+          "name": "Evan Niemi",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 195.5,
+        "engagementRate": 0.000858,
+        "lift": -0.3472
+      },
+      {
+        "athlete": {
+          "name": "Sophia Pinedo",
+          "sport": "SOFTBALL"
+        },
+        "posts": 2,
+        "emv": 186.75,
+        "engagementRate": 0.000743,
+        "lift": -0.5463
+      }
+    ]
+  }
+}

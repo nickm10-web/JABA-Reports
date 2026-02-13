@@ -4,175 +4,226 @@
     "name": "University of Nebraska"
   },
   "collaboration": {
-    "avgEmv": 0,
-    "avgLift": 0,
-    "top5Athletes": []
-  },
-  "logo": {
-    "avgEmv": 983.47,
-    "avgLift": 2.0878,
+    "avgEmv": 4551.5,
+    "avgLift": 3.4047,
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Emmett Johnson",
-          "sport": "FOOTBALL"
-        },
-        "posts": 22,
-        "emv": 2631.82,
-        "engagementRate": 0.00132,
-        "lift": -0.056100000000000004
-      },
-      {
-        "athlete": {
-          "name": "Callin Hake",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 19,
-        "emv": 170.52,
-        "engagementRate": 0.00046499999999999997,
-        "lift": 4.5799
-      },
-      {
-        "athlete": {
-          "name": "Mekhi Nelson",
-          "sport": "FOOTBALL"
-        },
-        "posts": 17,
-        "emv": 334.38,
-        "engagementRate": 0.001131,
-        "lift": 2.4735
-      },
-      {
-        "athlete": {
-          "name": "Sam Hoiberg",
-          "sport": "MENS_BASKETBALL"
-        },
-        "posts": 16,
-        "emv": 821.64,
-        "engagementRate": 0.002207,
-        "lift": 1.2453
-      },
-      {
-        "athlete": {
-          "name": "Nyziah Hunter",
-          "sport": "FOOTBALL"
-        },
-        "posts": 16,
-        "emv": 958.98,
-        "engagementRate": 0.001883,
-        "lift": 2.1965
-      }
-    ]
-  },
-  "mention (in caption)": {
-    "avgEmv": 544.78,
-    "avgLift": 6.9561,
-    "top5Athletes": [
-      {
-        "athlete": {
-          "name": "Andrew Marshall",
-          "sport": "FOOTBALL"
-        },
-        "posts": 18,
-        "emv": 40.78,
-        "engagementRate": 0.00359,
-        "lift": 0.5446
-      },
-      {
-        "athlete": {
-          "name": "Ryan Hunter",
+          "name": "Maisie Boesiger",
           "sport": "WOMENS_VOLLEYBALL"
         },
-        "posts": 9,
-        "emv": 1555.62,
-        "engagementRate": 0.00202,
-        "lift": 0.8331000000000001
-      },
-      {
-        "athlete": {
-          "name": "Vincent Genatone",
-          "sport": "FOOTBALL"
-        },
-        "posts": 9,
-        "emv": 105.1,
-        "engagementRate": 0.002221,
-        "lift": 33.3787
-      },
-      {
-        "athlete": {
-          "name": "Merideth Brandt",
-          "sport": "WOMENS_GYMNASTICS"
-        },
-        "posts": 9,
-        "emv": 32.6,
-        "engagementRate": 0.001362,
-        "lift": -0.0206
-      },
-      {
-        "athlete": {
-          "name": "Emmett Johnson",
-          "sport": "FOOTBALL"
-        },
-        "posts": 8,
-        "emv": 989.82,
-        "engagementRate": 0.0013950000000000002,
-        "lift": 0.0447
-      }
-    ]
-  },
-  "partnership": {
-    "avgEmv": 555.28,
-    "avgLift": -0.8256,
-    "top5Athletes": [
-      {
-        "athlete": {
-          "name": "Olivia Mauch",
-          "sport": "WOMENS_VOLLEYBALL"
-        },
-        "posts": 15,
-        "emv": 365.56,
-        "engagementRate": 0.000199,
-        "lift": -0.9256
-      },
-      {
-        "athlete": {
-          "name": "Alex Nitache",
-          "sport": "MENS_GYMNASTICS"
-        },
-        "posts": 9,
-        "emv": 30.84,
-        "engagementRate": 0.000283,
-        "lift": -0.8856999999999999
-      },
-      {
-        "athlete": {
-          "name": "Ryan Hunter",
-          "sport": "WOMENS_VOLLEYBALL"
-        },
-        "posts": 9,
-        "emv": 138.04,
-        "engagementRate": 0.000179,
-        "lift": -0.9393
-      },
-      {
-        "athlete": {
-          "name": "Britt Prince",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 8,
-        "emv": 178.6,
-        "engagementRate": 0.000724,
-        "lift": -0.7604000000000001
+        "posts": 1,
+        "emv": 34080,
+        "engagementRate": 0.021726,
+        "lift": 1.3167
       },
       {
         "athlete": {
           "name": "Andi Jackson",
           "sport": "WOMENS_VOLLEYBALL"
         },
+        "posts": 1,
+        "emv": 26346,
+        "engagementRate": 0.016791,
+        "lift": 1.1621
+      },
+      {
+        "athlete": {
+          "name": "Rebekah Allick",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 2,
+        "emv": 24837,
+        "engagementRate": 0.015797,
+        "lift": 2.0601
+      },
+      {
+        "athlete": {
+          "name": "Laney Choboy",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 1,
+        "emv": 21636,
+        "engagementRate": 0.013798,
+        "lift": 0.1016
+      },
+      {
+        "athlete": {
+          "name": "Harper Murray",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 2,
+        "emv": 19744,
+        "engagementRate": 0.012589,
+        "lift": -0.2373
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 1594.48,
+    "avgLift": 4.9749,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Harper Murray",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 16,
+        "emv": 35670,
+        "engagementRate": 0.022713,
+        "lift": 1.152
+      },
+      {
+        "athlete": {
+          "name": "Laney Choboy",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 11,
+        "emv": 24901.27,
+        "engagementRate": 0.015891,
+        "lift": 0.5937
+      },
+      {
+        "athlete": {
+          "name": "Maisie Boesiger",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 15,
+        "emv": 24375.87,
+        "engagementRate": 0.015564,
+        "lift": 1.8058
+      },
+      {
+        "athlete": {
+          "name": "Bergen Reilly",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
         "posts": 8,
-        "emv": 2063.34,
-        "engagementRate": 0.000728,
-        "lift": -0.617
+        "emv": 23946.31,
+        "engagementRate": 0.01527,
+        "lift": 1.2647
+      },
+      {
+        "athlete": {
+          "name": "Luke Lindenmeyer",
+          "sport": "FOOTBALL"
+        },
+        "posts": 10,
+        "emv": 15713.5,
+        "engagementRate": 0.01002,
+        "lift": 2.7263
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 2062.9,
+    "avgLift": 3.6982,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Bergen Reilly",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 1,
+        "emv": 44440,
+        "engagementRate": 0.028264,
+        "lift": 2.3361
+      },
+      {
+        "athlete": {
+          "name": "Harper Murray",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 8,
+        "emv": 32271.19,
+        "engagementRate": 0.020562,
+        "lift": 0.3747
+      },
+      {
+        "athlete": {
+          "name": "Laney Choboy",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 7,
+        "emv": 23360.71,
+        "engagementRate": 0.014913,
+        "lift": 0.2782
+      },
+      {
+        "athlete": {
+          "name": "Maisie Boesiger",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 3,
+        "emv": 23350.83,
+        "engagementRate": 0.014912,
+        "lift": 0.6123
+      },
+      {
+        "athlete": {
+          "name": "Tyson Terry",
+          "sport": "FOOTBALL"
+        },
+        "posts": 4,
+        "emv": 16360.13,
+        "engagementRate": 0.010382,
+        "lift": 10.1212
+      }
+    ]
+  },
+  "partnership": {
+    "avgEmv": 1110.27,
+    "avgLift": -0.3869,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Laney Choboy",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 5,
+        "emv": 18535.8,
+        "engagementRate": 0.011837,
+        "lift": -0.0724
+      },
+      {
+        "athlete": {
+          "name": "Cortez Mills Jr.",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 14148,
+        "engagementRate": 0.008817,
+        "lift": 2.1378
+      },
+      {
+        "athlete": {
+          "name": "Maisie Boesiger",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 4,
+        "emv": 11113.88,
+        "engagementRate": 0.0071,
+        "lift": -0.2934
+      },
+      {
+        "athlete": {
+          "name": "Rebekah Allick",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 7,
+        "emv": 8054.71,
+        "engagementRate": 0.005048,
+        "lift": -0.1235
+      },
+      {
+        "athlete": {
+          "name": "Virginia Adriano",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 1,
+        "emv": 6878.5,
+        "engagementRate": 0.00438,
+        "lift": -0.2027
       }
     ]
   }
