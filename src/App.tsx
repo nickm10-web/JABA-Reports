@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate, useNavigate, useSearchParams } 
 import { SchoolReportsPage } from './components/SchoolReportsPage';
 import { AuburnCampaignOverview } from './components/AuburnCampaignOverview';
 import { BaylorBrandDeals } from './components/BaylorBrandDeals';
-import { OhioStateReportHub } from './components/OhioStateReportHub';
+import { OhioStateIPImpact } from './components/OhioStateIPImpact';
 import { KentuckyReportHub } from './components/KentuckyReportHub';
 import { PlayflyReportHub } from './components/PlayflyReportHub';
 import { UCLABrandDeals } from './components/UCLABrandDeals';
@@ -20,7 +20,7 @@ function BaylorRoute() {
 function OhioStateRoute() {
   const navigate = useNavigate();
   const canGoBack = window.history.length > 2;
-  return <OhioStateReportHub onBack={canGoBack ? () => navigate('/') : undefined} />;
+  return <OhioStateIPImpact onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
 function KentuckyRoute() {
