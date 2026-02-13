@@ -37,6 +37,17 @@ if (!rosterFile) {
 }
 
 console.log(`Using contents: ${sourceFile}, roster: ${rosterFile}`);
+
+// Skip if files are Git LFS pointers (not actual JSON)
+const isLfsPointer = (filePath) => {
+  const head = fs.readFileSync(filePath, 'utf8').slice(0, 20);
+  return head.startsWith('version https://');
+};
+if (isLfsPointer(path.join(dataDir, sourceFile)) || isLfsPointer(path.join(dataDir, rosterFile))) {
+  console.log('Source files are Git LFS pointers, skipping generation.');
+  process.exit(0);
+}
+
 const rows = JSON.parse(fs.readFileSync(path.join(dataDir, sourceFile), 'utf8'));
 const rosterRows = JSON.parse(fs.readFileSync(path.join(dataDir, rosterFile), 'utf8'));
 
