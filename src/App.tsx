@@ -3,7 +3,7 @@ import { SchoolReportsPage } from './components/SchoolReportsPage';
 import { AuburnCampaignOverview } from './components/AuburnCampaignOverview';
 import { BaylorBrandDeals } from './components/BaylorBrandDeals';
 import { OhioStateIPImpact } from './components/OhioStateIPImpact';
-import { KentuckyReportHub } from './components/KentuckyReportHub';
+import { KentuckyIPImpact } from './components/KentuckyIPImpact';
 import { PlayflyReportHub } from './components/PlayflyReportHub';
 import { UCLABrandDeals } from './components/UCLABrandDeals';
 
@@ -26,7 +26,7 @@ function OhioStateRoute() {
 function KentuckyRoute() {
   const navigate = useNavigate();
   const canGoBack = window.history.length > 2;
-  return <KentuckyReportHub onBack={canGoBack ? () => navigate('/') : undefined} />;
+  return <KentuckyIPImpact onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
 function PlayflyRoute() {

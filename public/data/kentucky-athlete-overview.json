@@ -1,0 +1,57 @@
+{
+  "sourceFile": "ncaa_roster_contents_feb_12.json",
+  "generatedAt": "2026-02-13T21:32:48.849Z",
+  "school": "Kentucky",
+  "matchedSchools": [
+    "Kentucky"
+  ],
+  "totalPosts": 2900,
+  "totalLikes": 4214185,
+  "totalComments": 119182,
+  "postsWithIP": 1550,
+  "ipAdoptionRate": 53.4,
+  "avgLift": 66.6,
+  "totalEmv": 2285865.5,
+  "collaboration": {
+    "posts": 194,
+    "likes": 4692.077319587629,
+    "comments": 52.845360824742265,
+    "engagementRate": 0.3527791106048923,
+    "delta": 94.3460981583124,
+    "baselineEngRate": 0.181521066771056,
+    "baselinePosts": 2706,
+    "baselineLikes": 1220.9615668883962,
+    "baselineComments": 40.2549889135255
+  },
+  "logo": {
+    "posts": 1363,
+    "likes": 2093.7439471753487,
+    "comments": 47.11151870873074,
+    "engagementRate": 0.2431323326976145,
+    "delta": 61.628261378959216,
+    "baselineEngRate": 0.15042686880579506,
+    "baselinePosts": 1537,
+    "baselineLikes": 885.1086532205595,
+    "baselineComments": 35.763825634352635
+  },
+  "mention": {
+    "posts": 396,
+    "likes": 2508.9444444444443,
+    "comments": 37.51767676767677,
+    "engagementRate": 0.3114741135534926,
+    "delta": 70.24195099560731,
+    "baselineEngRate": 0.1829596710634087,
+    "baselinePosts": 2504,
+    "baselineLikes": 1286.1992811501598,
+    "baselineComments": 41.66333865814696
+  },
+  "counters": {
+    "isSponsored": 92,
+    "sponsorPartner": 88,
+    "isOrganizationCollaboration": 194,
+    "hasOrganizationInCaption": 396,
+    "hasOrganizationLogo": 1363,
+    "isCollaboration": 732
+  },
+  "engagementRateMethod": "Estimated rate = total likes+comments divided by summed mapped athlete followers (name+sport match against ncaa_roster)."
+}

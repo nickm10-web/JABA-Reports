@@ -126,16 +126,6 @@
     "top5Athletes": [
       {
         "athlete": {
-          "name": "Elijah Brown",
-          "sport": "FOOTBALL"
-        },
-        "posts": 6,
-        "emv": 1609.33,
-        "engagementRate": 0.001879,
-        "lift": -0.8942
-      },
-      {
-        "athlete": {
           "name": "Jasper Johnson",
           "sport": "MENS_BASKETBALL"
         },

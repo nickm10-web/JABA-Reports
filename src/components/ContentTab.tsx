@@ -147,8 +147,8 @@ export function ContentTab() {
   if (!scope) return <GlassCard className="p-6 text-sm text-gray-500">No content data available.</GlassCard>;
 
   const leaderboards = [
-    { id: 'sponsored-with-ip', title: 'Top Sponsored posts WITH Playfly IP', items: scope.topSponsoredWithIp, stats: scope.statsSponsoredWithIp, counterStats: scope.statsSponsoredWithoutIp },
-    { id: 'sponsored-without-ip', title: 'Top Sponsored posts WITHOUT Playfly IP', items: scope.topSponsoredWithoutIp, stats: scope.statsSponsoredWithoutIp, counterStats: scope.statsSponsoredWithIp },
+    { id: 'sponsored-with-ip', title: 'Top Sponsored posts WITH School IP', items: scope.topSponsoredWithIp, stats: scope.statsSponsoredWithIp, counterStats: scope.statsSponsoredWithoutIp },
+    { id: 'sponsored-without-ip', title: 'Top Sponsored posts WITHOUT School IP', items: scope.topSponsoredWithoutIp, stats: scope.statsSponsoredWithoutIp, counterStats: scope.statsSponsoredWithIp },
   ];
 
   return (
@@ -188,11 +188,11 @@ export function ContentTab() {
         <div className="text-base font-semibold text-gray-900 mb-4">Champion Faceoff</div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <GlassCard className="p-5 content-post-card">
-            <div className="text-xs uppercase tracking-wide text-gray-600 mb-3">Best WITH Playfly IP</div>
+            <div className="text-xs uppercase tracking-wide text-gray-600 mb-3">Best WITH School IP</div>
             {scope.topWithIp[0] ? renderPostRow(scope.topWithIp[0], 'md') : <div className="text-sm text-gray-500">No posts</div>}
           </GlassCard>
           <GlassCard className="p-5 content-post-card">
-            <div className="text-xs uppercase tracking-wide text-gray-600 mb-3">Best WITHOUT Playfly IP</div>
+            <div className="text-xs uppercase tracking-wide text-gray-600 mb-3">Best WITHOUT School IP</div>
             {scope.topWithoutIp[0] ? renderPostRow(scope.topWithoutIp[0], 'md') : <div className="text-sm text-gray-500">No posts</div>}
           </GlassCard>
         </div>

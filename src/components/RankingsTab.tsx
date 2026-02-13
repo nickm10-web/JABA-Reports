@@ -6,7 +6,6 @@ import { DrawerPanel, GlassCard, GlassPill } from './playfly/PlayflyUI';
 const SCHOOL_DISPLAY_NAMES: Record<string, string> = {
   'Auburn University': 'Auburn University',
   'Baylor': 'Baylor University',
-  'Brigham Young University(BYU)': 'Brigham Young University (BYU)',
   'Louisiana State University': 'Louisiana State University (LSU)',
   'Michigan State': 'Michigan State University',
   'Old Dominion University': 'Old Dominion University (ODU)',

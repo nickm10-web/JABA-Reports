@@ -5,7 +5,7 @@ import { SchoolReportView } from './SchoolReportView';
 import { PlayflyReportHub } from './PlayflyReportHub';
 import { AuburnCampaignOverview } from './AuburnCampaignOverview';
 import { BaylorReportHub } from './BaylorReportHub';
-import { KentuckyReportHub } from './KentuckyReportHub';
+import { KentuckyIPImpact } from './KentuckyIPImpact';
 import { OhioStateIPImpact } from './OhioStateIPImpact';
 import { UCLABrandDeals } from './UCLABrandDeals';
 
@@ -43,10 +43,10 @@ export function SchoolReportsPage() {
         <BaylorReportHub onBack={() => setSelectedSchool(null)} />
       );
     }
-    // If Kentucky is selected, show the hub with multiple report options
+    // If Kentucky is selected, show IP Impact report
     if (selectedSchool.id === 'kentucky') {
       return (
-        <KentuckyReportHub onBack={() => setSelectedSchool(null)} />
+        <KentuckyIPImpact onBack={() => setSelectedSchool(null)} />
       );
     }
     // If UCLA is selected, show the UCLA report

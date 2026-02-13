@@ -118,7 +118,6 @@ const OFFICIAL_PLAYFLY_SCHOOLS = [
   'University of Denver',
   'San Jose State University',
   'University of Texas at San Antonio',
-  'Brigham Young University',
   'University of Cincinnati'
 ];
 
@@ -141,8 +140,7 @@ const SCHOOL_NAME_MAPPING: Record<string, string> = {
   'Baylor': 'Baylor University',
   'Virginia': 'University of Virginia',
   'Washington State': 'Washington State University',
-  'University of Texas at San Antonio (UTSA)': 'University of Texas at San Antonio',
-  'Brigham Young University(BYU)': 'Brigham Young University'
+  'University of Texas at San Antonio (UTSA)': 'University of Texas at San Antonio'
 };
 
 function normalizeSchoolName(name: string): string {

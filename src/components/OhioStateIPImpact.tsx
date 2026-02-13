@@ -2215,7 +2215,7 @@ function BestCollaboratorsTab() {
     },
     logo: {
       label: 'Visual IP',
-      shortLabel: 'Logo',
+      shortLabel: 'Visual IP',
       icon: <Tag className="w-5 h-5" />,
       athletes: topLogoAthletes,
       stats: signalStats.logo,
@@ -2980,49 +2980,61 @@ function ContentTab() {
     </div>
   );
 
+  const postCardStyle: React.CSSProperties = {
+    background: '#ffffff',
+    border: '1px solid rgba(148, 163, 184, 0.22)',
+    boxShadow: '0 12px 24px rgba(15, 23, 42, 0.08)',
+    borderRadius: '1rem',
+    transition: 'transform 160ms ease, box-shadow 160ms ease',
+  };
+  const postCardHoverStyle: React.CSSProperties = {
+    transform: 'translateY(-3px)',
+    boxShadow: '0 18px 36px rgba(15, 23, 42, 0.12)',
+  };
+
   const renderAthleteRow = (post: AthletePostItem, rank: number) => (
     <a
       key={post.id}
-      className="rounded-xl border p-3 sm:p-4 bg-white"
-      style={{ borderColor: colors.glassBorder }}
+      className="block p-4"
+      style={postCardStyle}
       href={post.postLink || undefined}
       target="_blank"
       rel="noopener noreferrer"
+      onMouseEnter={(e) => Object.assign(e.currentTarget.style, postCardHoverStyle)}
+      onMouseLeave={(e) => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = postCardStyle.boxShadow as string; }}
     >
-      <div className="flex items-start gap-3">
-        <span
-          className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0"
-          style={{ backgroundColor: rank <= 3 ? colors.scarlet : '#e5e7eb', color: rank <= 3 ? '#fff' : colors.textMuted }}
-        >
-          {rank}
-        </span>
-        <div className="w-20 sm:w-24 flex-shrink-0">
-          {renderThumbnail(post.thumbnail, post.athleteName)}
-        </div>
+      <div className="flex items-start justify-between gap-4">
         <div className="min-w-0 flex-1">
-          <p className="font-semibold text-sm truncate" style={{ color: colors.text }}>{post.athleteName}</p>
-          <p className="text-xs text-gray-500 mt-0.5">{post.dateLabel}</p>
-          {post.caption && (
-            <p className="text-xs mt-1.5 line-clamp-2" style={{ color: colors.textMuted }}>
-              {post.caption}
-            </p>
-          )}
-          <div className="flex flex-wrap gap-2 mt-2 text-xs">
-            <span className="px-2 py-0.5 rounded-full bg-gray-100 text-gray-700">{formatNumber(post.interactions)} interactions</span>
-            <span className="px-2 py-0.5 rounded-full bg-gray-100 text-gray-700">{formatCurrency(post.emv)} EMV</span>
+          <div className="flex items-start gap-3">
             <span
-              className="px-2 py-0.5 rounded-full"
-              style={{
-                backgroundColor: post.lift >= 0 ? `${colors.positive}15` : `${colors.negative}15`,
-                color: post.lift >= 0 ? colors.positive : colors.negative,
-              }}
+              className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-1"
+              style={{ backgroundColor: rank <= 3 ? colors.scarlet : '#e5e7eb', color: rank <= 3 ? '#fff' : colors.textMuted }}
             >
-              {formatDelta(post.lift)} lift
+              {rank}
             </span>
-            <span className="px-2 py-0.5 rounded-full" style={{ backgroundColor: `${colors.scarlet}12`, color: colors.scarlet }}>
-              {post.ipSignal}
-            </span>
+            {post.thumbnail ? (
+              <img src={post.thumbnail} alt={post.athleteName} className="h-16 w-16 rounded-xl object-cover border border-gray-200 shadow-sm flex-shrink-0" loading="lazy" />
+            ) : (
+              <div className="h-16 w-16 rounded-xl bg-gray-100 border border-gray-200 flex-shrink-0" />
+            )}
+            <div className="min-w-0">
+              <p className="text-base font-semibold text-gray-900 truncate">{post.athleteName}</p>
+              <p className="text-sm text-gray-600 truncate">{post.dateLabel}</p>
+              {post.caption && (
+                <p className="text-sm text-gray-600 line-clamp-2 mt-1">{post.caption}</p>
+              )}
+              <div className="flex flex-wrap gap-1.5 mt-3">
+                <span className="px-2.5 py-1 rounded-full text-xs font-medium" style={{ backgroundColor: `${colors.scarlet}14`, border: `1px solid ${colors.scarlet}40`, color: colors.scarlet }}>
+                  {post.ipSignal}
+                </span>
+              </div>
+            </div>
           </div>
+        </div>
+        <div className="text-right flex-shrink-0">
+          <p className="text-lg font-bold text-gray-900">{formatNumber(post.interactions)}</p>
+          <p className="text-xs text-gray-600 mt-1">Interactions</p>
+          <p className="text-sm text-gray-600 mt-2">EMV: {formatCurrency(post.emv)}</p>
         </div>
       </div>
     </a>
@@ -3190,29 +3202,38 @@ function ContentTab() {
                     href={post.postLink || undefined}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-xl border p-3 sm:p-4 bg-white block"
-                    style={{ borderColor: colors.glassBorder }}
+                    className="block p-4"
+                    style={postCardStyle}
+                    onMouseEnter={(e) => Object.assign(e.currentTarget.style, postCardHoverStyle)}
+                    onMouseLeave={(e) => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = postCardStyle.boxShadow as string; }}
                   >
-                    <div className="flex items-start gap-3">
-                      <span
-                        className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0"
-                        style={{ backgroundColor: idx < 3 ? colors.scarlet : '#e5e7eb', color: idx < 3 ? '#fff' : colors.textMuted }}
-                      >
-                        {idx + 1}
-                      </span>
-                      <div className="w-20 sm:w-24 flex-shrink-0">{renderThumbnail(post.thumbnail, post.teamName)}</div>
+                    <div className="flex items-start justify-between gap-4">
                       <div className="min-w-0 flex-1">
-                        <p className="font-semibold text-sm truncate" style={{ color: colors.text }}>{post.teamName}</p>
-                        <p className="text-xs text-gray-500 mt-0.5">{post.dateLabel}</p>
-                        {post.caption && (
-                          <p className="text-xs mt-1.5 line-clamp-2" style={{ color: colors.textMuted }}>
-                            {post.caption}
-                          </p>
-                        )}
-                        <div className="flex flex-wrap gap-2 mt-2 text-xs">
-                          <span className="px-2 py-0.5 rounded-full bg-gray-100 text-gray-700">{formatNumber(post.interactions)} interactions</span>
-                          <span className="px-2 py-0.5 rounded-full bg-gray-100 text-gray-700">{formatPercent(post.engagementRate)} engagement</span>
+                        <div className="flex items-start gap-3">
+                          <span
+                            className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-1"
+                            style={{ backgroundColor: idx < 3 ? colors.scarlet : '#e5e7eb', color: idx < 3 ? '#fff' : colors.textMuted }}
+                          >
+                            {idx + 1}
+                          </span>
+                          {post.thumbnail ? (
+                            <img src={post.thumbnail} alt={post.teamName} className="h-16 w-16 rounded-xl object-cover border border-gray-200 shadow-sm flex-shrink-0" loading="lazy" />
+                          ) : (
+                            <div className="h-16 w-16 rounded-xl bg-gray-100 border border-gray-200 flex-shrink-0" />
+                          )}
+                          <div className="min-w-0">
+                            <p className="text-base font-semibold text-gray-900 truncate">{post.teamName}</p>
+                            <p className="text-sm text-gray-600 truncate">{post.dateLabel}</p>
+                            {post.caption && (
+                              <p className="text-sm text-gray-600 line-clamp-2 mt-1">{post.caption}</p>
+                            )}
+                          </div>
                         </div>
+                      </div>
+                      <div className="text-right flex-shrink-0">
+                        <p className="text-lg font-bold text-gray-900">{formatNumber(post.interactions)}</p>
+                        <p className="text-xs text-gray-600 mt-1">Interactions</p>
+                        <p className="text-sm text-gray-600 mt-2">Eng: {formatPercent(post.engagementRate)}</p>
                       </div>
                     </div>
                   </a>

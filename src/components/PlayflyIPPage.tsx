@@ -235,7 +235,6 @@ const SCHOOL_FILE_MAP: Record<string, string> = {
   'University of Nebraska': 'university-of-nebraska',
   'University of Southern California (USC)': 'university-of-southern-california-usc',
   // Regular Playfly schools
-  'Brigham Young University (BYU)': 'brigham-young-university-byu',
   'George Mason': 'george-mason',
   'Old Dominion University': 'old-dominion-university',
   'University of Cincinnati': 'university-of-cincinnati',
@@ -245,11 +244,19 @@ const SCHOOL_FILE_MAP: Record<string, string> = {
   // Not in data yet: Oral Roberts, University of Denver, San Jose State
 };
 
+// Use corrected IP files where the base file has zeroed lift fields.
+const SCHOOL_IP_FILE_OVERRIDES: Record<string, string> = {
+  'michigan-state': 'michigan-state-ip-impact (2).json',
+  'university-of-maryland': 'university-of-maryland-ip-impact (2).json',
+  'university-of-new-mexico': 'university-of-new-mexico-ip-impact (2).json',
+  'wichita-state-university': 'wichita-state-university-ip-impact (2).json',
+  'george-mason': 'george-mason-ip-impact (1).json',
+};
+
 // Standardized display names - ensures consistent formatting across the UI
 const SCHOOL_DISPLAY_NAMES: Record<string, string> = {
   'Auburn University': 'Auburn University',
   'Baylor': 'Baylor University',
-  'Brigham Young University (BYU)': 'Brigham Young University (BYU)',
   'George Mason': 'George Mason University',
   'Louisiana State University': 'Louisiana State University (LSU)',
   'Michigan State': 'Michigan State University',
@@ -311,7 +318,8 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
 
         // Load school IP data
         const schoolPromises = Object.values(SCHOOL_FILE_MAP).map(async (fileName) => {
-          const response = await fetch(`/data/${fileName}-ip-impact.json`);
+          const impactFile = SCHOOL_IP_FILE_OVERRIDES[fileName] ?? `${fileName}-ip-impact.json`;
+          const response = await fetch(`/data/${encodeURIComponent(impactFile)}`);
           if (!response.ok) return null;
           return response.json() as Promise<SchoolIPData>;
         });
@@ -1451,7 +1459,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                                       </div>
                                       <div className="flex justify-between items-center">
                                         <div className="flex items-center gap-1.5 text-xs text-gray-600">
-                                          <span>Avg Interactions</span>
+                                          <span>Total Interactions</span>
                                           <div className="relative group">
                                             <Info className="w-3 h-3 cursor-help" />
                                             <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-gray-900 border border-gray-700 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
@@ -1586,7 +1594,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         </div>
                         <div>
                           <div className="flex items-center gap-1.5 text-sm text-gray-600 mb-1">
-                            <span>Avg Interactions</span>
+                            <span>Total Interactions</span>
                             <div className="relative group">
                               <Info className="w-3.5 h-3.5 cursor-help" />
                               <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-gray-900 border border-gray-700 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
@@ -1629,7 +1637,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         </div>
                         <div>
                           <div className="flex items-center gap-1.5 text-sm text-gray-600 mb-1">
-                            <span>Avg Interactions</span>
+                            <span>Total Interactions</span>
                             <div className="relative group">
                               <Info className="w-3.5 h-3.5 cursor-help" />
                               <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-gray-900 border border-gray-700 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
@@ -1728,7 +1736,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                       </div>
                       <div>
                         <div className="flex items-center gap-1.5 text-sm text-gray-600 mb-1">
-                          <span>Avg Interactions</span>
+                          <span>Total Interactions</span>
                           <div className="relative group">
                             <Info className="w-3.5 h-3.5 cursor-help" />
                             <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-gray-900 border border-gray-700 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
@@ -1771,7 +1779,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                       </div>
                       <div>
                         <div className="flex items-center gap-1.5 text-sm text-gray-600 mb-1">
-                          <span>Avg Interactions</span>
+                          <span>Total Interactions</span>
                           <div className="relative group">
                             <Info className="w-3.5 h-3.5 cursor-help" />
                             <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-gray-900 border border-gray-700 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
@@ -1869,7 +1877,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                       </div>
                       <div>
                         <div className="flex items-center gap-1.5 text-sm text-gray-600 mb-1">
-                          <span>Avg Interactions</span>
+                          <span>Total Interactions</span>
                           <div className="relative group">
                             <Info className="w-3.5 h-3.5 cursor-help" />
                             <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-gray-900 border border-gray-700 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
@@ -1912,7 +1920,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                       </div>
                       <div>
                         <div className="flex items-center gap-1.5 text-sm text-gray-600 mb-1">
-                          <span>Avg Interactions</span>
+                          <span>Total Interactions</span>
                           <div className="relative group">
                             <Info className="w-3.5 h-3.5 cursor-help" />
                             <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-4 py-2 bg-gray-900 border border-gray-700 text-white text-sm font-medium rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
