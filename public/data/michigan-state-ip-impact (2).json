@@ -1,0 +1,68 @@
+{
+  "followers": 802304,
+  "school": {
+    "_id": "68fc5b7f7804265f86eb4173",
+    "name": "Michigan State"
+  },
+  "overall": {
+    "totalContents": 2216,
+    "totalLikes": 2215481,
+    "totalComments": 91288,
+    "engagementRate": 2.875180729499043,
+    "emv": 53438.42
+  },
+  "counts": {
+    "hasOrganizationInCaption": 446,
+    "isOrganizationCollaboration": 65,
+    "hasOrganizationLogo": 1134,
+    "withIp": 1235
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 446,
+      "likes": 1528.0313901345291,
+      "comments": 39.5695067264574,
+      "engagementRate": 0.001953873964059741,
+      "emv": 34.52
+    },
+    "no": {
+      "contents": 1770,
+      "likes": 866.654802259887,
+      "comments": 41.6045197740113,
+      "engagementRate": 0.0011320638087731064
+    },
+    "avgLift": 72.59397826499598
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 65,
+      "likes": 3408.9384615384615,
+      "comments": 52.92307692307692,
+      "engagementRate": 0.004314900011045114,
+      "emv": 73.47
+    },
+    "no": {
+      "contents": 2151,
+      "likes": 926.9642026964202,
+      "comments": 40.840539284053925,
+      "engagementRate": 0.0012062818357885217
+    },
+    "avgLift": 257.7024774002795
+  },
+  "logo": {
+    "yes": {
+      "contents": 1134,
+      "likes": 1436.4285714285713,
+      "comments": 44.939153439153436,
+      "engagementRate": 0.0018463920469893266,
+      "emv": 33.22
+    },
+    "no": {
+      "contents": 1082,
+      "likes": 542.1173752310536,
+      "comments": 37.27079482439926,
+      "engagementRate": 0.0007221554050029077
+    },
+    "avgLift": 155.67793776768758
+  }
+}

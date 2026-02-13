@@ -2820,21 +2820,23 @@ function ContentTab() {
         };
 
         let athleteRows: any[] = [];
-        try {
-          const rosterRes = await fetch('/data/socialMedia.roster_contents (8).json');
-          if (rosterRes.ok) {
-            const rosterData = (await rosterRes.json()) as any[];
-            athleteRows = rosterData.filter((row) => ['Ohio State', 'Ohio'].includes(row?.athlete?.school?.name));
-          }
-        } catch {
-          // fall through to NCAA source
-        }
-
-        if (athleteRows.length === 0) {
-          const ncaaRes = await fetch('/data/NCAA_contents (2).json');
-          if (ncaaRes.ok) {
-            const ncaaData = (await ncaaRes.json()) as any[];
-            athleteRows = ncaaData.filter((row) => ['Ohio State', 'Ohio'].includes(row?.athlete?.school?.name));
+        // Try pre-extracted Ohio State file first, then fall back to larger sources
+        for (const source of [
+          '/data/ohio-state-content-posts.json',
+          '/data/socialMedia.roster_contents (8).json',
+          '/data/NCAA_contents (2).json',
+        ]) {
+          if (athleteRows.length > 0) break;
+          try {
+            const res = await fetch(source);
+            if (!res.ok) continue;
+            const data = (await res.json()) as any[];
+            const filtered = source.includes('ohio-state-content-posts')
+              ? data
+              : data.filter((row) => ['Ohio State', 'Ohio'].includes(row?.athlete?.school?.name));
+            if (filtered.length > 0) athleteRows = filtered;
+          } catch {
+            // try next source
           }
         }
 

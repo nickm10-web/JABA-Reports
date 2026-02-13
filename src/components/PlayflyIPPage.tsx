@@ -318,10 +318,14 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
 
         // Load school IP data
         const schoolPromises = Object.values(SCHOOL_FILE_MAP).map(async (fileName) => {
-          const impactFile = SCHOOL_IP_FILE_OVERRIDES[fileName] ?? `${fileName}-ip-impact.json`;
-          const response = await fetch(`/data/${encodeURIComponent(impactFile)}`);
-          if (!response.ok) return null;
-          return response.json() as Promise<SchoolIPData>;
+          try {
+            const impactFile = SCHOOL_IP_FILE_OVERRIDES[fileName] ?? `${fileName}-ip-impact.json`;
+            const response = await fetch(`/data/${encodeURIComponent(impactFile)}`);
+            if (!response.ok) return null;
+            return await response.json() as SchoolIPData;
+          } catch {
+            return null;
+          }
         });
 
         // Load brand partnership data
@@ -336,9 +340,13 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
 
         // Load athlete data
         const athletePromises = Object.values(SCHOOL_FILE_MAP).map(async (fileName) => {
-          const response = await fetch(`/data/${fileName}-top-athletes.json`);
-          if (!response.ok) return null;
-          return response.json() as Promise<SchoolAthleteData>;
+          try {
+            const response = await fetch(`/data/${fileName}-top-athletes.json`);
+            if (!response.ok) return null;
+            return await response.json() as SchoolAthleteData;
+          } catch {
+            return null;
+          }
         });
 
         const [schoolResults, brandResult, partnershipResults, athleteResults] = await Promise.all([

@@ -1,0 +1,68 @@
+{
+  "followers": 862566,
+  "school": {
+    "_id": "68fc8b6f7804265f86eb4183",
+    "name": "University of Maryland"
+  },
+  "overall": {
+    "totalContents": 2379,
+    "totalLikes": 1572893,
+    "totalComments": 97861,
+    "engagementRate": 1.9369578675718728,
+    "emv": 41243.96
+  },
+  "counts": {
+    "hasOrganizationInCaption": 392,
+    "isOrganizationCollaboration": 67,
+    "hasOrganizationLogo": 1126,
+    "withIp": 1201
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 392,
+      "likes": 974.4107142857143,
+      "comments": 46.798469387755105,
+      "engagementRate": 0.0011839200521159764,
+      "emv": 24.17
+    },
+    "no": {
+      "contents": 1987,
+      "likes": 599.357825868143,
+      "comments": 40.018117765475594,
+      "engagementRate": 0.0007412487202528486
+    },
+    "avgLift": 59.71967569969328
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 67,
+      "likes": 1645.134328358209,
+      "comments": 46.19402985074627,
+      "engagementRate": 0.00196081037069506,
+      "emv": 37.52
+    },
+    "no": {
+      "contents": 2312,
+      "likes": 632.6423010380623,
+      "comments": 40.988754325259514,
+      "engagementRate": 0.0007809617529131936
+    },
+    "avgLift": 151.0763636478636
+  },
+  "logo": {
+    "yes": {
+      "contents": 1126,
+      "likes": 829.8809946714032,
+      "comments": 45.58170515097691,
+      "engagementRate": 0.0010149515513275275,
+      "emv": 21.16
+    },
+    "no": {
+      "contents": 1253,
+      "likes": 509.5347166799681,
+      "comments": 37.13966480446928,
+      "engagementRate": 0.0006337768721285529
+    },
+    "avgLift": 60.143355802617315
+  }
+}
