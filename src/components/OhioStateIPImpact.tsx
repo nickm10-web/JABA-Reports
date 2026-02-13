@@ -1,11 +1,9 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import {
   ArrowLeft,
-  Share2,
   DollarSign,
   Heart,
   MessageCircle,
-  Percent,
   TrendingUp,
   FileText,
   Search,
@@ -16,38 +14,239 @@ import {
   AtSign,
   Info,
   Handshake,
+  Camera,
+  Target,
+  Lightbulb,
 } from 'lucide-react';
 
 // ═══════════════════════════════════════════════════════════════
-// OHIO STATE BRAND COLORS (matching JABA campaign dashboard style)
+// THEME TOKENS
 // ═══════════════════════════════════════════════════════════════
 const colors = {
   scarlet: '#ba0c2f',
+  scarletDark: '#8a0922',
+  scarletLight: '#d4334f',
   gray: '#a7b1b7',
   white: '#ffffff',
   positive: '#10b981',
   negative: '#ef4444',
   accent: '#0369a1',
-  lightBg: '#f5f5f5',      // Light gray page background
+  lightBg: '#f8f8f8',
   warmGray: '#78716c',
   cardBg: '#ffffff',
-  cardBorder: 'transparent', // No visible borders, use shadows instead
+  cardBorder: 'transparent',
   text: '#111827',
   textMuted: '#6b7280',
   textDim: '#9ca3af',
-  headerGray: '#6b7280',   // Gray color for two-tone headers
+  headerGray: '#6b7280',
+  glass: 'rgba(255,255,255,0.85)',
+  glassBorder: 'rgba(0,0,0,0.06)',
 };
 
-// Two-tone header component matching JABA style
-function SectionHeader({ primary, secondary }: { primary: string; secondary: string }) {
-  return (
-    <h2 style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }} className="text-2xl md:text-3xl font-bold uppercase tracking-tight">
-      <span style={{ color: colors.scarlet }}>{primary}</span>
-      <span style={{ color: colors.headerGray }}>{secondary}</span>
-    </h2>
-  );
+type SignalComparison = {
+  with: { posts: number; avgLikes: number; avgComments: number; engagementRate: number };
+  without: { posts: number; avgLikes: number; avgComments: number; engagementRate: number };
+};
+
+type SportSignalData = Record<string, { collab: SignalComparison; logo: SignalComparison; mention: SignalComparison }>;
+
+interface OhioRosterMetricWindow {
+  contentCount?: number;
+  logoContentCount?: number;
+  collaborationContentCount?: number;
+  organizationCollaborationContentCount?: number;
+  avgLikesWithLogo?: number;
+  avgLikesWithoutLogo?: number;
+  avgCommentsWithLogo?: number;
+  avgCommentsWithoutLogo?: number;
+  avgEngagementRateWithLogo?: number;
+  avgEngagementRateWithoutLogo?: number;
+  avgLikesWithCollaboration?: number;
+  avgLikesWithoutCollaboration?: number;
+  avgCommentsWithCollaboration?: number;
+  avgCommentsWithoutCollaboration?: number;
+  avgEngagementRateWithCollaboration?: number;
+  avgEngagementRateWithoutCollaboration?: number;
+  avgLikesWithOrganizationCollaboration?: number;
+  avgLikesWithoutOrganizationCollaboration?: number;
+  avgCommentsWithOrganizationCollaboration?: number;
+  avgCommentsWithoutOrganizationCollaboration?: number;
+  avgEngagementRateWithOrganizationCollaboration?: number;
+  avgEngagementRateWithoutOrganizationCollaboration?: number;
 }
 
+interface OhioRosterTeam {
+  sport?: string;
+  metrics?: {
+    thirtyDays?: OhioRosterMetricWindow;
+    sevenDays?: OhioRosterMetricWindow;
+    ninetyDays?: OhioRosterMetricWindow;
+  };
+}
+
+function toNumber(value: unknown): number {
+  return typeof value === 'number' && Number.isFinite(value) ? value : 0;
+}
+
+function formatSportLabel(sportKey: string): string {
+  if (sportKey === 'ALL_SPORTS') return 'All Sports';
+  return sportKey
+    .toLowerCase()
+    .split('_')
+    .map((word) => {
+      if (word === 'mens') return "Men's";
+      if (word === 'womens') return "Women's";
+      if (word === 'and') return '&';
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join(' ');
+}
+
+function buildSportDataFromRoster(rows: OhioRosterTeam[]): SportSignalData {
+  type Accumulator = {
+    withPosts: number;
+    withoutPosts: number;
+    withLikesTotal: number;
+    withCommentsTotal: number;
+    withEngagementTotal: number;
+    withoutLikesTotal: number;
+    withoutCommentsTotal: number;
+    withoutEngagementTotal: number;
+  };
+
+  type SportAccumulator = Record<string, { collab: Accumulator; logo: Accumulator; mention: Accumulator }>;
+
+  const createAccumulator = (): Accumulator => ({
+    withPosts: 0,
+    withoutPosts: 0,
+    withLikesTotal: 0,
+    withCommentsTotal: 0,
+    withEngagementTotal: 0,
+    withoutLikesTotal: 0,
+    withoutCommentsTotal: 0,
+    withoutEngagementTotal: 0,
+  });
+
+  const createSportAccumulator = () => ({
+    collab: createAccumulator(),
+    logo: createAccumulator(),
+    mention: createAccumulator(),
+  });
+
+  const accumulators: SportAccumulator = {};
+
+  const ensureSport = (sportKey: string) => {
+    if (!accumulators[sportKey]) {
+      accumulators[sportKey] = createSportAccumulator();
+    }
+    return accumulators[sportKey];
+  };
+
+  const addSignal = (
+    acc: Accumulator,
+    withPosts: number,
+    withoutPosts: number,
+    withLikes: number,
+    withoutLikes: number,
+    withComments: number,
+    withoutComments: number,
+    withEngagement: number,
+    withoutEngagement: number,
+  ) => {
+    acc.withPosts += withPosts;
+    acc.withoutPosts += withoutPosts;
+    acc.withLikesTotal += withLikes * withPosts;
+    acc.withCommentsTotal += withComments * withPosts;
+    acc.withEngagementTotal += withEngagement * withPosts;
+    acc.withoutLikesTotal += withoutLikes * withoutPosts;
+    acc.withoutCommentsTotal += withoutComments * withoutPosts;
+    acc.withoutEngagementTotal += withoutEngagement * withoutPosts;
+  };
+
+  for (const row of rows) {
+    const sportKey = row.sport;
+    if (!sportKey) continue;
+
+    const metrics = row.metrics?.ninetyDays ?? row.metrics?.thirtyDays ?? row.metrics?.sevenDays;
+    if (!metrics) continue;
+
+    const totalPosts = toNumber(metrics.contentCount);
+    if (totalPosts <= 0) continue;
+
+    const sportAccumulator = ensureSport(sportKey);
+    const allSportsAccumulator = ensureSport('ALL_SPORTS');
+
+    const logoWith = toNumber(metrics.logoContentCount);
+    const logoWithout = Math.max(0, totalPosts - logoWith);
+    const collabWith = toNumber(metrics.collaborationContentCount);
+    const collabWithout = Math.max(0, totalPosts - collabWith);
+    const mentionWith = toNumber(metrics.organizationCollaborationContentCount);
+    const mentionWithout = Math.max(0, totalPosts - mentionWith);
+
+    const logoValues: [number, number, number, number, number, number] = [
+      toNumber(metrics.avgLikesWithLogo),
+      toNumber(metrics.avgLikesWithoutLogo),
+      toNumber(metrics.avgCommentsWithLogo),
+      toNumber(metrics.avgCommentsWithoutLogo),
+      toNumber(metrics.avgEngagementRateWithLogo),
+      toNumber(metrics.avgEngagementRateWithoutLogo),
+    ];
+
+    const collabValues: [number, number, number, number, number, number] = [
+      toNumber(metrics.avgLikesWithCollaboration),
+      toNumber(metrics.avgLikesWithoutCollaboration),
+      toNumber(metrics.avgCommentsWithCollaboration),
+      toNumber(metrics.avgCommentsWithoutCollaboration),
+      toNumber(metrics.avgEngagementRateWithCollaboration),
+      toNumber(metrics.avgEngagementRateWithoutCollaboration),
+    ];
+
+    const mentionValues: [number, number, number, number, number, number] = [
+      toNumber(metrics.avgLikesWithOrganizationCollaboration),
+      toNumber(metrics.avgLikesWithoutOrganizationCollaboration),
+      toNumber(metrics.avgCommentsWithOrganizationCollaboration),
+      toNumber(metrics.avgCommentsWithoutOrganizationCollaboration),
+      toNumber(metrics.avgEngagementRateWithOrganizationCollaboration),
+      toNumber(metrics.avgEngagementRateWithoutOrganizationCollaboration),
+    ];
+
+    addSignal(sportAccumulator.logo, logoWith, logoWithout, ...logoValues);
+    addSignal(sportAccumulator.collab, collabWith, collabWithout, ...collabValues);
+    addSignal(sportAccumulator.mention, mentionWith, mentionWithout, ...mentionValues);
+
+    addSignal(allSportsAccumulator.logo, logoWith, logoWithout, ...logoValues);
+    addSignal(allSportsAccumulator.collab, collabWith, collabWithout, ...collabValues);
+    addSignal(allSportsAccumulator.mention, mentionWith, mentionWithout, ...mentionValues);
+  }
+
+  const toSignalComparison = (acc: Accumulator): SignalComparison => ({
+    with: {
+      posts: acc.withPosts,
+      avgLikes: acc.withPosts > 0 ? acc.withLikesTotal / acc.withPosts : 0,
+      avgComments: acc.withPosts > 0 ? acc.withCommentsTotal / acc.withPosts : 0,
+      engagementRate: acc.withPosts > 0 ? acc.withEngagementTotal / acc.withPosts : 0,
+    },
+    without: {
+      posts: acc.withoutPosts,
+      avgLikes: acc.withoutPosts > 0 ? acc.withoutLikesTotal / acc.withoutPosts : 0,
+      avgComments: acc.withoutPosts > 0 ? acc.withoutCommentsTotal / acc.withoutPosts : 0,
+      engagementRate: acc.withoutPosts > 0 ? acc.withoutEngagementTotal / acc.withoutPosts : 0,
+    },
+  });
+
+  const result: SportSignalData = {};
+  for (const [sportKey, signalAcc] of Object.entries(accumulators)) {
+    result[sportKey] = {
+      collab: toSignalComparison(signalAcc.collab),
+      logo: toSignalComparison(signalAcc.logo),
+      mention: toSignalComparison(signalAcc.mention),
+    };
+  }
+
+  return result;
+}
+
+const transition = 'all 180ms cubic-bezier(0.4, 0, 0.2, 1)';
 
 // ═══════════════════════════════════════════════════════════════
 // TYPE DEFINITIONS
@@ -75,6 +274,21 @@ interface IPSignalData {
   baselineComments: number;
 }
 
+interface OverviewData {
+  sourceFile?: string;
+  generatedAt?: string;
+  totalPosts: number;
+  totalLikes: number;
+  totalComments: number;
+  postsWithIP: number;
+  ipAdoptionRate: number;
+  avgLift: number;
+  totalEmv: number;
+  collaboration: IPSignalData;
+  logo: IPSignalData;
+  mention: IPSignalData;
+}
+
 // ═══════════════════════════════════════════════════════════════
 // OHIO STATE IP DATA (Source of Truth)
 // ═══════════════════════════════════════════════════════════════
@@ -84,60 +298,28 @@ const ipData = {
   totalLikes: 15258768,
   totalComments: 401948,
   engagementRate: 0.0283,
-
-  baseline: {
-    posts: 6517,
-    engagementRate: 0.0276,
-  },
-
+  baseline: { posts: 6517, engagementRate: 0.0276 },
   postsWithIP: 2686,
   ipAdoptionRate: 30.1,
-
-  // Weighted average lift: (23*790.4 + 1206*159.3 + 1929*80.0) / 3158 = 115.5%
   avgLift: 115.5,
-
-  // Total EMV: (likes × $0.20) + (comments × $2.00)
-  totalEmv: 3855650,
-
   collaboration: {
-    posts: 23,
-    likes: 15118.96, // avg likes per post from source: 15118.95652173913
-    comments: 204.17, // avg comments per post from source: 204.17391304347825
-    engagementRate: 0.0027643, // 0.276% from source: 0.002764334745005705
-    delta: 790.4, // from source: 790.3662699521296
-    emv: 322.8,
-    baselineEngRate: 0.0003105, // 0.031% - no collab eng rate from source
-    baselinePosts: 8895,
-    baselineLikes: 1676.33, // avg from source collaboration.no.likes
-    baselineComments: 44.66, // avg from source collaboration.no.comments
+    posts: 23, likes: 15118.96, comments: 204.17,
+    engagementRate: 0.0027643, delta: 790.4, emv: 322.8,
+    baselineEngRate: 0.0003105, baselinePosts: 8895,
+    baselineLikes: 1676.33, baselineComments: 44.66,
   } as IPSignalData,
-
   logo: {
-    posts: 1206,
-    likes: 3676.50, // avg likes per post from source: 3676.495854063018
-    comments: 70.32, // avg comments per post from source: 70.31923714759536
-    engagementRate: 0.0006759, // 0.068% from source: 0.0006759357158661529
-    delta: 159.3, // from source: 159.33809863867512
-    emv: 80.56,
-    baselineEngRate: 0.0002606, // 0.026% - no logo eng rate from source
-    baselinePosts: 7712,
-    baselineLikes: 1403.64, // avg from source logo.no.likes
-    baselineComments: 41.12, // avg from source logo.no.comments
+    posts: 1206, likes: 3676.50, comments: 70.32,
+    engagementRate: 0.0006759, delta: 159.3, emv: 80.56,
+    baselineEngRate: 0.0002606, baselinePosts: 7712,
+    baselineLikes: 1403.64, baselineComments: 41.12,
   } as IPSignalData,
-
   mention: {
-    posts: 1929,
-    likes: 2647.25, // avg likes per post from source: 2647.249351995853
-    comments: 47.38, // avg comments per post from source: 47.37532400207361
-    engagementRate: 0.0004861, // 0.049% from source: 0.0004861176799554201
-    delta: 80.0, // from source: 79.99837958578766
-    emv: 57.68,
-    baselineEngRate: 0.0002701, // 0.027% - no mention eng rate from source
-    baselinePosts: 6989,
-    baselineLikes: 1452.59, // avg from source orgInCaption.no.likes
-    baselineComments: 44.44, // avg from source orgInCaption.no.comments
+    posts: 1929, likes: 2647.25, comments: 47.38,
+    engagementRate: 0.0004861, delta: 80.0, emv: 57.68,
+    baselineEngRate: 0.0002701, baselinePosts: 6989,
+    baselineLikes: 1452.59, baselineComments: 44.44,
   } as IPSignalData,
-
   partnerships: [
     { brand: "@redbullusa", posts: 1, avgLikes: 171980, avgComments: 631, emv: 3502.7, engagementRate: 3.113, liftMultiplier: 97.2 },
     { brand: "@epicpartner", posts: 1, avgLikes: 37682, avgComments: 121, emv: 765.74, engagementRate: 0.681, liftMultiplier: 20.5 },
@@ -320,1072 +502,8 @@ const ipData = {
 };
 
 // ═══════════════════════════════════════════════════════════════
-// UTILITY FUNCTIONS
+// ATHLETE & BENCHMARK DATA
 // ═══════════════════════════════════════════════════════════════
-function formatNumber(num: number): string {
-  if (num >= 1000000) return (num / 1000000).toFixed(2) + 'M';
-  if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
-  return num.toLocaleString();
-}
-
-function formatCurrency(num: number): string {
-  if (num >= 1000000) return '$' + (num / 1000000).toFixed(2) + 'M';
-  if (num >= 1000) return '$' + (num / 1000).toFixed(1) + 'K';
-  return '$' + num.toFixed(0);
-}
-
-function formatPercent(num: number, decimals = 2): string {
-  return (num * 100).toFixed(decimals) + '%';
-}
-
-function formatDelta(num: number): string {
-  const sign = num >= 0 ? '+' : '';
-  return sign + num.toFixed(1) + '%';
-}
-
-function formatLift(num: number): string {
-  if (num >= 0) return '+' + num.toFixed(1) + 'x';
-  return num.toFixed(1) + 'x';
-}
-
-// Calculate EMV formula: (likes × $0.20) + (comments × $2.00)
-function calculateEMV(likes: number, comments: number): number {
-  return (likes * 0.20) + (comments * 2.00);
-}
-
-// ═══════════════════════════════════════════════════════════════
-// TOOLTIP COMPONENT
-// ═══════════════════════════════════════════════════════════════
-function Tooltip({ content, children }: { content: string; children: React.ReactNode }) {
-  return (
-    <div className="group relative inline-flex items-center">
-      {children}
-      <div className="pointer-events-none fixed inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-[9999]">
-        <div className="bg-gray-900 text-white text-sm px-4 py-3 rounded-xl shadow-2xl max-w-sm text-center">
-          {content}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// ═══════════════════════════════════════════════════════════════
-// KPI CARD COMPONENT (matching existing dashboard style)
-// ═══════════════════════════════════════════════════════════════
-function KPICard({
-  label,
-  value,
-  subLabel,
-  icon,
-  tooltip,
-}: {
-  label: string;
-  value: string;
-  subLabel?: string;
-  icon: React.ReactNode;
-  tooltip: string;
-}) {
-  return (
-    <div
-      className="rounded-xl p-4 relative overflow-hidden flex flex-col justify-center items-center text-center min-h-[120px]"
-      style={{ backgroundColor: colors.scarlet }}
-    >
-      {icon && (
-        <div className="absolute top-3 right-3 opacity-20">
-          {icon}
-        </div>
-      )}
-      <div className="flex items-center justify-center gap-1 mb-2">
-        <p className="text-xs font-semibold uppercase tracking-wider text-white/80">{label}</p>
-        <Tooltip content={tooltip}>
-          <Info className="w-3 h-3 text-white/60 cursor-help" />
-        </Tooltip>
-      </div>
-      <p className="text-3xl md:text-4xl font-black text-white mb-1">{value}</p>
-      {subLabel && (
-        <p className="text-xs text-white/70">{subLabel}</p>
-      )}
-    </div>
-  );
-}
-
-// ═══════════════════════════════════════════════════════════════
-// IP MODE CARD COMPONENT
-// ═══════════════════════════════════════════════════════════════
-function IPModeCard({
-  title,
-  icon,
-  posts,
-  delta,
-  avgEngagement,
-  emv,
-  tooltip,
-}: {
-  title: string;
-  icon: React.ReactNode;
-  posts: number;
-  delta: number;
-  avgEngagement: string;
-  emv: string;
-  tooltip: string;
-}) {
-  return (
-    <div
-      className="rounded-2xl bg-white p-4 hover:shadow-lg transition-shadow"
-      style={{ boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)' }}
-    >
-      <div className="flex items-center justify-between mb-3">
-        <div className="flex items-center gap-3">
-          <div
-            className="w-10 h-10 rounded-lg flex items-center justify-center"
-            style={{ backgroundColor: `${colors.scarlet}15` }}
-          >
-            {icon}
-          </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <h3 className="font-bold uppercase tracking-wide text-gray-900">{title}</h3>
-              <Tooltip content={tooltip}>
-                <Info className="w-3.5 h-3.5 text-gray-400 cursor-help" />
-              </Tooltip>
-            </div>
-            <p className="text-xs text-gray-500">{posts} posts with this signal</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="mb-4">
-        <div className="flex items-center gap-1 mb-1">
-          <p className="text-xs uppercase tracking-wider text-gray-500">
-            Engagement Delta vs Baseline
-          </p>
-          <Tooltip content="Percent difference vs baseline engagement rate.">
-            <Info className="w-3 h-3 text-gray-400 cursor-help" />
-          </Tooltip>
-        </div>
-        <p
-          className="text-3xl font-black"
-          style={{ color: delta >= 0 ? colors.positive : colors.negative }}
-        >
-          {formatDelta(delta)}
-        </p>
-        <p className="text-xs text-gray-500">vs posts without {title.toLowerCase()}</p>
-      </div>
-
-      <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-100">
-        <div>
-          <p className="text-xs uppercase tracking-wider mb-1 text-gray-500">Avg Eng</p>
-          <p className="font-bold text-gray-900">{avgEngagement}</p>
-        </div>
-        <div>
-          <p className="text-xs uppercase tracking-wider mb-1 text-gray-500">EMV</p>
-          <p className="font-bold text-gray-900">{emv}</p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// ═══════════════════════════════════════════════════════════════
-// TAB DEFINITIONS
-// ═══════════════════════════════════════════════════════════════
-type TabId = 'overview' | 'withvswithout' | 'partnerships' | 'bestcollaborators' | 'benchmark';
-
-const tabs: { id: TabId; label: string }[] = [
-  { id: 'overview', label: 'Overview' },
-  { id: 'withvswithout', label: 'With vs Without' },
-  { id: 'partnerships', label: 'Partnerships' },
-  { id: 'bestcollaborators', label: 'Best Collaborators' },
-  { id: 'benchmark', label: 'Benchmark' },
-];
-
-// ═══════════════════════════════════════════════════════════════
-// OVERVIEW TAB
-// ═══════════════════════════════════════════════════════════════
-function OverviewTab() {
-  return (
-    <div className="space-y-4">
-      {/* Data Source Context */}
-      <div className="bg-white rounded-2xl shadow-sm px-4 py-3 flex items-start gap-3">
-        <Info className="w-5 h-5 text-gray-400 mt-0.5 flex-shrink-0" />
-        <p className="text-sm text-gray-600">
-          Data reflects <span className="font-semibold">Ohio State athlete personal social media accounts</span>, not official team pages.
-          Metrics track how athletes use Ohio State IP (logos, mentions, collaborations) in their own content.
-        </p>
-      </div>
-
-      {/* KPI Cards Row */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-        <KPICard
-          label="Total Likes"
-          value={formatNumber(ipData.totalLikes)}
-          subLabel="across all athletes"
-          icon={<Heart className="w-8 h-8 text-white" />}
-          tooltip="Sum of all likes on posts from Ohio State athletes' personal accounts"
-        />
-        <KPICard
-          label="Total Comments"
-          value={formatNumber(ipData.totalComments)}
-          subLabel="across all athletes"
-          icon={<MessageCircle className="w-8 h-8 text-white" />}
-          tooltip="Sum of all comments on posts from Ohio State athletes' personal accounts"
-        />
-        <KPICard
-          label="IP Usage"
-          value={ipData.ipAdoptionRate + '%'}
-          subLabel="adoption rate"
-          icon={<Percent className="w-8 h-8 text-white" />}
-          tooltip="Percent of athlete posts containing any Ohio State IP signal"
-        />
-        <KPICard
-          label="Posts with IP"
-          value={formatNumber(ipData.postsWithIP)}
-          subLabel={'of ' + formatNumber(ipData.totalPosts) + ' total'}
-          icon={<FileText className="w-8 h-8 text-white" />}
-          tooltip="Number of athlete posts containing at least one IP signal (logo, mention, or collaboration)"
-        />
-        <KPICard
-          label="Avg Lift"
-          value={formatDelta(ipData.avgLift)}
-          subLabel="vs without IP"
-          icon={<TrendingUp className="w-8 h-8 text-white" />}
-          tooltip="Weighted average engagement lift across all IP signals (collab, logo, mention) vs posts without IP"
-        />
-        <KPICard
-          label="Total EMV"
-          value={formatCurrency(ipData.totalEmv)}
-          subLabel="earned media value"
-          icon={<DollarSign className="w-8 h-8 text-white" />}
-          tooltip="Estimated earned media value: (likes × $0.20) + (comments × $2.00)"
-        />
-      </div>
-
-      {/* Performance by IP Mode */}
-      <div>
-        <div className="mb-4">
-          <SectionHeader primary="PERFORMANCE " secondary="BY IP MODE" />
-        </div>
-        <div className="grid md:grid-cols-3 gap-4">
-          <IPModeCard
-            title="Collaboration"
-            icon={<Users className="w-5 h-5" style={{ color: colors.scarlet }} />}
-            posts={ipData.collaboration.posts}
-            delta={ipData.collaboration.delta}
-            avgEngagement={formatPercent(ipData.collaboration.engagementRate)}
-            emv="—"
-            tooltip="Athlete posts co-authored or tagged with official Ohio State account"
-          />
-          <IPModeCard
-            title="Visual IP"
-            icon={<Tag className="w-5 h-5" style={{ color: colors.scarlet }} />}
-            posts={ipData.logo.posts}
-            delta={ipData.logo.delta}
-            avgEngagement={formatPercent(ipData.logo.engagementRate)}
-            emv="—"
-            tooltip="Athlete posts with Ohio State logo detected in media"
-          />
-          <IPModeCard
-            title="Mention"
-            icon={<AtSign className="w-5 h-5" style={{ color: colors.scarlet }} />}
-            posts={ipData.mention.posts}
-            delta={ipData.mention.delta}
-            avgEngagement={formatPercent(ipData.mention.engagementRate)}
-            emv="—"
-            tooltip="Athlete posts with @mention or text reference to Ohio State"
-          />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// ═══════════════════════════════════════════════════════════════
-// WITH VS WITHOUT TAB
-// ═══════════════════════════════════════════════════════════════
-function WithVsWithoutTab() {
-  const [selectedSignal, setSelectedSignal] = useState<'collab' | 'logo' | 'mention'>('mention');
-  const [selectedMetric, setSelectedMetric] = useState<'engagement' | 'likes' | 'comments'>('engagement');
-  const [selectedSport, setSelectedSport] = useState<string>('ALL_SPORTS');
-
-  // Sport data (would be loaded from /data/ohio-state-by-sport.json)
-  const sportData: any = {
-    'ALL_SPORTS': {
-      mention: { with: { posts: 1929, avgLikes: 2647, avgComments: 47, engagementRate: 0.00049 }, without: { posts: 6989, avgLikes: 1453, avgComments: 44, engagementRate: 0.00027 } },
-      logo: { with: { posts: 1206, avgLikes: 3676, avgComments: 70, engagementRate: 0.00068 }, without: { posts: 7712, avgLikes: 1404, avgComments: 41, engagementRate: 0.00026 } },
-      collab: { with: { posts: 23, avgLikes: 15119, avgComments: 204, engagementRate: 0.00276 }, without: { posts: 8895, avgLikes: 1676, avgComments: 45, engagementRate: 0.00031 } }
-    },
-    'FOOTBALL': {
-      mention: { with: { posts: 309, avgLikes: 8500, avgComments: 120, engagementRate: 0.0015 }, without: { posts: 1189, avgLikes: 6200, avgComments: 92, engagementRate: 0.0011 } },
-      logo: { with: { posts: 344, avgLikes: 9100, avgComments: 125, engagementRate: 0.0016 }, without: { posts: 1154, avgLikes: 5800, avgComments: 88, engagementRate: 0.001 } },
-      collab: { with: { posts: 22, avgLikes: 18000, avgComments: 250, engagementRate: 0.0032 }, without: { posts: 1476, avgLikes: 6650, avgComments: 98, engagementRate: 0.0012 } }
-    },
-    'MENS_BASKETBALL': {
-      mention: { with: { posts: 82, avgLikes: 4200, avgComments: 52, engagementRate: 0.0014 }, without: { posts: 130, avgLikes: 2400, avgComments: 31, engagementRate: 0.00085 } },
-      logo: { with: { posts: 55, avgLikes: 5100, avgComments: 61, engagementRate: 0.0017 }, without: { posts: 157, avgLikes: 2200, avgComments: 30, engagementRate: 0.00075 } },
-      collab: { with: { posts: 1, avgLikes: 12000, avgComments: 180, engagementRate: 0.004 }, without: { posts: 211, avgLikes: 3000, avgComments: 38, engagementRate: 0.001 } }
-    },
-    'MENS_WRESTLING': {
-      mention: { with: { posts: 148, avgLikes: 1800, avgComments: 42, engagementRate: 0.00062 }, without: { posts: 320, avgLikes: 980, avgComments: 28, engagementRate: 0.00034 } },
-      logo: { with: { posts: 96, avgLikes: 2100, avgComments: 48, engagementRate: 0.00072 }, without: { posts: 372, avgLikes: 900, avgComments: 26, engagementRate: 0.00031 } },
-      collab: { with: { posts: 0, avgLikes: 0, avgComments: 0, engagementRate: 0 }, without: { posts: 468, avgLikes: 1250, avgComments: 32, engagementRate: 0.00043 } }
-    },
-    'WOMENS_BASKETBALL': {
-      mention: { with: { posts: 122, avgLikes: 2650, avgComments: 38, engagementRate: 0.00089 }, without: { posts: 263, avgLikes: 1420, avgComments: 24, engagementRate: 0.00048 } },
-      logo: { with: { posts: 88, avgLikes: 3100, avgComments: 44, engagementRate: 0.00105 }, without: { posts: 297, avgLikes: 1300, avgComments: 22, engagementRate: 0.00044 } },
-      collab: { with: { posts: 0, avgLikes: 0, avgComments: 0, engagementRate: 0 }, without: { posts: 385, avgLikes: 1850, avgComments: 28, engagementRate: 0.00063 } }
-    },
-    'MENS_GYMNASTICS': {
-      mention: { with: { posts: 100, avgLikes: 920, avgComments: 22, engagementRate: 0.00031 }, without: { posts: 128, avgLikes: 530, avgComments: 14, engagementRate: 0.00018 } },
-      logo: { with: { posts: 59, avgLikes: 1100, avgComments: 26, engagementRate: 0.00037 }, without: { posts: 169, avgLikes: 490, avgComments: 13, engagementRate: 0.00017 } },
-      collab: { with: { posts: 0, avgLikes: 0, avgComments: 0, engagementRate: 0 }, without: { posts: 228, avgLikes: 692, avgComments: 17, engagementRate: 0.00024 } }
-    }
-  };
-
-  const sports = [
-    { id: 'ALL_SPORTS', label: 'All Sports', icon: '🏆' },
-    { id: 'FOOTBALL', label: 'Football', icon: '🏈' },
-    { id: 'MENS_BASKETBALL', label: "Men's Basketball", icon: '🏀' },
-    { id: 'WOMENS_BASKETBALL', label: "Women's Basketball", icon: '🏀' },
-    { id: 'MENS_WRESTLING', label: 'Wrestling', icon: '🤼' },
-    { id: 'MENS_GYMNASTICS', label: "Men's Gymnastics", icon: '🤸' },
-  ];
-
-  // Get data for selected sport and signal
-  const currentSportData = sportData[selectedSport];
-  const currentSignalData = currentSportData?.[selectedSignal];
-
-  const signals = [
-    { id: 'collab' as const, label: 'Collab', data: ipData.collaboration },
-    { id: 'logo' as const, label: 'Visual IP', data: ipData.logo },
-    { id: 'mention' as const, label: 'Mention', data: ipData.mention },
-  ];
-
-  const metrics = [
-    { id: 'engagement' as const, label: 'Engagement Rate' },
-    { id: 'likes' as const, label: 'Avg Likes' },
-    { id: 'comments' as const, label: 'Avg Comments' },
-  ];
-
-  const currentSignal = signals.find(s => s.id === selectedSignal);
-
-  // Use sport-specific data if available, otherwise fall back to overall data
-  const withoutEngRate = currentSignalData?.without?.engagementRate || currentSignal?.data?.baselineEngRate || 0;
-  const withEngRate = currentSignalData?.with?.engagementRate || currentSignal?.data?.engagementRate || 0;
-  const withoutPosts = currentSignalData?.without?.posts || currentSignal?.data?.baselinePosts || 0;
-  const withPosts = currentSignalData?.with?.posts || currentSignal?.data?.posts || 0;
-
-  // Avg likes/comments per post from sport data
-  const baselineAvgLikes = currentSignalData?.without?.avgLikes || currentSignal?.data?.baselineLikes || 0;
-  const baselineAvgComments = currentSignalData?.without?.avgComments || currentSignal?.data?.baselineComments || 0;
-  const withAvgLikes = currentSignalData?.with?.avgLikes || currentSignal?.data?.likes || 0;
-  const withAvgComments = currentSignalData?.with?.avgComments || currentSignal?.data?.comments || 0;
-
-  // Calculate deltas
-  const engDelta = withoutEngRate > 0 ? ((withEngRate - withoutEngRate) / withoutEngRate) * 100 : 0;
-  const likesDelta = baselineAvgLikes > 0 ? ((withAvgLikes - baselineAvgLikes) / baselineAvgLikes) * 100 : 0;
-  const commentsDelta = baselineAvgComments > 0 ? ((withAvgComments - baselineAvgComments) / baselineAvgComments) * 100 : 0;
-
-  // Get current metric values based on selection
-  const getMetricValues = () => {
-    switch (selectedMetric) {
-      case 'engagement':
-        return {
-          withoutValue: formatPercent(withoutEngRate),
-          withValue: formatPercent(withEngRate),
-          withoutRaw: withoutEngRate,
-          withRaw: withEngRate,
-          delta: engDelta,
-          isPercent: true,
-        };
-      case 'likes':
-        return {
-          withoutValue: formatNumber(Math.round(baselineAvgLikes)),
-          withValue: formatNumber(Math.round(withAvgLikes)),
-          withoutRaw: baselineAvgLikes,
-          withRaw: withAvgLikes,
-          delta: likesDelta,
-          isPercent: false,
-        };
-      case 'comments':
-        return {
-          withoutValue: formatNumber(Math.round(baselineAvgComments)),
-          withValue: formatNumber(Math.round(withAvgComments)),
-          withoutRaw: baselineAvgComments,
-          withRaw: withAvgComments,
-          delta: commentsDelta,
-          isPercent: false,
-        };
-    }
-  };
-
-  const metricValues = getMetricValues();
-  const maxValue = Math.max(metricValues.withoutRaw, metricValues.withRaw);
-
-  return (
-    <div className="space-y-4">
-      {/* Filters Row */}
-      <div className="flex flex-wrap items-center gap-4">
-        {/* Sport Filter */}
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Team/Sport</p>
-          <div className="relative">
-            <select
-              value={selectedSport}
-              onChange={(e) => setSelectedSport(e.target.value)}
-              className="px-4 py-2.5 pr-10 text-sm font-semibold rounded-lg border border-gray-200 appearance-none cursor-pointer transition-colors hover:border-gray-300"
-              style={{
-                backgroundColor: colors.white,
-                color: colors.text,
-              }}
-            >
-              {sports.map((sport) => (
-                <option key={sport.id} value={sport.id}>
-                  {sport.icon} {sport.label}
-                </option>
-              ))}
-            </select>
-            <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
-              <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </div>
-          </div>
-        </div>
-
-        {/* Signal Filter */}
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">IP Signal</p>
-          <div className="flex rounded-lg overflow-hidden border border-gray-200">
-            {signals.map((signal) => (
-              <button
-                key={signal.id}
-                onClick={() => setSelectedSignal(signal.id)}
-                className="px-5 py-2.5 text-sm font-semibold transition-colors"
-                style={{
-                  backgroundColor: selectedSignal === signal.id ? colors.scarlet : colors.white,
-                  color: selectedSignal === signal.id ? colors.white : colors.text,
-                }}
-              >
-                {signal.label}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Metric Filter */}
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Metric</p>
-          <div className="flex rounded-lg overflow-hidden border border-gray-200">
-            {metrics.map((metric) => (
-              <button
-                key={metric.id}
-                onClick={() => setSelectedMetric(metric.id)}
-                className="px-4 py-2.5 text-sm font-semibold transition-colors"
-                style={{
-                  backgroundColor: selectedMetric === metric.id ? colors.scarlet : colors.white,
-                  color: selectedMetric === metric.id ? colors.white : colors.text,
-                }}
-              >
-                {metric.label}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Main Comparison Grid */}
-      <div className="grid grid-cols-12 gap-4">
-        {/* Left Column - Value Cards */}
-        <div className="col-span-12 md:col-span-3 space-y-4">
-          {/* Without IP Card (Solo) */}
-          <div
-            className="rounded-xl p-5 border-2"
-            style={{ borderColor: colors.scarlet, backgroundColor: `${colors.scarlet}08` }}
-          >
-            <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: colors.scarlet }}>
-              Without {currentSignal?.label}
-            </p>
-            <p className="text-4xl font-black" style={{ color: colors.scarlet }}>
-              {metricValues.withoutValue}
-            </p>
-            <p className="text-sm text-gray-500 mt-1">
-              {formatNumber(withoutPosts)} posts
-            </p>
-          </div>
-
-          {/* With IP Card */}
-          <div className="rounded-xl p-5 border border-gray-300 bg-white">
-            <p className="text-xs font-bold uppercase tracking-wider mb-1 text-gray-500">
-              With {currentSignal?.label}
-            </p>
-            <p className="text-4xl font-black text-gray-400">
-              {metricValues.withValue}
-            </p>
-            <p className="text-sm text-gray-500 mt-1">
-              {formatNumber(withPosts)} posts
-            </p>
-          </div>
-        </div>
-
-        {/* Middle Column - Comparison Bars */}
-        <div className="col-span-12 md:col-span-5 flex flex-col justify-center space-y-4 px-4">
-          {/* Without Bar */}
-          <div className="space-y-2">
-            <div className="flex justify-between items-center">
-              <span className="text-xs font-bold uppercase tracking-wider text-gray-600">WITHOUT {currentSignal?.label.toUpperCase()}</span>
-              <span className="text-sm font-bold text-gray-900">{metricValues.withoutValue}</span>
-            </div>
-            <div className="h-12 bg-gray-100 rounded-lg overflow-hidden relative">
-              <div
-                className="h-full transition-all duration-500 rounded-lg"
-                style={{
-                  width: `${maxValue > 0 ? (metricValues.withoutRaw / maxValue) * 100 : 0}%`,
-                  background: 'linear-gradient(90deg, #d1d5db 0%, #6b7280 100%)'
-                }}
-              ></div>
-            </div>
-            <span className="text-xs text-gray-500">{formatNumber(withoutPosts)} posts</span>
-          </div>
-
-          {/* With Bar */}
-          <div className="space-y-2">
-            <div className="flex justify-between items-center">
-              <span className="text-xs font-bold uppercase tracking-wider" style={{ color: colors.scarlet }}>WITH {currentSignal?.label.toUpperCase()}</span>
-              <span className="text-sm font-bold" style={{ color: colors.scarlet }}>{metricValues.withValue}</span>
-            </div>
-            <div className="h-12 bg-gray-100 rounded-lg overflow-hidden relative">
-              <div
-                className="h-full transition-all duration-500 rounded-lg"
-                style={{
-                  width: `${maxValue > 0 ? (metricValues.withRaw / maxValue) * 100 : 0}%`,
-                  background: `linear-gradient(90deg, #ef4444 0%, ${colors.scarlet} 100%)`
-                }}
-              ></div>
-            </div>
-            <span className="text-xs text-gray-500">{formatNumber(withPosts)} posts</span>
-          </div>
-
-          {/* Lift Indicator */}
-          <div className="flex items-center justify-center gap-2 pt-2">
-            <div className="flex items-center gap-2 px-4 py-2 rounded-lg" style={{ backgroundColor: engDelta >= 0 ? `${colors.positive}20` : `${colors.negative}20` }}>
-              <TrendingUp
-                className="w-5 h-5"
-                style={{ color: engDelta >= 0 ? colors.positive : colors.negative }}
-              />
-              <span className="font-bold text-lg" style={{ color: engDelta >= 0 ? colors.positive : colors.negative }}>
-                {formatDelta(metricValues.delta)} lift
-              </span>
-            </div>
-          </div>
-        </div>
-
-        {/* Right Column - Delta Cards */}
-        <div className="col-span-12 md:col-span-4 space-y-3">
-          {/* Engagement Delta */}
-          <div className="rounded-xl p-4 border border-gray-200 bg-white flex items-center gap-4">
-            <div
-              className="w-12 h-12 rounded-lg flex items-center justify-center"
-              style={{ backgroundColor: engDelta >= 0 ? `${colors.positive}20` : `${colors.negative}20` }}
-            >
-              <TrendingUp
-                className="w-6 h-6"
-                style={{ color: engDelta >= 0 ? colors.positive : colors.negative }}
-              />
-            </div>
-            <div>
-              <p
-                className="text-2xl font-black"
-                style={{ color: engDelta >= 0 ? colors.positive : colors.negative }}
-              >
-                {formatDelta(engDelta)}
-              </p>
-              <p className="text-xs uppercase tracking-wider text-gray-500">Engagement</p>
-            </div>
-          </div>
-
-          {/* Likes Delta */}
-          <div className="rounded-xl p-4 border border-gray-200 bg-white flex items-center gap-4">
-            <div
-              className="w-12 h-12 rounded-lg flex items-center justify-center"
-              style={{ backgroundColor: likesDelta >= 0 ? `${colors.positive}20` : `${colors.negative}20` }}
-            >
-              <Heart
-                className="w-6 h-6"
-                style={{ color: likesDelta >= 0 ? colors.positive : colors.negative }}
-              />
-            </div>
-            <div>
-              <p
-                className="text-2xl font-black"
-                style={{ color: likesDelta >= 0 ? colors.positive : colors.negative }}
-              >
-                {formatDelta(likesDelta)}
-              </p>
-              <p className="text-xs uppercase tracking-wider text-gray-500">Avg Likes</p>
-            </div>
-          </div>
-
-          {/* Comments Delta */}
-          <div className="rounded-xl p-4 border border-gray-200 bg-white flex items-center gap-4">
-            <div
-              className="w-12 h-12 rounded-lg flex items-center justify-center"
-              style={{ backgroundColor: commentsDelta >= 0 ? `${colors.positive}20` : `${colors.negative}20` }}
-            >
-              <MessageCircle
-                className="w-6 h-6"
-                style={{ color: commentsDelta >= 0 ? colors.positive : colors.negative }}
-              />
-            </div>
-            <div>
-              <p
-                className="text-2xl font-black"
-                style={{ color: commentsDelta >= 0 ? colors.positive : colors.negative }}
-              >
-                {formatDelta(commentsDelta)}
-              </p>
-              <p className="text-xs uppercase tracking-wider text-gray-500">Avg Comments</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Detailed Metrics Breakdown Table */}
-      <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
-        <div className="p-5 border-b border-gray-100">
-          <SectionHeader primary="DETAILED " secondary="COMPARISON" />
-          <p className="text-sm text-gray-500 mt-2">Complete performance breakdown with and without {currentSignal?.label}</p>
-        </div>
-        <div className="overflow-x-auto">
-          <table className="w-full">
-            <thead>
-              <tr style={{ backgroundColor: colors.lightBg }}>
-                <th className="text-left px-5 py-3 text-xs font-semibold uppercase tracking-wider text-gray-600">Metric</th>
-                <th className="text-right px-5 py-3 text-xs font-semibold uppercase tracking-wider text-gray-600">Without {currentSignal?.label}</th>
-                <th className="text-right px-5 py-3 text-xs font-semibold uppercase tracking-wider text-gray-600">With {currentSignal?.label}</th>
-                <th className="text-right px-5 py-3 text-xs font-semibold uppercase tracking-wider text-gray-600">Lift</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="border-b border-gray-100">
-                <td className="px-5 py-4">
-                  <div className="flex items-center gap-2">
-                    <TrendingUp className="w-4 h-4 text-gray-400" />
-                    <span className="font-semibold text-gray-900">Engagement Rate</span>
-                  </div>
-                </td>
-                <td className="px-5 py-4 text-right text-gray-600">{formatPercent(withoutEngRate)}</td>
-                <td className="px-5 py-4 text-right font-semibold text-gray-900">{formatPercent(withEngRate)}</td>
-                <td className="px-5 py-4 text-right">
-                  <span
-                    className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-bold"
-                    style={{ backgroundColor: engDelta >= 0 ? `${colors.positive}20` : `${colors.negative}20`, color: engDelta >= 0 ? colors.positive : colors.negative }}
-                  >
-                    {formatDelta(engDelta)}
-                  </span>
-                </td>
-              </tr>
-              <tr className="border-b border-gray-100">
-                <td className="px-5 py-4">
-                  <div className="flex items-center gap-2">
-                    <Heart className="w-4 h-4 text-gray-400" />
-                    <span className="font-semibold text-gray-900">Avg Likes per Post</span>
-                  </div>
-                </td>
-                <td className="px-5 py-4 text-right text-gray-600">{formatNumber(Math.round(baselineAvgLikes))}</td>
-                <td className="px-5 py-4 text-right font-semibold text-gray-900">{formatNumber(Math.round(withAvgLikes))}</td>
-                <td className="px-5 py-4 text-right">
-                  <span
-                    className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-bold"
-                    style={{ backgroundColor: likesDelta >= 0 ? `${colors.positive}20` : `${colors.negative}20`, color: likesDelta >= 0 ? colors.positive : colors.negative }}
-                  >
-                    {formatDelta(likesDelta)}
-                  </span>
-                </td>
-              </tr>
-              <tr className="border-b border-gray-100">
-                <td className="px-5 py-4">
-                  <div className="flex items-center gap-2">
-                    <MessageCircle className="w-4 h-4 text-gray-400" />
-                    <span className="font-semibold text-gray-900">Avg Comments per Post</span>
-                  </div>
-                </td>
-                <td className="px-5 py-4 text-right text-gray-600">{formatNumber(Math.round(baselineAvgComments))}</td>
-                <td className="px-5 py-4 text-right font-semibold text-gray-900">{formatNumber(Math.round(withAvgComments))}</td>
-                <td className="px-5 py-4 text-right">
-                  <span
-                    className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-bold"
-                    style={{ backgroundColor: commentsDelta >= 0 ? `${colors.positive}20` : `${colors.negative}20`, color: commentsDelta >= 0 ? colors.positive : colors.negative }}
-                  >
-                    {formatDelta(commentsDelta)}
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td className="px-5 py-4">
-                  <div className="flex items-center gap-2">
-                    <FileText className="w-4 h-4 text-gray-400" />
-                    <span className="font-semibold text-gray-900">Post Volume</span>
-                  </div>
-                </td>
-                <td className="px-5 py-4 text-right text-gray-600">{formatNumber(withoutPosts)} posts</td>
-                <td className="px-5 py-4 text-right font-semibold text-gray-900">{formatNumber(withPosts)} posts</td>
-                <td className="px-5 py-4 text-right">
-                  <span className="text-xs text-gray-500">
-                    {((withPosts / (withPosts + withoutPosts)) * 100).toFixed(1)}% of total
-                  </span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      {/* Key Insights */}
-      <div className="grid md:grid-cols-2 gap-4">
-        <div className="rounded-xl border-2 p-5" style={{ borderColor: colors.positive, backgroundColor: `${colors.positive}08` }}>
-          <div className="flex items-start gap-3">
-            <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: colors.positive }}>
-              <TrendingUp className="w-5 h-5 text-white" />
-            </div>
-            <div>
-              <p className="text-xs uppercase tracking-wider font-semibold mb-1" style={{ color: colors.positive }}>✨ Performance Boost</p>
-              <p className="text-sm text-gray-700">
-                Posts <span className="font-bold">with {currentSignal?.label.toLowerCase()}</span> get{' '}
-                <span className="font-bold" style={{ color: colors.scarlet }}>
-                  {Math.abs(likesDelta).toFixed(0)}% more likes
-                </span>{' '}
-                and{' '}
-                <span className="font-bold" style={{ color: colors.scarlet }}>
-                  {Math.abs(commentsDelta).toFixed(0)}% more comments
-                </span>{' '}
-                on average than posts without.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="rounded-xl border-2 p-5" style={{ borderColor: colors.accent, backgroundColor: `${colors.accent}08` }}>
-          <div className="flex items-start gap-3">
-            <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: colors.accent }}>
-              <Info className="w-5 h-5 text-white" />
-            </div>
-            <div>
-              <p className="text-xs uppercase tracking-wider font-semibold mb-1" style={{ color: colors.accent }}>📊 Sample Size</p>
-              <p className="text-sm text-gray-700">
-                Analysis based on <span className="font-bold">{formatNumber(withPosts)} posts with {currentSignal?.label.toLowerCase()}</span>{' '}
-                compared to <span className="font-bold">{formatNumber(withoutPosts)} posts without</span>.
-                This represents <span className="font-bold">{((withPosts / (withPosts + withoutPosts)) * 100).toFixed(1)}%</span> of all athlete content.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// ═══════════════════════════════════════════════════════════════
-// PARTNERSHIPS TAB
-// ═══════════════════════════════════════════════════════════════
-function PartnershipsTab() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortKey, setSortKey] = useState<keyof Partnership>('emv');
-  const [sortDir, setSortDir] = useState<'asc' | 'desc'>('desc');
-  const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 20;
-
-  const sortOptions: { key: keyof Partnership; label: string }[] = [
-    { key: 'emv', label: 'EMV' },
-    { key: 'avgLikes', label: 'Avg Likes' },
-    { key: 'avgComments', label: 'Avg Comments' },
-    { key: 'liftMultiplier', label: 'Eng Lift' },
-    { key: 'posts', label: 'Posts' },
-  ];
-
-  const allSorted = useMemo(() => {
-    const result = [...ipData.partnerships];
-    result.sort((a, b) => {
-      // For EMV, calculate dynamically using correct formula
-      if (sortKey === 'emv') {
-        const aEmv = calculateEMV(a.avgLikes, a.avgComments);
-        const bEmv = calculateEMV(b.avgLikes, b.avgComments);
-        return sortDir === 'desc' ? bEmv - aEmv : aEmv - bEmv;
-      }
-      const aVal = a[sortKey];
-      const bVal = b[sortKey];
-      if (typeof aVal === 'number' && typeof bVal === 'number') {
-        return sortDir === 'desc' ? bVal - aVal : aVal - bVal;
-      }
-      return sortDir === 'desc'
-        ? String(bVal).localeCompare(String(aVal))
-        : String(aVal).localeCompare(String(bVal));
-    });
-    return result;
-  }, [sortKey, sortDir]);
-
-  const top10 = allSorted.slice(0, 10);
-
-  const filteredAndSorted = useMemo(() => {
-    let result = [...allSorted];
-    if (searchTerm) {
-      const term = searchTerm.toLowerCase();
-      result = result.filter((p) => p.brand.toLowerCase().includes(term));
-    }
-    return result;
-  }, [allSorted, searchTerm]);
-
-  const totalPages = Math.ceil(filteredAndSorted.length / pageSize);
-  const paginatedData = filteredAndSorted.slice((currentPage - 1) * pageSize, currentPage * pageSize);
-
-  const handleSort = (key: keyof Partnership) => {
-    if (sortKey === key) {
-      setSortDir(sortDir === 'desc' ? 'asc' : 'desc');
-    } else {
-      setSortKey(key);
-      setSortDir('desc');
-    }
-    setCurrentPage(1);
-  };
-
-  const SortIcon = ({ columnKey }: { columnKey: keyof Partnership }) => {
-    if (sortKey !== columnKey) return null;
-    return sortDir === 'desc' ? (
-      <ChevronDown className="w-4 h-4 inline ml-1" />
-    ) : (
-      <ChevronUp className="w-4 h-4 inline ml-1" />
-    );
-  };
-
-  const getDisplayValue = (p: Partnership) => {
-    switch (sortKey) {
-      case 'emv': return formatCurrency(calculateEMV(p.avgLikes, p.avgComments));
-      case 'avgLikes': return formatNumber(p.avgLikes);
-      case 'avgComments': return formatNumber(p.avgComments);
-      case 'liftMultiplier': return formatLift(p.liftMultiplier);
-      case 'posts': return p.posts.toString();
-      default: return '';
-    }
-  };
-
-  return (
-    <div className="space-y-4">
-      {/* Sort By Filter */}
-      <div className="flex flex-wrap items-center gap-4">
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Sort By</p>
-          <div className="flex rounded-lg overflow-hidden border border-gray-200">
-            {sortOptions.map((option) => (
-              <button
-                key={option.key}
-                onClick={() => handleSort(option.key)}
-                className="px-4 py-2.5 text-sm font-semibold transition-colors"
-                style={{
-                  backgroundColor: sortKey === option.key ? colors.scarlet : colors.white,
-                  color: sortKey === option.key ? colors.white : colors.text,
-                }}
-              >
-                {option.label}
-              </button>
-            ))}
-          </div>
-        </div>
-        <p className="text-sm text-gray-500 ml-auto">
-          {ipData.partnerships.length} partnerships analyzed
-        </p>
-      </div>
-
-      {/* Top 10 Highlight Section */}
-      <div>
-        <div className="mb-4">
-          <h3 style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }} className="text-2xl font-bold uppercase tracking-tight">
-            <span style={{ color: colors.scarlet }}>TOP 10 </span>
-            <span style={{ color: colors.headerGray }}>BY {sortOptions.find(o => o.key === sortKey)?.label.toUpperCase()}</span>
-          </h3>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-          {top10.map((partner, idx) => (
-            <div
-              key={partner.brand}
-              className="rounded-2xl p-4 bg-white hover:shadow-lg transition-shadow"
-              style={{
-                boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
-                borderLeft: idx < 3 ? `4px solid ${colors.scarlet}` : 'none',
-              }}
-            >
-              <div className="flex items-center gap-2 mb-2">
-                <span
-                  className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold"
-                  style={{
-                    backgroundColor: idx < 3 ? colors.scarlet : colors.gray,
-                    color: colors.white,
-                  }}
-                >
-                  {idx + 1}
-                </span>
-                <p className="text-sm font-semibold text-gray-900 truncate flex-1" title={partner.brand}>
-                  {partner.brand.replace('@', '')}
-                </p>
-              </div>
-              <p className="text-2xl font-black" style={{ color: colors.scarlet }}>
-                {getDisplayValue(partner)}
-              </p>
-              <p className="text-xs text-gray-500 mt-1">
-                {partner.posts} {partner.posts === 1 ? 'post' : 'posts'}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Full Table */}
-      <div>
-        <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-          <SectionHeader primary="ALL " secondary="PARTNERSHIPS" />
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-            <input
-              type="text"
-              placeholder="Search partners..."
-              value={searchTerm}
-              onChange={(e) => {
-                setSearchTerm(e.target.value);
-                setCurrentPage(1);
-              }}
-              className="pl-10 pr-4 py-2 rounded-lg border border-gray-200 text-sm w-64 bg-white"
-            />
-          </div>
-        </div>
-
-        <div className="rounded-2xl overflow-hidden bg-white shadow-sm">
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead>
-                <tr style={{ backgroundColor: colors.scarlet }}>
-                  <th className="text-center px-2 py-3 text-xs font-semibold uppercase tracking-wider text-white w-12">
-                    #
-                  </th>
-                  <th
-                    className="text-left px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white cursor-pointer hover:bg-white/10"
-                    onClick={() => handleSort('brand')}
-                  >
-                    Partner <SortIcon columnKey="brand" />
-                  </th>
-                  <th
-                    className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white cursor-pointer hover:bg-white/10"
-                    onClick={() => handleSort('posts')}
-                  >
-                    Posts <SortIcon columnKey="posts" />
-                  </th>
-                  <th
-                    className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white cursor-pointer hover:bg-white/10"
-                    onClick={() => handleSort('avgLikes')}
-                  >
-                    Avg Likes <SortIcon columnKey="avgLikes" />
-                  </th>
-                  <th
-                    className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white cursor-pointer hover:bg-white/10"
-                    onClick={() => handleSort('avgComments')}
-                  >
-                    Avg Comments <SortIcon columnKey="avgComments" />
-                  </th>
-                  <th
-                    className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider cursor-pointer hover:bg-white/10"
-                    style={{ color: sortKey === 'emv' ? '#fcd34d' : '#ffffff' }}
-                    onClick={() => handleSort('emv')}
-                  >
-                    EMV <SortIcon columnKey="emv" />
-                  </th>
-                  <th
-                    className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white cursor-pointer hover:bg-white/10"
-                    onClick={() => handleSort('liftMultiplier')}
-                  >
-                    Eng Lift <SortIcon columnKey="liftMultiplier" />
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {paginatedData.map((partnership, index) => {
-                  const globalRank = (currentPage - 1) * pageSize + index + 1;
-                  return (
-                    <tr
-                      key={partnership.brand}
-                      className={`border-b border-gray-100 hover:bg-gray-50 ${index % 2 === 1 ? 'bg-gray-50/50' : ''}`}
-                    >
-                      <td className="px-2 py-3 text-center text-sm text-gray-400 font-medium">
-                        {globalRank}
-                      </td>
-                      <td className="px-4 py-3">
-                        <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center overflow-hidden flex-shrink-0">
-                            <span className="text-xs font-bold text-gray-400">
-                              {partnership.brand.replace('@', '').slice(0, 2).toUpperCase()}
-                            </span>
-                          </div>
-                          <span className="font-medium text-gray-900">{partnership.brand}</span>
-                        </div>
-                      </td>
-                      <td className="px-4 py-3 text-right text-gray-500">
-                        {partnership.posts}
-                      </td>
-                      <td className="px-4 py-3 text-right text-gray-900">
-                        {formatNumber(partnership.avgLikes)}
-                      </td>
-                      <td className="px-4 py-3 text-right text-gray-900">
-                        {formatNumber(partnership.avgComments)}
-                      </td>
-                      <td className="px-4 py-3 text-right font-medium text-gray-900">
-                        {formatCurrency(calculateEMV(partnership.avgLikes, partnership.avgComments))}
-                      </td>
-                      <td className="px-4 py-3 text-right">
-                        <span
-                          className="font-medium"
-                          style={{
-                            color: partnership.liftMultiplier >= 0 ? colors.positive : colors.negative,
-                          }}
-                        >
-                          {formatLift(partnership.liftMultiplier)}
-                        </span>
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        {/* Pagination */}
-        {totalPages > 1 && (
-          <div className="flex items-center justify-center gap-2 mt-4">
-            <button
-              onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
-              disabled={currentPage === 1}
-              className="px-3 py-1 rounded border border-gray-200 text-sm disabled:opacity-50 bg-white hover:bg-gray-50"
-            >
-              Previous
-            </button>
-            <span className="text-sm text-gray-500">
-              Page {currentPage} of {totalPages}
-            </span>
-            <button
-              onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
-              disabled={currentPage === totalPages}
-              className="px-3 py-1 rounded border border-gray-200 text-sm disabled:opacity-50 bg-white hover:bg-gray-50"
-            >
-              Next
-            </button>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
-
-// ═══════════════════════════════════════════════════════════════
-// BEST COLLABORATORS TAB
-// ═══════════════════════════════════════════════════════════════
-
-// Top 5 Athletes by Collab (posts with isOrganizationCollaboration)
 const topCollabAthletes = [
   { rank: 1, name: "Davison Igbinosun", sport: "Football", posts: 2, emv: 16154, lift: 694 },
   { rank: 2, name: "Jeremiah Smith", sport: "Football", posts: 1, emv: 13056, lift: 694 },
@@ -1393,8 +511,6 @@ const topCollabAthletes = [
   { rank: 4, name: "Jermaine Mathews Jr.", sport: "Football", posts: 2, emv: 9047, lift: 694 },
   { rank: 5, name: "Kayden McDonald", sport: "Football", posts: 2, emv: 6720, lift: 694 },
 ];
-
-// Top 5 Athletes by Logo (posts with hasOrganizationLogo)
 const topLogoAthletes = [
   { rank: 1, name: "Jeremiah Smith", sport: "Football", posts: 12, emv: 145803, lift: 144 },
   { rank: 2, name: "Julian Sayin", sport: "Football", posts: 2, emv: 76500, lift: 144 },
@@ -1402,8 +518,6 @@ const topLogoAthletes = [
   { rank: 4, name: "Brandon Inniss", sport: "Football", posts: 9, emv: 64552, lift: 144 },
   { rank: 5, name: "James Peoples", sport: "Football", posts: 10, emv: 36586, lift: 144 },
 ];
-
-// Top 5 Athletes by Mention (posts with hasOrganizationInCaption)
 const topMentionAthletes = [
   { rank: 1, name: "Caleb Downs", sport: "Football", posts: 7, emv: 76113, lift: 44 },
   { rank: 2, name: "Carson Hinzman", sport: "Football", posts: 10, emv: 55665, lift: 44 },
@@ -1411,205 +525,45 @@ const topMentionAthletes = [
   { rank: 4, name: "JJ Coleman", sport: "W. Gymnastics", posts: 3, emv: 31904, lift: 44 },
   { rank: 5, name: "John Mobley Jr.", sport: "M. Basketball", posts: 14, emv: 26776, lift: 44 },
 ];
-
-// Signal summary stats
 const signalStats = {
   collab: { posts: 23, totalEmv: 79086, avgEmv: 3439, lift: 694 },
   logo: { posts: 735, totalEmv: 775595, avgEmv: 1055, lift: 144 },
   mention: { posts: 1929, totalEmv: 1204091, avgEmv: 624, lift: 44 },
 };
 
-// Reusable athlete table component for IP signals
-function IPSignalTable({
-  title,
-  icon,
-  athletes,
-  avgEmv,
-  lift,
-}: {
-  title: string;
-  icon: React.ReactNode;
-  athletes: typeof topCollabAthletes;
-  avgEmv: number;
-  lift: number;
-}) {
-  return (
-    <div className="rounded-2xl overflow-hidden bg-white shadow-sm">
-      {/* Header */}
-      <div
-        className="px-5 py-4 relative overflow-hidden"
-        style={{ backgroundColor: colors.scarlet }}
-      >
-        {/* Polka dot pattern */}
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `radial-gradient(circle, white 1px, transparent 1px)`,
-            backgroundSize: '12px 12px',
-          }}
-        />
-        <div className="flex items-center gap-3 relative z-10">
-          <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
-            {icon}
-          </div>
-          <div>
-            <h3
-              className="text-white font-bold text-lg uppercase"
-              style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }}
-            >
-              {title}
-            </h3>
-            <p className="text-xs text-white/80">
-              {formatCurrency(avgEmv)} avg EMV • <span className="text-white font-semibold">+{lift}%</span> lift
-            </p>
-          </div>
-        </div>
-      </div>
+const fallbackSportData: Record<string, Record<string, { with: { posts: number; avgLikes: number; avgComments: number; engagementRate: number }; without: { posts: number; avgLikes: number; avgComments: number; engagementRate: number } }>> = {
+  'ALL_SPORTS': {
+    mention: { with: { posts: 1929, avgLikes: 2647, avgComments: 47, engagementRate: 0.00049 }, without: { posts: 6989, avgLikes: 1453, avgComments: 44, engagementRate: 0.00027 } },
+    logo: { with: { posts: 1206, avgLikes: 3676, avgComments: 70, engagementRate: 0.00068 }, without: { posts: 7712, avgLikes: 1404, avgComments: 41, engagementRate: 0.00026 } },
+    collab: { with: { posts: 23, avgLikes: 15119, avgComments: 204, engagementRate: 0.00276 }, without: { posts: 8895, avgLikes: 1676, avgComments: 45, engagementRate: 0.00031 } }
+  },
+  'FOOTBALL': {
+    mention: { with: { posts: 309, avgLikes: 8500, avgComments: 120, engagementRate: 0.0015 }, without: { posts: 1189, avgLikes: 6200, avgComments: 92, engagementRate: 0.0011 } },
+    logo: { with: { posts: 344, avgLikes: 9100, avgComments: 125, engagementRate: 0.0016 }, without: { posts: 1154, avgLikes: 5800, avgComments: 88, engagementRate: 0.001 } },
+    collab: { with: { posts: 22, avgLikes: 18000, avgComments: 250, engagementRate: 0.0032 }, without: { posts: 1476, avgLikes: 6650, avgComments: 98, engagementRate: 0.0012 } }
+  },
+  'MENS_BASKETBALL': {
+    mention: { with: { posts: 82, avgLikes: 4200, avgComments: 52, engagementRate: 0.0014 }, without: { posts: 130, avgLikes: 2400, avgComments: 31, engagementRate: 0.00085 } },
+    logo: { with: { posts: 55, avgLikes: 5100, avgComments: 61, engagementRate: 0.0017 }, without: { posts: 157, avgLikes: 2200, avgComments: 30, engagementRate: 0.00075 } },
+    collab: { with: { posts: 1, avgLikes: 12000, avgComments: 180, engagementRate: 0.004 }, without: { posts: 211, avgLikes: 3000, avgComments: 38, engagementRate: 0.001 } }
+  },
+  'MENS_WRESTLING': {
+    mention: { with: { posts: 148, avgLikes: 1800, avgComments: 42, engagementRate: 0.00062 }, without: { posts: 320, avgLikes: 980, avgComments: 28, engagementRate: 0.00034 } },
+    logo: { with: { posts: 96, avgLikes: 2100, avgComments: 48, engagementRate: 0.00072 }, without: { posts: 372, avgLikes: 900, avgComments: 26, engagementRate: 0.00031 } },
+    collab: { with: { posts: 0, avgLikes: 0, avgComments: 0, engagementRate: 0 }, without: { posts: 468, avgLikes: 1250, avgComments: 32, engagementRate: 0.00043 } }
+  },
+  'WOMENS_BASKETBALL': {
+    mention: { with: { posts: 122, avgLikes: 2650, avgComments: 38, engagementRate: 0.00089 }, without: { posts: 263, avgLikes: 1420, avgComments: 24, engagementRate: 0.00048 } },
+    logo: { with: { posts: 88, avgLikes: 3100, avgComments: 44, engagementRate: 0.00105 }, without: { posts: 297, avgLikes: 1300, avgComments: 22, engagementRate: 0.00044 } },
+    collab: { with: { posts: 0, avgLikes: 0, avgComments: 0, engagementRate: 0 }, without: { posts: 385, avgLikes: 1850, avgComments: 28, engagementRate: 0.00063 } }
+  },
+  'MENS_GYMNASTICS': {
+    mention: { with: { posts: 100, avgLikes: 920, avgComments: 22, engagementRate: 0.00031 }, without: { posts: 128, avgLikes: 530, avgComments: 14, engagementRate: 0.00018 } },
+    logo: { with: { posts: 59, avgLikes: 1100, avgComments: 26, engagementRate: 0.00037 }, without: { posts: 169, avgLikes: 490, avgComments: 13, engagementRate: 0.00017 } },
+    collab: { with: { posts: 0, avgLikes: 0, avgComments: 0, engagementRate: 0 }, without: { posts: 228, avgLikes: 692, avgComments: 17, engagementRate: 0.00024 } }
+  }
+};
 
-      {/* Table Header */}
-      <div className="grid grid-cols-[40px_1fr_70px_90px_70px] gap-2 px-5 py-3 text-xs uppercase tracking-wider text-gray-500 border-b border-gray-100">
-        <span className="text-center">#</span>
-        <span>Athlete</span>
-        <span className="text-center">Posts</span>
-        <span className="text-right">EMV</span>
-        <span className="text-right">Lift</span>
-      </div>
-
-      {/* Table Body */}
-      <div>
-        {athletes.map((athlete, idx) => (
-          <div
-            key={athlete.name}
-            className={`grid grid-cols-[40px_1fr_70px_90px_70px] gap-2 px-5 py-3 items-center border-b border-gray-50 hover:bg-gray-50 transition-colors ${idx % 2 === 1 ? 'bg-gray-50/50' : ''}`}
-          >
-            <span
-              className="w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold mx-auto"
-              style={{
-                backgroundColor: idx < 3 ? colors.scarlet : 'transparent',
-                color: idx < 3 ? 'white' : colors.scarlet,
-                border: idx >= 3 ? `2px solid ${colors.scarlet}` : 'none',
-              }}
-            >
-              {athlete.rank}
-            </span>
-            <div>
-              <p className="text-gray-900 font-semibold">{athlete.name}</p>
-              <p className="text-xs text-gray-500">{athlete.sport}</p>
-            </div>
-            <span className="text-center text-gray-600">{athlete.posts}</span>
-            <span className="text-right font-bold" style={{ color: colors.scarlet }}>{formatCurrency(athlete.emv)}</span>
-            <span className="text-right font-medium" style={{ color: colors.positive }}>+{lift}%</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function BestCollaboratorsTab() {
-  return (
-    <div className="space-y-4">
-      {/* Summary Cards */}
-      <div className="grid grid-cols-3 gap-4">
-        <div
-          className="rounded-2xl p-5 text-center relative overflow-hidden"
-          style={{ backgroundColor: colors.scarlet }}
-        >
-          <div
-            className="absolute inset-0 opacity-10"
-            style={{
-              backgroundImage: `radial-gradient(circle, white 1px, transparent 1px)`,
-              backgroundSize: '12px 12px',
-            }}
-          />
-          <div className="relative z-10">
-            <Handshake className="w-6 h-6 text-white mx-auto mb-2" />
-            <p className="text-xs uppercase tracking-wider text-white/80 mb-1">Collab Posts</p>
-            <p className="text-3xl font-black text-white">{signalStats.collab.posts}</p>
-            <p className="text-sm text-white/90 mt-1 font-semibold">+{signalStats.collab.lift}% lift</p>
-          </div>
-        </div>
-        <div
-          className="rounded-2xl p-5 text-center relative overflow-hidden"
-          style={{ backgroundColor: colors.scarlet }}
-        >
-          <div
-            className="absolute inset-0 opacity-10"
-            style={{
-              backgroundImage: `radial-gradient(circle, white 1px, transparent 1px)`,
-              backgroundSize: '12px 12px',
-            }}
-          />
-          <div className="relative z-10">
-            <Tag className="w-6 h-6 text-white mx-auto mb-2" />
-            <p className="text-xs uppercase tracking-wider text-white/80 mb-1">Visual IP Posts</p>
-            <p className="text-3xl font-black text-white">{formatNumber(signalStats.logo.posts)}</p>
-            <p className="text-sm text-white/90 mt-1 font-semibold">+{signalStats.logo.lift}% lift</p>
-          </div>
-        </div>
-        <div
-          className="rounded-2xl p-5 text-center relative overflow-hidden"
-          style={{ backgroundColor: colors.scarlet }}
-        >
-          <div
-            className="absolute inset-0 opacity-10"
-            style={{
-              backgroundImage: `radial-gradient(circle, white 1px, transparent 1px)`,
-              backgroundSize: '12px 12px',
-            }}
-          />
-          <div className="relative z-10">
-            <AtSign className="w-6 h-6 text-white mx-auto mb-2" />
-            <p className="text-xs uppercase tracking-wider text-white/80 mb-1">Mention Posts</p>
-            <p className="text-3xl font-black text-white">{formatNumber(signalStats.mention.posts)}</p>
-            <p className="text-sm text-white/90 mt-1 font-semibold">+{signalStats.mention.lift}% lift</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Three IP Signal Tables - STACKED VERTICALLY */}
-      <div className="space-y-6">
-        <IPSignalTable
-          title="collab"
-          icon={<Handshake className="w-5 h-5 text-white" />}
-          athletes={topCollabAthletes}
-          avgEmv={signalStats.collab.avgEmv}
-          lift={signalStats.collab.lift}
-        />
-        <IPSignalTable
-          title="logo"
-          icon={<Tag className="w-5 h-5 text-white" />}
-          athletes={topLogoAthletes}
-          avgEmv={signalStats.logo.avgEmv}
-          lift={signalStats.logo.lift}
-        />
-        <IPSignalTable
-          title="mention"
-          icon={<AtSign className="w-5 h-5 text-white" />}
-          athletes={topMentionAthletes}
-          avgEmv={signalStats.mention.avgEmv}
-          lift={signalStats.mention.lift}
-        />
-      </div>
-
-      {/* Info Banner */}
-      <div className="bg-white rounded-2xl shadow-sm px-4 py-3 flex items-start gap-3">
-        <Info className="w-5 h-5 text-gray-400 mt-0.5 flex-shrink-0" />
-        <p className="text-sm text-gray-600">
-          <span className="font-semibold">Top 5 athletes</span> for each IP signal type, ranked by total EMV.
-          Lift represents engagement increase vs posts without any IP signals.
-          EMV formula: (likes × $0.20) + (comments × $2.00).
-        </p>
-      </div>
-    </div>
-  );
-}
-
-// ═══════════════════════════════════════════════════════════════
-// BENCHMARK TAB
-// ═══════════════════════════════════════════════════════════════
-
-// Big 10 Conference benchmark data (17 schools - all current Big 10 members)
 const big10Schools = [
   { name: 'Nebraska', conf: 'Big 10', followers: 3012749, posts: 3049, ipPosts: 1658, adoption: 54.4, logo: 49.1, mention: 20.2, collab: 0 },
   { name: 'Indiana', conf: 'Big 10', followers: 900000, posts: 1635, ipPosts: 831, adoption: 50.8, logo: 50.8, mention: 0, collab: 0 },
@@ -1630,7 +584,6 @@ const big10Schools = [
   { name: 'USC', conf: 'Big 10', followers: 3000000, posts: 5328, ipPosts: 353, adoption: 6.6, logo: 6.6, mention: 0, collab: 0.02 },
 ];
 
-// NCAA D1 schools benchmark data (71 schools with 1000+ posts)
 const ncaaD1Schools = [
   { name: 'Old Dominion', conf: 'Sun Belt', posts: 1564, adoption: 56.7, logo: 53.5, mention: 14.6, collab: 1.34 },
   { name: 'Nebraska', conf: 'Big 10', posts: 3049, adoption: 54.3, logo: 49.1, mention: 20.2, collab: 0 },
@@ -1705,501 +658,2890 @@ const ncaaD1Schools = [
   { name: 'USC', conf: 'Big 10', posts: 5328, adoption: 6.6, logo: 6.6, mention: 0, collab: 0.01 },
 ];
 
-const conferenceAvg = {
-  adoption: 30.8,
-  logo: 27.0,
-  mention: 6.6,
-  collab: 1.2,
-};
+const conferenceAvg = { adoption: 30.8, logo: 27.0, mention: 6.6, collab: 1.2 };
+const ncaaD1Avg = { adoption: 31.4, logo: 28.1, mention: 6.5, collab: 1.3 };
+// ═══════════════════════════════════════════════════════════════
+// UTILITY FUNCTIONS
+// ═══════════════════════════════════════════════════════════════
+function formatNumber(num: number): string {
+  if (num >= 1000000) return (num / 1000000).toFixed(2) + 'M';
+  if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
+  return num.toLocaleString();
+}
+function formatCurrency(num: number): string {
+  if (num >= 1000000) return '$' + (num / 1000000).toFixed(2) + 'M';
+  if (num >= 1000) return '$' + (num / 1000).toFixed(1) + 'K';
+  return '$' + num.toFixed(0);
+}
+function formatPercent(num: number, decimals = 2): string {
+  return (num * 100).toFixed(decimals) + '%';
+}
+function formatDelta(num: number): string {
+  const sign = num >= 0 ? '+' : '';
+  return sign + num.toFixed(1) + '%';
+}
+function formatLift(num: number): string {
+  if (num >= 0) return '+' + num.toFixed(1) + 'x';
+  return num.toFixed(1) + 'x';
+}
+function calculateEMV(likes: number, comments: number): number {
+  return (likes * 0.5) + (comments * 1.5);
+}
 
-const ncaaD1Avg = {
-  adoption: 31.4,
-  logo: 28.1,
-  mention: 6.5,
-  collab: 1.3,
-};
+// ═══════════════════════════════════════════════════════════════
+// TAB DEFINITIONS
+// ═══════════════════════════════════════════════════════════════
+type TabId = 'overview' | 'withvswithout' | 'partnerships' | 'bestcollaborators' | 'benchmark' | 'content' | 'teampages';
 
-const ohioStateRank = {
-  conference: { adoption: 10, logo: 14, mention: 1, collab: 7, total: 17 },
-  ncaa: { adoption: 41, logo: 66, mention: 6, collab: 35, total: 71 },
-};
-
-function BenchmarkTab() {
-  const [benchmarkType, setBenchmarkType] = useState<'conference' | 'ncaa'>('conference');
-
-  // Dynamic data based on benchmark type
-  const isConference = benchmarkType === 'conference';
-  const schools = isConference ? big10Schools : ncaaD1Schools;
-  const avg = isConference ? conferenceAvg : ncaaD1Avg;
-  const ranks = isConference ? ohioStateRank.conference : ohioStateRank.ncaa;
-  const benchmarkLabel = isConference ? 'Big 10' : 'NCAA D1';
-
-  // Ohio State metrics
-  const ohioState = { adoption: 26.9, logo: 8.2, mention: 21.6, collab: 0.26 };
-  const adoptionDelta = ohioState.adoption - avg.adoption;
-  const logoDelta = ohioState.logo - avg.logo;
-  const mentionDelta = ohioState.mention - avg.mention;
-  const collabDelta = ohioState.collab - avg.collab;
-
+const tabs: { id: TabId; label: string }[] = [
+  { id: 'overview', label: 'Overview' },
+  { id: 'withvswithout', label: 'IP Comparison' },
+  { id: 'partnerships', label: 'Sponsored Posts' },
+  { id: 'benchmark', label: 'Rankings' },
+  { id: 'content', label: 'Content' },
+  { id: 'teampages', label: 'Team Socials' },
+];
+// ═══════════════════════════════════════════════════════════════
+// SECTION HEADER - Two-tone Oswald header
+// ═══════════════════════════════════════════════════════════════
+function SectionHeader({ primary, secondary }: { primary: string; secondary: string }) {
   return (
-    <div className="space-y-4">
-      {/* Info Banner */}
-      <div className="bg-white rounded-2xl shadow-sm px-4 py-3">
-        <p className="text-sm text-gray-600">
-          <span className="font-semibold">Benchmark</span> shows how often Ohio State athletes use IP elements (logos, mentions, collaborations) in social content compared to other schools.
-        </p>
-        <div className="flex gap-6 mt-2 text-xs text-gray-500">
-          <span><span className="inline-block w-2 h-2 rounded-full mr-1" style={{ backgroundColor: colors.scarlet }}></span> {benchmarkLabel}: Compare against {isConference ? 'other Big 10 schools' : '71 NCAA D1 schools'}</span>
+    <h2
+      style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }}
+      className="text-2xl md:text-3xl font-bold uppercase tracking-tight"
+    >
+      <span style={{ color: colors.scarlet }}>{primary}</span>
+      <span style={{ color: colors.headerGray }}>{secondary}</span>
+    </h2>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════
+// GLASS CARD - Reusable card with scarlet accent top border
+// ═══════════════════════════════════════════════════════════════
+function GlassCard({
+  children,
+  className = '',
+  noPadding = false,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  noPadding?: boolean;
+}) {
+  return (
+    <div
+      className={`bg-white rounded-2xl ${noPadding ? '' : 'p-5'} ${className}`}
+      style={{
+        borderTop: `2px solid ${colors.scarlet}`,
+        boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.06)',
+        transition,
+      }}
+      onMouseEnter={(e) => {
+        (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-2px)';
+        (e.currentTarget as HTMLDivElement).style.boxShadow =
+          '0 4px 12px 0 rgb(0 0 0 / 0.08), 0 2px 4px -1px rgb(0 0 0 / 0.06)';
+      }}
+      onMouseLeave={(e) => {
+        (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)';
+        (e.currentTarget as HTMLDivElement).style.boxShadow =
+          '0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.06)';
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════
+// TOOLTIP - Group hover tooltip
+// ═══════════════════════════════════════════════════════════════
+function Tooltip({ content, children }: { content: string; children: React.ReactNode }) {
+  return (
+    <div className="group relative inline-flex items-center">
+      {children}
+      <div className="pointer-events-none fixed inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-[9999]">
+        <div className="bg-gray-900 text-white text-sm px-4 py-3 rounded-xl shadow-2xl max-w-sm text-center">
+          {content}
         </div>
-      </div>
-
-      {/* Toggle */}
-      <div className="flex items-center gap-4">
-        <div className="flex rounded-lg overflow-hidden border border-gray-200">
-          <button
-            onClick={() => setBenchmarkType('conference')}
-            className="px-5 py-2.5 text-sm font-semibold transition-colors flex items-center gap-2"
-            style={{
-              backgroundColor: benchmarkType === 'conference' ? colors.scarlet : colors.white,
-              color: benchmarkType === 'conference' ? colors.white : colors.text,
-            }}
-          >
-            🏈 Big 10
-          </button>
-          <button
-            onClick={() => setBenchmarkType('ncaa')}
-            className="px-5 py-2.5 text-sm font-semibold transition-colors flex items-center gap-2"
-            style={{
-              backgroundColor: benchmarkType === 'ncaa' ? colors.scarlet : colors.white,
-              color: benchmarkType === 'ncaa' ? colors.white : colors.text,
-            }}
-          >
-            🏆 NCAA D1
-          </button>
-        </div>
-        <span className="text-xs text-gray-400">{schools.length} schools compared</span>
-      </div>
-
-      {/* Summary Row */}
-      <div className="grid md:grid-cols-3 gap-4">
-        {/* Overall Rank */}
-        <div className="rounded-2xl bg-white p-5 shadow-sm">
-          <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Overall IP Adoption</p>
-          <div className="flex items-end gap-2">
-            <p className="text-4xl font-black" style={{ color: colors.scarlet }}>#{ranks.adoption}</p>
-            <p className="text-sm text-gray-500 mb-1">of {ranks.total} schools</p>
-          </div>
-          <p className="text-xs text-gray-400 mt-2">vs {benchmarkLabel}</p>
-        </div>
-
-        {/* Your Adoption */}
-        <div className="rounded-2xl bg-white p-5 shadow-sm">
-          <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Your IP Adoption</p>
-          <div className="flex items-end gap-2">
-            <p className="text-4xl font-black text-gray-900">{ohioState.adoption}%</p>
-            <p
-              className="text-sm font-semibold mb-1"
-              style={{ color: adoptionDelta >= 0 ? colors.positive : colors.negative }}
-            >
-              {adoptionDelta >= 0 ? '↑' : '↓'} {Math.abs(adoptionDelta).toFixed(1)}%
-            </p>
-          </div>
-          <p className="text-xs text-gray-400 mt-2">vs {avg.adoption}% {benchmarkLabel.toLowerCase()} avg</p>
-        </div>
-
-        {/* Insight */}
-        <div className="rounded-xl border-2 p-5" style={{ borderColor: colors.positive, backgroundColor: `${colors.positive}08` }}>
-          <p className="text-xs uppercase tracking-wider mb-2" style={{ color: colors.positive }}>💡 Key Insight</p>
-          <p className="text-sm text-gray-700">
-            {isConference
-              ? <>Ohio State leads the Big 10 in <span className="font-semibold">mention rate</span> ({ohioState.mention}%), outperforming the conference average by {mentionDelta.toFixed(1)}%.</>
-              : <>Ohio State ranks <span className="font-semibold">#{ranks.mention} in mention rate</span> among {ranks.total} NCAA D1 schools, with {ohioState.mention}% vs {avg.mention}% average.</>
-            }
-          </p>
-        </div>
-      </div>
-
-      {/* IP Signal Comparison Cards */}
-      <div className="grid md:grid-cols-2 gap-4">
-        {/* Logo */}
-        <div className="rounded-2xl bg-white p-5 shadow-sm">
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: `${colors.scarlet}15` }}>
-                <Tag className="w-5 h-5" style={{ color: colors.scarlet }} />
-              </div>
-              <div>
-                <h4 className="font-bold text-gray-900">Visual IP</h4>
-                <p className="text-xs text-gray-500">% of posts with visual IP</p>
-              </div>
-            </div>
-            <div className="text-right">
-              <p className="text-2xl font-black" style={{ color: colors.scarlet }}>#{ranks.logo}</p>
-              <p className="text-xs text-gray-400">of {ranks.total} schools</p>
-            </div>
-          </div>
-
-          <div className="space-y-3">
-            <div>
-              <div className="flex justify-between text-sm mb-1">
-                <span className="text-gray-600">Ohio State</span>
-                <span className="font-semibold">{ohioState.logo}%</span>
-              </div>
-              <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
-                <div className="h-full rounded-full" style={{ width: `${(ohioState.logo / 60) * 100}%`, backgroundColor: colors.scarlet }} />
-              </div>
-            </div>
-            <div>
-              <div className="flex justify-between text-sm mb-1">
-                <span className="text-gray-500">{benchmarkLabel} Avg</span>
-                <span className="text-gray-500">{avg.logo}%</span>
-              </div>
-              <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
-                <div className="h-full rounded-full" style={{ width: `${(avg.logo / 60) * 100}%`, backgroundColor: colors.gray }} />
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-4 pt-3 border-t border-gray-100">
-            <span
-              className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-semibold"
-              style={{ backgroundColor: logoDelta >= 0 ? `${colors.positive}20` : `${colors.negative}20`, color: logoDelta >= 0 ? colors.positive : colors.negative }}
-            >
-              {logoDelta >= 0 ? '↑' : '↓'} {Math.abs(logoDelta).toFixed(1)}% vs {benchmarkLabel.toLowerCase()}
-            </span>
-          </div>
-        </div>
-
-        {/* Mention */}
-        <div className="rounded-xl border-2 bg-white p-5" style={{ borderColor: isConference || ranks.mention <= 5 ? colors.positive : colors.cardBorder }}>
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: `${colors.positive}15` }}>
-                <AtSign className="w-5 h-5" style={{ color: colors.positive }} />
-              </div>
-              <div>
-                <h4 className="font-bold text-gray-900">Mention</h4>
-                <p className="text-xs text-gray-500">% of posts with mentions</p>
-              </div>
-            </div>
-            <div className="text-right">
-              <p className="text-2xl font-black" style={{ color: colors.positive }}>#{ranks.mention}</p>
-              <p className="text-xs text-gray-400">of {ranks.total} schools</p>
-            </div>
-          </div>
-
-          <div className="space-y-3">
-            <div>
-              <div className="flex justify-between text-sm mb-1">
-                <span className="text-gray-600">Ohio State</span>
-                <span className="font-semibold">{ohioState.mention}%</span>
-              </div>
-              <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
-                <div className="h-full rounded-full" style={{ width: `${(ohioState.mention / 30) * 100}%`, backgroundColor: colors.positive }} />
-              </div>
-            </div>
-            <div>
-              <div className="flex justify-between text-sm mb-1">
-                <span className="text-gray-500">{benchmarkLabel} Avg</span>
-                <span className="text-gray-500">{avg.mention}%</span>
-              </div>
-              <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
-                <div className="h-full rounded-full" style={{ width: `${(avg.mention / 30) * 100}%`, backgroundColor: colors.gray }} />
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-4 pt-3 border-t border-gray-100">
-            <span
-              className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-semibold"
-              style={{ backgroundColor: mentionDelta >= 0 ? `${colors.positive}20` : `${colors.negative}20`, color: mentionDelta >= 0 ? colors.positive : colors.negative }}
-            >
-              {mentionDelta >= 0 ? '↑' : '↓'} {Math.abs(mentionDelta).toFixed(1)}% vs {benchmarkLabel.toLowerCase()} {isConference && '• #1 in Big 10'}
-            </span>
-          </div>
-        </div>
-
-        {/* Collaboration */}
-        <div className="rounded-2xl bg-white p-5 shadow-sm">
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: `${colors.scarlet}15` }}>
-                <Users className="w-5 h-5" style={{ color: colors.scarlet }} />
-              </div>
-              <div>
-                <h4 className="font-bold text-gray-900">Collaboration</h4>
-                <p className="text-xs text-gray-500">% of posts with collabs</p>
-              </div>
-            </div>
-            <div className="text-right">
-              <p className="text-2xl font-black" style={{ color: colors.scarlet }}>#{ranks.collab}</p>
-              <p className="text-xs text-gray-400">of {ranks.total} schools</p>
-            </div>
-          </div>
-
-          <div className="space-y-3">
-            <div>
-              <div className="flex justify-between text-sm mb-1">
-                <span className="text-gray-600">Ohio State</span>
-                <span className="font-semibold">{ohioState.collab}%</span>
-              </div>
-              <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
-                <div className="h-full rounded-full" style={{ width: `${(ohioState.collab / 10) * 100}%`, backgroundColor: colors.scarlet }} />
-              </div>
-            </div>
-            <div>
-              <div className="flex justify-between text-sm mb-1">
-                <span className="text-gray-500">{benchmarkLabel} Avg</span>
-                <span className="text-gray-500">{avg.collab}%</span>
-              </div>
-              <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
-                <div className="h-full rounded-full" style={{ width: `${(avg.collab / 10) * 100}%`, backgroundColor: colors.gray }} />
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-4 pt-3 border-t border-gray-100">
-            <span
-              className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-semibold"
-              style={{ backgroundColor: collabDelta >= 0 ? `${colors.positive}20` : `${colors.negative}20`, color: collabDelta >= 0 ? colors.positive : colors.negative }}
-            >
-              {collabDelta >= 0 ? '↑' : '↓'} {Math.abs(collabDelta).toFixed(2)}% vs {benchmarkLabel.toLowerCase()}
-            </span>
-          </div>
-        </div>
-
-        {/* Adoption Rate */}
-        <div className="rounded-2xl bg-white p-5 shadow-sm">
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: `${colors.scarlet}15` }}>
-                <Percent className="w-5 h-5" style={{ color: colors.scarlet }} />
-              </div>
-              <div>
-                <h4 className="font-bold text-gray-900">IP Adoption</h4>
-                <p className="text-xs text-gray-500">% of posts with any IP</p>
-              </div>
-            </div>
-            <div className="text-right">
-              <p className="text-2xl font-black" style={{ color: colors.scarlet }}>#{ranks.adoption}</p>
-              <p className="text-xs text-gray-400">of {ranks.total} schools</p>
-            </div>
-          </div>
-
-          <div className="space-y-3">
-            <div>
-              <div className="flex justify-between text-sm mb-1">
-                <span className="text-gray-600">Ohio State</span>
-                <span className="font-semibold">{ohioState.adoption}%</span>
-              </div>
-              <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
-                <div className="h-full rounded-full" style={{ width: `${(ohioState.adoption / 60) * 100}%`, backgroundColor: colors.scarlet }} />
-              </div>
-            </div>
-            <div>
-              <div className="flex justify-between text-sm mb-1">
-                <span className="text-gray-500">{benchmarkLabel} Avg</span>
-                <span className="text-gray-500">{avg.adoption}%</span>
-              </div>
-              <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
-                <div className="h-full rounded-full" style={{ width: `${(avg.adoption / 60) * 100}%`, backgroundColor: colors.gray }} />
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-4 pt-3 border-t border-gray-100">
-            <span
-              className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-semibold"
-              style={{ backgroundColor: adoptionDelta >= 0 ? `${colors.positive}20` : `${colors.negative}20`, color: adoptionDelta >= 0 ? colors.positive : colors.negative }}
-            >
-              {adoptionDelta >= 0 ? '↑' : '↓'} {Math.abs(adoptionDelta).toFixed(1)}% vs {benchmarkLabel.toLowerCase()}
-            </span>
-          </div>
-        </div>
-      </div>
-
-      {/* Performance Distribution Slider */}
-      <div className="bg-white rounded-2xl p-5 shadow-sm">
-        <SectionHeader primary="PERFORMANCE " secondary="DISTRIBUTION" />
-        <p className="text-sm text-gray-500 mt-2 mb-4">How Ohio State's IP adoption compares across {benchmarkLabel.toLowerCase()}</p>
-
-        {/* Filters for metric selection */}
-        <div className="flex items-center gap-4 mb-4">
-          <span className="text-xs font-semibold uppercase tracking-wider text-gray-500">View by:</span>
-          <div className="flex gap-2">
-            <button className="px-3 py-1.5 text-xs font-semibold rounded-md" style={{ backgroundColor: colors.scarlet, color: colors.white }}>
-              IP ADOPTION
-            </button>
-          </div>
-        </div>
-
-        {/* Distribution Bar */}
-        <div className="relative mb-8">
-          {/* Labels */}
-          <div className="flex justify-between text-xs uppercase tracking-wider text-gray-400 mb-3">
-            <span>WORST</span>
-            <span>AVERAGE</span>
-            <span>TOP</span>
-          </div>
-
-          {/* Bar */}
-          <div className="relative h-12 rounded-lg overflow-hidden" style={{ background: `linear-gradient(90deg, #e5e7eb 0%, #9ca3af 50%, #374151 100%)` }}>
-            {/* Ohio State Marker */}
-            <div
-              className="absolute top-0 bottom-0 flex flex-col items-center justify-center"
-              style={{
-                left: `${((ohioState.adoption - 5) / 55) * 100}%`,
-                transform: 'translateX(-50%)'
-              }}
-            >
-              <div className="w-1 h-full" style={{ backgroundColor: colors.scarlet }}></div>
-              <div
-                className="absolute -top-12 px-3 py-2 rounded-lg shadow-lg whitespace-nowrap"
-                style={{ backgroundColor: colors.scarlet }}
-              >
-                <p className="text-white font-bold text-sm">OHIO STATE</p>
-                <p className="text-white text-xs">Top {Math.round(((ranks.adoption) / ranks.total) * 100)}%</p>
-                <p className="text-white text-xs opacity-90">of {isConference ? 'conference' : 'D1 schools'}</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Scale Labels */}
-          <div className="flex justify-between text-xs text-gray-500 mt-2">
-            <span>6.6%</span>
-            <span>{avg.adoption.toFixed(1)}%</span>
-            <span>60.8%</span>
-          </div>
-        </div>
-
-        {/* Stats Grid */}
-        <div className="grid grid-cols-3 gap-4 mt-6 pt-6 border-t border-gray-100">
-          <div className="text-center">
-            <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">WORST</p>
-            <p className="text-2xl font-bold text-gray-900">6.6%</p>
-            <p className="text-xs text-gray-400">USC</p>
-          </div>
-          <div className="text-center">
-            <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">MEDIAN</p>
-            <p className="text-2xl font-bold text-gray-900">{avg.adoption.toFixed(1)}%</p>
-            <p className="text-xs text-gray-400">{benchmarkLabel} average</p>
-          </div>
-          <div className="text-center">
-            <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">BEST</p>
-            <p className="text-2xl font-bold" style={{ color: colors.scarlet }}>60.8%</p>
-            <p className="text-xs text-gray-400">Stanford</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Leaderboard Card */}
-      <div className="rounded-2xl p-5 shadow-sm" style={{ backgroundColor: colors.scarlet }}>
-        <div className="mb-3">
-          <h3 style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }} className="text-3xl font-bold uppercase tracking-tight text-white">
-            LEADERBOARD
-          </h3>
-          <p className="text-white/80 text-sm mt-1">Ohio State's IP adoption rankings</p>
-        </div>
-
-        <div className="space-y-3">
-          {/* In Conference */}
-          <div className="bg-white/10 backdrop-blur rounded-xl p-4 flex items-center gap-4">
-            <div className="w-16 h-16 rounded-xl flex items-center justify-center text-3xl font-black text-white border-2 border-white/30">
-              #{ranks.adoption}
-            </div>
-            <div className="flex-1">
-              <p className="text-white/70 text-xs uppercase tracking-wider">In the {isConference ? 'Big Ten' : 'Conference'}</p>
-              <p className="text-white text-xl font-bold">{isConference ? 'Big Ten' : 'Conference'} Schools</p>
-            </div>
-          </div>
-
-          {/* In NCAA */}
-          {!isConference && (
-            <div className="bg-white/10 backdrop-blur rounded-xl p-4 flex items-center gap-4">
-              <div className="w-16 h-16 rounded-xl flex items-center justify-center text-3xl font-black text-white border-2 border-white/30">
-                #{ranks.adoption}
-              </div>
-              <div className="flex-1">
-                <p className="text-white/70 text-xs uppercase tracking-wider">In the NCAA</p>
-                <p className="text-white text-xl font-bold">NCAA D1 Schools</p>
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
-
-      {/* Leaderboard */}
-      <div>
-        <div className="mb-4">
-          <h3 style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }} className="text-2xl font-bold uppercase tracking-tight">
-            <span style={{ color: colors.scarlet }}>{benchmarkLabel} </span>
-            <span style={{ color: colors.headerGray }}>IP ADOPTION RANKINGS</span>
-          </h3>
-        </div>
-        <div className="rounded-2xl bg-white overflow-hidden max-h-[500px] overflow-y-auto shadow-sm">
-          <table className="w-full">
-            <thead className="sticky top-0">
-              <tr style={{ backgroundColor: colors.scarlet }}>
-                <th className="text-center px-3 py-3 text-xs font-semibold uppercase tracking-wider text-white w-10">#</th>
-                <th className="text-left px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">School</th>
-                {!isConference && <th className="text-left px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">Conf</th>}
-                <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">Posts</th>
-                <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">Adoption</th>
-                <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">Visual IP</th>
-                <th className="text-right px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white">Mention</th>
-              </tr>
-            </thead>
-            <tbody>
-              {schools.map((school, idx) => (
-                <tr
-                  key={school.name}
-                  className={`border-b border-gray-100 ${school.name === 'Ohio State' ? 'bg-red-50' : idx % 2 === 1 ? 'bg-gray-50/50' : ''}`}
-                >
-                  <td className="px-3 py-3 text-center">
-                    <span
-                      className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mx-auto"
-                      style={{
-                        backgroundColor: school.name === 'Ohio State' ? colors.scarlet : idx < 3 ? colors.gray : '#e5e7eb',
-                        color: school.name === 'Ohio State' || idx < 3 ? colors.white : colors.text,
-                      }}
-                    >
-                      {idx + 1}
-                    </span>
-                  </td>
-                  <td className={`px-4 py-3 font-semibold ${school.name === 'Ohio State' ? 'text-red-700' : 'text-gray-900'}`}>
-                    {school.name}
-                  </td>
-                  {!isConference && <td className="px-4 py-3 text-xs text-gray-500">{school.conf}</td>}
-                  <td className="px-4 py-3 text-right text-gray-600">{formatNumber(school.posts)}</td>
-                  <td className="px-4 py-3 text-right font-semibold" style={{ color: school.name === 'Ohio State' ? colors.scarlet : colors.text }}>
-                    {school.adoption}%
-                  </td>
-                  <td className="px-4 py-3 text-right text-gray-600">{school.logo}%</td>
-                  <td className="px-4 py-3 text-right text-gray-600">{school.mention}%</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <p className="text-xs text-gray-400 mt-2">* Based on {schools.length} {isConference ? 'Big 10' : 'NCAA D1'} schools with available IP data</p>
       </div>
     </div>
   );
 }
 
 // ═══════════════════════════════════════════════════════════════
-// MAIN COMPONENT
+// SEGMENTED TOGGLE - Premium toggle with scarlet gradient active
 // ═══════════════════════════════════════════════════════════════
-interface OhioStateIPImpactProps {
-  onBack?: () => void;
+function SegmentedToggle<T extends string>({
+  options,
+  value,
+  onChange,
+}: {
+  options: { id: T; label: string }[];
+  value: T;
+  onChange: (id: T) => void;
+}) {
+  return (
+    <div
+      className="inline-flex rounded-xl p-1 gap-0.5"
+      style={{ backgroundColor: colors.lightBg, border: `1px solid ${colors.glassBorder}` }}
+    >
+      {options.map((option) => {
+        const isActive = value === option.id;
+        return (
+          <button
+            key={option.id}
+            onClick={() => onChange(option.id)}
+            className="px-5 py-2 text-sm font-semibold rounded-lg whitespace-nowrap"
+            style={{
+              background: isActive
+                ? `linear-gradient(135deg, ${colors.scarlet} 0%, ${colors.scarletDark} 100%)`
+                : 'transparent',
+              color: isActive ? colors.white : colors.textMuted,
+              transition,
+              boxShadow: isActive ? '0 2px 8px rgba(186, 12, 47, 0.3)' : 'none',
+            }}
+          >
+            {option.label}
+          </button>
+        );
+      })}
+    </div>
+  );
 }
 
-export function OhioStateIPImpact({ onBack }: OhioStateIPImpactProps) {
+// ═══════════════════════════════════════════════════════════════
+// KPI CHIP - Small KPI badge for the hero row
+// ═══════════════════════════════════════════════════════════════
+function KPIChip({
+  label,
+  value,
+  icon,
+  subtitle,
+}: {
+  label: string;
+  value: string;
+  icon: React.ReactNode;
+  subtitle: string;
+}) {
+  return (
+    <div
+      className="rounded-xl p-4 relative overflow-hidden flex flex-col justify-center items-center text-center min-h-[120px]"
+      style={{ backgroundColor: colors.scarlet, transition }}
+    >
+      <div className="absolute top-3 right-3 opacity-20">{icon}</div>
+      <p className="text-xs font-semibold uppercase tracking-wider text-white/80 mb-2">{label}</p>
+      <p className="text-3xl md:text-4xl font-black text-white mb-1">{value}</p>
+      <p className="text-xs text-white/80">{subtitle}</p>
+    </div>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════
+// IP MODE CARD - Performance by IP mode
+// ═══════════════════════════════════════════════════════════════
+function IPModeCard({
+  title,
+  icon,
+  posts,
+  delta,
+  avgEngagement,
+  emv,
+  tooltip,
+  opportunity,
+}: {
+  title: string;
+  icon: React.ReactNode;
+  posts: number;
+  delta: number;
+  avgEngagement: string;
+  emv: string;
+  tooltip: string;
+  opportunity?: string;
+}) {
+  return (
+    <GlassCard>
+      <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center gap-3">
+          <div
+            className="w-10 h-10 rounded-lg flex items-center justify-center"
+            style={{ backgroundColor: `${colors.scarlet}15` }}
+          >
+            {icon}
+          </div>
+          <div>
+            <div className="flex items-center gap-2">
+              <h3 className="font-bold uppercase tracking-wide text-gray-900">{title}</h3>
+              <Tooltip content={tooltip}>
+                <Info className="w-3.5 h-3.5 text-gray-400 cursor-help" />
+              </Tooltip>
+            </div>
+            <p className="text-xs text-gray-500">{posts} posts with this signal</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mb-4">
+        <div className="flex items-center gap-1 mb-1">
+          <p className="text-xs uppercase tracking-wider text-gray-500">Engagement Delta vs Baseline</p>
+          <Tooltip content="Percent difference vs baseline engagement rate.">
+            <Info className="w-3 h-3 text-gray-400 cursor-help" />
+          </Tooltip>
+        </div>
+        <p
+          className="text-3xl font-black"
+          style={{ color: delta >= 0 ? colors.positive : colors.negative }}
+        >
+          {formatDelta(delta)}
+        </p>
+        <p className="text-xs text-gray-500">vs posts without {title.toLowerCase()}</p>
+      </div>
+
+      <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-100">
+        <div>
+          <p className="text-xs uppercase tracking-wider mb-1 text-gray-500">Avg Eng</p>
+          <p className="font-bold text-gray-900">{avgEngagement}</p>
+        </div>
+        <div>
+          <p className="text-xs uppercase tracking-wider mb-1 text-gray-500">EMV</p>
+          <p className="font-bold text-gray-900">{emv}</p>
+        </div>
+      </div>
+
+      {opportunity && (
+        <div className="mt-4 pt-3 border-t border-gray-100">
+          <div className="flex items-start gap-2">
+            <Target className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: colors.scarlet }} />
+            <div>
+              <p className="text-xs uppercase tracking-wider font-semibold mb-0.5" style={{ color: colors.scarlet }}>
+                Opportunity
+              </p>
+              <p className="text-xs text-gray-600">{opportunity}</p>
+            </div>
+          </div>
+        </div>
+      )}
+    </GlassCard>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════
+// OVERVIEW TAB
+// ═══════════════════════════════════════════════════════════════
+function OverviewTab({ overviewData }: { overviewData?: OverviewData | null }) {
+  const overview = overviewData ?? {
+    totalPosts: ipData.totalPosts,
+    totalLikes: ipData.totalLikes,
+    totalComments: ipData.totalComments,
+    postsWithIP: ipData.postsWithIP,
+    ipAdoptionRate: ipData.ipAdoptionRate,
+    avgLift: ipData.avgLift,
+    totalEmv: (ipData.totalLikes * 0.5) + (ipData.totalComments * 1.5),
+    collaboration: ipData.collaboration,
+    logo: ipData.logo,
+    mention: ipData.mention,
+  };
+  const totalInteractions = overview.totalLikes + overview.totalComments;
+  const collabEMV = overview.collaboration.posts * calculateEMV(overview.collaboration.likes, overview.collaboration.comments);
+  const logoEMV = overview.logo.posts * calculateEMV(overview.logo.likes, overview.logo.comments);
+  const mentionEMV = overview.mention.posts * calculateEMV(overview.mention.likes, overview.mention.comments);
+
+  return (
+    <div className="space-y-6">
+      {/* Hero Section */}
+      <div
+        className="bg-white rounded-2xl shadow-sm px-6 py-8 md:px-10 md:py-10"
+        style={{ borderTop: `2px solid ${colors.scarlet}` }}
+      >
+        <h1
+          style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }}
+          className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-2"
+        >
+          <span style={{ color: colors.scarlet }}>Ohio State </span>
+          <span style={{ color: colors.headerGray }}>Athlete Overview</span>
+        </h1>
+
+        {/* KPI Chips Row */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <KPIChip
+            label="Total Followers"
+            value={formatNumber(ipData.totalFollowers)}
+            icon={<Users className="w-8 h-8 text-white" />}
+            subtitle="Combined athlete audience"
+          />
+          <KPIChip
+            label="Total Interactions"
+            value={formatNumber(totalInteractions)}
+            icon={<Heart className="w-8 h-8 text-white" />}
+            subtitle="Likes + Comments"
+          />
+          <KPIChip
+            label="Posts with IP"
+            value={formatNumber(overview.postsWithIP)}
+            icon={<FileText className="w-8 h-8 text-white" />}
+            subtitle={`Out of ${formatNumber(overview.totalPosts)} posts`}
+          />
+          <KPIChip
+            label="Total EMV"
+            value={formatCurrency(overview.totalEmv)}
+            icon={<DollarSign className="w-8 h-8 text-white" />}
+            subtitle="Estimated earned media value"
+          />
+        </div>
+      </div>
+
+      {/* Key Insights Module */}
+      <div>
+        <div className="mb-4">
+          <SectionHeader primary="KEY " secondary="INSIGHTS" />
+        </div>
+        <div className="grid md:grid-cols-3 gap-4">
+          <GlassCard>
+            <div className="flex items-start gap-3">
+              <div
+                className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
+                style={{ backgroundColor: `${colors.scarlet}15` }}
+              >
+                <Lightbulb className="w-5 h-5" style={{ color: colors.scarlet }} />
+              </div>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                Collaboration posts drive{' '}
+                <span className="font-bold" style={{ color: colors.scarlet }}>
+                  {overview.collaboration.delta.toFixed(2)}% higher engagement
+                </span>{' '}
+                -- the strongest IP signal.
+              </p>
+            </div>
+          </GlassCard>
+          <GlassCard>
+            <div className="flex items-start gap-3">
+              <div
+                className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
+                style={{ backgroundColor: `${colors.scarlet}15` }}
+              >
+                <Lightbulb className="w-5 h-5" style={{ color: colors.scarlet }} />
+              </div>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                Ohio State leads Big Ten in mention rate at{' '}
+                <span className="font-bold" style={{ color: colors.scarlet }}>21.6%</span>, outperforming
+                the conference avg by{' '}
+                <span className="font-bold" style={{ color: colors.scarlet }}>15.0%</span>.
+              </p>
+            </div>
+          </GlassCard>
+          <GlassCard>
+            <div className="flex items-start gap-3">
+              <div
+                className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
+                style={{ backgroundColor: `${colors.scarlet}15` }}
+              >
+                <Lightbulb className="w-5 h-5" style={{ color: colors.scarlet }} />
+              </div>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                <span className="font-bold">{formatNumber(overview.postsWithIP)} posts</span> ({overview.ipAdoptionRate}%) feature Ohio State IP,
+                generating{' '}
+                <span className="font-bold" style={{ color: colors.scarlet }}>
+                  {formatCurrency(overview.totalEmv)}
+                </span>{' '}
+                in earned media value.
+              </p>
+            </div>
+          </GlassCard>
+        </div>
+      </div>
+
+      {/* Performance by IP Mode */}
+      <div>
+        <div className="mb-4">
+          <SectionHeader primary="PERFORMANCE " secondary="BY IP MODE" />
+        </div>
+        <div className="grid md:grid-cols-3 gap-4">
+          <IPModeCard
+            title="Collaboration"
+            icon={<Handshake className="w-5 h-5" style={{ color: colors.scarlet }} />}
+            posts={overview.collaboration.posts}
+            delta={overview.collaboration.delta}
+            avgEngagement={formatPercent(overview.collaboration.engagementRate)}
+            emv={formatCurrency(collabEMV)}
+            tooltip="Athlete posts co-authored or tagged with official Ohio State account"
+            opportunity={`Only ${formatNumber(overview.collaboration.posts)} collab posts exist. Scaling collaborations could significantly amplify total EMV.`}
+          />
+          <IPModeCard
+            title="Visual IP"
+            icon={<Camera className="w-5 h-5" style={{ color: colors.scarlet }} />}
+            posts={overview.logo.posts}
+            delta={overview.logo.delta}
+            avgEngagement={formatPercent(overview.logo.engagementRate)}
+            emv={formatCurrency(logoEMV)}
+            tooltip="Athlete posts with Ohio State logo detected in media"
+            opportunity="Logo usage at 8.2% trails Big Ten avg of 27.0%. Increasing visual IP adoption is the biggest growth lever."
+          />
+          <IPModeCard
+            title="Mention"
+            icon={<AtSign className="w-5 h-5" style={{ color: colors.scarlet }} />}
+            posts={overview.mention.posts}
+            delta={overview.mention.delta}
+            avgEngagement={formatPercent(overview.mention.engagementRate)}
+            emv={formatCurrency(mentionEMV)}
+            tooltip="Athlete posts with @mention or text reference to Ohio State"
+            opportunity="Mention rate leads Big Ten at 21.6%. Continue encouraging organic @OhioStateFB references."
+          />
+        </div>
+      </div>
+
+      {/* Data Source Context Banner */}
+      <div
+        className="rounded-2xl px-5 py-4 flex items-start gap-3"
+        style={{
+          backgroundColor: `${colors.accent}08`,
+          border: `1px solid ${colors.accent}20`,
+        }}
+      >
+        <Info className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: colors.accent }} />
+        <div>
+          <p className="text-sm font-semibold text-gray-800 mb-1">Data Source Context</p>
+          <p className="text-sm text-gray-600">
+            Data reflects <span className="font-semibold">Ohio State athlete personal social media accounts</span>, not official team pages.
+            Metrics track how athletes use Ohio State IP (logos, mentions, collaborations) in their own content.
+            EMV calculated as: (Total Likes x $0.50) + (Total Comments x $1.50). Analysis covers{' '}
+            <span className="font-semibold">{formatNumber(overview.totalPosts)} posts</span> from{' '}
+            <span className="font-semibold">{formatNumber(ipData.totalFollowers)} combined followers</span>.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════
+// WITH VS WITHOUT TAB
+// ═══════════════════════════════════════════════════════════════
+function WithVsWithoutTab({
+  sportData,
+  overviewData,
+}: {
+  sportData: SportSignalData;
+  overviewData?: OverviewData | null;
+}) {
+  const [selectedSignal, setSelectedSignal] = useState<'collab' | 'logo' | 'mention'>('mention');
+  const [selectedMetric, setSelectedMetric] = useState<'engagement' | 'likes' | 'comments'>('engagement');
+  const [selectedSport, setSelectedSport] = useState<string>('ALL_SPORTS');
+
+  const sports = useMemo(() => {
+    const sportKeys = Object.keys(sportData)
+      .filter((key) => key !== 'ALL_SPORTS')
+      .sort((a, b) => formatSportLabel(a).localeCompare(formatSportLabel(b)));
+
+    return [
+      { id: 'ALL_SPORTS', label: 'All Sports' },
+      ...sportKeys.map((key) => ({ id: key, label: formatSportLabel(key) })),
+    ];
+  }, [sportData]);
+
+  useEffect(() => {
+    if (!sports.some((sport) => sport.id === selectedSport)) {
+      setSelectedSport('ALL_SPORTS');
+    }
+  }, [sports, selectedSport]);
+
+  const overviewSignalData = overviewData ?? {
+    collaboration: ipData.collaboration,
+    logo: ipData.logo,
+    mention: ipData.mention,
+  };
+
+  const signals: { id: 'collab' | 'logo' | 'mention'; label: string; data: IPSignalData }[] = [
+    { id: 'collab', label: 'Collab', data: overviewSignalData.collaboration },
+    { id: 'logo', label: 'Visual IP', data: overviewSignalData.logo },
+    { id: 'mention', label: 'Mention', data: overviewSignalData.mention },
+  ];
+
+  const metrics: { id: 'engagement' | 'likes' | 'comments'; label: string }[] = [
+    { id: 'engagement', label: 'Engagement Rate' },
+    { id: 'likes', label: 'Avg Likes' },
+    { id: 'comments', label: 'Avg Comments' },
+  ];
+
+  const currentSignal = signals.find((s) => s.id === selectedSignal);
+
+  // Get data for selected sport and signal
+  const currentSportData = selectedSport === 'ALL_SPORTS' ? undefined : sportData[selectedSport];
+  const currentSignalData = currentSportData?.[selectedSignal];
+
+  // Use sport-specific data if available, otherwise fall back to overall data
+  const withoutEngRate = currentSignalData?.without?.engagementRate || currentSignal?.data?.baselineEngRate || 0;
+  const withEngRate = currentSignalData?.with?.engagementRate || currentSignal?.data?.engagementRate || 0;
+  const withoutPosts = currentSignalData?.without?.posts || currentSignal?.data?.baselinePosts || 0;
+  const withPosts = currentSignalData?.with?.posts || currentSignal?.data?.posts || 0;
+
+  // Avg likes/comments per post from sport data
+  const baselineAvgLikes = currentSignalData?.without?.avgLikes || currentSignal?.data?.baselineLikes || 0;
+  const baselineAvgComments = currentSignalData?.without?.avgComments || currentSignal?.data?.baselineComments || 0;
+  const withAvgLikes = currentSignalData?.with?.avgLikes || currentSignal?.data?.likes || 0;
+  const withAvgComments = currentSignalData?.with?.avgComments || currentSignal?.data?.comments || 0;
+
+  // Calculate deltas
+  const engDelta = withoutEngRate > 0 ? ((withEngRate - withoutEngRate) / withoutEngRate) * 100 : 0;
+  const likesDelta = baselineAvgLikes > 0 ? ((withAvgLikes - baselineAvgLikes) / baselineAvgLikes) * 100 : 0;
+  const commentsDelta = baselineAvgComments > 0 ? ((withAvgComments - baselineAvgComments) / baselineAvgComments) * 100 : 0;
+
+  // Get current metric values based on selection
+  const getMetricValues = () => {
+    switch (selectedMetric) {
+      case 'engagement':
+        return {
+          withoutValue: formatPercent(withoutEngRate),
+          withValue: formatPercent(withEngRate),
+          withoutRaw: withoutEngRate,
+          withRaw: withEngRate,
+          delta: engDelta,
+          isPercent: true,
+        };
+      case 'likes':
+        return {
+          withoutValue: formatNumber(Math.round(baselineAvgLikes)),
+          withValue: formatNumber(Math.round(withAvgLikes)),
+          withoutRaw: baselineAvgLikes,
+          withRaw: withAvgLikes,
+          delta: likesDelta,
+          isPercent: false,
+        };
+      case 'comments':
+        return {
+          withoutValue: formatNumber(Math.round(baselineAvgComments)),
+          withValue: formatNumber(Math.round(withAvgComments)),
+          withoutRaw: baselineAvgComments,
+          withRaw: withAvgComments,
+          delta: commentsDelta,
+          isPercent: false,
+        };
+    }
+  };
+
+  const metricValues = getMetricValues();
+  const getLiftBarWidth = (delta: number) => Math.min(Math.abs(delta), 300) / 3;
+
+  return (
+    <div className="space-y-5">
+      <div
+        className="rounded-2xl border p-5 md:p-6"
+        style={{ borderColor: colors.glassBorder, background: 'linear-gradient(180deg, #fff 0%, #fafafa 100%)' }}
+      >
+        <p
+          className="text-2xl md:text-3xl font-black leading-tight"
+          style={{ color: colors.text }}
+        >
+          Posts with Ohio State {currentSignal?.label.toLowerCase()} drive{' '}
+          <span style={{ color: colors.scarlet }}>{formatDelta(engDelta)}</span> higher engagement rate.
+        </p>
+        <div className="mt-3 flex flex-wrap items-center gap-3">
+          <span
+            className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold"
+            style={{ backgroundColor: `${colors.scarlet}12`, color: colors.scarlet }}
+          >
+            {formatSportLabel(selectedSport)}
+          </span>
+          <span className="text-xs text-gray-500">
+            Signal: {currentSignal?.label}
+          </span>
+        </div>
+      </div>
+
+      <div
+        className="rounded-xl px-4 py-3 text-xs"
+        style={{ backgroundColor: `${colors.accent}0D`, border: `1px solid ${colors.accent}33`, color: colors.textMuted }}
+      >
+        Engagement rate is estimated as <span className="font-semibold">(likes + comments) / athlete followers</span> using mapped Ohio athlete follower totals.
+      </div>
+
+      {/* Filters Row */}
+      <div className="flex flex-col lg:flex-row lg:items-end gap-5">
+        {/* Sport Filter */}
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Team / Sport</p>
+          <div className="relative">
+            <select
+              value={selectedSport}
+              onChange={(e) => setSelectedSport(e.target.value)}
+              className="px-4 py-2.5 pr-10 text-sm font-semibold rounded-xl border appearance-none cursor-pointer"
+              style={{
+                backgroundColor: colors.white,
+                color: colors.text,
+                borderColor: colors.glassBorder,
+                transition,
+              }}
+            >
+              {sports.map((sport) => (
+                <option key={sport.id} value={sport.id}>
+                  {sport.label}
+                </option>
+              ))}
+            </select>
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+              <ChevronDown className="w-4 h-4 text-gray-400" />
+            </div>
+          </div>
+        </div>
+
+        {/* Signal Filter */}
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">IP Signal</p>
+          <div
+            className="inline-flex rounded-xl p-1"
+            style={{ backgroundColor: colors.lightBg, border: `1px solid ${colors.glassBorder}` }}
+          >
+            {signals.map((signal) => {
+              const isActive = selectedSignal === signal.id;
+              return (
+                <button
+                  key={signal.id}
+                  onClick={() => setSelectedSignal(signal.id)}
+                  className="px-4 py-2 text-sm font-semibold rounded-lg transition-all motion-reduce:transition-none"
+                  style={{
+                    background: isActive
+                      ? `linear-gradient(135deg, ${colors.scarlet} 0%, ${colors.scarletDark} 100%)`
+                      : 'transparent',
+                    color: isActive ? colors.white : colors.textMuted,
+                    boxShadow: isActive ? '0 2px 8px rgba(186, 12, 47, 0.28)' : 'none',
+                  }}
+                >
+                  {signal.label}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Metric Filter */}
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Metric</p>
+          <SegmentedToggle
+            options={metrics}
+            value={selectedMetric}
+            onChange={setSelectedMetric}
+          />
+        </div>
+      </div>
+
+      <GlassCard>
+        <p className="text-xs uppercase tracking-wider text-gray-500 mb-3">Directional Comparison</p>
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-3 items-stretch">
+          <div className="md:col-span-4 rounded-xl border p-4 bg-white" style={{ borderColor: colors.glassBorder }}>
+            <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Without {currentSignal?.label}</p>
+            <p className="text-3xl font-black text-gray-700">{metricValues.withoutValue}</p>
+            <p className="text-xs text-gray-500 mt-1">{formatNumber(withoutPosts)} posts</p>
+          </div>
+
+          <div
+            className="md:col-span-4 rounded-xl border-2 p-5 md:p-6 flex flex-col justify-center items-center text-center md:scale-[1.03]"
+            style={{
+              borderColor: `${colors.scarlet}55`,
+              background: `linear-gradient(180deg, ${colors.scarlet}08 0%, ${colors.scarlet}12 100%)`,
+              boxShadow: '0 10px 26px rgba(186, 12, 47, 0.16)',
+            }}
+          >
+            <p className="text-xs uppercase tracking-wider font-semibold mb-1" style={{ color: colors.scarlet }}>
+              Lift Highlight
+            </p>
+            <p className="text-5xl font-black" style={{ color: colors.scarlet }}>
+              {formatDelta(metricValues.delta)}
+            </p>
+            <p className="text-xs text-gray-500 mt-1">With vs Without</p>
+          </div>
+
+          <div
+            className="md:col-span-4 rounded-xl border p-4 bg-white"
+            style={{ borderColor: colors.glassBorder }}
+          >
+            <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: colors.scarlet }}>
+              With {currentSignal?.label}
+            </p>
+            <p className="text-3xl font-black" style={{ color: colors.scarlet }}>{metricValues.withValue}</p>
+            <p className="text-xs text-gray-500 mt-1">{formatNumber(withPosts)} posts</p>
+          </div>
+        </div>
+      </GlassCard>
+
+      {/* Detailed Comparison Table */}
+      <GlassCard noPadding>
+        <div className="p-5 border-b border-gray-100">
+          <SectionHeader primary="DETAILED " secondary="COMPARISON" />
+          <p className="text-sm text-gray-500 mt-2">
+            Complete performance breakdown with and without {currentSignal?.label}
+          </p>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full">
+            <thead>
+              <tr style={{ backgroundColor: colors.lightBg }}>
+                <th className="text-left px-5 py-3 text-xs font-semibold uppercase tracking-wider text-gray-600 sticky top-0" style={{ backgroundColor: colors.lightBg }}>
+                  Metric
+                </th>
+                <th className="text-right px-5 py-3 text-xs font-semibold uppercase tracking-wider text-gray-600 sticky top-0" style={{ backgroundColor: colors.lightBg }}>
+                  Without {currentSignal?.label}
+                </th>
+                <th className="text-right px-5 py-3 text-xs font-semibold uppercase tracking-wider text-gray-600 sticky top-0" style={{ backgroundColor: colors.lightBg }}>
+                  <span className="inline-flex items-center justify-end gap-1">
+                    With {currentSignal?.label}
+                    <Tooltip content={`Sample size: ${formatNumber(withPosts)} with-signal posts vs ${formatNumber(withoutPosts)} without-signal posts.`}>
+                      <Info className="w-3.5 h-3.5 text-gray-400 cursor-help" />
+                    </Tooltip>
+                  </span>
+                </th>
+                <th className="text-right px-5 py-3 text-xs font-semibold uppercase tracking-wider text-gray-600 sticky top-0" style={{ backgroundColor: colors.lightBg }}>
+                  Lift
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-gray-100">
+                <td className="px-5 py-4">
+                  <div className="flex items-center gap-2">
+                    <TrendingUp className="w-4 h-4 text-gray-400" />
+                    <span className="font-semibold text-gray-900">Engagement Rate</span>
+                  </div>
+                </td>
+                <td className="px-5 py-4 text-right text-gray-600">{formatPercent(withoutEngRate)}</td>
+                <td className="px-5 py-4 text-right font-semibold text-gray-900">{formatPercent(withEngRate)}</td>
+                <td className="px-5 py-4 text-right">
+                  <div className="inline-flex flex-col items-end gap-1">
+                    <span
+                      className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-bold"
+                      style={{
+                        backgroundColor: engDelta >= 0 ? `${colors.positive}15` : `${colors.negative}15`,
+                        color: engDelta >= 0 ? colors.positive : colors.negative,
+                      }}
+                    >
+                      {formatDelta(engDelta)}
+                    </span>
+                    <div className="w-20 h-1.5 rounded-full bg-gray-200 overflow-hidden">
+                      <div
+                        className="h-full"
+                        style={{
+                          width: `${getLiftBarWidth(engDelta)}%`,
+                          backgroundColor: engDelta >= 0 ? colors.positive : colors.negative,
+                        }}
+                      />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr className="border-b border-gray-100">
+                <td className="px-5 py-4">
+                  <div className="flex items-center gap-2">
+                    <Heart className="w-4 h-4 text-gray-400" />
+                    <span className="font-semibold text-gray-900">Avg Likes per Post</span>
+                  </div>
+                </td>
+                <td className="px-5 py-4 text-right text-gray-600">{formatNumber(Math.round(baselineAvgLikes))}</td>
+                <td className="px-5 py-4 text-right font-semibold text-gray-900">{formatNumber(Math.round(withAvgLikes))}</td>
+                <td className="px-5 py-4 text-right">
+                  <div className="inline-flex flex-col items-end gap-1">
+                    <span
+                      className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-bold"
+                      style={{
+                        backgroundColor: likesDelta >= 0 ? `${colors.positive}15` : `${colors.negative}15`,
+                        color: likesDelta >= 0 ? colors.positive : colors.negative,
+                      }}
+                    >
+                      {formatDelta(likesDelta)}
+                    </span>
+                    <div className="w-20 h-1.5 rounded-full bg-gray-200 overflow-hidden">
+                      <div
+                        className="h-full"
+                        style={{
+                          width: `${getLiftBarWidth(likesDelta)}%`,
+                          backgroundColor: likesDelta >= 0 ? colors.positive : colors.negative,
+                        }}
+                      />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr className="border-b border-gray-100">
+                <td className="px-5 py-4">
+                  <div className="flex items-center gap-2">
+                    <MessageCircle className="w-4 h-4 text-gray-400" />
+                    <span className="font-semibold text-gray-900">Avg Comments per Post</span>
+                  </div>
+                </td>
+                <td className="px-5 py-4 text-right text-gray-600">{formatNumber(Math.round(baselineAvgComments))}</td>
+                <td className="px-5 py-4 text-right font-semibold text-gray-900">{formatNumber(Math.round(withAvgComments))}</td>
+                <td className="px-5 py-4 text-right">
+                  <div className="inline-flex flex-col items-end gap-1">
+                    <span
+                      className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-bold"
+                      style={{
+                        backgroundColor: commentsDelta >= 0 ? `${colors.positive}15` : `${colors.negative}15`,
+                        color: commentsDelta >= 0 ? colors.positive : colors.negative,
+                      }}
+                    >
+                      {formatDelta(commentsDelta)}
+                    </span>
+                    <div className="w-20 h-1.5 rounded-full bg-gray-200 overflow-hidden">
+                      <div
+                        className="h-full"
+                        style={{
+                          width: `${getLiftBarWidth(commentsDelta)}%`,
+                          backgroundColor: commentsDelta >= 0 ? colors.positive : colors.negative,
+                        }}
+                      />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td className="px-5 py-4">
+                  <div className="flex items-center gap-2">
+                    <FileText className="w-4 h-4 text-gray-400" />
+                    <span className="font-semibold text-gray-900">Post Volume</span>
+                  </div>
+                </td>
+                <td className="px-5 py-4 text-right text-gray-600">{formatNumber(withoutPosts)} posts</td>
+                <td className="px-5 py-4 text-right font-semibold text-gray-900">{formatNumber(withPosts)} posts</td>
+                <td className="px-5 py-4 text-right">
+                  <span className="text-xs text-gray-500">
+                    {((withPosts / (withPosts + withoutPosts)) * 100).toFixed(1)}% of total
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </GlassCard>
+
+    </div>
+  );
+}
+// ═══════════════════════════════════════════════════════════════
+// PARTNERSHIPS TAB
+// ═══════════════════════════════════════════════════════════════
+function PartnershipsTab() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortKey, setSortKey] = useState<keyof Partnership>('emv');
+  const [sortDir, setSortDir] = useState<'asc' | 'desc'>('desc');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [brandLogoMap, setBrandLogoMap] = useState<Record<string, string>>({});
+  const pageSize = 20;
+
+  const normalizeBrandKey = (brand: string) => brand.toLowerCase().replace(/^@/, '').replace(/[^a-z0-9]/g, '');
+  const getBrandInitials = (brand: string) => brand.replace('@', '').trim().slice(0, 2).toUpperCase();
+  const getBrandLogo = (brand: string) => brandLogoMap[normalizeBrandKey(brand)];
+
+  useEffect(() => {
+    let canceled = false;
+
+    const loadBrandLogos = async () => {
+      try {
+        const response = await fetch('/data/socialMedia.brands.json');
+        if (!response.ok) return;
+        const rows = (await response.json()) as Array<{ name?: string; logo?: string }>;
+        const nextMap: Record<string, string> = {};
+        for (const row of rows) {
+          if (!row?.name || !row?.logo) continue;
+          const key = normalizeBrandKey(row.name);
+          if (key && !nextMap[key]) {
+            nextMap[key] = row.logo;
+          }
+        }
+        if (!canceled) {
+          setBrandLogoMap(nextMap);
+        }
+      } catch {
+        // Keep initials fallback when logos are unavailable.
+      }
+    };
+
+    loadBrandLogos();
+    return () => {
+      canceled = true;
+    };
+  }, []);
+
+  const sortOptions: { key: keyof Partnership; label: string; icon: React.ReactNode }[] = [
+    { key: 'emv', label: 'EMV', icon: <DollarSign className="w-3.5 h-3.5" /> },
+    { key: 'avgLikes', label: 'Avg Likes', icon: <Heart className="w-3.5 h-3.5" /> },
+    { key: 'avgComments', label: 'Avg Comments', icon: <MessageCircle className="w-3.5 h-3.5" /> },
+    { key: 'liftMultiplier', label: 'Eng Lift', icon: <TrendingUp className="w-3.5 h-3.5" /> },
+    { key: 'posts', label: 'Posts', icon: <FileText className="w-3.5 h-3.5" /> },
+  ];
+
+  const getPartnershipEMV = (partnership: Partnership): number =>
+    calculateEMV(partnership.avgLikes * partnership.posts, partnership.avgComments * partnership.posts);
+
+  const allSorted = useMemo(() => {
+    const result = [...ipData.partnerships];
+    result.sort((a, b) => {
+      if (sortKey === 'emv') {
+        const aEmv = getPartnershipEMV(a);
+        const bEmv = getPartnershipEMV(b);
+        return sortDir === 'desc' ? bEmv - aEmv : aEmv - bEmv;
+      }
+      const aVal = a[sortKey];
+      const bVal = b[sortKey];
+      if (typeof aVal === 'number' && typeof bVal === 'number') {
+        return sortDir === 'desc' ? bVal - aVal : aVal - bVal;
+      }
+      return sortDir === 'desc'
+        ? String(bVal).localeCompare(String(aVal))
+        : String(aVal).localeCompare(String(bVal));
+    });
+    return result;
+  }, [sortKey, sortDir]);
+
+  const top10 = allSorted.slice(0, 10);
+
+  const filteredAndSorted = useMemo(() => {
+    let result = [...allSorted];
+    if (searchTerm) {
+      const term = searchTerm.toLowerCase();
+      result = result.filter((p) => p.brand.toLowerCase().includes(term));
+    }
+    return result;
+  }, [allSorted, searchTerm]);
+
+  const totalPages = Math.ceil(filteredAndSorted.length / pageSize);
+  const paginatedData = filteredAndSorted.slice((currentPage - 1) * pageSize, currentPage * pageSize);
+
+  const handleSort = (key: keyof Partnership) => {
+    if (sortKey === key) {
+      setSortDir(sortDir === 'desc' ? 'asc' : 'desc');
+    } else {
+      setSortKey(key);
+      setSortDir('desc');
+    }
+    setCurrentPage(1);
+  };
+
+  const SortIcon = ({ columnKey }: { columnKey: keyof Partnership }) => {
+    if (sortKey !== columnKey) return null;
+    return sortDir === 'desc' ? (
+      <ChevronDown className="w-3.5 h-3.5 inline ml-0.5" />
+    ) : (
+      <ChevronUp className="w-3.5 h-3.5 inline ml-0.5" />
+    );
+  };
+
+  const getDisplayValue = (p: Partnership) => {
+    switch (sortKey) {
+      case 'emv': return formatCurrency(getPartnershipEMV(p));
+      case 'avgLikes': return formatNumber(p.avgLikes);
+      case 'avgComments': return formatNumber(p.avgComments);
+      case 'liftMultiplier': return formatLift(p.liftMultiplier);
+      case 'posts': return p.posts.toString();
+      default: return '';
+    }
+  };
+
+  return (
+    <div className="space-y-6">
+      {/* Sort Options */}
+      <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Sort By</p>
+          <div className="inline-flex flex-wrap rounded-xl overflow-hidden border border-gray-200 bg-white w-fit">
+            {sortOptions.map((option) => (
+              <button
+                key={option.key}
+                onClick={() => handleSort(option.key)}
+                className="flex items-center gap-1.5 px-3 sm:px-4 py-2.5 text-xs sm:text-sm font-semibold transition-all"
+                style={{
+                  backgroundColor: sortKey === option.key ? colors.scarlet : 'transparent',
+                  color: sortKey === option.key ? colors.white : colors.text,
+                }}
+              >
+                {option.icon}
+                <span className="hidden sm:inline">{option.label}</span>
+                <span className="sm:hidden">{option.label.split(' ').pop()}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+        <p className="text-sm text-gray-400 self-end whitespace-nowrap">
+          {ipData.partnerships.length} partnerships
+        </p>
+      </div>
+
+      {/* Top 10 Highlight Cards */}
+      <div>
+        <div className="mb-4">
+          <SectionHeader primary="TOP 10 " secondary={'BY ' + (sortOptions.find(o => o.key === sortKey)?.label.toUpperCase() || '')} />
+        </div>
+
+        {/* Desktop: 2x5 grid / Mobile: horizontal scroll */}
+        <div className="hidden md:grid md:grid-cols-5 gap-3">
+          {top10.map((partner, idx) => (
+            <div
+              key={partner.brand}
+              className="rounded-2xl p-4 bg-white hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 relative overflow-hidden group"
+              style={{
+                boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.08)',
+                borderLeft: idx < 3 ? `4px solid ${colors.scarlet}` : '4px solid transparent',
+              }}
+            >
+              {/* Subtle gradient bg for top 3 */}
+              {idx < 3 && (
+                <div
+                  className="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity"
+                  style={{ background: `linear-gradient(135deg, ${colors.scarlet}, transparent)` }}
+                />
+              )}
+              <div className="relative z-10">
+                <div className="flex items-center gap-2 mb-3">
+                  <span
+                    className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0"
+                    style={{
+                      backgroundColor: idx < 3 ? colors.scarlet : '#e5e7eb',
+                      color: idx < 3 ? colors.white : colors.text,
+                    }}
+                  >
+                    {idx + 1}
+                  </span>
+                  <div className="w-7 h-7 rounded-full bg-gray-100 overflow-hidden flex-shrink-0">
+                    {getBrandLogo(partner.brand) ? (
+                      <img
+                        src={getBrandLogo(partner.brand)}
+                        alt={partner.brand}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-[10px] font-bold text-gray-500">
+                        {getBrandInitials(partner.brand)}
+                      </div>
+                    )}
+                  </div>
+                  <p className="text-sm font-semibold text-gray-900 truncate flex-1" title={partner.brand}>
+                    {partner.brand.replace('@', '')}
+                  </p>
+                </div>
+                <p className="text-2xl font-black" style={{ color: colors.scarlet }}>
+                  {getDisplayValue(partner)}
+                </p>
+                <p className="text-xs text-gray-400 mt-1">
+                  {partner.posts} {partner.posts === 1 ? 'post' : 'posts'}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile: Horizontal scroll */}
+        <div className="md:hidden -mx-4 px-4">
+          <div className="flex gap-3 overflow-x-auto pb-3 snap-x snap-mandatory scrollbar-hide" style={{ WebkitOverflowScrolling: 'touch' }}>
+            {top10.map((partner, idx) => (
+              <div
+                key={partner.brand}
+                className="rounded-2xl p-4 bg-white flex-shrink-0 w-[160px] snap-start relative overflow-hidden"
+                style={{
+                  boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.08)',
+                  borderLeft: idx < 3 ? `4px solid ${colors.scarlet}` : '4px solid transparent',
+                }}
+              >
+                <div className="flex items-center gap-2 mb-3">
+                  <span
+                    className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0"
+                    style={{
+                      backgroundColor: idx < 3 ? colors.scarlet : '#e5e7eb',
+                      color: idx < 3 ? colors.white : colors.text,
+                    }}
+                  >
+                    {idx + 1}
+                  </span>
+                  <div className="w-6 h-6 rounded-full bg-gray-100 overflow-hidden flex-shrink-0">
+                    {getBrandLogo(partner.brand) ? (
+                      <img
+                        src={getBrandLogo(partner.brand)}
+                        alt={partner.brand}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-[9px] font-bold text-gray-500">
+                        {getBrandInitials(partner.brand)}
+                      </div>
+                    )}
+                  </div>
+                  <p className="text-xs font-semibold text-gray-900 truncate flex-1" title={partner.brand}>
+                    {partner.brand.replace('@', '')}
+                  </p>
+                </div>
+                <p className="text-xl font-black" style={{ color: colors.scarlet }}>
+                  {getDisplayValue(partner)}
+                </p>
+                <p className="text-xs text-gray-400 mt-1">
+                  {partner.posts} {partner.posts === 1 ? 'post' : 'posts'}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Full Table Section */}
+      <div>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+          <SectionHeader primary="ALL " secondary="PARTNERSHIPS" />
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+            <input
+              type="text"
+              placeholder="Search partners..."
+              value={searchTerm}
+              onChange={(e) => {
+                setSearchTerm(e.target.value);
+                setCurrentPage(1);
+              }}
+              className="pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 text-sm w-full sm:w-64 bg-white focus:outline-none focus:ring-2 focus:border-transparent transition-shadow"
+              style={{ '--tw-ring-color': `${colors.scarlet}40` } as React.CSSProperties}
+            />
+          </div>
+        </div>
+
+        {/* Desktop Table */}
+        <div className="rounded-2xl overflow-hidden bg-white shadow-sm">
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <thead>
+                <tr style={{ backgroundColor: colors.scarlet }}>
+                  <th className="text-center px-2 py-3.5 text-xs font-semibold uppercase tracking-wider text-white w-12">
+                    #
+                  </th>
+                  <th
+                    className="text-left px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white cursor-pointer hover:bg-white/10 transition-colors hidden md:table-cell"
+                    onClick={() => handleSort('brand')}
+                  >
+                    Partner <SortIcon columnKey="brand" />
+                  </th>
+                  <th className="text-left px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white md:hidden">
+                    Partner
+                  </th>
+                  <th
+                    className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white cursor-pointer hover:bg-white/10 transition-colors hidden md:table-cell"
+                    onClick={() => handleSort('posts')}
+                  >
+                    Posts <SortIcon columnKey="posts" />
+                  </th>
+                  <th
+                    className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white cursor-pointer hover:bg-white/10 transition-colors hidden md:table-cell"
+                    onClick={() => handleSort('avgLikes')}
+                  >
+                    Avg Likes <SortIcon columnKey="avgLikes" />
+                  </th>
+                  <th
+                    className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white cursor-pointer hover:bg-white/10 transition-colors hidden md:table-cell"
+                    onClick={() => handleSort('avgComments')}
+                  >
+                    Avg Comments <SortIcon columnKey="avgComments" />
+                  </th>
+                  <th
+                    className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider cursor-pointer hover:bg-white/10 transition-colors hidden md:table-cell"
+                    style={{ color: sortKey === 'emv' ? '#fcd34d' : '#ffffff' }}
+                    onClick={() => handleSort('emv')}
+                  >
+                    EMV <SortIcon columnKey="emv" />
+                  </th>
+                  <th
+                    className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white cursor-pointer hover:bg-white/10 transition-colors hidden md:table-cell"
+                    onClick={() => handleSort('liftMultiplier')}
+                  >
+                    Eng Lift <SortIcon columnKey="liftMultiplier" />
+                  </th>
+                  {/* Mobile: single value column */}
+                  <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white md:hidden">
+                    {sortOptions.find(o => o.key === sortKey)?.label}
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {paginatedData.map((partnership, index) => {
+                  const globalRank = (currentPage - 1) * pageSize + index + 1;
+                  return (
+                    <tr
+                      key={partnership.brand}
+                      className={`border-b border-gray-100 hover:bg-gray-50 transition-colors ${index % 2 === 1 ? 'bg-gray-50/50' : ''}`}
+                    >
+                      <td className="px-2 py-3 text-center">
+                        <span
+                          className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mx-auto"
+                          style={{
+                            backgroundColor: globalRank <= 3 ? colors.scarlet : '#e5e7eb',
+                            color: globalRank <= 3 ? colors.white : colors.textMuted,
+                          }}
+                        >
+                          {globalRank}
+                        </span>
+                      </td>
+                      {/* Desktop: Partner name */}
+                      <td className="px-4 py-3 hidden md:table-cell">
+                        <div className="flex items-center gap-3">
+                          <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center overflow-hidden flex-shrink-0">
+                            {getBrandLogo(partnership.brand) ? (
+                              <img
+                                src={getBrandLogo(partnership.brand)}
+                                alt={partnership.brand}
+                                className="w-full h-full object-cover"
+                              />
+                            ) : (
+                              <span className="text-xs font-bold text-gray-400">
+                                {getBrandInitials(partnership.brand)}
+                              </span>
+                            )}
+                          </div>
+                          <span className="font-medium text-gray-900">{partnership.brand}</span>
+                        </div>
+                      </td>
+                      {/* Mobile: Partner + stacked details */}
+                      <td className="px-4 py-3 md:hidden">
+                        <div>
+                          <span className="font-medium text-gray-900 text-sm">{partnership.brand}</span>
+                          <div className="flex flex-wrap gap-x-3 gap-y-0.5 mt-1">
+                            <span className="text-xs text-gray-400">{partnership.posts} posts</span>
+                            <span className="text-xs text-gray-400">{formatNumber(partnership.avgLikes)} likes</span>
+                            <span className="text-xs" style={{ color: partnership.liftMultiplier >= 0 ? colors.positive : colors.negative }}>
+                              {formatLift(partnership.liftMultiplier)}
+                            </span>
+                          </div>
+                        </div>
+                      </td>
+                      <td className="px-4 py-3 text-right text-gray-500 hidden md:table-cell">
+                        {partnership.posts}
+                      </td>
+                      <td className="px-4 py-3 text-right text-gray-900 hidden md:table-cell">
+                        {formatNumber(partnership.avgLikes)}
+                      </td>
+                      <td className="px-4 py-3 text-right text-gray-900 hidden md:table-cell">
+                        {formatNumber(partnership.avgComments)}
+                      </td>
+                      <td className="px-4 py-3 text-right font-medium text-gray-900 hidden md:table-cell">
+                        {formatCurrency(getPartnershipEMV(partnership))}
+                      </td>
+                      <td className="px-4 py-3 text-right hidden md:table-cell">
+                        <span
+                          className="inline-flex items-center px-2 py-0.5 rounded-md text-xs font-bold"
+                          style={{
+                            backgroundColor: partnership.liftMultiplier >= 0 ? `${colors.positive}15` : `${colors.negative}15`,
+                            color: partnership.liftMultiplier >= 0 ? colors.positive : colors.negative,
+                          }}
+                        >
+                          {formatLift(partnership.liftMultiplier)}
+                        </span>
+                      </td>
+                      {/* Mobile: primary metric value */}
+                      <td className="px-4 py-3 text-right font-bold md:hidden" style={{ color: colors.scarlet }}>
+                        {getDisplayValue(partnership)}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="flex items-center justify-center gap-2 mt-4">
+            <button
+              onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
+              disabled={currentPage === 1}
+              className="px-4 py-2 rounded-lg border border-gray-200 text-sm font-medium disabled:opacity-40 bg-white hover:bg-gray-50 transition-colors"
+            >
+              Previous
+            </button>
+            <div className="flex items-center gap-1">
+              {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
+                let page: number;
+                if (totalPages <= 5) {
+                  page = i + 1;
+                } else if (currentPage <= 3) {
+                  page = i + 1;
+                } else if (currentPage >= totalPages - 2) {
+                  page = totalPages - 4 + i;
+                } else {
+                  page = currentPage - 2 + i;
+                }
+                return (
+                  <button
+                    key={page}
+                    onClick={() => setCurrentPage(page)}
+                    className="w-9 h-9 rounded-lg text-sm font-semibold transition-colors"
+                    style={{
+                      backgroundColor: currentPage === page ? colors.scarlet : 'transparent',
+                      color: currentPage === page ? colors.white : colors.textMuted,
+                    }}
+                  >
+                    {page}
+                  </button>
+                );
+              })}
+            </div>
+            <button
+              onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
+              disabled={currentPage === totalPages}
+              className="px-4 py-2 rounded-lg border border-gray-200 text-sm font-medium disabled:opacity-40 bg-white hover:bg-gray-50 transition-colors"
+            >
+              Next
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════
+// BEST COLLABORATORS TAB
+// ═══════════════════════════════════════════════════════════════
+function BestCollaboratorsTab() {
+  const [selectedSignal, setSelectedSignal] = useState<'collab' | 'logo' | 'mention'>('collab');
+
+  const signalConfig = {
+    collab: {
+      label: 'Collaboration',
+      shortLabel: 'Collab',
+      icon: <Handshake className="w-5 h-5" />,
+      athletes: topCollabAthletes,
+      stats: signalStats.collab,
+      description: 'Co-authored or tagged with official Ohio State account',
+    },
+    logo: {
+      label: 'Visual IP',
+      shortLabel: 'Logo',
+      icon: <Tag className="w-5 h-5" />,
+      athletes: topLogoAthletes,
+      stats: signalStats.logo,
+      description: 'Ohio State logo detected in post media',
+    },
+    mention: {
+      label: 'Mention',
+      shortLabel: 'Mention',
+      icon: <AtSign className="w-5 h-5" />,
+      athletes: topMentionAthletes,
+      stats: signalStats.mention,
+      description: '@mention or text reference to Ohio State',
+    },
+  };
+
+  const currentConfig = signalConfig[selectedSignal];
+  return (
+    <div className="space-y-6">
+      {/* Summary Cards Row */}
+      <div className="grid grid-cols-3 gap-3 sm:gap-4">
+        {/* Collab Summary */}
+        <button
+          onClick={() => setSelectedSignal('collab')}
+          className="rounded-2xl p-4 sm:p-5 text-center relative overflow-hidden transition-all duration-200 hover:-translate-y-0.5"
+          style={{
+            backgroundColor: selectedSignal === 'collab' ? colors.scarlet : colors.white,
+            boxShadow: selectedSignal === 'collab' ? `0 8px 25px ${colors.scarlet}30` : '0 1px 3px 0 rgb(0 0 0 / 0.08)',
+            border: selectedSignal === 'collab' ? 'none' : '1px solid #e5e7eb',
+          }}
+        >
+          {selectedSignal === 'collab' && (
+            <div
+              className="absolute inset-0 opacity-10"
+              style={{
+                backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
+                backgroundSize: '12px 12px',
+              }}
+            />
+          )}
+          <div className="relative z-10">
+            <Handshake className="w-5 h-5 sm:w-6 sm:h-6 mx-auto mb-2" style={{ color: selectedSignal === 'collab' ? colors.white : colors.scarlet }} />
+            <p className="text-[10px] sm:text-xs uppercase tracking-wider mb-1" style={{ color: selectedSignal === 'collab' ? 'rgba(255,255,255,0.8)' : colors.textMuted }}>
+              Collab Posts
+            </p>
+            <p className="text-2xl sm:text-3xl font-black" style={{ color: selectedSignal === 'collab' ? colors.white : colors.text }}>
+              {signalStats.collab.posts}
+            </p>
+            <p className="text-xs sm:text-sm mt-1 font-semibold" style={{ color: selectedSignal === 'collab' ? 'rgba(255,255,255,0.9)' : colors.positive }}>
+              +{signalStats.collab.lift}% lift
+            </p>
+          </div>
+        </button>
+
+        {/* Logo Summary */}
+        <button
+          onClick={() => setSelectedSignal('logo')}
+          className="rounded-2xl p-4 sm:p-5 text-center relative overflow-hidden transition-all duration-200 hover:-translate-y-0.5"
+          style={{
+            backgroundColor: selectedSignal === 'logo' ? colors.scarlet : colors.white,
+            boxShadow: selectedSignal === 'logo' ? `0 8px 25px ${colors.scarlet}30` : '0 1px 3px 0 rgb(0 0 0 / 0.08)',
+            border: selectedSignal === 'logo' ? 'none' : '1px solid #e5e7eb',
+          }}
+        >
+          {selectedSignal === 'logo' && (
+            <div
+              className="absolute inset-0 opacity-10"
+              style={{
+                backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
+                backgroundSize: '12px 12px',
+              }}
+            />
+          )}
+          <div className="relative z-10">
+            <Tag className="w-5 h-5 sm:w-6 sm:h-6 mx-auto mb-2" style={{ color: selectedSignal === 'logo' ? colors.white : colors.scarlet }} />
+            <p className="text-[10px] sm:text-xs uppercase tracking-wider mb-1" style={{ color: selectedSignal === 'logo' ? 'rgba(255,255,255,0.8)' : colors.textMuted }}>
+              Visual IP Posts
+            </p>
+            <p className="text-2xl sm:text-3xl font-black" style={{ color: selectedSignal === 'logo' ? colors.white : colors.text }}>
+              {formatNumber(signalStats.logo.posts)}
+            </p>
+            <p className="text-xs sm:text-sm mt-1 font-semibold" style={{ color: selectedSignal === 'logo' ? 'rgba(255,255,255,0.9)' : colors.positive }}>
+              +{signalStats.logo.lift}% lift
+            </p>
+          </div>
+        </button>
+
+        {/* Mention Summary */}
+        <button
+          onClick={() => setSelectedSignal('mention')}
+          className="rounded-2xl p-4 sm:p-5 text-center relative overflow-hidden transition-all duration-200 hover:-translate-y-0.5"
+          style={{
+            backgroundColor: selectedSignal === 'mention' ? colors.scarlet : colors.white,
+            boxShadow: selectedSignal === 'mention' ? `0 8px 25px ${colors.scarlet}30` : '0 1px 3px 0 rgb(0 0 0 / 0.08)',
+            border: selectedSignal === 'mention' ? 'none' : '1px solid #e5e7eb',
+          }}
+        >
+          {selectedSignal === 'mention' && (
+            <div
+              className="absolute inset-0 opacity-10"
+              style={{
+                backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
+                backgroundSize: '12px 12px',
+              }}
+            />
+          )}
+          <div className="relative z-10">
+            <AtSign className="w-5 h-5 sm:w-6 sm:h-6 mx-auto mb-2" style={{ color: selectedSignal === 'mention' ? colors.white : colors.scarlet }} />
+            <p className="text-[10px] sm:text-xs uppercase tracking-wider mb-1" style={{ color: selectedSignal === 'mention' ? 'rgba(255,255,255,0.8)' : colors.textMuted }}>
+              Mention Posts
+            </p>
+            <p className="text-2xl sm:text-3xl font-black" style={{ color: selectedSignal === 'mention' ? colors.white : colors.text }}>
+              {formatNumber(signalStats.mention.posts)}
+            </p>
+            <p className="text-xs sm:text-sm mt-1 font-semibold" style={{ color: selectedSignal === 'mention' ? 'rgba(255,255,255,0.9)' : colors.positive }}>
+              +{signalStats.mention.lift}% lift
+            </p>
+          </div>
+        </button>
+      </div>
+
+      {/* Signal Strength Indicator */}
+      <div className="bg-white rounded-2xl p-4 shadow-sm">
+        <div className="flex items-center justify-between mb-2">
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ backgroundColor: `${colors.scarlet}15` }}>
+              {currentConfig.icon}
+            </div>
+            <div>
+              <p className="text-sm font-bold text-gray-900">{currentConfig.label} Signal</p>
+              <p className="text-xs text-gray-500">{currentConfig.description}</p>
+            </div>
+          </div>
+          <div className="text-right">
+            <p className="text-lg font-black" style={{ color: colors.scarlet }}>{formatNumber(currentConfig.stats.posts)}</p>
+            <p className="text-xs text-gray-400">of {formatNumber(ipData.totalPosts)} total</p>
+          </div>
+        </div>
+        {/* Signal strength bar */}
+        <div className="mt-3">
+          <div className="flex items-center justify-between text-xs text-gray-400 mb-1">
+            <span>Sample Size</span>
+            <span>{((currentConfig.stats.posts / ipData.totalPosts) * 100).toFixed(1)}%</span>
+          </div>
+          <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+            <div
+              className="h-full rounded-full transition-all duration-500"
+              style={{
+                width: `${Math.min((currentConfig.stats.posts / ipData.totalPosts) * 100 * 3, 100)}%`,
+                background: `linear-gradient(90deg, ${colors.scarlet}, ${colors.scarletLight || '#d4334f'})`,
+              }}
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Active Signal Table */}
+      <div className="rounded-2xl overflow-hidden bg-white shadow-sm">
+        {/* Table Header Banner */}
+        <div
+          className="px-5 py-4 relative overflow-hidden"
+          style={{ backgroundColor: colors.scarlet }}
+        >
+          <div
+            className="absolute inset-0 opacity-10"
+            style={{
+              backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
+              backgroundSize: '12px 12px',
+            }}
+          />
+          <div className="flex items-center gap-3 relative z-10">
+            <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+              <span style={{ color: colors.white }}>{currentConfig.icon}</span>
+            </div>
+            <div className="flex-1">
+              <h3
+                className="text-white font-bold text-lg uppercase"
+                style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }}
+              >
+                Top {currentConfig.label} Athletes
+              </h3>
+              <p className="text-xs text-white/80">
+                {formatCurrency(currentConfig.stats.avgEmv)} avg EMV per post
+                {' '}&bull;{' '}
+                <span className="text-white font-semibold">+{currentConfig.stats.lift}%</span> engagement lift
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Column Headers */}
+        <div className="hidden md:grid md:grid-cols-[40px_1fr_100px_70px_100px_80px] gap-2 px-5 py-3 text-xs uppercase tracking-wider text-gray-500 border-b border-gray-100 bg-gray-50/50">
+          <span className="text-center">#</span>
+          <span>Athlete</span>
+          <span>Sport</span>
+          <span className="text-center">Posts</span>
+          <span className="text-right">EMV</span>
+          <span className="text-right">Lift</span>
+        </div>
+
+        {/* Athletes List */}
+        <div>
+          {currentConfig.athletes.map((athlete, idx) => (
+            <div
+              key={athlete.name}
+              className={`border-b border-gray-50 hover:bg-gray-50 transition-colors ${idx % 2 === 1 ? 'bg-gray-50/30' : ''}`}
+            >
+              {/* Desktop row */}
+              <div className="hidden md:grid md:grid-cols-[40px_1fr_100px_70px_100px_80px] gap-2 px-5 py-3.5 items-center">
+                <span
+                  className="w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold mx-auto"
+                  style={{
+                    backgroundColor: idx < 3 ? colors.scarlet : 'transparent',
+                    color: idx < 3 ? 'white' : colors.scarlet,
+                    border: idx >= 3 ? `2px solid ${colors.scarlet}` : 'none',
+                  }}
+                >
+                  {athlete.rank}
+                </span>
+                <p className="text-gray-900 font-semibold">{athlete.name}</p>
+                <p className="text-xs text-gray-500">{athlete.sport}</p>
+                <span className="text-center text-gray-600">{athlete.posts}</span>
+                <span className="text-right font-bold" style={{ color: colors.scarlet }}>{formatCurrency(athlete.emv)}</span>
+                <span className="text-right font-medium" style={{ color: colors.positive }}>+{currentConfig.stats.lift}%</span>
+              </div>
+
+              {/* Mobile card */}
+              <div className="md:hidden px-5 py-3.5">
+                <div className="flex items-center gap-3">
+                  <span
+                    className="w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0"
+                    style={{
+                      backgroundColor: idx < 3 ? colors.scarlet : 'transparent',
+                      color: idx < 3 ? 'white' : colors.scarlet,
+                      border: idx >= 3 ? `2px solid ${colors.scarlet}` : 'none',
+                    }}
+                  >
+                    {athlete.rank}
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-semibold text-gray-900 truncate">{athlete.name}</p>
+                    <p className="text-xs text-gray-500">{athlete.sport}</p>
+                  </div>
+                  <div className="text-right flex-shrink-0">
+                    <p className="text-sm font-bold" style={{ color: colors.scarlet }}>{formatCurrency(athlete.emv)}</p>
+                    <p className="text-xs text-gray-400">{athlete.posts} posts</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Info Banner */}
+      <div className="bg-white rounded-2xl shadow-sm px-5 py-4 flex items-start gap-3">
+        <Info className="w-5 h-5 text-gray-400 mt-0.5 flex-shrink-0" />
+        <div className="text-sm text-gray-600 space-y-1">
+          <p>
+            <span className="font-semibold">Methodology:</span> Top 5 athletes for each IP signal type, ranked by total EMV.
+          </p>
+          <p>
+            Lift represents engagement increase vs posts without any IP signals.
+            EMV formula: (Total Likes x $0.50) + (Total Comments x $1.50).
+          </p>
+          <p className="text-xs text-gray-400">
+            Signal types: <span className="font-medium">Collaboration</span> = co-authored posts,
+            <span className="font-medium"> Visual IP</span> = logo in media,
+            <span className="font-medium"> Mention</span> = @reference in caption.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════
+// BENCHMARK TAB
+// ═══════════════════════════════════════════════════════════════
+function BenchmarkTab() {
+  const [benchmarkType, setBenchmarkType] = useState<'conference' | 'ncaa'>('conference');
+  const [rankingMetric, setRankingMetric] = useState<'mention' | 'logo' | 'collab'>('mention');
+  const isConference = benchmarkType === 'conference';
+  const schools = isConference ? big10Schools : ncaaD1Schools;
+  const benchmarkLabel = isConference ? 'Big 10' : 'NCAA D1';
+  const metricOptions: { id: 'mention' | 'logo' | 'collab'; label: string }[] = [
+    { id: 'mention', label: 'Mention %' },
+    { id: 'logo', label: 'Visual IP %' },
+    { id: 'collab', label: 'Collaboration %' },
+  ];
+  const metricLabels = {
+    mention: 'Mention Rate',
+    logo: 'Visual IP Rate',
+    collab: 'Collaboration Rate',
+  } as const;
+  const metricAverage = {
+    mention: isConference ? conferenceAvg.mention : ncaaD1Avg.mention,
+    logo: isConference ? conferenceAvg.logo : ncaaD1Avg.logo,
+    collab: isConference ? conferenceAvg.collab : ncaaD1Avg.collab,
+  };
+
+  const rankedSchools = useMemo(() => {
+    const sorted = [...schools].sort((a, b) => {
+      const aValue = a[rankingMetric];
+      const bValue = b[rankingMetric];
+      return bValue - aValue;
+    });
+    return sorted;
+  }, [schools, rankingMetric]);
+
+  const ohioIndex = rankedSchools.findIndex((school) => school.name === 'Ohio State');
+  const ohioRank = ohioIndex >= 0 ? ohioIndex + 1 : null;
+  const ohioSchool = rankedSchools.find((school) => school.name === 'Ohio State') ?? null;
+  const ohioValue = ohioSchool ? ohioSchool[rankingMetric] : 0;
+  const avgValue = metricAverage[rankingMetric];
+  const deltaVsAvg = ohioValue - avgValue;
+  const topSchool = rankedSchools[0];
+
+  return (
+    <div className="space-y-6">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <SectionHeader primary="IP " secondary="RANKINGS" />
+          <p className="text-sm text-gray-500 mt-2">
+            Ohio State vs {benchmarkLabel} schools ranked by {metricLabels[rankingMetric].toLowerCase()}.
+          </p>
+        </div>
+        <div className="flex items-center gap-3">
+          <div className="flex items-center bg-gray-100 rounded-lg p-0.5">
+            <button
+              onClick={() => setBenchmarkType('conference')}
+              className="px-4 py-1.5 rounded-md text-xs font-semibold transition-all motion-reduce:transition-none"
+              style={{
+                backgroundColor: isConference ? '#fff' : 'transparent',
+                color: isConference ? colors.scarlet : colors.textMuted,
+                boxShadow: isConference ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
+              }}
+            >
+              Big Ten
+            </button>
+            <button
+              onClick={() => setBenchmarkType('ncaa')}
+              className="px-4 py-1.5 rounded-md text-xs font-semibold transition-all motion-reduce:transition-none"
+              style={{
+                backgroundColor: !isConference ? '#fff' : 'transparent',
+                color: !isConference ? colors.scarlet : colors.textMuted,
+                boxShadow: !isConference ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
+              }}
+            >
+              NCAA
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <GlassCard className="p-4">
+        <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Ranking Metric</p>
+        <div className="flex flex-wrap gap-2">
+          {metricOptions.map((option) => (
+            <button
+              key={option.id}
+              onClick={() => setRankingMetric(option.id)}
+              className="px-3 py-1.5 rounded-full text-xs font-semibold border transition-all motion-reduce:transition-none"
+              style={{
+                borderColor: rankingMetric === option.id ? `${colors.scarlet}60` : '#d1d5db',
+                backgroundColor: rankingMetric === option.id ? `${colors.scarlet}12` : '#fff',
+                color: rankingMetric === option.id ? colors.scarlet : colors.textMuted,
+              }}
+            >
+              {option.label}
+            </button>
+          ))}
+        </div>
+      </GlassCard>
+
+      <div className="grid md:grid-cols-3 gap-4">
+        <GlassCard className="p-5">
+          <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Ohio State Rank</p>
+          <div className="flex items-end gap-2">
+            <p className="text-4xl font-black" style={{ color: colors.scarlet }}>
+              {ohioRank ? `#${ohioRank}` : 'N/A'}
+            </p>
+            <p className="text-sm text-gray-500 mb-1">of {rankedSchools.length}</p>
+          </div>
+          <p className="text-xs text-gray-400 mt-2">{metricLabels[rankingMetric]} vs {benchmarkLabel}</p>
+        </GlassCard>
+
+        <GlassCard className="p-5">
+          <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Ohio State Value</p>
+          <div className="flex items-end gap-2">
+            <p className="text-4xl font-black text-gray-900">{ohioValue}%</p>
+            <p
+              className="text-sm font-semibold mb-1"
+              style={{ color: deltaVsAvg >= 0 ? colors.positive : colors.negative }}
+            >
+              {deltaVsAvg >= 0 ? '\u2191' : '\u2193'} {Math.abs(deltaVsAvg).toFixed(rankingMetric === 'collab' ? 2 : 1)}%
+            </p>
+          </div>
+          <p className="text-xs text-gray-400 mt-2">vs {avgValue}% {benchmarkLabel.toLowerCase()} average</p>
+        </GlassCard>
+
+        <div className="rounded-xl border-2 p-5" style={{ borderColor: colors.positive, backgroundColor: `${colors.positive}08` }}>
+          <div className="flex items-center gap-2 mb-2">
+            <Lightbulb className="w-4 h-4" style={{ color: colors.positive }} />
+            <p className="text-xs uppercase tracking-wider font-semibold" style={{ color: colors.positive }}>Key Insight</p>
+          </div>
+          <p className="text-sm text-gray-700">
+            {topSchool
+              ? <>Current leader is <span className="font-semibold">{topSchool.name}</span> at {topSchool[rankingMetric]}%. Ohio State is {ohioRank ? `#${ohioRank}` : 'unranked'} with {ohioValue}%.</>
+              : <>No ranking data available for this view.</>
+            }
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <div className="mb-4">
+          <SectionHeader primary={benchmarkLabel + ' '} secondary="RANKINGS" />
+        </div>
+        <div className="rounded-2xl bg-white overflow-hidden max-h-[500px] overflow-y-auto shadow-sm">
+          <table className="w-full">
+            <thead className="sticky top-0 z-10">
+              <tr style={{ backgroundColor: colors.scarlet }}>
+                <th className="text-center px-3 py-3.5 text-xs font-semibold uppercase tracking-wider text-white w-10">#</th>
+                <th className="text-left px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white">School</th>
+                {!isConference && <th className="text-left px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Conf</th>}
+                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Posts</th>
+                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white">{metricLabels[rankingMetric]}</th>
+                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Visual IP</th>
+                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Mention</th>
+                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Collab</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rankedSchools.map((school, idx) => {
+                const isOSU = school.name === 'Ohio State';
+                return (
+                  <tr
+                    key={school.name}
+                    className={`border-b border-gray-100 transition-colors ${isOSU ? 'bg-red-50 hover:bg-red-100/50' : idx % 2 === 1 ? 'bg-gray-50/50 hover:bg-gray-50' : 'hover:bg-gray-50'}`}
+                  >
+                    <td className="px-3 py-3 text-center">
+                      {idx < 3 ? (
+                        <span
+                          className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold mx-auto"
+                          style={{
+                            backgroundColor: isOSU ? colors.scarlet : '#d1d5db',
+                            color: isOSU ? colors.white : colors.text,
+                          }}
+                        >
+                          {idx + 1}
+                        </span>
+                      ) : isOSU ? (
+                        <span
+                          className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold mx-auto"
+                          style={{ backgroundColor: colors.scarlet, color: colors.white }}
+                        >
+                          {idx + 1}
+                        </span>
+                      ) : (
+                        <span className="text-sm text-gray-400 font-medium">{idx + 1}</span>
+                      )}
+                    </td>
+                    <td className={`px-4 py-3 ${isOSU ? 'font-bold' : 'font-semibold'}`} style={{ color: isOSU ? colors.scarlet : colors.text }}>
+                      <div className="flex items-center gap-2">
+                        {isOSU && (
+                          <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: colors.scarlet }} />
+                        )}
+                        {school.name}
+                        {idx < 3 && (
+                          <span
+                            className="text-[10px] px-1.5 py-0.5 rounded-full font-bold"
+                            style={{
+                              backgroundColor: idx === 0 ? '#fbbf24' : idx === 1 ? '#d1d5db' : '#d97706',
+                              color: idx === 0 ? '#78350f' : idx === 1 ? '#374151' : '#78350f',
+                            }}
+                          >
+                            {idx === 0 ? '1st' : idx === 1 ? '2nd' : '3rd'}
+                          </span>
+                        )}
+                      </div>
+                    </td>
+                    {!isConference && <td className="px-4 py-3 text-xs text-gray-500 hidden md:table-cell">{school.conf}</td>}
+                    <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{formatNumber(school.posts)}</td>
+                    <td className="px-4 py-3 text-right font-semibold" style={{ color: isOSU ? colors.scarlet : colors.text }}>
+                      {school[rankingMetric]}%
+                    </td>
+                    <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.logo}%</td>
+                    <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.mention}%</td>
+                    <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.collab}%</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-gray-400 mt-2">
+          * Rankings based on {metricLabels[rankingMetric].toLowerCase()} across {rankedSchools.length} {isConference ? 'Big 10' : 'NCAA D1'} schools.
+        </p>
+      </div>
+    </div>
+  );
+}
+// ═══════════════════════════════════════════════════════════════
+// CONTENT TAB
+// ═══════════════════════════════════════════════════════════════
+type ContentView = 'athlete' | 'team';
+const MANUAL_WITHOUT_IP_EXCLUDE_IDS = new Set([
+  '6983bc0e989e3d7832b018ef',
+  '698a2cdcb6f9ff8ff0f33cff',
+  '69407b07024ac7059367b63e',
+  '690394b31e4a5fe96ac3a9f5',
+  '6983b436333f8617565e5a29',
+]);
+
+interface AthletePostItem {
+  id: string;
+  thumbnail: string;
+  postLink: string;
+  caption: string;
+  athleteName: string;
+  dateLabel: string;
+  interactions: number;
+  engagementRate: number;
+  emv: number;
+  lift: number;
+  ipSignal: string;
+  withIP: boolean;
+}
+
+interface TeamPostItem {
+  id: string;
+  thumbnail: string;
+  postLink: string;
+  caption: string;
+  teamName: string;
+  schoolName: string;
+  conferenceName: string;
+  dateLabel: string;
+  interactions: number;
+  engagementRate: number;
+}
+
+function ContentTab() {
+  const [contentView, setContentView] = useState<ContentView>('athlete');
+  const [isLoading, setIsLoading] = useState(true);
+  const [athletePosts, setAthletePosts] = useState<AthletePostItem[]>([]);
+  const [ohioTeamPosts, setOhioTeamPosts] = useState<TeamPostItem[]>([]);
+  const [bigTenTeamPosts, setBigTenTeamPosts] = useState<TeamPostItem[]>([]);
+
+  const parseDateLabel = (value: unknown): string => {
+    if (!value) return 'Unknown';
+    const raw = typeof value === 'object' && value !== null && '$date' in (value as Record<string, unknown>)
+      ? (value as { $date?: string }).$date
+      : String(value);
+    const date = new Date(raw || '');
+    return Number.isNaN(date.getTime()) ? 'Unknown' : date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  };
+
+  const getSignalTag = (post: { hasOrganizationLogo?: boolean; hasOrganizationInCaption?: boolean; isOrganizationCollaboration?: boolean }): string => {
+    if (post.isOrganizationCollaboration) return 'Org Collaboration';
+    if (post.hasOrganizationLogo && post.hasOrganizationInCaption) return 'Logo + Mention';
+    if (post.hasOrganizationLogo) return 'Visual IP';
+    if (post.hasOrganizationInCaption) return 'Mention';
+    return 'No IP';
+  };
+
+  const calcMedian = (values: number[]): number => {
+    if (values.length === 0) return 0;
+    const sorted = [...values].sort((a, b) => a - b);
+    const mid = Math.floor(sorted.length / 2);
+    return sorted.length % 2 === 0 ? (sorted[mid - 1] + sorted[mid]) / 2 : sorted[mid];
+  };
+
+  const getCaptionText = (value: unknown): string => {
+    if (typeof value === 'string') return value.trim();
+    if (value && typeof value === 'object') {
+      const record = value as Record<string, unknown>;
+      if (typeof record.text === 'string') return record.text.trim();
+      if (typeof record.caption === 'string') return record.caption.trim();
+    }
+    return '';
+  };
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const loadContent = async () => {
+      if (!cancelled) setIsLoading(true);
+      try {
+        const fetchFirstJson = async (paths: string[]): Promise<any[] | null> => {
+          for (const path of paths) {
+            try {
+              const response = await fetch(path);
+              if (response.ok) {
+                return (await response.json()) as any[];
+              }
+            } catch {
+              // Try next path.
+            }
+          }
+          return null;
+        };
+
+        let athleteRows: any[] = [];
+        try {
+          const rosterRes = await fetch('/data/socialMedia.roster_contents (8).json');
+          if (rosterRes.ok) {
+            const rosterData = (await rosterRes.json()) as any[];
+            athleteRows = rosterData.filter((row) => ['Ohio State', 'Ohio'].includes(row?.athlete?.school?.name));
+          }
+        } catch {
+          // fall through to NCAA source
+        }
+
+        if (athleteRows.length === 0) {
+          const ncaaRes = await fetch('/data/NCAA_contents (2).json');
+          if (ncaaRes.ok) {
+            const ncaaData = (await ncaaRes.json()) as any[];
+            athleteRows = ncaaData.filter((row) => ['Ohio State', 'Ohio'].includes(row?.athlete?.school?.name));
+          }
+        }
+
+        const withIPInteractions = athleteRows
+          .filter((post) => post?.hasOrganizationLogo || post?.hasOrganizationInCaption || post?.isOrganizationCollaboration)
+          .map((post) => Number(post?.metrics?.likes || 0) + Number(post?.metrics?.comments || 0));
+        const withoutIPInteractions = athleteRows
+          .filter((post) => !(post?.hasOrganizationLogo || post?.hasOrganizationInCaption || post?.isOrganizationCollaboration))
+          .map((post) => Number(post?.metrics?.likes || 0) + Number(post?.metrics?.comments || 0));
+
+        const withIPMedian = calcMedian(withIPInteractions);
+        const withoutIPMedian = calcMedian(withoutIPInteractions);
+
+        const normalizedAthletePosts: AthletePostItem[] = athleteRows.map((post, index) => {
+          const likes = Number(post?.metrics?.likes || 0);
+          const comments = Number(post?.metrics?.comments || 0);
+          const interactions = likes + comments;
+          const withIP = Boolean(post?.hasOrganizationLogo || post?.hasOrganizationInCaption || post?.isOrganizationCollaboration);
+          const groupMedian = withIP ? withIPMedian : withoutIPMedian;
+          const lift = groupMedian > 0 ? ((interactions - groupMedian) / groupMedian) * 100 : 0;
+
+          return {
+            id: String(post?._id || `athlete-${index}`),
+            thumbnail: String(post?.url || ''),
+            postLink: String(post?.permalink || post?.url || ''),
+            caption: getCaptionText(post?.caption || post?.text),
+            athleteName: String(post?.athlete?.name || 'Unknown Athlete'),
+            dateLabel: parseDateLabel(post?.publishedAt || post?.createdAt),
+            interactions,
+            engagementRate: Number(post?.metrics?.engagementRate || 0),
+            emv: calculateEMV(likes, comments),
+            lift,
+            ipSignal: getSignalTag(post),
+            withIP,
+          };
+        });
+
+        const ohioTeamRows = (await fetchFirstJson([
+          '/data/Ohio.team_contents.json',
+          '/data/ohio.team_contents.json',
+        ])) || [];
+        const normalizedOhioTeamPosts: TeamPostItem[] = ohioTeamRows.map((post, index) => {
+          const likes = Number(post?.metrics?.likes || 0);
+          const comments = Number(post?.metrics?.comments || 0);
+          return {
+            id: String(post?._id || `ohio-team-${index}`),
+            thumbnail: String(post?.url || ''),
+            postLink: String(post?.permalink || post?.url || ''),
+            caption: getCaptionText(post?.caption || post?.text),
+            teamName: String(post?.team?.name || 'Ohio State Team'),
+            schoolName: String(post?.team?.school?.name || 'Ohio State'),
+            conferenceName: String(post?.team?.conference?.name || 'Big 10'),
+            dateLabel: parseDateLabel(post?.publishedAt || post?.createdAt),
+            interactions: likes + comments,
+            engagementRate: Number(post?.metrics?.engagementRate || 0),
+          };
+        });
+
+        const allTeamRows = (await fetchFirstJson([
+          '/data/Team_contents.json',
+          '/data/team_contents.json',
+        ])) || [];
+        const normalizedBigTenPosts: TeamPostItem[] = allTeamRows
+          .filter((post) => post?.team?.conference?.name === 'Big 10')
+          .map((post, index) => {
+            const likes = Number(post?.metrics?.likes || 0);
+            const comments = Number(post?.metrics?.comments || 0);
+            return {
+              id: String(post?._id || `big10-team-${index}`),
+              thumbnail: String(post?.url || ''),
+              postLink: String(post?.permalink || post?.url || ''),
+              caption: getCaptionText(post?.caption || post?.text),
+              teamName: String(post?.team?.name || 'Team Page'),
+              schoolName: String(post?.team?.school?.name || 'Unknown School'),
+              conferenceName: String(post?.team?.conference?.name || 'Big 10'),
+              dateLabel: parseDateLabel(post?.publishedAt || post?.createdAt),
+              interactions: likes + comments,
+              engagementRate: Number(post?.metrics?.engagementRate || 0),
+            };
+          });
+
+        if (!cancelled) {
+          setAthletePosts(normalizedAthletePosts);
+          setOhioTeamPosts(normalizedOhioTeamPosts);
+          setBigTenTeamPosts(normalizedBigTenPosts);
+          setIsLoading(false);
+        }
+      } catch {
+        if (!cancelled) {
+          setAthletePosts([]);
+          setOhioTeamPosts([]);
+          setBigTenTeamPosts([]);
+          setIsLoading(false);
+        }
+      }
+    };
+
+    loadContent();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const sortAthleteRows = (rows: AthletePostItem[]) => {
+    const sorter = (a: AthletePostItem, b: AthletePostItem) => {
+      return b.interactions - a.interactions;
+    };
+    return [...rows].sort(sorter);
+  };
+
+  const withIPPosts = useMemo(
+    () => sortAthleteRows(athletePosts.filter((post) => post.withIP)),
+    [athletePosts],
+  );
+  const withoutIPPosts = useMemo(
+    () =>
+      sortAthleteRows(
+        athletePosts.filter((post) => !post.withIP && !MANUAL_WITHOUT_IP_EXCLUDE_IDS.has(post.id)),
+      ),
+    [athletePosts],
+  );
+  const championWithIP = withIPPosts[0];
+  const championWithoutIP = withoutIPPosts[0];
+  const topWithIP = withIPPosts.slice(0, 10);
+  const topWithoutIP = withoutIPPosts.slice(0, 10);
+
+  const sortedOhioTeamPosts = useMemo(() => [...ohioTeamPosts].sort((a, b) => b.interactions - a.interactions), [ohioTeamPosts]);
+  const topOhioTeamPost = sortedOhioTeamPosts[0];
+  const top10OhioTeamPosts = sortedOhioTeamPosts.slice(0, 10);
+
+  const top10BigTenTeamPosts = useMemo(
+    () => [...bigTenTeamPosts].sort((a, b) => b.interactions - a.interactions).slice(0, 10),
+    [bigTenTeamPosts],
+  );
+
+  const renderThumbnail = (src: string, alt: string) => (
+    <div className="w-full aspect-[4/3] rounded-xl overflow-hidden bg-gray-100">
+      {src ? (
+        <img src={src} alt={alt} className="w-full h-full object-cover" />
+      ) : (
+        <div className="w-full h-full flex items-center justify-center text-xs text-gray-400">No media</div>
+      )}
+    </div>
+  );
+
+  const renderAthleteRow = (post: AthletePostItem, rank: number) => (
+    <a
+      key={post.id}
+      className="rounded-xl border p-3 sm:p-4 bg-white"
+      style={{ borderColor: colors.glassBorder }}
+      href={post.postLink || undefined}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div className="flex items-start gap-3">
+        <span
+          className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0"
+          style={{ backgroundColor: rank <= 3 ? colors.scarlet : '#e5e7eb', color: rank <= 3 ? '#fff' : colors.textMuted }}
+        >
+          {rank}
+        </span>
+        <div className="w-20 sm:w-24 flex-shrink-0">
+          {renderThumbnail(post.thumbnail, post.athleteName)}
+        </div>
+        <div className="min-w-0 flex-1">
+          <p className="font-semibold text-sm truncate" style={{ color: colors.text }}>{post.athleteName}</p>
+          <p className="text-xs text-gray-500 mt-0.5">{post.dateLabel}</p>
+          {post.caption && (
+            <p className="text-xs mt-1.5 line-clamp-2" style={{ color: colors.textMuted }}>
+              {post.caption}
+            </p>
+          )}
+          <div className="flex flex-wrap gap-2 mt-2 text-xs">
+            <span className="px-2 py-0.5 rounded-full bg-gray-100 text-gray-700">{formatNumber(post.interactions)} interactions</span>
+            <span className="px-2 py-0.5 rounded-full bg-gray-100 text-gray-700">{formatCurrency(post.emv)} EMV</span>
+            <span
+              className="px-2 py-0.5 rounded-full"
+              style={{
+                backgroundColor: post.lift >= 0 ? `${colors.positive}15` : `${colors.negative}15`,
+                color: post.lift >= 0 ? colors.positive : colors.negative,
+              }}
+            >
+              {formatDelta(post.lift)} lift
+            </span>
+            <span className="px-2 py-0.5 rounded-full" style={{ backgroundColor: `${colors.scarlet}12`, color: colors.scarlet }}>
+              {post.ipSignal}
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+  );
+
+  return (
+    <div className="space-y-6">
+      <SectionHeader primary="CONTENT " secondary="PERFORMANCE" />
+
+      <div className="flex items-center gap-2">
+        <span className="text-xs uppercase tracking-wider text-gray-500 font-semibold mr-1">Content Type</span>
+        <SegmentedToggle
+          options={[
+            { id: 'athlete', label: 'Athlete Content' },
+            { id: 'team', label: 'Team Page Content' },
+          ]}
+          value={contentView}
+          onChange={(id) => setContentView(id)}
+        />
+      </div>
+
+      {isLoading ? (
+        <GlassCard>
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <div className="w-5 h-5 rounded-full border-2 border-gray-200 border-t-transparent animate-spin" style={{ borderTopColor: colors.scarlet }} />
+              <div>
+                <p className="text-sm font-semibold" style={{ color: colors.text }}>Loading content performance...</p>
+                <p className="text-xs" style={{ color: colors.textMuted }}>Pulling athlete and team posts for Ohio State.</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div className="h-36 rounded-xl bg-gray-100 animate-pulse" />
+              <div className="h-36 rounded-xl bg-gray-100 animate-pulse" />
+              <div className="h-24 rounded-xl bg-gray-100 animate-pulse md:col-span-2" />
+            </div>
+          </div>
+        </GlassCard>
+      ) : contentView === 'athlete' ? (
+        <div className="space-y-6">
+          {/* Champion Faceoff */}
+          <div>
+            <SectionHeader primary="CHAMPION " secondary="FACEOFF" />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
+              {[{ title: 'Best WITH Ohio State IP', post: championWithIP }, { title: 'Best WITHOUT IP', post: championWithoutIP }].map((item) => (
+                <GlassCard key={item.title}>
+                  <p className="text-xs uppercase tracking-wider text-gray-500 mb-3">{item.title}</p>
+                  {item.post ? (
+                    <a
+                      href={item.post.postLink || undefined}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="space-y-3 block"
+                    >
+                      {renderThumbnail(item.post.thumbnail, item.post.athleteName)}
+                      <div>
+                        <p className="font-semibold text-base" style={{ color: colors.text }}>{item.post.athleteName}</p>
+                        <p className="text-xs text-gray-500 mt-1">{item.post.dateLabel}</p>
+                        {item.post.caption && (
+                          <p className="text-sm mt-2 line-clamp-3" style={{ color: colors.textMuted }}>
+                            {item.post.caption}
+                          </p>
+                        )}
+                      </div>
+                      <div className="grid grid-cols-2 gap-3 text-xs">
+                        <div>
+                          <p className="text-gray-400 uppercase tracking-wider">Interactions</p>
+                          <p className="font-semibold" style={{ color: colors.text }}>{formatNumber(item.post.interactions)}</p>
+                        </div>
+                        <div>
+                          <p className="text-gray-400 uppercase tracking-wider">Engagement Rate</p>
+                          <p className="font-semibold" style={{ color: colors.text }}>{formatPercent(item.post.engagementRate)}</p>
+                        </div>
+                        <div>
+                          <p className="text-gray-400 uppercase tracking-wider">Lift vs Median</p>
+                          <p className="font-semibold" style={{ color: item.post.lift >= 0 ? colors.positive : colors.negative }}>
+                            {formatDelta(item.post.lift)}
+                          </p>
+                        </div>
+                        <div>
+                          <p className="text-gray-400 uppercase tracking-wider">IP Signal</p>
+                          <p className="font-semibold" style={{ color: colors.scarlet }}>{item.post.ipSignal}</p>
+                        </div>
+                      </div>
+                    </a>
+                  ) : (
+                    <p className="text-sm text-gray-500">No content available.</p>
+                  )}
+                </GlassCard>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+            {/* Top 10 With IP */}
+            <div>
+              <SectionHeader primary="TOP 10 " secondary="ATHLETE POSTS WITH IP" />
+              <div className="space-y-3 mt-4">
+                {topWithIP.map((post, idx) => renderAthleteRow(post, idx + 1))}
+                {topWithIP.length === 0 && <p className="text-sm text-gray-500">No with-IP athlete posts available.</p>}
+              </div>
+            </div>
+
+            {/* Top 10 Without IP */}
+            <div>
+              <SectionHeader primary="TOP 10 " secondary="ATHLETE POSTS WITHOUT IP" />
+              <div className="space-y-3 mt-4">
+                {topWithoutIP.map((post, idx) => renderAthleteRow(post, idx + 1))}
+                {topWithoutIP.length === 0 && <p className="text-sm text-gray-500">No without-IP athlete posts available.</p>}
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div className="space-y-6">
+          {/* Top Ohio State Team Page Post */}
+          <div>
+            <SectionHeader primary="TOP OHIO STATE " secondary="TEAM PAGE POST" />
+            <div className="mt-4">
+              <GlassCard>
+                {topOhioTeamPost ? (
+                  <a
+                    href={topOhioTeamPost.postLink || undefined}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                  >
+                    {renderThumbnail(topOhioTeamPost.thumbnail, topOhioTeamPost.teamName)}
+                    <div className="space-y-3">
+                      <p className="font-semibold text-base" style={{ color: colors.text }}>{topOhioTeamPost.teamName}</p>
+                      <p className="text-xs text-gray-500">{topOhioTeamPost.dateLabel}</p>
+                      {topOhioTeamPost.caption && (
+                        <p className="text-sm line-clamp-3" style={{ color: colors.textMuted }}>
+                          {topOhioTeamPost.caption}
+                        </p>
+                      )}
+                      <p className="text-sm" style={{ color: colors.textMuted }}>{topOhioTeamPost.schoolName}</p>
+                      <div className="grid grid-cols-2 gap-3 text-xs">
+                        <div>
+                          <p className="text-gray-400 uppercase tracking-wider">Interactions</p>
+                          <p className="font-semibold">{formatNumber(topOhioTeamPost.interactions)}</p>
+                        </div>
+                        <div>
+                          <p className="text-gray-400 uppercase tracking-wider">Engagement Rate</p>
+                          <p className="font-semibold">{formatPercent(topOhioTeamPost.engagementRate)}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                ) : (
+                  <p className="text-sm text-gray-500">No Ohio State team page posts available.</p>
+                )}
+              </GlassCard>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+            {/* Top 10 Ohio State Team Page Posts */}
+            <div>
+              <SectionHeader primary="TOP 10 " secondary="OHIO STATE TEAM PAGE POSTS" />
+              <div className="space-y-3 mt-4">
+                {top10OhioTeamPosts.map((post, idx) => (
+                  <a
+                    key={post.id}
+                    href={post.postLink || undefined}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-xl border p-3 sm:p-4 bg-white block"
+                    style={{ borderColor: colors.glassBorder }}
+                  >
+                    <div className="flex items-start gap-3">
+                      <span
+                        className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0"
+                        style={{ backgroundColor: idx < 3 ? colors.scarlet : '#e5e7eb', color: idx < 3 ? '#fff' : colors.textMuted }}
+                      >
+                        {idx + 1}
+                      </span>
+                      <div className="w-20 sm:w-24 flex-shrink-0">{renderThumbnail(post.thumbnail, post.teamName)}</div>
+                      <div className="min-w-0 flex-1">
+                        <p className="font-semibold text-sm truncate" style={{ color: colors.text }}>{post.teamName}</p>
+                        <p className="text-xs text-gray-500 mt-0.5">{post.dateLabel}</p>
+                        {post.caption && (
+                          <p className="text-xs mt-1.5 line-clamp-2" style={{ color: colors.textMuted }}>
+                            {post.caption}
+                          </p>
+                        )}
+                        <div className="flex flex-wrap gap-2 mt-2 text-xs">
+                          <span className="px-2 py-0.5 rounded-full bg-gray-100 text-gray-700">{formatNumber(post.interactions)} interactions</span>
+                          <span className="px-2 py-0.5 rounded-full bg-gray-100 text-gray-700">{formatPercent(post.engagementRate)} engagement</span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+                {top10OhioTeamPosts.length === 0 && <p className="text-sm text-gray-500">No Ohio State team page posts available.</p>}
+              </div>
+            </div>
+
+            {/* Big Ten benchmark */}
+            <div>
+              <SectionHeader primary="BIG TEN " secondary="TEAM PAGE BENCHMARK" />
+              <div className="space-y-3 mt-4">
+                {top10BigTenTeamPosts.map((post, idx) => {
+                  const isOhio = post.schoolName === 'Ohio State';
+                  return (
+                    <div
+                      key={`${post.id}-${idx}`}
+                      className="rounded-xl border p-3 sm:p-4 bg-white"
+                      style={{ borderColor: isOhio ? `${colors.scarlet}55` : colors.glassBorder, backgroundColor: isOhio ? `${colors.scarlet}08` : '#fff' }}
+                    >
+                      <a
+                        href={post.postLink || undefined}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-start gap-3"
+                      >
+                        <span
+                          className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0"
+                          style={{ backgroundColor: idx < 3 ? colors.scarlet : '#e5e7eb', color: idx < 3 ? '#fff' : colors.textMuted }}
+                        >
+                          {idx + 1}
+                        </span>
+                        <div className="w-20 sm:w-24 flex-shrink-0">{renderThumbnail(post.thumbnail, post.teamName)}</div>
+                        <div className="min-w-0 flex-1">
+                          <div className="flex items-center gap-2">
+                            <p className="font-semibold text-sm truncate" style={{ color: colors.text }}>{post.schoolName}</p>
+                            {isOhio && <span className="px-1.5 py-0.5 rounded-full text-[10px] font-semibold" style={{ backgroundColor: colors.scarlet, color: '#fff' }}>Ohio State</span>}
+                          </div>
+                          <p className="text-xs text-gray-500 mt-0.5">{post.teamName} • {post.dateLabel}</p>
+                          {post.caption && (
+                            <p className="text-xs mt-1.5 line-clamp-2" style={{ color: colors.textMuted }}>
+                              {post.caption}
+                            </p>
+                          )}
+                          <div className="flex flex-wrap gap-2 mt-2 text-xs">
+                            <span className="px-2 py-0.5 rounded-full bg-gray-100 text-gray-700">{formatNumber(post.interactions)} interactions</span>
+                            <span className="px-2 py-0.5 rounded-full bg-gray-100 text-gray-700">{post.conferenceName}</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  );
+                })}
+                {top10BigTenTeamPosts.length === 0 && <p className="text-sm text-gray-500">No Big Ten team page benchmark posts available.</p>}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════
+// TEAM PAGES TAB
+// ═══════════════════════════════════════════════════════════════
+type TeamSignal = 'mention' | 'logo' | 'collab';
+type TeamMetricKey = 'followers' | 'totalLikes' | 'engagementRate' | 'posts';
+type TeamSortKey =
+  | 'rank'
+  | 'sport'
+  | 'followers'
+  | 'totalLikes'
+  | 'engagementRate'
+  | 'totalPosts'
+  | 'ipPosts'
+  | 'avgLikes'
+  | 'lift';
+type TeamSortDir = 'asc' | 'desc';
+
+interface SportRow {
+  sport: string;
+  sportKey: string;
+  followers: number;
+  totalLikes: number;
+  engagementRate: number;
+  totalInteractions: number;
+  totalPosts: number;
+  ipPosts: number;
+  avgLikes: number;
+  lift: number;
+}
+
+interface TeamRosterMetricSnapshot {
+  followers: number;
+  likes: number;
+  comments: number;
+  engagementRate: number;
+  contentCount: number;
+  logoContentCount: number;
+  collaborationContentCount: number;
+  organizationCollaborationContentCount: number;
+}
+
+function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
+  const signal: TeamSignal = 'mention';
+  const [activeMetric, setActiveMetric] = useState<TeamMetricKey>('followers');
+  const [sortKey, setSortKey] = useState<TeamSortKey>('followers');
+  const [sortDir, setSortDir] = useState<TeamSortDir>('desc');
+  const [rosterMetricsBySport, setRosterMetricsBySport] = useState<Record<string, TeamRosterMetricSnapshot>>({});
+
+  useEffect(() => {
+    let cancelled = false;
+    const loadFollowers = async () => {
+      try {
+        const response = await fetch('/data/Ohio.roster_teams.json');
+        if (!response.ok) return;
+        const rows = (await response.json()) as OhioRosterTeam[];
+        const map: Record<string, TeamRosterMetricSnapshot> = {};
+        for (const row of rows) {
+          const key = row.sport;
+          if (!key) continue;
+          const metrics = row.metrics?.ninetyDays ?? row.metrics?.thirtyDays ?? row.metrics?.sevenDays;
+          const metricRecord = (metrics as Record<string, unknown> | undefined) ?? {};
+          map[key] = {
+            followers: toNumber(metricRecord.followers),
+            likes: toNumber(metricRecord.likes),
+            comments: toNumber(metricRecord.comments),
+            engagementRate: toNumber(metricRecord.engagementRate),
+            contentCount: toNumber(metricRecord.contentCount),
+            logoContentCount: toNumber(metricRecord.logoContentCount),
+            collaborationContentCount: toNumber(metricRecord.collaborationContentCount),
+            organizationCollaborationContentCount: toNumber(metricRecord.organizationCollaborationContentCount),
+          };
+        }
+        if (!cancelled) setRosterMetricsBySport(map);
+      } catch {
+        // Followers remain zero when team metrics are unavailable.
+      }
+    };
+
+    loadFollowers();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const sportRows = useMemo((): SportRow[] => {
+    const rows: SportRow[] = [];
+
+    for (const [key, signals] of Object.entries(sportData)) {
+      if (key === 'ALL_SPORTS') continue;
+      const data = signals[signal];
+      if (!data) continue;
+
+      const withPosts = data.with.posts;
+      const withoutPosts = data.without.posts;
+      const rosterMetrics = rosterMetricsBySport[key];
+      const derivedTotalPosts = withPosts + withoutPosts;
+      const totalPosts = rosterMetrics?.contentCount || derivedTotalPosts;
+      const derivedTotalLikes = (data.with.avgLikes * withPosts) + (data.without.avgLikes * withoutPosts);
+      const totalLikes = rosterMetrics?.likes || derivedTotalLikes;
+      const totalComments = rosterMetrics?.comments || ((data.with.avgComments * withPosts) + (data.without.avgComments * withoutPosts));
+      const totalInteractions = totalLikes + totalComments;
+      const engagementRate = rosterMetrics?.engagementRate
+        || (totalPosts > 0
+          ? ((data.with.engagementRate * withPosts) + (data.without.engagementRate * withoutPosts)) / totalPosts
+          : 0);
+      const lift =
+        data.without.engagementRate > 0
+          ? ((data.with.engagementRate - data.without.engagementRate) / data.without.engagementRate) * 100
+          : 0;
+      const signalCountFromRoster = rosterMetrics?.organizationCollaborationContentCount || 0;
+      const ipPosts = signalCountFromRoster || withPosts;
+
+      rows.push({
+        sport: formatSportLabel(key),
+        sportKey: key,
+        followers: rosterMetrics?.followers || 0,
+        totalLikes,
+        engagementRate,
+        totalInteractions,
+        totalPosts,
+        ipPosts,
+        avgLikes: data.with.avgLikes,
+        lift,
+      });
+    }
+
+    return rows;
+  }, [rosterMetricsBySport, signal, sportData]);
+
+  const totalFollowersAcrossTeams = useMemo(
+    () => sportRows.reduce((sum, row) => sum + row.followers, 0),
+    [sportRows],
+  );
+
+  const metricValue = (row: SportRow, metric: TeamMetricKey): number => {
+    if (metric === 'followers') return row.followers;
+    if (metric === 'totalLikes') return row.totalLikes;
+    if (metric === 'engagementRate') return row.engagementRate;
+    return row.totalPosts;
+  };
+
+  const sortedRows = useMemo(() => {
+    const sorted = [...sportRows];
+    sorted.sort((a, b) => {
+      let cmp = 0;
+      switch (sortKey) {
+        case 'rank':
+          cmp = 0;
+          break;
+        case 'sport':
+          cmp = a.sport.localeCompare(b.sport);
+          break;
+        case 'followers':
+          cmp = a.followers - b.followers;
+          break;
+        case 'totalLikes':
+          cmp = a.totalLikes - b.totalLikes;
+          break;
+        case 'engagementRate':
+          cmp = a.engagementRate - b.engagementRate;
+          break;
+        case 'totalPosts':
+          cmp = a.totalPosts - b.totalPosts;
+          break;
+        case 'ipPosts':
+          cmp = a.ipPosts - b.ipPosts;
+          break;
+        case 'avgLikes':
+          cmp = a.avgLikes - b.avgLikes;
+          break;
+        case 'lift':
+          cmp = a.lift - b.lift;
+          break;
+      }
+      return sortDir === 'desc' ? -cmp : cmp;
+    });
+    return sorted;
+  }, [sportRows, sortKey, sortDir]);
+
+  const rowsByActiveMetric = useMemo(() => {
+    return [...sportRows].sort((a, b) => metricValue(b, activeMetric) - metricValue(a, activeMetric));
+  }, [activeMetric, sportRows]);
+  const maxTrackedPosts = useMemo(
+    () => sportRows.reduce((max, row) => (row.totalPosts > max ? row.totalPosts : max), 0),
+    [sportRows],
+  );
+
+  const handleSort = (key: TeamSortKey) => {
+    if (key === 'rank') return;
+    if (sortKey === key) {
+      setSortDir((d) => (d === 'desc' ? 'asc' : 'desc'));
+    } else {
+      setSortKey(key);
+      setSortDir('desc');
+    }
+  };
+
+  const metricButtons: { id: TeamMetricKey; label: string }[] = [
+    { id: 'followers', label: 'Followers' },
+    { id: 'totalLikes', label: 'Total Likes' },
+    { id: 'engagementRate', label: 'Engagement Rate' },
+    { id: 'posts', label: 'Posts' },
+  ];
+
+  const osuScarlet = '#BB0000';
+
+  const SortIcon = ({ col }: { col: TeamSortKey }) => {
+    if (sortKey !== col) return <ChevronDown className="w-3 h-3 opacity-30" />;
+    return sortDir === 'desc' ? (
+      <ChevronDown className="w-3 h-3" style={{ color: osuScarlet }} />
+    ) : (
+      <ChevronUp className="w-3 h-3" style={{ color: osuScarlet }} />
+    );
+  };
+
+  return (
+    <div className="space-y-6">
+      <div>
+        <SectionHeader primary="OHIO STATE " secondary="TEAM PAGES" />
+        <p className="text-sm mt-2" style={{ color: colors.textMuted }}>
+          Official Ohio State athletics social account performance.
+        </p>
+        <p className="text-xs mt-1" style={{ color: colors.textDim }}>
+          Current feed data is a recent-post sample (up to {formatNumber(maxTrackedPosts)} posts per team in this dataset).
+        </p>
+      </div>
+
+      <div className="overflow-x-auto scrollbar-hide -mx-1 px-1">
+        <div className="inline-flex items-center gap-2 min-w-max">
+          {metricButtons.map((mb) => (
+            <button
+              key={mb.id}
+              onClick={() => {
+                setActiveMetric(mb.id);
+                const nextSortMap: Record<TeamMetricKey, TeamSortKey> = {
+                  followers: 'followers',
+                  totalLikes: 'totalLikes',
+                  engagementRate: 'engagementRate',
+                  posts: 'totalPosts',
+                };
+                setSortKey(nextSortMap[mb.id]);
+                setSortDir('desc');
+              }}
+              className="px-3.5 py-2 rounded-full text-xs font-semibold border transition-colors"
+              style={{
+                backgroundColor: activeMetric === mb.id ? osuScarlet : '#fff',
+                borderColor: activeMetric === mb.id ? osuScarlet : 'rgba(0,0,0,0.12)',
+                color: activeMetric === mb.id ? '#fff' : colors.textMuted,
+              }}
+            >
+              {mb.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+        {rowsByActiveMetric.map((row, idx) => {
+          const rank = idx + 1;
+          const value = metricValue(row, activeMetric);
+          const totalForMetric = rowsByActiveMetric.reduce((sum, item) => sum + metricValue(item, activeMetric), 0);
+          const sharePct = totalForMetric > 0 ? (value / totalForMetric) * 100 : 0;
+          const supportingLabel =
+            activeMetric === 'followers'
+              ? `${formatNumber(row.totalPosts)} posts`
+              : activeMetric === 'totalLikes'
+                ? `${formatNumber(row.totalPosts > 0 ? row.totalLikes / row.totalPosts : 0)} avg likes/post`
+                : activeMetric === 'engagementRate'
+                  ? `${formatNumber(row.totalInteractions)} interactions`
+                  : `${formatNumber(row.ipPosts)} with ${signal}`;
+          const primaryValue = activeMetric === 'engagementRate' ? formatPercent(value, 2) : formatNumber(value);
+
+          return (
+            <div
+              key={row.sportKey}
+              className="rounded-2xl border bg-white p-4 transition-all"
+              style={{
+                borderColor: 'rgba(0,0,0,0.08)',
+                boxShadow: '0 1px 3px rgba(0,0,0,0.06)',
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-2px)';
+                (e.currentTarget as HTMLDivElement).style.boxShadow = '0 8px 20px rgba(0,0,0,0.08)';
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)';
+                (e.currentTarget as HTMLDivElement).style.boxShadow = '0 1px 3px rgba(0,0,0,0.06)';
+              }}
+            >
+              <div className="flex items-start justify-between mb-3">
+                <div>
+                  <p className="text-sm font-semibold" style={{ color: colors.text }}>
+                    {row.sport}
+                  </p>
+                  <p className="text-xs mt-1" style={{ color: colors.textMuted }}>
+                    {supportingLabel}
+                  </p>
+                </div>
+                <span
+                  className="w-7 h-7 rounded-full text-xs font-bold flex items-center justify-center"
+                  style={{
+                    backgroundColor: rank <= 3 ? `${osuScarlet}15` : '#f3f4f6',
+                    color: rank <= 3 ? osuScarlet : colors.textMuted,
+                  }}
+                >
+                  #{rank}
+                </span>
+              </div>
+              <p className="text-3xl font-black leading-tight" style={{ color: colors.text }}>
+                {primaryValue}
+              </p>
+              <div className="mt-3 flex items-center justify-between text-xs">
+                <span style={{ color: colors.textMuted }}>Share of total</span>
+                <span className="font-semibold" style={{ color: osuScarlet }}>
+                  {sharePct.toFixed(1)}%
+                </span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="rounded-xl border bg-white p-4" style={{ borderColor: 'rgba(0,0,0,0.08)' }}>
+        <div className="flex items-center justify-between mb-3">
+          <p className="text-xs uppercase tracking-wider font-semibold" style={{ color: colors.textMuted }}>
+            Followers Distribution by Team
+          </p>
+          <p className="text-xs" style={{ color: colors.textMuted }}>
+            Total {formatNumber(totalFollowersAcrossTeams)}
+          </p>
+        </div>
+        <div className="h-3 w-full rounded-full overflow-hidden bg-gray-100 flex">
+          {rowsByActiveMetric.map((row, idx) => {
+            const share = totalFollowersAcrossTeams > 0 ? (row.followers / totalFollowersAcrossTeams) * 100 : 0;
+            const width = Math.max(share, row.followers > 0 ? 1.5 : 0);
+            return (
+              <div
+                key={row.sportKey}
+                title={`${row.sport}: ${share.toFixed(1)}%`}
+                style={{
+                  width: `${width}%`,
+                  backgroundColor: idx === 0 ? osuScarlet : idx === 1 ? '#d84f4f' : '#e5a5a5',
+                }}
+              />
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="rounded-xl border overflow-hidden bg-white" style={{ borderColor: 'rgba(0,0,0,0.08)' }}>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm min-w-[980px]">
+            <thead>
+              <tr className="border-b border-gray-100">
+                {([
+                  ['rank', 'Rank'],
+                  ['sport', 'Team'],
+                  ['followers', 'Followers'],
+                  ['totalLikes', 'Total Likes'],
+                  ['engagementRate', 'Engagement Rate'],
+                  ['totalPosts', 'Total Posts'],
+                ] as [TeamSortKey, string][]).map(([key, label]) => (
+                  <th
+                    key={key}
+                    onClick={() => handleSort(key)}
+                    className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider cursor-pointer select-none hover:bg-gray-50 transition-colors motion-reduce:transition-none"
+                    style={{ color: colors.textMuted }}
+                  >
+                    <div className="flex items-center gap-1">
+                      {label}
+                      {key !== 'rank' && <SortIcon col={key} />}
+                    </div>
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {sortedRows.map((row, idx) => (
+                <tr
+                  key={row.sportKey}
+                  className="border-b border-gray-50 hover:bg-red-50/30 transition-colors motion-reduce:transition-none"
+                >
+                  <td className="px-4 py-3 font-semibold" style={{ color: osuScarlet }}>
+                    #{idx + 1}
+                  </td>
+                  <td className="px-4 py-3 font-medium" style={{ color: colors.text }}>
+                    {row.sport}
+                  </td>
+                  <td className="px-4 py-3" style={{ color: colors.textMuted }}>
+                    {formatNumber(row.followers)}
+                  </td>
+                  <td className="px-4 py-3" style={{ color: colors.textMuted }}>
+                    {formatNumber(row.totalLikes)}
+                  </td>
+                  <td className="px-4 py-3" style={{ color: colors.textMuted }}>
+                    {formatPercent(row.engagementRate)}
+                  </td>
+                  <td className="px-4 py-3" style={{ color: colors.textMuted }}>
+                    {formatNumber(row.totalPosts)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════
+// MAIN EXPORT: OhioStateIPImpact
+// ═══════════════════════════════════════════════════════════════
+export function OhioStateIPImpact({ onBack }: { onBack?: () => void }) {
   const [activeTab, setActiveTab] = useState<TabId>('overview');
+  const [scrolled, setScrolled] = useState(false);
+  const [sportData, setSportData] = useState<SportSignalData>(fallbackSportData as SportSignalData);
+  const [overviewData, setOverviewData] = useState<OverviewData | null>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 8);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
+    let isCancelled = false;
+
+    const loadOhioSports = async () => {
+      try {
+        const response = await fetch('/data/Ohio.roster_teams.json');
+        if (!response.ok) return;
+
+        const rows = (await response.json()) as OhioRosterTeam[];
+        const dynamicData = buildSportDataFromRoster(rows);
+        if (!isCancelled && dynamicData.ALL_SPORTS) {
+          setSportData(dynamicData);
+        }
+      } catch {
+        // Keep fallback sport data when local dataset is unavailable.
+      }
+    };
+
+    loadOhioSports();
+    return () => {
+      isCancelled = true;
+    };
+  }, []);
+
+  useEffect(() => {
+    let isCancelled = false;
+
+    const loadOverviewData = async () => {
+      try {
+        const response = await fetch('/data/ohio-state-athlete-overview.json');
+        if (!response.ok) return;
+        const data = (await response.json()) as OverviewData;
+        if (!isCancelled) {
+          setOverviewData(data);
+        }
+      } catch {
+        // Keep fallback hardcoded overview data.
+      }
+    };
+
+    loadOverviewData();
+    return () => {
+      isCancelled = true;
+    };
+  }, []);
 
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: colors.lightBg }}>
-      {/* Background Image */}
+      {/* Buckeye leaves background */}
       <div
         className="fixed inset-0 z-0 opacity-[0.03]"
         style={{
@@ -2210,15 +3552,27 @@ export function OhioStateIPImpact({ onBack }: OhioStateIPImpactProps) {
         }}
       />
 
-      {/* Header */}
-      <header className="bg-white/95 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50 shadow-sm relative">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
+      {/* Sticky Command Bar */}
+      <header
+        ref={headerRef}
+        className="sticky top-0 z-50 border-b transition-shadow duration-200 motion-reduce:transition-none"
+        style={{
+          backgroundColor: 'rgba(255,255,255,0.90)',
+          backdropFilter: 'saturate(180%) blur(20px)',
+          WebkitBackdropFilter: 'saturate(180%) blur(20px)',
+          borderColor: 'rgba(0,0,0,0.06)',
+          boxShadow: scrolled ? '0 4px 24px rgba(0,0,0,0.08)' : 'none',
+        }}
+      >
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Row 1: Logo + Title */}
+          <div className="flex items-center py-3">
+            <div className="flex items-center gap-3 min-w-0">
               {onBack && (
                 <button
                   onClick={onBack}
-                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors motion-reduce:transition-none flex-shrink-0"
+                  aria-label="Go back"
                 >
                   <ArrowLeft className="w-5 h-5 text-gray-600" />
                 </button>
@@ -2226,57 +3580,54 @@ export function OhioStateIPImpact({ onBack }: OhioStateIPImpactProps) {
               <img
                 src="https://a.espncdn.com/i/teamlogos/ncaa/500/194.png"
                 alt="Ohio State"
-                className="w-12 h-12 object-contain"
+                className="w-10 h-10 sm:w-12 sm:h-12 object-contain flex-shrink-0"
               />
               <div>
                 <h1
-                  className="text-2xl font-bold uppercase tracking-tight"
+                  className="text-lg sm:text-2xl font-bold uppercase tracking-tight whitespace-nowrap"
                   style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }}
                 >
-                  <span style={{ color: colors.scarlet }}>IP </span>
-                  <span style={{ color: colors.headerGray }}>IMPACT</span>
+                  <span style={{ color: colors.scarlet }}>Ohio State </span>
+                  <span className="hidden sm:inline" style={{ color: colors.headerGray }}>IP Impact Report</span>
+                  <span className="sm:hidden" style={{ color: colors.headerGray }}>IP Impact</span>
                 </h1>
-                <p className="text-sm text-gray-500">Ohio State Athlete Social Media</p>
               </div>
-            </div>
-            <div className="flex items-center gap-4">
-              <button
-                className="flex items-center gap-2 px-4 py-2 rounded-lg border font-medium hover:bg-gray-50 transition-colors"
-                style={{ borderColor: colors.scarlet, color: colors.scarlet }}
-              >
-                <Share2 className="w-4 h-4" />
-                Share
-              </button>
             </div>
           </div>
 
-          {/* Tabs */}
-          <nav className="flex gap-1 mt-4 -mb-4">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className="px-4 py-2 rounded-t-lg text-sm font-medium transition-colors border-b-2"
-                style={{
-                  backgroundColor: activeTab === tab.id ? colors.white : 'transparent',
-                  color: activeTab === tab.id ? colors.scarlet : colors.textMuted,
-                  borderColor: activeTab === tab.id ? colors.scarlet : 'transparent',
-                }}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </nav>
+          {/* Row 2: Tabs */}
+          <div className="pb-0 -mb-px">
+            <nav className="overflow-x-auto scrollbar-hide">
+              <div className="flex gap-1 snap-x snap-mandatory min-w-max">
+                {tabs.map((tab) => (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id)}
+                    className="px-3 sm:px-4 py-2 rounded-t-lg text-xs sm:text-sm font-medium transition-colors border-b-2 whitespace-nowrap snap-start motion-reduce:transition-none"
+                    style={{
+                      backgroundColor: activeTab === tab.id ? '#fff' : 'transparent',
+                      color: activeTab === tab.id ? colors.scarlet : colors.textMuted,
+                      borderColor: activeTab === tab.id ? colors.scarlet : 'transparent',
+                    }}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+              </div>
+            </nav>
+          </div>
         </div>
       </header>
 
       {/* Main Content */}
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5 relative z-10">
-        {activeTab === 'overview' && <OverviewTab />}
-        {activeTab === 'withvswithout' && <WithVsWithoutTab />}
+        {activeTab === 'overview' && <OverviewTab overviewData={overviewData} />}
+        {activeTab === 'withvswithout' && <WithVsWithoutTab sportData={sportData} overviewData={overviewData} />}
         {activeTab === 'partnerships' && <PartnershipsTab />}
         {activeTab === 'bestcollaborators' && <BestCollaboratorsTab />}
         {activeTab === 'benchmark' && <BenchmarkTab />}
+        {activeTab === 'content' && <ContentTab />}
+        {activeTab === 'teampages' && <TeamPagesTab sportData={sportData} />}
       </main>
     </div>
   );
