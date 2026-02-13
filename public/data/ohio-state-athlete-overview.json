@@ -1,0 +1,57 @@
+{
+  "sourceFile": "NCAA_contents (2).json",
+  "generatedAt": "2026-02-13T04:33:10.982Z",
+  "school": "Ohio State",
+  "matchedSchools": [
+    "Ohio State"
+  ],
+  "totalPosts": 8966,
+  "totalLikes": 15401523,
+  "totalComments": 404486,
+  "postsWithIP": 4360,
+  "ipAdoptionRate": 48.6,
+  "avgLift": 71.1,
+  "totalEmv": 8307490.5,
+  "collaboration": {
+    "posts": 102,
+    "likes": 13686.127450980392,
+    "comments": 115.80392156862744,
+    "engagementRate": 0.23836648679931438,
+    "delta": 56.57936488642631,
+    "baselineEngRate": 0.15223365286493004,
+    "baselinePosts": 8864,
+    "baselineLikes": 1580.0471570397112,
+    "baselineComments": 44.29986462093863
+  },
+  "logo": {
+    "posts": 3916,
+    "likes": 2864.3743615934627,
+    "comments": 58.21399387129724,
+    "engagementRate": 0.1861658353920004,
+    "delta": 66.51904515329143,
+    "baselineEngRate": 0.11179852443942544,
+    "baselinePosts": 5050,
+    "baselineLikes": 828.640198019802,
+    "baselineComments": 34.95445544554455
+  },
+  "mention": {
+    "posts": 1932,
+    "likes": 2646.80900621118,
+    "comments": 47.32453416149068,
+    "engagementRate": 0.24276011533127986,
+    "delta": 81.01084772841112,
+    "baselineEngRate": 0.1341135729586314,
+    "baselinePosts": 7034,
+    "baselineLikes": 1462.594256468581,
+    "baselineComments": 44.505970998009666
+  },
+  "counters": {
+    "isSponsored": 664,
+    "sponsorPartner": 653,
+    "isOrganizationCollaboration": 102,
+    "hasOrganizationInCaption": 1932,
+    "hasOrganizationLogo": 3916,
+    "isCollaboration": 885
+  },
+  "engagementRateMethod": "Estimated rate = total likes+comments divided by summed mapped athlete followers (name+sport match against ncaa_roster)."
+}

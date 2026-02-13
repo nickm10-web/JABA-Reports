@@ -1,8 +1,16 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-const dataDir = '/Users/jaba/REPORTS/public/data';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const dataDir = path.resolve(__dirname, '..', 'public', 'data');
 const outputPath = path.join(dataDir, 'ohio-state-athlete-overview.json');
+
+// Skip generation if data dir or source files don't exist (e.g. on Vercel)
+if (!fs.existsSync(dataDir)) {
+  console.log('Data directory not found, skipping generation.');
+  process.exit(0);
+}
 
 const ncaaFiles = fs
   .readdirSync(dataDir)
@@ -14,7 +22,13 @@ const ncaaFiles = fs
   .sort((a, b) => b.mtimeMs - a.mtimeMs);
 
 if (ncaaFiles.length === 0) {
-  throw new Error('No NCAA_contents*.json file found in /public/data.');
+  console.log('No NCAA_contents*.json found, skipping generation.');
+  process.exit(0);
+}
+
+if (!fs.existsSync(path.join(dataDir, 'ncaa_roster.json'))) {
+  console.log('ncaa_roster.json not found, skipping generation.');
+  process.exit(0);
 }
 
 const sourceFile = ncaaFiles[0].name;
