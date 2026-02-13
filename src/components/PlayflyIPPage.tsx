@@ -237,9 +237,9 @@ const SCHOOL_FILE_MAP: Record<string, string> = {
   // Regular Playfly schools
   'George Mason': 'george-mason',
   'Old Dominion University': 'old-dominion-university',
-  'University of Cincinnati': 'university-of-cincinnati',
   'University of New Mexico': 'university-of-new-mexico',
   'University of Texas at San Antonio (UTSA)': 'university-of-texas-at-san-antonio-utsa',
+  'University of Virginia': 'university-of-virginia',
   'Wichita State University': 'wichita-state-university',
   // Not in data yet: Oral Roberts, University of Denver, San Jose State
 };

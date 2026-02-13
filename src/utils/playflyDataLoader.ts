@@ -117,8 +117,7 @@ const OFFICIAL_PLAYFLY_SCHOOLS = [
   'Oral Roberts University',
   'University of Denver',
   'San Jose State University',
-  'University of Texas at San Antonio',
-  'University of Cincinnati'
+  'University of Texas at San Antonio'
 ];
 
 // ─── Playfly Max Schools (6 - Premium tier) ────────────────────
