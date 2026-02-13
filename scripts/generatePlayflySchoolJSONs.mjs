@@ -5,36 +5,34 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const dataDir = path.resolve(__dirname, '..', 'public', 'data');
 
-// School name → file slug mapping for ALL schools in the data
+// School name → file slug mapping for Playfly partner schools
 const SCHOOL_SLUG_MAP = {
+  // Playfly Max schools
   'Auburn University': 'auburn-university',
   'Baylor': 'baylor',
   'Louisiana State University': 'louisiana-state-university',
   'Texas A&M': 'texas-a-m',
   'University of Central Florida': 'university-of-central-florida',
-  'Washington State': 'washington-state',
   'University of Nebraska': 'university-of-nebraska',
   'Michigan State': 'michigan-state',
   'Penn State University': 'penn-state-university',
-  'University of Virginia': 'university-of-virginia',
   'University of Maryland': 'university-of-maryland',
-  'Virginia Tech': 'virginia-tech',
+  'University of Southern California (USC)': 'university-of-southern-california-usc',
+  // Regular Playfly schools
   'George Mason': 'george-mason',
   'Old Dominion University': 'old-dominion-university',
   'University of Texas at San Antonio (UTSA)': 'university-of-texas-at-san-antonio-utsa',
   'Brigham Young University (BYU)': 'brigham-young-university-byu',
   'University of Cincinnati': 'university-of-cincinnati',
-  'Clemson': 'clemson',
-  'Creighton University': 'creighton-university',
-  'Depaul': 'depaul',
-  'University of Wisconsin': 'university-of-wisconsin',
-  'Robert Morris University': 'robert-morris-university',
-  'San Diego State University': 'san-diego-state-university',
-  'University of San Diego': 'university-of-san-diego',
-  'Pittsburgh': 'pittsburgh',
-  'Kansas': 'kansas',
-  'Kentucky': 'kentucky',
+  'Wichita State University': 'wichita-state-university',
+  'University of New Mexico': 'university-of-new-mexico',
+  // Not in data yet: Oral Roberts, University of Denver, San Jose State
   // Ohio State excluded - has its own dedicated report
+};
+
+// Name aliases: map alternate data names → canonical SCHOOL_SLUG_MAP key
+const NAME_ALIASES = {
+  'Brigham Young University(BYU)': 'Brigham Young University (BYU)',
 };
 
 console.log('Loading raw data files...');
@@ -51,30 +49,37 @@ const roster = JSON.parse(fs.readFileSync(rosterPath, 'utf8'));
 
 console.log(`Loaded ${contents.length} content records, ${roster.length} roster records`);
 
-// Build follower map: school name → total followers
+// Build follower map: school name → total followers (merging aliases)
 const schoolFollowers = {};
 for (const athlete of roster) {
-  const school = athlete?.schoolName;
+  let school = athlete?.schoolName;
   if (!school) continue;
+  // Resolve aliases
+  if (NAME_ALIASES[school]) school = NAME_ALIASES[school];
   const followers = Number(athlete?.metrics?.thirtyDays?.followers || 0);
   schoolFollowers[school] = (schoolFollowers[school] || 0) + followers;
 }
 
-// Build school ID map from first matching content record
+// Build school ID map from first matching content record (merging aliases)
 const schoolIdMap = {};
 for (const row of contents) {
-  const name = row?.athlete?.school?.name;
+  let name = row?.athlete?.school?.name;
   const id = row?.athlete?.school?._id;
-  if (name && id && !schoolIdMap[name]) {
+  if (!name || !id) continue;
+  if (NAME_ALIASES[name]) name = NAME_ALIASES[name];
+  if (!schoolIdMap[name]) {
     schoolIdMap[name] = id;
   }
 }
 
-// Group content by school
+// Group content by school (merging name aliases)
 const schoolContents = {};
 for (const row of contents) {
-  const school = row?.athlete?.school?.name;
-  if (!school || !SCHOOL_SLUG_MAP[school]) continue;
+  let school = row?.athlete?.school?.name;
+  if (!school) continue;
+  // Resolve aliases to canonical name
+  if (NAME_ALIASES[school]) school = NAME_ALIASES[school];
+  if (!SCHOOL_SLUG_MAP[school]) continue;
   if (!schoolContents[school]) schoolContents[school] = [];
   schoolContents[school].push(row);
 }

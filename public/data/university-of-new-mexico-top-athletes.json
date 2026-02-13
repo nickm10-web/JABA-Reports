@@ -1,0 +1,190 @@
+{
+  "school": {
+    "_id": "697a73807ef35a6cd86b9524",
+    "name": "University of New Mexico"
+  },
+  "collaboration": {
+    "avgEmv": 576.45,
+    "avgLift": 0,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Jaxton Eck",
+          "sport": "FOOTBALL"
+        },
+        "posts": 4,
+        "emv": 1483.38,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Kevin Patton",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 2,
+        "emv": 1292.25,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "David Murphy",
+          "sport": "FOOTBALL"
+        },
+        "posts": 4,
+        "emv": 1277.38,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Frankie Edwards III",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 1160,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Scottre Humphrey",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 941,
+        "engagementRate": 0,
+        "lift": 0
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 305.74,
+    "avgLift": 0,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Daniel Hughes",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 1756,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Antonio Chol",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 4,
+        "emv": 1383,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Scottre Humphrey",
+          "sport": "FOOTBALL"
+        },
+        "posts": 8,
+        "emv": 1275.5,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Uriah Tenette",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 6,
+        "emv": 1097.83,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Jaxton Eck",
+          "sport": "FOOTBALL"
+        },
+        "posts": 8,
+        "emv": 981.63,
+        "engagementRate": 0,
+        "lift": 0
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 395.42,
+    "avgLift": 0,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Antonio Chol",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 2,
+        "emv": 2165.5,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Uriah Tenette",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 5,
+        "emv": 1561.4,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Scottre Humphrey",
+          "sport": "FOOTBALL"
+        },
+        "posts": 5,
+        "emv": 1508.4,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "David Murphy",
+          "sport": "FOOTBALL"
+        },
+        "posts": 6,
+        "emv": 1019,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Caleb Coleman",
+          "sport": "FOOTBALL"
+        },
+        "posts": 3,
+        "emv": 1013.17,
+        "engagementRate": 0,
+        "lift": 0
+      }
+    ]
+  },
+  "partnership": {
+    "avgEmv": 650,
+    "avgLift": 0,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Ky'Won McCray",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 650,
+        "engagementRate": 0,
+        "lift": 0
+      }
+    ]
+  }
+}

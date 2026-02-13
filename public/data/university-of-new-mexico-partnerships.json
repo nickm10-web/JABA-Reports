@@ -1,0 +1,25 @@
+{
+  "school": {
+    "_id": "697a73807ef35a6cd86b9524",
+    "name": "University of New Mexico"
+  },
+  "followers": 0,
+  "overall": {
+    "totalContents": 1182,
+    "avgLikes": 442.81302876480544,
+    "avgComments": 33.73773265651438,
+    "engagementRate": 0,
+    "emv": 272.01
+  },
+  "sponsorPartners": [
+    {
+      "sponsorPartner": "@nusendacu",
+      "totalContents": 1,
+      "avgLikes": 1027,
+      "avgComments": 91,
+      "engagementRate": 0,
+      "emv": 650,
+      "engagementRateLift": 0
+    }
+  ]
+}

@@ -1,25 +1,178 @@
 {
   "school": {
-    "_id": "698233c6ced13833410d419a",
+    "_id": "690067f5f719b77ba3f09235",
     "name": "Brigham Young University (BYU)"
   },
   "collaboration": {
-    "avgEmv": 0,
+    "avgEmv": 1561.73,
     "avgLift": 0,
-    "top5Athletes": []
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Tausili Akana",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 12351.5,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Egor Demin",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 6,
+        "emv": 8477.75,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Bear Bachmeier",
+          "sport": "FOOTBALL"
+        },
+        "posts": 4,
+        "emv": 7366.63,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Aidan Troutner",
+          "sport": "MENS_TRACK_AND_FIELD"
+        },
+        "posts": 1,
+        "emv": 6855.5,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Tiger Bachmeier",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 6376.5,
+        "engagementRate": 0,
+        "lift": 0
+      }
+    ]
   },
   "logo": {
-    "avgEmv": 0,
+    "avgEmv": 740.41,
     "avgLift": 0,
-    "top5Athletes": []
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Richie Saunders",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 7,
+        "emv": 34656.36,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Xilone Puffer",
+          "sport": "CHEER"
+        },
+        "posts": 1,
+        "emv": 13561.5,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Hailey Bills",
+          "sport": "CHEER"
+        },
+        "posts": 1,
+        "emv": 12163.5,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Jane Hedengren",
+          "sport": "WOMENS_CROSS_COUNTRY"
+        },
+        "posts": 4,
+        "emv": 10985.88,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Ammon Montenegro",
+          "sport": "CHEER"
+        },
+        "posts": 7,
+        "emv": 6930.86,
+        "engagementRate": 0,
+        "lift": 0
+      }
+    ]
   },
   "mention (in caption)": {
-    "avgEmv": 0,
+    "avgEmv": 647.58,
     "avgLift": 0,
-    "top5Athletes": []
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Brayden Packard",
+          "sport": "MENS_TRACK_AND_FIELD"
+        },
+        "posts": 6,
+        "emv": 12396.58,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Jacob Murray",
+          "sport": "CHEER"
+        },
+        "posts": 1,
+        "emv": 9089.5,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Max Alford",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 7669,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Tausili Akana",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 6272,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Faletau Satuala",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 6208,
+        "engagementRate": 0,
+        "lift": 0
+      }
+    ]
   },
   "partnership": {
-    "avgEmv": 511.8,
+    "avgEmv": 541.88,
     "avgLift": 0,
     "top5Athletes": [
       {
@@ -27,8 +180,18 @@
           "name": "Hailey Bills",
           "sport": "CHEER"
         },
-        "posts": 3,
-        "emv": 16305.83,
+        "posts": 4,
+        "emv": 23117.75,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Kaden Chidester",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 6627.5,
         "engagementRate": 0,
         "lift": 0
       },
@@ -44,31 +207,21 @@
       },
       {
         "athlete": {
-          "name": "Joey Nokes",
-          "sport": "MENS_TRACK_AND_FIELD"
+          "name": "Bear Bachmeier",
+          "sport": "FOOTBALL"
         },
-        "posts": 1,
-        "emv": 1782,
+        "posts": 2,
+        "emv": 3484.75,
         "engagementRate": 0,
         "lift": 0
       },
       {
         "athlete": {
-          "name": "James Corrigan",
-          "sport": "MENS_CROSS_COUNTRY"
+          "name": "Jeff Lewis",
+          "sport": "FOOTBALL"
         },
-        "posts": 1,
-        "emv": 1257.5,
-        "engagementRate": 0,
-        "lift": 0
-      },
-      {
-        "athlete": {
-          "name": "Kylie Mantz",
-          "sport": "WOMENS_TRACK_AND_FIELD"
-        },
-        "posts": 1,
-        "emv": 1011.5,
+        "posts": 5,
+        "emv": 2189.8,
         "engagementRate": 0,
         "lift": 0
       }

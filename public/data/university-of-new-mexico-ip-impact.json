@@ -1,0 +1,68 @@
+{
+  "followers": 0,
+  "school": {
+    "_id": "697a73807ef35a6cd86b9524",
+    "name": "University of New Mexico"
+  },
+  "overall": {
+    "totalContents": 1182,
+    "totalLikes": 523405,
+    "totalComments": 39878,
+    "engagementRate": 0,
+    "emv": 321519.5
+  },
+  "counts": {
+    "hasOrganizationInCaption": 256,
+    "isOrganizationCollaboration": 54,
+    "hasOrganizationLogo": 630,
+    "withIp": 657
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 256,
+      "likes": 849.984375,
+      "comments": 22.44921875,
+      "engagementRate": 0,
+      "emv": 458.67
+    },
+    "no": {
+      "contents": 926,
+      "likes": 330.2473002159827,
+      "comments": 36.8585313174946,
+      "engagementRate": 0
+    },
+    "avgLift": 0
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 54,
+      "likes": 1295.6296296296296,
+      "comments": 18.185185185185187,
+      "engagementRate": 0,
+      "emv": 675.09
+    },
+    "no": {
+      "contents": 1128,
+      "likes": 401.98670212765956,
+      "comments": 34.4822695035461,
+      "engagementRate": 0
+    },
+    "avgLift": 0
+  },
+  "logo": {
+    "yes": {
+      "contents": 630,
+      "likes": 512.1174603174603,
+      "comments": 35.56825396825397,
+      "engagementRate": 0,
+      "emv": 309.41
+    },
+    "no": {
+      "contents": 552,
+      "likes": 363.71557971014494,
+      "comments": 31.64855072463768,
+      "engagementRate": 0
+    },
+    "avgLift": 0
+  }
+}

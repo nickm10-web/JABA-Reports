@@ -233,14 +233,16 @@ const SCHOOL_FILE_MAP: Record<string, string> = {
   'University of Central Florida': 'university-of-central-florida',
   'University of Maryland': 'university-of-maryland',
   'University of Nebraska': 'university-of-nebraska',
-  // USC not in data yet
+  'University of Southern California (USC)': 'university-of-southern-california-usc',
   // Regular Playfly schools
   'Brigham Young University (BYU)': 'brigham-young-university-byu',
   'George Mason': 'george-mason',
   'Old Dominion University': 'old-dominion-university',
   'University of Cincinnati': 'university-of-cincinnati',
+  'University of New Mexico': 'university-of-new-mexico',
   'University of Texas at San Antonio (UTSA)': 'university-of-texas-at-san-antonio-utsa',
-  // Wichita State, Oral Roberts, UNM, Denver, San Jose State not in data yet
+  'Wichita State University': 'wichita-state-university',
+  // Not in data yet: Oral Roberts, University of Denver, San Jose State
 };
 
 // Standardized display names - ensures consistent formatting across the UI
@@ -258,7 +260,10 @@ const SCHOOL_DISPLAY_NAMES: Record<string, string> = {
   'University of Cincinnati': 'University of Cincinnati',
   'University of Maryland': 'University of Maryland',
   'University of Nebraska': 'University of Nebraska',
+  'University of New Mexico': 'University of New Mexico (UNM)',
+  'University of Southern California (USC)': 'University of Southern California (USC)',
   'University of Texas at San Antonio (UTSA)': 'University of Texas at San Antonio (UTSA)',
+  'Wichita State University': 'Wichita State University',
 };
 
 // Helper function to get standardized display name

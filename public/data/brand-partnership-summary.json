@@ -1,21 +1,15 @@
 {
-  "totalPosts": 4810,
-  "activeBrands": 2161,
-  "activeSchools": 27,
-  "totalSchools": 27,
+  "totalPosts": 3607,
+  "activeBrands": 1692,
+  "activeSchools": 17,
+  "totalSchools": 17,
   "avgPostsPerBrand": 2,
   "brandStats": [
     {
       "brandName": "hollister",
-      "postCount": 68,
-      "schoolCount": 12,
-      "avgEngagementRate": 291.5
-    },
-    {
-      "brandName": "myplayersports",
-      "postCount": 64,
-      "schoolCount": 16,
-      "avgEngagementRate": 115.15625
+      "postCount": 69,
+      "schoolCount": 9,
+      "avgEngagementRate": 264.40579710144925
     },
     {
       "brandName": "baylorthreads",
@@ -24,28 +18,22 @@
       "avgEngagementRate": 99.26785714285714
     },
     {
-      "brandName": "myplayerathlete",
-      "postCount": 55,
-      "schoolCount": 18,
-      "avgEngagementRate": 138.2
-    },
-    {
-      "brandName": "cvspharmacy",
-      "postCount": 52,
-      "schoolCount": 14,
-      "avgEngagementRate": 145
-    },
-    {
       "brandName": "msufcu",
       "postCount": 51,
       "schoolCount": 1,
       "avgEngagementRate": 326.37254901960785
     },
     {
-      "brandName": "nike",
-      "postCount": 42,
-      "schoolCount": 12,
-      "avgEngagementRate": 1745.4761904761904
+      "brandName": "myplayersports",
+      "postCount": 37,
+      "schoolCount": 10,
+      "avgEngagementRate": 113.56756756756756
+    },
+    {
+      "brandName": "myplayerathlete",
+      "postCount": 36,
+      "schoolCount": 10,
+      "avgEngagementRate": 151.97222222222223
     },
     {
       "brandName": "aggie.threads",
@@ -60,16 +48,16 @@
       "avgEngagementRate": 136.26470588235293
     },
     {
-      "brandName": "c4energy",
+      "brandName": "nike",
       "postCount": 34,
-      "schoolCount": 11,
-      "avgEngagementRate": 2158.8529411764707
+      "schoolCount": 8,
+      "avgEngagementRate": 12965.5
     },
     {
-      "brandName": "adidas",
-      "postCount": 33,
-      "schoolCount": 9,
-      "avgEngagementRate": 1654.1818181818182
+      "brandName": "cvspharmacy",
+      "postCount": 34,
+      "schoolCount": 11,
+      "avgEngagementRate": 134.44117647058823
     },
     {
       "brandName": "postgame.official",
@@ -78,28 +66,22 @@
       "avgEngagementRate": 371.0967741935484
     },
     {
-      "brandName": "drinkolipop",
-      "postCount": 31,
-      "schoolCount": 10,
-      "avgEngagementRate": 186.83870967741936
-    },
-    {
-      "brandName": "vuoriclothing",
-      "postCount": 30,
-      "schoolCount": 9,
-      "avgEngagementRate": 241.06666666666666
-    },
-    {
-      "brandName": "underarmour",
-      "postCount": 29,
-      "schoolCount": 8,
-      "avgEngagementRate": 332.55172413793105
-    },
-    {
-      "brandName": "athletesthread",
+      "brandName": "c4energy",
       "postCount": 27,
-      "schoolCount": 11,
-      "avgEngagementRate": 238.2962962962963
+      "schoolCount": 7,
+      "avgEngagementRate": 2683.740740740741
+    },
+    {
+      "brandName": "adidas",
+      "postCount": 27,
+      "schoolCount": 5,
+      "avgEngagementRate": 2159.074074074074
+    },
+    {
+      "brandName": "drinkolipop",
+      "postCount": 24,
+      "schoolCount": 4,
+      "avgEngagementRate": 193.41666666666666
     },
     {
       "brandName": "nebraskathread",
@@ -108,10 +90,10 @@
       "avgEngagementRate": 267.4166666666667
     },
     {
-      "brandName": "exactsciences",
-      "postCount": 24,
-      "schoolCount": 1,
-      "avgEngagementRate": 511.8333333333333
+      "brandName": "underarmour",
+      "postCount": 23,
+      "schoolCount": 5,
+      "avgEngagementRate": 297.04347826086956
     },
     {
       "brandName": "ucfthreads",
@@ -126,22 +108,10 @@
       "avgEngagementRate": 49.21739130434783
     },
     {
-      "brandName": "influxer",
+      "brandName": "vuoriclothing",
       "postCount": 22,
       "schoolCount": 7,
-      "avgEngagementRate": 26.045454545454547
-    },
-    {
-      "brandName": "raisingcanes",
-      "postCount": 21,
-      "schoolCount": 9,
-      "avgEngagementRate": 1025.095238095238
-    },
-    {
-      "brandName": "teamvktry",
-      "postCount": 21,
-      "schoolCount": 7,
-      "avgEngagementRate": 1189.4285714285713
+      "avgEngagementRate": 258.1363636363636
     },
     {
       "brandName": "dillards",
@@ -150,16 +120,16 @@
       "avgEngagementRate": 153.35
     },
     {
-      "brandName": "onlyfreshdesigns",
-      "postCount": 20,
-      "schoolCount": 9,
-      "avgEngagementRate": 10.5
+      "brandName": "athletesthread",
+      "postCount": 19,
+      "schoolCount": 7,
+      "avgEngagementRate": 305.10526315789474
     },
     {
-      "brandName": "978.jerseys",
-      "postCount": 20,
-      "schoolCount": 1,
-      "avgEngagementRate": 143.1
+      "brandName": "raisingcanes",
+      "postCount": 19,
+      "schoolCount": 7,
+      "avgEngagementRate": 1402.9473684210527
     },
     {
       "brandName": "utsathreads",
@@ -174,34 +144,10 @@
       "avgEngagementRate": 203.52631578947367
     },
     {
-      "brandName": "brooksrunning",
-      "postCount": 18,
-      "schoolCount": 6,
-      "avgEngagementRate": 788.0555555555555
-    },
-    {
-      "brandName": "wisconsin.threads",
-      "postCount": 18,
-      "schoolCount": 1,
-      "avgEngagementRate": 42.888888888888886
-    },
-    {
-      "brandName": "uwcreditunion",
-      "postCount": 17,
-      "schoolCount": 1,
-      "avgEngagementRate": 137.88235294117646
-    },
-    {
       "brandName": "OnToVictory",
       "postCount": 16,
       "schoolCount": 1,
       "avgEngagementRate": 35.125
-    },
-    {
-      "brandName": "murryave",
-      "postCount": 16,
-      "schoolCount": 9,
-      "avgEngagementRate": 66.5
     },
     {
       "brandName": "charitablegiftamerica",
@@ -210,40 +156,16 @@
       "avgEngagementRate": 202.5
     },
     {
-      "brandName": "nilelite.ladies",
+      "brandName": "teamvktry",
       "postCount": 15,
-      "schoolCount": 7,
-      "avgEngagementRate": 144.93333333333334
+      "schoolCount": 4,
+      "avgEngagementRate": 1597.0666666666666
     },
     {
-      "brandName": "hoka",
+      "brandName": "brooksrunning",
       "postCount": 15,
-      "schoolCount": 6,
-      "avgEngagementRate": 1187.5333333333333
-    },
-    {
-      "brandName": "mcdonalds.nebraska",
-      "postCount": 15,
-      "schoolCount": 2,
-      "avgEngagementRate": 239.8
-    },
-    {
-      "brandName": "joinpaguard",
-      "postCount": 15,
-      "schoolCount": 2,
-      "avgEngagementRate": 183.73333333333332
-    },
-    {
-      "brandName": "easportscollege",
-      "postCount": 14,
-      "schoolCount": 9,
-      "avgEngagementRate": 1735.9285714285713
-    },
-    {
-      "brandName": "rhoback",
-      "postCount": 14,
-      "schoolCount": 6,
-      "avgEngagementRate": 2963
+      "schoolCount": 5,
+      "avgEngagementRate": 703
     },
     {
       "brandName": "nittanylionthreads",
@@ -258,10 +180,16 @@
       "avgEngagementRate": 137.84615384615384
     },
     {
-      "brandName": "cavfutures",
+      "brandName": "onlyfreshdesigns",
       "postCount": 13,
-      "schoolCount": 1,
-      "avgEngagementRate": 263.61538461538464
+      "schoolCount": 3,
+      "avgEngagementRate": 14.538461538461538
+    },
+    {
+      "brandName": "on",
+      "postCount": 13,
+      "schoolCount": 2,
+      "avgEngagementRate": 1193.5384615384614
     },
     {
       "brandName": "lsuthreads",
@@ -270,28 +198,10 @@
       "avgEngagementRate": 57.84615384615385
     },
     {
-      "brandName": "lockton_usa",
-      "postCount": 13,
-      "schoolCount": 1,
-      "avgEngagementRate": 292.3076923076923
-    },
-    {
-      "brandName": "allstate",
-      "postCount": 12,
-      "schoolCount": 7,
-      "avgEngagementRate": 1328.1666666666667
-    },
-    {
-      "brandName": "postgame.official",
+      "brandName": "influxer",
       "postCount": 12,
       "schoolCount": 4,
-      "avgEngagementRate": 52.25
-    },
-    {
-      "brandName": "nocco.usa",
-      "postCount": 12,
-      "schoolCount": 5,
-      "avgEngagementRate": 108.58333333333333
+      "avgEngagementRate": 34.333333333333336
     },
     {
       "brandName": "gxgelite",
@@ -300,10 +210,100 @@
       "avgEngagementRate": 25.083333333333332
     },
     {
-      "brandName": "influxeruva",
+      "brandName": "marylandthreadss",
       "postCount": 12,
       "schoolCount": 1,
-      "avgEngagementRate": 5.416666666666667
+      "avgEngagementRate": 104.25
+    },
+    {
+      "brandName": "influxerbyu",
+      "postCount": 12,
+      "schoolCount": 1,
+      "avgEngagementRate": 27.583333333333332
+    },
+    {
+      "brandName": "seatgeek",
+      "postCount": 11,
+      "schoolCount": 5,
+      "avgEngagementRate": 4130.272727272727
+    },
+    {
+      "brandName": "murryave",
+      "postCount": 11,
+      "schoolCount": 4,
+      "avgEngagementRate": 82.45454545454545
+    },
+    {
+      "brandName": "hydroflask",
+      "postCount": 11,
+      "schoolCount": 7,
+      "avgEngagementRate": 264.6363636363636
+    },
+    {
+      "brandName": "byuthreads",
+      "postCount": 11,
+      "schoolCount": 1,
+      "avgEngagementRate": 103
+    },
+    {
+      "brandName": "shop.abide",
+      "postCount": 10,
+      "schoolCount": 1,
+      "avgEngagementRate": 6.5
+    },
+    {
+      "brandName": "postgame.official",
+      "postCount": 10,
+      "schoolCount": 3,
+      "avgEngagementRate": 59.8
+    },
+    {
+      "brandName": "ipsy",
+      "postCount": 10,
+      "schoolCount": 1,
+      "avgEngagementRate": 4668
+    },
+    {
+      "brandName": "monsterenergy",
+      "postCount": 10,
+      "schoolCount": 3,
+      "avgEngagementRate": 888.8
+    },
+    {
+      "brandName": "meas_active",
+      "postCount": 10,
+      "schoolCount": 1,
+      "avgEngagementRate": 93.5
+    },
+    {
+      "brandName": "uscthreads",
+      "postCount": 10,
+      "schoolCount": 1,
+      "avgEngagementRate": 196.2
+    },
+    {
+      "brandName": "houseofvictorynil",
+      "postCount": 10,
+      "schoolCount": 1,
+      "avgEngagementRate": 543.9
+    },
+    {
+      "brandName": "mommagoldbergs",
+      "postCount": 9,
+      "schoolCount": 1,
+      "avgEngagementRate": 305
+    },
+    {
+      "brandName": "on3recruits",
+      "postCount": 9,
+      "schoolCount": 8,
+      "avgEngagementRate": 28074.444444444445
+    },
+    {
+      "brandName": "nocco.usa",
+      "postCount": 9,
+      "schoolCount": 4,
+      "avgEngagementRate": 122.11111111111111
     }
   ],
   "schoolStats": [
@@ -320,22 +320,16 @@
       "avgEngagementRate": 0.0005625385616169438
     },
     {
-      "schoolName": "University of Wisconsin",
-      "postCount": 357,
-      "brandCount": 182,
-      "avgEngagementRate": 0.00049476151433842
+      "schoolName": "University of Southern California (USC)",
+      "postCount": 356,
+      "brandCount": 213,
+      "avgEngagementRate": 0.0006125602596952985
     },
     {
       "schoolName": "Louisiana State University",
       "postCount": 353,
       "brandCount": 219,
       "avgEngagementRate": 0.0002912368260362576
-    },
-    {
-      "schoolName": "University of Virginia",
-      "postCount": 321,
-      "brandCount": 191,
-      "avgEngagementRate": 0.003017383587677444
     },
     {
       "schoolName": "University of Nebraska",
@@ -350,16 +344,16 @@
       "avgEngagementRate": 0.0004493534674928165
     },
     {
+      "schoolName": "Brigham Young University (BYU)",
+      "postCount": 282,
+      "brandCount": 184,
+      "avgEngagementRate": 1582.3971631205675
+    },
+    {
       "schoolName": "Texas A&M",
       "postCount": 274,
       "brandCount": 163,
       "avgEngagementRate": 0.0008693085661116116
-    },
-    {
-      "schoolName": "Clemson",
-      "postCount": 259,
-      "brandCount": 134,
-      "avgEngagementRate": 0.00047309031129465917
     },
     {
       "schoolName": "Michigan State",
@@ -380,34 +374,10 @@
       "avgEngagementRate": 0.00025090679898268363
     },
     {
-      "schoolName": "Creighton University",
-      "postCount": 132,
-      "brandCount": 67,
-      "avgEngagementRate": 0.0006859897786796551
-    },
-    {
-      "schoolName": "Brigham Young University (BYU)",
-      "postCount": 123,
-      "brandCount": 87,
-      "avgEngagementRate": 1522.2520325203252
-    },
-    {
-      "schoolName": "Virginia Tech",
-      "postCount": 119,
-      "brandCount": 82,
-      "avgEngagementRate": 0.0002743416828617058
-    },
-    {
       "schoolName": "University of Cincinnati",
       "postCount": 119,
       "brandCount": 71,
       "avgEngagementRate": 0.0002968620988139105
-    },
-    {
-      "schoolName": "San Diego State University",
-      "postCount": 119,
-      "brandCount": 66,
-      "avgEngagementRate": 0.00043919135622503836
     },
     {
       "schoolName": "University of Maryland",
@@ -416,58 +386,28 @@
       "avgEngagementRate": 481.3020833333333
     },
     {
-      "schoolName": "Kentucky",
-      "postCount": 94,
-      "brandCount": 58,
-      "avgEngagementRate": 0.0003437188989675842
-    },
-    {
-      "schoolName": "University of San Diego",
-      "postCount": 89,
-      "brandCount": 58,
-      "avgEngagementRate": 0.006259881073487282
-    },
-    {
       "schoolName": "Old Dominion University",
       "postCount": 83,
       "brandCount": 29,
       "avgEngagementRate": 0.00046165651310527746
     },
     {
-      "schoolName": "Kansas",
-      "postCount": 64,
-      "brandCount": 36,
-      "avgEngagementRate": 0.000554053784719043
-    },
-    {
-      "schoolName": "Robert Morris University",
-      "postCount": 53,
-      "brandCount": 27,
-      "avgEngagementRate": 0.0001045625717929377
-    },
-    {
-      "schoolName": "Washington State",
-      "postCount": 43,
-      "brandCount": 30,
-      "avgEngagementRate": 0.002975330533046695
-    },
-    {
-      "schoolName": "Depaul",
-      "postCount": 36,
-      "brandCount": 23,
-      "avgEngagementRate": 0.0013754771293483599
-    },
-    {
-      "schoolName": "Pittsburgh",
-      "postCount": 35,
-      "brandCount": 22,
-      "avgEngagementRate": 0.0010051650350955536
-    },
-    {
       "schoolName": "George Mason",
       "postCount": 2,
       "brandCount": 2,
       "avgEngagementRate": 130
+    },
+    {
+      "schoolName": "Wichita State University",
+      "postCount": 2,
+      "brandCount": 2,
+      "avgEngagementRate": 162
+    },
+    {
+      "schoolName": "University of New Mexico",
+      "postCount": 1,
+      "brandCount": 1,
+      "avgEngagementRate": 1118
     }
   ]
 }

@@ -1,0 +1,200 @@
+{
+  "school": {
+    "_id": "697a72af7ef35a6cd86b951b",
+    "name": "Wichita State University"
+  },
+  "collaboration": {
+    "avgEmv": 277.8,
+    "avgLift": 0,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Will Berg",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 1501,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Noah Hill",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 3,
+        "emv": 617.33,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Dre Kindell",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 546,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Allie Paulsen",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 1,
+        "emv": 384,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Jordan Heatherly",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 3,
+        "emv": 376.17,
+        "engagementRate": 0,
+        "lift": 0
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 176.19,
+    "avgLift": 0,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Will Berg",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 3,
+        "emv": 1031.83,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Brody Anderson",
+          "sport": "MENS_TRACK_AND_FIELD"
+        },
+        "posts": 3,
+        "emv": 476.83,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Dillon Battie",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 5,
+        "emv": 446.3,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Keely Hoback",
+          "sport": "WOMENS_TRACK_AND_FIELD"
+        },
+        "posts": 4,
+        "emv": 418.88,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "MJ Sweeney",
+          "sport": "BASEBALL"
+        },
+        "posts": 5,
+        "emv": 417.8,
+        "engagementRate": 0,
+        "lift": 0
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 249.51,
+    "avgLift": 0,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Alena McDugle",
+          "sport": "WOMENS_BOWLING"
+        },
+        "posts": 11,
+        "emv": 5796.73,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Will Berg",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 1501,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Jenna Edwards",
+          "sport": "SOFTBALL"
+        },
+        "posts": 1,
+        "emv": 665.5,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "TJ Williams",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 623,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Dax Sharp",
+          "sport": "BASEBALL"
+        },
+        "posts": 3,
+        "emv": 615.5,
+        "engagementRate": 0,
+        "lift": 0
+      }
+    ]
+  },
+  "partnership": {
+    "avgEmv": 121,
+    "avgLift": 0,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Aleesha Oden",
+          "sport": "WOMENS_BOWLING"
+        },
+        "posts": 1,
+        "emv": 132.5,
+        "engagementRate": 0,
+        "lift": 0
+      },
+      {
+        "athlete": {
+          "name": "Dillon Battie",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 109.5,
+        "engagementRate": 0,
+        "lift": 0
+      }
+    ]
+  }
+}

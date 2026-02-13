@@ -1,0 +1,34 @@
+{
+  "school": {
+    "_id": "697a72af7ef35a6cd86b951b",
+    "name": "Wichita State University"
+  },
+  "followers": 0,
+  "overall": {
+    "totalContents": 1740,
+    "avgLikes": 632.6109195402299,
+    "avgComments": 28.141954022988507,
+    "engagementRate": 0,
+    "emv": 358.52
+  },
+  "sponsorPartners": [
+    {
+      "sponsorPartner": "@nfmpics",
+      "totalContents": 1,
+      "avgLikes": 244,
+      "avgComments": 7,
+      "engagementRate": 0,
+      "emv": 132.5,
+      "engagementRateLift": 0
+    },
+    {
+      "sponsorPartner": "@mcdonaldsphillyregion",
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 73,
+      "engagementRate": 0,
+      "emv": 109.5,
+      "engagementRateLift": 0
+    }
+  ]
+}

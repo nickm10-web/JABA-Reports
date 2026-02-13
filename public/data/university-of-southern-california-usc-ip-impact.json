@@ -1,0 +1,68 @@
+{
+  "followers": 4376029,
+  "school": {
+    "_id": "68f8741f7804265f86eb36f9",
+    "name": "University of Southern California (USC)"
+  },
+  "overall": {
+    "totalContents": 5948,
+    "totalLikes": 10033317,
+    "totalComments": 272753,
+    "engagementRate": 0.00039595144902771976,
+    "emv": 5425788
+  },
+  "counts": {
+    "hasOrganizationInCaption": 9,
+    "isOrganizationCollaboration": 169,
+    "hasOrganizationLogo": 512,
+    "withIp": 653
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 9,
+      "likes": 858,
+      "comments": 51.111111111111114,
+      "engagementRate": 0.00020774796307590994,
+      "emv": 505.67
+    },
+    "no": {
+      "contents": 5939,
+      "likes": 1688.0947971038895,
+      "comments": 45.84829095807375,
+      "engagementRate": 0.00039623665383889444
+    },
+    "avgLift": -47.56972605558646
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 169,
+      "likes": 3423.639053254438,
+      "comments": 58.61538461538461,
+      "engagementRate": 0.0007957567095350196,
+      "emv": 1799.74
+    },
+    "no": {
+      "contents": 5779,
+      "likes": 1636.0481052085136,
+      "comments": 45.483128568956566,
+      "engagementRate": 0.0003842596184297385
+    },
+    "avgLift": 107.08829951657357
+  },
+  "logo": {
+    "yes": {
+      "contents": 512,
+      "likes": 2051.775390625,
+      "comments": 57.1796875,
+      "engagementRate": 0.0004819335242350999,
+      "emv": 1111.66
+    },
+    "no": {
+      "contents": 5436,
+      "likes": 1652.466519499632,
+      "comments": 44.78973509933775,
+      "engagementRate": 0.0003878530637248907
+    },
+    "avgLift": 24.25672743349572
+  }
+}
