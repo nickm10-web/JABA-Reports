@@ -61,7 +61,7 @@ interface AthletesTabProps {
   formatEMV: (emv: number) => string;
 }
 
-type SortMetric = 'engagement' | 'avgLikes' | 'emv' | 'lift' | 'posts';
+type SortMetric = 'engagement' | 'followers' | 'totalLikes' | 'totalComments' | 'emv' | 'lift' | 'posts';
 type IPModeFilter = 'all' | 'collaboration' | 'logo' | 'mention';
 type ViewMode = 'leaderboard' | 'by-ip-type';
 
@@ -103,6 +103,7 @@ export function AthletesTab({
     engagement: number;
     avgLift: number | null;
     emv: number;
+    followers: number;
     posts: number;
   } | null>(null);
   const [athleteDrawerOpen, setAthleteDrawerOpen] = useState(false);
@@ -145,6 +146,7 @@ export function AthletesTab({
         school: a.school,
         posts: a.postCount,
         emv: a.emv,
+        followers: a.followers,
         totalLikes: a.totalLikes,
         totalComments: a.totalComments,
         engagement: a.engagementRate,
@@ -169,9 +171,17 @@ export function AthletesTab({
         aVal = a.engagement;
         bVal = b.engagement;
         break;
-      case 'avgLikes':
-        aVal = a.engagement; // Using engagement as proxy for likes
-        bVal = b.engagement;
+      case 'followers':
+        aVal = a.followers || 0;
+        bVal = b.followers || 0;
+        break;
+      case 'totalLikes':
+        aVal = a.totalLikes || 0;
+        bVal = b.totalLikes || 0;
+        break;
+      case 'totalComments':
+        aVal = a.totalComments || 0;
+        bVal = b.totalComments || 0;
         break;
       case 'emv':
         aVal = a.emv || 0;
@@ -309,8 +319,8 @@ export function AthletesTab({
                   .map(a => ({ name: a.name, school: a.school, engagement: a.engagementRate }))
               : [...sortedAthletes].sort((a, b) => b.engagement - a.engagement).slice(0, 5)
                   .map(a => ({ name: a.name, school: a.school, engagement: a.engagement }));
-            const topLift = [...sortedAthletes].sort((a, b) => (b.avgLift ?? 0) - (a.avgLift ?? 0)).slice(0, 5);
             const filteredReal = realEngagementData.filter(a => sectionScope === 'all' || a.school === sectionScope);
+            const topFollowers = [...filteredReal].sort((a, b) => (b.followers || 0) - (a.followers || 0)).slice(0, 5);
             const topLikes = [...filteredReal].sort((a, b) => b.totalLikes - a.totalLikes).slice(0, 5);
             const topComments = [...filteredReal].sort((a, b) => b.totalComments - a.totalComments).slice(0, 5);
             const renderList = (items: Array<{ name: string; school: string; [key: string]: any }>, metric: (a: any) => string) => (
@@ -333,8 +343,8 @@ export function AthletesTab({
                   {renderList(topEngagementFromReal, (a) => `${(a.engagement * 100).toFixed(2)}%`)}
                 </GlassCard>
                 <GlassCard className="p-4">
-                  <div className="text-sm font-semibold text-gray-900 mb-3">Top IP Lift</div>
-                  {renderList(topLift, (a) => `${a.avgLift > 0 ? '+' : ''}${(a.avgLift).toFixed(1)}%`)}
+                  <div className="text-sm font-semibold text-gray-900 mb-3">Top Followers</div>
+                  {renderList(topFollowers, (a) => formatNumber(a.followers || 0))}
                 </GlassCard>
                 <GlassCard className="p-4">
                   <div className="text-sm font-semibold text-gray-900 mb-3">Top Total Likes</div>
@@ -372,6 +382,7 @@ export function AthletesTab({
                     sport: athlete.sport,
                     engagement: athlete.engagement,
                     emv: athlete.emv,
+                    followers: athlete.followers || 0,
                     avgLift: athlete.avgLift,
                     posts: athlete.posts
                   });
@@ -384,6 +395,8 @@ export function AthletesTab({
                 </div>
                 <div className="text-xs text-gray-600 mt-1">{athlete.school} • {formatSport(athlete.sport)}</div>
                 <div className="grid grid-cols-2 gap-3 mt-4 text-xs text-gray-600">
+                  <div>Followers</div>
+                  <div className="text-right text-[#1770C0] font-semibold">{athlete.followers ? formatNumber(athlete.followers) : '-'}</div>
                   <div>Engagement</div>
                   <div className="text-right text-[#00C4A7] font-semibold">{(athlete.engagement * 100).toFixed(2)}%</div>
                   <div>Estimated EMV</div>
@@ -406,6 +419,15 @@ export function AthletesTab({
                   <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700">#</th>
                   <th className="px-6 py-4 text-left text-xs font-semibold text-gray-700">ATHLETE</th>
                   <th
+                    onClick={() => handleSort('followers')}
+                    className="px-6 py-4 text-right text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
+                  >
+                    <div className="flex items-center justify-end gap-2">
+                      FOLLOWERS
+                      {sortBy === 'followers' && <span style={{ color: '#1770C0' }}>{sortDirection === 'desc' ? ' ↓' : ' ↑'}</span>}
+                    </div>
+                  </th>
+                  <th
                     onClick={() => handleSort('engagement')}
                     className="px-6 py-4 text-right text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
                   >
@@ -414,8 +436,24 @@ export function AthletesTab({
                       {sortBy === 'engagement' && <span style={{ color: '#1770C0' }}>{sortDirection === 'desc' ? ' ↓' : ' ↑'}</span>}
                     </div>
                   </th>
-                  <th className="px-6 py-4 text-right text-xs font-semibold text-gray-700">TOTAL LIKES</th>
-                  <th className="px-6 py-4 text-right text-xs font-semibold text-gray-700">TOTAL COMMENTS</th>
+                  <th
+                    onClick={() => handleSort('totalLikes')}
+                    className="px-6 py-4 text-right text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
+                  >
+                    <div className="flex items-center justify-end gap-2">
+                      TOTAL LIKES
+                      {sortBy === 'totalLikes' && <span style={{ color: '#1770C0' }}>{sortDirection === 'desc' ? ' ↓' : ' ↑'}</span>}
+                    </div>
+                  </th>
+                  <th
+                    onClick={() => handleSort('totalComments')}
+                    className="px-6 py-4 text-right text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
+                  >
+                    <div className="flex items-center justify-end gap-2">
+                      TOTAL COMMENTS
+                      {sortBy === 'totalComments' && <span style={{ color: '#1770C0' }}>{sortDirection === 'desc' ? ' ↓' : ' ↑'}</span>}
+                    </div>
+                  </th>
                   <th
                     onClick={() => handleSort('emv')}
                     className="px-6 py-4 text-right text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
@@ -457,6 +495,7 @@ export function AthletesTab({
                         sport: athlete.sport,
                         engagement: athlete.engagement,
                         emv: athlete.emv,
+                        followers: athlete.followers || 0,
                         avgLift: athlete.avgLift,
                         posts: athlete.posts
                       });
@@ -471,6 +510,11 @@ export function AthletesTab({
                         <div className="text-gray-900 font-semibold">{athlete.name}</div>
                         <div className="text-xs text-gray-600 mt-0.5">{athlete.school}</div>
                         <div className="text-xs text-gray-500 mt-0.5">{formatSport(athlete.sport)}</div>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 text-right">
+                      <div className="text-[#1770C0] font-semibold text-base">
+                        {athlete.followers ? formatNumber(athlete.followers) : '-'}
                       </div>
                     </td>
                     <td className="px-6 py-4 text-right">
@@ -637,6 +681,10 @@ export function AthletesTab({
             <div className="flex items-center justify-between">
               <span className="text-gray-500">Sport</span>
               <span className="font-semibold text-gray-900">{formatSport(selectedAthlete.sport)}</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-500">Followers</span>
+              <span className="font-semibold text-[#1770C0]">{selectedAthlete.followers ? formatNumber(selectedAthlete.followers) : '-'}</span>
             </div>
             <div className="flex items-center justify-between">
               <span className="text-gray-500">Engagement</span>

@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "generate:ohio-overview": "node scripts/generateOhioAthleteOverview.mjs",
+    "dev": "npm run generate:ohio-overview && vite",
+    "build": "npm run generate:ohio-overview && tsc && vite build",
     "preview": "vite preview"
   },
   "keywords": [],

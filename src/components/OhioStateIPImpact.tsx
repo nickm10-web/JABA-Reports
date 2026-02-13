@@ -564,6 +564,27 @@ const fallbackSportData: Record<string, Record<string, { with: { posts: number; 
   }
 };
 
+const fallbackTeamFollowersBySport: Record<string, number> = {
+  FENCING: 5082,
+  WOMENS_SOCCER: 24623,
+  MENS_TENNIS: 8102,
+  MENS_SOCCER: 33516,
+  MENS_BASKETBALL: 221116,
+  WOMENS_GOLF: 6370,
+  TRACK_AND_FIELD: 59348,
+  MENS_GOLF: 16802,
+  WOMENS_VOLLEYBALL: 78505,
+  WOMENS_GYMNASTICS: 58197,
+  MENS_HOCKEY: 50004,
+  MENS_LACROSSE: 71497,
+  WOMENS_BASKETBALL: 44648,
+  FOOTBALL: 1529934,
+  SOFTBALL: 39411,
+  WOMENS_TENNIS: 4355,
+  SWIMMING_AND_DIVING: 17053,
+  BASEBALL: 81936,
+};
+
 const big10Schools = [
   { name: 'Nebraska', conf: 'Big 10', followers: 3012749, posts: 3049, ipPosts: 1658, adoption: 54.4, logo: 49.1, mention: 20.2, collab: 0 },
   { name: 'Indiana', conf: 'Big 10', followers: 900000, posts: 1635, ipPosts: 831, adoption: 50.8, logo: 50.8, mention: 0, collab: 0 },
@@ -3117,9 +3138,19 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
     let cancelled = false;
     const loadFollowers = async () => {
       try {
-        const response = await fetch('/data/Ohio.roster_teams.json');
-        if (!response.ok) return;
-        const rows = (await response.json()) as OhioRosterTeam[];
+        let rows: OhioRosterTeam[] | null = null;
+        for (const path of ['/data/Ohio.roster_teams.json', '/data/ohio.roster_teams.json']) {
+          try {
+            const response = await fetch(path);
+            if (response.ok) {
+              rows = (await response.json()) as OhioRosterTeam[];
+              break;
+            }
+          } catch {
+            // Try next path.
+          }
+        }
+        if (!rows) return;
         const map: Record<string, TeamRosterMetricSnapshot> = {};
         for (const row of rows) {
           const key = row.sport;
@@ -3151,53 +3182,48 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
 
   const sportRows = useMemo((): SportRow[] => {
     const rows: SportRow[] = [];
+    const rosterKeys = Object.keys(rosterMetricsBySport);
+    const sourceKeys = rosterKeys.length > 0
+      ? rosterKeys
+      : Object.keys(sportData).filter((key) => key !== 'ALL_SPORTS');
 
-    for (const [key, signals] of Object.entries(sportData)) {
-      if (key === 'ALL_SPORTS') continue;
-      const data = signals[signal];
-      if (!data) continue;
-
-      const withPosts = data.with.posts;
-      const withoutPosts = data.without.posts;
+    for (const key of sourceKeys) {
+      const data = sportData[key]?.[signal];
       const rosterMetrics = rosterMetricsBySport[key];
+      const withPosts = data?.with.posts ?? 0;
+      const withoutPosts = data?.without.posts ?? 0;
       const derivedTotalPosts = withPosts + withoutPosts;
       const totalPosts = rosterMetrics?.contentCount || derivedTotalPosts;
-      const derivedTotalLikes = (data.with.avgLikes * withPosts) + (data.without.avgLikes * withoutPosts);
+      const derivedTotalLikes = (data ? ((data.with.avgLikes * withPosts) + (data.without.avgLikes * withoutPosts)) : 0);
       const totalLikes = rosterMetrics?.likes || derivedTotalLikes;
-      const totalComments = rosterMetrics?.comments || ((data.with.avgComments * withPosts) + (data.without.avgComments * withoutPosts));
+      const totalComments = rosterMetrics?.comments || (data ? ((data.with.avgComments * withPosts) + (data.without.avgComments * withoutPosts)) : 0);
       const totalInteractions = totalLikes + totalComments;
       const engagementRate = rosterMetrics?.engagementRate
-        || (totalPosts > 0
+        || (data && totalPosts > 0
           ? ((data.with.engagementRate * withPosts) + (data.without.engagementRate * withoutPosts)) / totalPosts
           : 0);
-      const lift =
-        data.without.engagementRate > 0
-          ? ((data.with.engagementRate - data.without.engagementRate) / data.without.engagementRate) * 100
-          : 0;
+      const lift = data && data.without.engagementRate > 0
+        ? ((data.with.engagementRate - data.without.engagementRate) / data.without.engagementRate) * 100
+        : 0;
       const signalCountFromRoster = rosterMetrics?.organizationCollaborationContentCount || 0;
       const ipPosts = signalCountFromRoster || withPosts;
 
       rows.push({
         sport: formatSportLabel(key),
         sportKey: key,
-        followers: rosterMetrics?.followers || 0,
+        followers: rosterMetrics?.followers || fallbackTeamFollowersBySport[key] || 0,
         totalLikes,
         engagementRate,
         totalInteractions,
         totalPosts,
         ipPosts,
-        avgLikes: data.with.avgLikes,
+        avgLikes: totalPosts > 0 ? totalLikes / totalPosts : 0,
         lift,
       });
     }
 
     return rows;
   }, [rosterMetricsBySport, signal, sportData]);
-
-  const totalFollowersAcrossTeams = useMemo(
-    () => sportRows.reduce((sum, row) => sum + row.followers, 0),
-    [sportRows],
-  );
 
   const metricValue = (row: SportRow, metric: TeamMetricKey): number => {
     if (metric === 'followers') return row.followers;
@@ -3387,34 +3413,12 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
         })}
       </div>
 
-      <div className="rounded-xl border bg-white p-4" style={{ borderColor: 'rgba(0,0,0,0.08)' }}>
-        <div className="flex items-center justify-between mb-3">
-          <p className="text-xs uppercase tracking-wider font-semibold" style={{ color: colors.textMuted }}>
-            Followers Distribution by Team
-          </p>
-          <p className="text-xs" style={{ color: colors.textMuted }}>
-            Total {formatNumber(totalFollowersAcrossTeams)}
-          </p>
-        </div>
-        <div className="h-3 w-full rounded-full overflow-hidden bg-gray-100 flex">
-          {rowsByActiveMetric.map((row, idx) => {
-            const share = totalFollowersAcrossTeams > 0 ? (row.followers / totalFollowersAcrossTeams) * 100 : 0;
-            const width = Math.max(share, row.followers > 0 ? 1.5 : 0);
-            return (
-              <div
-                key={row.sportKey}
-                title={`${row.sport}: ${share.toFixed(1)}%`}
-                style={{
-                  width: `${width}%`,
-                  backgroundColor: idx === 0 ? osuScarlet : idx === 1 ? '#d84f4f' : '#e5a5a5',
-                }}
-              />
-            );
-          })}
-        </div>
-      </div>
-
       <div className="rounded-xl border overflow-hidden bg-white" style={{ borderColor: 'rgba(0,0,0,0.08)' }}>
+        <div className="px-4 pt-4 pb-2 border-b border-gray-100">
+          <p className="text-xs" style={{ color: colors.textMuted }}>
+            Sample data: likes, engagement rate, and total posts are based on a recent post sample (about last 12 posts per team).
+          </p>
+        </div>
         <div className="overflow-x-auto">
           <table className="w-full text-sm min-w-[980px]">
             <thead>
@@ -3498,10 +3502,19 @@ export function OhioStateIPImpact({ onBack }: { onBack?: () => void }) {
 
     const loadOhioSports = async () => {
       try {
-        const response = await fetch('/data/Ohio.roster_teams.json');
-        if (!response.ok) return;
-
-        const rows = (await response.json()) as OhioRosterTeam[];
+        let rows: OhioRosterTeam[] | null = null;
+        for (const path of ['/data/Ohio.roster_teams.json', '/data/ohio.roster_teams.json']) {
+          try {
+            const response = await fetch(path);
+            if (response.ok) {
+              rows = (await response.json()) as OhioRosterTeam[];
+              break;
+            }
+          } catch {
+            // Try next path.
+          }
+        }
+        if (!rows) return;
         const dynamicData = buildSportDataFromRoster(rows);
         if (!isCancelled && dynamicData.ALL_SPORTS) {
           setSportData(dynamicData);

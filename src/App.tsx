@@ -53,7 +53,7 @@ function App() {
         <Route path="/" element={<HomeRoute />} />
         <Route path="/auburn" element={<AuburnRoute />} />
         <Route path="/baylor" element={<BaylorRoute />} />
-        <Route path="/ohio-state" element={<OhioStateRoute />} />
+        <Route path="/ohiostate" element={<OhioStateRoute />} />
         <Route path="/kentucky" element={<KentuckyRoute />} />
         <Route path="/playfly" element={<PlayflyRoute />} />
         <Route path="/ucla" element={<UCLARoute />} />
