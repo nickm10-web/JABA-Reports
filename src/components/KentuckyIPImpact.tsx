@@ -393,8 +393,8 @@ const fallbackSportData: Record<string, Record<string, { with: { posts: number; 
 const fallbackTeamFollowersBySport: Record<string, number> = {};
 
 const secSchools = [
-  { name: 'Texas A&M', conf: 'SEC', followers: 1878601, posts: 4316, ipPosts: 2220, adoption: 51.4, logo: 15.4, mention: 24.5, collab: 0 },
   { name: 'Kentucky', conf: 'SEC', followers: 1671393, posts: 2900, ipPosts: 1550, adoption: 53.4, logo: 47.0, mention: 13.7, collab: 6.7 },
+  { name: 'Texas A&M', conf: 'SEC', followers: 1878601, posts: 4316, ipPosts: 2220, adoption: 51.4, logo: 15.4, mention: 24.5, collab: 0 },
   { name: 'Auburn', conf: 'SEC', followers: 2323541, posts: 6405, ipPosts: 3079, adoption: 48.1, logo: 12.3, mention: 25.9, collab: 0.4 },
   { name: 'LSU', conf: 'SEC', followers: 5170563, posts: 5454, ipPosts: 2514, adoption: 46.1, logo: 10.1, mention: 18.6, collab: 0 },
   { name: 'Oklahoma', conf: 'SEC', followers: 0, posts: 2813, ipPosts: 1283, adoption: 45.6, logo: 45.6, mention: 0, collab: 0 },
@@ -414,13 +414,14 @@ const ncaaD1Schools = [
   { name: 'Old Dominion', conf: 'Sun Belt', posts: 1564, adoption: 56.7, logo: 53.5, mention: 14.6, collab: 1.34 },
   { name: 'Nebraska', conf: 'Big 10', posts: 3049, adoption: 54.3, logo: 49.1, mention: 20.2, collab: 0 },
   { name: 'Miami', conf: 'ACC', posts: 1553, adoption: 53.8, logo: 53.8, mention: 0, collab: 0 },
+  { name: 'Kentucky', conf: 'SEC', posts: 2900, adoption: 53.4, logo: 47.0, mention: 13.7, collab: 6.7 },
   { name: 'New Mexico', conf: 'MWC', posts: 1182, adoption: 53.2, logo: 50.2, mention: 21.6, collab: 4.56 },
   { name: 'Texas Tech', conf: 'Big 12', posts: 2355, adoption: 52.9, logo: 52.3, mention: 0, collab: 1.18 },
   { name: 'Indiana', conf: 'Big 10', posts: 1635, adoption: 50.8, logo: 50.8, mention: 0, collab: 0 },
   { name: 'Michigan', conf: 'Big 10', posts: 4042, adoption: 50.0, logo: 50.0, mention: 0, collab: 0.09 },
   { name: 'Virginia Tech', conf: 'SEC', posts: 3735, adoption: 49.6, logo: 45.9, mention: 16.0, collab: 0.10 },
   { name: 'Houston', conf: 'Big 12', posts: 1987, adoption: 48.6, logo: 47.2, mention: 0, collab: 3.97 },
-  { name: 'Kentucky', conf: 'SEC', posts: 2900, adoption: 53.4, logo: 47.0, mention: 13.7, collab: 6.7 },
+  { name: 'Ohio State', conf: 'Big 10', posts: 9629, adoption: 48.4, logo: 44.2, mention: 20.1, collab: 1.2 },
   { name: 'Michigan State', conf: 'Big 10', posts: 2216, adoption: 46.8, logo: 38.3, mention: 20.1, collab: 2.93 },
   { name: 'Notre Dame', conf: 'ACC', posts: 2747, adoption: 46.7, logo: 43.4, mention: 19.0, collab: 0.07 },
   { name: 'Oregon', conf: 'Big 10', posts: 2073, adoption: 45.7, logo: 44.9, mention: 0, collab: 2.36 },
@@ -451,7 +452,6 @@ const ncaaD1Schools = [
   { name: 'Vanderbilt', conf: 'SEC', posts: 2246, adoption: 29.9, logo: 29.2, mention: 0, collab: 1.06 },
   { name: 'George Mason', conf: 'A-10', posts: 1959, adoption: 28.1, logo: 23.1, mention: 11.9, collab: 0.25 },
   { name: 'Texas', conf: 'SEC', posts: 5723, adoption: 27.1, logo: 27.1, mention: 0, collab: 0 },
-  { name: 'Ohio State', conf: 'Big 10', posts: 9629, adoption: 48.4, logo: 44.2, mention: 20.1, collab: 1.2 },
   { name: 'San Diego State', conf: 'MWC', posts: 3406, adoption: 26.7, logo: 26.7, mention: 0, collab: 0.02 },
   { name: 'Washington', conf: 'Big 10', posts: 2344, adoption: 26.2, logo: 24.1, mention: 0, collab: 4.13 },
   { name: 'Cincinnati', conf: 'Big 12', posts: 4309, adoption: 26.1, logo: 10.8, mention: 18.6, collab: 0.51 },
@@ -1897,6 +1897,7 @@ function ContentTab() {
         });
 
         const kentuckyTeamRows = (await fetchFirstJson([
+          '/data/kentucky_teams_contents.json',
           '/data/Kentucky.team_contents.json',
           '/data/kentucky.team_contents.json',
         ])) || [];
@@ -2372,7 +2373,7 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
     const loadFollowers = async () => {
       try {
         let rows: KentuckyRosterTeam[] | null = null;
-        for (const path of ['/data/Kentucky.roster_teams.json', '/data/kentucky.roster_teams.json']) {
+        for (const path of ['/data/kentucky_teams_metrics.json', '/data/Kentucky.roster_teams.json', '/data/kentucky.roster_teams.json']) {
           try {
             const response = await fetch(path);
             if (response.ok) {
@@ -2736,7 +2737,7 @@ export function KentuckyIPImpact({ onBack }: { onBack?: () => void }) {
     const loadKentuckySports = async () => {
       try {
         let rows: KentuckyRosterTeam[] | null = null;
-        for (const path of ['/data/Kentucky.roster_teams.json', '/data/kentucky.roster_teams.json']) {
+        for (const path of ['/data/kentucky_teams_metrics.json', '/data/Kentucky.roster_teams.json', '/data/kentucky.roster_teams.json']) {
           try {
             const response = await fetch(path);
             if (response.ok) {

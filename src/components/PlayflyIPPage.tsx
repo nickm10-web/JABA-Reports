@@ -688,7 +688,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
               const maxSchools = ['Michigan State', 'University of Maryland', 'Auburn University', 'Texas A&M', 'Louisiana State University', 'Penn State University'];
 
               // Calculate baseline metrics for each school
-              const baselineData = schoolsData.map((school, index) => {
+              const unsortedBaseline = schoolsData.map((school) => {
                 // Find matching partnership data for this school
                 const partnershipData = _schoolPartnershipData.find(p => p.school._id === school.school._id);
                 const sponsoredPosts = partnershipData
@@ -718,7 +718,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                 const avgEngagementPerPost = avgLikesPerPost + avgCommentsPerPost;
 
                 return {
-                  rank: index + 1,
+                  rank: 0,
                   schoolName: getDisplayName(school.school.name),
                   schoolId: school.school._id,
                   isPlayflyMax: maxSchools.includes(school.school.name),
@@ -740,6 +740,10 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                   emv: estimateEmvFromTotals(school.overall.totalLikes, school.overall.totalComments)
                 };
               });
+
+              // Sort by total posts descending and assign ranks
+              unsortedBaseline.sort((a, b) => b.totalPosts - a.totalPosts);
+              const baselineData = unsortedBaseline.map((school, idx) => ({ ...school, rank: idx + 1 }));
 
               // Filter by search query
               const filteredData = baselineSearchQuery
@@ -961,7 +965,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                             <tr
                               key={school.schoolId}
                               className={`border-b border-gray-100 hover:bg-blue-50/60 transition-colors ${
-                                index % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'
+                                index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
                               } ${index < 3 ? 'bg-blue-50/40' : ''}`}
                               title={`Avg Engagement/Post: ${formatNumber(school.avgEngagementPerPost)} | Engagement Rate: ${(school.engagementRate * 100).toFixed(2)}%`}
                             >
@@ -979,13 +983,13 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                                   {school.emv >= emvP75 && <span className="metric-badge">High EMV</span>}
                                 </div>
                               </td>
-                              <td className={`px-6 py-4 text-right ${baselineSortBy === 'totalPosts' ? 'text-green-600 font-semibold' : 'text-gray-700'}`}>
+                              <td className={`px-6 py-4 text-right ${baselineSortBy === 'totalPosts' ? 'text-green-600 font-semibold' : 'text-gray-900'}`}>
                                 {formatFullNumber(school.totalPosts)}
                               </td>
-                              <td className={`px-6 py-4 text-right ${baselineSortBy === 'sponsoredPosts' ? 'text-green-600 font-semibold' : 'text-gray-700'}`}>
+                              <td className={`px-6 py-4 text-right ${baselineSortBy === 'sponsoredPosts' ? 'text-green-600 font-semibold' : 'text-gray-900'}`}>
                                 {formatFullNumber(school.sponsoredPosts)}
                               </td>
-                              <td className={`px-6 py-4 text-right ${baselineSortBy === 'totalLikes' ? 'text-green-600 font-semibold' : 'text-gray-700'}`}>
+                              <td className={`px-6 py-4 text-right ${baselineSortBy === 'totalLikes' ? 'text-green-600 font-semibold' : 'text-gray-900'}`}>
                                 {formatFullNumber(school.avgLikesPerPost)}
                               </td>
                               <td className={`px-6 py-4 text-right font-semibold ${baselineSortBy === 'totalEngagement' ? 'text-green-600' : 'text-gray-900'}`}>
