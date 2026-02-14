@@ -301,7 +301,6 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
   const [baselineSortDirection, setBaselineSortDirection] = useState<'asc' | 'desc'>('asc');
   const [baselineSearchQuery, setBaselineSearchQuery] = useState('');
   const [baselineMobileView, setBaselineMobileView] = useState<'cards' | 'table'>('cards');
-  const [baselineIpScope, setBaselineIpScope] = useState<'all' | 'logo' | 'caption' | 'collaboration'>('all');
   const [baselineDrawerOpen, setBaselineDrawerOpen] = useState(false);
   const [baselineSelected, setBaselineSelected] = useState<{
     schoolName: string;
@@ -685,9 +684,9 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
             {/* Baseline Metrics Table - Only show in network view */}
             {selectedSchool === 'all' && (() => {
               // Max schools
-              const maxSchools = ['Michigan State', 'University of Maryland', 'Auburn University', 'Texas A&M', 'Louisiana State University', 'Penn State University'];
+              const maxSchools = ['Michigan State', 'Auburn University', 'Texas A&M', 'Louisiana State University', 'Penn State University'];
 
-              // Calculate baseline metrics for each school
+              // Calculate baseline metrics for each school (IP posts only)
               const unsortedBaseline = schoolsData.map((school) => {
                 // Find matching partnership data for this school
                 const partnershipData = _schoolPartnershipData.find(p => p.school._id === school.school._id);
@@ -695,25 +694,21 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                   ? partnershipData.sponsorPartners.reduce((sum, partner) => sum + partner.totalContents, 0)
                   : 0;
 
-                const scopeData = baselineIpScope === 'logo'
-                  ? school.logo.yes
-                  : baselineIpScope === 'caption'
-                  ? school.orgInCaption.yes
-                  : baselineIpScope === 'collaboration'
-                  ? school.collaboration.yes
-                  : null;
+                const totalPosts = school.counts.withIp;
 
-                const totalPosts = baselineIpScope === 'all'
-                  ? school.overall.totalContents
-                  : scopeData?.contents || 0;
+                // Weighted avg likes/comments across IP signal types
+                const logoPosts = school.logo.yes.contents;
+                const captionPosts = school.orgInCaption.yes.contents;
+                const collabPosts = school.collaboration.yes.contents;
+                const signalPostsTotal = logoPosts + captionPosts + collabPosts;
 
-                const avgLikesPerPost = baselineIpScope === 'all'
-                  ? (school.overall.totalLikes / Math.max(school.overall.totalContents, 1))
-                  : (scopeData?.likes || 0);
+                const avgLikesPerPost = signalPostsTotal > 0
+                  ? (school.logo.yes.likes * logoPosts + school.orgInCaption.yes.likes * captionPosts + school.collaboration.yes.likes * collabPosts) / signalPostsTotal
+                  : 0;
 
-                const avgCommentsPerPost = baselineIpScope === 'all'
-                  ? (school.overall.totalComments / Math.max(school.overall.totalContents, 1))
-                  : (scopeData?.comments || 0);
+                const avgCommentsPerPost = signalPostsTotal > 0
+                  ? (school.logo.yes.comments * logoPosts + school.orgInCaption.yes.comments * captionPosts + school.collaboration.yes.comments * collabPosts) / signalPostsTotal
+                  : 0;
 
                 const avgEngagementPerPost = avgLikesPerPost + avgCommentsPerPost;
 
@@ -811,8 +806,8 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                   <div className="p-6 border-b border-gray-200 bg-white/70">
                     <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
                       <div>
-                        <SectionHeader primary="SCHOOL BASELINE " secondary="METRICS" />
-                        <p className="text-sm text-gray-600 mt-2">Raw engagement data for all {schoolsData.length} Playfly schools</p>
+                        <SectionHeader primary="SCHOOL IP " secondary="METRICS" />
+                        <p className="text-sm text-gray-600 mt-2">Engagement data for posts using school IP across all {schoolsData.length} Playfly schools</p>
                       </div>
                     <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                         <input
@@ -830,12 +825,6 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                           <GlassPill active={baselineMobileView === 'table'} onClick={() => setBaselineMobileView('table')}>View Full Table</GlassPill>
                         </div>
                       </div>
-                    </div>
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      <GlassPill className="pf-chip-compact" active={baselineIpScope === 'all'} onClick={() => setBaselineIpScope('all')}>All Posts</GlassPill>
-                      <GlassPill className="pf-chip-compact" active={baselineIpScope === 'logo'} onClick={() => setBaselineIpScope('logo')}>Visual IP</GlassPill>
-                      <GlassPill className="pf-chip-compact" active={baselineIpScope === 'caption'} onClick={() => setBaselineIpScope('caption')}>Caption</GlassPill>
-                      <GlassPill className="pf-chip-compact" active={baselineIpScope === 'collaboration'} onClick={() => setBaselineIpScope('collaboration')}>Collaboration</GlassPill>
                     </div>
                   </div>
 
@@ -865,7 +854,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                           {school.emv >= emvP75 && <span className="metric-badge">High EMV</span>}
                         </div>
                         <div className="grid grid-cols-2 gap-3 mt-4 text-xs text-gray-600">
-                          <div>Total Posts</div>
+                          <div>IP Posts</div>
                           <div className="text-right text-gray-900 font-semibold">{formatFullNumber(school.totalPosts)}</div>
                           <div>Sponsored Posts</div>
                           <div className="text-right text-gray-900 font-semibold">{formatFullNumber(school.sponsoredPosts)}</div>
@@ -910,7 +899,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                             className="px-6 py-4 text-right text-xs font-semibold text-gray-700 cursor-pointer hover:text-[#1770C0]"
                           >
                             <div className="flex items-center justify-end gap-2">
-                              Total Posts
+                              IP Posts
                               {baselineSortBy === 'totalPosts' && (
                                 <span style={{ color: colors.primary }}>{baselineSortDirection === 'asc' ? '↑' : '↓'}</span>
                               )}
@@ -1324,7 +1313,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     const impactValues = schoolsWithImpact.map(s => s.totalIPEngagement);
 
                     // Max schools (schools with premium tier)
-                    const maxSchools = ['Michigan State', 'University of Maryland', 'Auburn University', 'Texas A&M', 'Louisiana State University', 'Penn State University'];
+                    const maxSchools = ['Michigan State', 'Auburn University', 'Texas A&M', 'Louisiana State University', 'Penn State University'];
 
                     return sortedSchools.map(({ school, totalIPEngagement }) => {
                       // Define IP types in FIXED order: Collaboration, Visual IP, Mention

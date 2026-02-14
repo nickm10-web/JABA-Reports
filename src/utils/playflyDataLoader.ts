@@ -120,14 +120,13 @@ const OFFICIAL_PLAYFLY_SCHOOLS = [
   'University of Texas at San Antonio'
 ];
 
-// ─── Playfly Max Schools (6 - Premium tier) ────────────────────
+// ─── Playfly Max Schools (5 - Premium tier) ────────────────────
 const PLAYFLY_MAX_SCHOOLS = [
   'Auburn University',
   'Louisiana State University',
   'Texas A&M University',
   'Penn State University',
-  'Michigan State University',
-  'University of Maryland'
+  'Michigan State University'
 ];
 
 // ─── Name mapping for schools that have different names in the data ─
