@@ -141,10 +141,6 @@ export function ContentTab() {
       .catch(() => setIsLoading(false));
   }, []);
 
-  const schools = useMemo(() => {
-    if (!processedData) return [];
-    return (processedData.schools || []).filter((school) => PLAYFLY_15_SCHOOLS.has(school));
-  }, [processedData]);
 
   const getInteractions = (item: ContentItem) => {
     const likes = item.metrics?.likes || 0;
@@ -425,7 +421,7 @@ export function ContentTab() {
             </button>
           </div>
           <div className="mt-3 text-xs text-gray-600">
-            Pool: All Schools ({schools.length}) • Source: Team pages • Sorted by interactions
+            Source: Team pages • Sorted by interactions
           </div>
         </GlassCard>
 
@@ -495,7 +491,7 @@ export function ContentTab() {
           </button>
         </div>
         <div className="mt-3 text-xs text-gray-600">
-          Pool: All Schools ({schools.length}) • Source: {contentSource === 'athlete' ? 'Athlete accounts' : 'Team pages'} • Sorted by interactions
+          Source: {contentSource === 'athlete' ? 'Athlete accounts' : 'Team pages'} • Sorted by interactions
         </div>
       </GlassCard>
 
