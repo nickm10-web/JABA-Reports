@@ -58,15 +58,6 @@ export function PartnershipsTab({
   const EMV_COMMENT_RATE = 1.5;
   const calcEstimatedEmv = (likes: number, comments: number) =>
     (likes * EMV_LIKE_RATE) + (comments * EMV_COMMENT_RATE);
-  const calcNetworkEstimatedEmv = () =>
-    schoolPartnershipData.reduce((sum, school) => {
-      const schoolTotal = school.sponsorPartners.reduce((pSum, p) => {
-        const totalLikes = p.avgLikes * p.totalContents;
-        const totalComments = p.avgComments * p.totalContents;
-        return pSum + calcEstimatedEmv(totalLikes, totalComments);
-      }, 0);
-      return sum + schoolTotal;
-    }, 0);
 
   const [partnershipSearchQuery, setPartnershipSearchQuery] = useState('');
   const [engagementFilter, setEngagementFilter] = useState<'all' | 'high' | 'mid' | 'low'>('all');
@@ -101,6 +92,26 @@ export function PartnershipsTab({
 
   const normalizeBrandKey = (value: string) =>
     value.toLowerCase().replace(/^@/, '').replace(/[\s._-]+/g, '');
+  const EXPLICIT_BRAND_EXCLUSION_KEYS = new Set([
+    'baylormbb',
+    'huskerfootball',
+    'pennstatevb',
+    'athletenarrative',
+    'on3recruits',
+    'nikeeyb',
+    'victoryplustv',
+    'thefamilie',
+    'walkons',
+    '12thmanfoundation',
+    'cornermediaco',
+    'terpswbb',
+    'nileliteladies',
+    'baylornilstore',
+    'academy',
+    'huskermbb',
+    'prideofodunil',
+    'msunilstore'
+  ]);
 
   const getSchoolAliases = (schoolName: string) => {
     const stop = new Set(['university', 'college', 'state', 'of', 'the', 'at', 'and']);
@@ -187,7 +198,7 @@ export function PartnershipsTab({
     const sportTokens = [
       'football','fb','basketball','mbb','wbb','baseball','softball','soccer','volleyball','vb','vball',
       'tfxc','track','xc','crosscountry','wrest','wrestling','golf','tennis','lacrosse','hockey','swim',
-      'swimming','gym','gymnastics','fieldhockey','rowing','crew','athletics'
+      'swimming','gym','gymnastics','fieldhockey','rowing','crew','athletics','womens','mens','women','men'
     ];
     const hasSport = sportTokens.some(t => key.includes(t));
     if (!hasSport) return false;
@@ -195,10 +206,34 @@ export function PartnershipsTab({
     return aliases.some(a => key.includes(a));
   };
 
+  const isSchoolOwnedPage = (partner: string, schoolName: string) => {
+    const key = normalizeBrandKey(partner);
+    const aliases = getSchoolAliases(schoolName);
+    const hasAlias = aliases.some(a => key.includes(a));
+    if (!hasAlias) return false;
+
+    const sportTokens = [
+      'football','fb','basketball','mbb','wbb','baseball','softball','soccer','volleyball','vb','vball',
+      'tfxc','track','xc','crosscountry','wrest','wrestling','golf','tennis','lacrosse','hockey','swim',
+      'swimming','gym','gymnastics','fieldhockey','rowing','crew','athletics','womens','mens','women','men'
+    ];
+    const teamPageTokens = ['athletics', 'sports', 'official', 'recruiting', 'recruits', 'studentathlete'];
+    const hasTeamContext =
+      sportTokens.some(t => key.includes(t)) ||
+      teamPageTokens.some(t => key.includes(t));
+
+    // Also exclude direct school account aliases (e.g. @huskers, @lsu)
+    const exactAlias = aliases.some(a => a === key);
+
+    return hasTeamContext || exactAlias;
+  };
+
   const isExcludedBrand = (value: string, schoolName: string) => {
     const key = normalizeBrandKey(value);
-    if (key === 'huskerfootball' || key === 'huskervb' || key === 'aggiefootball') return true;
-    return isTeamPagePartner(value, schoolName);
+    if (EXPLICIT_BRAND_EXCLUSION_KEYS.has(key)) return true;
+    if (key === 'huskervb' || key === 'aggiefootball') return true;
+    if (isTeamPagePartner(value, schoolName)) return true;
+    return isSchoolOwnedPage(value, schoolName);
   };
 
   useEffect(() => {
@@ -611,6 +646,11 @@ export function PartnershipsTab({
       totalEngagement: brand.totalLikes + brand.totalComments,
       industry: categorizeByIndustry(brand.name)
     }));
+    const totalSponsoredPosts = brandsArray.reduce((sum, brand) => sum + brand.totalPosts, 0);
+    const totalEstimatedEmv = brandsArray.reduce((sum, brand) => sum + brand.totalEMV, 0);
+    const activeSchools = new Set(
+      Array.from(allBrands.values()).flatMap(brand => Array.from(brand.schools))
+    ).size;
 
     // Sort based on selected option
     const sortedBrands = [...brandsArray].sort((a, b) => {
@@ -773,8 +813,7 @@ export function PartnershipsTab({
           <GlassCard className="p-6">
             <div className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-2">Sponsored Posts</div>
             <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1770C0]">
-              {formatNumber(schoolPartnershipData.reduce((sum, s) =>
-                sum + s.sponsorPartners.reduce((pSum, p) => pSum + p.totalContents, 0), 0))}
+              {formatNumber(totalSponsoredPosts)}
             </div>
           </GlassCard>
           <GlassCard className="p-6">
@@ -783,12 +822,12 @@ export function PartnershipsTab({
           </GlassCard>
           <GlassCard className="p-6">
             <div className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-2">Active Schools</div>
-            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">{schoolPartnershipData.length}</div>
+            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">{activeSchools}</div>
           </GlassCard>
           <GlassCard className="p-6">
             <div className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-2">Estimated EMV</div>
             <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-600">
-              ${Math.round(calcNetworkEstimatedEmv()).toLocaleString('en-US')}
+              ${Math.round(totalEstimatedEmv).toLocaleString('en-US')}
             </div>
           </GlassCard>
         </div>

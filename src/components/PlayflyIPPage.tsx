@@ -221,7 +221,7 @@ type TabType = 'overview' | 'with-vs-without' | 'partnerships' | 'athletes' | 'r
 
 
 // Map school names (as they appear in data) to their JSON file names
-// Only official Playfly partner schools (20 total: 10 Playfly Max + 10 regular)
+// Official Playfly partner schools included in this report scope (USC excluded)
 const SCHOOL_FILE_MAP: Record<string, string> = {
   // Playfly Max schools
   'Auburn University': 'auburn-university',
@@ -233,7 +233,6 @@ const SCHOOL_FILE_MAP: Record<string, string> = {
   'University of Central Florida': 'university-of-central-florida',
   'University of Maryland': 'university-of-maryland',
   'University of Nebraska': 'university-of-nebraska',
-  'University of Southern California (USC)': 'university-of-southern-california-usc',
   // Regular Playfly schools
   'George Mason': 'george-mason',
   'Old Dominion University': 'old-dominion-university',
@@ -268,7 +267,6 @@ const SCHOOL_DISPLAY_NAMES: Record<string, string> = {
   'University of Maryland': 'University of Maryland',
   'University of Nebraska': 'University of Nebraska',
   'University of New Mexico': 'University of New Mexico (UNM)',
-  'University of Southern California (USC)': 'University of Southern California (USC)',
   'University of Texas at San Antonio (UTSA)': 'University of Texas at San Antonio (UTSA)',
   'Wichita State University': 'Wichita State University',
 };
@@ -573,10 +571,10 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
               <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-2 snap-x snap-mandatory">
                 <GlassPill className="snap-start" active={activeTab === 'overview'} onClick={() => setActiveTab('overview')}>Overview</GlassPill>
                 <GlassPill className="snap-start" active={activeTab === 'with-vs-without'} onClick={() => setActiveTab('with-vs-without')}>IP Comparison</GlassPill>
-                <GlassPill className="snap-start" active={activeTab === 'partnerships'} onClick={() => setActiveTab('partnerships')}>Sponsored Posts</GlassPill>
-                <GlassPill className="snap-start" active={activeTab === 'athletes'} onClick={() => setActiveTab('athletes')}>Athletes</GlassPill>
                 <GlassPill className="snap-start" active={activeTab === 'rankings'} onClick={() => setActiveTab('rankings')}>Rankings</GlassPill>
+                <GlassPill className="snap-start" active={activeTab === 'partnerships'} onClick={() => setActiveTab('partnerships')}>Sponsored Posts</GlassPill>
                 <GlassPill className="snap-start" active={activeTab === 'content'} onClick={() => setActiveTab('content')}>Content</GlassPill>
+                <GlassPill className="snap-start" active={activeTab === 'athletes'} onClick={() => setActiveTab('athletes')}>Athletes</GlassPill>
                 <GlassPill className="snap-start" active={activeTab === 'teams'} onClick={() => setActiveTab('teams')}>Team Socials</GlassPill>
               </div>
             </div>
@@ -1112,12 +1110,6 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                       </div>
                       <div className="text-xs text-gray-600 mt-1">Adoption: {adoption.logo.toFixed(1)}%</div>
                       <div className="text-xs text-gray-500 mt-2">Opportunity Signal: <span className="font-semibold text-gray-700">{opportunitySignal('logo')}</span></div>
-                      <div className="mt-3 h-2 rounded-full bg-gray-100 overflow-hidden">
-                        <div
-                          className="h-full bg-green-500"
-                          style={{ width: `${Math.min(Math.abs(networkTotals.avgLogoLift) * 2, 100)}%` }}
-                        />
-                      </div>
                     </div>
 
                     <div className="pt-4 border-t border-gray-200">
@@ -1182,12 +1174,6 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                       </div>
                       <div className="text-xs text-gray-600 mt-1">Adoption: {adoption.caption.toFixed(1)}%</div>
                       <div className="text-xs text-gray-500 mt-2">Opportunity Signal: <span className="font-semibold text-gray-700">{opportunitySignal('caption')}</span></div>
-                      <div className="mt-3 h-2 rounded-full bg-gray-100 overflow-hidden">
-                        <div
-                          className="h-full bg-yellow-500"
-                          style={{ width: `${Math.min(Math.abs(networkTotals.avgCaptionLift) * 2, 100)}%` }}
-                        />
-                      </div>
                     </div>
 
                     <div className="pt-4 border-t border-gray-200">
@@ -1254,12 +1240,6 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                       </div>
                       <div className="text-xs text-gray-600 mt-1">Adoption: {adoption.collab.toFixed(1)}%</div>
                       <div className="text-xs text-gray-500 mt-2">Opportunity Signal: <span className="font-semibold text-gray-700">{opportunitySignal('collab')}</span></div>
-                      <div className="mt-3 h-2 rounded-full bg-gray-100 overflow-hidden">
-                        <div
-                          className="h-full bg-purple-500"
-                          style={{ width: `${Math.min(Math.abs(networkTotals.avgCollabLift) * 2, 100)}%` }}
-                        />
-                      </div>
                     </div>
 
                     <div className="pt-4 border-t border-gray-200">

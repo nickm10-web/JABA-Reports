@@ -90,7 +90,7 @@ export function AthletesTab({
 }: AthletesTabProps) {
   const [viewMode, setViewMode] = useState<ViewMode>('leaderboard');
   const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState<SortMetric>('engagement');
+  const [sortBy, setSortBy] = useState<SortMetric>('followers');
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('desc');
   const [ipModeFilter, setIPModeFilter] = useState<IPModeFilter>('all');
   const [isMobile, setIsMobile] = useState(false);
@@ -339,12 +339,12 @@ export function AthletesTab({
             return (
               <>
                 <GlassCard className="p-4">
-                  <div className="text-sm font-semibold text-gray-900 mb-3">Top Engagement</div>
-                  {renderList(topEngagementFromReal, (a) => `${(a.engagement * 100).toFixed(2)}%`)}
-                </GlassCard>
-                <GlassCard className="p-4">
                   <div className="text-sm font-semibold text-gray-900 mb-3">Top Followers</div>
                   {renderList(topFollowers, (a) => formatNumber(a.followers || 0))}
+                </GlassCard>
+                <GlassCard className="p-4">
+                  <div className="text-sm font-semibold text-gray-900 mb-3">Top Engagement</div>
+                  {renderList(topEngagementFromReal, (a) => `${(a.engagement * 100).toFixed(2)}%`)}
                 </GlassCard>
                 <GlassCard className="p-4">
                   <div className="text-sm font-semibold text-gray-900 mb-3">Top Total Likes</div>

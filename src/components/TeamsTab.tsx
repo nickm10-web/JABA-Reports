@@ -3,7 +3,7 @@ import { GlassCard, GlassPill, DrawerPanel } from './playfly/PlayflyUI';
 
 type Timeframe = 'sevenDays' | 'thirtyDays' | 'ninetyDays';
 type Platform = 'all' | 'instagram' | 'tiktok';
-type SortKey = 'engagementRate' | 'interactions' | 'followers';
+type SortKey = 'engagementRate' | 'interactions' | 'followers' | 'posts';
 
 interface TeamMetricsSlice {
   followers: number;
@@ -75,6 +75,21 @@ const formatShort = (num: number) => {
   return Math.round(num).toLocaleString();
 };
 const formatPercent = (value: number, digits = 2) => `${(value * 100).toFixed(digits)}%`;
+const formatTeamSport = (value?: string) => {
+  if (!value) return 'Team';
+  const parts = value
+    .toLowerCase()
+    .split('_')
+    .filter(Boolean)
+    .map((part) => {
+      if (part === 'mens' || part === 'men') return "Men's";
+      if (part === 'womens' || part === 'women') return "Women's";
+      if (part === 'tfxc') return 'TF/XC';
+      if (part === 'xc') return 'XC';
+      return part.charAt(0).toUpperCase() + part.slice(1);
+    });
+  return parts.join(' ');
+};
 
 const getDateLabel = (value?: TeamContent['publishedAt']) => {
   if (!value) return '';
@@ -84,22 +99,53 @@ const getDateLabel = (value?: TeamContent['publishedAt']) => {
   if (Number.isNaN(date.getTime())) return '';
   return date.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
 };
+const getTeamKey = (schoolName?: string, sport?: string) => `${schoolName || ''}|||${sport || ''}`;
+const getPublishedAtMs = (value?: TeamContent['publishedAt']) => {
+  if (!value) return 0;
+  const raw = typeof value === 'string' ? value : value.$date;
+  if (!raw) return 0;
+  const ms = new Date(raw).getTime();
+  return Number.isFinite(ms) ? ms : 0;
+};
 
 const placeholderImage =
   'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96"><rect width="96" height="96" rx="14" fill="%23f1f5f9"/><path d="M28 64h40a6 6 0 0 0 6-6V38a6 6 0 0 0-6-6H28a6 6 0 0 0-6 6v20a6 6 0 0 0 6 6zm8-12 8-10 10 12 6-8 8 10H36z" fill="%2394a3b8"/><circle cx="60" cy="44" r="4" fill="%2394a3b8"/></svg>';
+const EXCLUDED_SPONSOR_KEYS = new Set([
+  'baylormbb',
+  'huskerfootball',
+  'pennstatevb',
+  'huskervb',
+  'aggiefootball',
+  'athletenarrative',
+  'on3recruits',
+  'nikeeyb',
+  'victoryplustv',
+  'thefamilie',
+  'walkons',
+  '12thmanfoundation',
+  'cornermediaco',
+  'terpswbb',
+  'nileliteladies',
+  'baylornilstore',
+  'academy',
+  'huskermbb',
+  'prideofodunil',
+  'msunilstore',
+]);
+const normalizeSponsorKey = (value?: string) => (value || '').toLowerCase().replace(/^@/, '').replace(/[\s._-]+/g, '');
 
 export function TeamsTab({ playflySchools }: TeamsTabProps) {
   const [teamsData, setTeamsData] = useState<TeamRecord[]>([]);
   const [teamContents, setTeamContents] = useState<TeamContent[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [scope] = useState<'playfly'>('playfly');
-  const [timeframe] = useState<Timeframe>('thirtyDays');
+  const [timeframe] = useState<Timeframe>('ninetyDays');
   const [platform] = useState<Platform>('instagram');
   const [schoolFilter, setSchoolFilter] = useState('all');
   const [sportFilter, setSportFilter] = useState('all');
   const [conferenceFilter, setConferenceFilter] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [sortKey, setSortKey] = useState<SortKey>('engagementRate');
+  const [sortKey, setSortKey] = useState<SortKey>('followers');
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('desc');
   const [selectedTeamId, setSelectedTeamId] = useState<string | null>(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -153,6 +199,33 @@ export function TeamsTab({ playflySchools }: TeamsTabProps) {
     });
   }, [teamsData, scope, playflySet, schoolFilter, sportFilter, conferenceFilter, searchQuery]);
 
+  const recent12StatsByTeam = useMemo(() => {
+    const grouped = new Map<string, TeamContent[]>();
+    for (const post of teamContents) {
+      const schoolName = post.team?.school?.name;
+      const sportName = post.team?.name;
+      if (!schoolName || !sportName) continue;
+      if (scope === 'playfly' && !playflySet.has(schoolName)) continue;
+      const key = getTeamKey(schoolName, sportName);
+      const list = grouped.get(key) || [];
+      list.push(post);
+      grouped.set(key, list);
+    }
+    const stats = new Map<string, { postsCount: number; interactions: number; engagementRate: number }>();
+    for (const [key, posts] of grouped.entries()) {
+      const recent = [...posts]
+        .sort((a, b) => getPublishedAtMs(b.publishedAt) - getPublishedAtMs(a.publishedAt))
+        .slice(0, 12);
+      const postsCount = recent.length;
+      const interactions = recent.reduce((sum, post) => sum + ((post.metrics?.likes || 0) + (post.metrics?.comments || 0)), 0);
+      const engagementRate = postsCount > 0
+        ? recent.reduce((sum, post) => sum + (post.metrics?.engagementRate || 0), 0) / postsCount
+        : 0;
+      stats.set(key, { postsCount, interactions, engagementRate });
+    }
+    return stats;
+  }, [teamContents, scope, playflySet]);
+
   const baseTeams = useMemo(() => {
     return teamsData.filter(team => {
       if (schoolFilter !== 'all' && team.schoolName !== schoolFilter) return false;
@@ -170,46 +243,62 @@ export function TeamsTab({ playflySchools }: TeamsTabProps) {
   const teamRows = useMemo(() => {
     return filteredTeams.map(team => {
       const slice = getSlice(team, timeframe, platform);
-      const interactions = (slice.likes || 0) + (slice.comments || 0);
+      const key = getTeamKey(team.schoolName, team.sport);
+      const recent = recent12StatsByTeam.get(key);
+      const interactions = recent?.interactions ?? ((slice.likes || 0) + (slice.comments || 0));
+      const engagementRate = recent?.engagementRate ?? slice.engagementRate;
+      const postsCount = recent?.postsCount ?? Math.min(slice.contentCount || 0, 12);
       const logoAdoption = slice.contentCount > 0 ? (slice.logoContentCount / slice.contentCount) * 100 : 0;
       return {
         id: team._id.$oid,
         team,
         slice,
         interactions,
+        engagementRate,
+        postsCount,
         logoAdoption
       };
     });
-  }, [filteredTeams, timeframe, platform]);
+  }, [filteredTeams, timeframe, platform, recent12StatsByTeam]);
 
   const baseRows = useMemo(() => {
     return baseTeams.map(team => {
       const slice = getSlice(team, timeframe, platform);
-      const interactions = (slice.likes || 0) + (slice.comments || 0);
+      const key = getTeamKey(team.schoolName, team.sport);
+      const recent = recent12StatsByTeam.get(key);
+      const interactions = recent?.interactions ?? ((slice.likes || 0) + (slice.comments || 0));
+      const engagementRate = recent?.engagementRate ?? slice.engagementRate;
+      const postsCount = recent?.postsCount ?? Math.min(slice.contentCount || 0, 12);
       const logoAdoption = slice.contentCount > 0 ? (slice.logoContentCount / slice.contentCount) * 100 : 0;
       return {
         id: team._id.$oid,
         team,
         slice,
         interactions,
+        engagementRate,
+        postsCount,
         logoAdoption,
         isPlayfly: playflySet.has(team.schoolName)
       };
     });
-  }, [baseTeams, timeframe, platform, playflySet]);
+  }, [baseTeams, timeframe, platform, playflySet, recent12StatsByTeam]);
 
   const sortedTeams = useMemo(() => {
     const sorted = [...teamRows].sort((a, b) => {
       const aVal = sortKey === 'engagementRate'
-          ? a.slice.engagementRate
+          ? a.engagementRate
           : sortKey === 'interactions'
             ? a.interactions
-            : a.slice.followers;
+            : sortKey === 'posts'
+              ? a.postsCount
+              : a.slice.followers;
       const bVal = sortKey === 'engagementRate'
-          ? b.slice.engagementRate
+          ? b.engagementRate
           : sortKey === 'interactions'
             ? b.interactions
-            : b.slice.followers;
+            : sortKey === 'posts'
+              ? b.postsCount
+              : b.slice.followers;
       return sortDirection === 'asc' ? aVal - bVal : bVal - aVal;
     });
     return sorted;
@@ -235,64 +324,11 @@ export function TeamsTab({ playflySchools }: TeamsTabProps) {
 
   const selectedTeam = selectedTeamId ? baseRows.find(t => t.id === selectedTeamId) : null;
 
-  const filteredContents = useMemo(() => {
-    return teamContents.filter(post => {
-      const schoolName = post.team?.school?.name;
-      const sportName = post.team?.name;
-      if (scope === 'playfly' && schoolName && !playflySet.has(schoolName)) return false;
-      if (schoolFilter !== 'all' && schoolName !== schoolFilter) return false;
-      if (sportFilter !== 'all' && sportName !== sportFilter) return false;
-      if (conferenceFilter !== 'all' && (post.team?.conference?.name || 'Unknown') !== conferenceFilter) return false;
-      if (searchQuery.trim()) {
-        const q = searchQuery.trim().toLowerCase();
-        const hay = `${schoolName || ''} ${sportName || ''}`.toLowerCase();
-        if (!hay.includes(q)) return false;
-      }
-      return true;
-    });
-  }, [teamContents, scope, playflySet, schoolFilter, sportFilter, conferenceFilter, searchQuery]);
-
   const getInteractions = (post: TeamContent) => {
     const likes = post.metrics?.likes || 0;
     const comments = post.metrics?.comments || 0;
     return likes + comments;
   };
-
-  const topSponsoredWithLogo = useMemo(() => filteredContents.filter(p => p.isSponsored && p.hasOrganizationLogo).sort((a, b) => getInteractions(b) - getInteractions(a)), [filteredContents]);
-  const topSponsoredWithoutLogo = useMemo(() => filteredContents.filter(p => p.isSponsored && !p.hasOrganizationLogo).sort((a, b) => getInteractions(b) - getInteractions(a)), [filteredContents]);
-
-
-  const renderPostRow = (post: TeamContent) => {
-    const interactions = getInteractions(post);
-    const dateLabel = getDateLabel(post.publishedAt);
-    const imageSrc = post.url || placeholderImage;
-    return (
-      <div className="flex items-start justify-between gap-3">
-        <div className="flex items-start gap-3 min-w-0">
-          <img
-            src={imageSrc}
-            alt=""
-            className="h-16 w-16 rounded-xl object-cover border border-slate-200 bg-white"
-            onError={(e) => { (e.currentTarget as HTMLImageElement).src = placeholderImage; }}
-          />
-          <div className="text-sm font-semibold text-gray-900 truncate">
-            {post.team?.school?.name || 'Unknown School'} • {post.team?.name || 'Team'}
-          </div>
-          <div className="text-[13px] text-gray-700 truncate">{dateLabel}</div>
-          <div className="text-sm text-gray-700 line-clamp-2 mt-1">{post.caption || 'No caption available.'}</div>
-          <div className="flex flex-wrap gap-1.5 mt-2">
-            {post.isSponsored && <span className="content-chip">Sponsored</span>}
-            {post.sponsorPartner && <span className="content-chip">{post.sponsorPartner}</span>}
-          </div>
-        </div>
-        <div className="text-right">
-          <div className="text-base font-bold text-gray-900">{formatNumber(interactions)}</div>
-          <div className="text-xs text-gray-600 mt-1">Interactions</div>
-        </div>
-      </div>
-    );
-  };
-
 
   if (isLoading) {
     return <GlassCard className="p-6 text-sm text-gray-500">Loading team data…</GlassCard>;
@@ -340,7 +376,7 @@ export function TeamsTab({ playflySchools }: TeamsTabProps) {
               <label className="text-xs text-gray-600 mb-1 block">Sport</label>
               <select value={sportFilter} onChange={(e) => setSportFilter(e.target.value)} className="w-full bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-gray-900 focus:border-[#1770C0] focus:outline-none">
                 <option value="all">All Sports</option>
-                {sports.map(s => <option key={s} value={s}>{s}</option>)}
+                {sports.map(s => <option key={s} value={s}>{formatTeamSport(s)}</option>)}
               </select>
             </div>
             <div className="w-full sm:w-48">
@@ -360,6 +396,9 @@ export function TeamsTab({ playflySchools }: TeamsTabProps) {
 
       <div className="grid grid-cols-1 gap-6">
         <GlassCard className="overflow-hidden">
+          <div className="px-4 pt-3 pb-1 text-xs text-gray-600">
+            Metrics in this table are based on each account&apos;s most recent 12 posts.
+          </div>
           <div className="p-4 border-b border-gray-200 flex items-center justify-between md:hidden">
             <div className="text-sm text-gray-600">Showing {sortedTeams.length} teams</div>
             <div className="flex gap-2">
@@ -368,28 +407,21 @@ export function TeamsTab({ playflySchools }: TeamsTabProps) {
             </div>
           </div>
 
-          <div className="p-4 flex flex-wrap gap-2">
-            <GlassPill className="pf-chip-compact" active={sortKey === 'engagementRate'} onClick={() => handleSort('engagementRate')}>Engagement Rate</GlassPill>
-            <GlassPill className="pf-chip-compact" active={sortKey === 'interactions'} onClick={() => handleSort('interactions')}>Interactions</GlassPill>
-            <GlassPill className="pf-chip-compact" active={sortKey === 'followers'} onClick={() => handleSort('followers')}>Followers</GlassPill>
-          </div>
-
           <div className={`${leaderboardView === 'cards' ? 'block' : 'hidden'} md:hidden p-4 space-y-4`}>
             {sortedTeams.map(row => (
               <GlassCard key={row.id} className="p-4" onClick={() => { setSelectedTeamId(row.id); setDrawerOpen(true); }}>
               <div className="font-semibold text-gray-900">
-                {row.team.schoolName} • {row.team.sport}
+                {row.team.schoolName} • {formatTeamSport(row.team.sport)}
               </div>
-                <div className="text-xs text-gray-500 mt-1">{platform === 'all' ? 'All Platforms' : platform}</div>
                 <div className="grid grid-cols-2 gap-3 mt-4 text-xs text-gray-600">
-                  <div>Engagement</div>
-                  <div className="text-right font-semibold">{formatPercent(row.slice.engagementRate, 2)}</div>
-                  <div>Interactions</div>
-                  <div className="text-right font-semibold">{formatShort(row.interactions)}</div>
                   <div>Followers</div>
                   <div className="text-right font-semibold">{formatShort(row.slice.followers)}</div>
                   <div>Posts</div>
-                  <div className="text-right font-semibold">{formatShort(row.slice.contentCount)}</div>
+                  <div className="text-right font-semibold">{formatShort(row.postsCount)}</div>
+                  <div>Engagement</div>
+                  <div className="text-right font-semibold">{formatPercent(row.engagementRate, 2)}</div>
+                  <div>Interactions</div>
+                  <div className="text-right font-semibold">{formatShort(row.interactions)}</div>
                 </div>
               </GlassCard>
             ))}
@@ -401,11 +433,10 @@ export function TeamsTab({ playflySchools }: TeamsTabProps) {
                 <thead className="border-b border-gray-200 bg-gray-50 sticky top-0">
                   <tr>
                     <th className="px-3 py-3 text-left text-xs font-semibold text-gray-700 w-[220px]">Team</th>
-                    <th className="px-3 py-3 text-right text-xs font-semibold text-gray-700 w-[80px]" title="Platform filter">Platform</th>
-                    <th className="px-3 py-3 text-right text-xs font-semibold text-gray-700 w-[90px]" title="Engagement Rate">Eng.</th>
-                    <th className="px-3 py-3 text-right text-xs font-semibold text-gray-700 w-[100px]" title="Likes + Comments">Interactions</th>
-                    <th className="px-3 py-3 text-right text-xs font-semibold text-gray-700 w-[90px]" title="Followers">Followers</th>
-                    <th className="px-3 py-3 text-right text-xs font-semibold text-gray-700 w-[80px]" title="Content Count">Posts</th>
+                    <th onClick={() => handleSort('followers')} className="px-3 py-3 text-right text-xs font-semibold text-gray-700 w-[90px] cursor-pointer" title="Followers">Followers {sortKey === 'followers' ? (sortDirection === 'desc' ? '↓' : '↑') : ''}</th>
+                    <th onClick={() => handleSort('posts')} className="px-3 py-3 text-right text-xs font-semibold text-gray-700 w-[80px] cursor-pointer" title="Content Count">Posts {sortKey === 'posts' ? (sortDirection === 'desc' ? '↓' : '↑') : ''}</th>
+                    <th onClick={() => handleSort('engagementRate')} className="px-3 py-3 text-right text-xs font-semibold text-gray-700 w-[90px] cursor-pointer" title="Engagement Rate">Eng. {sortKey === 'engagementRate' ? (sortDirection === 'desc' ? '↓' : '↑') : ''}</th>
+                    <th onClick={() => handleSort('interactions')} className="px-3 py-3 text-right text-xs font-semibold text-gray-700 w-[100px] cursor-pointer" title="Likes + Comments">Interactions {sortKey === 'interactions' ? (sortDirection === 'desc' ? '↓' : '↑') : ''}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -418,13 +449,12 @@ export function TeamsTab({ playflySchools }: TeamsTabProps) {
                       onClick={() => { setSelectedTeamId(row.id); setDrawerOpen(true); }}
                     >
                       <td className="px-3 py-2 text-sm text-gray-900 font-semibold truncate">
-                        {row.team.schoolName} • {row.team.sport}
+                        {row.team.schoolName} • {formatTeamSport(row.team.sport)}
                       </td>
-                      <td className="px-3 py-2 text-right text-xs text-gray-600">{platform === 'all' ? 'All' : platform}</td>
-                      <td className="px-3 py-2 text-right text-sm">{formatPercent(row.slice.engagementRate, 2)}</td>
-                      <td className="px-3 py-2 text-right text-sm">{formatShort(row.interactions)}</td>
                       <td className="px-3 py-2 text-right text-sm">{formatShort(row.slice.followers)}</td>
-                      <td className="px-3 py-2 text-right text-sm">{formatShort(row.slice.contentCount)}</td>
+                      <td className="px-3 py-2 text-right text-sm">{formatShort(row.postsCount)}</td>
+                      <td className="px-3 py-2 text-right text-sm">{formatPercent(row.engagementRate, 2)}</td>
+                      <td className="px-3 py-2 text-right text-sm">{formatShort(row.interactions)}</td>
                     </tr>
                   ))}
                   <tr style={{ height: `${Math.max(0, (totalRows - endIndex) * rowHeight)}px` }} />
@@ -435,37 +465,10 @@ export function TeamsTab({ playflySchools }: TeamsTabProps) {
         </GlassCard>
 
       </div>
-
-      <GlassCard className="p-6 content-section">
-        <div className="text-base font-semibold text-gray-900 mb-4">Team Content Benchmarks</div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <GlassCard className="p-5">
-            <div className="text-sm font-semibold text-gray-900 mb-3">Top Sponsored posts WITH logo</div>
-            <div className="space-y-3">
-              {topSponsoredWithLogo.slice(0, 10).map(post => (
-                <GlassCard key={post._id} className="p-3 content-post-card">
-                  {renderPostRow(post)}
-                </GlassCard>
-              ))}
-            </div>
-          </GlassCard>
-          <GlassCard className="p-5">
-            <div className="text-sm font-semibold text-gray-900 mb-3">Top Sponsored posts WITHOUT logo</div>
-            <div className="space-y-3">
-              {topSponsoredWithoutLogo.slice(0, 10).map(post => (
-                <GlassCard key={post._id} className="p-3 content-post-card">
-                  {renderPostRow(post)}
-                </GlassCard>
-              ))}
-            </div>
-          </GlassCard>
-        </div>
-      </GlassCard>
-
       <DrawerPanel
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
-        title={selectedTeam ? `${selectedTeam.team.schoolName} • ${selectedTeam.team.sport}` : 'Team Detail'}
+        title={selectedTeam ? `${selectedTeam.team.schoolName} • ${formatTeamSport(selectedTeam.team.sport)}` : 'Team Detail'}
         side="right"
       >
         {selectedTeam && (
@@ -476,14 +479,14 @@ export function TeamsTab({ playflySchools }: TeamsTabProps) {
               )}
               <div>
                 <div className="text-sm font-semibold text-gray-900">{selectedTeam.team.schoolName}</div>
-                <div className="text-xs text-gray-500">{selectedTeam.team.sport}</div>
+                <div className="text-xs text-gray-500">{formatTeamSport(selectedTeam.team.sport)}</div>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-3 text-xs text-gray-600">
               <div>Followers</div><div className="text-right font-semibold text-gray-900">{formatShort(selectedTeam.slice.followers)}</div>
-              <div>Engagement Rate</div><div className="text-right font-semibold text-gray-900">{formatPercent(selectedTeam.slice.engagementRate, 2)}</div>
+              <div>Posts (Last 12)</div><div className="text-right font-semibold text-gray-900">{formatShort(selectedTeam.postsCount)}</div>
+              <div>Engagement Rate</div><div className="text-right font-semibold text-gray-900">{formatPercent(selectedTeam.engagementRate, 2)}</div>
               <div>Interactions</div><div className="text-right font-semibold text-gray-900">{formatShort(selectedTeam.interactions)}</div>
-              <div>Content Count</div><div className="text-right font-semibold text-gray-900">{formatShort(selectedTeam.slice.contentCount)}</div>
             </div>
             <GlassCard className="p-4">
               <div className="text-xs text-gray-500 mb-2">Content Mix</div>
@@ -507,7 +510,8 @@ export function TeamsTab({ playflySchools }: TeamsTabProps) {
                   const teamPosts = teamContents.filter(post =>
                     post.team?.school?.name === selectedTeam.team.schoolName &&
                     post.team?.name === selectedTeam.team.sport &&
-                    post.isSponsored
+                    post.isSponsored &&
+                    !EXCLUDED_SPONSOR_KEYS.has(normalizeSponsorKey(post.sponsorPartner))
                   );
                   const sponsored = teamPosts.sort((a, b) => getInteractions(b) - getInteractions(a)).slice(0, 3);
                   return sponsored.map(post => (
