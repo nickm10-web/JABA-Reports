@@ -1374,21 +1374,40 @@ function WithVsWithoutTab({
 
   const currentSignal = signals.find((s) => s.id === selectedSignal);
 
-  // Get data for selected sport and signal
-  const currentSportData = selectedSport === 'ALL_SPORTS' ? undefined : sportData[selectedSport];
-  const currentSignalData = currentSportData?.[selectedSignal];
+  const hasUsableSignalData = (data?: SignalComparison): boolean => {
+    if (!data) return false;
+    const totalPosts = (data.with.posts || 0) + (data.without.posts || 0);
+    const hasMetrics =
+      data.with.avgLikes > 0 ||
+      data.with.avgComments > 0 ||
+      data.with.engagementRate > 0 ||
+      data.without.avgLikes > 0 ||
+      data.without.avgComments > 0 ||
+      data.without.engagementRate > 0;
+    return totalPosts > 0 && hasMetrics;
+  };
 
-  // Use sport-specific data if available, otherwise fall back to overall data
-  const withoutEngRate = currentSignalData?.without?.engagementRate || currentSignal?.data?.baselineEngRate || 0;
-  const withEngRate = currentSignalData?.with?.engagementRate || currentSignal?.data?.engagementRate || 0;
-  const withoutPosts = currentSignalData?.without?.posts || currentSignal?.data?.baselinePosts || 0;
-  const withPosts = currentSignalData?.with?.posts || currentSignal?.data?.posts || 0;
+  const dynamicSelectedSignalData = sportData[selectedSport]?.[selectedSignal];
+  const fallbackSelectedSignalData = fallbackSportData[selectedSport]?.[selectedSignal];
+  const dynamicAllSportsSignalData = sportData.ALL_SPORTS?.[selectedSignal];
+  const fallbackAllSportsSignalData = fallbackSportData.ALL_SPORTS?.[selectedSignal];
 
-  // Avg likes/comments per post from sport data
-  const baselineAvgLikes = currentSignalData?.without?.avgLikes || currentSignal?.data?.baselineLikes || 0;
-  const baselineAvgComments = currentSignalData?.without?.avgComments || currentSignal?.data?.baselineComments || 0;
-  const withAvgLikes = currentSignalData?.with?.avgLikes || currentSignal?.data?.likes || 0;
-  const withAvgComments = currentSignalData?.with?.avgComments || currentSignal?.data?.comments || 0;
+  const currentSignalData =
+    (hasUsableSignalData(dynamicSelectedSignalData) ? dynamicSelectedSignalData : undefined)
+    ?? (hasUsableSignalData(fallbackSelectedSignalData) ? fallbackSelectedSignalData : undefined)
+    ?? (hasUsableSignalData(dynamicAllSportsSignalData) ? dynamicAllSportsSignalData : undefined)
+    ?? fallbackAllSportsSignalData;
+
+  const withoutEngRate = currentSignalData?.without?.engagementRate ?? currentSignal?.data?.baselineEngRate ?? 0;
+  const withEngRate = currentSignalData?.with?.engagementRate ?? currentSignal?.data?.engagementRate ?? 0;
+  const withoutPosts = currentSignalData?.without?.posts ?? currentSignal?.data?.baselinePosts ?? 0;
+  const withPosts = currentSignalData?.with?.posts ?? currentSignal?.data?.posts ?? 0;
+
+  // Avg likes/comments per post from sport data.
+  const baselineAvgLikes = currentSignalData?.without?.avgLikes ?? currentSignal?.data?.baselineLikes ?? 0;
+  const baselineAvgComments = currentSignalData?.without?.avgComments ?? currentSignal?.data?.baselineComments ?? 0;
+  const withAvgLikes = currentSignalData?.with?.avgLikes ?? currentSignal?.data?.likes ?? 0;
+  const withAvgComments = currentSignalData?.with?.avgComments ?? currentSignal?.data?.comments ?? 0;
 
   // Calculate deltas
   const engDelta = withoutEngRate > 0 ? ((withEngRate - withoutEngRate) / withoutEngRate) * 100 : 0;
@@ -1455,13 +1474,6 @@ function WithVsWithoutTab({
             Signal: {currentSignal?.label}
           </span>
         </div>
-      </div>
-
-      <div
-        className="rounded-xl px-4 py-3 text-xs"
-        style={{ backgroundColor: `${colors.accent}0D`, border: `1px solid ${colors.accent}33`, color: colors.textMuted }}
-      >
-        Engagement rate is estimated as <span className="font-semibold">(likes + comments) / athlete followers</span> using mapped Ohio athlete follower totals.
       </div>
 
       {/* Filters Row */}
@@ -1737,6 +1749,33 @@ function PartnershipsTab() {
   const normalizeBrandKey = (brand: string) => brand.toLowerCase().replace(/^@/, '').replace(/[^a-z0-9]/g, '');
   const getBrandInitials = (brand: string) => brand.replace('@', '').trim().slice(0, 2).toUpperCase();
   const getBrandLogo = (brand: string) => brandLogoMap[normalizeBrandKey(brand)];
+  const excludedPartnershipKeys = useMemo(
+    () =>
+      new Set([
+        'on3recruits',
+        'thehenrylegacy',
+        'locationfootball',
+        'ohiostathletics',
+        'whereimfrom',
+        'athleteps',
+        'thecourageousathlete',
+        'ohiostatefb',
+        'theohiostateuniversity',
+        'ohiostswimdive',
+        'wrestlingbucks',
+        'brodymarcet9',
+        'qpeezy0',
+        'alexdixon',
+        'jesseleepakele',
+        'bigtastyhawk',
+        'nakashimabryce',
+        'gabbydoesmytattts',
+        'dellymedia',
+        'nilstore',
+        'thenilstore',
+      ]),
+    [],
+  );
 
   useEffect(() => {
     let canceled = false;
@@ -1779,8 +1818,13 @@ function PartnershipsTab() {
   const getPartnershipEMV = (partnership: Partnership): number =>
     calculateEMV(partnership.avgLikes * partnership.posts, partnership.avgComments * partnership.posts);
 
+  const eligiblePartnerships = useMemo(
+    () => ipData.partnerships.filter((p) => !excludedPartnershipKeys.has(normalizeBrandKey(p.brand))),
+    [excludedPartnershipKeys],
+  );
+
   const allSorted = useMemo(() => {
-    const result = [...ipData.partnerships];
+    const result = [...eligiblePartnerships];
     result.sort((a, b) => {
       if (sortKey === 'emv') {
         const aEmv = getPartnershipEMV(a);
@@ -1797,7 +1841,7 @@ function PartnershipsTab() {
         : String(aVal).localeCompare(String(bVal));
     });
     return result;
-  }, [sortKey, sortDir]);
+  }, [eligiblePartnerships, sortKey, sortDir]);
 
   const top10 = allSorted.slice(0, 10);
 
@@ -1868,7 +1912,7 @@ function PartnershipsTab() {
           </div>
         </div>
         <p className="text-sm text-gray-400 self-end whitespace-nowrap">
-          {ipData.partnerships.length} partnerships
+          {eligiblePartnerships.length} partnerships
         </p>
       </div>
 
@@ -3715,6 +3759,20 @@ export function OhioStateIPImpact({ onBack }: { onBack?: () => void }) {
 
     const loadOhioSports = async () => {
       try {
+        // Preferred source for IP Comparison by sport (athlete-focused by-sport dataset).
+        try {
+          const bySportResponse = await fetch('/data/ohio-state-by-sport.json');
+          if (bySportResponse.ok) {
+            const bySportData = (await bySportResponse.json()) as SportSignalData;
+            if (!isCancelled && bySportData?.ALL_SPORTS) {
+              setSportData(bySportData);
+              return;
+            }
+          }
+        } catch {
+          // Fall back to roster-derived dataset below.
+        }
+
         let rows: OhioRosterTeam[] | null = null;
         for (const path of ['/data/Ohio.roster_teams.json', '/data/ohio.roster_teams.json']) {
           try {
