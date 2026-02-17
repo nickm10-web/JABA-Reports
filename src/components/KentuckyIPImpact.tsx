@@ -1454,21 +1454,24 @@ function PartnershipsTab() {
 
 function BenchmarkTab() {
   const [benchmarkType, setBenchmarkType] = useState<'conference' | 'ncaa'>('conference');
-  const [rankingMetric, setRankingMetric] = useState<'logo' | 'mention' | 'collab'>('logo');
+  const [rankingMetric, setRankingMetric] = useState<'adoption' | 'logo' | 'mention' | 'collab'>('adoption');
   const isConference = benchmarkType === 'conference';
   const schools = isConference ? secSchools : ncaaD1Schools;
   const benchmarkLabel = isConference ? 'SEC' : 'NCAA D1';
-  const metricOptions: { id: 'logo' | 'mention' | 'collab'; label: string }[] = [
+  const metricOptions: { id: 'adoption' | 'logo' | 'mention' | 'collab'; label: string }[] = [
+    { id: 'adoption', label: 'Adoption %' },
     { id: 'logo', label: 'Visual IP %' },
     { id: 'mention', label: 'Mention %' },
     { id: 'collab', label: 'Collaboration %' },
   ];
   const metricLabels = {
+    adoption: 'IP Adoption Rate',
     mention: 'Mention Rate',
     logo: 'Visual IP Rate',
     collab: 'Collaboration Rate',
   } as const;
   const metricAverage = {
+    adoption: isConference ? conferenceAvg.adoption : ncaaD1Avg.adoption,
     mention: isConference ? conferenceAvg.mention : ncaaD1Avg.mention,
     logo: isConference ? conferenceAvg.logo : ncaaD1Avg.logo,
     collab: isConference ? conferenceAvg.collab : ncaaD1Avg.collab,
