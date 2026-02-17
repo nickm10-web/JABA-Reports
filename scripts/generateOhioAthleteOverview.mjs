@@ -14,6 +14,7 @@ if (!fs.existsSync(dataDir)) {
 
 // Prefer newer data files, fall back to legacy
 const contentsFileCandidates = [
+  'Ohio_contents.json',
   'ncaa_roster_contents_feb_12.json',
   ...fs.readdirSync(dataDir).filter((name) => /^NCAA_contents.*\.json$/i.test(name))
     .map((name) => ({ name, mtimeMs: fs.statSync(path.join(dataDir, name)).mtimeMs }))
