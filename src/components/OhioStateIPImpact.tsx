@@ -776,101 +776,106 @@ const fallbackTeamFollowersBySport: Record<string, number> = {
 };
 
 const big10Schools = [
-  { name: 'Nebraska', conf: 'Big 10', followers: 3012749, posts: 3049, ipPosts: 1658, adoption: 54.4, logo: 49.1, mention: 20.2, collab: 0 },
-  { name: 'Indiana', conf: 'Big 10', followers: 900000, posts: 1635, ipPosts: 831, adoption: 50.8, logo: 50.8, mention: 0, collab: 0 },
-  { name: 'Michigan', conf: 'Big 10', followers: 4500000, posts: 4042, ipPosts: 2024, adoption: 50.1, logo: 50.0, mention: 0, collab: 0.1 },
-  { name: 'Michigan State', conf: 'Big 10', followers: 802304, posts: 2216, ipPosts: 1039, adoption: 46.9, logo: 38.3, mention: 20.1, collab: 2.93 },
-  { name: 'Oregon', conf: 'Big 10', followers: 1800000, posts: 2073, ipPosts: 948, adoption: 45.7, logo: 44.9, mention: 0, collab: 2.36 },
-  { name: 'Maryland', conf: 'Big 10', followers: 858916, posts: 2120, ipPosts: 925, adoption: 43.6, logo: 38.1, mention: 18.5, collab: 0 },
-  { name: 'Rutgers', conf: 'Big 10', followers: 800000, posts: 2036, ipPosts: 732, adoption: 35.9, logo: 35.9, mention: 0, collab: 0 },
-  { name: 'Purdue', conf: 'Big 10', followers: 1300000, posts: 5142, ipPosts: 1772, adoption: 34.5, logo: 31.4, mention: 12.7, collab: 3.29 },
-  { name: 'Iowa', conf: 'Big 10', followers: 1500000, posts: 2254, ipPosts: 753, adoption: 33.4, logo: 33.4, mention: 0, collab: 0 },
-  { name: 'Ohio State', conf: 'Big 10', followers: 5546349, posts: 9629, ipPosts: 4663, adoption: 48.4, logo: 44.2, mention: 20.1, collab: 1.2 },
-  { name: 'Washington', conf: 'Big 10', followers: 1600000, posts: 2344, ipPosts: 615, adoption: 26.2, logo: 24.1, mention: 0, collab: 4.14 },
-  { name: 'Penn State', conf: 'Big 10', followers: 4032162, posts: 7202, ipPosts: 1686, adoption: 23.4, logo: 7.6, mention: 18.8, collab: 0.01 },
-  { name: 'Minnesota', conf: 'Big 10', followers: 1200000, posts: 2354, ipPosts: 357, adoption: 15.2, logo: 11.5, mention: 0, collab: 5.35 },
-  { name: 'Illinois', conf: 'Big 10', followers: 1100000, posts: 2731, ipPosts: 374, adoption: 13.7, logo: 12.6, mention: 0, collab: 1.90 },
-  { name: 'Wisconsin', conf: 'Big 10', followers: 2000000, posts: 5664, ipPosts: 510, adoption: 9.0, logo: 9.0, mention: 0, collab: 0 },
-  { name: 'UCLA', conf: 'Big 10', followers: 2500000, posts: 6482, ipPosts: 514, adoption: 7.9, logo: 7.9, mention: 0, collab: 0 },
-  { name: 'USC', conf: 'Big 10', followers: 3000000, posts: 5328, ipPosts: 353, adoption: 6.6, logo: 6.6, mention: 0, collab: 0.02 },
+  { name: 'Nebraska', conf: 'Big 10', posts: 4026, adoption: 50.8, logo: 47.5, mention: 15.4, collab: 2.9, followers: 3126161 },
+  { name: 'Maryland', conf: 'Big 10', posts: 2392, adoption: 50.4, logo: 47.3, mention: 16.4, collab: 2.8, followers: 0 },
+  { name: 'Michigan', conf: 'Big 10', posts: 4042, adoption: 50.1, logo: 50.0, mention: 0.0, collab: 0.1, followers: 2381406 },
+  { name: 'Ohio State', conf: 'Big 10', posts: 9629, adoption: 48.4, logo: 44.2, mention: 20.1, collab: 1.2, followers: 5546349 },
+  { name: 'Michigan State', conf: 'Big 10', posts: 2867, adoption: 45.3, logo: 40.1, mention: 15.6, collab: 3.9, followers: 0 },
+  { name: 'Indiana', conf: 'Big 10', posts: 2218, adoption: 43.4, logo: 41.6, mention: 1.4, collab: 1.4, followers: 0 },
+  { name: 'Penn State', conf: 'Big 10', posts: 8247, adoption: 43.5, logo: 39.7, mention: 16.8, collab: 2.1, followers: 4114531 },
+  { name: 'Purdue', conf: 'Big 10', posts: 5286, adoption: 36.5, logo: 34.1, mention: 12.8, collab: 3.4, followers: 1299880 },
+  { name: 'Rutgers', conf: 'Big 10', posts: 2036, adoption: 36.0, logo: 36.0, mention: 0.0, collab: 0.0, followers: 0 },
+  { name: 'Iowa', conf: 'Big 10', posts: 2254, adoption: 33.4, logo: 33.4, mention: 0.0, collab: 0.0, followers: 0 },
+  { name: 'Washington', conf: 'Big 10', posts: 2378, adoption: 27.7, logo: 25.7, mention: 0.0, collab: 4.2, followers: 0 },
+  { name: 'Minnesota', conf: 'Big 10', posts: 2354, adoption: 15.2, logo: 11.5, mention: 0.0, collab: 5.4, followers: 882398 },
+  { name: 'Illinois', conf: 'Big 10', posts: 2731, adoption: 13.7, logo: 12.6, mention: 0.0, collab: 1.9, followers: 0 },
+  { name: 'Wisconsin', conf: 'Big 10', posts: 5982, adoption: 12.0, logo: 11.0, mention: 0.2, collab: 1.3, followers: 1812655 },
+  { name: 'UCLA', conf: 'Big 10', posts: 7077, adoption: 11.6, logo: 8.7, mention: 0.3, collab: 3.4, followers: 5487049 },
+  { name: 'USC', conf: 'Big 10', posts: 5948, adoption: 11.0, logo: 8.6, mention: 0.2, collab: 2.8, followers: 4376029 },
+  { name: 'Oregon', conf: 'Big 10', posts: 2073, adoption: 46.2, logo: 45.1, mention: 0.1, collab: 2.9, followers: 0 },
 ];
 
 const ncaaD1Schools = [
-  { name: 'Old Dominion', conf: 'Sun Belt', posts: 1564, adoption: 56.7, logo: 53.5, mention: 14.6, collab: 1.34 },
-  { name: 'Nebraska', conf: 'Big 10', posts: 3049, adoption: 54.3, logo: 49.1, mention: 20.2, collab: 0 },
-  { name: 'Miami', conf: 'ACC', posts: 1553, adoption: 53.8, logo: 53.8, mention: 0, collab: 0 },
-  { name: 'New Mexico', conf: 'MWC', posts: 1182, adoption: 53.2, logo: 50.2, mention: 21.6, collab: 4.56 },
-  { name: 'Texas Tech', conf: 'Big 12', posts: 2355, adoption: 52.9, logo: 52.3, mention: 0, collab: 1.18 },
-  { name: 'Indiana', conf: 'Big 10', posts: 1635, adoption: 50.8, logo: 50.8, mention: 0, collab: 0 },
-  { name: 'Michigan', conf: 'Big 10', posts: 4042, adoption: 50.0, logo: 50.0, mention: 0, collab: 0.09 },
-  { name: 'Virginia Tech', conf: 'SEC', posts: 3735, adoption: 49.6, logo: 45.9, mention: 16.0, collab: 0.10 },
-  { name: 'Houston', conf: 'Big 12', posts: 1987, adoption: 48.6, logo: 47.2, mention: 0, collab: 3.97 },
-  { name: 'Kentucky', conf: 'SEC', posts: 2924, adoption: 48.5, logo: 46.5, mention: 0, collab: 6.63 },
-  { name: 'Michigan State', conf: 'Big 10', posts: 2216, adoption: 46.8, logo: 38.3, mention: 20.1, collab: 2.93 },
-  { name: 'Notre Dame', conf: 'ACC', posts: 2747, adoption: 46.7, logo: 43.4, mention: 19.0, collab: 0.07 },
-  { name: 'Oregon', conf: 'Big 10', posts: 2073, adoption: 45.7, logo: 44.9, mention: 0, collab: 2.36 },
-  { name: 'Oklahoma', conf: 'SEC', posts: 2813, adoption: 45.6, logo: 45.6, mention: 0, collab: 0 },
-  { name: 'NC State', conf: 'ACC', posts: 2565, adoption: 45.5, logo: 44.7, mention: 0, collab: 3.07 },
-  { name: 'BYU', conf: 'Big 12', posts: 5050, adoption: 45.5, logo: 39.7, mention: 15.0, collab: 3.36 },
-  { name: 'Maryland', conf: 'Big 10', posts: 2120, adoption: 43.6, logo: 38.1, mention: 18.4, collab: 0 },
-  { name: 'Ole Miss', conf: 'SEC', posts: 2309, adoption: 43.4, logo: 43.1, mention: 0, collab: 1.25 },
-  { name: 'Wichita State', conf: 'AAC', posts: 1740, adoption: 42.1, logo: 36.9, mention: 17.9, collab: 2.64 },
-  { name: 'West Virginia', conf: 'Big 12', posts: 2288, adoption: 41.6, logo: 41.6, mention: 0, collab: 0 },
-  { name: 'SMU', conf: 'AAC', posts: 1848, adoption: 41.6, logo: 41.5, mention: 0, collab: 0.54 },
-  { name: 'UTSA', conf: 'AAC', posts: 3339, adoption: 41.4, logo: 32.7, mention: 19.1, collab: 9.52 },
-  { name: 'Arizona', conf: 'Big 12', posts: 4312, adoption: 41.2, logo: 38.8, mention: 9.6, collab: 1.60 },
-  { name: 'Missouri', conf: 'SEC', posts: 5643, adoption: 40.5, logo: 35.5, mention: 20.1, collab: 1.94 },
-  { name: 'Georgia Tech', conf: 'ACC', posts: 2066, adoption: 40.4, logo: 38.9, mention: 0, collab: 5.61 },
-  { name: 'Florida State', conf: 'ACC', posts: 2130, adoption: 40.1, logo: 40.1, mention: 0, collab: 0 },
-  { name: 'Boston College', conf: 'ACC', posts: 1539, adoption: 39.9, logo: 38.5, mention: 0, collab: 6.10 },
-  { name: 'Baylor', conf: 'Big 12', posts: 6486, adoption: 38.3, logo: 29.8, mention: 21.9, collab: 2.99 },
-  { name: 'Alabama', conf: 'SEC', posts: 5653, adoption: 37.4, logo: 33.0, mention: 16.7, collab: 2.49 },
-  { name: 'Rutgers', conf: 'Big 10', posts: 2036, adoption: 35.9, logo: 35.9, mention: 0, collab: 0 },
-  { name: 'Purdue', conf: 'Big 10', posts: 5142, adoption: 34.4, logo: 31.4, mention: 12.7, collab: 3.28 },
-  { name: 'Mississippi', conf: 'SEC', posts: 2239, adoption: 34.3, logo: 34.3, mention: 0, collab: 0 },
-  { name: 'Arkansas', conf: 'SEC', posts: 5597, adoption: 34.0, logo: 31.1, mention: 10.3, collab: 0.91 },
-  { name: 'Auburn', conf: 'SEC', posts: 5314, adoption: 33.7, logo: 12.3, mention: 25.9, collab: 0.39 },
-  { name: 'Iowa', conf: 'Big 10', posts: 2254, adoption: 33.4, logo: 33.4, mention: 0, collab: 0 },
-  { name: 'Texas A&M', conf: 'SEC', posts: 3419, adoption: 32.3, logo: 15.4, mention: 24.5, collab: 0 },
-  { name: 'Arizona State', conf: 'Big 12', posts: 6782, adoption: 31.0, logo: 27.4, mention: 10.9, collab: 3.05 },
-  { name: 'Vanderbilt', conf: 'SEC', posts: 2246, adoption: 29.9, logo: 29.2, mention: 0, collab: 1.06 },
-  { name: 'George Mason', conf: 'A-10', posts: 1959, adoption: 28.1, logo: 23.1, mention: 11.9, collab: 0.25 },
-  { name: 'Texas', conf: 'SEC', posts: 5723, adoption: 27.1, logo: 27.1, mention: 0, collab: 0 },
-  { name: 'Ohio State', conf: 'Big 10', posts: 9629, adoption: 48.4, logo: 44.2, mention: 20.1, collab: 1.2 },
-  { name: 'San Diego State', conf: 'MWC', posts: 3406, adoption: 26.7, logo: 26.7, mention: 0, collab: 0.02 },
-  { name: 'Washington', conf: 'Big 10', posts: 2344, adoption: 26.2, logo: 24.1, mention: 0, collab: 4.13 },
-  { name: 'Cincinnati', conf: 'Big 12', posts: 4309, adoption: 26.1, logo: 10.8, mention: 18.6, collab: 0.51 },
-  { name: 'TCU', conf: 'Big 12', posts: 1707, adoption: 25.7, logo: 25.7, mention: 0, collab: 0 },
-  { name: 'LSU', conf: 'SEC', posts: 4269, adoption: 25.7, logo: 10.1, mention: 18.6, collab: 0 },
-  { name: 'Colorado', conf: 'Big 12', posts: 1418, adoption: 24.6, logo: 24.6, mention: 0, collab: 0 },
-  { name: 'UCF', conf: 'Big 12', posts: 1756, adoption: 23.9, logo: 16.6, mention: 10.9, collab: 0 },
-  { name: 'Penn State', conf: 'Big 10', posts: 7202, adoption: 23.4, logo: 7.6, mention: 18.8, collab: 0.01 },
-  { name: 'San Diego', conf: 'WCC', posts: 1974, adoption: 23.1, logo: 20.3, mention: 9.2, collab: 0.05 },
-  { name: 'Kansas', conf: 'Big 12', posts: 2423, adoption: 23.0, logo: 22.4, mention: 0, collab: 0.82 },
-  { name: 'Virginia', conf: 'ACC', posts: 5926, adoption: 22.7, logo: 7.8, mention: 18.0, collab: 0.60 },
-  { name: 'Iowa State', conf: 'Big 12', posts: 2248, adoption: 22.5, logo: 22.4, mention: 0, collab: 0.13 },
-  { name: 'Kansas State', conf: 'Big 12', posts: 1680, adoption: 18.2, logo: 18.2, mention: 0, collab: 0 },
-  { name: 'Utah', conf: 'Big 12', posts: 2152, adoption: 18.2, logo: 18.2, mention: 0, collab: 0 },
-  { name: 'Oklahoma State', conf: 'Big 12', posts: 1934, adoption: 18.0, logo: 18.0, mention: 0, collab: 0 },
-  { name: 'Duke', conf: 'ACC', posts: 1951, adoption: 16.3, logo: 15.2, mention: 0, collab: 1.94 },
-  { name: 'Minnesota', conf: 'Big 10', posts: 2354, adoption: 15.1, logo: 11.5, mention: 0, collab: 5.35 },
-  { name: 'Tennessee', conf: 'SEC', posts: 2459, adoption: 13.7, logo: 12.4, mention: 0, collab: 1.70 },
-  { name: 'Illinois', conf: 'Big 10', posts: 2731, adoption: 13.6, logo: 12.5, mention: 0, collab: 1.90 },
-  { name: 'Georgia', conf: 'SEC', posts: 5016, adoption: 12.7, logo: 12.7, mention: 0, collab: 0 },
-  { name: 'Florida', conf: 'SEC', posts: 2735, adoption: 12.6, logo: 12.6, mention: 0, collab: 0 },
-  { name: 'Boise State', conf: 'MWC', posts: 4000, adoption: 12.2, logo: 11.7, mention: 0, collab: 1.02 },
-  { name: 'Pittsburgh', conf: 'ACC', posts: 2475, adoption: 11.7, logo: 11.6, mention: 0, collab: 0.16 },
-  { name: 'UNC', conf: 'ACC', posts: 2744, adoption: 11.1, logo: 11.1, mention: 0, collab: 0 },
-  { name: 'Clemson', conf: 'ACC', posts: 3013, adoption: 10.2, logo: 10.2, mention: 0, collab: 0.03 },
-  { name: 'Wisconsin', conf: 'Big 10', posts: 5664, adoption: 9.0, logo: 9.0, mention: 0, collab: 0 },
-  { name: 'UCLA', conf: 'Big 10', posts: 6482, adoption: 7.9, logo: 7.9, mention: 0, collab: 0 },
-  { name: 'Creighton', conf: 'Big East', posts: 2553, adoption: 7.4, logo: 6.4, mention: 0, collab: 1.25 },
-  { name: 'Robert Morris', conf: 'Horizon', posts: 2687, adoption: 7.3, logo: 7.3, mention: 0, collab: 0 },
-  { name: 'USC', conf: 'Big 10', posts: 5328, adoption: 6.6, logo: 6.6, mention: 0, collab: 0.01 },
+  { name: 'Old Dominion', conf: 'Sun Belt', posts: 1577, adoption: 60.1, logo: 57.8, mention: 14.5, collab: 1.3, followers: 406916 },
+  { name: 'New Mexico', conf: 'MWC', posts: 1182, adoption: 55.6, logo: 53.3, mention: 21.7, collab: 4.6, followers: 0 },
+  { name: 'Kentucky', conf: 'SEC', posts: 2900, adoption: 53.4, logo: 47.0, mention: 13.7, collab: 6.7, followers: 1671393 },
+  { name: 'Texas Tech', conf: 'Big 12', posts: 2355, adoption: 53.0, logo: 52.4, mention: 0.0, collab: 1.2, followers: 0 },
+  { name: 'Texas A&M', conf: 'SEC', posts: 4316, adoption: 51.4, logo: 46.8, mention: 19.8, collab: 3.2, followers: 1878601 },
+  { name: 'Virginia Tech', conf: 'ACC', posts: 3978, adoption: 51.3, logo: 48.4, mention: 15.2, collab: 0.1, followers: 1872167 },
+  { name: 'Nebraska', conf: 'Big 10', posts: 4026, adoption: 50.8, logo: 47.5, mention: 15.4, collab: 2.9, followers: 3126161 },
+  { name: 'Washington State', conf: 'Pac-12', posts: 948, adoption: 50.4, logo: 46.1, mention: 19.4, collab: 4.7, followers: 186487 },
+  { name: 'Maryland', conf: 'Big 10', posts: 2392, adoption: 50.4, logo: 47.3, mention: 16.4, collab: 2.8, followers: 0 },
+  { name: 'Michigan', conf: 'Big 10', posts: 4042, adoption: 50.1, logo: 50.0, mention: 0.0, collab: 0.1, followers: 2381406 },
+  { name: 'Miami', conf: 'ACC', posts: 2083, adoption: 49.4, logo: 44.7, mention: 1.5, collab: 7.0, followers: 0 },
+  { name: 'Notre Dame', conf: 'ACC', posts: 2786, adoption: 48.9, logo: 46.8, mention: 18.9, collab: 0.1, followers: 1578114 },
+  { name: 'Houston', conf: 'Big 12', posts: 1987, adoption: 48.7, logo: 47.3, mention: 0.0, collab: 4.0, followers: 0 },
+  { name: 'Ohio State', conf: 'Big 10', posts: 9629, adoption: 48.4, logo: 44.2, mention: 20.1, collab: 1.2, followers: 5546349 },
+  { name: 'Auburn', conf: 'SEC', posts: 6405, adoption: 48.1, logo: 40.0, mention: 21.7, collab: 8.9, followers: 2323541 },
+  { name: 'Oregon', conf: 'Pac-12', posts: 2073, adoption: 46.2, logo: 45.1, mention: 0.1, collab: 2.9, followers: 0 },
+  { name: 'LSU', conf: 'SEC', posts: 5454, adoption: 46.1, logo: 40.7, mention: 14.7, collab: 3.3, followers: 5170563 },
+  { name: 'UTSA', conf: 'AAC', posts: 3773, adoption: 46.0, logo: 39.7, mention: 16.9, collab: 10.8, followers: 835260 },
+  { name: 'Oklahoma', conf: 'SEC', posts: 2813, adoption: 45.6, logo: 45.6, mention: 0.0, collab: 0.0, followers: 1703577 },
+  { name: 'NC State', conf: 'ACC', posts: 2565, adoption: 45.6, logo: 44.7, mention: 0.0, collab: 3.1, followers: 1238519 },
+  { name: 'Michigan State', conf: 'Big 10', posts: 2867, adoption: 45.3, logo: 40.1, mention: 15.6, collab: 3.9, followers: 0 },
+  { name: 'Baylor', conf: 'Big 12', posts: 7298, adoption: 45.1, logo: 41.0, mention: 21.4, collab: 4.5, followers: 2110678 },
+  { name: 'Wichita State', conf: 'AAC', posts: 1740, adoption: 44.8, logo: 40.9, mention: 17.9, collab: 2.6, followers: 0 },
+  { name: 'UCF', conf: 'Big 12', posts: 2409, adoption: 44.3, logo: 40.5, mention: 8.0, collab: 7.1, followers: 1202431 },
+  { name: 'New Mexico State', conf: 'C-USA', posts: 981, adoption: 44.1, logo: 44.0, mention: 0.0, collab: 0.7, followers: 0 },
+  { name: 'Cincinnati', conf: 'Big 12', posts: 4968, adoption: 43.7, logo: 39.6, mention: 16.2, collab: 1.1, followers: 1043067 },
+  { name: 'Penn State', conf: 'Big 10', posts: 8247, adoption: 43.5, logo: 39.7, mention: 16.8, collab: 2.1, followers: 4114531 },
+  { name: 'Ole Miss', conf: 'SEC', posts: 2309, adoption: 43.5, logo: 43.1, mention: 0.0, collab: 1.3, followers: 0 },
+  { name: 'Indiana', conf: 'Big 10', posts: 2218, adoption: 43.4, logo: 41.6, mention: 1.4, collab: 1.4, followers: 0 },
+  { name: 'Arizona', conf: 'Big 12', posts: 4371, adoption: 43.1, logo: 41.1, mention: 9.6, collab: 1.7, followers: 3260269 },
+  { name: 'Missouri', conf: 'SEC', posts: 5726, adoption: 42.3, logo: 38.1, mention: 20.5, collab: 2.0, followers: 1271953 },
+  { name: 'West Virginia', conf: 'Big 12', posts: 2288, adoption: 41.7, logo: 41.7, mention: 0.0, collab: 0.0, followers: 0 },
+  { name: 'SMU', conf: 'AAC', posts: 1848, adoption: 41.6, logo: 41.5, mention: 0.0, collab: 0.5, followers: 0 },
+  { name: 'Rice', conf: 'AAC', posts: 632, adoption: 41.1, logo: 40.0, mention: 0.0, collab: 5.9, followers: 0 },
+  { name: 'Alabama', conf: 'SEC', posts: 5742, adoption: 40.4, logo: 37.5, mention: 16.9, collab: 2.6, followers: 3966222 },
+  { name: 'Georgia Tech', conf: 'ACC', posts: 2066, adoption: 40.4, logo: 38.9, mention: 0.0, collab: 5.6, followers: 0 },
+  { name: 'Florida State', conf: 'ACC', posts: 2130, adoption: 40.1, logo: 40.1, mention: 0.0, collab: 0.0, followers: 0 },
+  { name: 'Virginia', conf: 'ACC', posts: 6496, adoption: 40.0, logo: 37.1, mention: 16.5, collab: 1.4, followers: 2044598 },
+  { name: 'Boston College', conf: 'ACC', posts: 1539, adoption: 40.0, logo: 38.6, mention: 0.0, collab: 6.1, followers: 0 },
+  { name: 'Arkansas', conf: 'SEC', posts: 5711, adoption: 36.6, logo: 34.2, mention: 10.6, collab: 0.9, followers: 2827038 },
+  { name: 'DePaul', conf: 'Big East', posts: 746, adoption: 36.5, logo: 35.7, mention: 0.0, collab: 3.1, followers: 121473 },
+  { name: 'Purdue', conf: 'Big 10', posts: 5286, adoption: 36.5, logo: 34.1, mention: 12.8, collab: 3.4, followers: 1299880 },
+  { name: 'Rutgers', conf: 'Big 10', posts: 2036, adoption: 36.0, logo: 36.0, mention: 0.0, collab: 0.0, followers: 0 },
+  { name: 'Arizona State', conf: 'Big 12', posts: 7777, adoption: 34.4, logo: 32.0, mention: 9.9, collab: 3.4, followers: 2269788 },
+  { name: 'Mississippi', conf: 'SEC', posts: 2239, adoption: 34.4, logo: 34.4, mention: 0.0, collab: 0.0, followers: 0 },
+  { name: 'BYU', conf: 'Big 12', posts: 7519, adoption: 34.3, logo: 31.6, mention: 10.1, collab: 2.3, followers: 0 },
+  { name: 'George Mason', conf: 'A-10', posts: 1959, adoption: 33.8, logo: 32.4, mention: 12.0, collab: 0.3, followers: 0 },
+  { name: 'Iowa', conf: 'Big 10', posts: 2254, adoption: 33.4, logo: 33.4, mention: 0.0, collab: 0.0, followers: 0 },
+  { name: 'Vanderbilt', conf: 'SEC', posts: 2246, adoption: 30.0, logo: 29.3, mention: 0.0, collab: 1.1, followers: 0 },
+  { name: 'Washington', conf: 'Pac-12', posts: 2378, adoption: 27.7, logo: 25.7, mention: 0.0, collab: 4.2, followers: 0 },
+  { name: 'San Diego State', conf: 'MWC', posts: 3406, adoption: 26.8, logo: 26.7, mention: 0.0, collab: 0.0, followers: 907225 },
+  { name: 'Texas', conf: 'SEC', posts: 6196, adoption: 26.4, logo: 25.2, mention: 0.4, collab: 1.8, followers: 3552007 },
+  { name: 'TCU', conf: 'Big 12', posts: 1707, adoption: 25.8, logo: 25.8, mention: 0.0, collab: 0.0, followers: 0 },
+  { name: 'San Diego', conf: 'WCC', posts: 2024, adoption: 25.2, logo: 23.2, mention: 9.2, collab: 0.0, followers: 439463 },
+  { name: 'Creighton', conf: 'Big East', posts: 2592, adoption: 24.6, logo: 20.7, mention: 8.6, collab: 2.0, followers: 438009 },
+  { name: 'Colorado', conf: 'Big 12', posts: 1418, adoption: 24.6, logo: 24.6, mention: 0.0, collab: 0.0, followers: 0 },
+  { name: 'Kansas', conf: 'Big 12', posts: 2423, adoption: 23.1, logo: 22.5, mention: 0.0, collab: 0.8, followers: 1266884 },
+  { name: 'Iowa State', conf: 'Big 12', posts: 2248, adoption: 22.6, logo: 22.5, mention: 0.0, collab: 0.1, followers: 0 },
+  { name: 'Clemson', conf: 'ACC', posts: 3351, adoption: 20.4, logo: 17.5, mention: 1.2, collab: 2.6, followers: 1726437 },
+  { name: 'Kansas State', conf: 'Big 12', posts: 1680, adoption: 18.3, logo: 18.3, mention: 0.0, collab: 0.0, followers: 0 },
+  { name: 'Utah', conf: 'Big 12', posts: 2152, adoption: 18.2, logo: 18.2, mention: 0.0, collab: 0.0, followers: 0 },
+  { name: 'Oklahoma State', conf: 'Big 12', posts: 1934, adoption: 18.0, logo: 18.0, mention: 0.0, collab: 0.0, followers: 0 },
+  { name: 'Duke', conf: 'ACC', posts: 1951, adoption: 16.6, logo: 15.5, mention: 0.0, collab: 1.9, followers: 0 },
+  { name: 'UNC', conf: 'ACC', posts: 3056, adoption: 16.3, logo: 15.7, mention: 0.5, collab: 0.2, followers: 1434088 },
+  { name: 'Providence', conf: 'Big East', posts: 679, adoption: 15.8, logo: 12.7, mention: 0.0, collab: 4.7, followers: 0 },
+  { name: 'Minnesota', conf: 'Big 10', posts: 2354, adoption: 15.2, logo: 11.5, mention: 0.0, collab: 5.4, followers: 882398 },
+  { name: 'Georgia', conf: 'SEC', posts: 5376, adoption: 14.8, logo: 13.5, mention: 0.8, collab: 0.9, followers: 2864099 },
+  { name: 'Tennessee', conf: 'SEC', posts: 2459, adoption: 13.8, logo: 12.4, mention: 0.0, collab: 1.7, followers: 1848323 },
+  { name: 'Illinois', conf: 'Big 10', posts: 2731, adoption: 13.7, logo: 12.6, mention: 0.0, collab: 1.9, followers: 0 },
+  { name: 'Florida', conf: 'SEC', posts: 2735, adoption: 12.7, logo: 12.7, mention: 0.0, collab: 0.0, followers: 3163738 },
+  { name: 'Boise State', conf: 'MWC', posts: 4000, adoption: 12.3, logo: 11.8, mention: 0.0, collab: 1.0, followers: 724157 },
+  { name: 'Wisconsin', conf: 'Big 10', posts: 5982, adoption: 12.0, logo: 11.0, mention: 0.2, collab: 1.3, followers: 1812655 },
+  { name: 'Pittsburgh', conf: 'ACC', posts: 2475, adoption: 11.8, logo: 11.6, mention: 0.0, collab: 0.2, followers: 740916 },
+  { name: 'UCLA', conf: 'Big 10', posts: 7077, adoption: 11.6, logo: 8.7, mention: 0.3, collab: 3.4, followers: 5487049 },
+  { name: 'USC', conf: 'Big 10', posts: 5948, adoption: 11.0, logo: 8.6, mention: 0.2, collab: 2.8, followers: 4376029 },
+  { name: 'Robert Morris', conf: 'Horizon', posts: 2687, adoption: 7.4, logo: 7.4, mention: 0.0, collab: 0.0, followers: 465010 },
 ];
 
-const conferenceAvg = { adoption: 30.8, logo: 27.0, mention: 6.6, collab: 1.2 };
-const ncaaD1Avg = { adoption: 31.4, logo: 28.1, mention: 6.5, collab: 1.3 };
+const conferenceAvg = { adoption: 33.8, logo: 31.6, mention: 5.8, collab: 2.3 };
+const ncaaD1Avg = { adoption: 34.7, logo: 32.7, mention: 6.2, collab: 2.2 };
 // ═══════════════════════════════════════════════════════════════
 // UTILITY FUNCTIONS
 // ═══════════════════════════════════════════════════════════════
@@ -2540,38 +2545,39 @@ function BestCollaboratorsTab() {
 // ═══════════════════════════════════════════════════════════════
 function BenchmarkTab() {
   const [benchmarkType, setBenchmarkType] = useState<'conference' | 'ncaa'>('conference');
-  const [rankingMetric, setRankingMetric] = useState<'mention' | 'logo' | 'collab'>('mention');
+  const [rankingMetric, setRankingMetric] = useState<'followers' | 'posts' | 'mention' | 'logo' | 'collab'>('followers');
   const isConference = benchmarkType === 'conference';
   const schools = isConference ? big10Schools : ncaaD1Schools;
   const benchmarkLabel = isConference ? 'Big 10' : 'NCAA D1';
-  const metricOptions: { id: 'mention' | 'logo' | 'collab'; label: string }[] = [
-    { id: 'mention', label: 'Mention %' },
-    { id: 'logo', label: 'Visual IP %' },
-    { id: 'collab', label: 'Collaboration %' },
+  const metricOptions: { id: 'followers' | 'posts' | 'mention' | 'logo' | 'collab'; label: string }[] = [
+    { id: 'followers', label: 'Followers' },
+    { id: 'posts', label: 'Posts' },
+    { id: 'mention', label: 'Mention Rate' },
+    { id: 'logo', label: 'Visual IP Rate' },
+    { id: 'collab', label: 'Collab Rate' },
   ];
   const metricLabels = {
+    followers: 'Followers',
+    posts: 'Total Posts',
     mention: 'Mention Rate',
     logo: 'Visual IP Rate',
     collab: 'Collaboration Rate',
   } as const;
   const metricAverage = {
+    followers: 0,
+    posts: 0,
     mention: isConference ? conferenceAvg.mention : ncaaD1Avg.mention,
     logo: isConference ? conferenceAvg.logo : ncaaD1Avg.logo,
     collab: isConference ? conferenceAvg.collab : ncaaD1Avg.collab,
   };
 
   const rankedSchools = useMemo(() => {
-    const sorted = [...schools].sort((a, b) => {
-      const aValue = a[rankingMetric];
-      const bValue = b[rankingMetric];
-      return bValue - aValue;
-    });
-    return sorted;
+    return [...schools].sort((a, b) => b[rankingMetric] - a[rankingMetric]);
   }, [schools, rankingMetric]);
 
-  const ohioIndex = rankedSchools.findIndex((school) => school.name === 'Ohio State');
+  const ohioIndex = rankedSchools.findIndex((s) => s.name === 'Ohio State');
   const ohioRank = ohioIndex >= 0 ? ohioIndex + 1 : null;
-  const ohioSchool = rankedSchools.find((school) => school.name === 'Ohio State') ?? null;
+  const ohioSchool = rankedSchools.find((s) => s.name === 'Ohio State') ?? null;
   const ohioValue = ohioSchool ? ohioSchool[rankingMetric] : 0;
   const avgValue = metricAverage[rankingMetric];
   const deltaVsAvg = ohioValue - avgValue;
@@ -2649,15 +2655,19 @@ function BenchmarkTab() {
         <GlassCard className="p-5">
           <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Ohio State Value</p>
           <div className="flex items-end gap-2">
-            <p className="text-4xl font-black text-gray-900">{ohioValue}%</p>
-            <p
-              className="text-sm font-semibold mb-1"
-              style={{ color: deltaVsAvg >= 0 ? colors.positive : colors.negative }}
-            >
-              {deltaVsAvg >= 0 ? '\u2191' : '\u2193'} {Math.abs(deltaVsAvg).toFixed(rankingMetric === 'collab' ? 2 : 1)}%
+            <p className="text-4xl font-black text-gray-900">
+              {rankingMetric === 'followers' || rankingMetric === 'posts' ? formatNumber(ohioValue) : `${ohioValue}%`}
             </p>
+            {avgValue > 0 && (
+              <p
+                className="text-sm font-semibold mb-1"
+                style={{ color: deltaVsAvg >= 0 ? colors.positive : colors.negative }}
+              >
+                {deltaVsAvg >= 0 ? '\u2191' : '\u2193'} {Math.abs(deltaVsAvg).toFixed(rankingMetric === 'collab' ? 2 : 1)}%
+              </p>
+            )}
           </div>
-          <p className="text-xs text-gray-400 mt-2">vs {avgValue}% {benchmarkLabel.toLowerCase()} average</p>
+          {avgValue > 0 && <p className="text-xs text-gray-400 mt-2">vs {avgValue}% {benchmarkLabel.toLowerCase()} average</p>}
         </GlassCard>
 
         <div className="rounded-xl border-2 p-5" style={{ borderColor: colors.positive, backgroundColor: `${colors.positive}08` }}>
@@ -2667,7 +2677,7 @@ function BenchmarkTab() {
           </div>
           <p className="text-sm text-gray-700">
             {topSchool
-              ? <>Current leader is <span className="font-semibold">{topSchool.name}</span> at {topSchool[rankingMetric]}%. Ohio State is {ohioRank ? `#${ohioRank}` : 'unranked'} with {ohioValue}%.</>
+              ? <>Current leader is <span className="font-semibold">{topSchool.name}</span> at {rankingMetric === 'followers' || rankingMetric === 'posts' ? formatNumber(topSchool[rankingMetric]) : `${topSchool[rankingMetric]}%`}. Ohio State is {ohioRank ? `#${ohioRank}` : 'unranked'} with {rankingMetric === 'followers' || rankingMetric === 'posts' ? formatNumber(ohioValue) : `${ohioValue}%`}.</>
               : <>No ranking data available for this view.</>
             }
           </p>
@@ -2685,8 +2695,8 @@ function BenchmarkTab() {
                 <th className="text-center px-3 py-3.5 text-xs font-semibold uppercase tracking-wider text-white w-10">#</th>
                 <th className="text-left px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white">School</th>
                 {!isConference && <th className="text-left px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Conf</th>}
-                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Posts</th>
                 <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white">{metricLabels[rankingMetric]}</th>
+                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Posts</th>
                 <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Visual IP</th>
                 <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Mention</th>
                 <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Collab</th>
@@ -2742,10 +2752,10 @@ function BenchmarkTab() {
                       </div>
                     </td>
                     {!isConference && <td className="px-4 py-3 text-xs text-gray-500 hidden md:table-cell">{school.conf}</td>}
-                    <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{formatNumber(school.posts)}</td>
                     <td className="px-4 py-3 text-right font-semibold" style={{ color: isOSU ? colors.scarlet : colors.text }}>
-                      {school[rankingMetric]}%
+                      {rankingMetric === 'followers' ? formatNumber(school.followers) : rankingMetric === 'posts' ? formatNumber(school.posts) : `${school[rankingMetric]}%`}
                     </td>
+                    <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{formatNumber(school.posts)}</td>
                     <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.logo}%</td>
                     <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.mention}%</td>
                     <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.collab}%</td>
