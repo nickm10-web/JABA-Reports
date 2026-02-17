@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" role="img" aria-label="St Jude logo">
+  <rect width="320" height="120" rx="16" fill="#ffffff"/>
+  <rect x="16" y="16" width="88" height="88" rx="14" fill="#C8102E"/>
+  <rect x="52" y="32" width="16" height="56" fill="#ffffff"/>
+  <rect x="32" y="52" width="56" height="16" fill="#ffffff"/>
+  <text x="122" y="56" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#C8102E">St. Jude</text>
+  <text x="122" y="82" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#6b7280">Hospital Report</text>
+</svg>

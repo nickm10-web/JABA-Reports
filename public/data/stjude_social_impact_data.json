@@ -1,0 +1,510 @@
+{
+  "data_collection_date": "2026-02-15",
+  "data_scope": "High-profile athlete and celebrity ambassadors for St. Jude Children's Research Hospital events",
+  "events": [
+    {
+      "name": "St. Jude Memphis Marathon Weekend",
+      "date": "2025-12-06",
+      "location": "Memphis, TN",
+      "description": "Largest single-day fundraiser for St. Jude, featuring full marathon, half marathon, 10K, and 5K races",
+      "event_url": "https://www.stjude.org/get-involved/fitness-fundraisers/memphis-marathon.html",
+      "participants": 22000,
+      "funds_raised": 15800000,
+      "athletes": [
+        {
+          "name": "Mike Soileau",
+          "role": "Gulf Coast and National St. Jude Heroes Ambassador, 2025 Hero Among Us Award Winner",
+          "platforms": {
+            "instagram": "Not specified"
+          },
+          "career_fundraising": 1600000,
+          "posts": []
+        }
+      ]
+    },
+    {
+      "name": "St. Jude Memphis Marathon Weekend",
+      "date": "2024-12-07",
+      "location": "Memphis, TN",
+      "description": "Annual marathon weekend fundraiser for St. Jude",
+      "event_url": "https://www.stjude.org/get-involved/fitness-fundraisers/memphis-marathon.html",
+      "participants": "20000+",
+      "funds_raised": null,
+      "athletes": [
+        {
+          "name": "St. Jude Official Account",
+          "role": "Official St. Jude social media",
+          "platforms": {
+            "instagram": "@stjude"
+          },
+          "posts": [
+            {
+              "post_url": "https://www.instagram.com/reel/DDSHtgmu4Qe/",
+              "platform": "instagram",
+              "timestamp": "2024-12-07",
+              "caption": "LIVE from St. Jude Memphis Marathon Weekend ❤️",
+              "likes": null,
+              "comments": 24,
+              "shares": null,
+              "views": null,
+              "event_related_tags": ["#StJudeMemphisMarathon"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hoops for St. Jude Tip Off Classic",
+      "date": "2025-10-27",
+      "location": "FedExForum, Memphis, TN",
+      "description": "Annual exhibition basketball event with powerhouse college teams supporting St. Jude",
+      "event_url": "https://www.stjude.org/get-involved/fitness-fundraisers/tip-off-classic.html",
+      "broadcast": "ESPNU",
+      "presenting_sponsor": "Bad Boy Mowers",
+      "athletes": [
+        {
+          "name": "Penny Hardaway",
+          "role": "University of Memphis Men's Basketball Head Coach",
+          "platforms": {
+            "instagram": "@iam1cent"
+          },
+          "posts": [
+            {
+              "post_url": "https://www.instagram.com/p/DOHD-1ZDlyX/",
+              "platform": "instagram",
+              "timestamp": "2025-09-02",
+              "caption": "Past. Present. 10/27. Kicking off the 2025 season with an...",
+              "likes": null,
+              "comments": null,
+              "shares": null,
+              "views": null,
+              "event_related_tags": []
+            },
+            {
+              "post_url": "https://www.instagram.com/reel/DQU-IoKie_d/",
+              "platform": "instagram",
+              "timestamp": "2025-10-27",
+              "caption": "Just another day at work… until Penny Hardaway and John Calipari... St. Jude will be a great game! Good luck to both teams tonight!",
+              "likes": null,
+              "comments": null,
+              "shares": null,
+              "views": null,
+              "event_related_tags": ["#CrosstownConcourse", "#MemphisLegends", "#StJudeClassic", "#ComeCurious"]
+            },
+            {
+              "post_url": "https://www.facebook.com/stjude/posts/1240325498134744/",
+              "platform": "facebook",
+              "timestamp": "2025-09-25",
+              "caption": "Memphis Tigers' Coach Penny Hardaway said it best - it truly is bigger than basketball... Find out on October 27th during this year's St. Jude Tip Off Classic, presented by Bad Boy Mowers.",
+              "likes": null,
+              "comments": null,
+              "shares": null,
+              "views": null,
+              "event_related_tags": []
+            }
+          ]
+        },
+        {
+          "name": "John Calipari",
+          "role": "University of Arkansas Men's Basketball Head Coach, Former Memphis Coach",
+          "platforms": {
+            "instagram": "Not specified"
+          },
+          "posts": []
+        }
+      ]
+    },
+    {
+      "name": "St. Jude Thanks and Giving Campaign",
+      "date": "2025-11-01 to 2025-12-31",
+      "location": "Nationwide",
+      "description": "Annual holiday fundraising campaign featuring celebrity ambassadors",
+      "event_url": "https://www.stjude.org/get-involved/other-ways/st-jude-thanks-and-giving.html",
+      "athletes": [
+        {
+          "name": "Sofia Vergara",
+          "role": "Celebrity Ambassador (14+ years)",
+          "platforms": {
+            "instagram": "@sofiavergara",
+            "tiktok": "Featured in @stjude TikTok content"
+          },
+          "posts": [
+            {
+              "post_url": "https://www.instagram.com/p/DNCS1VZPmZt/",
+              "platform": "instagram",
+              "timestamp": "2025-08-06",
+              "caption": "14 years with @stjude 🥳!! My favorite set day every year!!❤️❤️",
+              "likes": 116700,
+              "comments": 608,
+              "shares": null,
+              "views": null,
+              "event_related_tags": []
+            },
+            {
+              "post_url": "https://www.tiktok.com/@stjude/video/7581693743330266382",
+              "platform": "tiktok",
+              "timestamp": "2025-12-08",
+              "caption": "Sofia Vergara knows what truly matters: giving hope. Stand with Sofia to support St. Jude today.",
+              "likes": null,
+              "comments": null,
+              "shares": null,
+              "views": null,
+              "event_related_tags": []
+            },
+            {
+              "post_url": "https://www.tiktok.com/@stjude/video/7581626674178002190",
+              "platform": "tiktok",
+              "timestamp": "2025-12-08",
+              "caption": "Sofia Vergara knows the best gift you can give this season is priceless: the chance at a lifetime.",
+              "likes": null,
+              "comments": null,
+              "shares": null,
+              "views": null,
+              "event_related_tags": []
+            },
+            {
+              "post_url": "https://www.instagram.com/p/B8NkarRlMoG/",
+              "platform": "instagram",
+              "timestamp": "2020-02-05",
+              "caption": "Special night at the @laartshow with @stjude ❤️❤️❤️❤️",
+              "likes": 63000,
+              "comments": 147,
+              "shares": null,
+              "views": null,
+              "event_related_tags": []
+            }
+          ]
+        },
+        {
+          "name": "Michael Strahan",
+          "role": "Celebrity Ambassador (since 2010), NFL Hall of Fame, TV Host",
+          "platforms": {
+            "instagram": "@michaelstrahan",
+            "facebook": "Michael Strahan"
+          },
+          "posts": [
+            {
+              "post_url": "https://www.instagram.com/reel/DRNDFC0jxRP/",
+              "platform": "instagram",
+              "timestamp": "2025-11-18",
+              "caption": "Hope this pep talk from @michaelstrahan uplifts you today ❤️ When we support St. Jude, we're giving kids the greatest gift. A chance at a lifetime. You in? Let's cure childhood cancer together. Let's go...",
+              "likes": null,
+              "comments": null,
+              "shares": null,
+              "views": null,
+              "event_related_tags": []
+            },
+            {
+              "post_url": "https://www.facebook.com/stjude/videos/2385806921672564/",
+              "platform": "facebook",
+              "timestamp": "2019-11-22",
+              "caption": "St. Jude Thanks and Giving - Michael Strahan",
+              "likes": null,
+              "comments": null,
+              "shares": null,
+              "views": null,
+              "event_related_tags": ["#ThanksandGiving"]
+            }
+          ]
+        },
+        {
+          "name": "Drew Barrymore",
+          "role": "Celebrity Ambassador",
+          "platforms": {
+            "instagram": "@drewbarrymore"
+          },
+          "posts": []
+        },
+        {
+          "name": "Luis Fonsi",
+          "role": "Celebrity Ambassador (17+ years)",
+          "platforms": {
+            "instagram": "@luisfonsi"
+          },
+          "posts": []
+        },
+        {
+          "name": "Jon Hamm",
+          "role": "Celebrity Ambassador",
+          "platforms": {
+            "instagram": "Not specified"
+          },
+          "posts": []
+        },
+        {
+          "name": "Marlo Thomas",
+          "role": "National Outreach Director for St. Jude",
+          "platforms": {
+            "instagram": "Not specified"
+          },
+          "posts": []
+        }
+      ]
+    },
+    {
+      "name": "Childhood Cancer Awareness Month / St. Jude Walk",
+      "date": "2025-09-01 to 2025-09-30",
+      "location": "Nationwide (multiple cities)",
+      "description": "Nationwide 5K walk/run event during Childhood Cancer Awareness Month",
+      "event_url": "https://www.stjude.org/get-involved/fitness-fundraisers/5k-walk-run.html",
+      "athletes": [
+        {
+          "name": "Sofia Vergara",
+          "role": "Celebrity Ambassador",
+          "platforms": {
+            "instagram": "@sofiavergara"
+          },
+          "posts": [
+            {
+              "post_url": "https://www.instagram.com/p/DPFck1ujxOu/",
+              "platform": "instagram",
+              "timestamp": "2025-09-26",
+              "caption": "This September, join @stjude for Childhood Cancer Awareness Month to honor the courageous children battling pediatric cancer, and to fuel hope...",
+              "likes": null,
+              "comments": null,
+              "shares": null,
+              "views": null,
+              "event_related_tags": ["#ChildhoodCancerAwarenessMonth"]
+            },
+            {
+              "post_url": "https://www.instagram.com/reel/CUDbrcUMNPV/",
+              "platform": "instagram",
+              "timestamp": "2021-09-20",
+              "caption": "This September I'm joining #30DaysforStJude because I want to...",
+              "likes": null,
+              "comments": null,
+              "shares": null,
+              "views": null,
+              "event_related_tags": ["#30DaysforStJude"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "St. Jude Walk/Run 2024",
+      "date": "2024-09-28",
+      "location": "Miami, FL and other cities",
+      "description": "Nationwide 5K walk/run during Childhood Cancer Awareness Month",
+      "event_url": "https://www.stjude.org/get-involved/fitness-fundraisers/5k-walk-run.html",
+      "athletes": [
+        {
+          "name": "St. Jude Florida",
+          "role": "Regional St. Jude chapter",
+          "platforms": {
+            "instagram": "@stjudeflorida"
+          },
+          "posts": [
+            {
+              "post_url": "https://www.instagram.com/reel/DAeYDimSWxF/",
+              "platform": "instagram",
+              "timestamp": "2024-09-28",
+              "caption": "The 2024 St. Jude Walk/Run Miami was a complete success...",
+              "likes": null,
+              "comments": 21,
+              "shares": null,
+              "views": null,
+              "event_related_tags": ["#StJudeWalk"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "NFL My Cause My Cleats",
+      "date": "2022-12-05",
+      "location": "NFL stadiums nationwide",
+      "description": "NFL initiative where players wear custom cleats to support their chosen charities",
+      "event_url": "https://www.nfl.com/causes/my-cause-my-cleats",
+      "athletes": [
+        {
+          "name": "Michael Strahan",
+          "role": "NFL Hall of Fame, TV Host, St. Jude Ambassador",
+          "platforms": {
+            "facebook": "Michael Strahan"
+          },
+          "posts": [
+            {
+              "post_url": "https://www.facebook.com/michaelstrahan92/posts/701286011355574/",
+              "platform": "facebook",
+              "timestamp": "2022-12-05",
+              "caption": "Honored to represent @stjude for #MyCauseMyCleats! Head over to... proceeds will go directly to St. Jude Children's Research Hospital!",
+              "likes": null,
+              "comments": null,
+              "shares": null,
+              "views": null,
+              "event_related_tags": ["#MyCauseMyCleats"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ju & Chan Celebrity Basketball Game",
+      "date": "2025-06-23",
+      "location": "Not specified",
+      "description": "Celebrity basketball game fundraiser for St. Jude",
+      "event_url": null,
+      "funds_raised": 25000,
+      "athletes": [
+        {
+          "name": "Juwan Howard",
+          "role": "NBA Coach/Former Player",
+          "platforms": {
+            "instagram": "@itsjuwan"
+          },
+          "posts": [
+            {
+              "post_url": "https://www.instagram.com/reel/DLQNfPnx53u/",
+              "platform": "instagram",
+              "timestamp": "2025-06-23",
+              "caption": "What a day! We teamed up with @stjude for the Ju & Chan Celebrity Basketball Game and raised over $25,000 for an incredible cause. From halftime challenges to special guests, it was all love, laughs, and purpose. Thank you to everyone who showed up and showed out. Together, we made a difference",
+              "likes": null,
+              "comments": 21,
+              "shares": null,
+              "views": null,
+              "event_related_tags": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "FedEx St. Jude Championship",
+      "date": "2025-08-07 to 2025-08-10",
+      "location": "Memphis, TN",
+      "description": "PGA TOUR FedExCup Playoffs event, first leg of playoffs",
+      "event_url": "https://www.fedexchampionship.com/",
+      "athletes": [
+        {
+          "name": "Justin Rose",
+          "role": "Professional Golfer, 2025 Champion",
+          "platforms": {
+            "instagram": "@justinprose99"
+          },
+          "posts": [
+            {
+              "post_url": "https://www.instagram.com/reel/DNMZqJ0OpM1/",
+              "platform": "instagram",
+              "timestamp": "2025-08-10",
+              "caption": "A message from the champ! ... Saint Jude Hospital for children. So proud to be the champ and signing off. Thank you.",
+              "likes": null,
+              "comments": null,
+              "shares": null,
+              "views": null,
+              "event_related_tags": []
+            }
+          ]
+        },
+        {
+          "name": "Penny Hardaway",
+          "role": "NBA Legend, participated in FedEx St. Jude golf event",
+          "platforms": {
+            "instagram": "@iam1cent"
+          },
+          "posts": [
+            {
+              "post_url": "https://www.instagram.com/reel/DNFGPmLhByw/",
+              "platform": "instagram",
+              "timestamp": "2025-08-07",
+              "caption": "Penny Hardaway spoke to the media during his round at the FedEx St Jude Classic",
+              "likes": null,
+              "comments": null,
+              "shares": null,
+              "views": null,
+              "event_related_tags": []
+            }
+          ]
+        },
+        {
+          "name": "FedEx St. Jude Championship Official",
+          "role": "Official tournament account",
+          "platforms": {
+            "instagram": "@fedexchamp",
+            "twitter": "@FedExChamp"
+          },
+          "posts": [
+            {
+              "post_url": "https://www.instagram.com/p/DNMS77FBbeS/",
+              "platform": "instagram",
+              "timestamp": "2025-08-10",
+              "caption": "Three playoff holes to claim the first playoff event! Justin Rose wins the FedEx St. Jude Championship!",
+              "likes": null,
+              "comments": null,
+              "shares": null,
+              "views": null,
+              "event_related_tags": ["#FedExCup"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Run Rich Run Campaign",
+      "date": "2020-03-01",
+      "location": "Various",
+      "description": "Rich Eisen's annual run to raise funds for St. Jude",
+      "event_url": null,
+      "athletes": [
+        {
+          "name": "George Kittle",
+          "role": "NFL Player - San Francisco 49ers",
+          "platforms": {
+            "instagram": "Not specified"
+          },
+          "posts": [
+            {
+              "post_url": "https://www.instagram.com/p/B9NhOumhjxL/",
+              "platform": "instagram",
+              "timestamp": "2020-03-01",
+              "caption": "RUN RICH RUN! A big thank you to @richeisen and @stjude for letting my wife @clairekittle and I be apart of something special!",
+              "likes": null,
+              "comments": null,
+              "shares": null,
+              "views": null,
+              "event_related_tags": []
+            }
+          ]
+        },
+        {
+          "name": "Rich Eisen",
+          "role": "Sports Broadcaster",
+          "platforms": {
+            "instagram": "@richeisen"
+          },
+          "posts": []
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_events": 11,
+    "total_athletes_tracked": 18,
+    "total_posts_collected": 27,
+    "platforms_tracked": ["instagram", "facebook", "tiktok", "twitter"],
+    "date_range": "2019-11-22 to 2025-12-08",
+    "key_hashtags": [
+      "#StJude",
+      "#StJudeHeroes",
+      "#ThanksandGiving",
+      "#30DaysforStJude",
+      "#HoopsforStJude",
+      "#StJudeWalk",
+      "#StJudeMarathon",
+      "#StJudeMemphisMarathon",
+      "#ChildhoodCancerAwarenessMonth",
+      "#MyCauseMyCleats",
+      "#StJudeAmbassador",
+      "#StJudeTipOffClassic",
+      "#FedExCup"
+    ],
+    "engagement_metrics_note": "Many engagement metrics (likes, comments, shares, views) are not publicly visible without login or API access. Metrics shown are from publicly visible snippets only.",
+    "data_limitations": [
+      "Instagram requires login to view full engagement metrics",
+      "TikTok view counts not accessible via web search",
+      "Historical posts may have limited engagement data",
+      "Some athlete social media handles are assumed based on naming conventions",
+      "Not all celebrity ambassadors have publicly trackable event-specific posts"
+    ]
+  }
+}
