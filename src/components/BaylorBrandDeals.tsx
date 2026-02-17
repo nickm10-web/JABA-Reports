@@ -219,27 +219,83 @@ function groupPostsByBrand(posts: SponsorPost[]): BrandGroup[] {
 }
 
 // ═══════════════════════════════════════════════════════════════
+// EXCLUDED SPONSORS (not actual brand deals)
+// ═══════════════════════════════════════════════════════════════
+const EXCLUDED_SPONSORS = new Set([
+  // Baylor team / school pages
+  '@baylorbears', '@bufootball', '@baylorwbb', '@baylorsoftball', '@baylorvball',
+  '@baylortrack', '@baylorfutbol', '@bayloracrotumb', '@baylor_plus',
+  '@busportsministry', '@baylor.nil.store', '@baylorthreads',
+  // Other school / team pages
+  '@greenwavefb', '@meangreenfb', '@midwaysoftball', '@phillies',
+]);
+
+function isExcludedSponsor(sp: string): boolean {
+  return EXCLUDED_SPONSORS.has(normalizeBrandKey(sp));
+}
+
+// ═══════════════════════════════════════════════════════════════
 // BRAND LOGO
 // ═══════════════════════════════════════════════════════════════
 const brandDomains: Record<string, string> = {
+  // Nike family
   '@nike': 'nike.com', '@nikebasketball': 'nike.com', '@nikerunning': 'nike.com',
   '@usnikefootball': 'nike.com', '@nikestrength': 'nike.com',
-  '@adidas': 'adidas.com', '@adidasgolf': 'adidas.com',
-  '@on': 'on-running.com', '@newbalance': 'newbalance.com', '@yeti': 'yeti.com',
-  '@lamborghini': 'lamborghini.com', '@disney': 'disney.com', '@coach': 'coach.com',
+  '@nikeeyb': 'nike.com', '@nikeeybl': 'nike.com',
+  // Adidas family
+  '@adidas': 'adidas.com', '@adidasgolf': 'adidas.com', '@adidasbasketball': 'adidas.com',
+  // Athletic / footwear
+  '@on': 'on-running.com', '@newbalance': 'newbalance.com', '@hoka': 'hoka.com',
+  '@gymshark': 'gymshark.com', '@tracksmithrunning': 'tracksmith.com',
+  '@nfinityshoes': 'nfinityinc.com', '@nfinity': 'nfinityinc.com',
+  '@teamvktry': 'vfrygear.com',
+  // Fashion / apparel
+  '@coach': 'coach.com', '@hollister': 'hollisterco.com', '@fashionnova': 'fashionnova.com',
+  '@lululemon': 'lululemon.com', '@vuoriclothing': 'vuoriclothing.com',
+  '@whitefoxboutique': 'whitefoxboutique.com', '@princesspolly': 'princesspolly.com',
+  '@savagexfenty': 'savagex.com', '@edikted': 'edikted.com', '@onwardreserve': 'onwardreserve.com',
+  '@tlfapparel': 'tlfapparel.com', '@neweracap': 'neweracap.com',
+  // Beauty / personal care
+  '@armanibeauty': 'armanibeauty.com', '@emporioarmani': 'armani.com',
+  '@maccosmetics': 'maccosmetics.com', '@nyxcosmetics': 'nyxcosmetics.com',
+  '@fentybeauty': 'fentybeauty.com', '@proactiv': 'proactiv.com',
+  '@johnfrieda': 'johnfrieda.com', '@drteals': 'drteals.com',
+  '@goodmolecules': 'goodmolecules.com', '@treehut': 'treehut.co',
+  // Food / beverage
   '@subway': 'subway.com', '@subwayfreshfit': 'subway.com',
-  '@dicks': 'dickssportinggoods.com', '@lululemon': 'lululemon.com',
-  '@hollister': 'hollisterco.com', '@raisingcanes': 'raisingcanes.com',
+  '@raisingcanes': 'raisingcanes.com', '@mcdonalds': 'mcdonalds.com',
+  '@heb': 'heb.com', '@mmschocolate': 'mms.com', '@pockyusa': 'pocky.com',
   '@c4energy': 'c4energy.com', '@musclemilk': 'musclemilk.com',
-  '@drinkprime': 'drinkprime.com', '@drinkolipop': 'drinkolipop.com',
-  '@fashionnova': 'fashionnova.com', '@neweracap': 'neweracap.com',
-  '@cbssports': 'cbssports.com', '@raid': 'raid.com',
-  '@cvspharmacy': 'cvs.com', '@maccosmetics': 'maccosmetics.com',
+  '@drinkprime': 'drinkprime.com', '@drinkprimegirls': 'drinkprime.com',
+  '@drinkolipop': 'drinkolipop.com', '@nocco.usa': 'nocco.com',
+  '@herbalife24': 'herbalife.com', '@sixstarpronutrition': 'sixstarpro.com',
+  '@drinkbubblr': 'drinkbubblr.com', '@drinkhalfday': 'drinkhalfday.com',
+  '@drinkwtrmln': 'wtrmlnwtr.com', '@simplyprotein': 'simplyprotein.com',
+  '@uptimeenergy': 'uptimeenergy.com',
+  // Outdoor / sporting goods
+  '@yeti': 'yeti.com', '@dicks': 'dickssportinggoods.com',
+  '@bassproshops': 'basspro.com', '@callawaynexteu': 'callawaygolf.com',
+  '@arcticzone': 'arcticzone.com', '@turtleboxaudio': 'turtlebox.com',
+  '@cavenders': 'cavenders.com', '@badbirdie': 'badbirdie.com',
+  // Entertainment / tech
+  '@lamborghini': 'lamborghini.com', '@disney': 'disney.com', '@sony': 'sony.com',
+  '@cisco': 'cisco.com', '@nba2k': '2k.com', '@g2a_com': 'g2a.com',
+  '@raid': 'raid.com',
+  // Lifestyle / retail
+  '@containerstore': 'containerstore.com', '@diamondsdirect': 'diamondsdirect.com',
+  '@visitmagnolia': 'magnolia.com', '@pinehurstresort': 'pinehurst.com',
+  '@phillips66gas': 'phillips66.com', '@altafiber': 'altafiber.com',
+  // Health / wellness
+  '@iherb': 'iherb.com', '@fireflyrecovery': 'fireflyrecovery.com',
+  '@torquefitnessusa': 'torquefitness.com',
+  // Media
+  '@cbssports': 'cbssports.com', '@overtime': 'overtime.tv',
+  // Other
+  '@cvspharmacy': 'cvs.com', '@popslemonade': 'drinkpops.com',
+  '@projectrepatusa': 'projectrepat.com', '@bigbrandtire': 'bigbrandtire.com',
 };
 
-const localBrandLogos: Record<string, string> = {
-  '@baylorthreads': '/baylor-threads.png',
-};
+const localBrandLogos: Record<string, string> = {};
 
 function getBrandLogoUrl(brand: string): string {
   const key = normalizeBrandKey(brand);
@@ -450,7 +506,7 @@ export function BaylorBrandDeals({ onBack }: BaylorBrandDealsProps) {
       .then((data: SponsorPost[]) => {
         const filtered = data.filter(p => {
           const d = p.publishedAt?.$date;
-          return d && d >= '2025-01-01' && d < '2026-01-01';
+          return d && d >= '2025-01-01' && d < '2026-01-01' && !isExcludedSponsor(p.sponsorPartner);
         });
         setPosts(filtered);
         setIsLoading(false);
