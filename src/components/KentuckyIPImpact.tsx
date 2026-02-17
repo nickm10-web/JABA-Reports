@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 import {
   ArrowLeft,
   DollarSign,
@@ -844,8 +845,8 @@ function OverviewTab({ overviewData }: { overviewData?: OverviewData | null }) {
         <div>
           <p className="text-sm font-semibold text-gray-800 mb-1">Data Source Context</p>
           <p className="text-sm text-gray-600">
-            Data reflects <span className="font-semibold">Kentucky athlete personal social media accounts</span>, not official team pages.
-            Metrics track how athletes use Kentucky IP (logos, mentions, collaborations) in their own content. Analysis covers{' '}
+            Data reflects <span className="font-semibold">Kentucky athlete personal social media accounts</span>, including collaboration posts with official team pages.
+            Metrics track how athletes use Kentucky IP (logos, mentions, collaborations) in their content. Analysis covers{' '}
             <span className="font-semibold">{formatNumber(overview.totalPosts)} posts</span> from{' '}
             <span className="font-semibold">{formatNumber(ipData.totalFollowers)} combined followers</span>.
           </p>
@@ -922,11 +923,11 @@ function WithVsWithoutTab({
   const getMetricValues = () => {
     switch (selectedMetric) {
       case 'engagement':
-        return { withoutValue: formatPercent(withoutEngRate), withValue: formatPercent(withEngRate), delta: engDelta };
+        return { withoutValue: formatPercent(withoutEngRate), withValue: formatPercent(withEngRate), withoutRaw: withoutEngRate, withRaw: withEngRate, delta: engDelta };
       case 'likes':
-        return { withoutValue: formatNumber(Math.round(baselineAvgLikes)), withValue: formatNumber(Math.round(withAvgLikes)), delta: likesDelta };
+        return { withoutValue: formatNumber(Math.round(baselineAvgLikes)), withValue: formatNumber(Math.round(withAvgLikes)), withoutRaw: baselineAvgLikes, withRaw: withAvgLikes, delta: likesDelta };
       case 'comments':
-        return { withoutValue: formatNumber(Math.round(baselineAvgComments)), withValue: formatNumber(Math.round(withAvgComments)), delta: commentsDelta };
+        return { withoutValue: formatNumber(Math.round(baselineAvgComments)), withValue: formatNumber(Math.round(withAvgComments)), withoutRaw: baselineAvgComments, withRaw: withAvgComments, delta: commentsDelta };
     }
   };
 
@@ -1012,33 +1013,78 @@ function WithVsWithoutTab({
       </div>
 
       <GlassCard>
-        <p className="text-xs uppercase tracking-wider text-gray-500 mb-3">Directional Comparison</p>
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-3 items-stretch">
-          <div className="md:col-span-4 rounded-xl border p-4 bg-white" style={{ borderColor: colors.glassBorder }}>
-            <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Without {currentSignal?.label}</p>
-            <p className="text-3xl font-black text-gray-700">{metricValues.withoutValue}</p>
-            <p className="text-xs text-gray-500 mt-1">{formatNumber(withoutPosts)} posts</p>
-          </div>
-
-          <div
-            className="md:col-span-4 rounded-xl border-2 p-5 md:p-6 flex flex-col justify-center items-center text-center md:scale-[1.03]"
-            style={{
-              borderColor: `${colors.primary}55`,
-              background: `linear-gradient(180deg, ${colors.primary}08 0%, ${colors.primary}12 100%)`,
-              boxShadow: '0 10px 26px rgba(0, 51, 160, 0.16)',
-            }}
-          >
-            <p className="text-xs uppercase tracking-wider font-semibold mb-1" style={{ color: colors.primary }}>Lift Highlight</p>
-            <p className="text-5xl font-black" style={{ color: colors.primary }}>{formatDelta(metricValues.delta)}</p>
-            <p className="text-xs text-gray-500 mt-1">With vs Without</p>
-          </div>
-
-          <div className="md:col-span-4 rounded-xl border p-4 bg-white" style={{ borderColor: colors.glassBorder }}>
-            <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: colors.primary }}>With {currentSignal?.label}</p>
-            <p className="text-3xl font-black" style={{ color: colors.primary }}>{metricValues.withValue}</p>
-            <p className="text-xs text-gray-500 mt-1">{formatNumber(withPosts)} posts</p>
-          </div>
+        {/* Header */}
+        <div className="mb-5">
+          <p className="text-sm font-bold text-gray-800">
+            {currentSignal?.label} Impact on {metrics.find(m => m.id === selectedMetric)?.label}
+          </p>
+          <p className="text-xs text-gray-400 mt-0.5">
+            Posts using {currentSignal?.label?.toLowerCase()} vs posts without {currentSignal?.label?.toLowerCase()}
+          </p>
         </div>
+
+        {/* Bar Comparison */}
+        {(() => {
+          const withRaw = metricValues.withRaw;
+          const withoutRaw = metricValues.withoutRaw;
+          const maxVal = Math.max(withRaw, withoutRaw, 0.001);
+          const withoutBarWidth = (withoutRaw / maxVal) * 100;
+          const withBarWidth = (withRaw / maxVal) * 100;
+          const multiplier = withoutRaw > 0 ? (withRaw / withoutRaw) : 0;
+          return (
+            <div className="space-y-4">
+              {/* WITHOUT bar */}
+              <div>
+                <div className="flex items-baseline justify-between mb-1.5">
+                  <p className="text-[11px] font-semibold uppercase tracking-wider text-gray-400">Without {currentSignal?.label}</p>
+                  <p className="text-lg font-black text-gray-600">{metricValues.withoutValue}</p>
+                </div>
+                <div className="w-full bg-gray-100 rounded-lg h-8 overflow-hidden">
+                  <motion.div
+                    className="h-full rounded-lg"
+                    style={{ backgroundColor: '#D1D5DB' }}
+                    initial={{ width: 0 }}
+                    animate={{ width: `${Math.max(withoutBarWidth, 2)}%` }}
+                    transition={{ duration: 0.8, ease: 'easeOut' }}
+                  />
+                </div>
+                <p className="text-[10px] text-gray-400 mt-1">{formatNumber(withoutPosts)} posts</p>
+              </div>
+
+              {/* WITH bar */}
+              <div>
+                <div className="flex items-baseline justify-between mb-1.5">
+                  <p className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: colors.primary }}>With {currentSignal?.label}</p>
+                  <p className="text-lg font-black" style={{ color: colors.primary }}>{metricValues.withValue}</p>
+                </div>
+                <div className="w-full bg-gray-100 rounded-lg h-8 overflow-hidden">
+                  <motion.div
+                    className="h-full rounded-lg"
+                    style={{
+                      background: `linear-gradient(90deg, ${colors.primary} 0%, ${colors.primaryDark} 100%)`,
+                      boxShadow: `0 2px 8px ${colors.primary}33`,
+                    }}
+                    initial={{ width: 0 }}
+                    animate={{ width: `${Math.max(withBarWidth, 2)}%` }}
+                    transition={{ duration: 1.0, ease: 'easeOut' }}
+                  />
+                </div>
+                <p className="text-[10px] text-gray-400 mt-1">{formatNumber(withPosts)} posts</p>
+              </div>
+
+              {/* Lift Indicator */}
+              <div className="text-center pt-3 border-t border-gray-100">
+                <p className="text-3xl font-black" style={{ color: colors.primary }}>
+                  {formatDelta(metricValues.delta)} <span className="text-base font-bold text-gray-400">{metrics.find(m => m.id === selectedMetric)?.label} Lift</span>
+                </p>
+                <p className="text-xs text-gray-400 mt-1">
+                  Posts featuring {currentSignal?.label?.toLowerCase()} generate{' '}
+                  <span className="font-semibold text-gray-600">{multiplier.toFixed(1)}x</span> higher {metrics.find(m => m.id === selectedMetric)?.label?.toLowerCase()}.
+                </p>
+              </div>
+            </div>
+          );
+        })()}
       </GlassCard>
 
       {/* Detailed Comparison Table */}
@@ -1454,20 +1500,14 @@ function PartnershipsTab() {
 
 function BenchmarkTab() {
   const [benchmarkType, setBenchmarkType] = useState<'conference' | 'ncaa'>('conference');
-  const [rankingMetric, setRankingMetric] = useState<'followers' | 'posts' | 'mention' | 'logo' | 'collab'>('followers');
+  const [rankingMetric, setRankingMetric] = useState<'followers' | 'posts' | 'adoption' | 'mention' | 'logo' | 'collab'>('followers');
   const isConference = benchmarkType === 'conference';
   const schools = isConference ? secSchools : ncaaD1Schools;
   const benchmarkLabel = isConference ? 'SEC' : 'NCAA D1';
-  const metricOptions: { id: 'followers' | 'posts' | 'mention' | 'logo' | 'collab'; label: string }[] = [
-    { id: 'followers', label: 'Followers' },
-    { id: 'posts', label: 'Posts' },
-    { id: 'mention', label: 'Mention Rate' },
-    { id: 'logo', label: 'Visual IP Rate' },
-    { id: 'collab', label: 'Collab Rate' },
-  ];
   const metricLabels = {
     followers: 'Followers',
     posts: 'Total Posts',
+    adoption: 'IP Adoption',
     mention: 'Mention Rate',
     logo: 'Visual IP Rate',
     collab: 'Collaboration Rate',
@@ -1475,6 +1515,7 @@ function BenchmarkTab() {
   const metricAverage = {
     followers: 0,
     posts: 0,
+    adoption: isConference ? conferenceAvg.adoption : ncaaD1Avg.adoption,
     mention: isConference ? conferenceAvg.mention : ncaaD1Avg.mention,
     logo: isConference ? conferenceAvg.logo : ncaaD1Avg.logo,
     collab: isConference ? conferenceAvg.collab : ncaaD1Avg.collab,
@@ -1498,7 +1539,7 @@ function BenchmarkTab() {
         <div>
           <SectionHeader primary="IP " secondary="RANKINGS" />
           <p className="text-sm text-gray-500 mt-2">
-            Kentucky vs {benchmarkLabel} schools ranked by {metricLabels[rankingMetric].toLowerCase()}.
+            Kentucky vs {benchmarkLabel} schools ranked by {metricLabels[rankingMetric].toLowerCase()}. Data reflects all athlete posts.
           </p>
         </div>
         <div className="flex items-center gap-3">
@@ -1529,25 +1570,6 @@ function BenchmarkTab() {
         </div>
       </div>
 
-      <GlassCard className="p-4">
-        <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Ranking Metric</p>
-        <div className="flex flex-wrap gap-2">
-          {metricOptions.map((option) => (
-            <button
-              key={option.id}
-              onClick={() => setRankingMetric(option.id)}
-              className="px-3 py-1.5 rounded-full text-xs font-semibold border transition-all motion-reduce:transition-none"
-              style={{
-                borderColor: rankingMetric === option.id ? `${colors.primary}60` : '#d1d5db',
-                backgroundColor: rankingMetric === option.id ? `${colors.primary}12` : '#fff',
-                color: rankingMetric === option.id ? colors.primary : colors.textMuted,
-              }}
-            >
-              {option.label}
-            </button>
-          ))}
-        </div>
-      </GlassCard>
 
       <div className="grid md:grid-cols-3 gap-4">
         <GlassCard className="p-5">
@@ -1604,11 +1626,13 @@ function BenchmarkTab() {
                 <th className="text-center px-3 py-3.5 text-xs font-semibold uppercase tracking-wider text-white w-10">#</th>
                 <th className="text-left px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white">School</th>
                 {!isConference && <th className="text-left px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Conf</th>}
-                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white">{metricLabels[rankingMetric]}</th>
-                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Posts</th>
-                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Visual IP</th>
-                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Mention</th>
-                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Collab</th>
+                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('followers')}>Followers {rankingMetric === 'followers' ? '\u25BC' : ''}</th>
+                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('posts')}>Total Posts {rankingMetric === 'posts' ? '\u25BC' : ''}</th>
+                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('adoption')}>IP Posts {rankingMetric === 'adoption' ? '\u25BC' : ''}</th>
+                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('adoption')}>IP Adoption {rankingMetric === 'adoption' ? '\u25BC' : ''}</th>
+                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('logo')}>Visual IP {rankingMetric === 'logo' ? '\u25BC' : ''}</th>
+                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('mention')}>Mention {rankingMetric === 'mention' ? '\u25BC' : ''}</th>
+                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('collab')}>Collab {rankingMetric === 'collab' ? '\u25BC' : ''}</th>
               </tr>
             </thead>
             <tbody>
@@ -1662,9 +1686,11 @@ function BenchmarkTab() {
                     </td>
                     {!isConference && <td className="px-4 py-3 text-xs text-gray-500 hidden md:table-cell">{school.conf}</td>}
                     <td className="px-4 py-3 text-right font-semibold" style={{ color: isKY ? colors.primary : colors.text }}>
-                      {rankingMetric === 'followers' ? formatNumber(school.followers) : rankingMetric === 'posts' ? formatNumber(school.posts) : `${school[rankingMetric]}%`}
+                      {formatNumber(school.followers)}
                     </td>
                     <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{formatNumber(school.posts)}</td>
+                    <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{formatNumber(Math.round(school.posts * school.adoption / 100))}</td>
+                    <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.adoption}%</td>
                     <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.logo}%</td>
                     <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.mention}%</td>
                     <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.collab}%</td>
@@ -2828,7 +2854,7 @@ export function KentuckyIPImpact({ onBack }: { onBack?: () => void }) {
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Row 1: Logo + Title */}
-          <div className="flex items-center py-3">
+          <div className="flex items-center justify-between py-3">
             <div className="flex items-center gap-3 min-w-0">
               {onBack && (
                 <button
@@ -2853,8 +2879,12 @@ export function KentuckyIPImpact({ onBack }: { onBack?: () => void }) {
                   <span className="hidden sm:inline" style={{ color: colors.headerGray }}>Wildcats IP Impact Report</span>
                   <span className="sm:hidden" style={{ color: colors.headerGray }}>IP Impact</span>
                 </h1>
+                <p className="text-[10px] uppercase tracking-[0.2em] text-gray-400 mt-0.5">
+                  Generated by <span className="font-semibold" style={{ borderBottom: '2px solid #CCFF00' }}>JABA AI</span>
+                </p>
               </div>
             </div>
+            <img src="/JABA-face.png" alt="JABA" className="h-16 sm:h-20 object-contain flex-shrink-0" />
           </div>
 
           {/* Row 2: Tabs */}

@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 import {
   ArrowLeft,
   DollarSign,
@@ -329,7 +330,6 @@ const ipData = {
     { brand: "@hollister", posts: 58, avgLikes: 819.36, avgComments: 18.55, emv: 25375.5, engagementRate: 0.0704, liftMultiplier: -0.6 },
     { brand: "@dickssportinggoods", posts: 2, avgLikes: 20912, avgComments: 175.5, emv: 21438.5, engagementRate: 0.044, liftMultiplier: -0.8 },
     { brand: "@epicpartner", posts: 1, avgLikes: 41342, avgComments: 127, emv: 20861.5, engagementRate: 0.2339, liftMultiplier: 0.3 },
-    { brand: "@pressplay", posts: 4, avgLikes: 6318.75, avgComments: 81.5, emv: 13126.5, engagementRate: 0.1079, liftMultiplier: -0.4 },
     { brand: "@paycomsoftware", posts: 5, avgLikes: 4866, avgComments: 28.6, emv: 12379.5, engagementRate: 0.3847, liftMultiplier: 1.1 },
     { brand: "@discover", posts: 1, avgLikes: 24024, avgComments: 114, emv: 12183, engagementRate: 0.0318, liftMultiplier: -0.8 },
     { brand: "@heydude", posts: 11, avgLikes: 2074.73, avgComments: 37.64, emv: 12032, engagementRate: 0.0562, liftMultiplier: -0.7 },
@@ -1316,8 +1316,8 @@ function OverviewTab({ overviewData }: { overviewData?: OverviewData | null }) {
         <div>
           <p className="text-sm font-semibold text-gray-800 mb-1">Data Source Context</p>
           <p className="text-sm text-gray-600">
-            Data reflects <span className="font-semibold">Ohio State athlete personal social media accounts</span>, not official team pages.
-            Metrics track how athletes use Ohio State IP (logos, mentions, collaborations) in their own content.
+            Data reflects <span className="font-semibold">Ohio State athlete personal social media accounts</span>, including collaboration posts with official team pages.
+            Metrics track how athletes use Ohio State IP (logos, mentions, collaborations) in their content.
             EMV calculated as: (Total Likes x $0.50) + (Total Comments x $1.50). Analysis covers{' '}
             <span className="font-semibold">{formatNumber(overview.totalPosts)} posts</span> from{' '}
             <span className="font-semibold">{formatNumber(ipData.totalFollowers)} combined followers</span>.
@@ -1551,42 +1551,78 @@ function WithVsWithoutTab({
       </div>
 
       <GlassCard>
-        <p className="text-xs uppercase tracking-wider text-gray-500 mb-3">Directional Comparison</p>
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-3 items-stretch">
-          <div className="md:col-span-4 rounded-xl border p-4 bg-white" style={{ borderColor: colors.glassBorder }}>
-            <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Without {currentSignal?.label}</p>
-            <p className="text-3xl font-black text-gray-700">{metricValues.withoutValue}</p>
-            <p className="text-xs text-gray-500 mt-1">{formatNumber(withoutPosts)} posts</p>
-          </div>
-
-          <div
-            className="md:col-span-4 rounded-xl border-2 p-5 md:p-6 flex flex-col justify-center items-center text-center md:scale-[1.03]"
-            style={{
-              borderColor: `${colors.scarlet}55`,
-              background: `linear-gradient(180deg, ${colors.scarlet}08 0%, ${colors.scarlet}12 100%)`,
-              boxShadow: '0 10px 26px rgba(186, 12, 47, 0.16)',
-            }}
-          >
-            <p className="text-xs uppercase tracking-wider font-semibold mb-1" style={{ color: colors.scarlet }}>
-              Lift Highlight
-            </p>
-            <p className="text-5xl font-black" style={{ color: colors.scarlet }}>
-              {formatDelta(metricValues.delta)}
-            </p>
-            <p className="text-xs text-gray-500 mt-1">With vs Without</p>
-          </div>
-
-          <div
-            className="md:col-span-4 rounded-xl border p-4 bg-white"
-            style={{ borderColor: colors.glassBorder }}
-          >
-            <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: colors.scarlet }}>
-              With {currentSignal?.label}
-            </p>
-            <p className="text-3xl font-black" style={{ color: colors.scarlet }}>{metricValues.withValue}</p>
-            <p className="text-xs text-gray-500 mt-1">{formatNumber(withPosts)} posts</p>
-          </div>
+        {/* Header */}
+        <div className="mb-5">
+          <p className="text-sm font-bold text-gray-800">
+            {currentSignal?.label} Impact on {metrics.find(m => m.id === selectedMetric)?.label}
+          </p>
+          <p className="text-xs text-gray-400 mt-0.5">
+            Posts using {currentSignal?.label?.toLowerCase()} vs posts without {currentSignal?.label?.toLowerCase()}
+          </p>
         </div>
+
+        {/* Bar Comparison */}
+        {(() => {
+          const withRaw = metricValues.withRaw;
+          const withoutRaw = metricValues.withoutRaw;
+          const maxVal = Math.max(withRaw, withoutRaw, 0.001);
+          const withoutBarWidth = (withoutRaw / maxVal) * 100;
+          const withBarWidth = (withRaw / maxVal) * 100;
+          const multiplier = withoutRaw > 0 ? (withRaw / withoutRaw) : 0;
+          return (
+            <div className="space-y-4">
+              {/* WITHOUT bar */}
+              <div>
+                <div className="flex items-baseline justify-between mb-1.5">
+                  <p className="text-[11px] font-semibold uppercase tracking-wider text-gray-400">Without {currentSignal?.label}</p>
+                  <p className="text-lg font-black text-gray-600">{metricValues.withoutValue}</p>
+                </div>
+                <div className="w-full bg-gray-100 rounded-lg h-8 overflow-hidden">
+                  <motion.div
+                    className="h-full rounded-lg"
+                    style={{ backgroundColor: '#D1D5DB' }}
+                    initial={{ width: 0 }}
+                    animate={{ width: `${Math.max(withoutBarWidth, 2)}%` }}
+                    transition={{ duration: 0.8, ease: 'easeOut' }}
+                  />
+                </div>
+                <p className="text-[10px] text-gray-400 mt-1">{formatNumber(withoutPosts)} posts</p>
+              </div>
+
+              {/* WITH bar */}
+              <div>
+                <div className="flex items-baseline justify-between mb-1.5">
+                  <p className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: colors.scarlet }}>With {currentSignal?.label}</p>
+                  <p className="text-lg font-black" style={{ color: colors.scarlet }}>{metricValues.withValue}</p>
+                </div>
+                <div className="w-full bg-gray-100 rounded-lg h-8 overflow-hidden">
+                  <motion.div
+                    className="h-full rounded-lg"
+                    style={{
+                      background: `linear-gradient(90deg, ${colors.scarlet} 0%, ${colors.scarletDark || colors.scarlet} 100%)`,
+                      boxShadow: `0 2px 8px ${colors.scarlet}33`,
+                    }}
+                    initial={{ width: 0 }}
+                    animate={{ width: `${Math.max(withBarWidth, 2)}%` }}
+                    transition={{ duration: 1.0, ease: 'easeOut' }}
+                  />
+                </div>
+                <p className="text-[10px] text-gray-400 mt-1">{formatNumber(withPosts)} posts</p>
+              </div>
+
+              {/* Lift Indicator */}
+              <div className="text-center pt-3 border-t border-gray-100">
+                <p className="text-3xl font-black" style={{ color: colors.scarlet }}>
+                  {formatDelta(metricValues.delta)} <span className="text-base font-bold text-gray-400">{metrics.find(m => m.id === selectedMetric)?.label} Lift</span>
+                </p>
+                <p className="text-xs text-gray-400 mt-1">
+                  Posts featuring {currentSignal?.label?.toLowerCase()} generate{' '}
+                  <span className="font-semibold text-gray-600">{multiplier.toFixed(1)}x</span> higher {metrics.find(m => m.id === selectedMetric)?.label?.toLowerCase()}.
+                </p>
+              </div>
+            </div>
+          );
+        })()}
       </GlassCard>
 
       {/* Detailed Comparison Table */}
@@ -1798,6 +1834,8 @@ function PartnershipsTab() {
             nextMap[key] = row.logo;
           }
         }
+        // Override: show Fortnite logo for @epicpartner
+        nextMap['epicpartner'] = 'https://storage.googleapis.com/jaba-brands-logos/fortnite.jpg';
         if (!canceled) {
           setBrandLogoMap(nextMap);
         }
@@ -2545,20 +2583,14 @@ function BestCollaboratorsTab() {
 // ═══════════════════════════════════════════════════════════════
 function BenchmarkTab() {
   const [benchmarkType, setBenchmarkType] = useState<'conference' | 'ncaa'>('conference');
-  const [rankingMetric, setRankingMetric] = useState<'followers' | 'posts' | 'mention' | 'logo' | 'collab'>('followers');
+  const [rankingMetric, setRankingMetric] = useState<'followers' | 'posts' | 'adoption' | 'mention' | 'logo' | 'collab'>('followers');
   const isConference = benchmarkType === 'conference';
   const schools = isConference ? big10Schools : ncaaD1Schools;
   const benchmarkLabel = isConference ? 'Big 10' : 'NCAA D1';
-  const metricOptions: { id: 'followers' | 'posts' | 'mention' | 'logo' | 'collab'; label: string }[] = [
-    { id: 'followers', label: 'Followers' },
-    { id: 'posts', label: 'Posts' },
-    { id: 'mention', label: 'Mention Rate' },
-    { id: 'logo', label: 'Visual IP Rate' },
-    { id: 'collab', label: 'Collab Rate' },
-  ];
   const metricLabels = {
     followers: 'Followers',
     posts: 'Total Posts',
+    adoption: 'IP Adoption',
     mention: 'Mention Rate',
     logo: 'Visual IP Rate',
     collab: 'Collaboration Rate',
@@ -2566,6 +2598,7 @@ function BenchmarkTab() {
   const metricAverage = {
     followers: 0,
     posts: 0,
+    adoption: isConference ? conferenceAvg.adoption : ncaaD1Avg.adoption,
     mention: isConference ? conferenceAvg.mention : ncaaD1Avg.mention,
     logo: isConference ? conferenceAvg.logo : ncaaD1Avg.logo,
     collab: isConference ? conferenceAvg.collab : ncaaD1Avg.collab,
@@ -2589,7 +2622,7 @@ function BenchmarkTab() {
         <div>
           <SectionHeader primary="IP " secondary="RANKINGS" />
           <p className="text-sm text-gray-500 mt-2">
-            Ohio State vs {benchmarkLabel} schools ranked by {metricLabels[rankingMetric].toLowerCase()}.
+            Ohio State vs {benchmarkLabel} schools ranked by {metricLabels[rankingMetric].toLowerCase()}. Data reflects all athlete posts.
           </p>
         </div>
         <div className="flex items-center gap-3">
@@ -2620,25 +2653,6 @@ function BenchmarkTab() {
         </div>
       </div>
 
-      <GlassCard className="p-4">
-        <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Ranking Metric</p>
-        <div className="flex flex-wrap gap-2">
-          {metricOptions.map((option) => (
-            <button
-              key={option.id}
-              onClick={() => setRankingMetric(option.id)}
-              className="px-3 py-1.5 rounded-full text-xs font-semibold border transition-all motion-reduce:transition-none"
-              style={{
-                borderColor: rankingMetric === option.id ? `${colors.scarlet}60` : '#d1d5db',
-                backgroundColor: rankingMetric === option.id ? `${colors.scarlet}12` : '#fff',
-                color: rankingMetric === option.id ? colors.scarlet : colors.textMuted,
-              }}
-            >
-              {option.label}
-            </button>
-          ))}
-        </div>
-      </GlassCard>
 
       <div className="grid md:grid-cols-3 gap-4">
         <GlassCard className="p-5">
@@ -2695,11 +2709,13 @@ function BenchmarkTab() {
                 <th className="text-center px-3 py-3.5 text-xs font-semibold uppercase tracking-wider text-white w-10">#</th>
                 <th className="text-left px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white">School</th>
                 {!isConference && <th className="text-left px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Conf</th>}
-                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white">{metricLabels[rankingMetric]}</th>
-                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Posts</th>
-                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Visual IP</th>
-                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Mention</th>
-                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Collab</th>
+                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('followers')}>Followers {rankingMetric === 'followers' ? '\u25BC' : ''}</th>
+                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('posts')}>Total Posts {rankingMetric === 'posts' ? '\u25BC' : ''}</th>
+                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('adoption')}>IP Posts {rankingMetric === 'adoption' ? '\u25BC' : ''}</th>
+                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('adoption')}>IP Adoption {rankingMetric === 'adoption' ? '\u25BC' : ''}</th>
+                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('logo')}>Visual IP {rankingMetric === 'logo' ? '\u25BC' : ''}</th>
+                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('mention')}>Mention {rankingMetric === 'mention' ? '\u25BC' : ''}</th>
+                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('collab')}>Collab {rankingMetric === 'collab' ? '\u25BC' : ''}</th>
               </tr>
             </thead>
             <tbody>
@@ -2753,9 +2769,11 @@ function BenchmarkTab() {
                     </td>
                     {!isConference && <td className="px-4 py-3 text-xs text-gray-500 hidden md:table-cell">{school.conf}</td>}
                     <td className="px-4 py-3 text-right font-semibold" style={{ color: isOSU ? colors.scarlet : colors.text }}>
-                      {rankingMetric === 'followers' ? formatNumber(school.followers) : rankingMetric === 'posts' ? formatNumber(school.posts) : `${school[rankingMetric]}%`}
+                      {formatNumber(school.followers)}
                     </td>
                     <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{formatNumber(school.posts)}</td>
+                    <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{formatNumber(Math.round(school.posts * school.adoption / 100))}</td>
+                    <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.adoption}%</td>
                     <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.logo}%</td>
                     <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.mention}%</td>
                     <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.collab}%</td>
@@ -2817,7 +2835,7 @@ function ContentTab() {
   const [isLoading, setIsLoading] = useState(true);
   const [athletePosts, setAthletePosts] = useState<AthletePostItem[]>([]);
   const [ohioTeamPosts, setOhioTeamPosts] = useState<TeamPostItem[]>([]);
-  const [bigTenTeamPosts, setBigTenTeamPosts] = useState<TeamPostItem[]>([]);
+  const [_bigTenTeamPosts, setBigTenTeamPosts] = useState<TeamPostItem[]>([]);
 
   const parseDateLabel = (value: unknown): string => {
     if (!value) return 'Unknown';
@@ -3021,10 +3039,6 @@ function ContentTab() {
   const topOhioTeamPost = sortedOhioTeamPosts[0];
   const top10OhioTeamPosts = sortedOhioTeamPosts.slice(0, 10);
 
-  const top10BigTenTeamPosts = useMemo(
-    () => [...bigTenTeamPosts].sort((a, b) => b.interactions - a.interactions).slice(0, 10),
-    [bigTenTeamPosts],
-  );
 
   const renderThumbnail = (src: string, alt: string) => (
     <div className="w-full aspect-[4/3] rounded-xl overflow-hidden bg-gray-100">
@@ -3247,7 +3261,7 @@ function ContentTab() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+          <div>
             {/* Top 10 Ohio State Team Page Posts */}
             <div>
               <SectionHeader primary="TOP 10 " secondary="OHIO STATE TEAM PAGE POSTS" />
@@ -3298,54 +3312,6 @@ function ContentTab() {
               </div>
             </div>
 
-            {/* Big Ten benchmark */}
-            <div>
-              <SectionHeader primary="BIG TEN " secondary="TEAM PAGE BENCHMARK" />
-              <div className="space-y-3 mt-4">
-                {top10BigTenTeamPosts.map((post, idx) => {
-                  const isOhio = post.schoolName === 'Ohio State';
-                  return (
-                    <div
-                      key={`${post.id}-${idx}`}
-                      className="rounded-xl border p-3 sm:p-4 bg-white"
-                      style={{ borderColor: isOhio ? `${colors.scarlet}55` : colors.glassBorder, backgroundColor: isOhio ? `${colors.scarlet}08` : '#fff' }}
-                    >
-                      <a
-                        href={post.postLink || undefined}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-start gap-3"
-                      >
-                        <span
-                          className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0"
-                          style={{ backgroundColor: idx < 3 ? colors.scarlet : '#e5e7eb', color: idx < 3 ? '#fff' : colors.textMuted }}
-                        >
-                          {idx + 1}
-                        </span>
-                        <div className="w-20 sm:w-24 flex-shrink-0">{renderThumbnail(post.thumbnail, post.teamName)}</div>
-                        <div className="min-w-0 flex-1">
-                          <div className="flex items-center gap-2">
-                            <p className="font-semibold text-sm truncate" style={{ color: colors.text }}>{post.schoolName}</p>
-                            {isOhio && <span className="px-1.5 py-0.5 rounded-full text-[10px] font-semibold" style={{ backgroundColor: colors.scarlet, color: '#fff' }}>Ohio State</span>}
-                          </div>
-                          <p className="text-xs text-gray-500 mt-0.5">{post.teamName} • {post.dateLabel}</p>
-                          {post.caption && (
-                            <p className="text-xs mt-1.5 line-clamp-2" style={{ color: colors.textMuted }}>
-                              {post.caption}
-                            </p>
-                          )}
-                          <div className="flex flex-wrap gap-2 mt-2 text-xs">
-                            <span className="px-2 py-0.5 rounded-full bg-gray-100 text-gray-700">{formatNumber(post.interactions)} interactions</span>
-                            <span className="px-2 py-0.5 rounded-full bg-gray-100 text-gray-700">{post.conferenceName}</span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  );
-                })}
-                {top10BigTenTeamPosts.length === 0 && <p className="text-sm text-gray-500">No Big Ten team page benchmark posts available.</p>}
-              </div>
-            </div>
           </div>
         </div>
       )}
@@ -3400,6 +3366,7 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
   const [sortKey, setSortKey] = useState<TeamSortKey>('followers');
   const [sortDir, setSortDir] = useState<TeamSortDir>('desc');
   const [rosterMetricsBySport, setRosterMetricsBySport] = useState<Record<string, TeamRosterMetricSnapshot>>({});
+  const [view, setView] = useState<'overview' | 'leaderboard'>('overview');
 
   useEffect(() => {
     let cancelled = false;
@@ -3575,16 +3542,48 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
 
   return (
     <div className="space-y-6">
-      <div>
-        <SectionHeader primary="OHIO STATE " secondary="TEAM PAGES" />
-        <p className="text-sm mt-2" style={{ color: colors.textMuted }}>
-          Official Ohio State athletics social account performance.
-        </p>
-        <p className="text-xs mt-1" style={{ color: colors.textDim }}>
-          Current feed data is a recent-post sample (up to {formatNumber(maxTrackedPosts)} posts per team in this dataset).
-        </p>
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <SectionHeader primary="OHIO STATE " secondary="TEAM PAGES" />
+          <p className="text-sm mt-2" style={{ color: colors.textMuted }}>
+            {view === 'overview' ? 'Official Ohio State athletics social account performance.' : 'Benchmark Ohio State team pages against conference and NCAA.'}
+          </p>
+          {view === 'overview' && (
+            <p className="text-xs mt-1" style={{ color: colors.textDim }}>
+              Current feed data is a recent-post sample (up to {formatNumber(maxTrackedPosts)} posts per team in this dataset).
+            </p>
+          )}
+        </div>
+        <div className="flex items-center bg-gray-100 rounded-lg p-0.5 flex-shrink-0">
+          <button
+            onClick={() => setView('overview')}
+            className="px-4 py-1.5 rounded-md text-xs font-semibold transition-all motion-reduce:transition-none"
+            style={{
+              backgroundColor: view === 'overview' ? '#fff' : 'transparent',
+              color: view === 'overview' ? colors.scarlet : colors.textMuted,
+              boxShadow: view === 'overview' ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
+            }}
+          >
+            Ohio State
+          </button>
+          <button
+            onClick={() => setView('leaderboard')}
+            className="px-4 py-1.5 rounded-md text-xs font-semibold transition-all motion-reduce:transition-none"
+            style={{
+              backgroundColor: view === 'leaderboard' ? '#fff' : 'transparent',
+              color: view === 'leaderboard' ? colors.scarlet : colors.textMuted,
+              boxShadow: view === 'leaderboard' ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
+            }}
+          >
+            Leaderboard
+          </button>
+        </div>
       </div>
 
+      {view === 'leaderboard' ? (
+        <TeamPageLeaderboard />
+      ) : (
+      <>
       <div className="overflow-x-auto scrollbar-hide -mx-1 px-1">
         <div className="inline-flex items-center gap-2 min-w-max">
           {metricButtons.map((mb) => (
@@ -3742,6 +3741,212 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
           </table>
         </div>
       </div>
+
+      </>
+      )}
+    </div>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════
+// TEAM PAGE LEADERBOARD
+// ═══════════════════════════════════════════════════════════════
+interface TeamRosterRow {
+  schoolName: string;
+  conferenceName: string;
+  sport: string;
+  metrics?: { thirtyDays?: { followers?: number; contentCount?: number; likes?: number; comments?: number; engagementRate?: number } };
+}
+
+interface SportSchoolEntry {
+  name: string;
+  conf: string;
+  followers: number;
+  posts: number;
+  likes: number;
+  engagementRate: number;
+}
+
+function TeamPageLeaderboard() {
+  const [rawRows, setRawRows] = useState<TeamRosterRow[]>([]);
+  const [scope, setScope] = useState<'conference' | 'ncaa'>('conference');
+  const [selectedSport, setSelectedSport] = useState<string>('ALL');
+  const [sortMetric, setSortMetric] = useState<'followers' | 'posts' | 'likes'>('followers');
+
+  useEffect(() => {
+    let cancelled = false;
+    const load = async () => {
+      try {
+        const res = await fetch('/data/roster_teams.json');
+        if (!res.ok) return;
+        const rows = (await res.json()) as TeamRosterRow[];
+        if (!cancelled) setRawRows(rows);
+      } catch { /* ignore */ }
+    };
+    load();
+    return () => { cancelled = true; };
+  }, []);
+
+  // Get available sports that Ohio State has
+  const osuSports = useMemo(() => {
+    const sports = rawRows.filter(r => r.schoolName === 'Ohio State').map(r => r.sport);
+    return [...new Set(sports)].sort((a, b) => formatSportLabel(a).localeCompare(formatSportLabel(b)));
+  }, [rawRows]);
+
+  const isConference = scope === 'conference';
+
+  const filtered = useMemo(() => {
+    let rows = rawRows;
+    if (isConference) rows = rows.filter(r => r.conferenceName === 'Big 10');
+    if (selectedSport !== 'ALL') rows = rows.filter(r => r.sport === selectedSport);
+
+    // Aggregate by school
+    const map: Record<string, SportSchoolEntry> = {};
+    for (const row of rows) {
+      const s = row.schoolName;
+      if (!s) continue;
+      if (!map[s]) map[s] = { name: s, conf: row.conferenceName || '', followers: 0, posts: 0, likes: 0, engagementRate: 0 };
+      const m = row.metrics?.thirtyDays;
+      map[s].followers += m?.followers || 0;
+      map[s].posts += m?.contentCount || 0;
+      map[s].likes += m?.likes || 0;
+    }
+    for (const s of Object.values(map)) {
+      s.engagementRate = s.posts > 0 ? s.likes / s.posts : 0;
+    }
+    return Object.values(map).sort((a, b) => b[sortMetric] - a[sortMetric]);
+  }, [rawRows, scope, selectedSport, sortMetric, isConference]);
+
+  const osuIndex = filtered.findIndex(s => s.name === 'Ohio State');
+  const osuRank = osuIndex >= 0 ? osuIndex + 1 : null;
+  const scopeLabel = isConference ? 'Big 10' : 'NCAA';
+  const sportLabel = selectedSport === 'ALL' ? 'All Sports' : formatSportLabel(selectedSport);
+
+  if (rawRows.length === 0) return <p className="text-sm text-gray-500">Loading leaderboard data...</p>;
+
+  return (
+    <div className="space-y-4">
+      {/* Filters */}
+      <div className="flex flex-col lg:flex-row lg:items-end gap-4">
+        {/* Sport Selector */}
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Sport</p>
+          <div className="relative">
+            <select
+              value={selectedSport}
+              onChange={(e) => setSelectedSport(e.target.value)}
+              className="px-4 py-2.5 pr-10 text-sm font-semibold rounded-xl border appearance-none cursor-pointer bg-white"
+              style={{ color: colors.text, borderColor: colors.glassBorder }}
+            >
+              <option value="ALL">All Sports</option>
+              {osuSports.map(s => (
+                <option key={s} value={s}>{formatSportLabel(s)}</option>
+              ))}
+            </select>
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+              <ChevronDown className="w-4 h-4 text-gray-400" />
+            </div>
+          </div>
+        </div>
+
+        {/* Scope Toggle */}
+        <div className="flex items-center bg-gray-100 rounded-lg p-0.5">
+          <button
+            onClick={() => setScope('conference')}
+            className="px-4 py-2 rounded-md text-xs font-semibold transition-all motion-reduce:transition-none"
+            style={{
+              backgroundColor: isConference ? '#fff' : 'transparent',
+              color: isConference ? colors.scarlet : colors.textMuted,
+              boxShadow: isConference ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
+            }}
+          >
+            Big Ten
+          </button>
+          <button
+            onClick={() => setScope('ncaa')}
+            className="px-4 py-2 rounded-md text-xs font-semibold transition-all motion-reduce:transition-none"
+            style={{
+              backgroundColor: !isConference ? '#fff' : 'transparent',
+              color: !isConference ? colors.scarlet : colors.textMuted,
+              boxShadow: !isConference ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
+            }}
+          >
+            NCAA
+          </button>
+        </div>
+      </div>
+
+      {/* Summary Cards */}
+      {osuRank != null && (
+        <div className="grid md:grid-cols-3 gap-4">
+          <GlassCard className="p-5">
+            <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Ohio State {sportLabel} Rank</p>
+            <p className="text-4xl font-black" style={{ color: colors.scarlet }}>#{osuRank} <span className="text-sm font-normal text-gray-500">of {filtered.length}</span></p>
+            <p className="text-xs text-gray-400 mt-1">{scopeLabel} · {sportLabel} · by followers</p>
+          </GlassCard>
+          <GlassCard className="p-5">
+            <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Followers</p>
+            <p className="text-4xl font-black text-gray-900">{formatNumber(filtered[osuIndex]?.followers || 0)}</p>
+            <p className="text-xs text-gray-400 mt-1">{formatNumber(filtered[osuIndex]?.posts || 0)} posts (30 days)</p>
+          </GlassCard>
+          <GlassCard className="p-5">
+            <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">30-Day Likes</p>
+            <p className="text-4xl font-black text-gray-900">{formatNumber(filtered[osuIndex]?.likes || 0)}</p>
+            <p className="text-xs text-gray-400 mt-1">{filtered[osuIndex]?.posts ? Math.round((filtered[osuIndex]?.likes || 0) / filtered[osuIndex].posts).toLocaleString() : 0} avg per post</p>
+          </GlassCard>
+        </div>
+      )}
+
+      {/* Rankings Table */}
+      <div className="rounded-2xl bg-white overflow-hidden max-h-[500px] overflow-y-auto shadow-sm">
+        <table className="w-full">
+          <thead className="sticky top-0 z-10">
+            <tr style={{ backgroundColor: colors.scarlet }}>
+              <th className="text-center px-3 py-3.5 text-xs font-semibold uppercase tracking-wider text-white w-10">#</th>
+              <th className="text-left px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white">School</th>
+              {!isConference && <th className="text-left px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Conf</th>}
+              <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white cursor-pointer select-none hover:text-white/80" onClick={() => setSortMetric('followers')}>Followers {sortMetric === 'followers' ? '\u25BC' : ''}</th>
+              <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer select-none hover:text-white/80" onClick={() => setSortMetric('posts')}>Posts {sortMetric === 'posts' ? '\u25BC' : ''}</th>
+              <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer select-none hover:text-white/80" onClick={() => setSortMetric('likes')}>Likes {sortMetric === 'likes' ? '\u25BC' : ''}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filtered.map((school, idx) => {
+              const isOSU = school.name === 'Ohio State';
+              return (
+                <tr
+                  key={school.name}
+                  className={`border-b border-gray-100 transition-colors ${isOSU ? 'bg-red-50 hover:bg-red-100/50' : idx % 2 === 1 ? 'bg-gray-50/50 hover:bg-gray-50' : 'hover:bg-gray-50'}`}
+                >
+                  <td className="px-3 py-3 text-center">
+                    {idx < 3 ? (
+                      <span className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold mx-auto" style={{ backgroundColor: isOSU ? colors.scarlet : '#d1d5db', color: isOSU ? '#fff' : colors.text }}>
+                        {idx + 1}
+                      </span>
+                    ) : isOSU ? (
+                      <span className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold mx-auto" style={{ backgroundColor: colors.scarlet, color: '#fff' }}>
+                        {idx + 1}
+                      </span>
+                    ) : (
+                      <span className="text-sm text-gray-400 font-medium">{idx + 1}</span>
+                    )}
+                  </td>
+                  <td className={`px-4 py-3 ${isOSU ? 'font-bold' : 'font-semibold'}`} style={{ color: isOSU ? colors.scarlet : colors.text }}>
+                    <div className="flex items-center gap-2">
+                      {isOSU && <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: colors.scarlet }} />}
+                      {school.name}
+                    </div>
+                  </td>
+                  {!isConference && <td className="px-4 py-3 text-xs text-gray-500 hidden md:table-cell">{school.conf}</td>}
+                  <td className="px-4 py-3 text-right font-semibold" style={{ color: isOSU ? colors.scarlet : colors.text }}>{formatNumber(school.followers)}</td>
+                  <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{formatNumber(school.posts)}</td>
+                  <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{formatNumber(school.likes)}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
@@ -3860,7 +4065,7 @@ export function OhioStateIPImpact({ onBack }: { onBack?: () => void }) {
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Row 1: Logo + Title */}
-          <div className="flex items-center py-3">
+          <div className="flex items-center justify-between py-3">
             <div className="flex items-center gap-3 min-w-0">
               {onBack && (
                 <button
@@ -3885,8 +4090,12 @@ export function OhioStateIPImpact({ onBack }: { onBack?: () => void }) {
                   <span className="hidden sm:inline" style={{ color: colors.headerGray }}>IP Impact Report</span>
                   <span className="sm:hidden" style={{ color: colors.headerGray }}>IP Impact</span>
                 </h1>
+                <p className="text-[10px] uppercase tracking-[0.2em] text-gray-400 mt-0.5">
+                  Generated by <span className="font-semibold" style={{ borderBottom: '2px solid #CCFF00' }}>JABA AI</span>
+                </p>
               </div>
             </div>
+            <img src="/JABA-face.png" alt="JABA" className="h-16 sm:h-20 object-contain flex-shrink-0" />
           </div>
 
           {/* Row 2: Tabs */}
