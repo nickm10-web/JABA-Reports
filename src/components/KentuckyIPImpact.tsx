@@ -1826,7 +1826,7 @@ function ContentTab() {
   const [isLoading, setIsLoading] = useState(true);
   const [athletePosts, setAthletePosts] = useState<AthletePostItem[]>([]);
   const [kentuckyTeamPosts, setKentuckyTeamPosts] = useState<TeamPostItem[]>([]);
-  const [secTeamPosts, setSecTeamPosts] = useState<TeamPostItem[]>([]);
+  const [_secTeamPosts, setSecTeamPosts] = useState<TeamPostItem[]>([]);
 
   const parseDateLabel = (value: unknown): string => {
     if (!value) return 'Unknown';
@@ -2028,10 +2028,6 @@ function ContentTab() {
   const topKentuckyTeamPost = sortedKentuckyTeamPosts[0];
   const top10KentuckyTeamPosts = sortedKentuckyTeamPosts.slice(0, 10);
 
-  const top10SECTeamPosts = useMemo(
-    () => [...secTeamPosts].sort((a, b) => b.interactions - a.interactions).slice(0, 10),
-    [secTeamPosts],
-  );
 
   const renderThumbnail = (src: string, alt: string) => (
     <div className="w-full aspect-[4/3] rounded-xl overflow-hidden bg-gray-100">
@@ -2249,110 +2245,53 @@ function ContentTab() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-            {/* Top 10 Kentucky Team Page Posts */}
-            <div>
-              <SectionHeader primary="TOP 10 " secondary="KENTUCKY TEAM PAGE POSTS" />
-              <div className="space-y-3 mt-4">
-                {top10KentuckyTeamPosts.map((post, idx) => (
-                  <a
-                    key={post.id}
-                    href={post.postLink || undefined}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block p-4"
-                    style={postCardStyle}
-                    onMouseEnter={(e) => Object.assign(e.currentTarget.style, postCardHoverStyle)}
-                    onMouseLeave={(e) => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = postCardStyle.boxShadow as string; }}
-                  >
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="min-w-0 flex-1">
-                        <div className="flex items-start gap-3">
-                          <span
-                            className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-1"
-                            style={{ backgroundColor: idx < 3 ? colors.primary : '#e5e7eb', color: idx < 3 ? '#fff' : colors.textMuted }}
-                          >
-                            {idx + 1}
-                          </span>
-                          {post.thumbnail ? (
-                            <img src={post.thumbnail} alt={post.teamName} className="h-16 w-16 rounded-xl object-cover border border-gray-200 shadow-sm flex-shrink-0" loading="lazy" />
-                          ) : (
-                            <div className="h-16 w-16 rounded-xl bg-gray-100 border border-gray-200 flex-shrink-0" />
+          {/* Top 10 Kentucky Team Page Posts */}
+          <div>
+            <SectionHeader primary="TOP 10 " secondary="KENTUCKY TEAM PAGE POSTS" />
+            <div className="space-y-3 mt-4">
+              {top10KentuckyTeamPosts.map((post, idx) => (
+                <a
+                  key={post.id}
+                  href={post.postLink || undefined}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-4"
+                  style={postCardStyle}
+                  onMouseEnter={(e) => Object.assign(e.currentTarget.style, postCardHoverStyle)}
+                  onMouseLeave={(e) => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = postCardStyle.boxShadow as string; }}
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="min-w-0 flex-1">
+                      <div className="flex items-start gap-3">
+                        <span
+                          className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-1"
+                          style={{ backgroundColor: idx < 3 ? colors.primary : '#e5e7eb', color: idx < 3 ? '#fff' : colors.textMuted }}
+                        >
+                          {idx + 1}
+                        </span>
+                        {post.thumbnail ? (
+                          <img src={post.thumbnail} alt={post.teamName} className="h-16 w-16 rounded-xl object-cover border border-gray-200 shadow-sm flex-shrink-0" loading="lazy" />
+                        ) : (
+                          <div className="h-16 w-16 rounded-xl bg-gray-100 border border-gray-200 flex-shrink-0" />
+                        )}
+                        <div className="min-w-0">
+                          <p className="text-base font-semibold text-gray-900 truncate">{post.teamName}</p>
+                          <p className="text-sm text-gray-600 truncate">{post.dateLabel}</p>
+                          {post.caption && (
+                            <p className="text-sm text-gray-600 line-clamp-2 mt-1">{post.caption}</p>
                           )}
-                          <div className="min-w-0">
-                            <p className="text-base font-semibold text-gray-900 truncate">{post.teamName}</p>
-                            <p className="text-sm text-gray-600 truncate">{post.dateLabel}</p>
-                            {post.caption && (
-                              <p className="text-sm text-gray-600 line-clamp-2 mt-1">{post.caption}</p>
-                            )}
-                          </div>
                         </div>
-                      </div>
-                      <div className="text-right flex-shrink-0">
-                        <p className="text-lg font-bold text-gray-900">{formatNumber(post.interactions)}</p>
-                        <p className="text-xs text-gray-600 mt-1">Interactions</p>
-                        <p className="text-sm text-gray-600 mt-2">Eng: {formatPercent(post.engagementRate)}</p>
                       </div>
                     </div>
-                  </a>
-                ))}
-                {top10KentuckyTeamPosts.length === 0 && <p className="text-sm text-gray-500">No Kentucky team page posts available.</p>}
-              </div>
-            </div>
-
-            {/* SEC benchmark */}
-            <div>
-              <SectionHeader primary="SEC " secondary="TEAM PAGE BENCHMARK" />
-              <div className="space-y-3 mt-4">
-                {top10SECTeamPosts.map((post, idx) => {
-                  const isKentucky = post.schoolName === 'Kentucky';
-                  return (
-                    <a
-                      key={`${post.id}-${idx}`}
-                      href={post.postLink || undefined}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block p-4"
-                      style={{ ...postCardStyle, backgroundColor: isKentucky ? `${colors.primary}08` : '#fff', borderColor: isKentucky ? `${colors.primary}55` : undefined }}
-                      onMouseEnter={(e) => Object.assign(e.currentTarget.style, postCardHoverStyle)}
-                      onMouseLeave={(e) => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = postCardStyle.boxShadow as string; }}
-                    >
-                      <div className="flex items-start justify-between gap-4">
-                        <div className="min-w-0 flex-1">
-                          <div className="flex items-start gap-3">
-                            <span
-                              className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-1"
-                              style={{ backgroundColor: idx < 3 ? colors.primary : '#e5e7eb', color: idx < 3 ? '#fff' : colors.textMuted }}
-                            >
-                              {idx + 1}
-                            </span>
-                            {post.thumbnail ? (
-                              <img src={post.thumbnail} alt={post.teamName} className="h-16 w-16 rounded-xl object-cover border border-gray-200 shadow-sm flex-shrink-0" loading="lazy" />
-                            ) : (
-                              <div className="h-16 w-16 rounded-xl bg-gray-100 border border-gray-200 flex-shrink-0" />
-                            )}
-                            <div className="min-w-0">
-                              <div className="flex items-center gap-2">
-                                <p className="text-base font-semibold text-gray-900 truncate">{post.schoolName}</p>
-                                {isKentucky && <span className="px-1.5 py-0.5 rounded-full text-[10px] font-semibold" style={{ backgroundColor: colors.primary, color: '#fff' }}>Kentucky</span>}
-                              </div>
-                              <p className="text-sm text-gray-600 truncate">{post.teamName} • {post.dateLabel}</p>
-                              {post.caption && (
-                                <p className="text-sm text-gray-600 line-clamp-2 mt-1">{post.caption}</p>
-                              )}
-                            </div>
-                          </div>
-                        </div>
-                        <div className="text-right flex-shrink-0">
-                          <p className="text-lg font-bold text-gray-900">{formatNumber(post.interactions)}</p>
-                          <p className="text-xs text-gray-600 mt-1">Interactions</p>
-                        </div>
-                      </div>
-                    </a>
-                  );
-                })}
-                {top10SECTeamPosts.length === 0 && <p className="text-sm text-gray-500">No SEC team page benchmark posts available.</p>}
-              </div>
+                    <div className="text-right flex-shrink-0">
+                      <p className="text-lg font-bold text-gray-900">{formatNumber(post.interactions)}</p>
+                      <p className="text-xs text-gray-600 mt-1">Interactions</p>
+                      <p className="text-sm text-gray-600 mt-2">Eng: {formatPercent(post.engagementRate)}</p>
+                    </div>
+                  </div>
+                </a>
+              ))}
+              {top10KentuckyTeamPosts.length === 0 && <p className="text-sm text-gray-500">No Kentucky team page posts available.</p>}
             </div>
           </div>
         </div>
@@ -2408,6 +2347,7 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
   const [sortKey, setSortKey] = useState<TeamSortKey>('followers');
   const [sortDir, setSortDir] = useState<TeamSortDir>('desc');
   const [rosterMetricsBySport, setRosterMetricsBySport] = useState<Record<string, TeamRosterMetricSnapshot>>({});
+  const [view, setView] = useState<'overview' | 'leaderboard'>('overview');
 
   useEffect(() => {
     let cancelled = false;
@@ -2583,16 +2523,48 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
 
   return (
     <div className="space-y-6">
-      <div>
-        <SectionHeader primary="KENTUCKY " secondary="TEAM PAGES" />
-        <p className="text-sm mt-2" style={{ color: colors.textMuted }}>
-          Official Kentucky athletics social account performance.
-        </p>
-        <p className="text-xs mt-1" style={{ color: colors.textDim }}>
-          Current feed data is a recent-post sample (up to {formatNumber(maxTrackedPosts)} posts per team in this dataset).
-        </p>
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <SectionHeader primary="KENTUCKY " secondary="TEAM PAGES" />
+          <p className="text-sm mt-2" style={{ color: colors.textMuted }}>
+            {view === 'overview' ? 'Official Kentucky athletics social account performance.' : 'Benchmark Kentucky team pages against conference and NCAA.'}
+          </p>
+          {view === 'overview' && (
+            <p className="text-xs mt-1" style={{ color: colors.textDim }}>
+              Current feed data is a recent-post sample (up to {formatNumber(maxTrackedPosts)} posts per team in this dataset).
+            </p>
+          )}
+        </div>
+        <div className="flex items-center bg-gray-100 rounded-lg p-0.5 flex-shrink-0">
+          <button
+            onClick={() => setView('overview')}
+            className="px-4 py-1.5 rounded-md text-xs font-semibold transition-all motion-reduce:transition-none"
+            style={{
+              backgroundColor: view === 'overview' ? '#fff' : 'transparent',
+              color: view === 'overview' ? colors.primary : colors.textMuted,
+              boxShadow: view === 'overview' ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
+            }}
+          >
+            Kentucky
+          </button>
+          <button
+            onClick={() => setView('leaderboard')}
+            className="px-4 py-1.5 rounded-md text-xs font-semibold transition-all motion-reduce:transition-none"
+            style={{
+              backgroundColor: view === 'leaderboard' ? '#fff' : 'transparent',
+              color: view === 'leaderboard' ? colors.primary : colors.textMuted,
+              boxShadow: view === 'leaderboard' ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
+            }}
+          >
+            Leaderboard
+          </button>
+        </div>
       </div>
 
+      {view === 'leaderboard' ? (
+        <KentuckyTeamPageLeaderboard />
+      ) : (
+      <>
       <div className="overflow-x-auto scrollbar-hide -mx-1 px-1">
         <div className="inline-flex items-center gap-2 min-w-max">
           {metricButtons.map((mb) => (
@@ -2750,6 +2722,212 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
           </table>
         </div>
       </div>
+
+      </>
+      )}
+    </div>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════
+// TEAM PAGE LEADERBOARD (Kentucky)
+// ═══════════════════════════════════════════════════════════════
+interface KYTeamRosterRow {
+  schoolName: string;
+  conferenceName: string;
+  sport: string;
+  metrics?: { thirtyDays?: { followers?: number; contentCount?: number; likes?: number; comments?: number; engagementRate?: number } };
+}
+
+interface KYSportSchoolEntry {
+  name: string;
+  conf: string;
+  followers: number;
+  posts: number;
+  likes: number;
+  engagementRate: number;
+}
+
+function KentuckyTeamPageLeaderboard() {
+  const [rawRows, setRawRows] = useState<KYTeamRosterRow[]>([]);
+  const [scope, setScope] = useState<'conference' | 'ncaa'>('conference');
+  const [selectedSport, setSelectedSport] = useState<string>('ALL');
+  const [sortMetric, setSortMetric] = useState<'followers' | 'posts' | 'likes'>('followers');
+
+  useEffect(() => {
+    let cancelled = false;
+    const load = async () => {
+      try {
+        const res = await fetch('/data/roster_teams.json');
+        if (!res.ok) return;
+        const rows = (await res.json()) as KYTeamRosterRow[];
+        if (!cancelled) setRawRows(rows);
+      } catch { /* ignore */ }
+    };
+    load();
+    return () => { cancelled = true; };
+  }, []);
+
+  // Get available sports that Kentucky has
+  const ukSports = useMemo(() => {
+    const sports = rawRows.filter(r => r.schoolName === 'Kentucky').map(r => r.sport);
+    return [...new Set(sports)].sort((a, b) => formatSportLabel(a).localeCompare(formatSportLabel(b)));
+  }, [rawRows]);
+
+  const isConference = scope === 'conference';
+
+  const filtered = useMemo(() => {
+    let rows = rawRows;
+    if (isConference) rows = rows.filter(r => r.conferenceName === 'SEC');
+    if (selectedSport !== 'ALL') rows = rows.filter(r => r.sport === selectedSport);
+
+    // Aggregate by school
+    const map: Record<string, KYSportSchoolEntry> = {};
+    for (const row of rows) {
+      const s = row.schoolName;
+      if (!s) continue;
+      if (!map[s]) map[s] = { name: s, conf: row.conferenceName || '', followers: 0, posts: 0, likes: 0, engagementRate: 0 };
+      const m = row.metrics?.thirtyDays;
+      map[s].followers += m?.followers || 0;
+      map[s].posts += m?.contentCount || 0;
+      map[s].likes += m?.likes || 0;
+    }
+    for (const s of Object.values(map)) {
+      s.engagementRate = s.posts > 0 ? s.likes / s.posts : 0;
+    }
+    return Object.values(map).sort((a, b) => b[sortMetric] - a[sortMetric]);
+  }, [rawRows, scope, selectedSport, sortMetric, isConference]);
+
+  const ukIndex = filtered.findIndex(s => s.name === 'Kentucky');
+  const ukRank = ukIndex >= 0 ? ukIndex + 1 : null;
+  const scopeLabel = isConference ? 'SEC' : 'NCAA';
+  const sportLabel = selectedSport === 'ALL' ? 'All Sports' : formatSportLabel(selectedSport);
+
+  if (rawRows.length === 0) return <p className="text-sm text-gray-500">Loading leaderboard data...</p>;
+
+  return (
+    <div className="space-y-4">
+      {/* Filters */}
+      <div className="flex flex-col lg:flex-row lg:items-end gap-4">
+        {/* Sport Selector */}
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Sport</p>
+          <div className="relative">
+            <select
+              value={selectedSport}
+              onChange={(e) => setSelectedSport(e.target.value)}
+              className="px-4 py-2.5 pr-10 text-sm font-semibold rounded-xl border appearance-none cursor-pointer bg-white"
+              style={{ color: colors.text, borderColor: colors.glassBorder }}
+            >
+              <option value="ALL">All Sports</option>
+              {ukSports.map(s => (
+                <option key={s} value={s}>{formatSportLabel(s)}</option>
+              ))}
+            </select>
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+              <ChevronDown className="w-4 h-4 text-gray-400" />
+            </div>
+          </div>
+        </div>
+
+        {/* Scope Toggle */}
+        <div className="flex items-center bg-gray-100 rounded-lg p-0.5">
+          <button
+            onClick={() => setScope('conference')}
+            className="px-4 py-2 rounded-md text-xs font-semibold transition-all motion-reduce:transition-none"
+            style={{
+              backgroundColor: isConference ? '#fff' : 'transparent',
+              color: isConference ? colors.primary : colors.textMuted,
+              boxShadow: isConference ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
+            }}
+          >
+            SEC
+          </button>
+          <button
+            onClick={() => setScope('ncaa')}
+            className="px-4 py-2 rounded-md text-xs font-semibold transition-all motion-reduce:transition-none"
+            style={{
+              backgroundColor: !isConference ? '#fff' : 'transparent',
+              color: !isConference ? colors.primary : colors.textMuted,
+              boxShadow: !isConference ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
+            }}
+          >
+            NCAA
+          </button>
+        </div>
+      </div>
+
+      {/* Summary Cards */}
+      {ukRank != null && (
+        <div className="grid md:grid-cols-3 gap-4">
+          <GlassCard className="p-5">
+            <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Kentucky {sportLabel} Rank</p>
+            <p className="text-4xl font-black" style={{ color: colors.primary }}>#{ukRank} <span className="text-sm font-normal text-gray-500">of {filtered.length}</span></p>
+            <p className="text-xs text-gray-400 mt-1">{scopeLabel} · {sportLabel} · by followers</p>
+          </GlassCard>
+          <GlassCard className="p-5">
+            <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Followers</p>
+            <p className="text-4xl font-black text-gray-900">{formatNumber(filtered[ukIndex]?.followers || 0)}</p>
+            <p className="text-xs text-gray-400 mt-1">{formatNumber(filtered[ukIndex]?.posts || 0)} posts (30 days)</p>
+          </GlassCard>
+          <GlassCard className="p-5">
+            <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">30-Day Likes</p>
+            <p className="text-4xl font-black text-gray-900">{formatNumber(filtered[ukIndex]?.likes || 0)}</p>
+            <p className="text-xs text-gray-400 mt-1">{filtered[ukIndex]?.posts ? Math.round((filtered[ukIndex]?.likes || 0) / filtered[ukIndex].posts).toLocaleString() : 0} avg per post</p>
+          </GlassCard>
+        </div>
+      )}
+
+      {/* Rankings Table */}
+      <div className="rounded-2xl bg-white overflow-hidden max-h-[500px] overflow-y-auto shadow-sm">
+        <table className="w-full">
+          <thead className="sticky top-0 z-10">
+            <tr style={{ backgroundColor: colors.primary }}>
+              <th className="text-center px-3 py-3.5 text-xs font-semibold uppercase tracking-wider text-white w-10">#</th>
+              <th className="text-left px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white">School</th>
+              {!isConference && <th className="text-left px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Conf</th>}
+              <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white cursor-pointer select-none hover:text-white/80" onClick={() => setSortMetric('followers')}>Followers {sortMetric === 'followers' ? '\u25BC' : ''}</th>
+              <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer select-none hover:text-white/80" onClick={() => setSortMetric('posts')}>Posts {sortMetric === 'posts' ? '\u25BC' : ''}</th>
+              <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer select-none hover:text-white/80" onClick={() => setSortMetric('likes')}>Likes {sortMetric === 'likes' ? '\u25BC' : ''}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filtered.map((school, idx) => {
+              const isUK = school.name === 'Kentucky';
+              return (
+                <tr
+                  key={school.name}
+                  className={`border-b border-gray-100 transition-colors ${isUK ? 'bg-blue-50 hover:bg-blue-100/50' : idx % 2 === 1 ? 'bg-gray-50/50 hover:bg-gray-50' : 'hover:bg-gray-50'}`}
+                >
+                  <td className="px-3 py-3 text-center">
+                    {idx < 3 ? (
+                      <span className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold mx-auto" style={{ backgroundColor: isUK ? colors.primary : '#d1d5db', color: isUK ? '#fff' : colors.text }}>
+                        {idx + 1}
+                      </span>
+                    ) : isUK ? (
+                      <span className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold mx-auto" style={{ backgroundColor: colors.primary, color: '#fff' }}>
+                        {idx + 1}
+                      </span>
+                    ) : (
+                      <span className="text-sm text-gray-400 font-medium">{idx + 1}</span>
+                    )}
+                  </td>
+                  <td className={`px-4 py-3 ${isUK ? 'font-bold' : 'font-semibold'}`} style={{ color: isUK ? colors.primary : colors.text }}>
+                    <div className="flex items-center gap-2">
+                      {isUK && <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: colors.primary }} />}
+                      {school.name}
+                    </div>
+                  </td>
+                  {!isConference && <td className="px-4 py-3 text-xs text-gray-500 hidden md:table-cell">{school.conf}</td>}
+                  <td className="px-4 py-3 text-right font-semibold" style={{ color: isUK ? colors.primary : colors.text }}>{formatNumber(school.followers)}</td>
+                  <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{formatNumber(school.posts)}</td>
+                  <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{formatNumber(school.likes)}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
@@ -2876,7 +3054,7 @@ export function KentuckyIPImpact({ onBack }: { onBack?: () => void }) {
                   style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }}
                 >
                   <span style={{ color: colors.primary }}>Kentucky </span>
-                  <span className="hidden sm:inline" style={{ color: colors.headerGray }}>Wildcats IP Impact Report</span>
+                  <span className="hidden sm:inline"><span style={{ color: colors.primary }}>Wildcats </span><span style={{ color: colors.headerGray }}>IP Impact Report</span></span>
                   <span className="sm:hidden" style={{ color: colors.headerGray }}>IP Impact</span>
                 </h1>
                 <p className="text-[10px] uppercase tracking-[0.2em] text-gray-400 mt-0.5">
