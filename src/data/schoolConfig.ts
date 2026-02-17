@@ -568,6 +568,20 @@ export const PLAYFLY: SchoolConfig = {
   logoUrl: '/playfly-logo.jpg'
 };
 
+export const SAINT_JUDE: SchoolConfig = {
+  id: 'saint-jude',
+  name: "St. Jude Children's Research Hospital",
+  shortName: 'St. Jude',
+  mascot: 'Hospital',
+  primaryColor: '#C8102E', // St. Jude Red
+  secondaryColor: '#FFFFFF', // White
+  accentColor: '#A50F2D', // Dark Red
+  conference: 'Healthcare',
+  location: 'Memphis, TN',
+  dataName: 'Saint Jude Hospital',
+  logoUrl: '/st-jude-logo.svg'
+};
+
 // Partner schools for Playfly - All 36 schools with name variations for matching
 export const PLAYFLY_PARTNER_SCHOOLS = [
   // SEC
@@ -671,6 +685,7 @@ export const SCHOOLS: Record<string, SchoolConfig> = {
   'robert-morris': ROBERT_MORRIS,
   // Agencies
   'playfly': PLAYFLY,
+  'saint-jude': SAINT_JUDE,
 };
 
 // Get school by ID
@@ -757,5 +772,6 @@ export const SCHOOLS_BY_CONFERENCE: Record<string, SchoolConfig[]> = {
   'Mountain West': [BOISE_STATE],
   'West Coast': [SAN_DIEGO],
   'Big East': [DEPAUL],
+  'Healthcare': [SAINT_JUDE],
   'Other': [ROBERT_MORRIS],
 };

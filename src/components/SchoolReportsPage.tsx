@@ -8,12 +8,13 @@ import { BaylorReportHub } from './BaylorReportHub';
 import { KentuckyIPImpact } from './KentuckyIPImpact';
 import { OhioStateIPImpact } from './OhioStateIPImpact';
 import { UCLABrandDeals } from './UCLABrandDeals';
+import { StJudeAthleteEventImpactReport } from './StJudeAthleteEventImpactReport';
 
 export function SchoolReportsPage() {
   const [selectedSchool, setSelectedSchool] = useState<SchoolConfig | null>(null);
 
-  // Show Playfly, Auburn, Baylor, Kentucky, Ohio State, and UCLA
-  const allSchools = [SCHOOLS['playfly'], SCHOOLS['auburn'], SCHOOLS['baylor'], SCHOOLS['kentucky'], SCHOOLS['ohio-state'], SCHOOLS['ucla']].filter(Boolean);
+  // Show Playfly, Auburn, Baylor, Kentucky, Ohio State, UCLA, and St. Jude
+  const allSchools = [SCHOOLS['playfly'], SCHOOLS['auburn'], SCHOOLS['baylor'], SCHOOLS['kentucky'], SCHOOLS['ohio-state'], SCHOOLS['ucla'], SCHOOLS['saint-jude']].filter(Boolean);
 
   // If a school is selected, show the appropriate view
   if (selectedSchool) {
@@ -53,6 +54,12 @@ export function SchoolReportsPage() {
     if (selectedSchool.id === 'ucla') {
       return (
         <UCLABrandDeals onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    // If St. Jude is selected, show the brand impact report
+    if (selectedSchool.id === 'saint-jude') {
+      return (
+        <StJudeAthleteEventImpactReport onBack={() => setSelectedSchool(null)} />
       );
     }
     // Otherwise show regular school report view
