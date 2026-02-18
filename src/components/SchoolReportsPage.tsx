@@ -3,18 +3,19 @@ import { FileText } from 'lucide-react';
 import { SCHOOLS, SchoolConfig } from '../data/schoolConfig';
 import { SchoolReportView } from './SchoolReportView';
 import { PlayflyReportHub } from './PlayflyReportHub';
-import { AuburnCampaignOverview } from './AuburnCampaignOverview';
 import { BaylorReportHub } from './BaylorReportHub';
 import { KentuckyIPImpact } from './KentuckyIPImpact';
 import { OhioStateIPImpact } from './OhioStateIPImpact';
+import { GeorgiaIPImpact } from './GeorgiaIPImpact';
+import { MichiganIPImpact } from './MichiganIPImpact';
 import { UCLABrandDeals } from './UCLABrandDeals';
 import { StJudeAthleteEventImpactReport } from './StJudeAthleteEventImpactReport';
 
 export function SchoolReportsPage() {
   const [selectedSchool, setSelectedSchool] = useState<SchoolConfig | null>(null);
 
-  // Show Playfly, Auburn, Baylor, Kentucky, Ohio State, UCLA, and St. Jude
-  const allSchools = [SCHOOLS['playfly'], SCHOOLS['auburn'], SCHOOLS['baylor'], SCHOOLS['kentucky'], SCHOOLS['ohio-state'], SCHOOLS['ucla'], SCHOOLS['saint-jude']].filter(Boolean);
+  // Show Playfly, Baylor, Kentucky, Ohio State, UCLA, and St. Jude
+  const allSchools = [SCHOOLS['playfly'], SCHOOLS['baylor'], SCHOOLS['georgia'], SCHOOLS['kentucky'], SCHOOLS['michigan'], SCHOOLS['ohio-state'], SCHOOLS['ucla'], SCHOOLS['saint-jude']].filter(Boolean);
 
   // If a school is selected, show the appropriate view
   if (selectedSchool) {
@@ -24,12 +25,6 @@ export function SchoolReportsPage() {
         <PlayflyReportHub
           onBack={() => setSelectedSchool(null)}
         />
-      );
-    }
-    // If Auburn is selected, go directly to Campaign Overview
-    if (selectedSchool.id === 'auburn') {
-      return (
-        <AuburnCampaignOverview onBack={() => setSelectedSchool(null)} />
       );
     }
     // If Ohio State is selected, show IP Impact report
@@ -42,6 +37,18 @@ export function SchoolReportsPage() {
     if (selectedSchool.id === 'baylor') {
       return (
         <BaylorReportHub onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    // If Georgia is selected, show IP Impact report
+    if (selectedSchool.id === 'georgia') {
+      return (
+        <GeorgiaIPImpact onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    // If Michigan is selected, show IP Impact report
+    if (selectedSchool.id === 'michigan') {
+      return (
+        <MichiganIPImpact onBack={() => setSelectedSchool(null)} />
       );
     }
     // If Kentucky is selected, show IP Impact report

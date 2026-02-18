@@ -4,7 +4,6 @@ import { DrawerPanel, GlassCard, GlassPill } from './playfly/PlayflyUI';
 
 // Standardized display names - ensures consistent formatting across the UI
 const SCHOOL_DISPLAY_NAMES: Record<string, string> = {
-  'Auburn University': 'Auburn University',
   'Baylor': 'Baylor University',
   'Louisiana State University': 'Louisiana State University (LSU)',
   'Michigan State': 'Michigan State University',
@@ -82,7 +81,6 @@ export function RankingsTab({
   const [leaderboardView, setLeaderboardView] = useState<'cards' | 'table'>('cards');
   const [showChart, setShowChart] = useState(false);
   const [selectedSchoolId, setSelectedSchoolId] = useState<string | null>(null);
-  const [quadrantFilter, setQuadrantFilter] = useState<'all' | 'champions' | 'underutilized' | 'high-adoption-low-lift' | 'needs-strategy'>('all');
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [hoveredSchoolId, setHoveredSchoolId] = useState<string | null>(null);
   const rowRefs = useRef<Record<string, HTMLTableRowElement | null>>({});
@@ -100,7 +98,7 @@ export function RankingsTab({
   };
 
   // Max schools
-  const maxSchools = ['Michigan State', 'University of Maryland', 'Auburn University', 'Texas A&M', 'Louisiana State University', 'Penn State University'];
+  const maxSchools = ['Michigan State', 'University of Maryland', 'Texas A&M', 'Louisiana State University', 'Penn State University'];
 
   // Get school initials
   const getInitials = (name: string) => {
@@ -183,49 +181,8 @@ export function RankingsTab({
     return { min: min - pad, max: max + pad };
   }, [filteredRankings]);
 
-  const getQuadrant = (rank: typeof rankings[number]) => {
-    const highAdoption = rank.ipAdoption >= adoptionMedian;
-    const highLift = rank.ipLift >= liftMedian;
-    if (highLift && highAdoption) return 'champions';
-    if (highLift && !highAdoption) return 'underutilized';
-    if (!highLift && highAdoption) return 'high-adoption-low-lift';
-    return 'needs-strategy';
-  };
-
-  const quadrantLabel: Record<string, string> = {
-    'champions': 'Champions',
-    'underutilized': 'Underutilized',
-    'high-adoption-low-lift': 'High Adoption, Low Lift',
-    'needs-strategy': 'Needs Strategy'
-  };
-
-  const quadrantCounts = useMemo(() => {
-    const counts = {
-      champions: 0,
-      underutilized: 0,
-      'high-adoption-low-lift': 0,
-      'needs-strategy': 0
-    };
-    filteredRankings.forEach(r => {
-      const key = getQuadrant(r) as keyof typeof counts;
-      counts[key] += 1;
-    });
-    return counts;
-  }, [filteredRankings, adoptionMedian, liftMedian]);
-
-  const topOpportunities = useMemo(() => {
-    return [...filteredRankings]
-      .filter(r => r.ipAdoption < adoptionMedian)
-      .sort((a, b) => b.ipLift - a.ipLift)
-      .slice(0, 3);
-  }, [filteredRankings, adoptionMedian]);
-
-  const quadrantFiltered = quadrantFilter === 'all'
-    ? filteredRankings
-    : filteredRankings.filter(r => getQuadrant(r) === quadrantFilter);
-
   // Sort data
-  const sortedRankings = [...quadrantFiltered].sort((a, b) => {
+  const sortedRankings = [...filteredRankings].sort((a, b) => {
     let aVal = 0;
     let bVal = 0;
 
@@ -354,9 +311,6 @@ export function RankingsTab({
                   <div className="font-semibold text-gray-900">{rank.displayName}</div>
                   <div className="text-xs text-gray-500">#{index + 1}</div>
                 </div>
-                <div className="mt-2">
-                  <span className="metric-badge">{quadrantLabel[getQuadrant(rank)]}</span>
-                </div>
                 <div className="grid grid-cols-2 gap-3 mt-4 text-xs text-gray-600">
                   <div>IP Lift</div>
                   <div className={`text-right font-semibold ${rank.ipLift > 0 ? 'text-green-600' : rank.ipLift < 0 ? 'text-red-600' : 'text-gray-600'}`}>
@@ -465,9 +419,6 @@ export function RankingsTab({
                           <div className="flex items-center gap-2 min-w-0">
                             <span className="text-gray-900 font-semibold truncate">{rank.displayName}</span>
                           </div>
-                          <div className="text-[11px] text-gray-500 truncate">
-                            {quadrantLabel[getQuadrant(rank)]}
-                          </div>
                         </div>
                       </div>
                     </td>
@@ -511,13 +462,6 @@ export function RankingsTab({
               <span>highlighted</span>
             </div>
           </div>
-          <div className="mb-3 flex gap-2 flex-wrap">
-            <GlassPill className="pf-chip-compact" active={quadrantFilter === 'all'} onClick={() => setQuadrantFilter('all')}>All</GlassPill>
-            <GlassPill className="pf-chip-compact" active={quadrantFilter === 'champions'} onClick={() => setQuadrantFilter('champions')}>Champions</GlassPill>
-            <GlassPill className="pf-chip-compact" active={quadrantFilter === 'underutilized'} onClick={() => setQuadrantFilter('underutilized')}>Underutilized</GlassPill>
-            <GlassPill className="pf-chip-compact" active={quadrantFilter === 'high-adoption-low-lift'} onClick={() => setQuadrantFilter('high-adoption-low-lift')}>High Adoption, Low Lift</GlassPill>
-            <GlassPill className="pf-chip-compact" active={quadrantFilter === 'needs-strategy'} onClick={() => setQuadrantFilter('needs-strategy')}>Needs Strategy</GlassPill>
-          </div>
           <div className="w-full h-[340px] lg:h-[460px] min-h-[340px] lg:min-h-[420px]">
             <svg viewBox="0 0 560 400" className="w-full h-full">
               {(() => {
@@ -539,13 +483,13 @@ export function RankingsTab({
 
                     <line x1={medianX} y1={top} x2={medianX} y2={top + height} stroke="#64748b" strokeDasharray="6 6" />
                     <line x1={left} y1={medianY} x2={left + width} y2={medianY} stroke="#64748b" strokeDasharray="6 6" />
+                    {/* X-axis label */}
+                    <text x={left + width / 2} y={top + height + 18} fontSize="12" fill="#374151" textAnchor="middle" fontWeight="600">IP Adoption %</text>
+                    {/* Y-axis label */}
+                    <text x={left - 14} y={top + height / 2} fontSize="12" fill="#374151" textAnchor="middle" fontWeight="600" transform={`rotate(-90, ${left - 14}, ${top + height / 2})`}>IP Lift %</text>
+
                     <text x={medianX + 6} y={top + 12} fontSize="11" fill="#475569">Network median adoption</text>
                     <text x={left + 6} y={medianY - 6} fontSize="11" fill="#475569">Network median lift</text>
-
-                    <text x={left + 8} y={top + 16} fontSize="11" fill="#475569">Underutilized</text>
-                    <text x={left + width - 96} y={top + 16} fontSize="11" fill="#475569">Champions</text>
-                    <text x={left + 8} y={top + height - 6} fontSize="11" fill="#475569">Needs Strategy</text>
-                    <text x={left + width - 160} y={top + height - 6} fontSize="11" fill="#475569">High Adoption, Low Lift</text>
 
                     {scatterData.map((point, idx) => {
                       const x = xScale(point.x) + jitter(point.id, 'x');
@@ -615,25 +559,6 @@ export function RankingsTab({
           )}
           <div className="text-xs text-gray-500 mt-2">Dashed lines show network medians for lift and adoption.</div>
 
-          {/* Quadrant Summary */}
-          <div className="mt-4 border-t border-gray-200 pt-3">
-            <div className="text-sm font-semibold text-gray-700 mb-2">Quadrant Summary</div>
-            <div className="grid grid-cols-2 gap-2 text-sm text-gray-700">
-              <div>Champions: <span className="font-semibold">{quadrantCounts.champions}</span></div>
-              <div>Underutilized: <span className="font-semibold">{quadrantCounts.underutilized}</span></div>
-              <div>High Adoption, Low Lift: <span className="font-semibold">{quadrantCounts['high-adoption-low-lift']}</span></div>
-              <div>Needs Strategy: <span className="font-semibold">{quadrantCounts['needs-strategy']}</span></div>
-            </div>
-            <div className="mt-3 text-sm font-semibold text-gray-700">Top Opportunities</div>
-            <div className="mt-2 space-y-2 text-sm text-gray-600">
-              {topOpportunities.map((school) => (
-                <div key={school.schoolId} className="flex items-center justify-between">
-                  <span className="truncate">{school.displayName}</span>
-                  <span className="font-semibold text-green-600">{school.ipLift.toFixed(1)}% lift</span>
-                </div>
-              ))}
-            </div>
-          </div>
         </GlassCard>
       </div>
 
@@ -676,7 +601,7 @@ export function RankingsTab({
                 </div>
               </div>
               <div className="text-xs text-gray-500">
-                {quadrantLabel[getQuadrant(rank)]} • {rank.ipAdoption.toFixed(1)}% adoption
+                {rank.ipAdoption.toFixed(1)}% adoption
               </div>
             </div>
           </GlassCard>
@@ -712,13 +637,9 @@ export function RankingsTab({
               <span className="font-semibold text-gray-900">{formatNumber(selectedRank.totalInteractions)}</span>
             </div>
             <div className="text-gray-600">
-              {selectedRank.ipLift >= liftMedian && selectedRank.ipAdoption < adoptionMedian
-                ? 'High lift but below‑median adoption — scaling IP usage could increase EMV.'
-                : selectedRank.ipLift >= liftMedian && selectedRank.ipAdoption >= adoptionMedian
-                ? 'High lift with strong adoption — maintain momentum.'
-                : selectedRank.ipLift < liftMedian && selectedRank.ipAdoption >= adoptionMedian
-                ? 'High adoption but lower lift — refine IP strategy.'
-                : 'Low lift and low adoption — needs strategy reset.'}
+              IP Lift: {selectedRank.ipLift >= liftMedian ? 'Above' : 'Below'} network median
+              {' • '}
+              Adoption: {selectedRank.ipAdoption >= adoptionMedian ? 'Above' : 'Below'} network median
             </div>
           </div>
         )}

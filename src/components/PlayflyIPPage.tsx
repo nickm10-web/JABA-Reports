@@ -224,7 +224,6 @@ type TabType = 'overview' | 'with-vs-without' | 'partnerships' | 'athletes' | 'r
 // Official Playfly partner schools included in this report scope (USC excluded)
 const SCHOOL_FILE_MAP: Record<string, string> = {
   // Playfly Max schools
-  'Auburn University': 'auburn-university',
   'Baylor': 'baylor',
   'Louisiana State University': 'louisiana-state-university',
   'Michigan State': 'michigan-state',
@@ -243,18 +242,11 @@ const SCHOOL_FILE_MAP: Record<string, string> = {
   // Not in data yet: Oral Roberts, University of Denver, San Jose State
 };
 
-// Use corrected IP files where the base file has zeroed lift fields.
-const SCHOOL_IP_FILE_OVERRIDES: Record<string, string> = {
-  'michigan-state': 'michigan-state-ip-impact (2).json',
-  'university-of-maryland': 'university-of-maryland-ip-impact (2).json',
-  'university-of-new-mexico': 'university-of-new-mexico-ip-impact (2).json',
-  'wichita-state-university': 'wichita-state-university-ip-impact (2).json',
-  'george-mason': 'george-mason-ip-impact (1).json',
-};
+// All base IP files regenerated from last_ip_data_contents.json — no overrides needed.
+const SCHOOL_IP_FILE_OVERRIDES: Record<string, string> = {};
 
 // Standardized display names - ensures consistent formatting across the UI
 const SCHOOL_DISPLAY_NAMES: Record<string, string> = {
-  'Auburn University': 'Auburn University',
   'Baylor': 'Baylor University',
   'George Mason': 'George Mason University',
   'Louisiana State University': 'Louisiana State University (LSU)',
@@ -682,7 +674,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
             {/* Baseline Metrics Table - Only show in network view */}
             {selectedSchool === 'all' && (() => {
               // Max schools
-              const maxSchools = ['Michigan State', 'Auburn University', 'Texas A&M', 'Louisiana State University', 'Penn State University'];
+              const maxSchools = ['Michigan State', 'Texas A&M', 'Louisiana State University', 'Penn State University'];
 
               // Calculate baseline metrics for each school (IP posts only)
               const unsortedBaseline = schoolsData.map((school) => {
@@ -1293,7 +1285,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     const impactValues = schoolsWithImpact.map(s => s.totalIPEngagement);
 
                     // Max schools (schools with premium tier)
-                    const maxSchools = ['Michigan State', 'Auburn University', 'Texas A&M', 'Louisiana State University', 'Penn State University'];
+                    const maxSchools = ['Michigan State', 'Texas A&M', 'Louisiana State University', 'Penn State University'];
 
                     return sortedSchools.map(({ school, totalIPEngagement }) => {
                       // Define IP types in FIXED order: Collaboration, Visual IP, Mention

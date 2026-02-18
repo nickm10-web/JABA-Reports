@@ -271,6 +271,20 @@ export const UCLA: SchoolConfig = {
   logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/26.png'
 };
 
+export const MICHIGAN: SchoolConfig = {
+  id: 'michigan',
+  name: 'University of Michigan',
+  shortName: 'Michigan',
+  mascot: 'Wolverines',
+  primaryColor: '#00274C', // Michigan Blue
+  secondaryColor: '#FFCB05', // Maize
+  accentColor: '#1a4a70', // Medium Blue
+  conference: 'Big Ten',
+  location: 'Ann Arbor, MI',
+  dataName: 'Michigan',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/130.png'
+};
+
 export const MICHIGAN_STATE: SchoolConfig = {
   id: 'michigan-state',
   name: 'Michigan State University',
@@ -585,7 +599,6 @@ export const SAINT_JUDE: SchoolConfig = {
 // Partner schools for Playfly - All 36 schools with name variations for matching
 export const PLAYFLY_PARTNER_SCHOOLS = [
   // SEC
-  'Auburn University', 'Auburn',
   'Louisiana State University', 'LSU',
   'Texas A&M',
   'The University of Alabama', 'Alabama',
@@ -649,6 +662,7 @@ export const SCHOOLS: Record<string, SchoolConfig> = {
   'lsu': LSU,
   'texas-am': TEXAS_AM,
   // Big Ten
+  'michigan': MICHIGAN,
   'ohio-state': OHIO_STATE,
   'penn-state': PENN_STATE,
   'purdue': PURDUE,
@@ -766,7 +780,7 @@ export const getSchoolTextColor = (school: SchoolConfig, variant: 'primary' | 's
 // Group schools by conference for display
 export const SCHOOLS_BY_CONFERENCE: Record<string, SchoolConfig[]> = {
   'SEC': [AUBURN, ALABAMA, FLORIDA, GEORGIA, KENTUCKY, TENNESSEE, TEXAS, MIZZOU, OKLAHOMA],
-  'Big Ten': [OHIO_STATE, PENN_STATE, PURDUE, WISCONSIN, MINNESOTA, USC, UCLA, MICHIGAN_STATE],
+  'Big Ten': [MICHIGAN, OHIO_STATE, PENN_STATE, PURDUE, WISCONSIN, MINNESOTA, USC, UCLA, MICHIGAN_STATE],
   'ACC': [CLEMSON, VIRGINIA, NC_STATE, UNC, PITT, NOTRE_DAME, SMU],
   'Big 12': [BAYLOR, ARIZONA, ARIZONA_STATE, CINCINNATI, UCF],
   'Mountain West': [BOISE_STATE],
