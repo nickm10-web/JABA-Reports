@@ -3539,7 +3539,7 @@ function TeamPageLeaderboard() {
     let cancelled = false;
     const load = async () => {
       try {
-        for (const path of ['/data/ip-roster-teams.json', '/data/roster_teams.json']) {
+        for (const path of ['/data/roster_teams.json', '/data/ip-roster-teams.json']) {
           const res = await fetch(path);
           if (!res.ok) continue;
           const rows = (await res.json()) as TeamRosterRow[];
