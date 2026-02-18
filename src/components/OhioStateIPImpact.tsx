@@ -928,25 +928,25 @@ function OverviewTab({ overviewData }: { overviewData?: OverviewData | null }) {
             label="Total Followers"
             value={formatNumber(ipData.totalFollowers)}
             icon={<Users className="w-8 h-8 text-white" />}
-            subtitle="Combined athlete audience"
+            subtitle="Combined athlete Instagram audience"
           />
           <KPIChip
             label="Total Interactions"
             value={formatNumber(totalInteractions)}
             icon={<Heart className="w-8 h-8 text-white" />}
-            subtitle="Likes + Comments"
+            subtitle="Likes + comments across all athlete posts"
           />
           <KPIChip
             label="Posts with IP"
             value={formatNumber(overview.postsWithIP)}
             icon={<FileText className="w-8 h-8 text-white" />}
-            subtitle={`Out of ${formatNumber(overview.totalPosts)} posts`}
+            subtitle={`Out of ${formatNumber(overview.totalPosts)} athlete posts`}
           />
           <KPIChip
             label="Total EMV"
             value={formatCurrency(overview.totalEmv)}
             icon={<DollarSign className="w-8 h-8 text-white" />}
-            subtitle="Estimated earned media value"
+            subtitle="Estimated earned media value from IP posts"
           />
         </div>
       </div>
@@ -1062,11 +1062,12 @@ function OverviewTab({ overviewData }: { overviewData?: OverviewData | null }) {
         <div>
           <p className="text-sm font-semibold text-gray-800 mb-1">Data Source Context</p>
           <p className="text-sm text-gray-600">
-            Data reflects <span className="font-semibold">Ohio State athlete personal social media accounts</span>, including collaboration posts with official team pages.
-            Metrics track how athletes use Ohio State IP (logos, mentions, collaborations) in their content.
-            EMV calculated as: (Total Likes x $0.50) + (Total Comments x $1.50). Analysis covers{' '}
-            <span className="font-semibold">{formatNumber(overview.totalPosts)} posts</span> from{' '}
-            <span className="font-semibold">{formatNumber(ipData.totalFollowers)} combined followers</span>.
+            Data reflects <span className="font-semibold">Ohio State athlete personal Instagram accounts</span>, including collaboration posts with official team pages.
+            Metrics track how athletes use Ohio State IP (logos, mentions, collaborations) across their content history.
+            Analysis covers{' '}
+            <span className="font-semibold">{formatNumber(overview.totalPosts)} all-time athlete posts</span> from{' '}
+            <span className="font-semibold">{formatNumber(ipData.totalFollowers)} combined followers</span>.{' '}
+            Data snapshot: February 17, 2025.
           </p>
         </div>
       </div>
@@ -1376,7 +1377,7 @@ function WithVsWithoutTab({
         <div className="p-5 border-b border-gray-100">
           <SectionHeader primary="DETAILED " secondary="COMPARISON" />
           <p className="text-sm text-gray-500 mt-2">
-            Complete performance breakdown with and without {currentSignal?.label}
+            Avg engagement with vs. without {currentSignal?.label}, across all {formatNumber(overviewData?.totalPosts ?? 0)} athlete posts
           </p>
         </div>
         <div className="overflow-x-auto">
@@ -1680,6 +1681,15 @@ function PartnershipsTab() {
 
   return (
     <div className="space-y-6">
+      {/* Tab header */}
+      <div>
+        <SectionHeader primary="SPONSORED " secondary="POSTS" />
+        <p className="text-sm text-gray-500 mt-2">
+          Brand sponsors identified from #ad or paid partnership disclosures in athlete post captions, across all athlete posts.
+          <span className="ml-1 text-gray-400">Eng Lift = avg engagement of sponsored posts vs. the athlete's non-sponsored baseline.</span>
+        </p>
+      </div>
+
       {/* Sort Options */}
       <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
         <div>
@@ -1824,7 +1834,10 @@ function PartnershipsTab() {
       {/* Full Table Section */}
       <div>
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
-          <SectionHeader primary="ALL " secondary="PARTNERSHIPS" />
+          <div>
+            <SectionHeader primary="ALL " secondary="PARTNERSHIPS" />
+            <p className="text-sm text-gray-500 mt-1">All brands with disclosed sponsorships in athlete posts, sorted by {(sortOptions as Array<{key: string; label: string}>).find(o => o.key === sortKey)?.label.toLowerCase() ?? 'engagement lift'}.</p>
+          </div>
           <div className="relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
             <input
@@ -2309,16 +2322,16 @@ function BestCollaboratorsTab() {
         <Info className="w-5 h-5 text-gray-400 mt-0.5 flex-shrink-0" />
         <div className="text-sm text-gray-600 space-y-1">
           <p>
-            <span className="font-semibold">Methodology:</span> Top 5 athletes for each IP signal type, ranked by total EMV.
+            <span className="font-semibold">Methodology:</span> Top 5 athletes per IP signal type, ranked by total EMV across all athlete posts.
           </p>
           <p>
-            Lift represents engagement increase vs posts without any IP signals.
-            EMV formula: (Total Likes x $0.50) + (Total Comments x $1.50).
+            Lift = engagement rate of IP posts vs. the same athlete's non-IP posts.
+            EMV formula: (Total Likes × $0.50) + (Total Comments × $1.50).
           </p>
           <p className="text-xs text-gray-400">
-            Signal types: <span className="font-medium">Collaboration</span> = co-authored posts,
-            <span className="font-medium"> Visual IP</span> = logo in media,
-            <span className="font-medium"> Mention</span> = @reference in caption.
+            Signal types: <span className="font-medium">Collaboration</span> = co-authored post with official account,
+            <span className="font-medium"> Visual IP</span> = Ohio State logo detected in media,
+            <span className="font-medium"> Mention</span> = @OhioState or school reference in caption.
           </p>
         </div>
       </div>
@@ -2874,7 +2887,10 @@ function ContentTab() {
 
   return (
     <div className="space-y-6">
-      <SectionHeader primary="CONTENT " secondary="PERFORMANCE" />
+      <div>
+        <SectionHeader primary="CONTENT " secondary="PERFORMANCE" />
+        <p className="text-sm text-gray-500 mt-2">Top athlete and team page posts from all posts analyzed. Engagement lift is measured against the school-wide median post.</p>
+      </div>
 
       <div className="flex items-center gap-2">
         <span className="text-xs uppercase tracking-wider text-gray-500 font-semibold mr-1">Content Type</span>
@@ -2941,7 +2957,7 @@ function ContentTab() {
                           <p className="font-semibold" style={{ color: colors.text }}>{formatPercent(item.post.engagementRate)}</p>
                         </div>
                         <div>
-                          <p className="text-gray-400 uppercase tracking-wider">Lift vs Median</p>
+                          <p className="text-gray-400 uppercase tracking-wider">Lift vs School Median</p>
                           <p className="font-semibold" style={{ color: item.post.lift >= 0 ? colors.positive : colors.negative }}>
                             {formatDelta(item.post.lift)}
                           </p>
@@ -3308,11 +3324,13 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
         <div>
           <SectionHeader primary="OHIO STATE " secondary="TEAM PAGES" />
           <p className="text-sm mt-2" style={{ color: colors.textMuted }}>
-            {view === 'overview' ? 'Official Ohio State athletics social account performance.' : 'Benchmark Ohio State team pages against conference and NCAA.'}
+            {view === 'overview'
+            ? 'Official Ohio State team page follower counts and engagement. Followers reflect current account size; likes and engagement rate are based on a recent post sample.'
+            : 'Benchmark Ohio State team pages against conference and NCAA schools. Follower counts are live; engagement metrics are sampled from recent posts.'}
           </p>
           {view === 'overview' && (
             <p className="text-xs mt-1" style={{ color: colors.textDim }}>
-              Current feed data is a recent-post sample (up to {formatNumber(maxTrackedPosts)} posts per team in this dataset).
+              Engagement rate and total likes are calculated from the most recent ~{formatNumber(maxTrackedPosts)} posts captured per team.
             </p>
           )}
         </div>
@@ -3444,7 +3462,7 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
       <div className="rounded-xl border overflow-hidden bg-white" style={{ borderColor: 'rgba(0,0,0,0.08)' }}>
         <div className="px-4 pt-4 pb-2 border-b border-gray-100">
           <p className="text-xs" style={{ color: colors.textMuted }}>
-            Sample data: likes, engagement rate, and total posts are based on a recent post sample (about last 12 posts per team).
+            Follower counts reflect current account size. Likes, engagement rate, and post count are based on a recent post sample (~last 12 posts per team). Not all team pages are included for every school.
           </p>
         </div>
         <div className="overflow-x-auto">
