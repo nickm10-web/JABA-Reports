@@ -363,7 +363,6 @@ const ipData = {
     { brand: "@drinkdripdrop", posts: 2, avgLikes: 2460.5, avgComments: 73, emv: 2678, engagementRate: 0.0703, liftMultiplier: 0.5 },
     { brand: "@ballislife", posts: 3, avgLikes: 1609.33, avgComments: 16, emv: 2487.5, engagementRate: 0.528, liftMultiplier: 0.0 },
     { brand: "@tecovas", posts: 1, avgLikes: 4082, avgComments: 68, emv: 2143, engagementRate: 0.1185, liftMultiplier: 1.5 },
-    { brand: "@VisitFresnoCounty", posts: 1, avgLikes: 4159, avgComments: 32, emv: 2127.5, engagementRate: 0.8088, liftMultiplier: 1.5 },
     { brand: "@pxg", posts: 1, avgLikes: 3852, avgComments: 53, emv: 2005.5, engagementRate: 0.0351, liftMultiplier: 1.3 },
     { brand: "@kinatraxinc", posts: 2, avgLikes: 1867.5, avgComments: 6, emv: 1885.5, engagementRate: 0.0927, liftMultiplier: 0.1 },
     { brand: "@activem_japan", posts: 3, avgLikes: 1175.67, avgComments: 5, emv: 1787.5, engagementRate: 0.0437, liftMultiplier: -0.3 },
