@@ -21,6 +21,12 @@ import {
 } from 'lucide-react';
 
 // ═══════════════════════════════════════════════════════════════
+// SCHOOL NAME RENDERER — rivalry treatment for That School Up North
+// ═══════════════════════════════════════════════════════════════
+const renderSchoolName = (name: string) =>
+  name === 'Michigan' ? <>❌ichigan</> : <>{name}</>;
+
+// ═══════════════════════════════════════════════════════════════
 // THEME TOKENS
 // ═══════════════════════════════════════════════════════════════
 const colors = {
@@ -303,11 +309,11 @@ const ipData = {
   baseline: { posts: 6461, engagementRate: 0.1501 },
   postsWithIP: 5923,
   ipAdoptionRate: 47.8,
-  avgLift: 217.7,
+  avgLift: 283.7,
   totalEmv: 12886314,
-  collaboration: { posts: 195, likes: 12935.5, comments: 112.73, engagementRate: 0.6456, delta: 631.7, emv: 1294184, baselineEngRate: 0.3491, baselinePosts: 12189, baselineLikes: 1767.82, baselineComments: 44.75 } as IPSignalData,
-  logo: { posts: 5245, likes: 3144.56, comments: 57.43, engagementRate: 0.5685, delta: 196.3, emv: 8698443, baselineEngRate: 0.1961, baselinePosts: 7139, baselineLikes: 1061.38, baselineComments: 37.29 } as IPSignalData,
-  mention: { posts: 2506, likes: 2546.85, comments: 43.43, engagementRate: 0.8783, delta: 42.2, emv: 3354479, baselineEngRate: 0.2208, baselinePosts: 9878, baselineLikes: 1790.65, baselineComments: 46.42 } as IPSignalData,
+  collaboration: { posts: 195, likes: 12935.5, comments: 112.73, engagementRate: 0.6456, delta: 84.9, emv: 1294184, baselineEngRate: 0.3491, baselinePosts: 12189, baselineLikes: 1767.82, baselineComments: 44.75 } as IPSignalData,
+  logo: { posts: 5245, likes: 3144.56, comments: 57.43, engagementRate: 0.5685, delta: 190, emv: 8698443, baselineEngRate: 0.1961, baselinePosts: 7139, baselineLikes: 1061.38, baselineComments: 37.29 } as IPSignalData,
+  mention: { posts: 2506, likes: 2546.85, comments: 43.43, engagementRate: 0.8783, delta: 297.8, emv: 3354479, baselineEngRate: 0.2208, baselinePosts: 9878, baselineLikes: 1790.65, baselineComments: 46.42 } as IPSignalData,
   signals: [
     {
       id: 'logo' as const,
@@ -334,106 +340,100 @@ const ipData = {
       without: { posts: 12189, avgLikes: 1768, avgComments: 45, engagementRate: 0.3491 },
     },
   ],
-  sponsoredPosts: 883,
-  totalBrands: 100,
+  sponsoredPosts: 1023,
+  totalBrands: 430,
   totalEMV: 12886314,
   partnerships: [
     { brand: "@redbullusa", posts: 2, avgLikes: 233021.5, avgComments: 647, emv: 234962.5, engagementRate: 0.3079, liftMultiplier: 118.9 },
-    { brand: "@accessthewalk", posts: 3, avgLikes: 94091.33, avgComments: 354.33, emv: 142731.5, engagementRate: 2.6174, liftMultiplier: 47.4 },
-    { brand: "@easportsofficial", posts: 1, avgLikes: 260247, avgComments: 1851, emv: 132900, engagementRate: 0.3454, liftMultiplier: 132.9 },
-    { brand: "@easportscollege", posts: 6, avgLikes: 41390.33, avgComments: 262.5, emv: 126533.5, engagementRate: 0.1261, liftMultiplier: 20.3 },
     { brand: "@beatsbydre", posts: 3, avgLikes: 43950, avgComments: 326, emv: 67392, engagementRate: 0.1331, liftMultiplier: 21.6 },
-    { brand: "@hollister", posts: 89, avgLikes: 1277.65, avgComments: 20.31, emv: 59567.5, engagementRate: 0.0986, liftMultiplier: -0.3 },
-    { brand: "@paniniamerica", posts: 2, avgLikes: 48993, avgComments: 147.5, emv: 49435.5, engagementRate: 0.1523, liftMultiplier: 24.2 },
+    { brand: "@hollister", posts: 89, avgLikes: 1277.65, avgComments: 20, emv: 59567.5, engagementRate: 0.0986, liftMultiplier: -0.3 },
+    { brand: "@paniniamerica", posts: 2, avgLikes: 48993, avgComments: 148, emv: 49435.5, engagementRate: 0.1523, liftMultiplier: 24.2 },
+    { brand: "@on3recruits", posts: 2, avgLikes: 41157.5, avgComments: 695, emv: 43241, engagementRate: 0.6283, liftMultiplier: 20.2 },
     { brand: "@nxtrnd", posts: 3, avgLikes: 17270.67, avgComments: 80, emv: 26266, engagementRate: 0.0522, liftMultiplier: 7.9 },
     { brand: "@7eleven", posts: 1, avgLikes: 47435, avgComments: 347, emv: 24238, engagementRate: 0.063, liftMultiplier: 23.4 },
     { brand: "@adidasusfootball", posts: 1, avgLikes: 43424, avgComments: 534, emv: 22513, engagementRate: 0.0579, liftMultiplier: 21.3 },
-    { brand: "@clever_made", posts: 20, avgLikes: 2157.6, avgComments: 15.45, emv: 22039.5, engagementRate: 0.1075, liftMultiplier: 0.1 },
+    { brand: "@clever_made", posts: 21, avgLikes: 2168.9, avgComments: 16, emv: 23286.5, engagementRate: 0.1187, liftMultiplier: 0.1 },
     { brand: "@epicpartner", posts: 1, avgLikes: 42691, avgComments: 133, emv: 21545, engagementRate: 0.2416, liftMultiplier: 21 },
-    { brand: "@dickssportinggoods", posts: 2, avgLikes: 20959.5, avgComments: 175.5, emv: 21486, engagementRate: 0.0454, liftMultiplier: 9.8 },
-    { brand: "@chipotle", posts: 5, avgLikes: 7848.8, avgComments: 80.4, emv: 20225, engagementRate: 0.0324, liftMultiplier: 3 },
+    { brand: "@dickssportinggoods", posts: 2, avgLikes: 20959.5, avgComments: 176, emv: 21486, engagementRate: 0.0454, liftMultiplier: 9.8 },
+    { brand: "@chipotle", posts: 5, avgLikes: 7848.8, avgComments: 80, emv: 20225, engagementRate: 0.0324, liftMultiplier: 3 },
+
     { brand: "@paycomsoftware", posts: 5, avgLikes: 5339.2, avgComments: 30, emv: 13573, engagementRate: 0.5884, liftMultiplier: 1.7 },
     { brand: "@discover", posts: 1, avgLikes: 24054, avgComments: 114, emv: 12198, engagementRate: 0.0319, liftMultiplier: 11.4 },
-    { brand: "@heydude", posts: 12, avgLikes: 2648.25, avgComments: 42.92, emv: 16761.5, engagementRate: 0.0796, liftMultiplier: 0.4 },
-    { brand: "@gianteagle", posts: 5, avgLikes: 5478.6, avgComments: 65.6, emv: 15181.5, engagementRate: 0.0491, liftMultiplier: 1.8 },
-    { brand: "@directv", posts: 5, avgLikes: 4530.4, avgComments: 40.6, emv: 11630.5, engagementRate: 0.2326, liftMultiplier: 1.3 },
+    { brand: "@heydude", posts: 11, avgLikes: 2078.09, avgComments: 38, emv: 12050.5, engagementRate: 0.113, liftMultiplier: 0.1 },
+    { brand: "@gianteagle", posts: 4, avgLikes: 5648.75, avgComments: 74, emv: 11741.5, engagementRate: 0.0562, liftMultiplier: 1.9 },
+    { brand: "@directv", posts: 5, avgLikes: 4530.4, avgComments: 41, emv: 11630.5, engagementRate: 0.2326, liftMultiplier: 1.3 },
     { brand: "@att", posts: 1, avgLikes: 21526, avgComments: 237, emv: 11118.5, engagementRate: 0.0287, liftMultiplier: 10.1 },
-    { brand: "@thehenrylegacy", posts: 2, avgLikes: 9863, avgComments: 151, emv: 10316, engagementRate: 0.5565, liftMultiplier: 4.1 },
-    { brand: "@jlabaudio", posts: 3, avgLikes: 6473.33, avgComments: 52.67, emv: 9947, engagementRate: 0.062, liftMultiplier: 2.3 },
-    { brand: "@doordash", posts: 2, avgLikes: 9016, avgComments: 28.5, emv: 9101.5, engagementRate: 0.0272, liftMultiplier: 3.6 },
-    { brand: "@joandjax", posts: 5, avgLikes: 3261.6, avgComments: 32.4, emv: 8397, engagementRate: 0.0657, liftMultiplier: 0.7 },
-    { brand: "@americaneagle", posts: 22, avgLikes: 638.77, avgComments: 37.68, emv: 8270, engagementRate: 0.0305, liftMultiplier: -0.7 },
-    { brand: "@valvolineinstantoilchange", posts: 4, avgLikes: 3743.75, avgComments: 24.5, emv: 7634.5, engagementRate: 0.0309, liftMultiplier: 0.9 },
-    { brand: "@allstate", posts: 2, avgLikes: 7134.5, avgComments: 44.5, emv: 7268, engagementRate: 0.0875, liftMultiplier: 2.7 },
-    { brand: "@wingstop", posts: 2, avgLikes: 5588.5, avgComments: 256.5, emv: 6358, engagementRate: 0.7279, liftMultiplier: 1.9 },
-    { brand: "@KeyBank", posts: 2, avgLikes: 5849.5, avgComments: 49.5, emv: 5998, engagementRate: 0.0078, liftMultiplier: 2 },
+    { brand: "@jlabaudio", posts: 3, avgLikes: 6473.33, avgComments: 53, emv: 9947, engagementRate: 0.062, liftMultiplier: 2.3 },
+    { brand: "@doordash", posts: 2, avgLikes: 9016, avgComments: 29, emv: 9101.5, engagementRate: 0.0272, liftMultiplier: 3.6 },
+    { brand: "@joandjax", posts: 5, avgLikes: 3261.6, avgComments: 32, emv: 8397, engagementRate: 0.0657, liftMultiplier: 0.7 },
+    { brand: "@americaneagle", posts: 22, avgLikes: 638.77, avgComments: 38, emv: 8270, engagementRate: 0.0305, liftMultiplier: -0.7 },
+    { brand: "@valvolineinstantoilchange", posts: 4, avgLikes: 3743.75, avgComments: 25, emv: 7634.5, engagementRate: 0.0309, liftMultiplier: 0.9 },
+    { brand: "@allstate", posts: 2, avgLikes: 7134.5, avgComments: 45, emv: 7268, engagementRate: 0.0875, liftMultiplier: 2.7 },
+    { brand: "@wingstop", posts: 2, avgLikes: 5588.5, avgComments: 257, emv: 6358, engagementRate: 0.7279, liftMultiplier: 1.9 },
+    { brand: "@KeyBank", posts: 2, avgLikes: 5849.5, avgComments: 50, emv: 5998, engagementRate: 0.0078, liftMultiplier: 2 },
+    { brand: "@whereimfrom", posts: 5, avgLikes: 2288, avgComments: 21, emv: 5877.5, engagementRate: 0.0883, liftMultiplier: 0.2 },
     { brand: "@naturemadevitamins", posts: 1, avgLikes: 11205, avgComments: 21, emv: 5634, engagementRate: 0.2991, liftMultiplier: 4.8 },
     { brand: "@rebelcrystalofficial", posts: 2, avgLikes: 5462.5, avgComments: 1, emv: 5465.5, engagementRate: 0.0919, liftMultiplier: 1.8 },
-    { brand: "@lv", posts: 1, avgLikes: 10043, avgComments: 148, emv: 5243.5, engagementRate: 0.1501, liftMultiplier: 4.2 },
     { brand: "@adidas", posts: 2, avgLikes: 4895, avgComments: 104, emv: 5207, engagementRate: 0.0782, liftMultiplier: 1.5 },
     { brand: "@paycom", posts: 1, avgLikes: 10182, avgComments: 36, emv: 5145, engagementRate: 0.2991, liftMultiplier: 4.2 },
     { brand: "@defensesoap", posts: 1, avgLikes: 10145, avgComments: 33, emv: 5122, engagementRate: 0.2979, liftMultiplier: 4.2 },
     { brand: "@tmobile", posts: 1, avgLikes: 9905, avgComments: 54, emv: 5033.5, engagementRate: 0.0299, liftMultiplier: 4.1 },
-    { brand: "@flocheer", posts: 2, avgLikes: 4873.5, avgComments: 7.5, emv: 4896, engagementRate: 0.0821, liftMultiplier: 1.5 },
+    { brand: "@HeyDude", posts: 1, avgLikes: 9119, avgComments: 101, emv: 4711, engagementRate: 0.0463, liftMultiplier: 3.7 },
     { brand: "@athleteps", posts: 1, avgLikes: 8398, avgComments: 45, emv: 4266.5, engagementRate: 0.2471, liftMultiplier: 3.3 },
     { brand: "@crocs", posts: 6, avgLikes: 1315.33, avgComments: 23, emv: 4153, engagementRate: 0.0042, liftMultiplier: -0.3 },
-    { brand: "@brooksrunning", posts: 5, avgLikes: 1543, avgComments: 30.2, emv: 4084, engagementRate: 0.1099, liftMultiplier: -0.2 },
-    { brand: "@peppermayo", posts: 4, avgLikes: 1833.75, avgComments: 41.75, emv: 3918, engagementRate: 0.0312, liftMultiplier: -0.1 },
+    { brand: "@brooksrunning", posts: 5, avgLikes: 1543, avgComments: 30, emv: 4084, engagementRate: 0.1099, liftMultiplier: -0.2 },
+    { brand: "@peppermayo", posts: 4, avgLikes: 1833.75, avgComments: 42, emv: 3918, engagementRate: 0.0312, liftMultiplier: -0.1 },
+    { brand: "@ohiostathletics", posts: 1, avgLikes: 7285, avgComments: 40, emv: 3702.5, engagementRate: 0.1478, liftMultiplier: 2.7 },
     { brand: "@amazonmusic", posts: 1, avgLikes: 6974, avgComments: 30, emv: 3532, engagementRate: 0.0944, liftMultiplier: 2.6 },
     { brand: "@cliffkeenathletic", posts: 1, avgLikes: 6980, avgComments: 16, emv: 3514, engagementRate: 3.4294, liftMultiplier: 2.6 },
-    { brand: "@journeymenwrestling", posts: 1, avgLikes: 6521, avgComments: 24, emv: 3296.5, engagementRate: 0.1916, liftMultiplier: 2.4 },
+    { brand: "@GiantEagle", posts: 1, avgLikes: 6784, avgComments: 32, emv: 3440, engagementRate: 0.0205, liftMultiplier: 2.5 },
+    { brand: "@pursuityourself", posts: 18, avgLikes: 342.67, avgComments: 12, emv: 3409.5, engagementRate: 0.0884, liftMultiplier: -0.8 },
+    { brand: "@wrestlingbucks", posts: 4, avgLikes: 1560, avgComments: 11, emv: 3186, engagementRate: 0.1056, liftMultiplier: -0.2 },
+    { brand: "locationfootball", posts: 1, avgLikes: 5899, avgComments: 53, emv: 3029, engagementRate: 0.3925, liftMultiplier: 2 },
     { brand: "@fifththirdbank", posts: 2, avgLikes: 2969.5, avgComments: 15, emv: 3014.5, engagementRate: 0.0109, liftMultiplier: 0.5 },
     { brand: "@celsiusofficial", posts: 3, avgLikes: 1828.33, avgComments: 22, emv: 2841.5, engagementRate: 0.0055, liftMultiplier: -0.1 },
-    { brand: "@flowrestling", posts: 1, avgLikes: 5362, avgComments: 11, emv: 2697.5, engagementRate: 1.2963, liftMultiplier: 1.8 },
+    { brand: "@colab_collective", posts: 6, avgLikes: 842, avgComments: 13, emv: 2640, engagementRate: 0.0486, liftMultiplier: -0.6 },
     { brand: "@serialashaeco", posts: 1, avgLikes: 5029, avgComments: 72, emv: 2622.5, engagementRate: 0.284, liftMultiplier: 1.6 },
-    { brand: "@drinkaccelerator", posts: 45, avgLikes: 87.58, avgComments: 7.67, emv: 2488, engagementRate: 0.0231, liftMultiplier: -1 },
+    { brand: "@drinkaccelerator", posts: 45, avgLikes: 87.58, avgComments: 8, emv: 2488, engagementRate: 0.0231, liftMultiplier: -1 },
     { brand: "@ParamountPlus", posts: 1, avgLikes: 4823, avgComments: 32, emv: 2459.5, engagementRate: 0.0705, liftMultiplier: 1.5 },
     { brand: "@marathonfuel", posts: 1, avgLikes: 3988, avgComments: 49, emv: 2067.5, engagementRate: 0.1114, liftMultiplier: 1.1 },
-    { brand: "@donatospizza", posts: 4, avgLikes: 975.25, avgComments: 18.25, emv: 2060, engagementRate: 0.3075, liftMultiplier: -0.5 },
-    { brand: "@neweracap", posts: 7, avgLikes: 513.43, avgComments: 19.71, emv: 2004, engagementRate: 0.0351, liftMultiplier: -0.7 },
-    { brand: "@c4energy", posts: 19, avgLikes: 244.37, avgComments: 22.68, emv: 2998.5, engagementRate: 0.0464, liftMultiplier: -0.9 },
+    { brand: "@donatospizza", posts: 4, avgLikes: 975.25, avgComments: 18, emv: 2060, engagementRate: 0.3075, liftMultiplier: -0.5 },
+    { brand: "the.courageousathlete", posts: 1, avgLikes: 4012, avgComments: 22, emv: 2039, engagementRate: 1.0228, liftMultiplier: 1.1 },
+    { brand: "@neweracap", posts: 7, avgLikes: 513.43, avgComments: 20, emv: 2004, engagementRate: 0.0351, liftMultiplier: -0.7 },
+    { brand: "@c4energy", posts: 12, avgLikes: 251.42, avgComments: 27, emv: 1988.5, engagementRate: 0.0262, liftMultiplier: -0.9 },
     { brand: "@goodfoodcro", posts: 2, avgLikes: 1403, avgComments: 194, emv: 1985, engagementRate: 0.0127, liftMultiplier: -0.3 },
-    { brand: "@theviewonfifth", posts: 10, avgLikes: 373.5, avgComments: 6.3, emv: 1962, engagementRate: 0.0189, liftMultiplier: -0.8 },
-    { brand: "@bumpboxx", posts: 3, avgLikes: 1128.33, avgComments: 40.67, emv: 1875.5, engagementRate: 0.0633, liftMultiplier: -0.4 },
-    { brand: "@tytusgrills", posts: 5, avgLikes: 719, avgComments: 6.6, emv: 1847, engagementRate: 0.0177, liftMultiplier: -0.6 },
+    { brand: "@buckeye.threads", posts: 33, avgLikes: 108.48, avgComments: 2, emv: 1887.5, engagementRate: 0.0589, liftMultiplier: -0.9 },
+    { brand: "@bumpboxx", posts: 3, avgLikes: 1128.33, avgComments: 41, emv: 1875.5, engagementRate: 0.0633, liftMultiplier: -0.4 },
+    { brand: "@tytusgrills", posts: 5, avgLikes: 719, avgComments: 7, emv: 1847, engagementRate: 0.0177, liftMultiplier: -0.6 },
     { brand: "@seatgeek", posts: 2, avgLikes: 1755.5, avgComments: 23, emv: 1824.5, engagementRate: 0.0144, liftMultiplier: -0.1 },
-    { brand: "@shootaway", posts: 3, avgLikes: 1079, avgComments: 27.67, emv: 1743, engagementRate: 0.0129, liftMultiplier: -0.4 },
-    { brand: "@elementelectronics", posts: 7, avgLikes: 443, avgComments: 15.43, emv: 1712.5, engagementRate: 0.0555, liftMultiplier: -0.8 },
-    { brand: "@aladdinseatery", posts: 3, avgLikes: 1060.33, avgComments: 20.67, emv: 1683.5, engagementRate: 0.1285, liftMultiplier: -0.5 },
-    { brand: "@rootsnk", posts: 8, avgLikes: 351.25, avgComments: 10.63, emv: 1532.5, engagementRate: 0.0181, liftMultiplier: -0.8 },
-    { brand: "@raisingcanes", posts: 4, avgLikes: 659.25, avgComments: 27.25, emv: 1482, engagementRate: 0.0258, liftMultiplier: -0.7 },
-    { brand: "@crackerbarrel", posts: 2, avgLikes: 1298.5, avgComments: 49.5, emv: 1447, engagementRate: 0.0372, liftMultiplier: -0.3 },
+    { brand: "@shootaway", posts: 3, avgLikes: 1079, avgComments: 28, emv: 1743, engagementRate: 0.0129, liftMultiplier: -0.4 },
+    { brand: "@elementelectronics", posts: 7, avgLikes: 443, avgComments: 15, emv: 1712.5, engagementRate: 0.0555, liftMultiplier: -0.8 },
+    { brand: "@aladdinseatery", posts: 3, avgLikes: 1060.33, avgComments: 21, emv: 1683.5, engagementRate: 0.1285, liftMultiplier: -0.5 },
+    { brand: "@postgame.official", posts: 20, avgLikes: 146.7, avgComments: 7, emv: 1669.5, engagementRate: 0.0429, liftMultiplier: -0.9 },
+    { brand: "@rivalsdotcom", posts: 1, avgLikes: 2802, avgComments: 95, emv: 1543.5, engagementRate: 0.9406, liftMultiplier: 0.4 },
+    { brand: "@rootsnk", posts: 8, avgLikes: 351.25, avgComments: 11, emv: 1532.5, engagementRate: 0.0181, liftMultiplier: -0.8 },
+    { brand: "@raisingcanes", posts: 4, avgLikes: 659.25, avgComments: 27, emv: 1482, engagementRate: 0.0258, liftMultiplier: -0.7 },
+    { brand: "@PaniniAmerica", posts: 1, avgLikes: 2810, avgComments: 31, emv: 1451.5, engagementRate: 0.0572, liftMultiplier: 0.4 },
+    { brand: "@crackerbarrel", posts: 2, avgLikes: 1298.5, avgComments: 50, emv: 1447, engagementRate: 0.0372, liftMultiplier: -0.3 },
     { brand: "@leesfamouschick", posts: 1, avgLikes: 2802, avgComments: 28, emv: 1443, engagementRate: 0.0571, liftMultiplier: 0.4 },
     { brand: "@nike_wrestling", posts: 1, avgLikes: 2659, avgComments: 20, emv: 1359.5, engagementRate: 0.0784, liftMultiplier: 0.4 },
+    { brand: "slaneglover", posts: 1, avgLikes: 2503, avgComments: 63, emv: 1346, engagementRate: 0.1389, liftMultiplier: 0.3 },
     { brand: "@uber", posts: 4, avgLikes: 622.25, avgComments: 8, emv: 1292.5, engagementRate: 0.0129, liftMultiplier: -0.7 },
     { brand: "@OIKOS", posts: 1, avgLikes: 2458, avgComments: 33, emv: 1278.5, engagementRate: 0.0075, liftMultiplier: 0.3 },
     { brand: "@stxmlax", posts: 2, avgLikes: 1245, avgComments: 5, emv: 1260, engagementRate: 0.0787, liftMultiplier: -0.4 },
-    { brand: "@thriveresidents", posts: 3, avgLikes: 665, avgComments: 51.67, emv: 1230, engagementRate: 0.0029, liftMultiplier: -0.7 },
-    { brand: "@nikelacrosse", posts: 2, avgLikes: 1088, avgComments: 34.5, emv: 1191.5, engagementRate: 0.2847, liftMultiplier: -0.4 },
+
+    { brand: "@nikelacrosse", posts: 2, avgLikes: 1088, avgComments: 35, emv: 1191.5, engagementRate: 0.2847, liftMultiplier: -0.4 },
+    { brand: "@thefoundationohio", posts: 3, avgLikes: 743.67, avgComments: 13, emv: 1174, engagementRate: 0.3023, liftMultiplier: -0.6 },
+    { brand: "@CELSIUSBrandPartner", posts: 1, avgLikes: 2296, avgComments: 11, emv: 1164.5, engagementRate: 0.0069, liftMultiplier: 0.2 },
     { brand: "@bauerhockey", posts: 2, avgLikes: 1044.5, avgComments: 39, emv: 1161.5, engagementRate: 0.1611, liftMultiplier: -0.5 },
     { brand: "@gametimeapp", posts: 1, avgLikes: 2191, avgComments: 41, emv: 1157, engagementRate: 0.1208, liftMultiplier: 0.1 },
     { brand: "@spartancombat", posts: 1, avgLikes: 1969, avgComments: 73, emv: 1094, engagementRate: 0.1932, liftMultiplier: 0 },
+    { brand: "@nintendoamerica", posts: 1, avgLikes: 0, avgComments: 714, emv: 1071, engagementRate: 0, liftMultiplier: -1 },
     { brand: "@tommyjohnwear", posts: 1, avgLikes: 2028, avgComments: 14, emv: 1035, engagementRate: 0.0544, liftMultiplier: 0 },
+    { brand: "@Nash", posts: 1, avgLikes: 2007, avgComments: 18, emv: 1030.5, engagementRate: 0.1168, liftMultiplier: 0 },
     { brand: "@honeystinger", posts: 2, avgLikes: 965, avgComments: 18, emv: 1019, engagementRate: 0.162, liftMultiplier: -0.5 },
+    { brand: "@C4Energy", posts: 7, avgLikes: 238.86, avgComments: 17, emv: 1010, engagementRate: 0.0608, liftMultiplier: -0.9 },
     { brand: "@wingsandrings.lc", posts: 1, avgLikes: 2018, avgComments: 0, emv: 1009, engagementRate: 0.0297, liftMultiplier: 0 },
-    { brand: "@ricartautomotive", posts: 1, avgLikes: 1840, avgComments: 55, emv: 1002.5, engagementRate: 0.1745, liftMultiplier: -0.1 },
-    { brand: "@drinkolipop", posts: 8, avgLikes: 195.63, avgComments: 16, emv: 974.5, engagementRate: 0.1139, liftMultiplier: -0.9 },
-    { brand: "@paramountplus", posts: 1, avgLikes: 1879, avgComments: 21, emv: 971, engagementRate: 0.0276, liftMultiplier: 0 },
-    { brand: "@popeyes", posts: 3, avgLikes: 567, avgComments: 15, emv: 918, engagementRate: 0.0141, liftMultiplier: -0.7 },
-    { brand: "@mcdonalds_greaterohio", posts: 1, avgLikes: 1629, avgComments: 8, emv: 826.5, engagementRate: 0.3864, liftMultiplier: -0.2 },
-    { brand: "@ramblercolumbus", posts: 7, avgLikes: 204.14, avgComments: 5.57, emv: 773, engagementRate: 0.0736, liftMultiplier: -0.9 },
-    { brand: "@chickfila", posts: 5, avgLikes: 307.8, avgComments: 27.4, emv: 768, engagementRate: 0.0411, liftMultiplier: -0.8 },
-    { brand: "@gatorade", posts: 3, avgLikes: 480, avgComments: 21.67, emv: 764, engagementRate: 0.199, liftMultiplier: -0.8 },
-    { brand: "@princesspolly", posts: 2, avgLikes: 653, avgComments: 26.5, emv: 732.5, engagementRate: 0.0531, liftMultiplier: -0.7 },
-    { brand: "@drpepper", posts: 2, avgLikes: 563, avgComments: 33, emv: 662, engagementRate: 0.0571, liftMultiplier: -0.7 },
-    { brand: "@selectproformance", posts: 4, avgLikes: 248.5, avgComments: 10.75, emv: 561.5, engagementRate: 0.014, liftMultiplier: -0.9 },
-    { brand: "@adoreme", posts: 2, avgLikes: 525, avgComments: 41, emv: 554, engagementRate: 0.1242, liftMultiplier: -0.7 },
-    { brand: "@goodr", posts: 5, avgLikes: 188.8, avgComments: 7.2, emv: 526, engagementRate: 0.0614, liftMultiplier: -0.9 },
-    { brand: "@slimchickens", posts: 1, avgLikes: 985, avgComments: 16, emv: 516.5, engagementRate: 0.1078, liftMultiplier: -0.5 },
-    { brand: "@starbucks", posts: 2, avgLikes: 553, avgComments: 9.5, emv: 541, engagementRate: 0.0143, liftMultiplier: -0.7 },
-    { brand: "@7BrewCoffee", posts: 2, avgLikes: 563, avgComments: 6, emv: 581, engagementRate: 0.0021, liftMultiplier: -0.7 },
-    { brand: "@bobboydlincoln", posts: 1, avgLikes: 950, avgComments: 35, emv: 527.5, engagementRate: 0.1411, liftMultiplier: -0.5 },
-    { brand: "@kamaruclothing", posts: 1, avgLikes: 969, avgComments: 77, emv: 600, engagementRate: 0.0566, liftMultiplier: -0.5 },
   ] as Partnership[],
 };
 
@@ -441,62 +441,62 @@ const ipData = {
 // ATHLETE & BENCHMARK DATA
 // ═══════════════════════════════════════════════════════════════
 const topCollabAthletes = [
-  { rank: 1, name: "Jeremiah Smith", sport: "Football", posts: 4, emv: 149407, lift: 63 },
-  { rank: 2, name: "Brandon Inniss", sport: "Football", posts: 3, emv: 80632, lift: 63 },
-  { rank: 3, name: "Jayden Fielding", sport: "Football", posts: 5, emv: 42335, lift: 63 },
-  { rank: 4, name: "Jaylen McClain", sport: "Football", posts: 3, emv: 36554, lift: 63 },
-  { rank: 5, name: "Jermaine Mathews Jr.", sport: "Football", posts: 3, emv: 30145, lift: 63 },
+  { rank: 1, name: "Jeremiah Smith", sport: "Football", posts: 6, emv: 284753, lift: 82 },
+  { rank: 2, name: "Sonny Styles", sport: "Football", posts: 7, emv: 117351, lift: 82 },
+  { rank: 3, name: "Brandon Inniss", sport: "Football", posts: 3, emv: 81382, lift: 82 },
+  { rank: 4, name: "Jermaine Mathews Jr.", sport: "Football", posts: 5, emv: 73800, lift: 82 },
+  { rank: 5, name: "Caleb Downs", sport: "Football", posts: 4, emv: 60319, lift: 82 },
 ];
 const topLogoAthletes = [
-  { rank: 1, name: "Jeremiah Smith", sport: "Football", posts: 23, emv: 435632, lift: 86 },
-  { rank: 2, name: "James Peoples", sport: "Football", posts: 22, emv: 119833, lift: 86 },
-  { rank: 3, name: "John Mobley Jr.", sport: "M. Basketball", posts: 22, emv: 75391, lift: 86 },
-  { rank: 4, name: "Kayden McDonald", sport: "Football", posts: 24, emv: 67640, lift: 86 },
-  { rank: 5, name: "Devin Royal", sport: "M. Basketball", posts: 24, emv: 47693, lift: 86 },
+  { rank: 1, name: "Jeremiah Smith", sport: "Football", posts: 35, emv: 985746, lift: 61 },
+  { rank: 2, name: "Caleb Downs", sport: "Football", posts: 32, emv: 694311, lift: 61 },
+  { rank: 3, name: "Julian Sayin", sport: "Football", posts: 12, emv: 348274, lift: 61 },
+  { rank: 4, name: "Sonny Styles", sport: "Football", posts: 27, emv: 249057, lift: 61 },
+  { rank: 5, name: "Brandon Inniss", sport: "Football", posts: 20, emv: 237235, lift: 61 },
 ];
 const topMentionAthletes = [
-  { rank: 1, name: "John Mobley Jr.", sport: "M. Basketball", posts: 14, emv: 64042, lift: 79 },
-  { rank: 2, name: "Kennedy Cambridge", sport: "W. Basketball", posts: 32, emv: 23293, lift: 79 },
-  { rank: 3, name: "Devontae Armstrong", sport: "Football", posts: 12, emv: 21620, lift: 79 },
-  { rank: 4, name: "Brandon Cannon", sport: "M. Wrestling", posts: 12, emv: 16006, lift: 79 },
-  { rank: 5, name: "Nic Bouzakis", sport: "M. Wrestling", posts: 12, emv: 13631, lift: 79 },
+  { rank: 1, name: "Caleb Downs", sport: "Football", posts: 12, emv: 241149, lift: 148 },
+  { rank: 2, name: "Carson Hinzman", sport: "Football", posts: 12, emv: 139272, lift: 148 },
+  { rank: 3, name: "Jeremiah Smith", sport: "Football", posts: 6, emv: 129645, lift: 148 },
+  { rank: 4, name: "Quincy Porter", sport: "Football", posts: 12, emv: 118790, lift: 148 },
+  { rank: 5, name: "Jesse Mendez", sport: "M. Wrestling", posts: 31, emv: 89645, lift: 148 },
 ];
 const signalStats = {
-  collab: { posts: 116, totalEmv: 781253, avgEmv: 6735, lift: 63 },
-  logo: { posts: 4252, totalEmv: 6678514, avgEmv: 1571, lift: 86 },
-  mention: { posts: 1933, totalEmv: 2707472, avgEmv: 1401, lift: 79 },
+  collab: { posts: 195, totalEmv: 1294184, avgEmv: 6637, lift: 85 },
+  logo: { posts: 5245, totalEmv: 8698443, avgEmv: 1658, lift: 190 },
+  mention: { posts: 2506, totalEmv: 3354479, avgEmv: 1339, lift: 298 },
 };
 
 const fallbackSportData: Record<string, Record<string, { with: { posts: number; avgLikes: number; avgComments: number; engagementRate: number }; without: { posts: number; avgLikes: number; avgComments: number; engagementRate: number } }>> = {
   'ALL_SPORTS': {
-    mention: { with: { posts: 1933, avgLikes: 2659, avgComments: 47, engagementRate: 0.2365 }, without: { posts: 7696, avgLikes: 1550, avgComments: 43, engagementRate: 0.1321 } },
-    logo: { with: { posts: 4252, avgLikes: 2972, avgComments: 57, engagementRate: 0.1869 }, without: { posts: 5377, avgLikes: 825, avgComments: 34, engagementRate: 0.1003 } },
-    collab: { with: { posts: 116, avgLikes: 13138, avgComments: 111, engagementRate: 0.2402 }, without: { posts: 9513, avgLikes: 1634, avgComments: 43, engagementRate: 0.147 } }
+    mention: { with: { posts: 2506, avgLikes: 2547, avgComments: 43, engagementRate: 0.8783 }, without: { posts: 9878, avgLikes: 1791, avgComments: 46, engagementRate: 0.2208 } },
+    logo: { with: { posts: 5245, avgLikes: 3145, avgComments: 57, engagementRate: 0.5685 }, without: { posts: 7139, avgLikes: 1061, avgComments: 37, engagementRate: 0.1961 } },
+    collab: { with: { posts: 195, avgLikes: 12935, avgComments: 113, engagementRate: 0.6456 }, without: { posts: 12189, avgLikes: 1768, avgComments: 45, engagementRate: 0.3491 } }
   },
   'FOOTBALL': {
-    mention: { with: { posts: 310, avgLikes: 9553, avgComments: 99, engagementRate: 0.2779 }, without: { posts: 1399, avgLikes: 6091, avgComments: 94, engagementRate: 0.1404 } },
-    logo: { with: { posts: 999, avgLikes: 9416, avgComments: 124, engagementRate: 0.1955 }, without: { posts: 710, avgLikes: 2925, avgComments: 54, engagementRate: 0.0894 } },
-    collab: { with: { posts: 73, avgLikes: 19179, avgComments: 160, engagementRate: 0.2408 }, without: { posts: 1636, avgLikes: 6163, avgComments: 92, engagementRate: 0.1538 } }
+    mention: { with: { posts: 334, avgLikes: 10118, avgComments: 100, engagementRate: 0.7722 }, without: { posts: 1641, avgLikes: 7479, avgComments: 117, engagementRate: 0.2998 } },
+    logo: { with: { posts: 1139, avgLikes: 10696, avgComments: 139, engagementRate: 0.5316 }, without: { posts: 836, avgLikes: 4152, avgComments: 81, engagementRate: 0.1728 } },
+    collab: { with: { posts: 91, avgLikes: 24673, avgComments: 208, engagementRate: 0.8692 }, without: { posts: 1884, avgLikes: 7117, avgComments: 110, engagementRate: 0.356 } }
   },
   'MENS_BASKETBALL': {
-    mention: { with: { posts: 82, avgLikes: 4530, avgComments: 35, engagementRate: 0.0983 }, without: { posts: 176, avgLikes: 2177, avgComments: 36, engagementRate: 0.0497 } },
-    logo: { with: { posts: 146, avgLikes: 4178, avgComments: 43, engagementRate: 0.0967 }, without: { posts: 112, avgLikes: 1291, avgComments: 26, engagementRate: 0.028 } },
-    collab: { with: { posts: 13, avgLikes: 6693, avgComments: 51, engagementRate: 0.2048 }, without: { posts: 245, avgLikes: 2725, avgComments: 35, engagementRate: 0.0603 } }
+    mention: { with: { posts: 84, avgLikes: 4561, avgComments: 34, engagementRate: 14.5359 }, without: { posts: 215, avgLikes: 2907, avgComments: 37, engagementRate: 1.8628 } },
+    logo: { with: { posts: 152, avgLikes: 4662, avgComments: 45, engagementRate: 8.9774 }, without: { posts: 147, avgLikes: 2038, avgComments: 28, engagementRate: 1.7479 } },
+    collab: { with: { posts: 13, avgLikes: 6693, avgComments: 51, engagementRate: 0.7221 }, without: { posts: 286, avgLikes: 3221, avgComments: 36, engagementRate: 5.6368 } }
   },
   'MENS_WRESTLING': {
-    mention: { with: { posts: 139, avgLikes: 2261, avgComments: 25, engagementRate: 0.3016 }, without: { posts: 218, avgLikes: 1307, avgComments: 21, engagementRate: 0.2123 } },
-    logo: { with: { posts: 187, avgLikes: 1936, avgComments: 25, engagementRate: 0.2884 }, without: { posts: 170, avgLikes: 1395, avgComments: 20, engagementRate: 0.21 } },
-    collab: { with: { posts: 0, avgLikes: 0, avgComments: 0, engagementRate: 0 }, without: { posts: 357, avgLikes: 1678, avgComments: 23, engagementRate: 0.2512 } }
+    mention: { with: { posts: 228, avgLikes: 2291, avgComments: 21, engagementRate: 0.3847 }, without: { posts: 325, avgLikes: 1716, avgComments: 18, engagementRate: 0.2494 } },
+    logo: { with: { posts: 230, avgLikes: 2390, avgComments: 23, engagementRate: 0.42 }, without: { posts: 323, avgLikes: 1642, avgComments: 16, engagementRate: 0.2234 } },
+    collab: { with: { posts: 1, avgLikes: 801, avgComments: 1, engagementRate: 0.1935 }, without: { posts: 552, avgLikes: 1955, avgComments: 19, engagementRate: 0.3054 } }
   },
   'WOMENS_BASKETBALL': {
-    mention: { with: { posts: 105, avgLikes: 1452, avgComments: 18, engagementRate: 0.0969 }, without: { posts: 109, avgLikes: 1992, avgComments: 54, engagementRate: 0.1411 } },
-    logo: { with: { posts: 134, avgLikes: 1790, avgComments: 28, engagementRate: 0.1178 }, without: { posts: 80, avgLikes: 1621, avgComments: 50, engagementRate: 0.121 } },
-    collab: { with: { posts: 0, avgLikes: 0, avgComments: 0, engagementRate: 0 }, without: { posts: 214, avgLikes: 1727, avgComments: 36, engagementRate: 0.1189 } }
+    mention: { with: { posts: 179, avgLikes: 1690, avgComments: 21, engagementRate: 0.1569 }, without: { posts: 269, avgLikes: 1554, avgComments: 40, engagementRate: 0.1062 } },
+    logo: { with: { posts: 228, avgLikes: 1875, avgComments: 28, engagementRate: 0.1487 }, without: { posts: 220, avgLikes: 1332, avgComments: 37, engagementRate: 0.1035 } },
+    collab: { with: { posts: 22, avgLikes: 2832, avgComments: 28, engagementRate: 0.1594 }, without: { posts: 426, avgLikes: 1545, avgComments: 33, engagementRate: 0.1248 } }
   },
   'MENS_GYMNASTICS': {
-    mention: { with: { posts: 58, avgLikes: 3602, avgComments: 23, engagementRate: 1.1645 }, without: { posts: 202, avgLikes: 423, avgComments: 29, engagementRate: 0.1405 } },
-    logo: { with: { posts: 98, avgLikes: 2193, avgComments: 29, engagementRate: 0.6433 }, without: { posts: 162, avgLikes: 490, avgComments: 27, engagementRate: 0.1704 } },
-    collab: { with: { posts: 0, avgLikes: 0, avgComments: 0, engagementRate: 0 }, without: { posts: 260, avgLikes: 1132, avgComments: 28, engagementRate: 0.3632 } }
+    mention: { with: { posts: 121, avgLikes: 714, avgComments: 19, engagementRate: 0.4428 }, without: { posts: 196, avgLikes: 657, avgComments: 14, engagementRate: 0.3992 } },
+    logo: { with: { posts: 158, avgLikes: 513, avgComments: 20, engagementRate: 0.3425 }, without: { posts: 159, avgLikes: 843, avgComments: 13, engagementRate: 0.4887 } },
+    collab: { with: { posts: 0, avgLikes: 0, avgComments: 0, engagementRate: 0 }, without: { posts: 317, avgLikes: 679, avgComments: 16, engagementRate: 0.4158 } }
   }
 };
 
@@ -522,104 +522,106 @@ const fallbackTeamFollowersBySport: Record<string, number> = {
 };
 
 const big10Schools = [
-  { name: 'Nebraska', conf: 'Big 10', posts: 4026, adoption: 50.8, logo: 47.5, mention: 15.4, collab: 2.9, followers: 3126161 },
-  { name: 'Maryland', conf: 'Big 10', posts: 2790, adoption: 47.5, logo: 40.8, mention: 17.6, collab: 3.5, followers: 863472 },
-  { name: 'Michigan', conf: 'Big 10', posts: 4042, adoption: 50.1, logo: 50.0, mention: 0.0, collab: 0.1, followers: 2381406 },
-  { name: 'Ohio State', conf: 'Big 10', posts: 12384, adoption: 47.8, logo: 42.4, mention: 20.2, collab: 1.6, followers: 5546349 },
-  { name: 'Michigan State', conf: 'Big 10', posts: 2887, adoption: 45.1, logo: 39.9, mention: 15.4, collab: 4.0, followers: 827265 },
-  { name: 'Indiana', conf: 'Big 10', posts: 2604, adoption: 41.2, logo: 35.6, mention: 5.3, collab: 1.8, followers: 1198872 },
-  { name: 'Penn State', conf: 'Big 10', posts: 8247, adoption: 43.5, logo: 39.7, mention: 16.8, collab: 2.1, followers: 4114531 },
-  { name: 'Purdue', conf: 'Big 10', posts: 5286, adoption: 36.5, logo: 34.1, mention: 12.8, collab: 3.4, followers: 1299880 },
-  { name: 'Rutgers', conf: 'Big 10', posts: 2754, adoption: 32.8, logo: 26.6, mention: 5.1, collab: 2.3, followers: 702547 },
-  { name: 'Iowa', conf: 'Big 10', posts: 3002, adoption: 33.3, logo: 25.4, mention: 6.9, collab: 2.5, followers: 1004448 },
-  { name: 'Washington', conf: 'Big 10', posts: 2949, adoption: 27.6, logo: 20.8, mention: 4.0, collab: 5.3, followers: 1005485 },
-  { name: 'Minnesota', conf: 'Big 10', posts: 2354, adoption: 15.2, logo: 11.5, mention: 0.0, collab: 5.4, followers: 882398 },
-  { name: 'Illinois', conf: 'Big 10', posts: 3328, adoption: 16.3, logo: 10.3, mention: 4.8, collab: 2.3, followers: 956415 },
-  { name: 'Wisconsin', conf: 'Big 10', posts: 5982, adoption: 12.0, logo: 11.0, mention: 0.2, collab: 1.3, followers: 1812655 },
-  { name: 'UCLA', conf: 'Big 10', posts: 7077, adoption: 11.6, logo: 8.7, mention: 0.3, collab: 3.4, followers: 5487049 },
-  { name: 'USC', conf: 'Big 10', posts: 5948, adoption: 11.0, logo: 8.6, mention: 0.2, collab: 2.8, followers: 4376029 },
-  { name: 'Oregon', conf: 'Big 10', posts: 2683, adoption: 43.2, logo: 34.9, mention: 7.2, collab: 3.8, followers: 1904523 },
+  { name: 'Minnesota', conf: 'Big 10', posts: 2354, adoption: 58.6, logoEng: 29.96, mentionEng: 47.57, collabEng: 50.81, followers: 882398 },
+  { name: 'Nebraska', conf: 'Big 10', posts: 4026, adoption: 50.8, logoEng: 34.47, mentionEng: 50.63, collabEng: 80.32, followers: 3126161 },
+  { name: 'Michigan', conf: 'Big 10', posts: 4042, adoption: 56.2, logoEng: 34.39, mentionEng: 50.18, collabEng: 36.87, followers: 2381406 },
+  { name: 'Maryland', conf: 'Big 10', posts: 2790, adoption: 49, logoEng: 22.93, mentionEng: 27.67, collabEng: 40.22, followers: 863472 },
+  { name: 'Ohio State', conf: 'Big 10', posts: 12384, adoption: 47.8, logoEng: 56.85, mentionEng: 87.83, collabEng: 64.56, followers: 5546349 },
+  { name: 'Oregon', conf: 'Big 10', posts: 2683, adoption: 46.3, logoEng: 47.44, mentionEng: 43.36, collabEng: 104.75, followers: 1904523 },
+  { name: 'Michigan State', conf: 'Big 10', posts: 2887, adoption: 45.2, logoEng: 33.48, mentionEng: 38.02, collabEng: 50.48, followers: 827265 },
+  { name: 'Indiana', conf: 'Big 10', posts: 2604, adoption: 44.2, logoEng: 26.75, mentionEng: 27.66, collabEng: 54.12, followers: 1198872 },
+  { name: 'Penn State', conf: 'Big 10', posts: 8247, adoption: 43.5, logoEng: 37.82, mentionEng: 48.49, collabEng: 108.02, followers: 4114531 },
+  { name: 'Iowa', conf: 'Big 10', posts: 3002, adoption: 40.7, logoEng: 37.57, mentionEng: 40.37, collabEng: 46.35, followers: 1004448 },
+  { name: 'Rutgers', conf: 'Big 10', posts: 2754, adoption: 39.5, logoEng: 27.39, mentionEng: 30.15, collabEng: 33.87, followers: 702547 },
+  { name: 'Purdue', conf: 'Big 10', posts: 5294, adoption: 36.4, logoEng: 27.59, mentionEng: 38.19, collabEng: 41.02, followers: 1299880 },
+  { name: 'Washington', conf: 'Big 10', posts: 2949, adoption: 31.2, logoEng: 29.95, mentionEng: 37.75, collabEng: 79.04, followers: 1005485 },
+  { name: 'Illinois', conf: 'Big 10', posts: 3328, adoption: 20.3, logoEng: 32.81, mentionEng: 40.17, collabEng: 45.90, followers: 956415 },
+  { name: 'Wisconsin', conf: 'Big 10', posts: 5983, adoption: 42.0, logoEng: 32.82, mentionEng: 19.67, collabEng: 65.11, followers: 1812655 },
+  { name: 'UCLA', conf: 'Big 10', posts: 7077, adoption: 33.5, logoEng: 32.89, mentionEng: 21.37, collabEng: 56.61, followers: 5487049 },
+  { name: 'USC', conf: 'Big 10', posts: 5948, adoption: 38.3, logoEng: 34.18, mentionEng: 54.59, collabEng: 86.52, followers: 4376029 },
 ];
 
 const ncaaD1Schools = [
-  { name: 'Old Dominion', conf: 'Sun Belt', posts: 1577, adoption: 60.1, logo: 57.8, mention: 14.5, collab: 1.3, followers: 406916 },
-  { name: 'New Mexico', conf: 'MWC', posts: 1182, adoption: 55.6, logo: 53.3, mention: 21.7, collab: 4.6, followers: 304204 },
-  { name: 'Kentucky', conf: 'SEC', posts: 2900, adoption: 53.4, logo: 47.0, mention: 13.7, collab: 6.7, followers: 1671393 },
-  { name: 'Texas Tech', conf: 'Big 12', posts: 2355, adoption: 53.0, logo: 52.4, mention: 0.0, collab: 1.2, followers: 957605 },
-  { name: 'Texas A&M', conf: 'SEC', posts: 4316, adoption: 51.4, logo: 46.8, mention: 19.8, collab: 3.2, followers: 1878601 },
-  { name: 'Virginia Tech', conf: 'ACC', posts: 3978, adoption: 51.3, logo: 48.4, mention: 15.2, collab: 0.1, followers: 1872167 },
-  { name: 'Nebraska', conf: 'Big 10', posts: 4026, adoption: 50.8, logo: 47.5, mention: 15.4, collab: 2.9, followers: 3126161 },
-  { name: 'Washington State', conf: 'Pac-12', posts: 948, adoption: 50.4, logo: 46.1, mention: 19.4, collab: 4.7, followers: 186487 },
-  { name: 'Maryland', conf: 'Big 10', posts: 2790, adoption: 47.5, logo: 40.8, mention: 17.6, collab: 3.5, followers: 863472 },
-  { name: 'Michigan', conf: 'Big 10', posts: 4042, adoption: 50.1, logo: 50.0, mention: 0.0, collab: 0.1, followers: 2381406 },
-  { name: 'Miami', conf: 'ACC', posts: 2083, adoption: 49.4, logo: 44.7, mention: 1.5, collab: 7.0, followers: 1703801 },
-  { name: 'Notre Dame', conf: 'ACC', posts: 2786, adoption: 48.9, logo: 46.8, mention: 18.9, collab: 0.1, followers: 1578114 },
-  { name: 'Houston', conf: 'Big 12', posts: 1987, adoption: 48.7, logo: 47.3, mention: 0.0, collab: 4.0, followers: 1237637 },
-  { name: 'Ohio State', conf: 'Big 10', posts: 12384, adoption: 47.8, logo: 42.4, mention: 20.2, collab: 1.6, followers: 5546349 },
-  { name: 'Auburn', conf: 'SEC', posts: 6405, adoption: 48.1, logo: 40.0, mention: 21.7, collab: 8.9, followers: 2323541 },
-  { name: 'Oregon', conf: 'Big 10', posts: 2683, adoption: 43.2, logo: 34.9, mention: 7.2, collab: 3.8, followers: 1904523 },
-  { name: 'LSU', conf: 'SEC', posts: 5454, adoption: 46.1, logo: 40.7, mention: 14.7, collab: 3.3, followers: 5170563 },
-  { name: 'UTSA', conf: 'AAC', posts: 3773, adoption: 46.0, logo: 39.7, mention: 16.9, collab: 10.8, followers: 835260 },
-  { name: 'Oklahoma', conf: 'SEC', posts: 2813, adoption: 45.6, logo: 45.6, mention: 0.0, collab: 0.0, followers: 1703577 },
-  { name: 'NC State', conf: 'ACC', posts: 2565, adoption: 45.6, logo: 44.7, mention: 0.0, collab: 3.1, followers: 1238519 },
-  { name: 'Michigan State', conf: 'Big 10', posts: 2887, adoption: 45.1, logo: 39.9, mention: 15.4, collab: 4.0, followers: 827265 },
-  { name: 'Baylor', conf: 'Big 12', posts: 7298, adoption: 45.1, logo: 41.0, mention: 21.4, collab: 4.5, followers: 2110678 },
-  { name: 'Wichita State', conf: 'AAC', posts: 1740, adoption: 44.8, logo: 40.9, mention: 17.9, collab: 2.6, followers: 347584 },
-  { name: 'UCF', conf: 'Big 12', posts: 2409, adoption: 44.3, logo: 40.5, mention: 8.0, collab: 7.1, followers: 1202431 },
-  { name: 'Cincinnati', conf: 'Big 12', posts: 4968, adoption: 43.7, logo: 39.6, mention: 16.2, collab: 1.1, followers: 1043067 },
-  { name: 'Penn State', conf: 'Big 10', posts: 8247, adoption: 43.5, logo: 39.7, mention: 16.8, collab: 2.1, followers: 4114531 },
-  { name: 'Ole Miss', conf: 'SEC', posts: 2309, adoption: 43.5, logo: 43.1, mention: 0.0, collab: 1.3, followers: 2032007 },
-  { name: 'Indiana', conf: 'Big 10', posts: 2604, adoption: 41.2, logo: 35.6, mention: 5.3, collab: 1.8, followers: 1198872 },
-  { name: 'Arizona', conf: 'Big 12', posts: 4371, adoption: 43.1, logo: 41.1, mention: 9.6, collab: 1.7, followers: 3260269 },
-  { name: 'Missouri', conf: 'SEC', posts: 5726, adoption: 42.3, logo: 38.1, mention: 20.5, collab: 2.0, followers: 1271953 },
-  { name: 'West Virginia', conf: 'Big 12', posts: 2288, adoption: 41.7, logo: 41.7, mention: 0.0, collab: 0.0, followers: 956180 },
-  { name: 'SMU', conf: 'AAC', posts: 1848, adoption: 41.6, logo: 41.5, mention: 0.0, collab: 0.5, followers: 994666 },
-  { name: 'Alabama', conf: 'SEC', posts: 5742, adoption: 40.4, logo: 37.5, mention: 16.9, collab: 2.6, followers: 3966222 },
-  { name: 'Georgia Tech', conf: 'ACC', posts: 2066, adoption: 40.4, logo: 38.9, mention: 0.0, collab: 5.6, followers: 990980 },
-  { name: 'Florida State', conf: 'ACC', posts: 2130, adoption: 40.1, logo: 40.1, mention: 0.0, collab: 0.0, followers: 1333391 },
-  { name: 'Virginia', conf: 'ACC', posts: 6496, adoption: 40.0, logo: 37.1, mention: 16.5, collab: 1.4, followers: 2044598 },
-  { name: 'Boston College', conf: 'ACC', posts: 1539, adoption: 40.0, logo: 38.6, mention: 0.0, collab: 6.1, followers: 590503 },
-  { name: 'Arkansas', conf: 'SEC', posts: 5711, adoption: 36.6, logo: 34.2, mention: 10.6, collab: 0.9, followers: 2827038 },
-  { name: 'DePaul', conf: 'Big East', posts: 746, adoption: 36.5, logo: 35.7, mention: 0.0, collab: 3.1, followers: 121473 },
-  { name: 'Purdue', conf: 'Big 10', posts: 5286, adoption: 36.5, logo: 34.1, mention: 12.8, collab: 3.4, followers: 1299880 },
-  { name: 'Rutgers', conf: 'Big 10', posts: 2754, adoption: 32.8, logo: 26.6, mention: 5.1, collab: 2.3, followers: 702547 },
-  { name: 'Arizona State', conf: 'Big 12', posts: 7777, adoption: 34.4, logo: 32.0, mention: 9.9, collab: 3.4, followers: 2269788 },
-  { name: 'Mississippi', conf: 'SEC', posts: 2239, adoption: 34.4, logo: 34.4, mention: 0.0, collab: 0.0, followers: 986747 },
-  { name: 'BYU', conf: 'Big 12', posts: 7519, adoption: 34.3, logo: 31.6, mention: 10.1, collab: 2.3, followers: 2693744 },
-  { name: 'George Mason', conf: 'A-10', posts: 1959, adoption: 33.8, logo: 32.4, mention: 12.0, collab: 0.3, followers: 403604 },
-  { name: 'Iowa', conf: 'Big 10', posts: 3002, adoption: 33.3, logo: 25.4, mention: 6.9, collab: 2.5, followers: 1004448 },
-  { name: 'Vanderbilt', conf: 'SEC', posts: 2246, adoption: 30.0, logo: 29.3, mention: 0.0, collab: 1.1, followers: 962963 },
-  { name: 'Washington', conf: 'Big 10', posts: 2949, adoption: 27.6, logo: 20.8, mention: 4.0, collab: 5.3, followers: 1005485 },
-  { name: 'San Diego State', conf: 'MWC', posts: 3406, adoption: 26.8, logo: 26.7, mention: 0.0, collab: 0.0, followers: 907225 },
-  { name: 'Texas', conf: 'SEC', posts: 6196, adoption: 26.4, logo: 25.2, mention: 0.4, collab: 1.8, followers: 3552007 },
-  { name: 'TCU', conf: 'Big 12', posts: 1707, adoption: 25.8, logo: 25.8, mention: 0.0, collab: 0.0, followers: 732360 },
-  { name: 'San Diego', conf: 'WCC', posts: 2024, adoption: 25.2, logo: 23.2, mention: 9.2, collab: 0.0, followers: 439463 },
-  { name: 'Creighton', conf: 'Big East', posts: 2592, adoption: 24.6, logo: 20.7, mention: 8.6, collab: 2.0, followers: 438009 },
-  { name: 'Colorado', conf: 'Big 12', posts: 1418, adoption: 24.6, logo: 24.6, mention: 0.0, collab: 0.0, followers: 1506666 },
-  { name: 'Kansas', conf: 'Big 12', posts: 2423, adoption: 23.1, logo: 22.5, mention: 0.0, collab: 0.8, followers: 1266884 },
-  { name: 'Iowa State', conf: 'Big 12', posts: 2248, adoption: 22.6, logo: 22.5, mention: 0.0, collab: 0.1, followers: 1238932 },
-  { name: 'Clemson', conf: 'ACC', posts: 3351, adoption: 20.4, logo: 17.5, mention: 1.2, collab: 2.6, followers: 1726437 },
-  { name: 'Kansas State', conf: 'Big 12', posts: 1680, adoption: 18.3, logo: 18.3, mention: 0.0, collab: 0.0, followers: 634620 },
-  { name: 'Utah', conf: 'Big 12', posts: 2152, adoption: 18.2, logo: 18.2, mention: 0.0, collab: 0.0, followers: 1383229 },
-  { name: 'Oklahoma State', conf: 'Big 12', posts: 1934, adoption: 18.0, logo: 18.0, mention: 0.0, collab: 0.0, followers: 1059619 },
-  { name: 'Duke', conf: 'ACC', posts: 1951, adoption: 16.6, logo: 15.5, mention: 0.0, collab: 1.9, followers: 1435498 },
-  { name: 'UNC', conf: 'ACC', posts: 3056, adoption: 16.3, logo: 15.7, mention: 0.5, collab: 0.2, followers: 1434088 },
-  { name: 'Providence', conf: 'Big East', posts: 679, adoption: 15.8, logo: 12.7, mention: 0.0, collab: 4.7, followers: 366758 },
-  { name: 'Minnesota', conf: 'Big 10', posts: 2354, adoption: 15.2, logo: 11.5, mention: 0.0, collab: 5.4, followers: 882398 },
-  { name: 'Georgia', conf: 'SEC', posts: 5376, adoption: 14.8, logo: 13.5, mention: 0.8, collab: 0.9, followers: 2864099 },
-  { name: 'Tennessee', conf: 'SEC', posts: 2459, adoption: 13.8, logo: 12.4, mention: 0.0, collab: 1.7, followers: 1848323 },
-  { name: 'Illinois', conf: 'Big 10', posts: 3328, adoption: 16.3, logo: 10.3, mention: 4.8, collab: 2.3, followers: 956415 },
-  { name: 'Florida', conf: 'SEC', posts: 2735, adoption: 12.7, logo: 12.7, mention: 0.0, collab: 0.0, followers: 3163738 },
-  { name: 'Boise State', conf: 'MWC', posts: 4000, adoption: 12.3, logo: 11.8, mention: 0.0, collab: 1.0, followers: 724157 },
-  { name: 'Wisconsin', conf: 'Big 10', posts: 5982, adoption: 12.0, logo: 11.0, mention: 0.2, collab: 1.3, followers: 1812655 },
-  { name: 'Pittsburgh', conf: 'ACC', posts: 2475, adoption: 11.8, logo: 11.6, mention: 0.0, collab: 0.2, followers: 740916 },
-  { name: 'UCLA', conf: 'Big 10', posts: 7077, adoption: 11.6, logo: 8.7, mention: 0.3, collab: 3.4, followers: 5487049 },
-  { name: 'USC', conf: 'Big 10', posts: 5948, adoption: 11.0, logo: 8.6, mention: 0.2, collab: 2.8, followers: 4376029 },
-  { name: 'Robert Morris', conf: 'Horizon', posts: 2687, adoption: 7.4, logo: 7.4, mention: 0.0, collab: 0.0, followers: 465010 },
+  { name: 'Old Dominion', conf: 'Sun Belt', posts: 1577, adoption: 60.1, logoEng: 18.46, mentionEng: 18.06, collabEng: 37.56, followers: 406916 },
+  { name: 'Minnesota', conf: 'Big 10', posts: 2354, adoption: 58.6, logoEng: 29.96, mentionEng: 47.57, collabEng: 50.81, followers: 882398 },
+  { name: 'New Mexico', conf: 'MWC', posts: 1182, adoption: 55.6, logoEng: 26.86, mentionEng: 44.00, collabEng: 50.58, followers: 304204 },
+  { name: 'Texas Tech', conf: 'Big 12', posts: 2355, adoption: 53, logoEng: 30.88, mentionEng: 0, collabEng: 88.62, followers: 957605 },
+  { name: 'Texas A&M', conf: 'SEC', posts: 4317, adoption: 51.4, logoEng: 37.33, mentionEng: 70.72, collabEng: 69.92, followers: 1878601 },
+  { name: 'Virginia Tech', conf: 'ACC', posts: 3978, adoption: 51.3, logoEng: 27.97, mentionEng: 33.05, collabEng: 18.48, followers: 1872167 },
+  { name: 'Nebraska', conf: 'Big 10', posts: 4026, adoption: 50.8, logoEng: 34.47, mentionEng: 50.63, collabEng: 80.32, followers: 3126161 },
+  { name: 'Washington State', conf: 'Pac-12', posts: 948, adoption: 50.4, logoEng: 31.20, mentionEng: 39.11, collabEng: 60.15, followers: 186487 },
+  { name: 'Michigan', conf: 'Big 10', posts: 4042, adoption: 56.2, logoEng: 34.39, mentionEng: 50.18, collabEng: 36.87, followers: 2381406 },
+  { name: 'Miami', conf: 'ACC', posts: 2085, adoption: 49.4, logoEng: 34.87, mentionEng: 16.23, collabEng: 69.85, followers: 1703801 },
+  { name: 'Maryland', conf: 'Big 10', posts: 2790, adoption: 49, logoEng: 22.93, mentionEng: 27.67, collabEng: 40.22, followers: 863472 },
+  { name: 'Notre Dame', conf: 'ACC', posts: 2788, adoption: 48.8, logoEng: 40.76, mentionEng: 69.86, collabEng: 75.29, followers: 1578114 },
+  { name: 'Houston', conf: 'Big 12', posts: 1987, adoption: 48.7, logoEng: 20.32, mentionEng: 0, collabEng: 49.54, followers: 1237637 },
+  { name: 'Auburn', conf: 'SEC', posts: 6405, adoption: 48.1, logoEng: 32.51, mentionEng: 40.00, collabEng: 60.09, followers: 2323541 },
+  { name: 'Ohio State', conf: 'Big 10', posts: 12384, adoption: 47.8, logoEng: 56.85, mentionEng: 87.83, collabEng: 64.56, followers: 5546349 },
+  { name: 'Kentucky', conf: 'SEC', posts: 4299, adoption: 47, logoEng: 26.91, mentionEng: 22.80, collabEng: 42.92, followers: 1671393 },
+  { name: 'Oregon', conf: 'Big 10', posts: 2683, adoption: 46.3, logoEng: 47.44, mentionEng: 43.36, collabEng: 104.75, followers: 1904523 },
+  { name: 'LSU', conf: 'SEC', posts: 5450, adoption: 46.1, logoEng: 36.15, mentionEng: 48.38, collabEng: 77.49, followers: 5170563 },
+  { name: 'UTSA', conf: 'AAC', posts: 3773, adoption: 46, logoEng: 22.45, mentionEng: 30.57, collabEng: 34.82, followers: 835260 },
+  { name: 'NC State', conf: 'ACC', posts: 2565, adoption: 45.6, logoEng: 23.90, mentionEng: 0, collabEng: 48.35, followers: 1238519 },
+  { name: 'Oklahoma', conf: 'SEC', posts: 2802, adoption: 45.4, logoEng: 38.26, mentionEng: 0, collabEng: 0, followers: 1703577 },
+  { name: 'Michigan State', conf: 'Big 10', posts: 2887, adoption: 45.2, logoEng: 33.48, mentionEng: 38.02, collabEng: 50.48, followers: 827265 },
+  { name: 'Baylor', conf: 'Big 12', posts: 7496, adoption: 44.8, logoEng: 42.63, mentionEng: 47.76, collabEng: 111.49, followers: 2110678 },
+  { name: 'Wichita State', conf: 'AAC', posts: 1740, adoption: 44.8, logoEng: 22.14, mentionEng: 31.99, collabEng: 30.09, followers: 347584 },
+  { name: 'UCF', conf: 'Big 12', posts: 2409, adoption: 44.3, logoEng: 30.92, mentionEng: 42.17, collabEng: 44.31, followers: 1202431 },
+  { name: 'Indiana', conf: 'Big 10', posts: 2604, adoption: 44.2, logoEng: 26.75, mentionEng: 27.66, collabEng: 54.12, followers: 1198872 },
+  { name: 'New Mexico State', conf: 'CUSA', posts: 981, adoption: 44.1, logoEng: 20.18, mentionEng: 0, collabEng: 54.20, followers: 0 },
+  { name: 'Cincinnati', conf: 'Big 12', posts: 4968, adoption: 43.7, logoEng: 26.05, mentionEng: 36.40, collabEng: 29.50, followers: 1043067 },
+  { name: 'Penn State', conf: 'Big 10', posts: 8247, adoption: 43.5, logoEng: 37.82, mentionEng: 48.49, collabEng: 108.02, followers: 4114531 },
+  { name: 'Ole Miss', conf: 'SEC', posts: 2309, adoption: 43.5, logoEng: 35.18, mentionEng: 0, collabEng: 61.42, followers: 2032007 },
+  { name: 'Arizona', conf: 'Big 12', posts: 4371, adoption: 43.1, logoEng: 27.02, mentionEng: 33.78, collabEng: 67.42, followers: 3260269 },
+  { name: 'Missouri', conf: 'SEC', posts: 5726, adoption: 42.3, logoEng: 34.86, mentionEng: 38.38, collabEng: 86.37, followers: 1271953 },
+  { name: 'West Virginia', conf: 'Big 12', posts: 2288, adoption: 41.7, logoEng: 44.50, mentionEng: 0, collabEng: 0, followers: 956180 },
+  { name: 'SMU', conf: 'AAC', posts: 1848, adoption: 41.6, logoEng: 20.14, mentionEng: 0, collabEng: 32.85, followers: 994666 },
+  { name: 'Rice', conf: 'AAC', posts: 632, adoption: 41.1, logoEng: 19.80, mentionEng: 0, collabEng: 27.26, followers: 0 },
+  { name: 'Iowa', conf: 'Big 10', posts: 3002, adoption: 40.7, logoEng: 37.57, mentionEng: 40.37, collabEng: 46.35, followers: 1004448 },
+  { name: 'Alabama', conf: 'SEC', posts: 5750, adoption: 40.4, logoEng: 34.34, mentionEng: 47.36, collabEng: 44.94, followers: 3966222 },
+  { name: 'Georgia Tech', conf: 'ACC', posts: 2066, adoption: 40.4, logoEng: 36.10, mentionEng: 0, collabEng: 49.88, followers: 990980 },
+  { name: 'Florida State', conf: 'ACC', posts: 2130, adoption: 40.1, logoEng: 42.50, mentionEng: 0, collabEng: 0, followers: 1333391 },
+  { name: 'Virginia', conf: 'ACC', posts: 6496, adoption: 40, logoEng: 45.62, mentionEng: 38.90, collabEng: 55.11, followers: 2044598 },
+  { name: 'Boston College', conf: 'ACC', posts: 1539, adoption: 40, logoEng: 30.21, mentionEng: 0, collabEng: 47.85, followers: 590503 },
+  { name: 'Rutgers', conf: 'Big 10', posts: 2754, adoption: 39.5, logoEng: 27.39, mentionEng: 30.15, collabEng: 33.87, followers: 702547 },
+  { name: 'Arkansas', conf: 'SEC', posts: 5715, adoption: 36.5, logoEng: 36.05, mentionEng: 50.99, collabEng: 67.65, followers: 2827038 },
+  { name: 'DePaul', conf: 'Big East', posts: 746, adoption: 36.5, logoEng: 19.30, mentionEng: 0, collabEng: 36.17, followers: 121473 },
+  { name: 'Purdue', conf: 'Big 10', posts: 5294, adoption: 36.4, logoEng: 27.59, mentionEng: 38.19, collabEng: 41.02, followers: 1299880 },
+  { name: 'Arizona State', conf: 'Big 12', posts: 7779, adoption: 34.4, logoEng: 25.70, mentionEng: 34.18, collabEng: 54.73, followers: 2269788 },
+  { name: 'Mississippi', conf: 'SEC', posts: 2239, adoption: 34.4, logoEng: 23.38, mentionEng: 0, collabEng: 0, followers: 986747 },
+  { name: 'BYU', conf: 'Big 12', posts: 7519, adoption: 34.3, logoEng: 28.50, mentionEng: 35.20, collabEng: 48.10, followers: 2693744 },
+  { name: 'George Mason', conf: 'A-10', posts: 1959, adoption: 33.8, logoEng: 24.19, mentionEng: 33.46, collabEng: 12.39, followers: 403604 },
+  { name: 'Washington', conf: 'Big 10', posts: 2949, adoption: 31.2, logoEng: 29.95, mentionEng: 37.75, collabEng: 79.04, followers: 1005485 },
+  { name: 'Vanderbilt', conf: 'SEC', posts: 2246, adoption: 30, logoEng: 25.10, mentionEng: 0, collabEng: 115.29, followers: 962963 },
+  { name: 'San Diego State', conf: 'MWC', posts: 3406, adoption: 26.8, logoEng: 23.77, mentionEng: 0, collabEng: 68.28, followers: 907225 },
+  { name: 'Texas', conf: 'SEC', posts: 6186, adoption: 26.4, logoEng: 37.31, mentionEng: 44.84, collabEng: 86.53, followers: 3552007 },
+  { name: 'TCU', conf: 'Big 12', posts: 1707, adoption: 25.8, logoEng: 27.90, mentionEng: 0, collabEng: 0, followers: 732360 },
+  { name: 'San Diego', conf: 'WCC', posts: 2031, adoption: 25.2, logoEng: 15.98, mentionEng: 21.93, collabEng: 107.09, followers: 439463 },
+  { name: 'Creighton', conf: 'Big East', posts: 2592, adoption: 24.6, logoEng: 28.23, mentionEng: 35.07, collabEng: 41.15, followers: 438009 },
+  { name: 'Colorado', conf: 'Big 12', posts: 1406, adoption: 24.5, logoEng: 37.40, mentionEng: 0, collabEng: 0, followers: 1506666 },
+  { name: 'Kansas', conf: 'Big 12', posts: 2423, adoption: 23.1, logoEng: 28.68, mentionEng: 0, collabEng: 97.37, followers: 1266884 },
+  { name: 'Iowa State', conf: 'Big 12', posts: 2248, adoption: 22.6, logoEng: 39.86, mentionEng: 26.33, collabEng: 277.84, followers: 1238932 },
+  { name: 'Clemson', conf: 'ACC', posts: 3360, adoption: 20.4, logoEng: 35.76, mentionEng: 20.25, collabEng: 294.15, followers: 1726437 },
+  { name: 'Illinois', conf: 'Big 10', posts: 3328, adoption: 20.3, logoEng: 32.81, mentionEng: 40.17, collabEng: 45.90, followers: 956415 },
+  { name: 'Utah', conf: 'Big 12', posts: 2152, adoption: 18.2, logoEng: 35.71, mentionEng: 0, collabEng: 0, followers: 1383229 },
+  { name: 'Oklahoma State', conf: 'Big 12', posts: 1921, adoption: 18.1, logoEng: 26.56, mentionEng: 0, collabEng: 0, followers: 1059619 },
+  { name: 'Kansas State', conf: 'Big 12', posts: 1653, adoption: 17.8, logoEng: 55.58, mentionEng: 0, collabEng: 0, followers: 634620 },
+  { name: 'Duke', conf: 'ACC', posts: 1951, adoption: 16.6, logoEng: 22.40, mentionEng: 0, collabEng: 49.10, followers: 1435498 },
+  { name: 'UNC', conf: 'ACC', posts: 3057, adoption: 16.3, logoEng: 36.18, mentionEng: 19.32, collabEng: 371.32, followers: 1434088 },
+  { name: 'Georgia', conf: 'SEC', posts: 6868, adoption: 23.7, logoEng: 23.33, mentionEng: 40.36, collabEng: 76.56, followers: 2864099 },
+  { name: 'Providence', conf: 'Big East', posts: 679, adoption: 15.8, logoEng: 20.43, mentionEng: 0, collabEng: 32.50, followers: 366758 },
+  { name: 'Tennessee', conf: 'SEC', posts: 2459, adoption: 13.8, logoEng: 32.32, mentionEng: 21.92, collabEng: 87.13, followers: 1848323 },
+  { name: 'Florida', conf: 'SEC', posts: 2693, adoption: 12.7, logoEng: 33.36, mentionEng: 0, collabEng: 0, followers: 3163738 },
+  { name: 'Boise State', conf: 'MWC', posts: 4000, adoption: 12.3, logoEng: 35.18, mentionEng: 0, collabEng: 43.16, followers: 724157 },
+  { name: 'Wisconsin', conf: 'Big 10', posts: 5983, adoption: 42.0, logoEng: 32.82, mentionEng: 19.67, collabEng: 65.11, followers: 1812655 },
+  { name: 'Pittsburgh', conf: 'ACC', posts: 2475, adoption: 11.8, logoEng: 40.72, mentionEng: 0, collabEng: 122.46, followers: 740916 },
+  { name: 'UCLA', conf: 'Big 10', posts: 7077, adoption: 33.5, logoEng: 32.89, mentionEng: 21.37, collabEng: 56.61, followers: 5487049 },
+  { name: 'USC', conf: 'Big 10', posts: 5948, adoption: 38.3, logoEng: 34.18, mentionEng: 54.59, collabEng: 86.52, followers: 4376029 },
+  { name: 'Robert Morris', conf: 'Horizon', posts: 2687, adoption: 7.4, logoEng: 11.35, mentionEng: 0, collabEng: 0, followers: 465010 },
 ];
 
-const conferenceAvg = { adoption: 33.8, logo: 31.6, mention: 5.8, collab: 2.3 };
-const ncaaD1Avg = { adoption: 34.7, logo: 32.7, mention: 6.2, collab: 2.2 };
+const conferenceAvg = { adoption: 42.5, logoEng: 34.1, mentionEng: 41.4, collabEng: 61.5 };
+const ncaaD1Avg = { adoption: 36.7, logoEng: 31.3, mentionEng: 28.8, collabEng: 57.4 };
 // ═══════════════════════════════════════════════════════════════
 // UTILITY FUNCTIONS
 // ═══════════════════════════════════════════════════════════════
@@ -842,8 +844,8 @@ function IPModeCard({
 
       <div className="mb-4">
         <div className="flex items-center gap-1 mb-1">
-          <p className="text-xs uppercase tracking-wider text-gray-500">Engagement Delta vs Baseline</p>
-          <Tooltip content="Percent difference vs baseline engagement rate.">
+          <p className="text-xs uppercase tracking-wider text-gray-500">Engagement Lift vs Baseline</p>
+          <Tooltip content="Percent difference in engagement rate compared to posts without this signal.">
             <Info className="w-3 h-3 text-gray-400 cursor-help" />
           </Tooltip>
         </div>
@@ -1538,7 +1540,6 @@ function PartnershipsTab() {
     () =>
       new Set([
         'on3recruits',
-        'thehenrylegacy',
         'locationfootball',
         'ohiostathletics',
         'whereimfrom',
@@ -1580,6 +1581,9 @@ function PartnershipsTab() {
         }
         // Override: show Fortnite logo for @epicpartner
         nextMap['epicpartner'] = 'https://storage.googleapis.com/jaba-brands-logos/fortnite.jpg';
+        // Override: CleverMade logo
+        nextMap['clever_made'] = '/cm.jpg';
+        nextMap['clevermade'] = '/cm.jpg';
         if (!canceled) {
           setBrandLogoMap(nextMap);
         }
@@ -2327,38 +2331,40 @@ function BestCollaboratorsTab() {
 // ═══════════════════════════════════════════════════════════════
 function BenchmarkTab() {
   const [benchmarkType, setBenchmarkType] = useState<'conference' | 'ncaa'>('conference');
-  const [rankingMetric, setRankingMetric] = useState<'followers' | 'posts' | 'adoption' | 'mention' | 'logo' | 'collab'>('followers');
+  const [rankingMetric, setRankingMetric] = useState<'followers' | 'posts' | 'ipPosts' | 'mentionEng' | 'logoEng' | 'collabEng'>('followers');
   const isConference = benchmarkType === 'conference';
   const schools = isConference ? big10Schools : ncaaD1Schools;
   const benchmarkLabel = isConference ? 'Big 10' : 'NCAA D1';
   const metricLabels = {
     followers: 'Followers',
     posts: 'Total Posts',
-    adoption: 'IP Adoption',
-    mention: 'Mention Rate',
-    logo: 'Visual IP Rate',
-    collab: 'Collaboration Rate',
+    ipPosts: 'IP Posts',
+    mentionEng: 'Mention Eng Rate',
+    logoEng: 'Visual IP Eng Rate',
+    collabEng: 'Collab Eng Rate',
   } as const;
   const metricAverage = {
     followers: 0,
     posts: 0,
-    adoption: isConference ? conferenceAvg.adoption : ncaaD1Avg.adoption,
-    mention: isConference ? conferenceAvg.mention : ncaaD1Avg.mention,
-    logo: isConference ? conferenceAvg.logo : ncaaD1Avg.logo,
-    collab: isConference ? conferenceAvg.collab : ncaaD1Avg.collab,
+    ipPosts: 0,
+    mentionEng: isConference ? conferenceAvg.mentionEng : ncaaD1Avg.mentionEng,
+    logoEng: isConference ? conferenceAvg.logoEng : ncaaD1Avg.logoEng,
+    collabEng: isConference ? conferenceAvg.collabEng : ncaaD1Avg.collabEng,
   };
 
   const rankedSchools = useMemo(() => {
+    if (rankingMetric === 'ipPosts') {
+      return [...schools].sort((a, b) => (b.posts * b.adoption / 100) - (a.posts * a.adoption / 100));
+    }
     return [...schools].sort((a, b) => b[rankingMetric] - a[rankingMetric]);
   }, [schools, rankingMetric]);
 
   const ohioIndex = rankedSchools.findIndex((s) => s.name === 'Ohio State');
   const ohioRank = ohioIndex >= 0 ? ohioIndex + 1 : null;
   const ohioSchool = rankedSchools.find((s) => s.name === 'Ohio State') ?? null;
-  const ohioValue = ohioSchool ? ohioSchool[rankingMetric] : 0;
+  const ohioValue = ohioSchool ? (rankingMetric === 'ipPosts' ? Math.round(ohioSchool.posts * ohioSchool.adoption / 100) : ohioSchool[rankingMetric]) : 0;
   const avgValue = metricAverage[rankingMetric];
   const deltaVsAvg = ohioValue - avgValue;
-  const topSchool = rankedSchools[0];
 
   return (
     <div className="space-y-6">
@@ -2414,14 +2420,14 @@ function BenchmarkTab() {
           <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Ohio State Value</p>
           <div className="flex items-end gap-2">
             <p className="text-4xl font-black text-gray-900">
-              {rankingMetric === 'followers' || rankingMetric === 'posts' ? formatNumber(ohioValue) : `${ohioValue}%`}
+              {rankingMetric === 'followers' || rankingMetric === 'posts' || rankingMetric === 'ipPosts' ? formatNumber(ohioValue) : `${ohioValue}%`}
             </p>
             {avgValue > 0 && (
               <p
                 className="text-sm font-semibold mb-1"
                 style={{ color: deltaVsAvg >= 0 ? colors.positive : colors.negative }}
               >
-                {deltaVsAvg >= 0 ? '\u2191' : '\u2193'} {Math.abs(deltaVsAvg).toFixed(rankingMetric === 'collab' ? 2 : 1)}%
+                {deltaVsAvg >= 0 ? '\u2191' : '\u2193'} {Math.abs(deltaVsAvg).toFixed(1)}%
               </p>
             )}
           </div>
@@ -2434,10 +2440,24 @@ function BenchmarkTab() {
             <p className="text-xs uppercase tracking-wider font-semibold" style={{ color: colors.positive }}>Key Insight</p>
           </div>
           <p className="text-sm text-gray-700">
-            {topSchool
-              ? <>Current leader is <span className="font-semibold">{topSchool.name}</span> at {rankingMetric === 'followers' || rankingMetric === 'posts' ? formatNumber(topSchool[rankingMetric]) : `${topSchool[rankingMetric]}%`}. Ohio State is {ohioRank ? `#${ohioRank}` : 'unranked'} with {rankingMetric === 'followers' || rankingMetric === 'posts' ? formatNumber(ohioValue) : `${ohioValue}%`}.</>
-              : <>No ranking data available for this view.</>
-            }
+            {(() => {
+              const isCount = rankingMetric === 'followers' || rankingMetric === 'posts' || rankingMetric === 'ipPosts';
+              const getVal = (s: typeof rankedSchools[0]) =>
+                rankingMetric === 'ipPosts' ? Math.round(s.posts * s.adoption / 100) : s[rankingMetric] as number;
+              const ttun = rankedSchools.find(s => s.name === 'Michigan');
+              if (!ttun || !ohioSchool) return <>No ranking data available for this view.</>;
+              const ttunValue = getVal(ttun);
+              const gap = (ohioValue as number) - ttunValue;
+              const ahead = gap >= 0;
+              if (isCount) {
+                return (
+                  <>Ohio State has <span className="font-semibold">{formatNumber(Math.abs(gap))} {ahead ? 'more' : 'fewer'} {metricLabels[rankingMetric].toLowerCase()}</span> than That Team Up North.</>
+                );
+              }
+              return (
+                <>Ohio State's {metricLabels[rankingMetric].toLowerCase()} is <span className="font-semibold">{Math.abs(gap).toFixed(1)}pp {ahead ? 'above' : 'below'}</span> That Team Up North ({(ohioValue as number).toFixed(1)}% vs {ttunValue.toFixed(1)}%).</>
+              );
+            })()}
           </p>
         </div>
       </div>
@@ -2455,11 +2475,10 @@ function BenchmarkTab() {
                 {!isConference && <th className="text-left px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Conf</th>}
                 <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('followers')}>Followers {rankingMetric === 'followers' ? '\u25BC' : ''}</th>
                 <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('posts')}>Total Posts {rankingMetric === 'posts' ? '\u25BC' : ''}</th>
-                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('adoption')}>IP Posts {rankingMetric === 'adoption' ? '\u25BC' : ''}</th>
-                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('adoption')}>IP Adoption {rankingMetric === 'adoption' ? '\u25BC' : ''}</th>
-                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('logo')}>Visual IP {rankingMetric === 'logo' ? '\u25BC' : ''}</th>
-                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('mention')}>Mention {rankingMetric === 'mention' ? '\u25BC' : ''}</th>
-                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('collab')}>Collab {rankingMetric === 'collab' ? '\u25BC' : ''}</th>
+                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('ipPosts')}>IP Posts {rankingMetric === 'ipPosts' ? '\u25BC' : ''}</th>
+                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('logoEng')}>Visual IP Eng {rankingMetric === 'logoEng' ? '\u25BC' : ''}</th>
+                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('mentionEng')}>Mention Eng {rankingMetric === 'mentionEng' ? '\u25BC' : ''}</th>
+                <th className="text-right px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell cursor-pointer hover:text-white/80 select-none" onClick={() => setRankingMetric('collabEng')}>Collab Eng {rankingMetric === 'collabEng' ? '\u25BC' : ''}</th>
               </tr>
             </thead>
             <tbody>
@@ -2497,7 +2516,7 @@ function BenchmarkTab() {
                         {isOSU && (
                           <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: colors.scarlet }} />
                         )}
-                        {school.name}
+                        {renderSchoolName(school.name)}
                         {idx < 3 && (
                           <span
                             className="text-[10px] px-1.5 py-0.5 rounded-full font-bold"
@@ -2517,10 +2536,9 @@ function BenchmarkTab() {
                     </td>
                     <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{formatNumber(school.posts)}</td>
                     <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{formatNumber(Math.round(school.posts * school.adoption / 100))}</td>
-                    <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.adoption}%</td>
-                    <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.logo}%</td>
-                    <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.mention}%</td>
-                    <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.collab}%</td>
+                    <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.logoEng.toFixed(1)}%</td>
+                    <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.mentionEng.toFixed(1)}%</td>
+                    <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.collabEng.toFixed(1)}%</td>
                   </tr>
                 );
               })}
@@ -3521,10 +3539,13 @@ function TeamPageLeaderboard() {
     let cancelled = false;
     const load = async () => {
       try {
-        const res = await fetch('/data/roster_teams.json');
-        if (!res.ok) return;
-        const rows = (await res.json()) as TeamRosterRow[];
-        if (!cancelled) setRawRows(rows);
+        for (const path of ['/data/ip-roster-teams.json', '/data/roster_teams.json']) {
+          const res = await fetch(path);
+          if (!res.ok) continue;
+          const rows = (await res.json()) as TeamRosterRow[];
+          if (!cancelled) setRawRows(rows);
+          break;
+        }
       } catch { /* ignore */ }
     };
     load();
@@ -3678,7 +3699,7 @@ function TeamPageLeaderboard() {
                   <td className={`px-4 py-3 ${isOSU ? 'font-bold' : 'font-semibold'}`} style={{ color: isOSU ? colors.scarlet : colors.text }}>
                     <div className="flex items-center gap-2">
                       {isOSU && <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: colors.scarlet }} />}
-                      {school.name}
+                      {renderSchoolName(school.name)}
                     </div>
                   </td>
                   {!isConference && <td className="px-4 py-3 text-xs text-gray-500 hidden md:table-cell">{school.conf}</td>}

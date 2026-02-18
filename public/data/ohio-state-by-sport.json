@@ -1,92 +1,1577 @@
 {
-  "FOOTBALL": {
-    "totalPosts": 1498,
+  "ALL_SPORTS": {
+    "totalPosts": 12384,
     "mention": {
-      "with": { "posts": 309, "avgLikes": 8500, "avgComments": 120, "engagementRate": 0.0015 },
-      "without": { "posts": 1189, "avgLikes": 6200, "avgComments": 92, "engagementRate": 0.0011 }
+      "with": {
+        "posts": 2506,
+        "avgLikes": 2547,
+        "avgComments": 43,
+        "engagementRate": 0.8783
+      },
+      "without": {
+        "posts": 9878,
+        "avgLikes": 1791,
+        "avgComments": 46,
+        "engagementRate": 0.2208
+      }
     },
     "logo": {
-      "with": { "posts": 344, "avgLikes": 9100, "avgComments": 125, "engagementRate": 0.0016 },
-      "without": { "posts": 1154, "avgLikes": 5800, "avgComments": 88, "engagementRate": 0.001 }
+      "with": {
+        "posts": 5245,
+        "avgLikes": 3145,
+        "avgComments": 57,
+        "engagementRate": 0.5685
+      },
+      "without": {
+        "posts": 7139,
+        "avgLikes": 1061,
+        "avgComments": 37,
+        "engagementRate": 0.1961
+      }
     },
     "collab": {
-      "with": { "posts": 22, "avgLikes": 18000, "avgComments": 250, "engagementRate": 0.0032 },
-      "without": { "posts": 1476, "avgLikes": 6650, "avgComments": 98, "engagementRate": 0.0012 }
+      "with": {
+        "posts": 195,
+        "avgLikes": 12935,
+        "avgComments": 113,
+        "engagementRate": 0.6456
+      },
+      "without": {
+        "posts": 12189,
+        "avgLikes": 1768,
+        "avgComments": 45,
+        "engagementRate": 0.3491
+      }
     }
   },
-  "MENS_BASKETBALL": {
-    "totalPosts": 212,
+  "FOOTBALL": {
+    "totalPosts": 1975,
     "mention": {
-      "with": { "posts": 82, "avgLikes": 4200, "avgComments": 52, "engagementRate": 0.0014 },
-      "without": { "posts": 130, "avgLikes": 2400, "avgComments": 31, "engagementRate": 0.00085 }
+      "with": {
+        "posts": 334,
+        "avgLikes": 10118,
+        "avgComments": 100,
+        "engagementRate": 0.7722
+      },
+      "without": {
+        "posts": 1641,
+        "avgLikes": 7479,
+        "avgComments": 117,
+        "engagementRate": 0.2998
+      }
     },
     "logo": {
-      "with": { "posts": 55, "avgLikes": 5100, "avgComments": 61, "engagementRate": 0.0017 },
-      "without": { "posts": 157, "avgLikes": 2200, "avgComments": 30, "engagementRate": 0.00075 }
+      "with": {
+        "posts": 1139,
+        "avgLikes": 10696,
+        "avgComments": 139,
+        "engagementRate": 0.5316
+      },
+      "without": {
+        "posts": 836,
+        "avgLikes": 4152,
+        "avgComments": 81,
+        "engagementRate": 0.1728
+      }
     },
     "collab": {
-      "with": { "posts": 1, "avgLikes": 12000, "avgComments": 180, "engagementRate": 0.004 },
-      "without": { "posts": 211, "avgLikes": 3000, "avgComments": 38, "engagementRate": 0.001 }
+      "with": {
+        "posts": 91,
+        "avgLikes": 24673,
+        "avgComments": 208,
+        "engagementRate": 0.8692
+      },
+      "without": {
+        "posts": 1884,
+        "avgLikes": 7117,
+        "avgComments": 110,
+        "engagementRate": 0.356
+      }
+    }
+  },
+  "DANCE": {
+    "totalPosts": 847,
+    "mention": {
+      "with": {
+        "posts": 183,
+        "avgLikes": 1752,
+        "avgComments": 40,
+        "engagementRate": 0.1165
+      },
+      "without": {
+        "posts": 664,
+        "avgLikes": 1572,
+        "avgComments": 30,
+        "engagementRate": 0.0937
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 365,
+        "avgLikes": 1579,
+        "avgComments": 33,
+        "engagementRate": 0.1088
+      },
+      "without": {
+        "posts": 482,
+        "avgLikes": 1635,
+        "avgComments": 32,
+        "engagementRate": 0.0909
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 0,
+        "avgLikes": 0,
+        "avgComments": 0,
+        "engagementRate": 0
+      },
+      "without": {
+        "posts": 847,
+        "avgLikes": 1611,
+        "avgComments": 32,
+        "engagementRate": 0.0986
+      }
+    }
+  },
+  "CHEER": {
+    "totalPosts": 812,
+    "mention": {
+      "with": {
+        "posts": 141,
+        "avgLikes": 433,
+        "avgComments": 23,
+        "engagementRate": 0.1741
+      },
+      "without": {
+        "posts": 671,
+        "avgLikes": 371,
+        "avgComments": 19,
+        "engagementRate": 0.1157
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 457,
+        "avgLikes": 433,
+        "avgComments": 20,
+        "engagementRate": 0.1575
+      },
+      "without": {
+        "posts": 355,
+        "avgLikes": 315,
+        "avgComments": 21,
+        "engagementRate": 0.0851
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 0,
+        "avgLikes": 0,
+        "avgComments": 0,
+        "engagementRate": 0
+      },
+      "without": {
+        "posts": 812,
+        "avgLikes": 382,
+        "avgComments": 20,
+        "engagementRate": 0.1258
+      }
     }
   },
   "MENS_WRESTLING": {
-    "totalPosts": 468,
+    "totalPosts": 553,
     "mention": {
-      "with": { "posts": 148, "avgLikes": 1800, "avgComments": 42, "engagementRate": 0.00062 },
-      "without": { "posts": 320, "avgLikes": 980, "avgComments": 28, "engagementRate": 0.00034 }
+      "with": {
+        "posts": 228,
+        "avgLikes": 2291,
+        "avgComments": 21,
+        "engagementRate": 0.3847
+      },
+      "without": {
+        "posts": 325,
+        "avgLikes": 1716,
+        "avgComments": 18,
+        "engagementRate": 0.2494
+      }
     },
     "logo": {
-      "with": { "posts": 96, "avgLikes": 2100, "avgComments": 48, "engagementRate": 0.00072 },
-      "without": { "posts": 372, "avgLikes": 900, "avgComments": 26, "engagementRate": 0.00031 }
+      "with": {
+        "posts": 230,
+        "avgLikes": 2390,
+        "avgComments": 23,
+        "engagementRate": 0.42
+      },
+      "without": {
+        "posts": 323,
+        "avgLikes": 1642,
+        "avgComments": 16,
+        "engagementRate": 0.2234
+      }
     },
     "collab": {
-      "with": { "posts": 0, "avgLikes": 0, "avgComments": 0, "engagementRate": 0 },
-      "without": { "posts": 468, "avgLikes": 1250, "avgComments": 32, "engagementRate": 0.00043 }
+      "with": {
+        "posts": 1,
+        "avgLikes": 801,
+        "avgComments": 1,
+        "engagementRate": 0.1935
+      },
+      "without": {
+        "posts": 552,
+        "avgLikes": 1955,
+        "avgComments": 19,
+        "engagementRate": 0.3054
+      }
+    }
+  },
+  "WOMENS_LACROSSE": {
+    "totalPosts": 515,
+    "mention": {
+      "with": {
+        "posts": 25,
+        "avgLikes": 185,
+        "avgComments": 49,
+        "engagementRate": 0.1078
+      },
+      "without": {
+        "posts": 490,
+        "avgLikes": 109,
+        "avgComments": 36,
+        "engagementRate": 0.0679
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 114,
+        "avgLikes": 123,
+        "avgComments": 40,
+        "engagementRate": 0.0785
+      },
+      "without": {
+        "posts": 401,
+        "avgLikes": 110,
+        "avgComments": 35,
+        "engagementRate": 0.0673
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 0,
+        "avgLikes": 0,
+        "avgComments": 0,
+        "engagementRate": 0
+      },
+      "without": {
+        "posts": 515,
+        "avgLikes": 113,
+        "avgComments": 36,
+        "engagementRate": 0.0698
+      }
+    }
+  },
+  "MENS_BASEBALL": {
+    "totalPosts": 464,
+    "mention": {
+      "with": {
+        "posts": 113,
+        "avgLikes": 840,
+        "avgComments": 32,
+        "engagementRate": 0.341
+      },
+      "without": {
+        "posts": 351,
+        "avgLikes": 575,
+        "avgComments": 34,
+        "engagementRate": 0.2327
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 230,
+        "avgLikes": 824,
+        "avgComments": 38,
+        "engagementRate": 0.3145
+      },
+      "without": {
+        "posts": 234,
+        "avgLikes": 459,
+        "avgComments": 29,
+        "engagementRate": 0.2047
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 7,
+        "avgLikes": 1781,
+        "avgComments": 10,
+        "engagementRate": 0.5628
+      },
+      "without": {
+        "posts": 457,
+        "avgLikes": 622,
+        "avgComments": 34,
+        "engagementRate": 0.2544
+      }
     }
   },
   "WOMENS_BASKETBALL": {
-    "totalPosts": 385,
+    "totalPosts": 448,
     "mention": {
-      "with": { "posts": 122, "avgLikes": 2650, "avgComments": 38, "engagementRate": 0.00089 },
-      "without": { "posts": 263, "avgLikes": 1420, "avgComments": 24, "engagementRate": 0.00048 }
+      "with": {
+        "posts": 179,
+        "avgLikes": 1690,
+        "avgComments": 21,
+        "engagementRate": 0.1569
+      },
+      "without": {
+        "posts": 269,
+        "avgLikes": 1554,
+        "avgComments": 40,
+        "engagementRate": 0.1062
+      }
     },
     "logo": {
-      "with": { "posts": 88, "avgLikes": 3100, "avgComments": 44, "engagementRate": 0.00105 },
-      "without": { "posts": 297, "avgLikes": 1300, "avgComments": 22, "engagementRate": 0.00044 }
+      "with": {
+        "posts": 228,
+        "avgLikes": 1875,
+        "avgComments": 28,
+        "engagementRate": 0.1487
+      },
+      "without": {
+        "posts": 220,
+        "avgLikes": 1332,
+        "avgComments": 37,
+        "engagementRate": 0.1035
+      }
     },
     "collab": {
-      "with": { "posts": 0, "avgLikes": 0, "avgComments": 0, "engagementRate": 0 },
-      "without": { "posts": 385, "avgLikes": 1850, "avgComments": 28, "engagementRate": 0.00063 }
+      "with": {
+        "posts": 22,
+        "avgLikes": 2832,
+        "avgComments": 28,
+        "engagementRate": 0.1594
+      },
+      "without": {
+        "posts": 426,
+        "avgLikes": 1545,
+        "avgComments": 33,
+        "engagementRate": 0.1248
+      }
+    }
+  },
+  "SOFTBALL": {
+    "totalPosts": 430,
+    "mention": {
+      "with": {
+        "posts": 67,
+        "avgLikes": 607,
+        "avgComments": 27,
+        "engagementRate": 0.3756
+      },
+      "without": {
+        "posts": 363,
+        "avgLikes": 176,
+        "avgComments": 32,
+        "engagementRate": 0.1029
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 167,
+        "avgLikes": 368,
+        "avgComments": 31,
+        "engagementRate": 0.223
+      },
+      "without": {
+        "posts": 263,
+        "avgLikes": 163,
+        "avgComments": 32,
+        "engagementRate": 0.0961
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 3,
+        "avgLikes": 1346,
+        "avgComments": 7,
+        "engagementRate": 0.531
+      },
+      "without": {
+        "posts": 427,
+        "avgLikes": 235,
+        "avgComments": 32,
+        "engagementRate": 0.1427
+      }
+    }
+  },
+  "WOMENS_GYMNASTICS": {
+    "totalPosts": 426,
+    "mention": {
+      "with": {
+        "posts": 106,
+        "avgLikes": 2378,
+        "avgComments": 26,
+        "engagementRate": 0.4942
+      },
+      "without": {
+        "posts": 320,
+        "avgLikes": 373,
+        "avgComments": 27,
+        "engagementRate": 0.1348
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 155,
+        "avgLikes": 1561,
+        "avgComments": 27,
+        "engagementRate": 0.3236
+      },
+      "without": {
+        "posts": 271,
+        "avgLikes": 477,
+        "avgComments": 26,
+        "engagementRate": 0.1674
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 4,
+        "avgLikes": 1441,
+        "avgComments": 13,
+        "engagementRate": 0.3983
+      },
+      "without": {
+        "posts": 422,
+        "avgLikes": 866,
+        "avgComments": 27,
+        "engagementRate": 0.2226
+      }
+    }
+  },
+  "SYNCHRONIZED_SWIMMING": {
+    "totalPosts": 404,
+    "mention": {
+      "with": {
+        "posts": 65,
+        "avgLikes": 180,
+        "avgComments": 33,
+        "engagementRate": 0.1368
+      },
+      "without": {
+        "posts": 339,
+        "avgLikes": 558,
+        "avgComments": 30,
+        "engagementRate": 0.1424
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 106,
+        "avgLikes": 197,
+        "avgComments": 35,
+        "engagementRate": 0.143
+      },
+      "without": {
+        "posts": 298,
+        "avgLikes": 604,
+        "avgComments": 29,
+        "engagementRate": 0.1409
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 0,
+        "avgLikes": 0,
+        "avgComments": 0,
+        "engagementRate": 0
+      },
+      "without": {
+        "posts": 404,
+        "avgLikes": 497,
+        "avgComments": 31,
+        "engagementRate": 0.1415
+      }
+    }
+  },
+  "WOMENS_SOCCER": {
+    "totalPosts": 379,
+    "mention": {
+      "with": {
+        "posts": 43,
+        "avgLikes": 1823,
+        "avgComments": 65,
+        "engagementRate": 1.4481
+      },
+      "without": {
+        "posts": 336,
+        "avgLikes": 136,
+        "avgComments": 46,
+        "engagementRate": 0.0997
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 129,
+        "avgLikes": 669,
+        "avgComments": 61,
+        "engagementRate": 0.5437
+      },
+      "without": {
+        "posts": 250,
+        "avgLikes": 151,
+        "avgComments": 42,
+        "engagementRate": 0.1025
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 5,
+        "avgLikes": 1002,
+        "avgComments": 21,
+        "engagementRate": 0.4695
+      },
+      "without": {
+        "posts": 374,
+        "avgLikes": 318,
+        "avgComments": 49,
+        "engagementRate": 0.2498
+      }
+    }
+  },
+  "WOMENS_VOLLEYBALL": {
+    "totalPosts": 362,
+    "mention": {
+      "with": {
+        "posts": 91,
+        "avgLikes": 2817,
+        "avgComments": 37,
+        "engagementRate": 0.7197
+      },
+      "without": {
+        "posts": 271,
+        "avgLikes": 1623,
+        "avgComments": 96,
+        "engagementRate": 0.1254
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 151,
+        "avgLikes": 1624,
+        "avgComments": 38,
+        "engagementRate": 0.4936
+      },
+      "without": {
+        "posts": 211,
+        "avgLikes": 2137,
+        "avgComments": 112,
+        "engagementRate": 0.1183
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 19,
+        "avgLikes": 2051,
+        "avgComments": 56,
+        "engagementRate": 0.6075
+      },
+      "without": {
+        "posts": 343,
+        "avgLikes": 1916,
+        "avgComments": 82,
+        "engagementRate": 0.2564
+      }
+    }
+  },
+  "MENS_TRACK_AND_FIELD": {
+    "totalPosts": 348,
+    "mention": {
+      "with": {
+        "posts": 109,
+        "avgLikes": 792,
+        "avgComments": 34,
+        "engagementRate": 0.4358
+      },
+      "without": {
+        "posts": 239,
+        "avgLikes": 628,
+        "avgComments": 34,
+        "engagementRate": 0.3562
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 153,
+        "avgLikes": 648,
+        "avgComments": 43,
+        "engagementRate": 0.3519
+      },
+      "without": {
+        "posts": 195,
+        "avgLikes": 704,
+        "avgComments": 26,
+        "engagementRate": 0.404
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 0,
+        "avgLikes": 0,
+        "avgComments": 0,
+        "engagementRate": 0
+      },
+      "without": {
+        "posts": 348,
+        "avgLikes": 680,
+        "avgComments": 34,
+        "engagementRate": 0.3811
+      }
+    }
+  },
+  "WOMENS_FIELD_HOCKEY": {
+    "totalPosts": 347,
+    "mention": {
+      "with": {
+        "posts": 53,
+        "avgLikes": 783,
+        "avgComments": 38,
+        "engagementRate": 0.2387
+      },
+      "without": {
+        "posts": 294,
+        "avgLikes": 288,
+        "avgComments": 41,
+        "engagementRate": 0.1287
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 125,
+        "avgLikes": 586,
+        "avgComments": 47,
+        "engagementRate": 0.1881
+      },
+      "without": {
+        "posts": 222,
+        "avgLikes": 238,
+        "avgComments": 37,
+        "engagementRate": 0.1214
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 0,
+        "avgLikes": 0,
+        "avgComments": 0,
+        "engagementRate": 0
+      },
+      "without": {
+        "posts": 347,
+        "avgLikes": 363,
+        "avgComments": 41,
+        "engagementRate": 0.1455
+      }
+    }
+  },
+  "MENS_SWIM": {
+    "totalPosts": 344,
+    "mention": {
+      "with": {
+        "posts": 84,
+        "avgLikes": 471,
+        "avgComments": 42,
+        "engagementRate": 0.3195
+      },
+      "without": {
+        "posts": 260,
+        "avgLikes": 261,
+        "avgComments": 23,
+        "engagementRate": 0.1726
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 148,
+        "avgLikes": 325,
+        "avgComments": 31,
+        "engagementRate": 0.2356
+      },
+      "without": {
+        "posts": 196,
+        "avgLikes": 303,
+        "avgComments": 25,
+        "engagementRate": 0.188
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 0,
+        "avgLikes": 0,
+        "avgComments": 0,
+        "engagementRate": 0
+      },
+      "without": {
+        "posts": 344,
+        "avgLikes": 312,
+        "avgComments": 27,
+        "engagementRate": 0.2085
+      }
+    }
+  },
+  "MENS_LACROSSE": {
+    "totalPosts": 332,
+    "mention": {
+      "with": {
+        "posts": 74,
+        "avgLikes": 1670,
+        "avgComments": 55,
+        "engagementRate": 0.442
+      },
+      "without": {
+        "posts": 258,
+        "avgLikes": 677,
+        "avgComments": 27,
+        "engagementRate": 0.1931
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 163,
+        "avgLikes": 1363,
+        "avgComments": 40,
+        "engagementRate": 0.3195
+      },
+      "without": {
+        "posts": 169,
+        "avgLikes": 451,
+        "avgComments": 27,
+        "engagementRate": 0.1801
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 4,
+        "avgLikes": 8460,
+        "avgComments": 16,
+        "engagementRate": 0.5334
+      },
+      "without": {
+        "posts": 328,
+        "avgLikes": 807,
+        "avgComments": 33,
+        "engagementRate": 0.2451
+      }
+    }
+  },
+  "WOMENS_TRACK_AND_FIELD": {
+    "totalPosts": 325,
+    "mention": {
+      "with": {
+        "posts": 71,
+        "avgLikes": 1655,
+        "avgComments": 44,
+        "engagementRate": 0.2504
+      },
+      "without": {
+        "posts": 254,
+        "avgLikes": 428,
+        "avgComments": 54,
+        "engagementRate": 0.2107
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 80,
+        "avgLikes": 1433,
+        "avgComments": 56,
+        "engagementRate": 0.2242
+      },
+      "without": {
+        "posts": 245,
+        "avgLikes": 455,
+        "avgComments": 50,
+        "engagementRate": 0.2178
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 0,
+        "avgLikes": 0,
+        "avgComments": 0,
+        "engagementRate": 0
+      },
+      "without": {
+        "posts": 325,
+        "avgLikes": 696,
+        "avgComments": 52,
+        "engagementRate": 0.2194
+      }
+    }
+  },
+  "FENCING": {
+    "totalPosts": 317,
+    "mention": {
+      "with": {
+        "posts": 34,
+        "avgLikes": 252,
+        "avgComments": 35,
+        "engagementRate": 0.2223
+      },
+      "without": {
+        "posts": 283,
+        "avgLikes": 210,
+        "avgComments": 16,
+        "engagementRate": 0.159
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 65,
+        "avgLikes": 264,
+        "avgComments": 28,
+        "engagementRate": 0.207
+      },
+      "without": {
+        "posts": 252,
+        "avgLikes": 201,
+        "avgComments": 15,
+        "engagementRate": 0.1552
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 2,
+        "avgLikes": 63,
+        "avgComments": 5,
+        "engagementRate": 0.0994
+      },
+      "without": {
+        "posts": 315,
+        "avgLikes": 215,
+        "avgComments": 18,
+        "engagementRate": 0.1662
+      }
     }
   },
   "MENS_GYMNASTICS": {
-    "totalPosts": 228,
+    "totalPosts": 317,
     "mention": {
-      "with": { "posts": 100, "avgLikes": 920, "avgComments": 22, "engagementRate": 0.00031 },
-      "without": { "posts": 128, "avgLikes": 530, "avgComments": 14, "engagementRate": 0.00018 }
+      "with": {
+        "posts": 121,
+        "avgLikes": 714,
+        "avgComments": 19,
+        "engagementRate": 0.4428
+      },
+      "without": {
+        "posts": 196,
+        "avgLikes": 657,
+        "avgComments": 14,
+        "engagementRate": 0.3992
+      }
     },
     "logo": {
-      "with": { "posts": 59, "avgLikes": 1100, "avgComments": 26, "engagementRate": 0.00037 },
-      "without": { "posts": 169, "avgLikes": 490, "avgComments": 13, "engagementRate": 0.00017 }
+      "with": {
+        "posts": 158,
+        "avgLikes": 513,
+        "avgComments": 20,
+        "engagementRate": 0.3425
+      },
+      "without": {
+        "posts": 159,
+        "avgLikes": 843,
+        "avgComments": 13,
+        "engagementRate": 0.4887
+      }
     },
     "collab": {
-      "with": { "posts": 0, "avgLikes": 0, "avgComments": 0, "engagementRate": 0 },
-      "without": { "posts": 228, "avgLikes": 692, "avgComments": 17, "engagementRate": 0.00024 }
+      "with": {
+        "posts": 0,
+        "avgLikes": 0,
+        "avgComments": 0,
+        "engagementRate": 0
+      },
+      "without": {
+        "posts": 317,
+        "avgLikes": 679,
+        "avgComments": 16,
+        "engagementRate": 0.4158
+      }
     }
   },
-  "ALL_SPORTS": {
-    "totalPosts": 8918,
+  "WOMENS_SWIM": {
+    "totalPosts": 311,
     "mention": {
-      "with": { "posts": 1929, "avgLikes": 2647, "avgComments": 47, "engagementRate": 0.00049 },
-      "without": { "posts": 6989, "avgLikes": 1453, "avgComments": 44, "engagementRate": 0.00027 }
+      "with": {
+        "posts": 52,
+        "avgLikes": 505,
+        "avgComments": 56,
+        "engagementRate": 0.2599
+      },
+      "without": {
+        "posts": 259,
+        "avgLikes": 376,
+        "avgComments": 33,
+        "engagementRate": 0.1763
+      }
     },
     "logo": {
-      "with": { "posts": 1206, "avgLikes": 3676, "avgComments": 70, "engagementRate": 0.00068 },
-      "without": { "posts": 7712, "avgLikes": 1404, "avgComments": 41, "engagementRate": 0.00026 }
+      "with": {
+        "posts": 107,
+        "avgLikes": 420,
+        "avgComments": 45,
+        "engagementRate": 0.2069
+      },
+      "without": {
+        "posts": 204,
+        "avgLikes": 386,
+        "avgComments": 32,
+        "engagementRate": 0.1816
+      }
     },
     "collab": {
-      "with": { "posts": 23, "avgLikes": 15119, "avgComments": 204, "engagementRate": 0.00276 },
-      "without": { "posts": 8895, "avgLikes": 1676, "avgComments": 45, "engagementRate": 0.00031 }
+      "with": {
+        "posts": 0,
+        "avgLikes": 0,
+        "avgComments": 0,
+        "engagementRate": 0
+      },
+      "without": {
+        "posts": 311,
+        "avgLikes": 397,
+        "avgComments": 37,
+        "engagementRate": 0.1903
+      }
+    }
+  },
+  "MENS_SOCCER": {
+    "totalPosts": 301,
+    "mention": {
+      "with": {
+        "posts": 42,
+        "avgLikes": 1024,
+        "avgComments": 73,
+        "engagementRate": 0.3878
+      },
+      "without": {
+        "posts": 259,
+        "avgLikes": 702,
+        "avgComments": 39,
+        "engagementRate": 0.2494
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 142,
+        "avgLikes": 838,
+        "avgComments": 53,
+        "engagementRate": 0.3378
+      },
+      "without": {
+        "posts": 159,
+        "avgLikes": 666,
+        "avgComments": 36,
+        "engagementRate": 0.207
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 16,
+        "avgLikes": 1263,
+        "avgComments": 20,
+        "engagementRate": 0.4582
+      },
+      "without": {
+        "posts": 285,
+        "avgLikes": 718,
+        "avgComments": 45,
+        "engagementRate": 0.2581
+      }
+    }
+  },
+  "MENS_BASKETBALL": {
+    "totalPosts": 299,
+    "mention": {
+      "with": {
+        "posts": 84,
+        "avgLikes": 4561,
+        "avgComments": 34,
+        "engagementRate": 14.5359
+      },
+      "without": {
+        "posts": 215,
+        "avgLikes": 2907,
+        "avgComments": 37,
+        "engagementRate": 1.8628
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 152,
+        "avgLikes": 4662,
+        "avgComments": 45,
+        "engagementRate": 8.9774
+      },
+      "without": {
+        "posts": 147,
+        "avgLikes": 2038,
+        "avgComments": 28,
+        "engagementRate": 1.7479
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 13,
+        "avgLikes": 6693,
+        "avgComments": 51,
+        "engagementRate": 0.7221
+      },
+      "without": {
+        "posts": 286,
+        "avgLikes": 3221,
+        "avgComments": 36,
+        "engagementRate": 5.6368
+      }
+    }
+  },
+  "WOMENS_ROWING": {
+    "totalPosts": 298,
+    "mention": {
+      "with": {
+        "posts": 27,
+        "avgLikes": 191,
+        "avgComments": 49,
+        "engagementRate": 0.217
+      },
+      "without": {
+        "posts": 271,
+        "avgLikes": 105,
+        "avgComments": 25,
+        "engagementRate": 0.1459
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 71,
+        "avgLikes": 135,
+        "avgComments": 39,
+        "engagementRate": 0.1547
+      },
+      "without": {
+        "posts": 227,
+        "avgLikes": 106,
+        "avgComments": 24,
+        "engagementRate": 0.1516
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 0,
+        "avgLikes": 0,
+        "avgComments": 0,
+        "engagementRate": 0
+      },
+      "without": {
+        "posts": 298,
+        "avgLikes": 113,
+        "avgComments": 27,
+        "engagementRate": 0.1523
+      }
+    }
+  },
+  "WOMENS_HOCKEY": {
+    "totalPosts": 284,
+    "mention": {
+      "with": {
+        "posts": 50,
+        "avgLikes": 684,
+        "avgComments": 37,
+        "engagementRate": 0.3263
+      },
+      "without": {
+        "posts": 234,
+        "avgLikes": 426,
+        "avgComments": 43,
+        "engagementRate": 0.1525
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 99,
+        "avgLikes": 502,
+        "avgComments": 40,
+        "engagementRate": 0.2427
+      },
+      "without": {
+        "posts": 185,
+        "avgLikes": 455,
+        "avgComments": 43,
+        "engagementRate": 0.1512
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 0,
+        "avgLikes": 0,
+        "avgComments": 0,
+        "engagementRate": 0
+      },
+      "without": {
+        "posts": 284,
+        "avgLikes": 472,
+        "avgComments": 42,
+        "engagementRate": 0.1831
+      }
+    }
+  },
+  "MENS_TENNIS": {
+    "totalPosts": 118,
+    "mention": {
+      "with": {
+        "posts": 25,
+        "avgLikes": 448,
+        "avgComments": 56,
+        "engagementRate": 0.3021
+      },
+      "without": {
+        "posts": 93,
+        "avgLikes": 404,
+        "avgComments": 32,
+        "engagementRate": 0.2296
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 57,
+        "avgLikes": 441,
+        "avgComments": 45,
+        "engagementRate": 0.2598
+      },
+      "without": {
+        "posts": 61,
+        "avgLikes": 387,
+        "avgComments": 29,
+        "engagementRate": 0.231
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 6,
+        "avgLikes": 981,
+        "avgComments": 7,
+        "engagementRate": 0.4439
+      },
+      "without": {
+        "posts": 112,
+        "avgLikes": 383,
+        "avgComments": 38,
+        "engagementRate": 0.2343
+      }
+    }
+  },
+  "WOMENS_CROSS_COUNTRY": {
+    "totalPosts": 118,
+    "mention": {
+      "with": {
+        "posts": 15,
+        "avgLikes": 388,
+        "avgComments": 58,
+        "engagementRate": 0.4341
+      },
+      "without": {
+        "posts": 103,
+        "avgLikes": 242,
+        "avgComments": 32,
+        "engagementRate": 0.2362
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 41,
+        "avgLikes": 321,
+        "avgComments": 44,
+        "engagementRate": 0.3022
+      },
+      "without": {
+        "posts": 77,
+        "avgLikes": 228,
+        "avgComments": 31,
+        "engagementRate": 0.2396
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 0,
+        "avgLikes": 0,
+        "avgComments": 0,
+        "engagementRate": 0
+      },
+      "without": {
+        "posts": 118,
+        "avgLikes": 260,
+        "avgComments": 36,
+        "engagementRate": 0.2613
+      }
+    }
+  },
+  "MENS_HOCKEY": {
+    "totalPosts": 116,
+    "mention": {
+      "with": {
+        "posts": 11,
+        "avgLikes": 470,
+        "avgComments": 73,
+        "engagementRate": 0.2504
+      },
+      "without": {
+        "posts": 105,
+        "avgLikes": 358,
+        "avgComments": 24,
+        "engagementRate": 0.1671
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 40,
+        "avgLikes": 416,
+        "avgComments": 40,
+        "engagementRate": 0.1972
+      },
+      "without": {
+        "posts": 76,
+        "avgLikes": 344,
+        "avgComments": 23,
+        "engagementRate": 0.1633
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 1,
+        "avgLikes": 449,
+        "avgComments": 17,
+        "engagementRate": 0.2011
+      },
+      "without": {
+        "posts": 115,
+        "avgLikes": 368,
+        "avgComments": 29,
+        "engagementRate": 0.1747
+      }
+    }
+  },
+  "PISTOL": {
+    "totalPosts": 114,
+    "mention": {
+      "with": {
+        "posts": 7,
+        "avgLikes": 142,
+        "avgComments": 12,
+        "engagementRate": 0.1505
+      },
+      "without": {
+        "posts": 107,
+        "avgLikes": 59,
+        "avgComments": 18,
+        "engagementRate": 0.0534
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 29,
+        "avgLikes": 61,
+        "avgComments": 17,
+        "engagementRate": 0.059
+      },
+      "without": {
+        "posts": 85,
+        "avgLikes": 65,
+        "avgComments": 18,
+        "engagementRate": 0.0595
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 0,
+        "avgLikes": 0,
+        "avgComments": 0,
+        "engagementRate": 0
+      },
+      "without": {
+        "posts": 114,
+        "avgLikes": 64,
+        "avgComments": 18,
+        "engagementRate": 0.0594
+      }
+    }
+  },
+  "MENS_GOLF": {
+    "totalPosts": 112,
+    "mention": {
+      "with": {
+        "posts": 16,
+        "avgLikes": 273,
+        "avgComments": 32,
+        "engagementRate": 0.1785
+      },
+      "without": {
+        "posts": 96,
+        "avgLikes": 245,
+        "avgComments": 7,
+        "engagementRate": 0.1027
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 26,
+        "avgLikes": 247,
+        "avgComments": 23,
+        "engagementRate": 0.144
+      },
+      "without": {
+        "posts": 86,
+        "avgLikes": 250,
+        "avgComments": 7,
+        "engagementRate": 0.1043
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 1,
+        "avgLikes": 265,
+        "avgComments": 6,
+        "engagementRate": 0.1609
+      },
+      "without": {
+        "posts": 111,
+        "avgLikes": 249,
+        "avgComments": 10,
+        "engagementRate": 0.1131
+      }
+    }
+  },
+  "MENS_CROSS_COUNTRY": {
+    "totalPosts": 106,
+    "mention": {
+      "with": {
+        "posts": 17,
+        "avgLikes": 919,
+        "avgComments": 62,
+        "engagementRate": 1.0776
+      },
+      "without": {
+        "posts": 89,
+        "avgLikes": 353,
+        "avgComments": 16,
+        "engagementRate": 0.2647
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 32,
+        "avgLikes": 618,
+        "avgComments": 41,
+        "engagementRate": 0.6933
+      },
+      "without": {
+        "posts": 74,
+        "avgLikes": 368,
+        "avgComments": 16,
+        "engagementRate": 0.2661
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 0,
+        "avgLikes": 0,
+        "avgComments": 0,
+        "engagementRate": 0
+      },
+      "without": {
+        "posts": 106,
+        "avgLikes": 443,
+        "avgComments": 24,
+        "engagementRate": 0.3951
+      }
+    }
+  },
+  "MENS_VOLLEYBALL": {
+    "totalPosts": 99,
+    "mention": {
+      "with": {
+        "posts": 14,
+        "avgLikes": 824,
+        "avgComments": 84,
+        "engagementRate": 0.6697
+      },
+      "without": {
+        "posts": 85,
+        "avgLikes": 405,
+        "avgComments": 22,
+        "engagementRate": 0.2542
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 40,
+        "avgLikes": 445,
+        "avgComments": 41,
+        "engagementRate": 0.3075
+      },
+      "without": {
+        "posts": 59,
+        "avgLikes": 477,
+        "avgComments": 24,
+        "engagementRate": 0.3167
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 0,
+        "avgLikes": 0,
+        "avgComments": 0,
+        "engagementRate": 0
+      },
+      "without": {
+        "posts": 99,
+        "avgLikes": 464,
+        "avgComments": 31,
+        "engagementRate": 0.313
+      }
+    }
+  },
+  "RIFLING": {
+    "totalPosts": 58,
+    "mention": {
+      "with": {
+        "posts": 5,
+        "avgLikes": 140,
+        "avgComments": 16,
+        "engagementRate": 0.2125
+      },
+      "without": {
+        "posts": 53,
+        "avgLikes": 126,
+        "avgComments": 11,
+        "engagementRate": 0.1457
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 15,
+        "avgLikes": 177,
+        "avgComments": 10,
+        "engagementRate": 0.1946
+      },
+      "without": {
+        "posts": 43,
+        "avgLikes": 110,
+        "avgComments": 12,
+        "engagementRate": 0.1363
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 0,
+        "avgLikes": 0,
+        "avgComments": 0,
+        "engagementRate": 0
+      },
+      "without": {
+        "posts": 58,
+        "avgLikes": 127,
+        "avgComments": 11,
+        "engagementRate": 0.1514
+      }
+    }
+  },
+  "WOMENS_TENNIS": {
+    "totalPosts": 58,
+    "mention": {
+      "with": {
+        "posts": 3,
+        "avgLikes": 724,
+        "avgComments": 22,
+        "engagementRate": 0.462
+      },
+      "without": {
+        "posts": 55,
+        "avgLikes": 324,
+        "avgComments": 28,
+        "engagementRate": 0.1977
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 13,
+        "avgLikes": 301,
+        "avgComments": 35,
+        "engagementRate": 0.3361
+      },
+      "without": {
+        "posts": 45,
+        "avgLikes": 357,
+        "avgComments": 25,
+        "engagementRate": 0.1753
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 0,
+        "avgLikes": 0,
+        "avgComments": 0,
+        "engagementRate": 0
+      },
+      "without": {
+        "posts": 58,
+        "avgLikes": 345,
+        "avgComments": 27,
+        "engagementRate": 0.2114
+      }
+    }
+  },
+  "WOMENS_GOLF": {
+    "totalPosts": 47,
+    "mention": {
+      "with": {
+        "posts": 17,
+        "avgLikes": 283,
+        "avgComments": 34,
+        "engagementRate": 0.2071
+      },
+      "without": {
+        "posts": 30,
+        "avgLikes": 233,
+        "avgComments": 23,
+        "engagementRate": 0.1702
+      }
+    },
+    "logo": {
+      "with": {
+        "posts": 18,
+        "avgLikes": 302,
+        "avgComments": 39,
+        "engagementRate": 0.2265
+      },
+      "without": {
+        "posts": 29,
+        "avgLikes": 220,
+        "avgComments": 19,
+        "engagementRate": 0.1569
+      }
+    },
+    "collab": {
+      "with": {
+        "posts": 0,
+        "avgLikes": 0,
+        "avgComments": 0,
+        "engagementRate": 0
+      },
+      "without": {
+        "posts": 47,
+        "avgLikes": 252,
+        "avgComments": 27,
+        "engagementRate": 0.1835
+      }
     }
   }
 }

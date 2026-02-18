@@ -1,24 +1,22 @@
 {
-  "sourceFile": "Ohio_contents.json",
-  "generatedAt": "2026-02-17T18:10:26.730Z",
+  "sourceFile": "last_ip_data_contents.json",
+  "generatedAt": "2026-02-18T02:37:52.683Z",
   "school": "Ohio State",
-  "matchedSchools": [
-    "Ohio State"
-  ],
   "totalPosts": 12384,
   "totalLikes": 24070416,
   "totalComments": 567404,
   "postsWithIP": 5923,
   "ipAdoptionRate": 47.8,
-  "avgLift": 94.6,
+  "avgLift": 283.7,
   "totalEmv": 12886314,
   "collaboration": {
     "posts": 195,
     "likes": 12935.497435897436,
     "comments": 112.72820512820513,
-    "engagementRate": 0.25055721418314675,
-    "delta": 103.95150804563794,
-    "baselineEngRate": 0.12285136628020418,
+    "engagementRate": 0.6455763085654973,
+    "delta": 84.90055798646036,
+    "emv": 1294184,
+    "baselineEngRate": 0.34914784227572243,
     "baselinePosts": 12189,
     "baselineLikes": 1767.822955123472,
     "baselineComments": 44.74706702764788
@@ -27,9 +25,10 @@
     "posts": 5245,
     "likes": 3144.560533841754,
     "comments": 57.43031458531935,
-    "engagementRate": 0.17407014510552749,
-    "delta": 107.53514558238686,
-    "baselineEngRate": 0.08387502011625568,
+    "engagementRate": 0.5685447823536529,
+    "delta": 189.99323874014763,
+    "emv": 8698443,
+    "baselineEngRate": 0.19605449589916307,
     "baselinePosts": 7139,
     "baselineLikes": 1061.3805855161788,
     "baselineComments": 37.28561423168511
@@ -38,9 +37,10 @@
     "posts": 2506,
     "likes": 2546.853152434158,
     "comments": 43.43495610534717,
-    "engagementRate": 0.1934886642902691,
-    "delta": 66.8103653379468,
-    "baselineEngRate": 0.11599319017033133,
+    "engagementRate": 0.8782880120467428,
+    "delta": 297.8486472684423,
+    "emv": 3354479,
+    "baselineEngRate": 0.22075933098601977,
     "baselinePosts": 9878,
     "baselineLikes": 1790.646082202875,
     "baselineComments": 46.421947762705
@@ -52,6 +52,5 @@
     "hasOrganizationInCaption": 2506,
     "hasOrganizationLogo": 5245,
     "isCollaboration": 2786
-  },
-  "engagementRateMethod": "Estimated rate = total likes+comments divided by summed mapped athlete followers (name+sport match against ncaa_roster)."
+  }
 }
