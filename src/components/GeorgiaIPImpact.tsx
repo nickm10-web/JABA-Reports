@@ -446,9 +446,9 @@ const ipData = {
 // ═══════════════════════════════════════════════════════════════
 const fallbackSportData: SportSignalData = {
   ALL_SPORTS: {
-    logo: { with: { posts: 729, avgLikes: 3300, avgComments: 75, engagementRate: 0.1742 }, without: { posts: 6139, avgLikes: 1466, avgComments: 47, engagementRate: 0.1668 } },
-    mention: { with: { posts: 906, avgLikes: 2227, avgComments: 35, engagementRate: 0.2170 }, without: { posts: 5962, avgLikes: 1575, avgComments: 53, engagementRate: 0.1607 } },
-    collab: { with: { posts: 80, avgLikes: 7869, avgComments: 120, engagementRate: 0.5543 }, without: { posts: 6788, avgLikes: 1588, avgComments: 49, engagementRate: 0.1618 } },
+    logo: { with: { posts: 2805, avgLikes: 2471, avgComments: 65, engagementRate: 0.2714 }, without: { posts: 4063, avgLikes: 1466, avgComments: 47, engagementRate: 0.1931 } },
+    mention: { with: { posts: 906, avgLikes: 2227, avgComments: 35, engagementRate: 0.3978 }, without: { posts: 5962, avgLikes: 1575, avgComments: 53, engagementRate: 0.1988 } },
+    collab: { with: { posts: 200, avgLikes: 4931, avgComments: 70, engagementRate: 0.6181 }, without: { posts: 6668, avgLikes: 1588, avgComments: 49, engagementRate: 0.2133 } },
   },
   FOOTBALL: {
     logo: { with: { posts: 178, avgLikes: 8721, avgComments: 145, engagementRate: 0.12 }, without: { posts: 971, avgLikes: 4220, avgComments: 103, engagementRate: 0.10 } },
