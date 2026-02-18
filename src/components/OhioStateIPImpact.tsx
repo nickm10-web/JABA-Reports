@@ -2549,9 +2549,9 @@ function BenchmarkTab() {
                     </td>
                     <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{formatNumber(school.posts)}</td>
                     <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{formatNumber(Math.round(school.posts * school.adoption / 100))}</td>
-                    <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.logoEng.toFixed(1)}%</td>
-                    <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.mentionEng.toFixed(1)}%</td>
-                    <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.collabEng.toFixed(1)}%</td>
+                    <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.logoEng > 0 ? `${school.logoEng.toFixed(1)}%` : '--'}</td>
+                    <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.mentionEng > 0 ? `${school.mentionEng.toFixed(1)}%` : '--'}</td>
+                    <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{school.collabEng > 0 ? `${school.collabEng.toFixed(1)}%` : '--'}</td>
                   </tr>
                 );
               })}
