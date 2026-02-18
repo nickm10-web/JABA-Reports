@@ -93,6 +93,7 @@ interface PrecomputedData {
 
 // ─── Official Playfly Schools (27 total) ───────────────────────
 const OFFICIAL_PLAYFLY_SCHOOLS = [
+  'Auburn University',
   'Baylor University',
   'Louisiana State University',
   'Texas A&M University',
@@ -121,6 +122,7 @@ const OFFICIAL_PLAYFLY_SCHOOLS = [
 
 // ─── Playfly Max Schools (5 - Premium tier) ────────────────────
 const PLAYFLY_MAX_SCHOOLS = [
+  'Auburn University',
   'Louisiana State University',
   'Texas A&M University',
   'Penn State University',

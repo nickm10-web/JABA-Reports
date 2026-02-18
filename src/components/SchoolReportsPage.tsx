@@ -3,6 +3,7 @@ import { FileText } from 'lucide-react';
 import { SCHOOLS, SchoolConfig } from '../data/schoolConfig';
 import { SchoolReportView } from './SchoolReportView';
 import { PlayflyReportHub } from './PlayflyReportHub';
+import { AuburnCampaignOverview } from './AuburnCampaignOverview';
 import { BaylorReportHub } from './BaylorReportHub';
 import { KentuckyIPImpact } from './KentuckyIPImpact';
 import { OhioStateIPImpact } from './OhioStateIPImpact';
@@ -14,8 +15,8 @@ import { StJudeAthleteEventImpactReport } from './StJudeAthleteEventImpactReport
 export function SchoolReportsPage() {
   const [selectedSchool, setSelectedSchool] = useState<SchoolConfig | null>(null);
 
-  // Show Playfly, Baylor, Kentucky, Ohio State, UCLA, and St. Jude
-  const allSchools = [SCHOOLS['playfly'], SCHOOLS['baylor'], SCHOOLS['georgia'], SCHOOLS['kentucky'], SCHOOLS['michigan'], SCHOOLS['ohio-state'], SCHOOLS['ucla'], SCHOOLS['saint-jude']].filter(Boolean);
+  // Show Playfly, Auburn, Baylor, Kentucky, Ohio State, UCLA, and St. Jude
+  const allSchools = [SCHOOLS['playfly'], SCHOOLS['auburn'], SCHOOLS['baylor'], SCHOOLS['georgia'], SCHOOLS['kentucky'], SCHOOLS['michigan'], SCHOOLS['ohio-state'], SCHOOLS['ucla'], SCHOOLS['saint-jude']].filter(Boolean);
 
   // If a school is selected, show the appropriate view
   if (selectedSchool) {
@@ -25,6 +26,12 @@ export function SchoolReportsPage() {
         <PlayflyReportHub
           onBack={() => setSelectedSchool(null)}
         />
+      );
+    }
+    // If Auburn is selected, go directly to Campaign Overview
+    if (selectedSchool.id === 'auburn') {
+      return (
+        <AuburnCampaignOverview onBack={() => setSelectedSchool(null)} />
       );
     }
     // If Ohio State is selected, show IP Impact report

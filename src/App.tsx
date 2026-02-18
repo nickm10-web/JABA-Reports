@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate, useNavigate, useSearchParams } from 'react-router-dom';
 import { SchoolReportsPage } from './components/SchoolReportsPage';
+import { AuburnCampaignOverview } from './components/AuburnCampaignOverview';
 import { BaylorBrandDeals } from './components/BaylorBrandDeals';
 import { OhioStateIPImpact } from './components/OhioStateIPImpact';
 import { KentuckyIPImpact } from './components/KentuckyIPImpact';
@@ -10,6 +11,10 @@ import { UCLABrandDeals } from './components/UCLABrandDeals';
 
 // Wrapper components that provide navigation
 // Only show back button if user navigated from within the app
+function AuburnRoute() {
+  return <AuburnCampaignOverview />;
+}
+
 function BaylorRoute() {
   return <BaylorBrandDeals />;
 }
@@ -60,6 +65,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomeRoute />} />
+        <Route path="/auburn" element={<AuburnRoute />} />
         <Route path="/baylor" element={<BaylorRoute />} />
         <Route path="/ohiostate" element={<OhioStateRoute />} />
         <Route path="/kentucky" element={<KentuckyRoute />} />

@@ -4,6 +4,7 @@ import { DrawerPanel, GlassCard, GlassPill } from './playfly/PlayflyUI';
 
 // Standardized display names - ensures consistent formatting across the UI
 const SCHOOL_DISPLAY_NAMES: Record<string, string> = {
+  'Auburn University': 'Auburn University',
   'Baylor': 'Baylor University',
   'Louisiana State University': 'Louisiana State University (LSU)',
   'Michigan State': 'Michigan State University',
@@ -98,7 +99,7 @@ export function RankingsTab({
   };
 
   // Max schools
-  const maxSchools = ['Michigan State', 'University of Maryland', 'Texas A&M', 'Louisiana State University', 'Penn State University'];
+  const maxSchools = ['Michigan State', 'University of Maryland', 'Auburn University', 'Texas A&M', 'Louisiana State University', 'Penn State University'];
 
   // Get school initials
   const getInitials = (name: string) => {

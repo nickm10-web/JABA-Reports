@@ -599,6 +599,7 @@ export const SAINT_JUDE: SchoolConfig = {
 // Partner schools for Playfly - All 36 schools with name variations for matching
 export const PLAYFLY_PARTNER_SCHOOLS = [
   // SEC
+  'Auburn University', 'Auburn',
   'Louisiana State University', 'LSU',
   'Texas A&M',
   'The University of Alabama', 'Alabama',
