@@ -695,10 +695,8 @@ function IPModeCard({
 
       <div className="mb-4">
         <div className="flex items-center gap-1 mb-1">
-          <p className="text-xs uppercase tracking-wider text-gray-500">
-            Engagement Delta vs Baseline
-          </p>
-          <Tooltip content="Percent difference vs baseline engagement rate.">
+          <p className="text-xs uppercase tracking-wider text-gray-500">Engagement Lift vs Baseline</p>
+          <Tooltip content="Percent difference in engagement rate compared to posts without this signal.">
             <Info className="w-3 h-3 text-gray-400 cursor-help" />
           </Tooltip>
         </div>

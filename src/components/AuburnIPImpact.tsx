@@ -16,6 +16,7 @@ import {
   AtSign,
   Info,
   Handshake,
+  Target,
 } from 'lucide-react';
 import auburnAthletes from '../data/auburn-athletes.json';
 
@@ -434,6 +435,7 @@ function IPModeCard({
   avgEngagement,
   emv,
   tooltip,
+  opportunity,
 }: {
   title: string;
   icon: React.ReactNode;
@@ -442,6 +444,7 @@ function IPModeCard({
   avgEngagement: string;
   emv: string;
   tooltip: string;
+  opportunity?: string;
 }) {
   return (
     <div
@@ -470,10 +473,8 @@ function IPModeCard({
 
       <div className="mb-4">
         <div className="flex items-center gap-1 mb-1">
-          <p className="text-xs uppercase tracking-wider text-gray-500">
-            Engagement Delta vs Baseline
-          </p>
-          <Tooltip content="Percent difference vs baseline engagement rate.">
+          <p className="text-xs uppercase tracking-wider text-gray-500">Engagement Lift vs Baseline</p>
+          <Tooltip content="Percent difference in engagement rate compared to posts without this signal.">
             <Info className="w-3 h-3 text-gray-400 cursor-help" />
           </Tooltip>
         </div>
@@ -496,6 +497,20 @@ function IPModeCard({
           <p className="font-bold text-gray-900">{emv}</p>
         </div>
       </div>
+
+      {opportunity && (
+        <div className="mt-4 pt-3 border-t border-gray-100">
+          <div className="flex items-start gap-2">
+            <Target className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: colors.orange }} />
+            <div>
+              <p className="text-xs uppercase tracking-wider font-semibold mb-0.5" style={{ color: colors.orange }}>
+                Opportunity
+              </p>
+              <p className="text-xs text-gray-600">{opportunity}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -588,6 +603,7 @@ function OverviewTab() {
             avgEngagement={formatPercent(ipData.collaboration.engagementRate)}
             emv={formatCurrency(ipData.collaboration.emv!)}
             tooltip="Athlete posts co-authored or tagged with official Auburn account"
+            opportunity="Only 21 collab posts exist, yet they deliver 477% higher engagement. Scaling co-posts could dramatically amplify Auburn's IP impact."
           />
           <IPModeCard
             title="Visual IP"
@@ -597,6 +613,7 @@ function OverviewTab() {
             avgEngagement={formatPercent(ipData.logo.engagementRate)}
             emv={formatCurrency(ipData.logo.emv!)}
             tooltip="Athlete posts with Auburn logo detected in media"
+            opportunity="Visual IP drives 92% higher engagement across 654 posts. Expanding logo use in athlete content is Auburn's biggest scalable opportunity."
           />
           <IPModeCard
             title="Mention"
@@ -606,6 +623,7 @@ function OverviewTab() {
             avgEngagement={formatPercent(ipData.mention.engagementRate)}
             emv={formatCurrency(ipData.mention.emv!)}
             tooltip="Athlete posts with @mention or text reference to Auburn"
+            opportunity="Mentions are Auburn's highest-volume IP signal at 1,377 posts, delivering 52% above baseline. Sustaining caption tagging habits is key."
           />
         </div>
       </div>
@@ -829,7 +847,7 @@ function WithVsWithoutTab() {
 
         {/* Right Column - Delta Cards */}
         <div className="col-span-12 md:col-span-4 space-y-3">
-          {/* Engagement Delta */}
+          {/* Engagement Lift */}
           <div className="rounded-xl p-4 border border-gray-200 bg-white flex items-center gap-4">
             <div
               className="w-12 h-12 rounded-lg flex items-center justify-center"
