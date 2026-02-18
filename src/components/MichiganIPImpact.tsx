@@ -21,18 +21,17 @@ import {
 } from 'lucide-react';
 
 // ═══════════════════════════════════════════════════════════════
-// SCHOOL NAME RENDERER — rivalry treatment for That School Up North
+// SCHOOL NAME RENDERER
 // ═══════════════════════════════════════════════════════════════
-const renderSchoolName = (name: string) =>
-  name === 'Michigan' ? <>❌ichigan</> : <>{name}</>;
+const renderSchoolName = (name: string) => <>{name}</>;
 
 // ═══════════════════════════════════════════════════════════════
 // THEME TOKENS
 // ═══════════════════════════════════════════════════════════════
 const colors = {
-  scarlet: '#ba0c2f',
-  scarletDark: '#8a0922',
-  scarletLight: '#d4334f',
+  scarlet: '#00274C',
+  scarletDark: '#001a35',
+  scarletLight: '#1a4a70',
   gray: '#a7b1b7',
   white: '#ffffff',
   positive: '#10b981',
@@ -297,143 +296,89 @@ interface OverviewData {
 }
 
 // ═══════════════════════════════════════════════════════════════
-// OHIO STATE IP DATA (Source of Truth)
+// MICHIGAN IP DATA (Source of Truth)
 // ═══════════════════════════════════════════════════════════════
 const ipData = {
-  totalPosts: 12384,
-  totalAthletes: 707,
-  totalFollowers: 5546349,
-  totalLikes: 24070416,
-  totalComments: 567404,
-  engagementRate: 0.3538,
-  baseline: { posts: 6461, engagementRate: 0.1501 },
-  postsWithIP: 5923,
-  ipAdoptionRate: 47.8,
-  avgLift: 283.7,
-  totalEmv: 12886314,
-  collaboration: { posts: 195, likes: 12935.5, comments: 112.73, engagementRate: 0.6456, delta: 84.9, emv: 1294184, baselineEngRate: 0.3491, baselinePosts: 12189, baselineLikes: 1767.82, baselineComments: 44.75 } as IPSignalData,
-  logo: { posts: 5245, likes: 3144.56, comments: 57.43, engagementRate: 0.5685, delta: 190, emv: 8698443, baselineEngRate: 0.1961, baselinePosts: 7139, baselineLikes: 1061.38, baselineComments: 37.29 } as IPSignalData,
-  mention: { posts: 2506, likes: 2546.85, comments: 43.43, engagementRate: 0.8783, delta: 297.8, emv: 3354479, baselineEngRate: 0.2208, baselinePosts: 9878, baselineLikes: 1790.65, baselineComments: 46.42 } as IPSignalData,
+  totalPosts: 4042,
+  totalAthletes: 386,
+  totalFollowers: 2381406,
+  totalLikes: 5654589,
+  totalComments: 189346,
+  engagementRate: 0.2659,
+  baseline: { posts: 1771, engagementRate: 0.1693 },
+  postsWithIP: 2271,
+  ipAdoptionRate: 56.2,
+  avgLift: 96.6,
+  totalEmv: 3111314,
+  collaboration: { posts: 4, likes: 2144.50, comments: 49.75, engagementRate: 0.3832, delta: 61.94, emv: 4588, baselineEngRate: 0.2366, baselinePosts: 4038, baselineLikes: 1398.22, baselineComments: 46.84 } as IPSignalData,
+  logo: { posts: 2152, likes: 2061.73, comments: 58.42, engagementRate: 0.2862, delta: 95.34, emv: 2407003, baselineEngRate: 0.1465, baselinePosts: 1890, baselineLikes: 644.31, baselineComments: 33.66 } as IPSignalData,
+  mention: { posts: 828, likes: 2574.75, comments: 61.96, engagementRate: 0.3849, delta: 99.87, emv: 1142909, baselineEngRate: 0.1926, baselinePosts: 3214, baselineLikes: 1096.05, baselineComments: 42.95 } as IPSignalData,
   signals: [
     {
       id: 'logo' as const,
       label: 'Visual IP (Logo)',
-      totalPosts: 5245,
-      percentage: 42.4,
-      with: { posts: 5245, avgLikes: 3145, avgComments: 57, engagementRate: 0.5685 },
-      without: { posts: 7139, avgLikes: 1061, avgComments: 37, engagementRate: 0.1961 },
+      totalPosts: 2152,
+      percentage: 53.2,
+      with: { posts: 2152, avgLikes: 2062, avgComments: 58, engagementRate: 0.2862 },
+      without: { posts: 1890, avgLikes: 644, avgComments: 34, engagementRate: 0.1465 },
     },
     {
       id: 'mention' as const,
       label: 'Caption Mention',
-      totalPosts: 2506,
-      percentage: 20.2,
-      with: { posts: 2506, avgLikes: 2547, avgComments: 43, engagementRate: 0.8783 },
-      without: { posts: 9878, avgLikes: 1791, avgComments: 46, engagementRate: 0.2208 },
+      totalPosts: 828,
+      percentage: 20.5,
+      with: { posts: 828, avgLikes: 2575, avgComments: 62, engagementRate: 0.3849 },
+      without: { posts: 3214, avgLikes: 1096, avgComments: 43, engagementRate: 0.1926 },
     },
     {
       id: 'collab' as const,
       label: 'Collaboration',
-      totalPosts: 195,
-      percentage: 1.6,
-      with: { posts: 195, avgLikes: 12935, avgComments: 113, engagementRate: 0.6456 },
-      without: { posts: 12189, avgLikes: 1768, avgComments: 45, engagementRate: 0.3491 },
+      totalPosts: 4,
+      percentage: 0.1,
+      with: { posts: 4, avgLikes: 2145, avgComments: 50, engagementRate: 0.3832 },
+      without: { posts: 4038, avgLikes: 1398, avgComments: 47, engagementRate: 0.2366 },
     },
   ],
-  sponsoredPosts: 1023,
-  totalBrands: 430,
-  totalEMV: 12886314,
+  sponsoredPosts: 224,
+  totalBrands: 100,
+  totalEMV: 3111314,
   partnerships: [
-    { brand: "@redbullusa", posts: 2, avgLikes: 233021.5, avgComments: 647, emv: 234962.5, engagementRate: 0.3079, liftMultiplier: 118.9 },
-    { brand: "@beatsbydre", posts: 3, avgLikes: 43950, avgComments: 326, emv: 67392, engagementRate: 0.1331, liftMultiplier: 21.6 },
-    { brand: "@hollister", posts: 89, avgLikes: 1277.65, avgComments: 20, emv: 59567.5, engagementRate: 0.0986, liftMultiplier: -0.3 },
-    { brand: "@paniniamerica", posts: 2, avgLikes: 48993, avgComments: 148, emv: 49435.5, engagementRate: 0.1523, liftMultiplier: 24.2 },
-    { brand: "@on3recruits", posts: 2, avgLikes: 41157.5, avgComments: 695, emv: 43241, engagementRate: 0.6283, liftMultiplier: 20.2 },
-    { brand: "@nxtrnd", posts: 3, avgLikes: 17270.67, avgComments: 80, emv: 26266, engagementRate: 0.0522, liftMultiplier: 7.9 },
-    { brand: "@7eleven", posts: 1, avgLikes: 47435, avgComments: 347, emv: 24238, engagementRate: 0.063, liftMultiplier: 23.4 },
-    { brand: "@adidasusfootball", posts: 1, avgLikes: 43424, avgComments: 534, emv: 22513, engagementRate: 0.0579, liftMultiplier: 21.3 },
-    { brand: "@clever_made", posts: 21, avgLikes: 2168.9, avgComments: 16, emv: 23286.5, engagementRate: 0.1187, liftMultiplier: 0.1 },
-    { brand: "@epicpartner", posts: 1, avgLikes: 42691, avgComments: 133, emv: 21545, engagementRate: 0.2416, liftMultiplier: 21 },
-    { brand: "@dickssportinggoods", posts: 2, avgLikes: 20959.5, avgComments: 176, emv: 21486, engagementRate: 0.0454, liftMultiplier: 9.8 },
-    { brand: "@chipotle", posts: 5, avgLikes: 7848.8, avgComments: 80, emv: 20225, engagementRate: 0.0324, liftMultiplier: 3 },
-
-    { brand: "@paycomsoftware", posts: 5, avgLikes: 5339.2, avgComments: 30, emv: 13573, engagementRate: 0.5884, liftMultiplier: 1.7 },
-    { brand: "@discover", posts: 1, avgLikes: 24054, avgComments: 114, emv: 12198, engagementRate: 0.0319, liftMultiplier: 11.4 },
-    { brand: "@heydude", posts: 11, avgLikes: 2078.09, avgComments: 38, emv: 12050.5, engagementRate: 0.113, liftMultiplier: 0.1 },
-    { brand: "@gianteagle", posts: 4, avgLikes: 5648.75, avgComments: 74, emv: 11741.5, engagementRate: 0.0562, liftMultiplier: 1.9 },
-    { brand: "@directv", posts: 5, avgLikes: 4530.4, avgComments: 41, emv: 11630.5, engagementRate: 0.2326, liftMultiplier: 1.3 },
-    { brand: "@att", posts: 1, avgLikes: 21526, avgComments: 237, emv: 11118.5, engagementRate: 0.0287, liftMultiplier: 10.1 },
-    { brand: "@jlabaudio", posts: 3, avgLikes: 6473.33, avgComments: 53, emv: 9947, engagementRate: 0.062, liftMultiplier: 2.3 },
-    { brand: "@doordash", posts: 2, avgLikes: 9016, avgComments: 29, emv: 9101.5, engagementRate: 0.0272, liftMultiplier: 3.6 },
-    { brand: "@joandjax", posts: 5, avgLikes: 3261.6, avgComments: 32, emv: 8397, engagementRate: 0.0657, liftMultiplier: 0.7 },
-    { brand: "@americaneagle", posts: 22, avgLikes: 638.77, avgComments: 38, emv: 8270, engagementRate: 0.0305, liftMultiplier: -0.7 },
-    { brand: "@valvolineinstantoilchange", posts: 4, avgLikes: 3743.75, avgComments: 25, emv: 7634.5, engagementRate: 0.0309, liftMultiplier: 0.9 },
-    { brand: "@allstate", posts: 2, avgLikes: 7134.5, avgComments: 45, emv: 7268, engagementRate: 0.0875, liftMultiplier: 2.7 },
-    { brand: "@wingstop", posts: 2, avgLikes: 5588.5, avgComments: 257, emv: 6358, engagementRate: 0.7279, liftMultiplier: 1.9 },
-    { brand: "@KeyBank", posts: 2, avgLikes: 5849.5, avgComments: 50, emv: 5998, engagementRate: 0.0078, liftMultiplier: 2 },
-    { brand: "@whereimfrom", posts: 5, avgLikes: 2288, avgComments: 21, emv: 5877.5, engagementRate: 0.0883, liftMultiplier: 0.2 },
-    { brand: "@naturemadevitamins", posts: 1, avgLikes: 11205, avgComments: 21, emv: 5634, engagementRate: 0.2991, liftMultiplier: 4.8 },
-    { brand: "@rebelcrystalofficial", posts: 2, avgLikes: 5462.5, avgComments: 1, emv: 5465.5, engagementRate: 0.0919, liftMultiplier: 1.8 },
-    { brand: "@adidas", posts: 2, avgLikes: 4895, avgComments: 104, emv: 5207, engagementRate: 0.0782, liftMultiplier: 1.5 },
-    { brand: "@paycom", posts: 1, avgLikes: 10182, avgComments: 36, emv: 5145, engagementRate: 0.2991, liftMultiplier: 4.2 },
-    { brand: "@defensesoap", posts: 1, avgLikes: 10145, avgComments: 33, emv: 5122, engagementRate: 0.2979, liftMultiplier: 4.2 },
-    { brand: "@tmobile", posts: 1, avgLikes: 9905, avgComments: 54, emv: 5033.5, engagementRate: 0.0299, liftMultiplier: 4.1 },
-    { brand: "@HeyDude", posts: 1, avgLikes: 9119, avgComments: 101, emv: 4711, engagementRate: 0.0463, liftMultiplier: 3.7 },
-    { brand: "@athleteps", posts: 1, avgLikes: 8398, avgComments: 45, emv: 4266.5, engagementRate: 0.2471, liftMultiplier: 3.3 },
-    { brand: "@crocs", posts: 6, avgLikes: 1315.33, avgComments: 23, emv: 4153, engagementRate: 0.0042, liftMultiplier: -0.3 },
-    { brand: "@brooksrunning", posts: 5, avgLikes: 1543, avgComments: 30, emv: 4084, engagementRate: 0.1099, liftMultiplier: -0.2 },
-    { brand: "@peppermayo", posts: 4, avgLikes: 1833.75, avgComments: 42, emv: 3918, engagementRate: 0.0312, liftMultiplier: -0.1 },
-    { brand: "@ohiostathletics", posts: 1, avgLikes: 7285, avgComments: 40, emv: 3702.5, engagementRate: 0.1478, liftMultiplier: 2.7 },
-    { brand: "@amazonmusic", posts: 1, avgLikes: 6974, avgComments: 30, emv: 3532, engagementRate: 0.0944, liftMultiplier: 2.6 },
-    { brand: "@cliffkeenathletic", posts: 1, avgLikes: 6980, avgComments: 16, emv: 3514, engagementRate: 3.4294, liftMultiplier: 2.6 },
-    { brand: "@GiantEagle", posts: 1, avgLikes: 6784, avgComments: 32, emv: 3440, engagementRate: 0.0205, liftMultiplier: 2.5 },
-    { brand: "@pursuityourself", posts: 18, avgLikes: 342.67, avgComments: 12, emv: 3409.5, engagementRate: 0.0884, liftMultiplier: -0.8 },
-    { brand: "@wrestlingbucks", posts: 4, avgLikes: 1560, avgComments: 11, emv: 3186, engagementRate: 0.1056, liftMultiplier: -0.2 },
-    { brand: "locationfootball", posts: 1, avgLikes: 5899, avgComments: 53, emv: 3029, engagementRate: 0.3925, liftMultiplier: 2 },
-    { brand: "@fifththirdbank", posts: 2, avgLikes: 2969.5, avgComments: 15, emv: 3014.5, engagementRate: 0.0109, liftMultiplier: 0.5 },
-    { brand: "@celsiusofficial", posts: 3, avgLikes: 1828.33, avgComments: 22, emv: 2841.5, engagementRate: 0.0055, liftMultiplier: -0.1 },
-    { brand: "@colab_collective", posts: 6, avgLikes: 842, avgComments: 13, emv: 2640, engagementRate: 0.0486, liftMultiplier: -0.6 },
-    { brand: "@serialashaeco", posts: 1, avgLikes: 5029, avgComments: 72, emv: 2622.5, engagementRate: 0.284, liftMultiplier: 1.6 },
-    { brand: "@drinkaccelerator", posts: 45, avgLikes: 87.58, avgComments: 8, emv: 2488, engagementRate: 0.0231, liftMultiplier: -1 },
-    { brand: "@ParamountPlus", posts: 1, avgLikes: 4823, avgComments: 32, emv: 2459.5, engagementRate: 0.0705, liftMultiplier: 1.5 },
-    { brand: "@marathonfuel", posts: 1, avgLikes: 3988, avgComments: 49, emv: 2067.5, engagementRate: 0.1114, liftMultiplier: 1.1 },
-    { brand: "@donatospizza", posts: 4, avgLikes: 975.25, avgComments: 18, emv: 2060, engagementRate: 0.3075, liftMultiplier: -0.5 },
-    { brand: "the.courageousathlete", posts: 1, avgLikes: 4012, avgComments: 22, emv: 2039, engagementRate: 1.0228, liftMultiplier: 1.1 },
-    { brand: "@neweracap", posts: 7, avgLikes: 513.43, avgComments: 20, emv: 2004, engagementRate: 0.0351, liftMultiplier: -0.7 },
-    { brand: "@c4energy", posts: 12, avgLikes: 251.42, avgComments: 27, emv: 1988.5, engagementRate: 0.0262, liftMultiplier: -0.9 },
-    { brand: "@goodfoodcro", posts: 2, avgLikes: 1403, avgComments: 194, emv: 1985, engagementRate: 0.0127, liftMultiplier: -0.3 },
-    { brand: "@buckeye.threads", posts: 33, avgLikes: 108.48, avgComments: 2, emv: 1887.5, engagementRate: 0.0589, liftMultiplier: -0.9 },
-    { brand: "@bumpboxx", posts: 3, avgLikes: 1128.33, avgComments: 41, emv: 1875.5, engagementRate: 0.0633, liftMultiplier: -0.4 },
-    { brand: "@tytusgrills", posts: 5, avgLikes: 719, avgComments: 7, emv: 1847, engagementRate: 0.0177, liftMultiplier: -0.6 },
-    { brand: "@seatgeek", posts: 2, avgLikes: 1755.5, avgComments: 23, emv: 1824.5, engagementRate: 0.0144, liftMultiplier: -0.1 },
-    { brand: "@shootaway", posts: 3, avgLikes: 1079, avgComments: 28, emv: 1743, engagementRate: 0.0129, liftMultiplier: -0.4 },
-    { brand: "@elementelectronics", posts: 7, avgLikes: 443, avgComments: 15, emv: 1712.5, engagementRate: 0.0555, liftMultiplier: -0.8 },
-    { brand: "@aladdinseatery", posts: 3, avgLikes: 1060.33, avgComments: 21, emv: 1683.5, engagementRate: 0.1285, liftMultiplier: -0.5 },
-    { brand: "@postgame.official", posts: 20, avgLikes: 146.7, avgComments: 7, emv: 1669.5, engagementRate: 0.0429, liftMultiplier: -0.9 },
-    { brand: "@rivalsdotcom", posts: 1, avgLikes: 2802, avgComments: 95, emv: 1543.5, engagementRate: 0.9406, liftMultiplier: 0.4 },
-    { brand: "@rootsnk", posts: 8, avgLikes: 351.25, avgComments: 11, emv: 1532.5, engagementRate: 0.0181, liftMultiplier: -0.8 },
-    { brand: "@raisingcanes", posts: 4, avgLikes: 659.25, avgComments: 27, emv: 1482, engagementRate: 0.0258, liftMultiplier: -0.7 },
-    { brand: "@PaniniAmerica", posts: 1, avgLikes: 2810, avgComments: 31, emv: 1451.5, engagementRate: 0.0572, liftMultiplier: 0.4 },
-    { brand: "@crackerbarrel", posts: 2, avgLikes: 1298.5, avgComments: 50, emv: 1447, engagementRate: 0.0372, liftMultiplier: -0.3 },
-    { brand: "@leesfamouschick", posts: 1, avgLikes: 2802, avgComments: 28, emv: 1443, engagementRate: 0.0571, liftMultiplier: 0.4 },
-    { brand: "@nike_wrestling", posts: 1, avgLikes: 2659, avgComments: 20, emv: 1359.5, engagementRate: 0.0784, liftMultiplier: 0.4 },
-    { brand: "slaneglover", posts: 1, avgLikes: 2503, avgComments: 63, emv: 1346, engagementRate: 0.1389, liftMultiplier: 0.3 },
-    { brand: "@uber", posts: 4, avgLikes: 622.25, avgComments: 8, emv: 1292.5, engagementRate: 0.0129, liftMultiplier: -0.7 },
-    { brand: "@OIKOS", posts: 1, avgLikes: 2458, avgComments: 33, emv: 1278.5, engagementRate: 0.0075, liftMultiplier: 0.3 },
-    { brand: "@stxmlax", posts: 2, avgLikes: 1245, avgComments: 5, emv: 1260, engagementRate: 0.0787, liftMultiplier: -0.4 },
-
-    { brand: "@nikelacrosse", posts: 2, avgLikes: 1088, avgComments: 35, emv: 1191.5, engagementRate: 0.2847, liftMultiplier: -0.4 },
-    { brand: "@thefoundationohio", posts: 3, avgLikes: 743.67, avgComments: 13, emv: 1174, engagementRate: 0.3023, liftMultiplier: -0.6 },
-    { brand: "@CELSIUSBrandPartner", posts: 1, avgLikes: 2296, avgComments: 11, emv: 1164.5, engagementRate: 0.0069, liftMultiplier: 0.2 },
-    { brand: "@bauerhockey", posts: 2, avgLikes: 1044.5, avgComments: 39, emv: 1161.5, engagementRate: 0.1611, liftMultiplier: -0.5 },
-    { brand: "@gametimeapp", posts: 1, avgLikes: 2191, avgComments: 41, emv: 1157, engagementRate: 0.1208, liftMultiplier: 0.1 },
-    { brand: "@spartancombat", posts: 1, avgLikes: 1969, avgComments: 73, emv: 1094, engagementRate: 0.1932, liftMultiplier: 0 },
-    { brand: "@nintendoamerica", posts: 1, avgLikes: 0, avgComments: 714, emv: 1071, engagementRate: 0, liftMultiplier: -1 },
-    { brand: "@tommyjohnwear", posts: 1, avgLikes: 2028, avgComments: 14, emv: 1035, engagementRate: 0.0544, liftMultiplier: 0 },
-    { brand: "@Nash", posts: 1, avgLikes: 2007, avgComments: 18, emv: 1030.5, engagementRate: 0.1168, liftMultiplier: 0 },
-    { brand: "@honeystinger", posts: 2, avgLikes: 965, avgComments: 18, emv: 1019, engagementRate: 0.162, liftMultiplier: -0.5 },
-    { brand: "@C4Energy", posts: 7, avgLikes: 238.86, avgComments: 17, emv: 1010, engagementRate: 0.0608, liftMultiplier: -0.9 },
-    { brand: "@wingsandrings.lc", posts: 1, avgLikes: 2018, avgComments: 0, emv: 1009, engagementRate: 0.0297, liftMultiplier: 0 },
+    { brand: "kingsford", posts: 1, avgLikes: 70950, avgComments: 105, emv: 35632.5, engagementRate: 6.1165, liftMultiplier: 49.7 },
+    { brand: "@cliffkeenathletic", posts: 1, avgLikes: 25269, avgComments: 106, emv: 12793.5, engagementRate: 2.766, liftMultiplier: 17.1 },
+    { brand: "@paramountplus", posts: 1, avgLikes: 14333, avgComments: 614, emv: 8087.5, engagementRate: 0.056, liftMultiplier: 9.2 },
+    { brand: "@umcreditunion", posts: 1, avgLikes: 14209, avgComments: 169, emv: 7358, engagementRate: 0.0539, liftMultiplier: 9.2 },
+    { brand: "@american.made.athletics", posts: 3, avgLikes: 4694.67, avgComments: 10, emv: 7087, engagementRate: 0.1061, liftMultiplier: 2.4 },
+    { brand: "@allstate", posts: 2, avgLikes: 6810.5, avgComments: 51, emv: 6962, engagementRate: 0.2664, liftMultiplier: 3.9 },
+    { brand: "doordash", posts: 1, avgLikes: 13453, avgComments: 48, emv: 6798.5, engagementRate: 0.8987, liftMultiplier: 8.6 },
+    { brand: "facebook", posts: 5, avgLikes: 2387.2, avgComments: 39, emv: 6259, engagementRate: 0.0523, liftMultiplier: 0.7 },
+    { brand: "@officialafferdin", posts: 1, avgLikes: 10935, avgComments: 179, emv: 5736, engagementRate: 9.1098, liftMultiplier: 6.8 },
+    { brand: "@accessthewalk", posts: 3, avgLikes: 2733.67, avgComments: 26, emv: 4217.5, engagementRate: 0.045, liftMultiplier: 1 },
+    { brand: "@flowrestling", posts: 3, avgLikes: 2646.33, avgComments: 30, emv: 4104.5, engagementRate: 0.2373, liftMultiplier: 0.9 },
+    { brand: "@brightonfordmi", posts: 1, avgLikes: 7038, avgComments: 130, emv: 3714, engagementRate: 0.1613, liftMultiplier: 4 },
+    { brand: "@ParamountPlus", posts: 1, avgLikes: 6250, avgComments: 85, emv: 3252.5, engagementRate: 0.0237, liftMultiplier: 3.5 },
+    { brand: "@Transferportal", posts: 1, avgLikes: 5331, avgComments: 84, emv: 2791.5, engagementRate: 0.8612, liftMultiplier: 2.8 },
+    { brand: "@aaa_theautoclubgroup", posts: 1, avgLikes: 5044, avgComments: 96, emv: 2666, engagementRate: 0.4444, liftMultiplier: 2.6 },
+    { brand: "@toysfortotsofficial", posts: 1, avgLikes: 4451, avgComments: 60, emv: 2315.5, engagementRate: 0.1015, liftMultiplier: 2.2 },
+    { brand: "@newbalance", posts: 2, avgLikes: 2224.5, avgComments: 22, emv: 2289, engagementRate: 0.8794, liftMultiplier: 0.6 },
+    { brand: "@drsquatch", posts: 1, avgLikes: 3738, avgComments: 48, emv: 1941, engagementRate: 0.0889, liftMultiplier: 1.7 },
+    { brand: "@hollister", posts: 3, avgLikes: 1122.67, avgComments: 27, emv: 1804, engagementRate: 0.1131, liftMultiplier: -0.2 },
+    { brand: "usafspecwarrecruiting", posts: 1, avgLikes: 3566, avgComments: 11, emv: 1799.5, engagementRate: 0.3899, liftMultiplier: 1.5 },
+    { brand: "@slam", posts: 1, avgLikes: 3269, avgComments: 67, emv: 1735, engagementRate: 0.5216, liftMultiplier: 1.3 },
+    { brand: "@att", posts: 1, avgLikes: 3076, avgComments: 119, emv: 1716.5, engagementRate: 0.0521, liftMultiplier: 1.2 },
+    { brand: "@unrivaledbasketball", posts: 1, avgLikes: 2450, avgComments: 47, emv: 1295.5, engagementRate: 0.0912, liftMultiplier: 0.8 },
+    { brand: "@ogepower", posts: 1, avgLikes: 2404, avgComments: 52, emv: 1280, engagementRate: 0.3798, liftMultiplier: 0.7 },
+    { brand: "@sackthestigma", posts: 2, avgLikes: 1138, avgComments: 18, emv: 1190.5, engagementRate: 0.0449, liftMultiplier: -0.2 },
+    { brand: "@pgatoursuperstore", posts: 2, avgLikes: 1129, avgComments: 11, emv: 1162, engagementRate: 0.7183, liftMultiplier: -0.2 },
+    { brand: "@champmediaco", posts: 15, avgLikes: 120, avgComments: 7, emv: 1062, engagementRate: 0.0255, liftMultiplier: -0.9 },
+    { brand: "@bottomshelfcaps", posts: 1, avgLikes: 2032, avgComments: 21, emv: 1047.5, engagementRate: 0.0463, liftMultiplier: 0.5 },
+    { brand: "@hungryhowies", posts: 2, avgLikes: 1001, avgComments: 8, emv: 1025, engagementRate: 0.2998, liftMultiplier: -0.3 },
+    { brand: "@cetaphilcanada", posts: 2, avgLikes: 955, avgComments: 22, emv: 1021, engagementRate: 0.0357, liftMultiplier: -0.3 },
+    { brand: "@nike_wrestling", posts: 1, avgLikes: 2009, avgComments: 9, emv: 1018, engagementRate: 0.3805, liftMultiplier: 0.4 },
+    { brand: "@blackbottommedia", posts: 1, avgLikes: 1805, avgComments: 6, emv: 911.5, engagementRate: 0.1732, liftMultiplier: 0.3 },
+    { brand: "@championscircle.nilshop", posts: 11, avgLikes: 143.55, avgComments: 7, emv: 909.5, engagementRate: 0.015, liftMultiplier: -0.9 },
+    { brand: "@mden", posts: 1, avgLikes: 1726, avgComments: 13, emv: 882.5, engagementRate: 0.0753, liftMultiplier: 0.2 },
+    { brand: "@wolverinethreads", posts: 4, avgLikes: 116.5, avgComments: 2, emv: 242, engagementRate: 0.0358, liftMultiplier: -0.9 },
+    { brand: "@championscircleuofm", posts: 10, avgLikes: 0, avgComments: 7, emv: 111, engagementRate: 0, liftMultiplier: -1 },
   ] as Partnership[],
 };
 
@@ -441,37 +386,36 @@ const ipData = {
 // ATHLETE & BENCHMARK DATA
 // ═══════════════════════════════════════════════════════════════
 const topCollabAthletes = [
-  { rank: 1, name: "Jeremiah Smith", sport: "Football", posts: 6, emv: 284753, lift: 82 },
-  { rank: 2, name: "Sonny Styles", sport: "Football", posts: 7, emv: 117351, lift: 82 },
-  { rank: 3, name: "Brandon Inniss", sport: "Football", posts: 3, emv: 81382, lift: 82 },
-  { rank: 4, name: "Jermaine Mathews Jr.", sport: "Football", posts: 5, emv: 73800, lift: 82 },
-  { rank: 5, name: "Caleb Downs", sport: "Football", posts: 4, emv: 60319, lift: 82 },
+  { rank: 1, name: "Mikey Keene", sport: "Football", posts: 1, emv: 21108, lift: 62 },
+  { rank: 2, name: "Jonathan Kim", sport: "Baseball", posts: 1, emv: 17306, lift: 62 },
+  { rank: 3, name: "Lachlan McNeil", sport: "Wrestling", posts: 1, emv: 8748, lift: 62 },
+  { rank: 4, name: "Beckham Sunderland", sport: "Football", posts: 1, emv: 5257, lift: 62 },
 ];
 const topLogoAthletes = [
-  { rank: 1, name: "Jeremiah Smith", sport: "Football", posts: 35, emv: 985746, lift: 61 },
-  { rank: 2, name: "Caleb Downs", sport: "Football", posts: 32, emv: 694311, lift: 61 },
-  { rank: 3, name: "Julian Sayin", sport: "Football", posts: 12, emv: 348274, lift: 61 },
-  { rank: 4, name: "Sonny Styles", sport: "Football", posts: 27, emv: 249057, lift: 61 },
-  { rank: 5, name: "Brandon Inniss", sport: "Football", posts: 20, emv: 237235, lift: 61 },
+  { rank: 1, name: "TJ Metcalf", sport: "Football", posts: 17, emv: 23960, lift: 95 },
+  { rank: 2, name: "Brandyn Hillman", sport: "Football", posts: 13, emv: 32970, lift: 95 },
+  { rank: 3, name: "Kurt Barr", sport: "Baseball", posts: 13, emv: 5905, lift: 95 },
+  { rank: 4, name: "Dylan Ragusin", sport: "Wrestling", posts: 16, emv: 6232, lift: 95 },
+  { rank: 5, name: "Aurora Gery", sport: "Field Hockey", posts: 13, emv: 3673, lift: 95 },
 ];
 const topMentionAthletes = [
-  { rank: 1, name: "Caleb Downs", sport: "Football", posts: 12, emv: 241149, lift: 148 },
-  { rank: 2, name: "Carson Hinzman", sport: "Football", posts: 12, emv: 139272, lift: 148 },
-  { rank: 3, name: "Jeremiah Smith", sport: "Football", posts: 6, emv: 129645, lift: 148 },
-  { rank: 4, name: "Quincy Porter", sport: "Football", posts: 12, emv: 118790, lift: 148 },
-  { rank: 5, name: "Jesse Mendez", sport: "M. Wrestling", posts: 31, emv: 89645, lift: 148 },
+  { rank: 1, name: "Ashley Sofilkanich", sport: "Women's Basketball", posts: 10, emv: 4309, lift: 100 },
+  { rank: 2, name: "Kurt Barr", sport: "Baseball", posts: 10, emv: 5905, lift: 100 },
+  { rank: 3, name: "Noah Miller", sport: "Baseball", posts: 9, emv: 12400, lift: 100 },
+  { rank: 4, name: "Solen Chiodi", sport: "Men's Gymnastics", posts: 9, emv: 5868, lift: 100 },
+  { rank: 5, name: "Te'Yala Delfosse", sport: "Women's Basketball", posts: 9, emv: 3567, lift: 100 },
 ];
 const signalStats = {
-  collab: { posts: 195, totalEmv: 1294184, avgEmv: 6637, lift: 85 },
-  logo: { posts: 5245, totalEmv: 8698443, avgEmv: 1658, lift: 190 },
-  mention: { posts: 2506, totalEmv: 3354479, avgEmv: 1339, lift: 298 },
+  collab: { posts: 4, totalEmv: 4588, avgEmv: 1147, lift: 62 },
+  logo: { posts: 2152, totalEmv: 2407003, avgEmv: 1118, lift: 95 },
+  mention: { posts: 828, totalEmv: 1142909, avgEmv: 1380, lift: 100 },
 };
 
 const fallbackSportData: Record<string, Record<string, { with: { posts: number; avgLikes: number; avgComments: number; engagementRate: number }; without: { posts: number; avgLikes: number; avgComments: number; engagementRate: number } }>> = {
   'ALL_SPORTS': {
-    mention: { with: { posts: 2506, avgLikes: 2547, avgComments: 43, engagementRate: 0.8783 }, without: { posts: 9878, avgLikes: 1791, avgComments: 46, engagementRate: 0.2208 } },
-    logo: { with: { posts: 5245, avgLikes: 3145, avgComments: 57, engagementRate: 0.5685 }, without: { posts: 7139, avgLikes: 1061, avgComments: 37, engagementRate: 0.1961 } },
-    collab: { with: { posts: 195, avgLikes: 12935, avgComments: 113, engagementRate: 0.6456 }, without: { posts: 12189, avgLikes: 1768, avgComments: 45, engagementRate: 0.3491 } }
+    mention: { with: { posts: 828, avgLikes: 2575, avgComments: 62, engagementRate: 0.3849 }, without: { posts: 3214, avgLikes: 1096, avgComments: 43, engagementRate: 0.1926 } },
+    logo: { with: { posts: 2152, avgLikes: 2062, avgComments: 58, engagementRate: 0.2862 }, without: { posts: 1890, avgLikes: 644, avgComments: 34, engagementRate: 0.1465 } },
+    collab: { with: { posts: 4, avgLikes: 2145, avgComments: 50, engagementRate: 0.3832 }, without: { posts: 4038, avgLikes: 1398, avgComments: 47, engagementRate: 0.2366 } }
   },
   'FOOTBALL': {
     mention: { with: { posts: 334, avgLikes: 10118, avgComments: 100, engagementRate: 0.7722 }, without: { posts: 1641, avgLikes: 7479, avgComments: 117, engagementRate: 0.2998 } },
@@ -918,7 +862,7 @@ function OverviewTab({ overviewData }: { overviewData?: OverviewData | null }) {
           style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }}
           className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-2"
         >
-          <span style={{ color: colors.scarlet }}>Ohio State </span>
+          <span style={{ color: colors.scarlet }}>Michigan </span>
           <span style={{ color: colors.headerGray }}>Athlete Overview</span>
         </h1>
 
@@ -983,10 +927,10 @@ function OverviewTab({ overviewData }: { overviewData?: OverviewData | null }) {
                 <Lightbulb className="w-5 h-5" style={{ color: colors.scarlet }} />
               </div>
               <p className="text-sm text-gray-700 leading-relaxed">
-                Ohio State leads Big Ten in mention rate at{' '}
-                <span className="font-bold" style={{ color: colors.scarlet }}>21.6%</span>, outperforming
-                the conference avg by{' '}
-                <span className="font-bold" style={{ color: colors.scarlet }}>15.0%</span>.
+                Michigan leads the Big Ten in IP adoption at{' '}
+                <span className="font-bold" style={{ color: colors.scarlet }}>56.2%</span>, more than double
+                the conference average of{' '}
+                <span className="font-bold" style={{ color: colors.scarlet }}>27.0%</span>.
               </p>
             </div>
           </GlassCard>
@@ -999,7 +943,7 @@ function OverviewTab({ overviewData }: { overviewData?: OverviewData | null }) {
                 <Lightbulb className="w-5 h-5" style={{ color: colors.scarlet }} />
               </div>
               <p className="text-sm text-gray-700 leading-relaxed">
-                <span className="font-bold">{formatNumber(overview.postsWithIP)} posts</span> ({overview.ipAdoptionRate}%) feature Ohio State IP,
+                <span className="font-bold">{formatNumber(overview.postsWithIP)} posts</span> ({overview.ipAdoptionRate}%) feature Michigan IP,
                 generating{' '}
                 <span className="font-bold" style={{ color: colors.scarlet }}>
                   {formatCurrency(overview.totalEmv)}
@@ -1024,8 +968,8 @@ function OverviewTab({ overviewData }: { overviewData?: OverviewData | null }) {
             delta={overview.collaboration.delta}
             avgEngagement={formatPercent(overview.collaboration.engagementRate)}
             emv={formatCurrency(collabEMV)}
-            tooltip="Athlete posts co-authored or tagged with official Ohio State account"
-            opportunity={`Only ${formatNumber(overview.collaboration.posts)} collab posts exist. Scaling collaborations could significantly amplify total EMV.`}
+            tooltip="Athlete posts co-authored or tagged with the official Michigan account"
+            opportunity={`With only ${formatNumber(overview.collaboration.posts)} collab posts, there is room to amplify EMV through official account collaborations.`}
           />
           <IPModeCard
             title="Visual IP"
@@ -1034,8 +978,8 @@ function OverviewTab({ overviewData }: { overviewData?: OverviewData | null }) {
             delta={overview.logo.delta}
             avgEngagement={formatPercent(overview.logo.engagementRate)}
             emv={formatCurrency(logoEMV)}
-            tooltip="Athlete posts with Ohio State logo detected in media"
-            opportunity="Logo usage at 8.2% trails Big Ten avg of 27.0%. Increasing visual IP adoption is the biggest growth lever."
+            tooltip="Athlete posts with Michigan logo detected in media"
+            opportunity="Logo usage leads the Big Ten at 53.2%, driving the majority of Michigan's IP value."
           />
           <IPModeCard
             title="Mention"
@@ -1044,8 +988,8 @@ function OverviewTab({ overviewData }: { overviewData?: OverviewData | null }) {
             delta={overview.mention.delta}
             avgEngagement={formatPercent(overview.mention.engagementRate)}
             emv={formatCurrency(mentionEMV)}
-            tooltip="Athlete posts with @mention or text reference to Ohio State"
-            opportunity="Mention rate leads Big Ten at 21.6%. Continue encouraging organic @OhioStateFB references."
+            tooltip="Athlete posts with @mention or text reference to Michigan"
+            opportunity="Mention rate at 20.5% is among the Big Ten's highest. Continue encouraging organic @umichfootball references."
           />
         </div>
       </div>
@@ -1062,8 +1006,8 @@ function OverviewTab({ overviewData }: { overviewData?: OverviewData | null }) {
         <div>
           <p className="text-sm font-semibold text-gray-800 mb-1">Data Source Context</p>
           <p className="text-sm text-gray-600">
-            Data reflects <span className="font-semibold">Ohio State athlete personal Instagram accounts</span>, including collaboration posts with official team pages.
-            Metrics track how athletes use Ohio State IP (logos, mentions, collaborations) across their content history.
+            Data reflects <span className="font-semibold">Michigan athlete personal Instagram accounts</span>, including collaboration posts with official team pages.
+            Metrics track how athletes use Michigan IP (logos, mentions, collaborations) across their content history.
             Analysis covers{' '}
             <span className="font-semibold">{formatNumber(overview.totalPosts)} all-time athlete posts</span> from{' '}
             <span className="font-semibold">{formatNumber(ipData.totalFollowers)} combined followers</span>.{' '}
@@ -1212,7 +1156,7 @@ function WithVsWithoutTab({
           className="text-2xl md:text-3xl font-black leading-tight"
           style={{ color: colors.text }}
         >
-          Posts with Ohio State {currentSignal?.label.toLowerCase()} drive{' '}
+          Posts with Michigan {currentSignal?.label.toLowerCase()} drive{' '}
           <span style={{ color: colors.scarlet }}>{formatDelta(engDelta)}</span> higher engagement rate.
         </p>
         <div className="mt-3 flex flex-wrap items-center gap-3">
@@ -1542,14 +1486,14 @@ function PartnershipsTab() {
       new Set([
         'on3recruits',
         'locationfootball',
-        'ohiostathletics',
+        'umichathletics',
         'whereimfrom',
         'athleteps',
         'thecourageousathlete',
-        'ohiostatefb',
-        'theohiostateuniversity',
-        'ohiostswimdive',
-        'wrestlingbucks',
+        'umichfootball',
+        'umich',
+        'umichswimandive',
+        'umich_wrestling',
         'brodymarcet9',
         'qpeezy0',
         'alexdixon',
@@ -2059,7 +2003,7 @@ function BestCollaboratorsTab() {
       icon: <Handshake className="w-5 h-5" />,
       athletes: topCollabAthletes,
       stats: signalStats.collab,
-      description: 'Co-authored or tagged with official Ohio State account',
+      description: 'Co-authored or tagged with official Michigan account',
     },
     logo: {
       label: 'Visual IP',
@@ -2067,7 +2011,7 @@ function BestCollaboratorsTab() {
       icon: <Tag className="w-5 h-5" />,
       athletes: topLogoAthletes,
       stats: signalStats.logo,
-      description: 'Ohio State logo detected in post media',
+      description: 'Michigan logo detected in post media',
     },
     mention: {
       label: 'Mention',
@@ -2075,7 +2019,7 @@ function BestCollaboratorsTab() {
       icon: <AtSign className="w-5 h-5" />,
       athletes: topMentionAthletes,
       stats: signalStats.mention,
-      description: '@mention or text reference to Ohio State',
+      description: '@mention or text reference to Michigan',
     },
   };
 
@@ -2212,7 +2156,7 @@ function BestCollaboratorsTab() {
               className="h-full rounded-full transition-all duration-500"
               style={{
                 width: `${Math.min((currentConfig.stats.posts / ipData.totalPosts) * 100 * 3, 100)}%`,
-                background: `linear-gradient(90deg, ${colors.scarlet}, ${colors.scarletLight || '#d4334f'})`,
+                background: `linear-gradient(90deg, ${colors.scarlet}, ${colors.scarletLight || '#1a4a70'})`,
               }}
             />
           </div>
@@ -2330,8 +2274,8 @@ function BestCollaboratorsTab() {
           </p>
           <p className="text-xs text-gray-400">
             Signal types: <span className="font-medium">Collaboration</span> = co-authored post with official account,
-            <span className="font-medium"> Visual IP</span> = Ohio State logo detected in media,
-            <span className="font-medium"> Mention</span> = @OhioState or school reference in caption.
+            <span className="font-medium"> Visual IP</span> = Michigan logo detected in media,
+            <span className="font-medium"> Mention</span> = @umich or school reference in caption.
           </p>
         </div>
       </div>
@@ -2372,9 +2316,9 @@ function BenchmarkTab() {
     return [...schools].sort((a, b) => b[rankingMetric] - a[rankingMetric]);
   }, [schools, rankingMetric]);
 
-  const ohioIndex = rankedSchools.findIndex((s) => s.name === 'Ohio State');
+  const ohioIndex = rankedSchools.findIndex((s) => s.name === 'Michigan');
   const ohioRank = ohioIndex >= 0 ? ohioIndex + 1 : null;
-  const ohioSchool = rankedSchools.find((s) => s.name === 'Ohio State') ?? null;
+  const ohioSchool = rankedSchools.find((s) => s.name === 'Michigan') ?? null;
   const ohioValue = ohioSchool ? (rankingMetric === 'ipPosts' ? Math.round(ohioSchool.posts * ohioSchool.adoption / 100) : ohioSchool[rankingMetric]) : 0;
   const avgValue = metricAverage[rankingMetric];
   const deltaVsAvg = ohioValue - avgValue;
@@ -2385,7 +2329,7 @@ function BenchmarkTab() {
         <div>
           <SectionHeader primary="IP " secondary="RANKINGS" />
           <p className="text-sm text-gray-500 mt-2">
-            Ohio State vs {benchmarkLabel} schools ranked by {metricLabels[rankingMetric].toLowerCase()}. Data reflects all athlete posts.
+            Michigan vs {benchmarkLabel} schools ranked by {metricLabels[rankingMetric].toLowerCase()}. Data reflects all athlete posts.
           </p>
         </div>
         <div className="flex items-center gap-3">
@@ -2419,7 +2363,7 @@ function BenchmarkTab() {
 
       <div className="grid md:grid-cols-3 gap-4">
         <GlassCard className="p-5">
-          <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Ohio State Rank</p>
+          <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Michigan Rank</p>
           <div className="flex items-end gap-2">
             <p className="text-4xl font-black" style={{ color: colors.scarlet }}>
               {ohioRank ? `#${ohioRank}` : 'N/A'}
@@ -2430,7 +2374,7 @@ function BenchmarkTab() {
         </GlassCard>
 
         <GlassCard className="p-5">
-          <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Ohio State Value</p>
+          <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Michigan Value</p>
           <div className="flex items-end gap-2">
             <p className="text-4xl font-black text-gray-900">
               {rankingMetric === 'followers' || rankingMetric === 'posts' || rankingMetric === 'ipPosts' ? formatNumber(ohioValue) : `${ohioValue}%`}
@@ -2457,18 +2401,18 @@ function BenchmarkTab() {
               const isCount = rankingMetric === 'followers' || rankingMetric === 'posts' || rankingMetric === 'ipPosts';
               const getVal = (s: typeof rankedSchools[0]) =>
                 rankingMetric === 'ipPosts' ? Math.round(s.posts * s.adoption / 100) : s[rankingMetric] as number;
-              const ttun = rankedSchools.find(s => s.name === 'Michigan');
+              const ttun = rankedSchools.find(s => s.name === 'Ohio State');
               if (!ttun || !ohioSchool) return <>No ranking data available for this view.</>;
               const ttunValue = getVal(ttun);
               const gap = (ohioValue as number) - ttunValue;
               const ahead = gap >= 0;
               if (isCount) {
                 return (
-                  <>Ohio State has <span className="font-semibold">{formatNumber(Math.abs(gap))} {ahead ? 'more' : 'fewer'} {metricLabels[rankingMetric].toLowerCase()}</span> than That Team Up North.</>
+                  <>Michigan has <span className="font-semibold">{formatNumber(Math.abs(gap))} {ahead ? 'more' : 'fewer'} {metricLabels[rankingMetric].toLowerCase()}</span> than Ohio State.</>
                 );
               }
               return (
-                <>Ohio State's {metricLabels[rankingMetric].toLowerCase()} is <span className="font-semibold">{Math.abs(gap).toFixed(1)}pp {ahead ? 'above' : 'below'}</span> That Team Up North ({(ohioValue as number).toFixed(1)}% vs {ttunValue.toFixed(1)}%).</>
+                <>Michigan's {metricLabels[rankingMetric].toLowerCase()} is <span className="font-semibold">{Math.abs(gap).toFixed(1)}pp {ahead ? 'above' : 'below'}</span> Ohio State ({(ohioValue as number).toFixed(1)}% vs {ttunValue.toFixed(1)}%).</>
               );
             })()}
           </p>
@@ -2496,11 +2440,12 @@ function BenchmarkTab() {
             </thead>
             <tbody>
               {rankedSchools.map((school, idx) => {
-                const isOSU = school.name === 'Ohio State';
+                const isOSU = school.name === 'Michigan';
                 return (
                   <tr
                     key={school.name}
-                    className={`border-b border-gray-100 transition-colors ${isOSU ? 'bg-red-50 hover:bg-red-100/50' : idx % 2 === 1 ? 'bg-gray-50/50 hover:bg-gray-50' : 'hover:bg-gray-50'}`}
+                    className={`border-b border-gray-100 transition-colors ${isOSU ? 'hover:bg-blue-50/30' : idx % 2 === 1 ? 'bg-gray-50/50 hover:bg-gray-50' : 'hover:bg-gray-50'}`}
+                    style={isOSU ? { backgroundColor: '#00274C0D' } : undefined}
                   >
                     <td className="px-3 py-3 text-center">
                       {idx < 3 ? (
@@ -2667,9 +2612,9 @@ function ContentTab() {
         };
 
         let athleteRows: any[] = [];
-        // Try pre-extracted Ohio State file first, then fall back to larger sources
+        // Try pre-extracted Michigan file first, then fall back to larger sources
         for (const source of [
-          '/data/ohio-state-content-posts.json',
+          '/data/michigan-content-posts.json',
           '/data/socialMedia.roster_contents (8).json',
           '/data/NCAA_contents (2).json',
         ]) {
@@ -2678,9 +2623,13 @@ function ContentTab() {
             const res = await fetch(source);
             if (!res.ok) continue;
             const data = (await res.json()) as any[];
-            const filtered = source.includes('ohio-state-content-posts')
+            const filtered = source.includes('michigan-content-posts')
               ? data
-              : data.filter((row) => ['Ohio State', 'Ohio'].includes(row?.athlete?.school?.name));
+              : data.filter((row) => {
+                  const sch = row?.athlete?.school;
+                  const name = typeof sch === 'string' ? sch : (sch?.name || '');
+                  return name.toLowerCase() === 'michigan';
+                });
             if (filtered.length > 0) athleteRows = filtered;
           } catch {
             // try next source
@@ -2733,8 +2682,8 @@ function ContentTab() {
             thumbnail: String(post?.url || ''),
             postLink: String(post?.permalink || post?.url || ''),
             caption: getCaptionText(post?.caption || post?.text),
-            teamName: String(post?.team?.name || 'Ohio State Team'),
-            schoolName: String(post?.team?.school?.name || 'Ohio State'),
+            teamName: String(post?.team?.name || 'Michigan Team'),
+            schoolName: String(post?.team?.school?.name || 'Michigan'),
             conferenceName: String(post?.team?.conference?.name || 'Big 10'),
             dateLabel: parseDateLabel(post?.publishedAt || post?.createdAt),
             interactions: likes + comments,
@@ -2911,7 +2860,7 @@ function ContentTab() {
               <div className="w-5 h-5 rounded-full border-2 border-gray-200 border-t-transparent animate-spin" style={{ borderTopColor: colors.scarlet }} />
               <div>
                 <p className="text-sm font-semibold" style={{ color: colors.text }}>Loading content performance...</p>
-                <p className="text-xs" style={{ color: colors.textMuted }}>Pulling athlete and team posts for Ohio State.</p>
+                <p className="text-xs" style={{ color: colors.textMuted }}>Pulling athlete and team posts for Michigan.</p>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -2927,7 +2876,7 @@ function ContentTab() {
           <div>
             <SectionHeader primary="CHAMPION " secondary="FACEOFF" />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
-              {[{ title: 'Best WITH Ohio State IP', post: championWithIP }, { title: 'Best WITHOUT IP', post: championWithoutIP }].map((item) => (
+              {[{ title: 'Best WITH Michigan IP', post: championWithIP }, { title: 'Best WITHOUT IP', post: championWithoutIP }].map((item) => (
                 <GlassCard key={item.title}>
                   <p className="text-xs uppercase tracking-wider text-gray-500 mb-3">{item.title}</p>
                   {item.post ? (
@@ -2998,9 +2947,9 @@ function ContentTab() {
         </div>
       ) : (
         <div className="space-y-6">
-          {/* Top Ohio State Team Page Post */}
+          {/* Top Michigan Team Page Post */}
           <div>
-            <SectionHeader primary="TOP OHIO STATE " secondary="TEAM PAGE POST" />
+            <SectionHeader primary="TOP MICHIGAN " secondary="TEAM PAGE POST" />
             <div className="mt-4">
               <GlassCard>
                 {topOhioTeamPost ? (
@@ -3033,16 +2982,16 @@ function ContentTab() {
                     </div>
                   </a>
                 ) : (
-                  <p className="text-sm text-gray-500">No Ohio State team page posts available.</p>
+                  <p className="text-sm text-gray-500">No Michigan team page posts available.</p>
                 )}
               </GlassCard>
             </div>
           </div>
 
           <div>
-            {/* Top 10 Ohio State Team Page Posts */}
+            {/* Top 10 Michigan Team Page Posts */}
             <div>
-              <SectionHeader primary="TOP 10 " secondary="OHIO STATE TEAM PAGE POSTS" />
+              <SectionHeader primary="TOP 10 " secondary="MICHIGAN TEAM PAGE POSTS" />
               <div className="space-y-3 mt-4">
                 {top10OhioTeamPosts.map((post, idx) => (
                   <a
@@ -3086,7 +3035,7 @@ function ContentTab() {
                     </div>
                   </a>
                 ))}
-                {top10OhioTeamPosts.length === 0 && <p className="text-sm text-gray-500">No Ohio State team page posts available.</p>}
+                {top10OhioTeamPosts.length === 0 && <p className="text-sm text-gray-500">No Michigan team page posts available.</p>}
               </div>
             </div>
 
@@ -3307,7 +3256,7 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
     { id: 'posts', label: 'Posts' },
   ];
 
-  const osuScarlet = '#BB0000';
+  const osuScarlet = colors.scarlet;
 
   const SortIcon = ({ col }: { col: TeamSortKey }) => {
     if (sortKey !== col) return <ChevronDown className="w-3 h-3 opacity-30" />;
@@ -3322,11 +3271,11 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
     <div className="space-y-6">
       <div className="flex items-start justify-between gap-4">
         <div>
-          <SectionHeader primary="OHIO STATE " secondary="TEAM PAGES" />
+          <SectionHeader primary="MICHIGAN " secondary="TEAM PAGES" />
           <p className="text-sm mt-2" style={{ color: colors.textMuted }}>
             {view === 'overview'
-            ? 'Official Ohio State team page follower counts and engagement. Followers reflect current account size; likes and engagement rate are based on a recent post sample.'
-            : 'Benchmark Ohio State team pages against conference and NCAA schools. Follower counts are live; engagement metrics are sampled from recent posts.'}
+            ? 'Official Michigan team page follower counts and engagement. Followers reflect current account size; likes and engagement rate are based on a recent post sample.'
+            : 'Benchmark Michigan team pages against conference and NCAA schools. Follower counts are live; engagement metrics are sampled from recent posts.'}
           </p>
           {view === 'overview' && (
             <p className="text-xs mt-1" style={{ color: colors.textDim }}>
@@ -3344,7 +3293,7 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
               boxShadow: view === 'overview' ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
             }}
           >
-            Ohio State
+            Michigan
           </button>
           <button
             onClick={() => setView('leaderboard')}
@@ -3495,7 +3444,7 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
               {sortedRows.map((row, idx) => (
                 <tr
                   key={row.sportKey}
-                  className="border-b border-gray-50 hover:bg-red-50/30 transition-colors motion-reduce:transition-none"
+                  className="border-b border-gray-50 hover:bg-blue-50/30 transition-colors motion-reduce:transition-none"
                 >
                   <td className="px-4 py-3 font-semibold" style={{ color: osuScarlet }}>
                     #{idx + 1}
@@ -3570,9 +3519,9 @@ function TeamPageLeaderboard() {
     return () => { cancelled = true; };
   }, []);
 
-  // Get available sports that Ohio State has
+  // Get available sports that Michigan has
   const osuSports = useMemo(() => {
-    const sports = rawRows.filter(r => r.schoolName === 'Ohio State').map(r => r.sport);
+    const sports = rawRows.filter(r => r.schoolName === 'Michigan').map(r => r.sport);
     return [...new Set(sports)].sort((a, b) => formatSportLabel(a).localeCompare(formatSportLabel(b)));
   }, [rawRows]);
 
@@ -3600,7 +3549,7 @@ function TeamPageLeaderboard() {
     return Object.values(map).sort((a, b) => b[sortMetric] - a[sortMetric]);
   }, [rawRows, scope, selectedSport, sortMetric, isConference]);
 
-  const osuIndex = filtered.findIndex(s => s.name === 'Ohio State');
+  const osuIndex = filtered.findIndex(s => s.name === 'Michigan');
   const osuRank = osuIndex >= 0 ? osuIndex + 1 : null;
   const scopeLabel = isConference ? 'Big 10' : 'NCAA';
   const sportLabel = selectedSport === 'ALL' ? 'All Sports' : formatSportLabel(selectedSport);
@@ -3663,7 +3612,7 @@ function TeamPageLeaderboard() {
       {osuRank != null && (
         <div className="grid md:grid-cols-3 gap-4">
           <GlassCard className="p-5">
-            <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Ohio State {sportLabel} Rank</p>
+            <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Michigan {sportLabel} Rank</p>
             <p className="text-4xl font-black" style={{ color: colors.scarlet }}>#{osuRank} <span className="text-sm font-normal text-gray-500">of {filtered.length}</span></p>
             <p className="text-xs text-gray-400 mt-1">{scopeLabel} · {sportLabel} · by followers</p>
           </GlassCard>
@@ -3695,11 +3644,12 @@ function TeamPageLeaderboard() {
           </thead>
           <tbody>
             {filtered.map((school, idx) => {
-              const isOSU = school.name === 'Ohio State';
+              const isOSU = school.name === 'Michigan';
               return (
                 <tr
                   key={school.name}
-                  className={`border-b border-gray-100 transition-colors ${isOSU ? 'bg-red-50 hover:bg-red-100/50' : idx % 2 === 1 ? 'bg-gray-50/50 hover:bg-gray-50' : 'hover:bg-gray-50'}`}
+                  className={`border-b border-gray-100 transition-colors ${isOSU ? 'hover:bg-blue-50/30' : idx % 2 === 1 ? 'bg-gray-50/50 hover:bg-gray-50' : 'hover:bg-gray-50'}`}
+                  style={isOSU ? { backgroundColor: '#00274C0D' } : undefined}
                 >
                   <td className="px-3 py-3 text-center">
                     {idx < 3 ? (
@@ -3737,7 +3687,7 @@ function TeamPageLeaderboard() {
 // ═══════════════════════════════════════════════════════════════
 // MAIN EXPORT: OhioStateIPImpact
 // ═══════════════════════════════════════════════════════════════
-export function OhioStateIPImpact({ onBack }: { onBack?: () => void }) {
+export function MichiganIPImpact({ onBack }: { onBack?: () => void }) {
   const [activeTab, setActiveTab] = useState<TabId>('overview');
   const [scrolled, setScrolled] = useState(false);
   const [sportData, setSportData] = useState<SportSignalData>(fallbackSportData as SportSignalData);
@@ -3804,7 +3754,7 @@ export function OhioStateIPImpact({ onBack }: { onBack?: () => void }) {
 
     const loadOverviewData = async () => {
       try {
-        const response = await fetch('/data/ohio-state-athlete-overview.json');
+        const response = await fetch('/data/michigan-athlete-overview.json');
         if (!response.ok) return;
         const data = (await response.json()) as OverviewData;
         if (!isCancelled) {
@@ -3823,16 +3773,6 @@ export function OhioStateIPImpact({ onBack }: { onBack?: () => void }) {
 
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: colors.lightBg }}>
-      {/* Buckeye leaves background */}
-      <div
-        className="fixed inset-0 z-0 opacity-[0.03]"
-        style={{
-          backgroundImage: 'url(/ohio-state-bg.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
-        }}
-      />
 
       {/* Sticky Command Bar */}
       <header
@@ -3860,8 +3800,8 @@ export function OhioStateIPImpact({ onBack }: { onBack?: () => void }) {
                 </button>
               )}
               <img
-                src="https://a.espncdn.com/i/teamlogos/ncaa/500/194.png"
-                alt="Ohio State"
+                src="https://a.espncdn.com/i/teamlogos/ncaa/500/130.png"
+                alt="Michigan"
                 className="w-10 h-10 sm:w-12 sm:h-12 object-contain flex-shrink-0"
               />
               <div>
@@ -3869,7 +3809,7 @@ export function OhioStateIPImpact({ onBack }: { onBack?: () => void }) {
                   className="text-lg sm:text-2xl font-bold uppercase tracking-tight whitespace-nowrap"
                   style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }}
                 >
-                  <span style={{ color: colors.scarlet }}>Ohio State </span>
+                  <span style={{ color: colors.scarlet }}>Michigan </span>
                   <span className="hidden sm:inline" style={{ color: colors.headerGray }}>IP Impact Report</span>
                   <span className="sm:hidden" style={{ color: colors.headerGray }}>IP Impact</span>
                 </h1>
