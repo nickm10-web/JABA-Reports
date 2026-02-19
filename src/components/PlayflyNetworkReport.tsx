@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
-import { ArrowLeft, Menu, X } from 'lucide-react';
+import { ArrowLeft, Menu, X, Info } from 'lucide-react';
 import { AthleteTierPricing } from './AthleteTierPricing';
 import { QuickWinsDoThisWeek } from './QuickWinsDoThisWeek';
 import { RiskOfInaction } from './RiskOfInaction';
@@ -18,6 +18,7 @@ import { ActiveCampaigns } from './ActiveCampaigns';
 import { BrandExpansionOpportunities } from './BrandExpansionOpportunities';
 import { SchoolPartnersGrid } from './SchoolPartnersGrid';
 import { PLAYFLY_MAX_PARTNERS } from '../data/playflyNetworkData';
+import { PlayflyDataProvider, usePlayflyData, formatNumber } from '../contexts/PlayflyDataContext';
 import { HiddenTalent } from './HiddenTalent';
 import { CompetitorBenchmark } from './CompetitorBenchmark';
 import { RealTimeCampaignOptimization } from './RealTimeCampaignOptimization';
@@ -36,10 +37,11 @@ interface PlayflyNetworkReportProps {
   onBack?: () => void;
 }
 
-export function PlayflyNetworkReport({ onBack }: PlayflyNetworkReportProps = {}) {
+function PlayflyNetworkReportInner({ onBack }: PlayflyNetworkReportProps) {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [activeSection, setActiveSection] = useState('executive-summary');
   const partnerSchools = PLAYFLY_MAX_PARTNERS;
+  const { networkTotals } = usePlayflyData();
 
   // Refs for scrolling to sections
   const sectionRefs = {
@@ -205,13 +207,22 @@ export function PlayflyNetworkReport({ onBack }: PlayflyNetworkReportProps = {})
               <Menu className="w-5 h-5 text-white" />
             </button>
           )}
-          <div className={sidebarOpen ? '' : 'ml-14'}>
+          <div className={`flex-1 ${sidebarOpen ? '' : 'ml-14'}`}>
             <h1 className="text-2xl font-bold text-white">
               {sections.find(s => s.id === activeSection)?.name || 'Playfly Network Report'}
             </h1>
             <p className="text-xs text-gray-400">
-              Playfly Sports Network • 20 Partner Schools (177+ Teams) • January 2026
+              Playfly Sports Network • {networkTotals?.overview.schools ?? '—'} Schools ({formatNumber(networkTotals?.overview.totalPosts ?? 0)} Posts Analyzed) • February 2026
             </p>
+          </div>
+          <div className="relative group flex-shrink-0">
+            <div className="flex items-center gap-1.5 bg-white/8 border border-white/15 text-gray-300 px-3 py-1.5 rounded-full text-xs font-medium cursor-default">
+              <Info className="w-3 h-3" />
+              <span>Preview Dataset</span>
+            </div>
+            <div className="absolute right-0 top-full mt-2 w-72 bg-slate-800 border border-white/15 rounded-lg p-3 text-xs text-gray-300 leading-relaxed opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-200 z-50 shadow-xl">
+              This report reflects a preview dataset while final data integrations are being completed. Metrics are directional and intended to demonstrate structure and insights.
+            </div>
           </div>
         </div>
 
@@ -228,9 +239,9 @@ export function PlayflyNetworkReport({ onBack }: PlayflyNetworkReportProps = {})
                 {/* Headline with highlighted stat */}
                 <h2 className="text-5xl font-bold mb-8 leading-tight">
                   <span className="text-white">JABA analyzed </span>
-                  <span className="text-[#3B9FD9] bg-[#1770C0]/20 px-3 py-1 rounded-lg">40,774 posts</span>
+                  <span className="text-[#3B9FD9] bg-[#1770C0]/20 px-3 py-1 rounded-lg">{formatNumber(networkTotals?.overview.totalPosts ?? 0)} posts</span>
                   <span className="text-white"> and </span>
-                  <span className="text-[#3B9FD9] bg-[#1770C0]/20 px-3 py-1 rounded-lg">2,487+ athletes</span>
+                  <span className="text-[#3B9FD9] bg-[#1770C0]/20 px-3 py-1 rounded-lg">{formatNumber(networkTotals?.overview.uniqueAthletes ?? 0)}+ athletes</span>
                   <span className="text-white"> in your network to find hidden opportunities.</span>
                 </h2>
 
@@ -247,7 +258,7 @@ export function PlayflyNetworkReport({ onBack }: PlayflyNetworkReportProps = {})
                     </div>
                     <div className="text-white">
                       <div className="font-bold text-lg mb-1">We found:</div>
-                      <div className="text-gray-300">Only <span className="text-[#3B9FD9] font-bold">6% of your posts are monetized</span> — 38,266 high-performing posts untapped</div>
+                      <div className="text-gray-300">Only <span className="text-[#3B9FD9] font-bold">{networkTotals ? Math.round((networkTotals.brandDeals.sponsoredPosts / networkTotals.overview.totalPosts) * 100) : 0}% of your posts are monetized</span> — {formatNumber((networkTotals?.overview.totalPosts ?? 0) - (networkTotals?.brandDeals.sponsoredPosts ?? 0))} high-performing posts untapped</div>
                     </div>
                   </div>
 
@@ -259,7 +270,7 @@ export function PlayflyNetworkReport({ onBack }: PlayflyNetworkReportProps = {})
                     </div>
                     <div className="text-white">
                       <div className="font-bold text-lg mb-1">Your network has:</div>
-                      <div className="text-gray-300"><span className="text-[#3B9FD9] font-bold">82% of athletes unsponsored</span> across 20 schools — massive revenue opportunity</div>
+                      <div className="text-gray-300"><span className="text-[#3B9FD9] font-bold">{networkTotals ? Math.round(((networkTotals.overview.uniqueAthletes - networkTotals.brandDeals.sponsoredAthletes) / networkTotals.overview.uniqueAthletes) * 100) : 0}% of athletes unsponsored</span> across {networkTotals?.overview.schools ?? '—'} schools — massive revenue opportunity</div>
                     </div>
                   </div>
                 </div>
@@ -415,9 +426,42 @@ export function PlayflyNetworkReport({ onBack }: PlayflyNetworkReportProps = {})
             <div ref={sectionRefs['jaba-secret-sauce']} data-section-id="jaba-secret-sauce" className="scroll-mt-20">
               <JABASecretSauce />
             </div>
+
+            {/* Methodology & Data Status */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mt-4">
+              <div className="flex items-center gap-2 mb-4">
+                <Info className="w-5 h-5 text-gray-400" />
+                <h3 className="text-lg font-semibold text-gray-300">Methodology & Data Status</h3>
+              </div>
+              <div className="space-y-3 text-sm text-gray-400 leading-relaxed">
+                <p>
+                  This report reflects a <span className="text-gray-300 font-medium">preview dataset</span> while final data integrations are being completed. Metrics are directional and intended to demonstrate the structure, depth, and actionable insights JABA delivers across the Playfly network.
+                </p>
+                <p>
+                  <span className="text-gray-300 font-medium">Data sources:</span> Athlete social media metrics, brand partnership activity, and IP content signals are aggregated from {networkTotals?.overview.schools ?? '—'} Playfly partner schools covering {formatNumber(networkTotals?.overview.totalPosts ?? 0)} posts, {formatNumber(networkTotals?.overview.uniqueAthletes ?? 0)} athletes, and {formatNumber(networkTotals?.brandDeals.uniqueBrands ?? 0)} brand partners.
+                </p>
+                <p>
+                  <span className="text-gray-300 font-medium">EMV (Estimated Media Value):</span> Calculated as (Likes × $0.50) + (Comments × $1.50) per post. This is a standard industry metric estimating the equivalent paid advertising value of organic social engagement.
+                </p>
+                <p>
+                  <span className="text-gray-300 font-medium">IP Engagement Lift:</span> Measures the percentage increase in average engagement when posts include school intellectual property (logos, mentions, or collaborations) versus posts without IP signals.
+                </p>
+                <p className="text-gray-500 text-xs pt-2 border-t border-white/10">
+                  Report generated February 2026 • Data pipeline powered by JABA
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  );
+}
+
+export function PlayflyNetworkReport({ onBack }: PlayflyNetworkReportProps = {}) {
+  return (
+    <PlayflyDataProvider>
+      <PlayflyNetworkReportInner onBack={onBack} />
+    </PlayflyDataProvider>
   );
 }

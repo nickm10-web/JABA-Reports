@@ -61,7 +61,7 @@
   },
   "logo": {
     "avgEmv": 983.71,
-    "avgLift": 4.0955,
+    "avgLift": 4.0954,
     "top5Athletes": [
       {
         "athlete": {
@@ -117,7 +117,7 @@
   },
   "mention (in caption)": {
     "avgEmv": 1651.84,
-    "avgLift": 5.3039,
+    "avgLift": 5.3034,
     "top5Athletes": [
       {
         "athlete": {
@@ -172,7 +172,7 @@
     ]
   },
   "partnership": {
-    "avgEmv": 801.48,
+    "avgEmv": 801.49,
     "avgLift": 1.3761,
     "top5Athletes": [
       {

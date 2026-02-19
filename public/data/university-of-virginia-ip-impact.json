@@ -1,5 +1,5 @@
 {
-  "followers": 2044598,
+  "followers": 0,
   "school": {
     "_id": "68f0d50ea227133e83ce965a",
     "name": "University of Virginia"
@@ -8,7 +8,7 @@
     "totalContents": 6496,
     "totalLikes": 11697311,
     "totalComments": 276144,
-    "engagementRate": 0.0009014996001936079,
+    "engagementRate": 0.3621923822476257,
     "emv": 6262871.5
   },
   "counts": {
@@ -22,47 +22,47 @@
       "contents": 1070,
       "likes": 1020.9635514018692,
       "comments": 46.17009345794393,
-      "engagementRate": 0.0005219283423244144,
-      "emv": 579.74
+      "engagementRate": 0.388976606785493,
+      "emv": 579.7369158878505
     },
     "no": {
       "contents": 5426,
       "likes": 1954.4563214154073,
       "comments": 41.78805750092149,
-      "engagementRate": 0.0009763505485754798
+      "engagementRate": 0.3569105687099331
     },
-    "avgLift": -46.54293551778907
+    "avgLift": 8.984334140472171
   },
   "collaboration": {
     "yes": {
       "contents": 89,
       "likes": 1917.5393258426966,
       "comments": 21.60674157303371,
-      "engagementRate": 0.000948424124163151,
-      "emv": 991.18
+      "engagementRate": 0.5510842210554442,
+      "emv": 991.1797752808989
     },
     "no": {
       "contents": 6407,
       "likes": 1799.0713282347433,
       "comments": 42.80021851100359,
-      "engagementRate": 0.0009008477689725544
+      "engagementRate": 0.3595684750127427
     },
-    "avgLift": 5.281286897658516
+    "avgLift": 53.26266326209894
   },
   "logo": {
     "yes": {
       "contents": 2412,
       "likes": 1848.9585406301824,
       "comments": 49.983001658374796,
-      "engagementRate": 0.0009287603442283311,
-      "emv": 999.45
+      "engagementRate": 0.4561553986710645,
+      "emv": 999.4537728026534
     },
     "no": {
       "contents": 4084,
       "likes": 1772.1897649363368,
       "comments": 38.0962291870715,
-      "engagementRate": 0.0008853994741868125
+      "engagementRate": 0.30669806402692684
     },
-    "avgLift": 4.897322768498712
+    "avgLift": 48.73109816272461
   }
 }

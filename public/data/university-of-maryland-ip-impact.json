@@ -1,68 +1,68 @@
 {
-  "followers": 0,
+  "followers": 863472,
   "school": {
     "_id": "68fc8b6f7804265f86eb4183",
     "name": "University of Maryland"
   },
   "overall": {
-    "totalContents": 2392,
-    "totalLikes": 1576319,
-    "totalComments": 98146,
-    "engagementRate": 0,
-    "emv": 935378.5
+    "totalContents": 2790,
+    "totalLikes": 1968333,
+    "totalComments": 109989,
+    "engagementRate": 0.0008627011409401723,
+    "emv": 1149150
   },
   "counts": {
-    "hasOrganizationInCaption": 392,
-    "isOrganizationCollaboration": 67,
-    "hasOrganizationLogo": 1131,
-    "withIp": 1206
+    "hasOrganizationInCaption": 491,
+    "isOrganizationCollaboration": 97,
+    "hasOrganizationLogo": 1245,
+    "withIp": 1367
   },
   "orgInCaption": {
     "yes": {
-      "contents": 392,
-      "likes": 974.4107142857143,
-      "comments": 46.798469387755105,
-      "engagementRate": 0,
-      "emv": 557.4
+      "contents": 491,
+      "likes": 897.0651731160896,
+      "comments": 40.94501018329939,
+      "engagementRate": 0.0010863237989180762,
+      "emv": 509.95
     },
     "no": {
-      "contents": 2000,
-      "likes": 597.175,
-      "comments": 39.9005,
-      "engagementRate": 0
+      "contents": 2299,
+      "likes": 664.5819921705089,
+      "comments": 39.09743366681166,
+      "engagementRate": 0.0008149417998931298
     },
-    "avgLift": 0
+    "avgLift": 33.30078283633689
   },
   "collaboration": {
     "yes": {
-      "contents": 67,
-      "likes": 1645.597014925373,
-      "comments": 46.19402985074627,
-      "engagementRate": 0,
-      "emv": 892.09
+      "contents": 97,
+      "likes": 1773.1340206185566,
+      "comments": 44.98969072164948,
+      "engagementRate": 0.0021055966045687713,
+      "emv": 954.05
     },
     "no": {
-      "contents": 2325,
-      "likes": 630.5651612903226,
-      "comments": 40.88215053763441,
-      "engagementRate": 0
+      "contents": 2693,
+      "likes": 667.040103973264,
+      "comments": 39.22205718529521,
+      "engagementRate": 0.0008179329047827367
     },
-    "avgLift": 0
+    "avgLift": 157.42901309589323
   },
   "logo": {
     "yes": {
-      "contents": 1131,
-      "likes": 832.9274977895667,
-      "comments": 45.805481874447395,
-      "engagementRate": 0,
-      "emv": 485.17
+      "contents": 1245,
+      "likes": 831.4361445783132,
+      "comments": 43.5863453815261,
+      "engagementRate": 0.0010133767973481936,
+      "emv": 481.1
     },
     "no": {
-      "contents": 1261,
-      "likes": 502.99603489294213,
-      "comments": 36.748612212529736,
-      "engagementRate": 0
+      "contents": 1545,
+      "likes": 604.0097087378641,
+      "comments": 36.0673139158576,
+      "engagementRate": 0.0007412828935434173
     },
-    "avgLift": 0
+    "avgLift": 36.70581179934373
   }
 }

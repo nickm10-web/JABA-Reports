@@ -4,8 +4,8 @@
     "name": "Baylor"
   },
   "collaboration": {
-    "avgEmv": 2059.04,
-    "avgLift": 3.2249,
+    "avgEmv": 2035.82,
+    "avgLift": 3.1968,
     "top5Athletes": [
       {
         "athlete": {
@@ -60,8 +60,8 @@
     ]
   },
   "logo": {
-    "avgEmv": 569.02,
-    "avgLift": 1.6777,
+    "avgEmv": 592.02,
+    "avgLift": 1.5962,
     "top5Athletes": [
       {
         "athlete": {
@@ -85,6 +85,16 @@
       },
       {
         "athlete": {
+          "name": "DJ Lagway",
+          "sport": "FOOTBALL"
+        },
+        "posts": 4,
+        "emv": 9338.5,
+        "engagementRate": 0.007882,
+        "lift": 0.6859
+      },
+      {
+        "athlete": {
           "name": "Isaac Williams IV",
           "sport": "MENS_BASKETBALL"
         },
@@ -95,29 +105,19 @@
       },
       {
         "athlete": {
-          "name": "Payton Washington",
-          "sport": "WOMENS_GYMNASTICS"
-        },
-        "posts": 13,
-        "emv": 7012.77,
-        "engagementRate": 0.006627,
-        "lift": 19.0448
-      },
-      {
-        "athlete": {
           "name": "Taz Williams",
           "sport": "FOOTBALL"
         },
         "posts": 13,
         "emv": 5206.23,
         "engagementRate": 0.004749,
-        "lift": 0.057
+        "lift": 0.054
       }
     ]
   },
   "mention (in caption)": {
-    "avgEmv": 695.02,
-    "avgLift": 2.5313,
+    "avgEmv": 686.56,
+    "avgLift": 2.5012,
     "top5Athletes": [
       {
         "athlete": {
@@ -157,23 +157,23 @@
         "posts": 4,
         "emv": 7910.5,
         "engagementRate": 0.007218,
-        "lift": 0.672
+        "lift": 0.6681
       },
       {
         "athlete": {
-          "name": "Payton Washington",
-          "sport": "WOMENS_GYMNASTICS"
+          "name": "Walker White",
+          "sport": "FOOTBALL"
         },
-        "posts": 12,
-        "emv": 7506.58,
-        "engagementRate": 0.0071,
-        "lift": 15.355
+        "posts": 2,
+        "emv": 5100.75,
+        "engagementRate": 0.004567,
+        "lift": 0.7483
       }
     ]
   },
   "partnership": {
-    "avgEmv": 475.28,
-    "avgLift": -0.084,
+    "avgEmv": 499.59,
+    "avgLift": -0.0971,
     "top5Athletes": [
       {
         "athlete": {
@@ -197,6 +197,16 @@
       },
       {
         "athlete": {
+          "name": "DJ Lagway",
+          "sport": "FOOTBALL"
+        },
+        "posts": 11,
+        "emv": 6038.55,
+        "engagementRate": 0.005502,
+        "lift": 0.015
+      },
+      {
+        "athlete": {
           "name": "Michael Turner",
           "sport": "FOOTBALL"
         },
@@ -213,17 +223,7 @@
         "posts": 8,
         "emv": 3942.44,
         "engagementRate": 0.003593,
-        "lift": -0.2456
-      },
-      {
-        "athlete": {
-          "name": "Isaac Williams IV",
-          "sport": "MENS_BASKETBALL"
-        },
-        "posts": 1,
-        "emv": 3108,
-        "engagementRate": 0.002866,
-        "lift": -0.657
+        "lift": -0.2473
       }
     ]
   }

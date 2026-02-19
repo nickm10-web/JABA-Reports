@@ -1,6 +1,22 @@
 import { DollarSign, Award, Users, BarChart3, Globe, Database, Brain, Target, Zap } from 'lucide-react';
+import { usePlayflyData, formatNumber } from '../contexts/PlayflyDataContext';
 
 export function ExecutiveSummary() {
+  const { networkTotals, brandSummary, rosterTeamCount } = usePlayflyData();
+
+  const nt = networkTotals;
+  const sponsoredPosts = nt?.brandDeals.sponsoredPosts ?? 0;
+  const schools = nt?.overview.schools ?? 0;
+  const totalFollowers = nt?.overview.totalFollowers ?? 0;
+  const uniqueBrands = nt?.brandDeals.uniqueBrands ?? 0;
+  const uniqueAthletes = nt?.overview.uniqueAthletes ?? 0;
+  const sponsoredAthletes = nt?.brandDeals.sponsoredAthletes ?? 0;
+  const unsponsoredAthletes = uniqueAthletes - sponsoredAthletes;
+  const ipLift = nt?.ipEffectiveness.engagementLiftPercent ?? 0;
+
+  // Top brands from real brand partnership data
+  const topBrands = brandSummary?.brandStats.slice(0, 5).map(b => b.brandName) ?? [];
+
   return (
     <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8">
       {/* JABA Positioning Statement */}
@@ -12,7 +28,7 @@ export function ExecutiveSummary() {
             </svg>
           </div>
           <p className="text-xl font-bold text-white">
-            JABA powers real-time campaign management across your entire network — centralizing what's currently fragmented across 20 schools into one automated platform.
+            JABA powers real-time campaign management across your entire network — centralizing what's currently fragmented across {schools} schools into one automated platform.
           </p>
         </div>
       </div>
@@ -40,28 +56,28 @@ export function ExecutiveSummary() {
 
           <div className="space-y-3">
             <div className="flex items-baseline gap-2">
-              <span className="text-3xl font-bold text-[#3B9FD9]">5,277</span>
+              <span className="text-3xl font-bold text-[#3B9FD9]">{sponsoredPosts.toLocaleString()}</span>
               <span className="text-sm text-gray-300">sponsored posts across YOUR network</span>
             </div>
 
             <div className="flex items-baseline gap-2">
-              <span className="text-3xl font-bold text-[#3B9FD9]">20</span>
+              <span className="text-3xl font-bold text-[#3B9FD9]">{schools}</span>
               <span className="text-sm text-gray-300">schools in Playfly network</span>
             </div>
 
             <div className="flex items-baseline gap-2">
-              <span className="text-3xl font-bold text-[#3B9FD9]">177+</span>
+              <span className="text-3xl font-bold text-[#3B9FD9]">{rosterTeamCount}+</span>
               <span className="text-sm text-gray-300">teams generating content</span>
             </div>
 
             <div className="flex items-baseline gap-2">
-              <span className="text-3xl font-bold text-[#3B9FD9]">24.9M</span>
+              <span className="text-3xl font-bold text-[#3B9FD9]">{formatNumber(totalFollowers)}</span>
               <span className="text-sm text-gray-300">total followers across your schools</span>
             </div>
 
             <div className="flex items-baseline gap-2">
-              <span className="text-3xl font-bold text-[#3B9FD9]">152</span>
-              <span className="text-sm text-gray-300">active brands in your network</span>
+              <span className="text-3xl font-bold text-[#3B9FD9]">{uniqueBrands.toLocaleString()}</span>
+              <span className="text-sm text-gray-300">unique brands in your network</span>
             </div>
           </div>
         </div>
@@ -79,29 +95,29 @@ export function ExecutiveSummary() {
 
           <div className="space-y-3">
             <div className="flex flex-col">
-              <span className="text-3xl font-bold text-[#3B9FD9]">2.5X</span>
-              <span className="text-sm text-gray-300">higher revenue growth vs. industry avg</span>
+              <span className="text-3xl font-bold text-[#3B9FD9]">+{ipLift.toFixed(1)}%</span>
+              <span className="text-sm text-gray-300">engagement lift with IP-driven content</span>
             </div>
 
             <div className="flex flex-col">
-              <span className="text-3xl font-bold text-[#3B9FD9]">+45%</span>
-              <span className="text-sm text-gray-300">engagement lift with IP-driven content</span>
+              <span className="text-3xl font-bold text-[#3B9FD9]">{formatNumber(nt?.emvBreakdown.totalEMV ?? 0)}</span>
+              <span className="text-sm text-gray-300">total estimated media value (EMV)</span>
             </div>
 
             <div className="flex flex-col">
               <div className="flex items-center gap-2 mb-1">
                 <BarChart3 className="w-4 h-4 text-[#3B9FD9]" />
-                <span className="text-sm font-semibold text-white">Multi-Platform Dominance</span>
+                <span className="text-sm font-semibold text-white">Multi-Platform Coverage</span>
               </div>
-              <span className="text-xs text-gray-400">Instagram + TikTok coverage</span>
+              <span className="text-xs text-gray-400">Instagram + TikTok coverage across {schools} schools</span>
             </div>
 
             <div className="flex flex-col">
               <div className="flex items-center gap-2 mb-1">
                 <Users className="w-4 h-4 text-[#3B9FD9]" />
-                <span className="text-sm font-semibold text-white">Proven Brand Partners</span>
+                <span className="text-sm font-semibold text-white">Top Brand Partners</span>
               </div>
-              <span className="text-xs text-gray-400">Nike, Wegmans, Sheetz, H-E-B, Raising Cane's</span>
+              <span className="text-xs text-gray-400">{topBrands.join(', ')}</span>
             </div>
           </div>
         </div>
@@ -121,9 +137,9 @@ export function ExecutiveSummary() {
             <div className="flex flex-col">
               <div className="flex items-center gap-2 mb-1">
                 <Database className="w-4 h-4 text-[#3B9FD9]" />
-                <span className="text-sm font-semibold text-white">252K+ Partnership Benchmarks</span>
+                <span className="text-sm font-semibold text-white">{formatNumber(nt?.overview.totalPosts ?? 0)}+ Posts Analyzed</span>
               </div>
-              <span className="text-xs text-gray-400">3 years of athlete-brand performance data you can't replicate in months</span>
+              <span className="text-xs text-gray-400">Deep athlete-brand performance data you can't replicate</span>
             </div>
 
             <div className="flex flex-col">
@@ -131,7 +147,7 @@ export function ExecutiveSummary() {
                 <Brain className="w-4 h-4 text-[#3B9FD9]" />
                 <span className="text-sm font-semibold text-white">Network-Wide AI Matching</span>
               </div>
-              <span className="text-xs text-gray-400">Auto-optimizes athlete-brand pairings across 20 schools — would take years to build</span>
+              <span className="text-xs text-gray-400">Auto-optimizes athlete-brand pairings across {schools} schools</span>
             </div>
 
             <div className="flex flex-col">
@@ -139,7 +155,7 @@ export function ExecutiveSummary() {
                 <Target className="w-4 h-4 text-[#3B9FD9]" />
                 <span className="text-sm font-semibold text-white">Competitive Intelligence Engine</span>
               </div>
-              <span className="text-xs text-gray-400">Real-time insights into what works in college NIL (data competitors don't have)</span>
+              <span className="text-xs text-gray-400">Real-time insights into what works in college NIL</span>
             </div>
 
             <div className="flex flex-col">
@@ -147,34 +163,30 @@ export function ExecutiveSummary() {
                 <Zap className="w-4 h-4 text-[#3B9FD9]" />
                 <span className="text-sm font-semibold text-white">Automated Revenue Capture</span>
               </div>
-              <span className="text-xs text-gray-400">AI surfaces 2,487+ hidden partnership opportunities your manual process would miss</span>
+              <span className="text-xs text-gray-400">AI surfaces {unsponsoredAthletes.toLocaleString()}+ unsponsored athlete opportunities</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Stat Bar - Revenue Focused */}
+      {/* Bottom Stat Bar */}
       <div className="mt-6 pt-6 border-t border-white/20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div className="text-center">
-            <div className="text-2xl font-bold text-[#3B9FD9]">20</div>
-            <div className="text-xs text-gray-400 uppercase tracking-wide">Partner Schools</div>
-            <div className="text-xs text-gray-500 mt-0.5">(10 Playfly + 10 Playfly Max)</div>
+            <div className="text-2xl font-bold text-[#3B9FD9]">{schools}</div>
+            <div className="text-xs text-gray-400 uppercase tracking-wide">Schools Analyzed</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-[#3B9FD9]">2,487+</div>
-            <div className="text-xs text-gray-400 uppercase tracking-wide">NIL Opportunities</div>
-            <div className="text-xs text-gray-500 mt-0.5">(ready to be activated)</div>
+            <div className="text-2xl font-bold text-[#3B9FD9]">{uniqueAthletes.toLocaleString()}</div>
+            <div className="text-xs text-gray-400 uppercase tracking-wide">Athletes Tracked</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-[#3B9FD9]">5,277</div>
-            <div className="text-xs text-gray-400 uppercase tracking-wide">Revenue-Generating Posts</div>
-            <div className="text-xs text-gray-500 mt-0.5">(proven model)</div>
+            <div className="text-2xl font-bold text-[#3B9FD9]">{sponsoredPosts.toLocaleString()}</div>
+            <div className="text-xs text-gray-400 uppercase tracking-wide">Sponsored Posts</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-[#3B9FD9]">150+</div>
-            <div className="text-xs text-gray-400 uppercase tracking-wide">Active Brands</div>
-            <div className="text-xs text-gray-500 mt-0.5">(network depth)</div>
+            <div className="text-2xl font-bold text-[#3B9FD9]">{uniqueBrands.toLocaleString()}</div>
+            <div className="text-xs text-gray-400 uppercase tracking-wide">Unique Brands</div>
           </div>
         </div>
       </div>

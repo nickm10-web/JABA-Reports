@@ -3,12 +3,12 @@
     "_id": "697a72af7ef35a6cd86b951b",
     "name": "Wichita State University"
   },
-  "followers": 0,
+  "followers": 347584,
   "overall": {
     "totalContents": 1740,
     "avgLikes": 632.6109195402299,
     "avgComments": 28.141954022988507,
-    "engagementRate": 0,
+    "engagementRate": 0.0019009875988630616,
     "emv": 358.52
   },
   "sponsorPartners": [
@@ -17,18 +17,18 @@
       "totalContents": 1,
       "avgLikes": 244,
       "avgComments": 7,
-      "engagementRate": 0,
+      "engagementRate": 0.0007221276008101639,
       "emv": 132.5,
-      "engagementRateLift": 0
+      "engagementRateLift": -62.013029372624395
     },
     {
       "sponsorPartner": "@mcdonaldsphillyregion",
       "totalContents": 1,
       "avgLikes": 0,
       "avgComments": 73,
-      "engagementRate": 0,
+      "engagementRate": 0.00021002117473761737,
       "emv": 109.5,
-      "engagementRateLift": 0
+      "engagementRateLift": -88.95199659044455
     }
   ]
 }

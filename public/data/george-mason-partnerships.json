@@ -3,12 +3,12 @@
     "_id": "698263f3a7033318b33da125",
     "name": "George Mason"
   },
-  "followers": 0,
+  "followers": 403604,
   "overall": {
     "totalContents": 1959,
     "avgLikes": 295.18478815722307,
     "avgComments": 28.289433384379784,
-    "engagementRate": 0,
+    "engagementRate": 0.0008014643599706714,
     "emv": 190.03
   },
   "sponsorPartners": [
@@ -17,18 +17,18 @@
       "totalContents": 1,
       "avgLikes": 165,
       "avgComments": 6,
-      "engagementRate": 0,
+      "engagementRate": 0.00042368261959742717,
       "emv": 91.5,
-      "engagementRateLift": 0
+      "engagementRateLift": -47.13643665790313
     },
     {
       "sponsorPartner": "@aiavitalitynz",
       "totalContents": 1,
       "avgLikes": 88,
       "avgComments": 1,
-      "engagementRate": 0,
+      "engagementRate": 0.00022051317628170186,
       "emv": 45.5,
-      "engagementRateLift": 0
+      "engagementRateLift": -72.48621557048759
     }
   ]
 }

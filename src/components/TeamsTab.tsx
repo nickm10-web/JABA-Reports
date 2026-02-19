@@ -186,6 +186,8 @@ export function TeamsTab({ playflySchools }: TeamsTabProps) {
 
   const filteredTeams = useMemo(() => {
     return teamsData.filter(team => {
+      // Exclude teams with zero content across all timeframes
+      if (team.metrics.ninetyDays.contentCount === 0 && team.metrics.thirtyDays.contentCount === 0 && team.metrics.sevenDays.contentCount === 0) return false;
       if (scope === 'playfly' && !playflySet.has(team.schoolName)) return false;
       if (schoolFilter !== 'all' && team.schoolName !== schoolFilter) return false;
       if (sportFilter !== 'all' && team.sport !== sportFilter) return false;
@@ -228,6 +230,7 @@ export function TeamsTab({ playflySchools }: TeamsTabProps) {
 
   const baseTeams = useMemo(() => {
     return teamsData.filter(team => {
+      if (team.metrics.ninetyDays.contentCount === 0 && team.metrics.thirtyDays.contentCount === 0 && team.metrics.sevenDays.contentCount === 0) return false;
       if (schoolFilter !== 'all' && team.schoolName !== schoolFilter) return false;
       if (sportFilter !== 'all' && team.sport !== sportFilter) return false;
       if (conferenceFilter !== 'all' && (team.conferenceName || 'Unknown') !== conferenceFilter) return false;

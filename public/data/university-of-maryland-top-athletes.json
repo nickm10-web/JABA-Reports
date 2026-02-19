@@ -4,28 +4,48 @@
     "name": "University of Maryland"
   },
   "collaboration": {
-    "avgEmv": 803.37,
-    "avgLift": 0,
+    "avgEmv": 902.84,
+    "avgLift": 2.3861,
     "top5Athletes": [
-      {
-        "athlete": {
-          "name": "Zahir Mathis",
-          "sport": "FOOTBALL"
-        },
-        "posts": 3,
-        "emv": 4033,
-        "engagementRate": 0,
-        "lift": 0
-      },
       {
         "athlete": {
           "name": "Myles Rice",
           "sport": "MENS_BASKETBALL"
         },
+        "posts": 2,
+        "emv": 5146.25,
+        "engagementRate": 0.011194,
+        "lift": 3.3076
+      },
+      {
+        "athlete": {
+          "name": "Solomon Washington",
+          "sport": "MENS_BASKETBALL"
+        },
         "posts": 1,
-        "emv": 3157,
-        "engagementRate": 0,
-        "lift": 0
+        "emv": 3976,
+        "engagementRate": 0.009045,
+        "lift": 0.2792
+      },
+      {
+        "athlete": {
+          "name": "Zahir Mathis",
+          "sport": "FOOTBALL"
+        },
+        "posts": 4,
+        "emv": 3094.38,
+        "engagementRate": 0.006922,
+        "lift": 4.0746
+      },
+      {
+        "athlete": {
+          "name": "Madeline Komoroski",
+          "sport": "WOMENS_GYMNASTICS"
+        },
+        "posts": 1,
+        "emv": 2823,
+        "engagementRate": 0.006404,
+        "lift": 8.4048
       },
       {
         "athlete": {
@@ -33,35 +53,15 @@
           "sport": "WOMENS_BASKETBALL"
         },
         "posts": 1,
-        "emv": 2513.5,
-        "engagementRate": 0,
-        "lift": 0
-      },
-      {
-        "athlete": {
-          "name": "Addi Mack",
-          "sport": "WOMENS_BASKETBALL"
-        },
-        "posts": 1,
-        "emv": 1968,
-        "engagementRate": 0,
-        "lift": 0
-      },
-      {
-        "athlete": {
-          "name": "Brayden Martin",
-          "sport": "MENS_BASEBALL"
-        },
-        "posts": 1,
-        "emv": 1880.5,
-        "engagementRate": 0,
-        "lift": 0
+        "emv": 2515.5,
+        "engagementRate": 0.005389,
+        "lift": 1.5587
       }
     ]
   },
   "logo": {
-    "avgEmv": 452.53,
-    "avgLift": 0,
+    "avgEmv": 447.31,
+    "avgLift": 3.3515,
     "top5Athletes": [
       {
         "athlete": {
@@ -70,8 +70,8 @@
         },
         "posts": 1,
         "emv": 12725,
-        "engagementRate": 0,
-        "lift": 0
+        "engagementRate": 0.029124,
+        "lift": 3.8907
       },
       {
         "athlete": {
@@ -79,9 +79,9 @@
           "sport": "FOOTBALL"
         },
         "posts": 14,
-        "emv": 2160.14,
-        "engagementRate": 0,
-        "lift": 0
+        "emv": 2158.89,
+        "engagementRate": 0.004867,
+        "lift": 30.4783
       },
       {
         "athlete": {
@@ -89,35 +89,35 @@
           "sport": "FOOTBALL"
         },
         "posts": 18,
-        "emv": 2071.08,
-        "engagementRate": 0,
-        "lift": 0
+        "emv": 2074.69,
+        "engagementRate": 0.004641,
+        "lift": 1.8001
       },
       {
         "athlete": {
           "name": "Darius Adams",
           "sport": "MENS_BASKETBALL"
         },
-        "posts": 9,
-        "emv": 2030.22,
-        "engagementRate": 0,
-        "lift": 0
+        "posts": 10,
+        "emv": 1952,
+        "engagementRate": 0.004362,
+        "lift": 0.6292
       },
       {
         "athlete": {
           "name": "La'khi Roland",
           "sport": "FOOTBALL"
         },
-        "posts": 6,
-        "emv": 1853.58,
-        "engagementRate": 0,
-        "lift": 0
+        "posts": 7,
+        "emv": 1643.71,
+        "engagementRate": 0.003574,
+        "lift": 5.1495
       }
     ]
   },
   "mention (in caption)": {
-    "avgEmv": 505.98,
-    "avgLift": 0,
+    "avgEmv": 488.85,
+    "avgLift": 2.3088,
     "top5Athletes": [
       {
         "athlete": {
@@ -125,9 +125,9 @@
           "sport": "MENS_BASKETBALL"
         },
         "posts": 2,
-        "emv": 5555.5,
-        "engagementRate": 0,
-        "lift": 0
+        "emv": 5555.75,
+        "engagementRate": 0.012529,
+        "lift": 4.0136
       },
       {
         "athlete": {
@@ -136,8 +136,8 @@
         },
         "posts": 2,
         "emv": 4624,
-        "engagementRate": 0,
-        "lift": 0
+        "engagementRate": 0.0103,
+        "lift": 13.3347
       },
       {
         "athlete": {
@@ -145,9 +145,9 @@
           "sport": "FOOTBALL"
         },
         "posts": 6,
-        "emv": 3783.42,
-        "engagementRate": 0,
-        "lift": 0
+        "emv": 3790.33,
+        "engagementRate": 0.008586,
+        "lift": 2.8409
       },
       {
         "athlete": {
@@ -155,35 +155,45 @@
           "sport": "FOOTBALL"
         },
         "posts": 1,
-        "emv": 2923.5,
-        "engagementRate": 0,
-        "lift": 0
+        "emv": 2923,
+        "engagementRate": 0.006722,
+        "lift": 22.0013
       },
       {
         "athlete": {
-          "name": "Zahir Mathis",
-          "sport": "FOOTBALL"
+          "name": "David Coit",
+          "sport": "MENS_BASKETBALL"
         },
         "posts": 8,
-        "emv": 1895.5,
-        "engagementRate": 0,
-        "lift": 0
+        "emv": 1436.5,
+        "engagementRate": 0.003232,
+        "lift": 0.7391
       }
     ]
   },
   "partnership": {
-    "avgEmv": 314.91,
-    "avgLift": 0,
+    "avgEmv": 237.1,
+    "avgLift": -0.3119,
     "top5Athletes": [
       {
         "athlete": {
           "name": "Zahir Mathis",
           "sport": "FOOTBALL"
         },
-        "posts": 1,
-        "emv": 10943,
-        "engagementRate": 0,
-        "lift": 0
+        "posts": 2,
+        "emv": 5654,
+        "engagementRate": 0.012672,
+        "lift": 8.391
+      },
+      {
+        "athlete": {
+          "name": "Octavian Smith Jr.",
+          "sport": "FOOTBALL"
+        },
+        "posts": 4,
+        "emv": 883.13,
+        "engagementRate": 0.001917,
+        "lift": -0.0633
       },
       {
         "athlete": {
@@ -192,8 +202,8 @@
         },
         "posts": 1,
         "emv": 874,
-        "engagementRate": 0,
-        "lift": 0
+        "engagementRate": 0.00195,
+        "lift": 2.7312
       },
       {
         "athlete": {
@@ -201,9 +211,9 @@
           "sport": "FOOTBALL"
         },
         "posts": 2,
-        "emv": 752,
-        "engagementRate": 0,
-        "lift": 0
+        "emv": 755.5,
+        "engagementRate": 0.001687,
+        "lift": -0.5563
       },
       {
         "athlete": {
@@ -212,18 +222,8 @@
         },
         "posts": 1,
         "emv": 657,
-        "engagementRate": 0,
-        "lift": 0
-      },
-      {
-        "athlete": {
-          "name": "Ryan Howerton",
-          "sport": "FOOTBALL"
-        },
-        "posts": 1,
-        "emv": 521.5,
-        "engagementRate": 0,
-        "lift": 0
+        "engagementRate": 0.001478,
+        "lift": 2.8579
       }
     ]
   }

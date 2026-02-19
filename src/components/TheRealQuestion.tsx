@@ -1,6 +1,24 @@
 import { HelpCircle } from 'lucide-react';
+import { usePlayflyData, formatNumber } from '../contexts/PlayflyDataContext';
 
 export function TheRealQuestion() {
+  const { networkTotals, brandSummary, rosterTeamCount, isLoading } = usePlayflyData();
+
+  if (isLoading || !networkTotals || !brandSummary) {
+    return (
+      <div className="bg-gradient-to-br from-[#1770C0]/20 to-blue-900/20 backdrop-blur-lg border border-[#3B9FD9]/30 rounded-2xl p-10 mb-8">
+        <div className="text-center text-gray-400">Loading data...</div>
+      </div>
+    );
+  }
+
+  const schoolCount = networkTotals.overview.schools;
+  const teamCount = rosterTeamCount;
+  const athleteCount = networkTotals.overview.uniqueAthletes;
+  const currentPartnerships = networkTotals.brandDeals.sponsoredPosts;
+  // Estimate team page opportunity: ~5 slots per school with room to grow
+  const teamPageOpportunities = schoolCount * 5;
+
   return (
     <div className="bg-gradient-to-br from-[#1770C0]/20 to-blue-900/20 backdrop-blur-lg border border-[#3B9FD9]/30 rounded-2xl p-10 mb-8">
       <div className="max-w-4xl mx-auto text-center">
@@ -12,9 +30,9 @@ export function TheRealQuestion() {
 
         <div className="space-y-4 text-lg text-gray-300 leading-relaxed mb-8">
           <p>
-            Playfly, you manage <span className="text-white font-semibold">20 schools</span>,
-            <span className="text-white font-semibold"> 177+ teams</span>, and
-            <span className="text-white font-semibold"> 2,487+ athletes</span> across the biggest college sports conferences.
+            Playfly, you manage <span className="text-white font-semibold">{schoolCount} schools</span>,
+            <span className="text-white font-semibold"> {formatNumber(teamCount)}+ teams</span>, and
+            <span className="text-white font-semibold"> {formatNumber(athleteCount)}+ athletes</span> across the biggest college sports conferences.
           </p>
 
           <p className="text-red-400 font-semibold">
@@ -32,7 +50,7 @@ export function TheRealQuestion() {
             </li>
             <li className="flex items-start gap-2">
               <span className="text-red-400">•</span>
-              <span>Identifying team page inventory gaps (28 schools dark = 140+ opportunities lost)</span>
+              <span>Identifying team page inventory gaps ({teamPageOpportunities}+ opportunities across {schoolCount} schools)</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-red-400">•</span>
@@ -40,7 +58,7 @@ export function TheRealQuestion() {
             </li>
             <li className="flex items-start gap-2">
               <span className="text-red-400">•</span>
-              <span>Coordinating across 20 independent athletic departments (herding cats)</span>
+              <span>Coordinating across {schoolCount} independent athletic departments (herding cats)</span>
             </li>
           </ul>
 
@@ -63,11 +81,11 @@ export function TheRealQuestion() {
             </li>
             <li className="flex items-start gap-2">
               <span className="text-[#3B9FD9]">✓</span>
-              <span>Partnerships grow 5.8X faster</span>
+              <span>Partnership growth is accelerated across all {schoolCount} schools</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-[#3B9FD9]">✓</span>
-              <span className="text-white font-semibold">You scale from 403 to 2,400+ partnerships</span>
+              <span className="text-white font-semibold">You scale from {formatNumber(currentPartnerships)} sponsored posts to maximizing every opportunity</span>
             </li>
           </ul>
         </div>
@@ -78,12 +96,12 @@ export function TheRealQuestion() {
           </p>
           <div className="flex items-center justify-center gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-red-400 mb-2">403</div>
+              <div className="text-4xl font-bold text-red-400 mb-2">{formatNumber(currentPartnerships)}</div>
               <div className="text-sm text-gray-400">Manual Process</div>
             </div>
             <div className="text-4xl text-gray-600">vs</div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-[#3B9FD9] mb-2">2,400+</div>
+              <div className="text-4xl font-bold text-[#3B9FD9] mb-2">Unlimited</div>
               <div className="text-sm text-gray-400">JABA-Powered</div>
             </div>
           </div>

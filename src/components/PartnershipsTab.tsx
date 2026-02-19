@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Info, TrendingUp, TrendingDown } from 'lucide-react';
+import { Info } from 'lucide-react';
 import { DrawerPanel, GlassCard, GlassPill } from './playfly/PlayflyUI';
 
 interface SchoolPartnershipData {
@@ -73,6 +73,7 @@ export function PartnershipsTab({
     totalComments: number;
     avgLift: number;
     industry: string;
+    subBrands: Array<{ name: string; posts: number; likes: number; comments: number; emv: number }>;
   } | null>(null);
   const [brandDrawerOpen, setBrandDrawerOpen] = useState(false);
   const [filtersOpen, setFiltersOpen] = useState(false);
@@ -89,151 +90,21 @@ export function PartnershipsTab({
   } | null>(null);
   const [schoolPartnerDrawerOpen, setSchoolPartnerDrawerOpen] = useState(false);
   const [brandLogoMap, setBrandLogoMap] = useState<Record<string, string>>({});
+  const [brandAthleteCounts, setBrandAthleteCounts] = useState<Record<string, number>>({});
+  const [brandExclusions, setBrandExclusions] = useState<Set<string>>(new Set());
+  const [brandNormMap, setBrandNormMap] = useState<Record<string, string>>({});
 
   const normalizeBrandKey = (value: string) =>
     value.toLowerCase().replace(/^@/, '').replace(/[\s._-]+/g, '');
-  const EXPLICIT_BRAND_EXCLUSION_KEYS = new Set([
-    'baylormbb',
-    'huskerfootball',
-    'pennstatevb',
-    'athletenarrative',
-    'on3recruits',
-    'nikeeyb',
-    'victoryplustv',
-    'thefamilie',
-    'walkons',
-    '12thmanfoundation',
-    'cornermediaco',
-    'terpswbb',
-    'nileliteladies',
-    'baylornilstore',
-    'academy',
-    'huskermbb',
-    'prideofodunil',
-    'msunilstore'
-  ]);
 
-  const getSchoolAliases = (schoolName: string) => {
-    const stop = new Set(['university', 'college', 'state', 'of', 'the', 'at', 'and']);
-    const tokens = schoolName
-      .toLowerCase()
-      .replace(/[^a-z0-9\s]/g, ' ')
-      .split(/\s+/)
-      .filter(t => t && !stop.has(t));
-    const initials = tokens.map(t => t[0]).join('');
-    const aliases = new Set<string>([...tokens, initials]);
-
-    const lower = schoolName.toLowerCase();
-    if (lower.includes('texas a') || lower.includes('a&m')) {
-      aliases.add('tamu');
-      aliases.add('aggie');
-      aliases.add('aggies');
-    }
-    if (lower.includes('nebraska')) {
-      aliases.add('husker');
-      aliases.add('huskers');
-    }
-    if (lower.includes('louisiana state')) {
-      aliases.add('lsu');
-      aliases.add('tigers');
-    }
-    if (lower.includes('michigan state')) {
-      aliases.add('msu');
-      aliases.add('spartan');
-      aliases.add('spartans');
-    }
-    if (lower.includes('penn state')) {
-      aliases.add('psu');
-      aliases.add('pennstate');
-      aliases.add('nittany');
-    }
-    if (lower.includes('auburn')) {
-      aliases.add('auburn');
-      aliases.add('tigers');
-    }
-    if (lower.includes('baylor')) {
-      aliases.add('baylor');
-      aliases.add('bears');
-    }
-    if (lower.includes('virginia tech')) {
-      aliases.add('vt');
-      aliases.add('hokie');
-      aliases.add('hokies');
-    }
-    if (lower.includes('washington state')) {
-      aliases.add('wsu');
-      aliases.add('wazzu');
-      aliases.add('cougar');
-      aliases.add('cougars');
-    }
-    if (lower.includes('cincinnati')) {
-      aliases.add('uc');
-      aliases.add('cincy');
-      aliases.add('bearcats');
-    }
-    if (lower.includes('central florida')) {
-      aliases.add('ucf');
-      aliases.add('knights');
-    }
-    if (lower.includes('virginia')) {
-      aliases.add('uva');
-      aliases.add('cavs');
-      aliases.add('cavalier');
-    }
-    if (lower.includes('old dominion')) {
-      aliases.add('odu');
-      aliases.add('monarch');
-      aliases.add('monarchs');
-    }
-    if (lower.includes('texas at san antonio') || lower.includes('utsa')) {
-      aliases.add('utsa');
-      aliases.add('roadrunners');
-    }
-
-    return [...aliases].filter(a => a.length >= 2);
+  const isExcludedBrand = (value: string, _schoolName: string) => {
+    const key = value.toLowerCase().replace(/^@/, '');
+    return brandExclusions.has(key);
   };
 
-  const isTeamPagePartner = (partner: string, schoolName: string) => {
-    const key = normalizeBrandKey(partner);
-    const sportTokens = [
-      'football','fb','basketball','mbb','wbb','baseball','softball','soccer','volleyball','vb','vball',
-      'tfxc','track','xc','crosscountry','wrest','wrestling','golf','tennis','lacrosse','hockey','swim',
-      'swimming','gym','gymnastics','fieldhockey','rowing','crew','athletics','womens','mens','women','men'
-    ];
-    const hasSport = sportTokens.some(t => key.includes(t));
-    if (!hasSport) return false;
-    const aliases = getSchoolAliases(schoolName);
-    return aliases.some(a => key.includes(a));
-  };
-
-  const isSchoolOwnedPage = (partner: string, schoolName: string) => {
-    const key = normalizeBrandKey(partner);
-    const aliases = getSchoolAliases(schoolName);
-    const hasAlias = aliases.some(a => key.includes(a));
-    if (!hasAlias) return false;
-
-    const sportTokens = [
-      'football','fb','basketball','mbb','wbb','baseball','softball','soccer','volleyball','vb','vball',
-      'tfxc','track','xc','crosscountry','wrest','wrestling','golf','tennis','lacrosse','hockey','swim',
-      'swimming','gym','gymnastics','fieldhockey','rowing','crew','athletics','womens','mens','women','men'
-    ];
-    const teamPageTokens = ['athletics', 'sports', 'official', 'recruiting', 'recruits', 'studentathlete'];
-    const hasTeamContext =
-      sportTokens.some(t => key.includes(t)) ||
-      teamPageTokens.some(t => key.includes(t));
-
-    // Also exclude direct school account aliases (e.g. @huskers, @lsu)
-    const exactAlias = aliases.some(a => a === key);
-
-    return hasTeamContext || exactAlias;
-  };
-
-  const isExcludedBrand = (value: string, schoolName: string) => {
+  const getParentBrandName = (value: string): string => {
     const key = normalizeBrandKey(value);
-    if (EXPLICIT_BRAND_EXCLUSION_KEYS.has(key)) return true;
-    if (key === 'huskervb' || key === 'aggiefootball') return true;
-    if (isTeamPagePartner(value, schoolName)) return true;
-    return isSchoolOwnedPage(value, schoolName);
+    return brandNormMap[key] || value;
   };
 
   useEffect(() => {
@@ -241,6 +112,22 @@ export function PartnershipsTab({
     update();
     window.addEventListener('resize', update);
     return () => window.removeEventListener('resize', update);
+  }, []);
+
+  // Load brand exclusion list
+  useEffect(() => {
+    fetch('/data/brand-exclusions.json')
+      .then(res => res.ok ? res.json() : [])
+      .then((data: string[]) => setBrandExclusions(new Set(data)))
+      .catch(() => setBrandExclusions(new Set()));
+  }, []);
+
+  // Load brand normalization map
+  useEffect(() => {
+    fetch('/data/brand-normalization.json')
+      .then(res => res.ok ? res.json() : {})
+      .then(data => setBrandNormMap(data))
+      .catch(() => setBrandNormMap({}));
   }, []);
 
   useEffect(() => {
@@ -264,6 +151,14 @@ export function PartnershipsTab({
       }
     };
     loadBrandLogos();
+  }, []);
+
+  // Load brand → athlete count lookup
+  useEffect(() => {
+    fetch('/data/brand-athlete-counts.json')
+      .then(res => res.ok ? res.json() : {})
+      .then(data => setBrandAthleteCounts(data))
+      .catch(() => setBrandAthleteCounts({}));
   }, []);
 
   // section scope only
@@ -359,7 +254,10 @@ export function PartnershipsTab({
     totalLikes: number;
     totalComments: number;
     avgLift: number;
+    schoolCount: number;
+    athleteCount: number;
     industry: string;
+    subBrands: Array<{ name: string; posts: number; likes: number; comments: number; emv: number }>;
   }; onSelect: () => void }) => {
     // Map brand names to their company domains
     const getBrandDomain = (brandName: string): string | null => {
@@ -560,8 +458,8 @@ export function PartnershipsTab({
           <div className="text-[#1770C0] font-semibold">
             {formatNumber(brand.totalPosts)} posts
           </div>
-          <div className="text-green-600 font-bold font-mono text-sm">
-            ${brand.totalEMV.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+          <div className="text-green-600 font-bold font-mono text-sm" title="Estimated Media Value">
+            ${brand.totalEMV.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} <span className="text-xs font-semibold text-gray-500 font-sans">EMV</span>
           </div>
         </div>
 
@@ -577,24 +475,37 @@ export function PartnershipsTab({
           </div>
         </div>
 
-        {/* Avg Lift */}
-        <div className={`flex items-center gap-1.5 text-sm font-semibold ${
-          brand.avgLift > 0 ? 'text-green-600' : brand.avgLift < 0 ? 'text-red-600' : 'text-gray-600'
-        }`}>
-          <span>{brand.avgLift > 0 ? '+' : ''}{brand.avgLift.toFixed(1)}% Lift</span>
-          {brand.avgLift > 0 ? (
-            <TrendingUp className="w-4 h-4" />
-          ) : brand.avgLift < 0 ? (
-            <TrendingDown className="w-4 h-4" />
-          ) : null}
+        {/* School count & athlete count */}
+        <div className="flex items-center justify-between text-xs text-gray-500">
+          <span>{brand.schoolCount} {brand.schoolCount === 1 ? 'school' : 'schools'}</span>
+          <span>{brand.athleteCount} {brand.athleteCount === 1 ? 'athlete' : 'athletes'}</span>
         </div>
+
+        {/* Sub-brand chips (only show when grouped) */}
+        {brand.subBrands && brand.subBrands.length > 1 && (
+          <div className="mt-3 pt-3 border-t border-gray-100">
+            <div className="text-[10px] uppercase tracking-wider text-gray-400 mb-1.5">Includes</div>
+            <div className="flex flex-wrap gap-1">
+              {brand.subBrands.slice(0, 4).map(sub => (
+                <span key={sub.name} className="text-[10px] bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">
+                  {sub.name} ({sub.posts})
+                </span>
+              ))}
+              {brand.subBrands.length > 4 && (
+                <span className="text-[10px] bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">
+                  +{brand.subBrands.length - 4} more
+                </span>
+              )}
+            </div>
+          </div>
+        )}
       </GlassCard>
     );
   };
 
   // Network view - show all brands from school partnership data
   if (sectionScope === 'all') {
-    // Aggregate all brands across schools
+    // Aggregate all brands across schools, grouping sub-brands under parent
     const allBrands = new Map<string, {
       name: string;
       totalPosts: number;
@@ -603,49 +514,88 @@ export function PartnershipsTab({
       engagementLift: number[];
       totalLikes: number;
       totalComments: number;
+      subBrands: Map<string, { posts: number; likes: number; comments: number; schools: Set<string> }>;
     }>();
 
     schoolPartnershipData.forEach(school => {
       school.sponsorPartners.forEach(partner => {
         if (isExcludedBrand(partner.sponsorPartner, school.school.name)) return;
-        const existing = allBrands.get(partner.sponsorPartner);
+        const parentName = getParentBrandName(partner.sponsorPartner);
+        const subKey = partner.sponsorPartner;
+        const likes = partner.avgLikes * partner.totalContents;
+        const comments = partner.avgComments * partner.totalContents;
+
+        const existing = allBrands.get(parentName);
         if (existing) {
           existing.totalPosts += partner.totalContents;
           existing.schools.add(school.school.name);
           existing.avgEngagement += partner.engagementRate;
           existing.engagementLift.push(partner.engagementRateLift);
-          existing.totalLikes += partner.avgLikes * partner.totalContents;
-          existing.totalComments += partner.avgComments * partner.totalContents;
+          existing.totalLikes += likes;
+          existing.totalComments += comments;
+          // Track sub-brand
+          const sub = existing.subBrands.get(subKey);
+          if (sub) {
+            sub.posts += partner.totalContents;
+            sub.likes += likes;
+            sub.comments += comments;
+            sub.schools.add(school.school.name);
+          } else {
+            existing.subBrands.set(subKey, { posts: partner.totalContents, likes, comments, schools: new Set([school.school.name]) });
+          }
         } else {
-          allBrands.set(partner.sponsorPartner, {
-            name: partner.sponsorPartner,
+          allBrands.set(parentName, {
+            name: parentName,
             totalPosts: partner.totalContents,
             schools: new Set([school.school.name]),
             avgEngagement: partner.engagementRate,
             engagementLift: [partner.engagementRateLift],
-            totalLikes: partner.avgLikes * partner.totalContents,
-            totalComments: partner.avgComments * partner.totalContents
+            totalLikes: likes,
+            totalComments: comments,
+            subBrands: new Map([[subKey, { posts: partner.totalContents, likes, comments, schools: new Set([school.school.name]) }]])
           });
         }
       });
     });
 
     // Convert to array and calculate averages
-    const brandsArray = Array.from(allBrands.values()).map(brand => ({
-      name: brand.name,
-      totalPosts: brand.totalPosts,
-      schoolCount: brand.schools.size,
-      totalEMV: calcEstimatedEmv(brand.totalLikes, brand.totalComments),
-      avgEngagement: brand.avgEngagement / brand.engagementLift.length,
-      avgLift: brand.engagementLift.reduce((sum, lift) => sum + lift, 0) / brand.engagementLift.length,
-      avgLikes: brand.totalLikes / brand.totalPosts,
-      avgComments: brand.totalComments / brand.totalPosts,
-      avgInteractionsPerPost: (brand.totalLikes + brand.totalComments) / brand.totalPosts,
-      totalLikes: brand.totalLikes,
-      totalComments: brand.totalComments,
-      totalEngagement: brand.totalLikes + brand.totalComments,
-      industry: categorizeByIndustry(brand.name)
-    }));
+    const brandsArray = Array.from(allBrands.values()).map(brand => {
+      // Sum athlete counts across all sub-brand keys
+      let totalAthletes = 0;
+      for (const subKey of brand.subBrands.keys()) {
+        totalAthletes += brandAthleteCounts[subKey] || 0;
+      }
+
+      // Build sub-brands array sorted by posts
+      const subBrandsArr = Array.from(brand.subBrands.entries())
+        .map(([name, data]) => ({
+          name,
+          posts: data.posts,
+          likes: data.likes,
+          comments: data.comments,
+          emv: calcEstimatedEmv(data.likes, data.comments)
+        }))
+        .sort((a, b) => b.posts - a.posts);
+
+      return {
+        name: brand.name,
+        totalPosts: brand.totalPosts,
+        schoolCount: brand.schools.size,
+        athleteCount: totalAthletes,
+        totalEMV: calcEstimatedEmv(brand.totalLikes, brand.totalComments),
+        avgEngagement: brand.avgEngagement / brand.engagementLift.length,
+        avgLift: brand.engagementLift.reduce((sum, lift) => sum + lift, 0) / brand.engagementLift.length,
+        avgLikes: brand.totalLikes / brand.totalPosts,
+        avgComments: brand.totalComments / brand.totalPosts,
+        avgInteractionsPerPost: (brand.totalLikes + brand.totalComments) / brand.totalPosts,
+        totalLikes: brand.totalLikes,
+        totalComments: brand.totalComments,
+        totalEngagement: brand.totalLikes + brand.totalComments,
+        industry: categorizeByIndustry(brand.name),
+        subBrands: subBrandsArr,
+        hasSubBrands: subBrandsArr.length > 1
+      };
+    });
     const totalSponsoredPosts = brandsArray.reduce((sum, brand) => sum + brand.totalPosts, 0);
     const totalEstimatedEmv = brandsArray.reduce((sum, brand) => sum + brand.totalEMV, 0);
     const activeSchools = new Set(
@@ -668,11 +618,13 @@ export function PartnershipsTab({
       }
     });
 
-    // Filter by search query
+    // Filter by search query (match parent name or any sub-brand name)
     const filteredBrands = partnershipSearchQuery
-      ? sortedBrands.filter(brand =>
-          brand.name.toLowerCase().includes(partnershipSearchQuery.toLowerCase())
-        )
+      ? sortedBrands.filter(brand => {
+          const q = partnershipSearchQuery.toLowerCase();
+          return brand.name.toLowerCase().includes(q) ||
+            brand.subBrands.some(sub => sub.name.toLowerCase().includes(q));
+        })
       : sortedBrands;
 
     // Filter by engagement level
@@ -873,7 +825,10 @@ export function PartnershipsTab({
                   totalLikes: brand.totalLikes,
                   totalComments: brand.totalComments,
                   avgLift: brand.avgLift,
-                  industry: brand.industry
+                  schoolCount: brand.schoolCount,
+                  athleteCount: brand.athleteCount,
+                  industry: brand.industry,
+                  subBrands: brand.subBrands
                 }}
                 onSelect={() => {
                   setSelectedBrand({
@@ -883,7 +838,8 @@ export function PartnershipsTab({
                     totalLikes: brand.totalLikes,
                     totalComments: brand.totalComments,
                     avgLift: brand.avgLift,
-                    industry: brand.industry
+                    industry: brand.industry,
+                    subBrands: brand.subBrands
                   });
                   setBrandDrawerOpen(true);
                 }}
@@ -931,33 +887,55 @@ export function PartnershipsTab({
             side={isMobile ? 'bottom' : 'right'}
           >
             {selectedBrand && (
-              <div className="space-y-3 text-sm">
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-500">Industry</span>
-                  <span className="font-semibold text-gray-900">{selectedBrand.industry}</span>
+              <div className="space-y-4 text-sm">
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-500">Industry</span>
+                    <span className="font-semibold text-gray-900">{selectedBrand.industry}</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-500">Total Posts</span>
+                    <span className="font-semibold text-gray-900">{formatNumber(selectedBrand.totalPosts)}</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-500">Total Likes</span>
+                    <span className="font-semibold text-gray-900">{formatNumber(selectedBrand.totalLikes)}</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-500">Total Comments</span>
+                    <span className="font-semibold text-gray-900">{formatNumber(selectedBrand.totalComments)}</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-500">Estimated EMV</span>
+                    <span className="font-semibold text-green-600">{formatEMV(selectedBrand.totalEMV)}</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-500">Avg Lift</span>
+                    <span className={`font-semibold ${selectedBrand.avgLift > 0 ? 'text-green-600' : selectedBrand.avgLift < 0 ? 'text-red-600' : 'text-gray-600'}`}>
+                      {selectedBrand.avgLift > 0 ? '+' : ''}{selectedBrand.avgLift.toFixed(1)}%
+                    </span>
+                  </div>
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-500">Total Posts</span>
-                  <span className="font-semibold text-gray-900">{formatNumber(selectedBrand.totalPosts)}</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-500">Total Likes</span>
-                  <span className="font-semibold text-gray-900">{formatNumber(selectedBrand.totalLikes)}</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-500">Total Comments</span>
-                  <span className="font-semibold text-gray-900">{formatNumber(selectedBrand.totalComments)}</span>
-                </div>
-                <div className="flex items-center justify-between">
-              <span className="text-gray-500">Estimated EMV</span>
-              <span className="font-semibold text-green-600">{formatEMV(selectedBrand.totalEMV)}</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-500">Avg Lift</span>
-                  <span className={`font-semibold ${selectedBrand.avgLift > 0 ? 'text-green-600' : selectedBrand.avgLift < 0 ? 'text-red-600' : 'text-gray-600'}`}>
-                    {selectedBrand.avgLift > 0 ? '+' : ''}{selectedBrand.avgLift.toFixed(1)}%
-                  </span>
-                </div>
+
+                {/* Sub-brand breakdown */}
+                {selectedBrand.subBrands && selectedBrand.subBrands.length > 1 && (
+                  <div className="pt-4 border-t border-gray-200">
+                    <h5 className="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">
+                      Sub-brand Breakdown ({selectedBrand.subBrands.length})
+                    </h5>
+                    <div className="space-y-2">
+                      {selectedBrand.subBrands.map(sub => (
+                        <div key={sub.name} className="flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-gray-50">
+                          <span className="text-gray-700 font-medium">{sub.name}</span>
+                          <div className="flex items-center gap-3 text-xs">
+                            <span className="text-gray-500">{sub.posts} posts</span>
+                            <span className="text-green-600 font-semibold">{formatEMV(sub.emv)}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             )}
           </DrawerPanel>

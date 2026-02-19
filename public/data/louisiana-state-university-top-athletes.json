@@ -4,8 +4,8 @@
     "name": "Louisiana State University"
   },
   "collaboration": {
-    "avgEmv": 2934.8,
-    "avgLift": 2.3114,
+    "avgEmv": 2960,
+    "avgLift": 2.336,
     "top5Athletes": [
       {
         "athlete": {
@@ -60,8 +60,8 @@
     ]
   },
   "logo": {
-    "avgEmv": 1397.42,
-    "avgLift": 4.3221,
+    "avgEmv": 1401.31,
+    "avgLift": 4.3339,
     "top5Athletes": [
       {
         "athlete": {
@@ -173,7 +173,7 @@
   },
   "partnership": {
     "avgEmv": 591.83,
-    "avgLift": 0.2498,
+    "avgLift": 0.2497,
     "top5Athletes": [
       {
         "athlete": {

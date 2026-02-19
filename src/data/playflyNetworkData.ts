@@ -142,43 +142,35 @@ export const PLAYFLY_MAX_PARTNERS: SchoolPartner[] = generatePartnersFromRealDat
 // CONFERENCE DISTRIBUTION
 // ============================================
 
-export const CONFERENCE_DISTRIBUTION: ConferenceDistribution[] = [
-  {
-    conferenceName: 'SEC',
-    schoolCount: 12,
-    percentageOfNetwork: 30.0,
-    totalAthletesInConference: 4200,
-    aggregateEngagementRate: 0.45,
-  },
-  {
-    conferenceName: 'Big Ten',
-    schoolCount: 10,
-    percentageOfNetwork: 25.0,
-    totalAthletesInConference: 3800,
-    aggregateEngagementRate: 0.42,
-  },
-  {
-    conferenceName: 'ACC',
-    schoolCount: 8,
-    percentageOfNetwork: 20.0,
-    totalAthletesInConference: 2900,
-    aggregateEngagementRate: 0.38,
-  },
-  {
-    conferenceName: 'Big 12',
-    schoolCount: 6,
-    percentageOfNetwork: 15.0,
-    totalAthletesInConference: 2200,
-    aggregateEngagementRate: 0.40,
-  },
-  {
-    conferenceName: 'Pac-12',
-    schoolCount: 4,
-    percentageOfNetwork: 10.0,
-    totalAthletesInConference: 1900,
-    aggregateEngagementRate: 0.35,
-  },
-];
+// Conference distribution computed from real roster data
+export const CONFERENCE_DISTRIBUTION: ConferenceDistribution[] = (() => {
+  const teams = getJABARosterTeams();
+  const confMap = new Map<string, { schools: Set<string>; teamCount: number; engSum: number; engCount: number }>();
+
+  for (const team of teams) {
+    const conf = team.conferenceName || 'Unknown';
+    const entry = confMap.get(conf) || { schools: new Set(), teamCount: 0, engSum: 0, engCount: 0 };
+    entry.schools.add(team.schoolName);
+    entry.teamCount++;
+    if (team.metrics.ninetyDays.engagementRate > 0) {
+      entry.engSum += team.metrics.ninetyDays.engagementRate;
+      entry.engCount++;
+    }
+    confMap.set(conf, entry);
+  }
+
+  const totalSchools = getAllSchools().length;
+
+  return Array.from(confMap.entries())
+    .map(([conferenceName, d]) => ({
+      conferenceName,
+      schoolCount: d.schools.size,
+      percentageOfNetwork: totalSchools > 0 ? (d.schools.size / totalSchools) * 100 : 0,
+      totalAthletesInConference: d.teamCount, // teams, not individual athletes
+      aggregateEngagementRate: d.engCount > 0 ? d.engSum / d.engCount : 0,
+    }))
+    .sort((a, b) => b.schoolCount - a.schoolCount);
+})();
 
 // ============================================
 // NETWORK METRICS CALCULATOR

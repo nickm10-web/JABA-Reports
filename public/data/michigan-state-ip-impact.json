@@ -1,68 +1,68 @@
 {
-  "followers": 0,
+  "followers": 827265,
   "school": {
     "_id": "68fc5b7f7804265f86eb4173",
     "name": "Michigan State"
   },
   "overall": {
-    "totalContents": 2867,
-    "totalLikes": 2994108,
-    "totalComments": 108281,
-    "engagementRate": 0,
-    "emv": 1659475.5
+    "totalContents": 2887,
+    "totalLikes": 3029864,
+    "totalComments": 109090,
+    "engagementRate": 0.0013142970010282002,
+    "emv": 1678567
   },
   "counts": {
     "hasOrganizationInCaption": 446,
-    "isOrganizationCollaboration": 113,
-    "hasOrganizationLogo": 1149,
-    "withIp": 1298
+    "isOrganizationCollaboration": 115,
+    "hasOrganizationLogo": 1155,
+    "withIp": 1304
   },
   "orgInCaption": {
     "yes": {
       "contents": 446,
-      "likes": 1535.8789237668161,
-      "comments": 39.69730941704036,
-      "engagementRate": 0,
-      "emv": 827.49
+      "likes": 1536.493273542601,
+      "comments": 39.70627802690583,
+      "engagementRate": 0.0019053139581264851,
+      "emv": 827.81
     },
     "no": {
-      "contents": 2421,
-      "likes": 953.7819083023544,
-      "comments": 37.41263940520446,
-      "engagementRate": 0
+      "contents": 2441,
+      "likes": 960.5030725112658,
+      "comments": 37.435886931585415,
+      "engagementRate": 0.0012063111088258917
     },
-    "avgLift": 0
+    "avgLift": 57.94548721191304
   },
   "collaboration": {
     "yes": {
-      "contents": 113,
-      "likes": 3149.3451327433627,
-      "comments": 45.08849557522124,
-      "engagementRate": 0,
-      "emv": 1642.31
+      "contents": 115,
+      "likes": 3107.5304347826086,
+      "comments": 44.51304347826087,
+      "engagementRate": 0.0038101980360112776,
+      "emv": 1620.53
     },
     "no": {
-      "contents": 2754,
-      "likes": 957.9636891793755,
-      "comments": 37.467683369644156,
-      "engagementRate": 0
+      "contents": 2772,
+      "likes": 964.1046176046176,
+      "comments": 37.50757575757576,
+      "engagementRate": 0.0012107513231699556
     },
-    "avgLift": 0
+    "avgLift": 214.69699541897032
   },
   "logo": {
     "yes": {
-      "contents": 1149,
-      "likes": 1429.2915578764143,
-      "comments": 44.822454308093995,
-      "engagementRate": 0,
-      "emv": 781.88
+      "contents": 1155,
+      "likes": 1436.0502164502163,
+      "comments": 44.78961038961039,
+      "engagementRate": 0.0017900428844926678,
+      "emv": 785.21
     },
     "no": {
-      "contents": 1718,
-      "likes": 786.8754365541328,
-      "comments": 33.050058207217695,
-      "engagementRate": 0
+      "contents": 1732,
+      "likes": 791.7009237875288,
+      "comments": 33.11662817551963,
+      "engagementRate": 0.0009970415186947937
     },
-    "avgLift": 0
+    "avgLift": 79.5354406941825
   }
 }

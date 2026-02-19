@@ -3,12 +3,12 @@
     "_id": "697a73807ef35a6cd86b9524",
     "name": "University of New Mexico"
   },
-  "followers": 0,
+  "followers": 304204,
   "overall": {
     "totalContents": 1182,
     "avgLikes": 442.81302876480544,
     "avgComments": 33.73773265651438,
-    "engagementRate": 0,
+    "engagementRate": 0.0015665499514185212,
     "emv": 272.01
   },
   "sponsorPartners": [
@@ -17,9 +17,9 @@
       "totalContents": 1,
       "avgLikes": 1027,
       "avgComments": 91,
-      "engagementRate": 0,
+      "engagementRate": 0.003675165349568053,
       "emv": 650,
-      "engagementRateLift": 0
+      "engagementRateLift": 134.6024999866852
     }
   ]
 }

@@ -36,7 +36,7 @@ const NAME_ALIASES = {
 };
 
 console.log('Loading raw data files...');
-const contentsPath = path.join(dataDir, 'ncaa_roster_contents_feb_12.json');
+const contentsPath = path.join(dataDir, 'ncaa_roster_updated_feb_17.json');
 const rosterPath = path.join(dataDir, 'ncaa_roster_feb_12.json');
 
 if (!fs.existsSync(contentsPath) || !fs.existsSync(rosterPath)) {
@@ -49,15 +49,29 @@ const roster = JSON.parse(fs.readFileSync(rosterPath, 'utf8'));
 
 console.log(`Loaded ${contents.length} content records, ${roster.length} roster records`);
 
+// Fallback followers for schools not in ncaa_roster_feb_12.json
+// Sources: Big10roster.json (Michigan State, Maryland), hardcoded benchmarks for others
+const FALLBACK_FOLLOWERS = {
+  'Michigan State': 827265,
+  'University of Maryland': 863472,
+  'George Mason': 403604,
+  'Brigham Young University (BYU)': 2693744,
+  'Wichita State University': 347584,
+  'University of New Mexico': 304204,
+};
+
 // Build follower map: school name → total followers (merging aliases)
-const schoolFollowers = {};
+const schoolFollowers = { ...FALLBACK_FOLLOWERS };
 for (const athlete of roster) {
   let school = athlete?.schoolName;
   if (!school) continue;
   // Resolve aliases
   if (NAME_ALIASES[school]) school = NAME_ALIASES[school];
   const followers = Number(athlete?.metrics?.thirtyDays?.followers || 0);
-  schoolFollowers[school] = (schoolFollowers[school] || 0) + followers;
+  // Only add if follower data exists (skip 0s so fallbacks aren't overwritten)
+  if (followers > 0) {
+    schoolFollowers[school] = (schoolFollowers[school] || 0) + followers;
+  }
 }
 
 // Build school ID map from first matching content record (merging aliases)

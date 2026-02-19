@@ -540,7 +540,17 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                 </div>
               )}
               center={null}
-              right={null}
+              right={(
+                <div className="relative group flex-shrink-0">
+                  <div className="flex items-center gap-1.5 bg-gray-100 border border-gray-200 text-gray-500 px-3 py-1.5 rounded-full text-xs font-medium cursor-default">
+                    <Info className="w-3 h-3" />
+                    <span>Preview Dataset</span>
+                  </div>
+                  <div className="absolute right-0 top-full mt-2 w-72 bg-gray-900 border border-gray-700 rounded-lg p-3 text-xs text-gray-300 leading-relaxed opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-200 z-50 shadow-xl">
+                    This report reflects a preview dataset while final data integrations are being completed. Metrics are directional and intended to demonstrate structure and insights.
+                  </div>
+                </div>
+              )}
             />
 
             <div className="mt-4 flex flex-col gap-4">
@@ -1988,6 +1998,31 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
             )}
           </div>
         </TabTransition>
+
+        {/* Methodology & Data Status */}
+        <GlassCard className="p-8 mt-8">
+          <div className="flex items-center gap-2 mb-4">
+            <Info className="w-5 h-5 text-gray-400" />
+            <h3 className="text-lg font-semibold text-gray-700">Methodology & Data Status</h3>
+          </div>
+          <div className="space-y-3 text-sm text-gray-500 leading-relaxed">
+            <p>
+              This report reflects a <span className="text-gray-700 font-medium">preview dataset</span> while final data integrations are being completed. Metrics are directional and intended to demonstrate the structure, depth, and actionable insights JABA delivers across the Playfly network.
+            </p>
+            <p>
+              <span className="text-gray-700 font-medium">Data sources:</span> Athlete social media metrics, brand partnership activity, and IP content signals are aggregated from {networkTotals.totalSchools} Playfly partner schools covering {formatNumber(networkTotals.totalContents)} posts.
+            </p>
+            <p>
+              <span className="text-gray-700 font-medium">EMV (Estimated Media Value):</span> Calculated as (Likes × $0.50) + (Comments × $1.50) per post. This is a standard industry metric estimating the equivalent paid advertising value of organic social engagement.
+            </p>
+            <p>
+              <span className="text-gray-700 font-medium">IP Engagement Lift:</span> Measures the percentage increase in average engagement when posts include school intellectual property (logos, mentions, or collaborations) versus posts without IP signals.
+            </p>
+            <p className="text-gray-400 text-xs pt-2 border-t border-gray-200">
+              Report generated February 2026 • Data pipeline powered by JABA
+            </p>
+          </div>
+        </GlassCard>
       </div>
     </div>
   );

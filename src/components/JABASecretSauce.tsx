@@ -1,4 +1,5 @@
 import { Sparkles, TrendingUp, Target, BarChart3, Network } from 'lucide-react';
+import { usePlayflyData, formatNumber, formatPercent } from '../contexts/PlayflyDataContext';
 
 /**
  * SECTION 9: JABA'S SECRET SAUCE FEATURES
@@ -7,18 +8,41 @@ import { Sparkles, TrendingUp, Target, BarChart3, Network } from 'lucide-react';
  */
 
 export function JABASecretSauce() {
+  const { networkTotals, athletes, rosterTeamCount, isLoading } = usePlayflyData();
+
+  if (isLoading || !networkTotals) {
+    return (
+      <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 shadow-sm">
+        <div className="text-center text-gray-400">Loading data...</div>
+      </div>
+    );
+  }
+
+  const schoolCount = networkTotals.overview.schools;
+  const totalPosts = networkTotals.overview.totalPosts;
+  const totalFollowers = networkTotals.overview.totalFollowers;
+  const logoLift = networkTotals.ipTypeBreakdown.logo.liftPercent;
+  const collabLift = networkTotals.ipTypeBreakdown.collaboration.liftPercent;
+  const totalEMV = networkTotals.emvBreakdown.totalEMV;
+  const avgEMVPerPost = networkTotals.emvBreakdown.avgEMVPerPost;
+  const emvLiftPercent = networkTotals.emvBreakdown.emvLiftPercent;
+
+  // Find top performer score from athletes (highest engagement-based proxy)
+  const topAthletes = [...athletes].sort((a, b) => b.engagementRate - a.engagementRate);
+  const topScore = topAthletes.length > 0 ? Math.min(Math.round(topAthletes[0].engagementRate * 1000), 100) : 95;
+
   const features = [
     {
       name: 'Real-Time IP Impact Analysis',
       icon: Sparkles,
       description: 'Track logo placement, collaboration, and mention lift in real-time across all content',
       metrics: [
-        { label: 'Logo Engagement Lift', value: '+33%', highlight: true },
-        { label: 'Collaboration Lift', value: '+27%', highlight: true },
-        { label: 'Content Analyzed', value: '5,333 posts', highlight: false },
+        { label: 'Logo Engagement Lift', value: `+${formatPercent(logoLift)}`, highlight: true },
+        { label: 'Collaboration Lift', value: `+${formatPercent(collabLift)}`, highlight: true },
+        { label: 'Content Analyzed', value: `${formatNumber(totalPosts)} posts`, highlight: false },
       ],
-      dataSource: 'organizations_roster_ip_*.json (48MB)',
-      example: 'When Penn State Football adds Nike logo, engagement jumps from 4.4% to 5.8% (+32% lift)',
+      dataSource: 'organizations_roster_ip_*.json',
+      example: `When schools add brand logos, engagement lifts by +${formatPercent(logoLift)} on average. Collaborations see an even stronger +${formatPercent(collabLift)} lift.`,
     },
     {
       name: 'Athlete Marketability Scoring',
@@ -26,23 +50,23 @@ export function JABASecretSauce() {
       description: 'Proprietary 0-100 scoring algorithm combining engagement, followers, and audience connection',
       metrics: [
         { label: 'Score Range', value: '0-100', highlight: false },
-        { label: 'Athletes Scored', value: '177+ teams', highlight: false },
-        { label: 'Top Performer Score', value: '92', highlight: true },
+        { label: 'Athletes Scored', value: `${formatNumber(rosterTeamCount)}+ teams`, highlight: false },
+        { label: 'Top Performer Score', value: String(topScore), highlight: true },
       ],
       dataSource: 'PlayFlyFull_roster_teams.json',
-      example: 'Texas A&M Football scores 92 (Elite) vs. Washington State Women\'s Basketball at 36 (Developing)',
+      example: 'Instantly rank any athlete across the network by marketability score to find the best brand-athlete matches.',
     },
     {
       name: 'EMV Prediction Engine',
       icon: BarChart3,
       description: 'Precise EMV calculation using engagement rates, follower counts, and content type analysis',
       metrics: [
-        { label: 'Calculation Method', value: 'Multi-factor', highlight: false },
-        { label: 'Variance from Actual', value: '<8%', highlight: true },
-        { label: 'Posts Analyzed', value: '5,333+', highlight: false },
+        { label: 'Network EMV', value: `${formatNumber(totalEMV)}`, highlight: true },
+        { label: 'EMV Lift w/ IP', value: `+${formatPercent(emvLiftPercent)}`, highlight: true },
+        { label: 'Avg EMV/Post', value: `$${Math.round(avgEMVPerPost).toLocaleString()}`, highlight: false },
       ],
       dataSource: 'Real-time post metrics + historical trends',
-      example: 'Predicted EMV: $4,250 per post | Actual: $4,180 (98.4% accuracy)',
+      example: `Network generates ${formatNumber(totalEMV)} in total EMV. Posts with IP generate +${formatPercent(emvLiftPercent)} more EMV than those without.`,
     },
     {
       name: '90-Day Performance Windows',
@@ -59,14 +83,14 @@ export function JABASecretSauce() {
     {
       name: 'Multi-School Aggregation',
       icon: Network,
-      description: 'Network-wide visibility across 37 schools, enabling cross-school campaigns and comparisons',
+      description: `Network-wide visibility across ${schoolCount} schools, enabling cross-school campaigns and comparisons`,
       metrics: [
-        { label: 'Schools Tracked', value: '37', highlight: true },
+        { label: 'Schools Tracked', value: String(schoolCount), highlight: true },
         { label: 'Conferences', value: '5+', highlight: false },
-        { label: 'Network Reach', value: '500K+ followers', highlight: true },
+        { label: 'Network Reach', value: `${formatNumber(totalFollowers)} followers`, highlight: true },
       ],
       dataSource: 'Unified data model across all partners',
-      example: 'Compare Auburn Volleyball (4.5% engagement) vs. Penn State Football (5.2%) in one dashboard',
+      example: `Compare engagement rates across all ${schoolCount} schools in one dashboard to find the best performing programs.`,
     },
   ];
 
@@ -146,20 +170,20 @@ export function JABASecretSauce() {
           <div className="flex items-start gap-3">
             <div className="w-2 h-2 bg-[#1770C0] rounded-full mt-2 flex-shrink-0" />
             <p className="text-gray-300">
-              <span className="font-bold text-white">Competitors manage schools individually.</span> You aggregate 37 schools for multi-school campaign packages.
+              <span className="font-bold text-white">Competitors manage schools individually.</span> You aggregate {schoolCount} schools for multi-school campaign packages.
             </p>
           </div>
           <div className="flex items-start gap-3">
             <div className="w-2 h-2 bg-[#1770C0] rounded-full mt-2 flex-shrink-0" />
             <p className="text-gray-300">
-              <span className="font-bold text-white">Competitors estimate EMV.</span> Your prediction engine has {'<'}98% variance from actual performance.
+              <span className="font-bold text-white">Competitors estimate EMV.</span> Your prediction engine tracks {formatNumber(totalEMV)} in real EMV across the network.
             </p>
           </div>
         </div>
 
         <div className="mt-6 pt-6 border-t border-gray-700">
           <p className="text-xl font-semibold text-[#1770C0]">
-            This isn't software—it's your unfair advantage.
+            This isn't software--it's your unfair advantage.
           </p>
         </div>
       </div>
@@ -176,7 +200,7 @@ export function JABASecretSauce() {
       </div>
 
       <div className="mt-6 text-xs text-gray-400 text-center">
-        All features backed by real data from PlayFlyFull_roster_teams.json + organizations_roster_ip_*.json
+        All features backed by real data from {formatNumber(totalPosts)} posts across {schoolCount} schools
       </div>
     </div>
   );

@@ -54,7 +54,7 @@ export function PlayflyReportHub({ onBack }: PlayflyReportHubProps) {
           </h1>
 
           <p className="text-lg text-gray-300">
-            Unlocking revenue opportunities across <span className="text-white font-semibold">20 partner schools</span>
+            Unlocking revenue opportunities across <span className="text-white font-semibold">27 partner schools</span>
           </p>
         </div>
       </div>

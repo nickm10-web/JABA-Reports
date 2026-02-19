@@ -5,17 +5,17 @@
     "name": "Louisiana State University"
   },
   "overall": {
-    "totalContents": 5454,
-    "totalLikes": 14209103,
-    "totalComments": 324737,
-    "engagementRate": 0.0005153798171910302,
-    "emv": 7591657
+    "totalContents": 5450,
+    "totalLikes": 14209207,
+    "totalComments": 324254,
+    "engagementRate": 0.0005157446281465132,
+    "emv": 7590984.5
   },
   "counts": {
     "hasOrganizationInCaption": 802,
-    "isOrganizationCollaboration": 178,
-    "hasOrganizationLogo": 2221,
-    "withIp": 2514
+    "isOrganizationCollaboration": 177,
+    "hasOrganizationLogo": 2219,
+    "withIp": 2512
   },
   "orgInCaption": {
     "yes": {
@@ -26,43 +26,43 @@
       "emv": 2063.09
     },
     "no": {
-      "contents": 4652,
-      "likes": 2383.9785038693035,
-      "comments": 56.16616509028375,
-      "engagementRate": 0.00047193016871849107
+      "contents": 4648,
+      "likes": 2386.052495697074,
+      "comments": 56.1105851979346,
+      "engagementRate": 0.00047232053470676376
     },
-    "avgLift": 62.610805548466345
+    "avgLift": 62.476410104806135
   },
   "collaboration": {
     "yes": {
-      "contents": 178,
-      "likes": 6437.601123595506,
-      "comments": 135.8932584269663,
-      "engagementRate": 0.0012713304879995607,
-      "emv": 3422.64
+      "contents": 177,
+      "likes": 6473.983050847458,
+      "comments": 136.23728813559322,
+      "engagementRate": 0.0012784333812358637,
+      "emv": 3441.35
     },
     "no": {
-      "contents": 5276,
-      "likes": 2475.9685367702805,
-      "comments": 56.965125094768766,
-      "engagementRate": 0.0004898757953176568
+      "contents": 5273,
+      "likes": 2477.39654845439,
+      "comments": 56.92015930210506,
+      "engagementRate": 0.0004901432799013368
     },
-    "avgLift": 159.52098473760572
+    "avgLift": 160.82850334971553
   },
   "logo": {
     "yes": {
-      "contents": 2221,
-      "likes": 3475.4295362449348,
-      "comments": 74.75146330481765,
-      "engagementRate": 0.000686614010804965,
-      "emv": 1849.84
+      "contents": 2219,
+      "likes": 3478.570977917981,
+      "comments": 74.6795853988283,
+      "engagementRate": 0.0006872076722238583,
+      "emv": 1851.3
     },
     "no": {
-      "contents": 3233,
-      "likes": 2007.4772656974947,
-      "comments": 49.09186514073616,
-      "engagementRate": 0.0003977456866569909
+      "contents": 3231,
+      "likes": 2008.745899102445,
+      "comments": 49.06839987619932,
+      "engagementRate": 0.0003979865053338765
     },
-    "avgLift": 72.62638762368006
+    "avgLift": 72.6710988975242
   }
 }

@@ -5,7 +5,7 @@
   },
   "collaboration": {
     "avgEmv": 576.45,
-    "avgLift": 0,
+    "avgLift": 2.1207,
     "top5Athletes": [
       {
         "athlete": {
@@ -14,8 +14,8 @@
         },
         "posts": 4,
         "emv": 1483.38,
-        "engagementRate": 0,
-        "lift": 0
+        "engagementRate": 0.009565,
+        "lift": 2.774
       },
       {
         "athlete": {
@@ -24,8 +24,8 @@
         },
         "posts": 2,
         "emv": 1292.25,
-        "engagementRate": 0,
-        "lift": 0
+        "engagementRate": 0.008217,
+        "lift": 3.1756
       },
       {
         "athlete": {
@@ -34,8 +34,8 @@
         },
         "posts": 4,
         "emv": 1277.38,
-        "engagementRate": 0,
-        "lift": 0
+        "engagementRate": 0.008252,
+        "lift": 3.7397
       },
       {
         "athlete": {
@@ -44,8 +44,8 @@
         },
         "posts": 1,
         "emv": 1160,
-        "engagementRate": 0,
-        "lift": 0
+        "engagementRate": 0.007337,
+        "lift": 21.0772
       },
       {
         "athlete": {
@@ -54,14 +54,14 @@
         },
         "posts": 1,
         "emv": 941,
-        "engagementRate": 0,
-        "lift": 0
+        "engagementRate": 0.005897,
+        "lift": -0.2465
       }
     ]
   },
   "logo": {
     "avgEmv": 305.74,
-    "avgLift": 0,
+    "avgLift": 2.4582,
     "top5Athletes": [
       {
         "athlete": {
@@ -70,8 +70,8 @@
         },
         "posts": 1,
         "emv": 1756,
-        "engagementRate": 0,
-        "lift": 0
+        "engagementRate": 0.011058,
+        "lift": -0.1501
       },
       {
         "athlete": {
@@ -80,8 +80,8 @@
         },
         "posts": 4,
         "emv": 1383,
-        "engagementRate": 0,
-        "lift": 0
+        "engagementRate": 0.008539,
+        "lift": 6.2253
       },
       {
         "athlete": {
@@ -90,8 +90,8 @@
         },
         "posts": 8,
         "emv": 1275.5,
-        "engagementRate": 0,
-        "lift": 0
+        "engagementRate": 0.008091,
+        "lift": 0.1869
       },
       {
         "athlete": {
@@ -100,8 +100,8 @@
         },
         "posts": 6,
         "emv": 1097.83,
-        "engagementRate": 0,
-        "lift": 0
+        "engagementRate": 0.007001,
+        "lift": -0.0236
       },
       {
         "athlete": {
@@ -110,14 +110,14 @@
         },
         "posts": 8,
         "emv": 981.63,
-        "engagementRate": 0,
-        "lift": 0
+        "engagementRate": 0.00627,
+        "lift": 2.788
       }
     ]
   },
   "mention (in caption)": {
     "avgEmv": 395.42,
-    "avgLift": 0,
+    "avgLift": 3.4799,
     "top5Athletes": [
       {
         "athlete": {
@@ -126,8 +126,8 @@
         },
         "posts": 2,
         "emv": 2165.5,
-        "engagementRate": 0,
-        "lift": 0
+        "engagementRate": 0.01378,
+        "lift": 7.0557
       },
       {
         "athlete": {
@@ -136,8 +136,8 @@
         },
         "posts": 5,
         "emv": 1561.4,
-        "engagementRate": 0,
-        "lift": 0
+        "engagementRate": 0.009983,
+        "lift": 1.4029
       },
       {
         "athlete": {
@@ -146,8 +146,8 @@
         },
         "posts": 5,
         "emv": 1508.4,
-        "engagementRate": 0,
-        "lift": 0
+        "engagementRate": 0.009609,
+        "lift": 0.5306
       },
       {
         "athlete": {
@@ -156,8 +156,8 @@
         },
         "posts": 6,
         "emv": 1019,
-        "engagementRate": 0,
-        "lift": 0
+        "engagementRate": 0.006564,
+        "lift": 4.2132
       },
       {
         "athlete": {
@@ -166,14 +166,14 @@
         },
         "posts": 3,
         "emv": 1013.17,
-        "engagementRate": 0,
-        "lift": 0
+        "engagementRate": 0.006547,
+        "lift": 9.5009
       }
     ]
   },
   "partnership": {
     "avgEmv": 650,
-    "avgLift": 0,
+    "avgLift": 1.7811,
     "top5Athletes": [
       {
         "athlete": {
@@ -182,8 +182,8 @@
         },
         "posts": 1,
         "emv": 650,
-        "engagementRate": 0,
-        "lift": 0
+        "engagementRate": 0.003675,
+        "lift": 1.7811
       }
     ]
   }

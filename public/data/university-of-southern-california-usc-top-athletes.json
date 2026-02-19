@@ -4,8 +4,8 @@
     "name": "University of Southern California (USC)"
   },
   "collaboration": {
-    "avgEmv": 2007.01,
-    "avgLift": 3.408,
+    "avgEmv": 2007.02,
+    "avgLift": 3.4081,
     "top5Athletes": [
       {
         "athlete": {
@@ -60,18 +60,94 @@
     ]
   },
   "logo": {
-    "avgEmv": 1132.83,
-    "avgLift": 1.6307,
+    "avgEmv": 957.24,
+    "avgLift": 3.6725,
     "top5Athletes": [
       {
         "athlete": {
           "name": "JuJu Watkins",
           "sport": "WOMENS_BASKETBALL"
         },
+        "posts": 3,
+        "emv": 52832.5,
+        "engagementRate": 0.023894,
+        "lift": 0.4909
+      },
+      {
+        "athlete": {
+          "name": "Alijah Arenas",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 3,
+        "emv": 26174.33,
+        "engagementRate": 0.011858,
+        "lift": 0.4303
+      },
+      {
+        "athlete": {
+          "name": "Temi Ojora",
+          "sport": "WOMENS_TRACK_AND_FIELD"
+        },
         "posts": 1,
-        "emv": 35229.5,
-        "engagementRate": 0.015903,
-        "lift": -0.0831
+        "emv": 24598,
+        "engagementRate": 0.01121,
+        "lift": 3.4215
+      },
+      {
+        "athlete": {
+          "name": "Matteo Mitchell",
+          "sport": "MENS_TRACK_AND_FIELD"
+        },
+        "posts": 11,
+        "emv": 13710.18,
+        "engagementRate": 0.006233,
+        "lift": 31.7218
+      },
+      {
+        "athlete": {
+          "name": "Taniela Tupou",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 8702.5,
+        "engagementRate": 0.003907,
+        "lift": 9.9072
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 1442.89,
+    "avgLift": 3.4121,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Alijah Arenas",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 3,
+        "emv": 36438.33,
+        "engagementRate": 0.016101,
+        "lift": 1.0953
+      },
+      {
+        "athlete": {
+          "name": "Taniela Tupou",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 17020,
+        "engagementRate": 0.007653,
+        "lift": 23.0023
+      },
+      {
+        "athlete": {
+          "name": "JuJu Watkins",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 10359.5,
+        "engagementRate": 0.004667,
+        "lift": -0.7403
       },
       {
         "athlete": {
@@ -79,101 +155,25 @@
           "sport": "FOOTBALL"
         },
         "posts": 1,
-        "emv": 14760,
-        "engagementRate": 0.006634,
-        "lift": 5.79
+        "emv": 9670,
+        "engagementRate": 0.004367,
+        "lift": 2.746
       },
       {
         "athlete": {
-          "name": "Walker Lyons",
+          "name": "Braylon Conley",
           "sport": "FOOTBALL"
         },
-        "posts": 5,
-        "emv": 11037.1,
-        "engagementRate": 0.005,
-        "lift": -0.3208
-      },
-      {
-        "athlete": {
-          "name": "Devan Thompkins",
-          "sport": "FOOTBALL"
-        },
-        "posts": 2,
-        "emv": 8823,
-        "engagementRate": 0.003911,
-        "lift": 66.5
-      },
-      {
-        "athlete": {
-          "name": "Jaden Richardson",
-          "sport": "FOOTBALL"
-        },
-        "posts": 3,
-        "emv": 8545,
-        "engagementRate": 0.003857,
-        "lift": 113.7517
-      }
-    ]
-  },
-  "mention (in caption)": {
-    "avgEmv": 423.5,
-    "avgLift": 1.2438,
-    "top5Athletes": [
-      {
-        "athlete": {
-          "name": "Garrett Kaalund",
-          "sport": "MENS_TRACK_AND_FIELD"
-        },
-        "posts": 2,
-        "emv": 1163,
-        "engagementRate": 0.000515,
-        "lift": 0.1416
-      },
-      {
-        "athlete": {
-          "name": "Sophie Gangemi",
-          "sport": "WOMENS_LACROSSE"
-        },
         "posts": 1,
-        "emv": 725,
-        "engagementRate": 0.00028,
-        "lift": 3.8465
-      },
-      {
-        "athlete": {
-          "name": "Jenna Gallaway",
-          "sport": "WOMENS_TRACK_AND_FIELD"
-        },
-        "posts": 1,
-        "emv": 625,
-        "engagementRate": 0.000235,
-        "lift": 1.3444
-      },
-      {
-        "athlete": {
-          "name": "Tiana Eyakpobeyan",
-          "sport": "WOMENS_TRACK_AND_FIELD"
-        },
-        "posts": 1,
-        "emv": 441,
-        "engagementRate": 0.000197,
-        "lift": 7.6144
-      },
-      {
-        "athlete": {
-          "name": "Caden Hunter",
-          "sport": "BASEBALL"
-        },
-        "posts": 1,
-        "emv": 213.5,
-        "engagementRate": 0.000094,
-        "lift": -0.1111
+        "emv": 8324.5,
+        "engagementRate": 0.003669,
+        "lift": 79.1959
       }
     ]
   },
   "partnership": {
-    "avgEmv": 880.47,
-    "avgLift": 0.4658,
+    "avgEmv": 959.44,
+    "avgLift": 0.5155,
     "top5Athletes": [
       {
         "athlete": {
@@ -184,6 +184,16 @@
         "emv": 24865.8,
         "engagementRate": 0.011203,
         "lift": -0.5334
+      },
+      {
+        "athlete": {
+          "name": "Jerry Easter II",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 8,
+        "emv": 19435.88,
+        "engagementRate": 0.008823,
+        "lift": 25.9724
       },
       {
         "athlete": {
@@ -214,16 +224,6 @@
         "emv": 8302.25,
         "engagementRate": 0.003765,
         "lift": 1.8763
-      },
-      {
-        "athlete": {
-          "name": "Garrett Kaalund",
-          "sport": "MENS_TRACK_AND_FIELD"
-        },
-        "posts": 1,
-        "emv": 7610,
-        "engagementRate": 0.003426,
-        "lift": 10.3627
       }
     ]
   }

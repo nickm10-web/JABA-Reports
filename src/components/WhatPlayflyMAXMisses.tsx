@@ -1,6 +1,22 @@
 import { CheckCircle2, XCircle, Zap, Brain } from 'lucide-react';
+import { usePlayflyData, formatNumber } from '../contexts/PlayflyDataContext';
 
 export function WhatPlayflyMAXMisses() {
+  const { networkTotals, brandSummary, isLoading } = usePlayflyData();
+
+  if (isLoading || !networkTotals || !brandSummary) {
+    return (
+      <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 mb-8">
+        <div className="text-center text-gray-400">Loading data...</div>
+      </div>
+    );
+  }
+
+  const schoolCount = networkTotals.overview.schools;
+  const sponsoredPosts = networkTotals.brandDeals.sponsoredPosts;
+  // Team page opportunity: ~5 sponsorship slots per school
+  const teamPageOpportunities = schoolCount * 5;
+
   const captures = [
     'Official Nike/Wegmans/Raising Cane\'s partnership deals',
     'Athlete-generated sponsored content tracking',
@@ -17,8 +33,8 @@ export function WhatPlayflyMAXMisses() {
     },
     {
       title: 'Cross-School Partnership Optimization',
-      desc: 'Matching athletes to brands systematically across all 20 schools (not just within one)',
-      impact: 'Miss 200+ multi-school bundle opportunities',
+      desc: `Matching athletes to brands systematically across all ${schoolCount} schools (not just within one)`,
+      impact: 'Multi-school bundle opportunities left untapped',
     },
     {
       title: 'Real-Time Opportunity Detection',
@@ -28,11 +44,11 @@ export function WhatPlayflyMAXMisses() {
     {
       title: 'Competitive Intelligence',
       desc: 'How Nike performs in Big Ten vs SEC. Which brands underperform. Where to expand.',
-      impact: 'Flying blind on 500+ expansion opportunities',
+      impact: 'Flying blind on expansion opportunities across conferences',
     },
     {
       title: 'Team Page Dark Inventory Tracking',
-      desc: '28 schools with ZERO team page sponsorships = 140+ partnership slots sitting idle',
+      desc: `Schools with ZERO team page sponsorships = ${teamPageOpportunities}+ partnership slots sitting idle`,
       impact: 'Guaranteed opportunities left on table',
     },
     {
@@ -72,8 +88,8 @@ export function WhatPlayflyMAXMisses() {
             ))}
           </div>
           <div className="mt-6 p-4 bg-white/5 rounded-lg">
-            <div className="text-xs text-gray-400 mb-1">Active Partnerships Tracked</div>
-            <div className="text-3xl font-bold text-green-400">403</div>
+            <div className="text-xs text-gray-400 mb-1">Sponsored Posts Tracked</div>
+            <div className="text-3xl font-bold text-green-400">{formatNumber(sponsoredPosts)}</div>
           </div>
         </div>
 
@@ -107,7 +123,7 @@ export function WhatPlayflyMAXMisses() {
               Playfly MAX shows you <span className="text-white font-semibold">what happened</span>.
               JABA shows you <span className="text-[#3B9FD9] font-semibold">what's happening right now</span> and
               <span className="text-[#3B9FD9] font-semibold"> what to do about it</span>.
-              That's the difference between 403 partnerships and 2,400+ opportunities.
+              That's the difference between {formatNumber(sponsoredPosts)} tracked posts and maximizing every opportunity across {schoolCount} schools.
             </p>
           </div>
         </div>

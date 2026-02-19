@@ -369,8 +369,8 @@ export function ContentTab() {
               <div className={`${thumbSize} shrink-0 flex-none rounded-2xl bg-gray-100 border border-gray-200`} />
             )}
             <div className="min-w-0">
-              <div className="text-base md:text-lg font-semibold text-gray-900 truncate">{item.athlete?.school?.name || 'Unknown School'}</div>
-              <div className="text-[13px] md:text-sm text-gray-600 truncate">{item.athlete?.name || 'Athlete'}{dateLabel ? ` • ${dateLabel}` : ''}</div>
+              <div className="text-base md:text-lg font-semibold text-gray-900 truncate">{item.athlete?.name || 'Athlete'}</div>
+              <div className="text-[13px] md:text-sm text-gray-600 truncate">{item.athlete?.school?.name || 'Unknown School'}{dateLabel ? ` • ${dateLabel}` : ''}</div>
               {item.caption && <div className="text-sm text-gray-600 line-clamp-2 mt-1">{item.caption}</div>}
               <div className="flex flex-wrap gap-1.5 mt-3">
                 {ipChips.map(chip => <span key={chip} className="content-chip">{chip}</span>)}
