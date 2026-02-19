@@ -5,7 +5,6 @@ import { BaylorBrandDeals } from './components/BaylorBrandDeals';
 import { OhioStateIPImpact } from './components/OhioStateIPImpact';
 import { KentuckyIPImpact } from './components/KentuckyIPImpact';
 import { GeorgiaIPImpact } from './components/GeorgiaIPImpact';
-import { MichiganIPImpact } from './components/MichiganIPImpact';
 import { PlayflyReportHub } from './components/PlayflyReportHub';
 import { UCLABrandDeals } from './components/UCLABrandDeals';
 import { NilReport } from './components/NilReport';
@@ -46,12 +45,6 @@ function GeorgiaRoute() {
   return <GeorgiaIPImpact onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
-function MichiganRoute() {
-  const navigate = useNavigate();
-  const canGoBack = window.history.length > 2;
-  return <MichiganIPImpact onBack={canGoBack ? () => navigate('/') : undefined} />;
-}
-
 function PlayflyRoute() {
   return <PlayflyReportHub />;
 }
@@ -62,7 +55,7 @@ function UCLARoute() {
   return <UCLABrandDeals onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
-function MichiganNilRoute() {
+function MichiganRoute() {
   const navigate = useNavigate();
   const canGoBack = window.history.length > 2;
   return <NilReport config={michiganConfig} onBack={canGoBack ? () => navigate('/') : undefined} />;
@@ -120,7 +113,6 @@ function App() {
         <Route path="/michigan" element={<MichiganRoute />} />
         <Route path="/playfly" element={<PlayflyRoute />} />
         <Route path="/ucla" element={<UCLARoute />} />
-        <Route path="/michigan-nil" element={<MichiganNilRoute />} />
         <Route path="/alabama-nil" element={<AlabamaRoute />} />
         <Route path="/arkansas-nil" element={<ArkansasRoute />} />
         <Route path="/oklahoma" element={<OklahomaRoute />} />

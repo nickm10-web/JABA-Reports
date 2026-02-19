@@ -26,6 +26,7 @@ const CONF_MAP: Record<string, string> = {
   'ACC': 'ACC',
   'Big 12': 'Big 12',
   'Ind / ACC': 'ACC',
+  'Independent / ACC': 'ACC',
   'AAC': 'AAC',
   'Pac-12': 'Pac-12',
 };
