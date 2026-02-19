@@ -7,7 +7,16 @@ import { KentuckyIPImpact } from './components/KentuckyIPImpact';
 import { GeorgiaIPImpact } from './components/GeorgiaIPImpact';
 import { MichiganIPImpact } from './components/MichiganIPImpact';
 import { PlayflyReportHub } from './components/PlayflyReportHub';
-import { UCLABrandDeals } from './components/UCLABrandDeals';
+import { UCLAReport } from './components/UCLAReport';
+import { NilReport } from './components/NilReport';
+import {
+  michiganConfig,
+  alabamaConfig,
+  arkansasConfig,
+  oklahomaConfig,
+  notredameConfig,
+  boiseStateConfig,
+} from './config/schoolConfigs';
 
 // Wrapper components that provide navigation
 // Only show back button if user navigated from within the app
@@ -48,7 +57,45 @@ function PlayflyRoute() {
 }
 
 function UCLARoute() {
-  return <UCLABrandDeals />;
+  const navigate = useNavigate();
+  const canGoBack = window.history.length > 2;
+  return <UCLAReport onBack={canGoBack ? () => navigate('/') : undefined} />;
+}
+
+function MichiganNilRoute() {
+  const navigate = useNavigate();
+  const canGoBack = window.history.length > 2;
+  return <NilReport config={michiganConfig} onBack={canGoBack ? () => navigate('/') : undefined} />;
+}
+
+function AlabamaRoute() {
+  const navigate = useNavigate();
+  const canGoBack = window.history.length > 2;
+  return <NilReport config={alabamaConfig} onBack={canGoBack ? () => navigate('/') : undefined} />;
+}
+
+function ArkansasRoute() {
+  const navigate = useNavigate();
+  const canGoBack = window.history.length > 2;
+  return <NilReport config={arkansasConfig} onBack={canGoBack ? () => navigate('/') : undefined} />;
+}
+
+function OklahomaRoute() {
+  const navigate = useNavigate();
+  const canGoBack = window.history.length > 2;
+  return <NilReport config={oklahomaConfig} onBack={canGoBack ? () => navigate('/') : undefined} />;
+}
+
+function NotreDameRoute() {
+  const navigate = useNavigate();
+  const canGoBack = window.history.length > 2;
+  return <NilReport config={notredameConfig} onBack={canGoBack ? () => navigate('/') : undefined} />;
+}
+
+function BoiseStateRoute() {
+  const navigate = useNavigate();
+  const canGoBack = window.history.length > 2;
+  return <NilReport config={boiseStateConfig} onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
 // Handle ?playfly query param - show Playfly hub without back button
@@ -73,6 +120,12 @@ function App() {
         <Route path="/michigan" element={<MichiganRoute />} />
         <Route path="/playfly" element={<PlayflyRoute />} />
         <Route path="/ucla" element={<UCLARoute />} />
+        <Route path="/michigan-nil" element={<MichiganNilRoute />} />
+        <Route path="/alabama-nil" element={<AlabamaRoute />} />
+        <Route path="/arkansas-nil" element={<ArkansasRoute />} />
+        <Route path="/oklahoma" element={<OklahomaRoute />} />
+        <Route path="/notre-dame" element={<NotreDameRoute />} />
+        <Route path="/boise-state" element={<BoiseStateRoute />} />
         {/* Redirect any unknown routes to home */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
