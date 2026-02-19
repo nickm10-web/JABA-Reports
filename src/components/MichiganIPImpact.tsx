@@ -29,9 +29,9 @@ const renderSchoolName = (name: string) => <>{name}</>;
 // THEME TOKENS
 // ═══════════════════════════════════════════════════════════════
 const colors = {
-  scarlet: '#00274C',
-  scarletDark: '#001a35',
-  scarletLight: '#1a4a70',
+  primary: '#00274C',
+  primaryDark: '#001a35',
+  primaryLight: '#1a4a70',
   gray: '#a7b1b7',
   white: '#ffffff',
   positive: '#10b981',
@@ -56,7 +56,7 @@ type SignalComparison = {
 
 type SportSignalData = Record<string, { collab: SignalComparison; logo: SignalComparison; mention: SignalComparison }>;
 
-interface OhioRosterMetricWindow {
+interface MichiganRosterMetricWindow {
   contentCount?: number;
   logoContentCount?: number;
   collaborationContentCount?: number;
@@ -81,12 +81,12 @@ interface OhioRosterMetricWindow {
   avgEngagementRateWithoutOrganizationCollaboration?: number;
 }
 
-interface OhioRosterTeam {
+interface MichiganRosterTeam {
   sport?: string;
   metrics?: {
-    thirtyDays?: OhioRosterMetricWindow;
-    sevenDays?: OhioRosterMetricWindow;
-    ninetyDays?: OhioRosterMetricWindow;
+    thirtyDays?: MichiganRosterMetricWindow;
+    sevenDays?: MichiganRosterMetricWindow;
+    ninetyDays?: MichiganRosterMetricWindow;
   };
 }
 
@@ -108,7 +108,7 @@ function formatSportLabel(sportKey: string): string {
     .join(' ');
 }
 
-function buildSportDataFromRoster(rows: OhioRosterTeam[]): SportSignalData {
+function buildSportDataFromRoster(rows: MichiganRosterTeam[]): SportSignalData {
   type Accumulator = {
     withPosts: number;
     withoutPosts: number;
@@ -299,86 +299,65 @@ interface OverviewData {
 // MICHIGAN IP DATA (Source of Truth)
 // ═══════════════════════════════════════════════════════════════
 const ipData = {
-  totalPosts: 4042,
+  totalPosts: 5213,
   totalAthletes: 386,
   totalFollowers: 2381406,
-  totalLikes: 5654589,
-  totalComments: 189346,
-  engagementRate: 0.2659,
-  baseline: { posts: 1771, engagementRate: 0.1693 },
-  postsWithIP: 2271,
-  ipAdoptionRate: 56.2,
-  avgLift: 96.6,
-  totalEmv: 3111314,
-  collaboration: { posts: 4, likes: 2144.50, comments: 49.75, engagementRate: 0.3832, delta: 61.94, emv: 4588, baselineEngRate: 0.2366, baselinePosts: 4038, baselineLikes: 1398.22, baselineComments: 46.84 } as IPSignalData,
-  logo: { posts: 2152, likes: 2061.73, comments: 58.42, engagementRate: 0.2862, delta: 95.34, emv: 2407003, baselineEngRate: 0.1465, baselinePosts: 1890, baselineLikes: 644.31, baselineComments: 33.66 } as IPSignalData,
-  mention: { posts: 828, likes: 2574.75, comments: 61.96, engagementRate: 0.3849, delta: 99.87, emv: 1142909, baselineEngRate: 0.1926, baselinePosts: 3214, baselineLikes: 1096.05, baselineComments: 42.95 } as IPSignalData,
+  totalLikes: 8636158,
+  totalComments: 228664,
+  engagementRate: 0.2728,
+  baseline: { posts: 2486, engagementRate: 0.1962 },
+  postsWithIP: 2727,
+  ipAdoptionRate: 52.3,
+  avgLift: 74.74,
+  totalEmv: 4661075,
+  collaboration: { posts: 269, likes: 4243.81, comments: 53.40, engagementRate: 0.5218, delta: 101.23, emv: 592340, baselineEngRate: 0.2593, baselinePosts: 4944, baselineLikes: 1515.89, baselineComments: 43.35 } as IPSignalData,
+  logo: { posts: 2158, likes: 2105.81, comments: 58.52, engagementRate: 0.3445, delta: 55.00, emv: 2461588, baselineEngRate: 0.2222, baselinePosts: 3055, baselineLikes: 1339.39, baselineComments: 33.51 } as IPSignalData,
+  mention: { posts: 1234, likes: 2560.46, comments: 51.62, engagementRate: 0.4430, delta: 101.29, emv: 1675345, baselineEngRate: 0.2201, baselinePosts: 3979, baselineLikes: 1376.36, baselineComments: 41.46 } as IPSignalData,
   signals: [
     {
       id: 'logo' as const,
       label: 'Visual IP (Logo)',
-      totalPosts: 2152,
-      percentage: 53.2,
-      with: { posts: 2152, avgLikes: 2062, avgComments: 58, engagementRate: 0.2862 },
-      without: { posts: 1890, avgLikes: 644, avgComments: 34, engagementRate: 0.1465 },
+      totalPosts: 2158,
+      percentage: 41.4,
+      with: { posts: 2158, avgLikes: 2106, avgComments: 59, engagementRate: 0.3445 },
+      without: { posts: 3055, avgLikes: 1339, avgComments: 34, engagementRate: 0.2222 },
     },
     {
       id: 'mention' as const,
       label: 'Caption Mention',
-      totalPosts: 828,
-      percentage: 20.5,
-      with: { posts: 828, avgLikes: 2575, avgComments: 62, engagementRate: 0.3849 },
-      without: { posts: 3214, avgLikes: 1096, avgComments: 43, engagementRate: 0.1926 },
+      totalPosts: 1234,
+      percentage: 23.7,
+      with: { posts: 1234, avgLikes: 2560, avgComments: 52, engagementRate: 0.4430 },
+      without: { posts: 3979, avgLikes: 1376, avgComments: 41, engagementRate: 0.2201 },
     },
     {
       id: 'collab' as const,
       label: 'Collaboration',
-      totalPosts: 4,
-      percentage: 0.1,
-      with: { posts: 4, avgLikes: 2145, avgComments: 50, engagementRate: 0.3832 },
-      without: { posts: 4038, avgLikes: 1398, avgComments: 47, engagementRate: 0.2366 },
+      totalPosts: 269,
+      percentage: 5.2,
+      with: { posts: 269, avgLikes: 4244, avgComments: 53, engagementRate: 0.5218 },
+      without: { posts: 4944, avgLikes: 1516, avgComments: 43, engagementRate: 0.2593 },
     },
   ],
   sponsoredPosts: 224,
   totalBrands: 100,
-  totalEMV: 3111314,
+  totalEMV: 4661075,
   partnerships: [
-    { brand: "kingsford", posts: 1, avgLikes: 70950, avgComments: 105, emv: 35632.5, engagementRate: 6.1165, liftMultiplier: 49.7 },
-    { brand: "@cliffkeenathletic", posts: 1, avgLikes: 25269, avgComments: 106, emv: 12793.5, engagementRate: 2.766, liftMultiplier: 17.1 },
-    { brand: "@paramountplus", posts: 1, avgLikes: 14333, avgComments: 614, emv: 8087.5, engagementRate: 0.056, liftMultiplier: 9.2 },
-    { brand: "@umcreditunion", posts: 1, avgLikes: 14209, avgComments: 169, emv: 7358, engagementRate: 0.0539, liftMultiplier: 9.2 },
-    { brand: "@american.made.athletics", posts: 3, avgLikes: 4694.67, avgComments: 10, emv: 7087, engagementRate: 0.1061, liftMultiplier: 2.4 },
-    { brand: "@allstate", posts: 2, avgLikes: 6810.5, avgComments: 51, emv: 6962, engagementRate: 0.2664, liftMultiplier: 3.9 },
-    { brand: "doordash", posts: 1, avgLikes: 13453, avgComments: 48, emv: 6798.5, engagementRate: 0.8987, liftMultiplier: 8.6 },
-    { brand: "facebook", posts: 5, avgLikes: 2387.2, avgComments: 39, emv: 6259, engagementRate: 0.0523, liftMultiplier: 0.7 },
-    { brand: "@officialafferdin", posts: 1, avgLikes: 10935, avgComments: 179, emv: 5736, engagementRate: 9.1098, liftMultiplier: 6.8 },
-    { brand: "@accessthewalk", posts: 3, avgLikes: 2733.67, avgComments: 26, emv: 4217.5, engagementRate: 0.045, liftMultiplier: 1 },
-    { brand: "@flowrestling", posts: 3, avgLikes: 2646.33, avgComments: 30, emv: 4104.5, engagementRate: 0.2373, liftMultiplier: 0.9 },
-    { brand: "@brightonfordmi", posts: 1, avgLikes: 7038, avgComments: 130, emv: 3714, engagementRate: 0.1613, liftMultiplier: 4 },
-    { brand: "@ParamountPlus", posts: 1, avgLikes: 6250, avgComments: 85, emv: 3252.5, engagementRate: 0.0237, liftMultiplier: 3.5 },
-    { brand: "@Transferportal", posts: 1, avgLikes: 5331, avgComments: 84, emv: 2791.5, engagementRate: 0.8612, liftMultiplier: 2.8 },
-    { brand: "@aaa_theautoclubgroup", posts: 1, avgLikes: 5044, avgComments: 96, emv: 2666, engagementRate: 0.4444, liftMultiplier: 2.6 },
-    { brand: "@toysfortotsofficial", posts: 1, avgLikes: 4451, avgComments: 60, emv: 2315.5, engagementRate: 0.1015, liftMultiplier: 2.2 },
-    { brand: "@newbalance", posts: 2, avgLikes: 2224.5, avgComments: 22, emv: 2289, engagementRate: 0.8794, liftMultiplier: 0.6 },
-    { brand: "@drsquatch", posts: 1, avgLikes: 3738, avgComments: 48, emv: 1941, engagementRate: 0.0889, liftMultiplier: 1.7 },
-    { brand: "@hollister", posts: 3, avgLikes: 1122.67, avgComments: 27, emv: 1804, engagementRate: 0.1131, liftMultiplier: -0.2 },
-    { brand: "usafspecwarrecruiting", posts: 1, avgLikes: 3566, avgComments: 11, emv: 1799.5, engagementRate: 0.3899, liftMultiplier: 1.5 },
-    { brand: "@slam", posts: 1, avgLikes: 3269, avgComments: 67, emv: 1735, engagementRate: 0.5216, liftMultiplier: 1.3 },
-    { brand: "@att", posts: 1, avgLikes: 3076, avgComments: 119, emv: 1716.5, engagementRate: 0.0521, liftMultiplier: 1.2 },
-    { brand: "@unrivaledbasketball", posts: 1, avgLikes: 2450, avgComments: 47, emv: 1295.5, engagementRate: 0.0912, liftMultiplier: 0.8 },
-    { brand: "@ogepower", posts: 1, avgLikes: 2404, avgComments: 52, emv: 1280, engagementRate: 0.3798, liftMultiplier: 0.7 },
-    { brand: "@sackthestigma", posts: 2, avgLikes: 1138, avgComments: 18, emv: 1190.5, engagementRate: 0.0449, liftMultiplier: -0.2 },
-    { brand: "@pgatoursuperstore", posts: 2, avgLikes: 1129, avgComments: 11, emv: 1162, engagementRate: 0.7183, liftMultiplier: -0.2 },
-    { brand: "@champmediaco", posts: 15, avgLikes: 120, avgComments: 7, emv: 1062, engagementRate: 0.0255, liftMultiplier: -0.9 },
-    { brand: "@bottomshelfcaps", posts: 1, avgLikes: 2032, avgComments: 21, emv: 1047.5, engagementRate: 0.0463, liftMultiplier: 0.5 },
-    { brand: "@hungryhowies", posts: 2, avgLikes: 1001, avgComments: 8, emv: 1025, engagementRate: 0.2998, liftMultiplier: -0.3 },
-    { brand: "@cetaphilcanada", posts: 2, avgLikes: 955, avgComments: 22, emv: 1021, engagementRate: 0.0357, liftMultiplier: -0.3 },
-    { brand: "@nike_wrestling", posts: 1, avgLikes: 2009, avgComments: 9, emv: 1018, engagementRate: 0.3805, liftMultiplier: 0.4 },
-    { brand: "@blackbottommedia", posts: 1, avgLikes: 1805, avgComments: 6, emv: 911.5, engagementRate: 0.1732, liftMultiplier: 0.3 },
-    { brand: "@championscircle.nilshop", posts: 11, avgLikes: 143.55, avgComments: 7, emv: 909.5, engagementRate: 0.015, liftMultiplier: -0.9 },
-    { brand: "@mden", posts: 1, avgLikes: 1726, avgComments: 13, emv: 882.5, engagementRate: 0.0753, liftMultiplier: 0.2 },
-    { brand: "@wolverinethreads", posts: 4, avgLikes: 116.5, avgComments: 2, emv: 242, engagementRate: 0.0358, liftMultiplier: -0.9 },
-    { brand: "@championscircleuofm", posts: 10, avgLikes: 0, avgComments: 7, emv: 111, engagementRate: 0, liftMultiplier: -1 },
+    { brand: "@on3recruits", posts: 4, avgLikes: 73349, avgComments: 1645, emv: 156569, engagementRate: 3.9940, liftMultiplier: 20.3 },
+    { brand: "@allstate", posts: 5, avgLikes: 4906, avgComments: 51, emv: 12649, engagementRate: 0.2113, liftMultiplier: 1.1 },
+    { brand: "@flowrestling", posts: 4, avgLikes: 2857, avgComments: 25, emv: 5862, engagementRate: 0.3436, liftMultiplier: 1.8 },
+    { brand: "@hollister", posts: 7, avgLikes: 1304, avgComments: 23, emv: 4804, engagementRate: 0.0681, liftMultiplier: 0.3 },
+    { brand: "@leadersandnext", posts: 7, avgLikes: 909, avgComments: 14, emv: 3324, engagementRate: 0.1073, liftMultiplier: 0.5 },
+    { brand: "@sackthestigma", posts: 4, avgLikes: 991, avgComments: 15, emv: 2071, engagementRate: 0.0388, liftMultiplier: 0.2 },
+    { brand: "@foguthfinancial", posts: 5, avgLikes: 361, avgComments: 5, emv: 944, engagementRate: 0.0586, liftMultiplier: 0.3 },
+    { brand: "@c4energy", posts: 7, avgLikes: 241, avgComments: 8, emv: 931, engagementRate: 0.0214, liftMultiplier: 0.1 },
+    { brand: "@annarbor", posts: 4, avgLikes: 342, avgComments: 2, emv: 696, engagementRate: 0.0720, liftMultiplier: 0.4 },
+    { brand: "@drinkdripdrop", posts: 5, avgLikes: 156, avgComments: 10, emv: 465, engagementRate: 0.0195, liftMultiplier: 0.1 },
+    { brand: "@auntmilliesbread", posts: 6, avgLikes: 114, avgComments: 13, emv: 454, engagementRate: 0.0430, liftMultiplier: 0.2 },
+    { brand: "@kingshawaiian", posts: 4, avgLikes: 112, avgComments: 11, emv: 290, engagementRate: 0.0877, liftMultiplier: 0.4 },
+    { brand: "@dollarshaveclub", posts: 6, avgLikes: 84, avgComments: 4, emv: 291, engagementRate: 0.0305, liftMultiplier: 0.2 },
+    { brand: "@swingcityracketsports", posts: 8, avgLikes: 65, avgComments: 2, emv: 279, engagementRate: 0.1425, liftMultiplier: 0.7 },
+    { brand: "@wolverinethreads", posts: 4, avgLikes: 117, avgComments: 2, emv: 245, engagementRate: 0.0359, liftMultiplier: 0.2 },
   ] as Partnership[],
 };
 
@@ -406,16 +385,16 @@ const topMentionAthletes = [
   { rank: 5, name: "Te'Yala Delfosse", sport: "Women's Basketball", posts: 9, emv: 3567, lift: 100 },
 ];
 const signalStats = {
-  collab: { posts: 4, totalEmv: 4588, avgEmv: 1147, lift: 62 },
-  logo: { posts: 2152, totalEmv: 2407003, avgEmv: 1118, lift: 95 },
-  mention: { posts: 828, totalEmv: 1142909, avgEmv: 1380, lift: 100 },
+  collab: { posts: 269, totalEmv: 592340, avgEmv: 2202, lift: 101 },
+  logo: { posts: 2158, totalEmv: 2461588, avgEmv: 1141, lift: 55 },
+  mention: { posts: 1234, totalEmv: 1675345, avgEmv: 1358, lift: 101 },
 };
 
 const fallbackSportData: Record<string, Record<string, { with: { posts: number; avgLikes: number; avgComments: number; engagementRate: number }; without: { posts: number; avgLikes: number; avgComments: number; engagementRate: number } }>> = {
   'ALL_SPORTS': {
-    mention: { with: { posts: 828, avgLikes: 2575, avgComments: 62, engagementRate: 0.3849 }, without: { posts: 3214, avgLikes: 1096, avgComments: 43, engagementRate: 0.1926 } },
-    logo: { with: { posts: 2152, avgLikes: 2062, avgComments: 58, engagementRate: 0.2862 }, without: { posts: 1890, avgLikes: 644, avgComments: 34, engagementRate: 0.1465 } },
-    collab: { with: { posts: 4, avgLikes: 2145, avgComments: 50, engagementRate: 0.3832 }, without: { posts: 4038, avgLikes: 1398, avgComments: 47, engagementRate: 0.2366 } }
+    mention: { with: { posts: 1234, avgLikes: 2560, avgComments: 52, engagementRate: 0.4430 }, without: { posts: 3979, avgLikes: 1376, avgComments: 41, engagementRate: 0.2201 } },
+    logo: { with: { posts: 2158, avgLikes: 2106, avgComments: 59, engagementRate: 0.3445 }, without: { posts: 3055, avgLikes: 1339, avgComments: 34, engagementRate: 0.2222 } },
+    collab: { with: { posts: 269, avgLikes: 4244, avgComments: 53, engagementRate: 0.5218 }, without: { posts: 4944, avgLikes: 1516, avgComments: 43, engagementRate: 0.2593 } }
   },
   'FOOTBALL': {
     mention: { with: { posts: 334, avgLikes: 10118, avgComments: 100, engagementRate: 0.7722 }, without: { posts: 1641, avgLikes: 7479, avgComments: 117, engagementRate: 0.2998 } },
@@ -468,7 +447,7 @@ const fallbackTeamFollowersBySport: Record<string, number> = {
 const big10Schools = [
   { name: 'Minnesota', conf: 'Big 10', posts: 2354, adoption: 58.6, logoEng: 29.96, mentionEng: 47.57, collabEng: 50.81, followers: 882398 },
   { name: 'Nebraska', conf: 'Big 10', posts: 4026, adoption: 50.8, logoEng: 34.47, mentionEng: 50.63, collabEng: 80.32, followers: 3126161 },
-  { name: 'Michigan', conf: 'Big 10', posts: 4042, adoption: 56.2, logoEng: 34.39, mentionEng: 50.18, collabEng: 36.87, followers: 2381406 },
+  { name: 'Michigan', conf: 'Big 10', posts: 5213, adoption: 52.3, logoEng: 34.45, mentionEng: 44.30, collabEng: 52.18, followers: 2381406 },
   { name: 'Maryland', conf: 'Big 10', posts: 2790, adoption: 49, logoEng: 22.93, mentionEng: 27.67, collabEng: 40.22, followers: 863472 },
   { name: 'Ohio State', conf: 'Big 10', posts: 12384, adoption: 47.8, logoEng: 56.85, mentionEng: 87.83, collabEng: 64.56, followers: 5546349 },
   { name: 'Oregon', conf: 'Big 10', posts: 2683, adoption: 46.3, logoEng: 47.44, mentionEng: 43.36, collabEng: 104.75, followers: 1904523 },
@@ -494,7 +473,7 @@ const ncaaD1Schools = [
   { name: 'Virginia Tech', conf: 'ACC', posts: 3978, adoption: 51.3, logoEng: 27.97, mentionEng: 33.05, collabEng: 18.48, followers: 1872167 },
   { name: 'Nebraska', conf: 'Big 10', posts: 4026, adoption: 50.8, logoEng: 34.47, mentionEng: 50.63, collabEng: 80.32, followers: 3126161 },
   { name: 'Washington State', conf: 'Pac-12', posts: 948, adoption: 50.4, logoEng: 31.20, mentionEng: 39.11, collabEng: 60.15, followers: 186487 },
-  { name: 'Michigan', conf: 'Big 10', posts: 4042, adoption: 56.2, logoEng: 34.39, mentionEng: 50.18, collabEng: 36.87, followers: 2381406 },
+  { name: 'Michigan', conf: 'Big 10', posts: 5213, adoption: 52.3, logoEng: 34.45, mentionEng: 44.30, collabEng: 52.18, followers: 2381406 },
   { name: 'Miami', conf: 'ACC', posts: 2085, adoption: 49.4, logoEng: 34.87, mentionEng: 16.23, collabEng: 69.85, followers: 1703801 },
   { name: 'Maryland', conf: 'Big 10', posts: 2790, adoption: 49, logoEng: 22.93, mentionEng: 27.67, collabEng: 40.22, followers: 863472 },
   { name: 'Notre Dame', conf: 'ACC', posts: 2788, adoption: 48.8, logoEng: 40.76, mentionEng: 69.86, collabEng: 75.29, followers: 1578114 },
@@ -512,7 +491,6 @@ const ncaaD1Schools = [
   { name: 'Wichita State', conf: 'AAC', posts: 1740, adoption: 44.8, logoEng: 22.14, mentionEng: 31.99, collabEng: 30.09, followers: 347584 },
   { name: 'UCF', conf: 'Big 12', posts: 2409, adoption: 44.3, logoEng: 30.92, mentionEng: 42.17, collabEng: 44.31, followers: 1202431 },
   { name: 'Indiana', conf: 'Big 10', posts: 2604, adoption: 44.2, logoEng: 26.75, mentionEng: 27.66, collabEng: 54.12, followers: 1198872 },
-  { name: 'New Mexico State', conf: 'CUSA', posts: 981, adoption: 44.1, logoEng: 20.18, mentionEng: 0, collabEng: 54.20, followers: 0 },
   { name: 'Cincinnati', conf: 'Big 12', posts: 4968, adoption: 43.7, logoEng: 26.05, mentionEng: 36.40, collabEng: 29.50, followers: 1043067 },
   { name: 'Penn State', conf: 'Big 10', posts: 8247, adoption: 43.5, logoEng: 37.82, mentionEng: 48.49, collabEng: 108.02, followers: 4114531 },
   { name: 'Ole Miss', conf: 'SEC', posts: 2309, adoption: 43.5, logoEng: 35.18, mentionEng: 46.81, collabEng: 61.42, followers: 2032007 },
@@ -520,7 +498,6 @@ const ncaaD1Schools = [
   { name: 'Missouri', conf: 'SEC', posts: 5726, adoption: 42.3, logoEng: 34.86, mentionEng: 38.38, collabEng: 86.37, followers: 1271953 },
   { name: 'West Virginia', conf: 'Big 12', posts: 2288, adoption: 41.7, logoEng: 44.50, mentionEng: 8.87, collabEng: 0, followers: 956180 },
   { name: 'SMU', conf: 'AAC', posts: 1848, adoption: 41.6, logoEng: 20.14, mentionEng: 31.95, collabEng: 32.85, followers: 994666 },
-  { name: 'Rice', conf: 'AAC', posts: 632, adoption: 41.1, logoEng: 19.80, mentionEng: 24.32, collabEng: 27.26, followers: 0 },
   { name: 'Iowa', conf: 'Big 10', posts: 3002, adoption: 40.7, logoEng: 37.57, mentionEng: 40.37, collabEng: 46.35, followers: 1004448 },
   { name: 'Alabama', conf: 'SEC', posts: 5750, adoption: 40.4, logoEng: 34.34, mentionEng: 47.36, collabEng: 44.94, followers: 3966222 },
   { name: 'Georgia Tech', conf: 'ACC', posts: 2066, adoption: 40.4, logoEng: 36.10, mentionEng: 0, collabEng: 49.88, followers: 990980 },
@@ -616,7 +593,7 @@ function SectionHeader({ primary, secondary }: { primary: string; secondary: str
       style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }}
       className="text-2xl md:text-3xl font-bold uppercase tracking-tight"
     >
-      <span style={{ color: colors.scarlet }}>{primary}</span>
+      <span style={{ color: colors.primary }}>{primary}</span>
       <span style={{ color: colors.headerGray }}>{secondary}</span>
     </h2>
   );
@@ -638,7 +615,7 @@ function GlassCard({
     <div
       className={`bg-white rounded-2xl ${noPadding ? '' : 'p-5'} ${className}`}
       style={{
-        borderTop: `2px solid ${colors.scarlet}`,
+        borderTop: `2px solid ${colors.primary}`,
         boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.06)',
         transition,
       }}
@@ -700,7 +677,7 @@ function SegmentedToggle<T extends string>({
             className="px-5 py-2 text-sm font-semibold rounded-lg whitespace-nowrap"
             style={{
               background: isActive
-                ? `linear-gradient(135deg, ${colors.scarlet} 0%, ${colors.scarletDark} 100%)`
+                ? `linear-gradient(135deg, ${colors.primary} 0%, ${colors.primaryDark} 100%)`
                 : 'transparent',
               color: isActive ? colors.white : colors.textMuted,
               transition,
@@ -732,7 +709,7 @@ function KPIChip({
   return (
     <div
       className="rounded-xl p-4 relative overflow-hidden flex flex-col justify-center items-center text-center min-h-[120px]"
-      style={{ backgroundColor: colors.scarlet, transition }}
+      style={{ backgroundColor: colors.primary, transition }}
     >
       <div className="absolute top-3 right-3 opacity-20">{icon}</div>
       <p className="text-xs font-semibold uppercase tracking-wider text-white/80 mb-2">{label}</p>
@@ -770,7 +747,7 @@ function IPModeCard({
         <div className="flex items-center gap-3">
           <div
             className="w-10 h-10 rounded-lg flex items-center justify-center"
-            style={{ backgroundColor: `${colors.scarlet}15` }}
+            style={{ backgroundColor: `${colors.primary}15` }}
           >
             {icon}
           </div>
@@ -816,9 +793,9 @@ function IPModeCard({
       {opportunity && (
         <div className="mt-4 pt-3 border-t border-gray-100">
           <div className="flex items-start gap-2">
-            <Target className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: colors.scarlet }} />
+            <Target className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: colors.primary }} />
             <div>
-              <p className="text-xs uppercase tracking-wider font-semibold mb-0.5" style={{ color: colors.scarlet }}>
+              <p className="text-xs uppercase tracking-wider font-semibold mb-0.5" style={{ color: colors.primary }}>
                 Opportunity
               </p>
               <p className="text-xs text-gray-600">{opportunity}</p>
@@ -856,13 +833,13 @@ function OverviewTab({ overviewData }: { overviewData?: OverviewData | null }) {
       {/* Hero Section */}
       <div
         className="bg-white rounded-2xl shadow-sm px-6 py-8 md:px-10 md:py-10"
-        style={{ borderTop: `2px solid ${colors.scarlet}` }}
+        style={{ borderTop: `2px solid ${colors.primary}` }}
       >
         <h1
           style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }}
           className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-2"
         >
-          <span style={{ color: colors.scarlet }}>Michigan </span>
+          <span style={{ color: colors.primary }}>Michigan </span>
           <span style={{ color: colors.headerGray }}>Athlete Overview</span>
         </h1>
 
@@ -905,13 +882,13 @@ function OverviewTab({ overviewData }: { overviewData?: OverviewData | null }) {
             <div className="flex items-start gap-3">
               <div
                 className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
-                style={{ backgroundColor: `${colors.scarlet}15` }}
+                style={{ backgroundColor: `${colors.primary}15` }}
               >
-                <Lightbulb className="w-5 h-5" style={{ color: colors.scarlet }} />
+                <Lightbulb className="w-5 h-5" style={{ color: colors.primary }} />
               </div>
               <p className="text-sm text-gray-700 leading-relaxed">
                 Collaboration posts drive{' '}
-                <span className="font-bold" style={{ color: colors.scarlet }}>
+                <span className="font-bold" style={{ color: colors.primary }}>
                   {overview.collaboration.delta.toFixed(2)}% higher engagement
                 </span>{' '}
                 -- the strongest IP signal.
@@ -922,15 +899,15 @@ function OverviewTab({ overviewData }: { overviewData?: OverviewData | null }) {
             <div className="flex items-start gap-3">
               <div
                 className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
-                style={{ backgroundColor: `${colors.scarlet}15` }}
+                style={{ backgroundColor: `${colors.primary}15` }}
               >
-                <Lightbulb className="w-5 h-5" style={{ color: colors.scarlet }} />
+                <Lightbulb className="w-5 h-5" style={{ color: colors.primary }} />
               </div>
               <p className="text-sm text-gray-700 leading-relaxed">
                 Michigan leads the Big Ten in IP adoption at{' '}
-                <span className="font-bold" style={{ color: colors.scarlet }}>56.2%</span>, more than double
+                <span className="font-bold" style={{ color: colors.primary }}>52.3%</span>, more than double
                 the conference average of{' '}
-                <span className="font-bold" style={{ color: colors.scarlet }}>27.0%</span>.
+                <span className="font-bold" style={{ color: colors.primary }}>27.0%</span>.
               </p>
             </div>
           </GlassCard>
@@ -938,14 +915,14 @@ function OverviewTab({ overviewData }: { overviewData?: OverviewData | null }) {
             <div className="flex items-start gap-3">
               <div
                 className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
-                style={{ backgroundColor: `${colors.scarlet}15` }}
+                style={{ backgroundColor: `${colors.primary}15` }}
               >
-                <Lightbulb className="w-5 h-5" style={{ color: colors.scarlet }} />
+                <Lightbulb className="w-5 h-5" style={{ color: colors.primary }} />
               </div>
               <p className="text-sm text-gray-700 leading-relaxed">
                 <span className="font-bold">{formatNumber(overview.postsWithIP)} posts</span> ({overview.ipAdoptionRate}%) feature Michigan IP,
                 generating{' '}
-                <span className="font-bold" style={{ color: colors.scarlet }}>
+                <span className="font-bold" style={{ color: colors.primary }}>
                   {formatCurrency(overview.totalEmv)}
                 </span>{' '}
                 in earned media value.
@@ -963,7 +940,7 @@ function OverviewTab({ overviewData }: { overviewData?: OverviewData | null }) {
         <div className="grid md:grid-cols-3 gap-4">
           <IPModeCard
             title="Collaboration"
-            icon={<Handshake className="w-5 h-5" style={{ color: colors.scarlet }} />}
+            icon={<Handshake className="w-5 h-5" style={{ color: colors.primary }} />}
             posts={overview.collaboration.posts}
             delta={overview.collaboration.delta}
             avgEngagement={formatPercent(overview.collaboration.engagementRate)}
@@ -973,7 +950,7 @@ function OverviewTab({ overviewData }: { overviewData?: OverviewData | null }) {
           />
           <IPModeCard
             title="Visual IP"
-            icon={<Camera className="w-5 h-5" style={{ color: colors.scarlet }} />}
+            icon={<Camera className="w-5 h-5" style={{ color: colors.primary }} />}
             posts={overview.logo.posts}
             delta={overview.logo.delta}
             avgEngagement={formatPercent(overview.logo.engagementRate)}
@@ -983,7 +960,7 @@ function OverviewTab({ overviewData }: { overviewData?: OverviewData | null }) {
           />
           <IPModeCard
             title="Mention"
-            icon={<AtSign className="w-5 h-5" style={{ color: colors.scarlet }} />}
+            icon={<AtSign className="w-5 h-5" style={{ color: colors.primary }} />}
             posts={overview.mention.posts}
             delta={overview.mention.delta}
             avgEngagement={formatPercent(overview.mention.engagementRate)}
@@ -1157,12 +1134,12 @@ function WithVsWithoutTab({
           style={{ color: colors.text }}
         >
           Posts with Michigan {currentSignal?.label.toLowerCase()} drive{' '}
-          <span style={{ color: colors.scarlet }}>{formatDelta(engDelta)}</span> higher engagement rate.
+          <span style={{ color: colors.primary }}>{formatDelta(engDelta)}</span> higher engagement rate.
         </p>
         <div className="mt-3 flex flex-wrap items-center gap-3">
           <span
             className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold"
-            style={{ backgroundColor: `${colors.scarlet}12`, color: colors.scarlet }}
+            style={{ backgroundColor: `${colors.primary}12`, color: colors.primary }}
           >
             {formatSportLabel(selectedSport)}
           </span>
@@ -1217,7 +1194,7 @@ function WithVsWithoutTab({
                   className="px-4 py-2 text-sm font-semibold rounded-lg transition-all motion-reduce:transition-none"
                   style={{
                     background: isActive
-                      ? `linear-gradient(135deg, ${colors.scarlet} 0%, ${colors.scarletDark} 100%)`
+                      ? `linear-gradient(135deg, ${colors.primary} 0%, ${colors.primaryDark} 100%)`
                       : 'transparent',
                     color: isActive ? colors.white : colors.textMuted,
                     boxShadow: isActive ? '0 2px 8px rgba(186, 12, 47, 0.28)' : 'none',
@@ -1283,15 +1260,15 @@ function WithVsWithoutTab({
               {/* WITH bar */}
               <div>
                 <div className="flex items-baseline justify-between mb-1.5">
-                  <p className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: colors.scarlet }}>With {currentSignal?.label}</p>
-                  <p className="text-lg font-black" style={{ color: colors.scarlet }}>{metricValues.withValue}</p>
+                  <p className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: colors.primary }}>With {currentSignal?.label}</p>
+                  <p className="text-lg font-black" style={{ color: colors.primary }}>{metricValues.withValue}</p>
                 </div>
                 <div className="w-full bg-gray-100 rounded-lg h-8 overflow-hidden">
                   <motion.div
                     className="h-full rounded-lg"
                     style={{
-                      background: `linear-gradient(90deg, ${colors.scarlet} 0%, ${colors.scarletDark || colors.scarlet} 100%)`,
-                      boxShadow: `0 2px 8px ${colors.scarlet}33`,
+                      background: `linear-gradient(90deg, ${colors.primary} 0%, ${colors.primaryDark || colors.primary} 100%)`,
+                      boxShadow: `0 2px 8px ${colors.primary}33`,
                     }}
                     initial={{ width: 0 }}
                     animate={{ width: `${Math.max(withBarWidth, 2)}%` }}
@@ -1303,7 +1280,7 @@ function WithVsWithoutTab({
 
               {/* Lift Indicator */}
               <div className="text-center pt-3 border-t border-gray-100">
-                <p className="text-3xl font-black" style={{ color: colors.scarlet }}>
+                <p className="text-3xl font-black" style={{ color: colors.primary }}>
                   {formatDelta(metricValues.delta)} <span className="text-base font-bold text-gray-400">{metrics.find(m => m.id === selectedMetric)?.label} Lift</span>
                 </p>
                 <p className="text-xs text-gray-400 mt-1">
@@ -1645,7 +1622,7 @@ function PartnershipsTab() {
                 onClick={() => handleSort(option.key)}
                 className="flex items-center gap-1.5 px-3 sm:px-4 py-2.5 text-xs sm:text-sm font-semibold transition-all"
                 style={{
-                  backgroundColor: sortKey === option.key ? colors.scarlet : 'transparent',
+                  backgroundColor: sortKey === option.key ? colors.primary : 'transparent',
                   color: sortKey === option.key ? colors.white : colors.text,
                 }}
               >
@@ -1675,14 +1652,14 @@ function PartnershipsTab() {
               className="rounded-2xl p-4 bg-white hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 relative overflow-hidden group"
               style={{
                 boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.08)',
-                borderLeft: idx < 3 ? `4px solid ${colors.scarlet}` : '4px solid transparent',
+                borderLeft: idx < 3 ? `4px solid ${colors.primary}` : '4px solid transparent',
               }}
             >
               {/* Subtle gradient bg for top 3 */}
               {idx < 3 && (
                 <div
                   className="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity"
-                  style={{ background: `linear-gradient(135deg, ${colors.scarlet}, transparent)` }}
+                  style={{ background: `linear-gradient(135deg, ${colors.primary}, transparent)` }}
                 />
               )}
               <div className="relative z-10">
@@ -1690,7 +1667,7 @@ function PartnershipsTab() {
                   <span
                     className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0"
                     style={{
-                      backgroundColor: idx < 3 ? colors.scarlet : '#e5e7eb',
+                      backgroundColor: idx < 3 ? colors.primary : '#e5e7eb',
                       color: idx < 3 ? colors.white : colors.text,
                     }}
                   >
@@ -1713,7 +1690,7 @@ function PartnershipsTab() {
                     {partner.brand.replace('@', '')}
                   </p>
                 </div>
-                <p className="text-2xl font-black" style={{ color: colors.scarlet }}>
+                <p className="text-2xl font-black" style={{ color: colors.primary }}>
                   {getDisplayValue(partner)}
                 </p>
                 <p className="text-xs text-gray-400 mt-1">
@@ -1733,14 +1710,14 @@ function PartnershipsTab() {
                 className="rounded-2xl p-4 bg-white flex-shrink-0 w-[160px] snap-start relative overflow-hidden"
                 style={{
                   boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.08)',
-                  borderLeft: idx < 3 ? `4px solid ${colors.scarlet}` : '4px solid transparent',
+                  borderLeft: idx < 3 ? `4px solid ${colors.primary}` : '4px solid transparent',
                 }}
               >
                 <div className="flex items-center gap-2 mb-3">
                   <span
                     className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0"
                     style={{
-                      backgroundColor: idx < 3 ? colors.scarlet : '#e5e7eb',
+                      backgroundColor: idx < 3 ? colors.primary : '#e5e7eb',
                       color: idx < 3 ? colors.white : colors.text,
                     }}
                   >
@@ -1763,7 +1740,7 @@ function PartnershipsTab() {
                     {partner.brand.replace('@', '')}
                   </p>
                 </div>
-                <p className="text-xl font-black" style={{ color: colors.scarlet }}>
+                <p className="text-xl font-black" style={{ color: colors.primary }}>
                   {getDisplayValue(partner)}
                 </p>
                 <p className="text-xs text-gray-400 mt-1">
@@ -1793,7 +1770,7 @@ function PartnershipsTab() {
                 setCurrentPage(1);
               }}
               className="pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 text-sm w-full sm:w-64 bg-white focus:outline-none focus:ring-2 focus:border-transparent transition-shadow"
-              style={{ '--tw-ring-color': `${colors.scarlet}40` } as React.CSSProperties}
+              style={{ '--tw-ring-color': `${colors.primary}40` } as React.CSSProperties}
             />
           </div>
         </div>
@@ -1803,7 +1780,7 @@ function PartnershipsTab() {
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr style={{ backgroundColor: colors.scarlet }}>
+                <tr style={{ backgroundColor: colors.primary }}>
                   <th className="text-center px-2 py-3.5 text-xs font-semibold uppercase tracking-wider text-white w-12">
                     #
                   </th>
@@ -1865,7 +1842,7 @@ function PartnershipsTab() {
                         <span
                           className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mx-auto"
                           style={{
-                            backgroundColor: globalRank <= 3 ? colors.scarlet : '#e5e7eb',
+                            backgroundColor: globalRank <= 3 ? colors.primary : '#e5e7eb',
                             color: globalRank <= 3 ? colors.white : colors.textMuted,
                           }}
                         >
@@ -1928,7 +1905,7 @@ function PartnershipsTab() {
                         </span>
                       </td>
                       {/* Mobile: primary metric value */}
-                      <td className="px-4 py-3 text-right font-bold md:hidden" style={{ color: colors.scarlet }}>
+                      <td className="px-4 py-3 text-right font-bold md:hidden" style={{ color: colors.primary }}>
                         {getDisplayValue(partnership)}
                       </td>
                     </tr>
@@ -1967,7 +1944,7 @@ function PartnershipsTab() {
                     onClick={() => setCurrentPage(page)}
                     className="w-9 h-9 rounded-lg text-sm font-semibold transition-colors"
                     style={{
-                      backgroundColor: currentPage === page ? colors.scarlet : 'transparent',
+                      backgroundColor: currentPage === page ? colors.primary : 'transparent',
                       color: currentPage === page ? colors.white : colors.textMuted,
                     }}
                   >
@@ -2033,8 +2010,8 @@ function BestCollaboratorsTab() {
           onClick={() => setSelectedSignal('collab')}
           className="rounded-2xl p-4 sm:p-5 text-center relative overflow-hidden transition-all duration-200 hover:-translate-y-0.5"
           style={{
-            backgroundColor: selectedSignal === 'collab' ? colors.scarlet : colors.white,
-            boxShadow: selectedSignal === 'collab' ? `0 8px 25px ${colors.scarlet}30` : '0 1px 3px 0 rgb(0 0 0 / 0.08)',
+            backgroundColor: selectedSignal === 'collab' ? colors.primary : colors.white,
+            boxShadow: selectedSignal === 'collab' ? `0 8px 25px ${colors.primary}30` : '0 1px 3px 0 rgb(0 0 0 / 0.08)',
             border: selectedSignal === 'collab' ? 'none' : '1px solid #e5e7eb',
           }}
         >
@@ -2048,7 +2025,7 @@ function BestCollaboratorsTab() {
             />
           )}
           <div className="relative z-10">
-            <Handshake className="w-5 h-5 sm:w-6 sm:h-6 mx-auto mb-2" style={{ color: selectedSignal === 'collab' ? colors.white : colors.scarlet }} />
+            <Handshake className="w-5 h-5 sm:w-6 sm:h-6 mx-auto mb-2" style={{ color: selectedSignal === 'collab' ? colors.white : colors.primary }} />
             <p className="text-[10px] sm:text-xs uppercase tracking-wider mb-1" style={{ color: selectedSignal === 'collab' ? 'rgba(255,255,255,0.8)' : colors.textMuted }}>
               Collab Posts
             </p>
@@ -2066,8 +2043,8 @@ function BestCollaboratorsTab() {
           onClick={() => setSelectedSignal('logo')}
           className="rounded-2xl p-4 sm:p-5 text-center relative overflow-hidden transition-all duration-200 hover:-translate-y-0.5"
           style={{
-            backgroundColor: selectedSignal === 'logo' ? colors.scarlet : colors.white,
-            boxShadow: selectedSignal === 'logo' ? `0 8px 25px ${colors.scarlet}30` : '0 1px 3px 0 rgb(0 0 0 / 0.08)',
+            backgroundColor: selectedSignal === 'logo' ? colors.primary : colors.white,
+            boxShadow: selectedSignal === 'logo' ? `0 8px 25px ${colors.primary}30` : '0 1px 3px 0 rgb(0 0 0 / 0.08)',
             border: selectedSignal === 'logo' ? 'none' : '1px solid #e5e7eb',
           }}
         >
@@ -2081,7 +2058,7 @@ function BestCollaboratorsTab() {
             />
           )}
           <div className="relative z-10">
-            <Tag className="w-5 h-5 sm:w-6 sm:h-6 mx-auto mb-2" style={{ color: selectedSignal === 'logo' ? colors.white : colors.scarlet }} />
+            <Tag className="w-5 h-5 sm:w-6 sm:h-6 mx-auto mb-2" style={{ color: selectedSignal === 'logo' ? colors.white : colors.primary }} />
             <p className="text-[10px] sm:text-xs uppercase tracking-wider mb-1" style={{ color: selectedSignal === 'logo' ? 'rgba(255,255,255,0.8)' : colors.textMuted }}>
               Visual IP Posts
             </p>
@@ -2099,8 +2076,8 @@ function BestCollaboratorsTab() {
           onClick={() => setSelectedSignal('mention')}
           className="rounded-2xl p-4 sm:p-5 text-center relative overflow-hidden transition-all duration-200 hover:-translate-y-0.5"
           style={{
-            backgroundColor: selectedSignal === 'mention' ? colors.scarlet : colors.white,
-            boxShadow: selectedSignal === 'mention' ? `0 8px 25px ${colors.scarlet}30` : '0 1px 3px 0 rgb(0 0 0 / 0.08)',
+            backgroundColor: selectedSignal === 'mention' ? colors.primary : colors.white,
+            boxShadow: selectedSignal === 'mention' ? `0 8px 25px ${colors.primary}30` : '0 1px 3px 0 rgb(0 0 0 / 0.08)',
             border: selectedSignal === 'mention' ? 'none' : '1px solid #e5e7eb',
           }}
         >
@@ -2114,7 +2091,7 @@ function BestCollaboratorsTab() {
             />
           )}
           <div className="relative z-10">
-            <AtSign className="w-5 h-5 sm:w-6 sm:h-6 mx-auto mb-2" style={{ color: selectedSignal === 'mention' ? colors.white : colors.scarlet }} />
+            <AtSign className="w-5 h-5 sm:w-6 sm:h-6 mx-auto mb-2" style={{ color: selectedSignal === 'mention' ? colors.white : colors.primary }} />
             <p className="text-[10px] sm:text-xs uppercase tracking-wider mb-1" style={{ color: selectedSignal === 'mention' ? 'rgba(255,255,255,0.8)' : colors.textMuted }}>
               Mention Posts
             </p>
@@ -2132,7 +2109,7 @@ function BestCollaboratorsTab() {
       <div className="bg-white rounded-2xl p-4 shadow-sm">
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ backgroundColor: `${colors.scarlet}15` }}>
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ backgroundColor: `${colors.primary}15` }}>
               {currentConfig.icon}
             </div>
             <div>
@@ -2141,7 +2118,7 @@ function BestCollaboratorsTab() {
             </div>
           </div>
           <div className="text-right">
-            <p className="text-lg font-black" style={{ color: colors.scarlet }}>{formatNumber(currentConfig.stats.posts)}</p>
+            <p className="text-lg font-black" style={{ color: colors.primary }}>{formatNumber(currentConfig.stats.posts)}</p>
             <p className="text-xs text-gray-400">of {formatNumber(ipData.totalPosts)} total</p>
           </div>
         </div>
@@ -2156,7 +2133,7 @@ function BestCollaboratorsTab() {
               className="h-full rounded-full transition-all duration-500"
               style={{
                 width: `${Math.min((currentConfig.stats.posts / ipData.totalPosts) * 100 * 3, 100)}%`,
-                background: `linear-gradient(90deg, ${colors.scarlet}, ${colors.scarletLight || '#1a4a70'})`,
+                background: `linear-gradient(90deg, ${colors.primary}, ${colors.primaryLight || '#1a4a70'})`,
               }}
             />
           </div>
@@ -2168,7 +2145,7 @@ function BestCollaboratorsTab() {
         {/* Table Header Banner */}
         <div
           className="px-5 py-4 relative overflow-hidden"
-          style={{ backgroundColor: colors.scarlet }}
+          style={{ backgroundColor: colors.primary }}
         >
           <div
             className="absolute inset-0 opacity-10"
@@ -2219,9 +2196,9 @@ function BestCollaboratorsTab() {
                 <span
                   className="w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold mx-auto"
                   style={{
-                    backgroundColor: idx < 3 ? colors.scarlet : 'transparent',
-                    color: idx < 3 ? 'white' : colors.scarlet,
-                    border: idx >= 3 ? `2px solid ${colors.scarlet}` : 'none',
+                    backgroundColor: idx < 3 ? colors.primary : 'transparent',
+                    color: idx < 3 ? 'white' : colors.primary,
+                    border: idx >= 3 ? `2px solid ${colors.primary}` : 'none',
                   }}
                 >
                   {athlete.rank}
@@ -2229,7 +2206,7 @@ function BestCollaboratorsTab() {
                 <p className="text-gray-900 font-semibold">{athlete.name}</p>
                 <p className="text-xs text-gray-500">{athlete.sport}</p>
                 <span className="text-center text-gray-600">{athlete.posts}</span>
-                <span className="text-right font-bold" style={{ color: colors.scarlet }}>{formatCurrency(athlete.emv)}</span>
+                <span className="text-right font-bold" style={{ color: colors.primary }}>{formatCurrency(athlete.emv)}</span>
                 <span className="text-right font-medium" style={{ color: colors.positive }}>+{currentConfig.stats.lift}%</span>
               </div>
 
@@ -2239,9 +2216,9 @@ function BestCollaboratorsTab() {
                   <span
                     className="w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0"
                     style={{
-                      backgroundColor: idx < 3 ? colors.scarlet : 'transparent',
-                      color: idx < 3 ? 'white' : colors.scarlet,
-                      border: idx >= 3 ? `2px solid ${colors.scarlet}` : 'none',
+                      backgroundColor: idx < 3 ? colors.primary : 'transparent',
+                      color: idx < 3 ? 'white' : colors.primary,
+                      border: idx >= 3 ? `2px solid ${colors.primary}` : 'none',
                     }}
                   >
                     {athlete.rank}
@@ -2251,7 +2228,7 @@ function BestCollaboratorsTab() {
                     <p className="text-xs text-gray-500">{athlete.sport}</p>
                   </div>
                   <div className="text-right flex-shrink-0">
-                    <p className="text-sm font-bold" style={{ color: colors.scarlet }}>{formatCurrency(athlete.emv)}</p>
+                    <p className="text-sm font-bold" style={{ color: colors.primary }}>{formatCurrency(athlete.emv)}</p>
                     <p className="text-xs text-gray-400">{athlete.posts} posts</p>
                   </div>
                 </div>
@@ -2316,12 +2293,12 @@ function BenchmarkTab() {
     return [...schools].sort((a, b) => b[rankingMetric] - a[rankingMetric]);
   }, [schools, rankingMetric]);
 
-  const ohioIndex = rankedSchools.findIndex((s) => s.name === 'Michigan');
-  const ohioRank = ohioIndex >= 0 ? ohioIndex + 1 : null;
-  const ohioSchool = rankedSchools.find((s) => s.name === 'Michigan') ?? null;
-  const ohioValue = ohioSchool ? (rankingMetric === 'ipPosts' ? Math.round(ohioSchool.posts * ohioSchool.adoption / 100) : ohioSchool[rankingMetric]) : 0;
+  const michiganBenchmarkIndex = rankedSchools.findIndex((s) => s.name === 'Michigan');
+  const michiganBenchmarkRank = michiganBenchmarkIndex >= 0 ? michiganBenchmarkIndex + 1 : null;
+  const michiganBenchmarkSchool = rankedSchools.find((s) => s.name === 'Michigan') ?? null;
+  const michiganBenchmarkValue = michiganBenchmarkSchool ? (rankingMetric === 'ipPosts' ? Math.round(michiganBenchmarkSchool.posts * michiganBenchmarkSchool.adoption / 100) : michiganBenchmarkSchool[rankingMetric]) : 0;
   const avgValue = metricAverage[rankingMetric];
-  const deltaVsAvg = ohioValue - avgValue;
+  const deltaVsAvg = michiganBenchmarkValue - avgValue;
 
   return (
     <div className="space-y-6">
@@ -2339,7 +2316,7 @@ function BenchmarkTab() {
               className="px-4 py-1.5 rounded-md text-xs font-semibold transition-all motion-reduce:transition-none"
               style={{
                 backgroundColor: isConference ? '#fff' : 'transparent',
-                color: isConference ? colors.scarlet : colors.textMuted,
+                color: isConference ? colors.primary : colors.textMuted,
                 boxShadow: isConference ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
               }}
             >
@@ -2350,7 +2327,7 @@ function BenchmarkTab() {
               className="px-4 py-1.5 rounded-md text-xs font-semibold transition-all motion-reduce:transition-none"
               style={{
                 backgroundColor: !isConference ? '#fff' : 'transparent',
-                color: !isConference ? colors.scarlet : colors.textMuted,
+                color: !isConference ? colors.primary : colors.textMuted,
                 boxShadow: !isConference ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
               }}
             >
@@ -2365,8 +2342,8 @@ function BenchmarkTab() {
         <GlassCard className="p-5">
           <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Michigan Rank</p>
           <div className="flex items-end gap-2">
-            <p className="text-4xl font-black" style={{ color: colors.scarlet }}>
-              {ohioRank ? `#${ohioRank}` : 'N/A'}
+            <p className="text-4xl font-black" style={{ color: colors.primary }}>
+              {michiganBenchmarkRank ? `#${michiganBenchmarkRank}` : 'N/A'}
             </p>
             <p className="text-sm text-gray-500 mb-1">of {rankedSchools.length}</p>
           </div>
@@ -2377,7 +2354,7 @@ function BenchmarkTab() {
           <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Michigan Value</p>
           <div className="flex items-end gap-2">
             <p className="text-4xl font-black text-gray-900">
-              {rankingMetric === 'followers' || rankingMetric === 'posts' || rankingMetric === 'ipPosts' ? formatNumber(ohioValue) : `${ohioValue}%`}
+              {rankingMetric === 'followers' || rankingMetric === 'posts' || rankingMetric === 'ipPosts' ? formatNumber(michiganBenchmarkValue) : `${(michiganBenchmarkValue as number).toFixed(1)}%`}
             </p>
             {avgValue > 0 && (
               <p
@@ -2402,9 +2379,9 @@ function BenchmarkTab() {
               const getVal = (s: typeof rankedSchools[0]) =>
                 rankingMetric === 'ipPosts' ? Math.round(s.posts * s.adoption / 100) : s[rankingMetric] as number;
               const ttun = rankedSchools.find(s => s.name === 'Ohio State');
-              if (!ttun || !ohioSchool) return <>No ranking data available for this view.</>;
+              if (!ttun || !michiganBenchmarkSchool) return <>No ranking data available for this view.</>;
               const ttunValue = getVal(ttun);
-              const gap = (ohioValue as number) - ttunValue;
+              const gap = (michiganBenchmarkValue as number) - ttunValue;
               const ahead = gap >= 0;
               if (isCount) {
                 return (
@@ -2412,7 +2389,7 @@ function BenchmarkTab() {
                 );
               }
               return (
-                <>Michigan's {metricLabels[rankingMetric].toLowerCase()} is <span className="font-semibold">{Math.abs(gap).toFixed(1)}pp {ahead ? 'above' : 'below'}</span> Ohio State ({(ohioValue as number).toFixed(1)}% vs {ttunValue.toFixed(1)}%).</>
+                <>Michigan's {metricLabels[rankingMetric].toLowerCase()} is <span className="font-semibold">{Math.abs(gap).toFixed(1)}pp {ahead ? 'above' : 'below'}</span> Ohio State ({(michiganBenchmarkValue as number).toFixed(1)}% vs {ttunValue.toFixed(1)}%).</>
               );
             })()}
           </p>
@@ -2426,7 +2403,7 @@ function BenchmarkTab() {
         <div className="rounded-2xl bg-white overflow-hidden max-h-[500px] overflow-y-auto shadow-sm">
           <table className="w-full">
             <thead className="sticky top-0 z-10">
-              <tr style={{ backgroundColor: colors.scarlet }}>
+              <tr style={{ backgroundColor: colors.primary }}>
                 <th className="text-center px-3 py-3.5 text-xs font-semibold uppercase tracking-wider text-white w-10">#</th>
                 <th className="text-left px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white">School</th>
                 {!isConference && <th className="text-left px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Conf</th>}
@@ -2440,28 +2417,28 @@ function BenchmarkTab() {
             </thead>
             <tbody>
               {rankedSchools.map((school, idx) => {
-                const isOSU = school.name === 'Michigan';
+                const isMichigan = school.name === 'Michigan';
                 return (
                   <tr
                     key={school.name}
-                    className={`border-b border-gray-100 transition-colors ${isOSU ? 'hover:bg-blue-50/30' : idx % 2 === 1 ? 'bg-gray-50/50 hover:bg-gray-50' : 'hover:bg-gray-50'}`}
-                    style={isOSU ? { backgroundColor: '#00274C0D' } : undefined}
+                    className={`border-b border-gray-100 transition-colors ${isMichigan ? 'hover:bg-blue-50/30' : idx % 2 === 1 ? 'bg-gray-50/50 hover:bg-gray-50' : 'hover:bg-gray-50'}`}
+                    style={isMichigan ? { backgroundColor: '#00274C0D' } : undefined}
                   >
                     <td className="px-3 py-3 text-center">
                       {idx < 3 ? (
                         <span
                           className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold mx-auto"
                           style={{
-                            backgroundColor: isOSU ? colors.scarlet : '#d1d5db',
-                            color: isOSU ? colors.white : colors.text,
+                            backgroundColor: isMichigan ? colors.primary : '#d1d5db',
+                            color: isMichigan ? colors.white : colors.text,
                           }}
                         >
                           {idx + 1}
                         </span>
-                      ) : isOSU ? (
+                      ) : isMichigan ? (
                         <span
                           className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold mx-auto"
-                          style={{ backgroundColor: colors.scarlet, color: colors.white }}
+                          style={{ backgroundColor: colors.primary, color: colors.white }}
                         >
                           {idx + 1}
                         </span>
@@ -2469,10 +2446,10 @@ function BenchmarkTab() {
                         <span className="text-sm text-gray-400 font-medium">{idx + 1}</span>
                       )}
                     </td>
-                    <td className={`px-4 py-3 ${isOSU ? 'font-bold' : 'font-semibold'}`} style={{ color: isOSU ? colors.scarlet : colors.text }}>
+                    <td className={`px-4 py-3 ${isMichigan ? 'font-bold' : 'font-semibold'}`} style={{ color: isMichigan ? colors.primary : colors.text }}>
                       <div className="flex items-center gap-2">
-                        {isOSU && (
-                          <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: colors.scarlet }} />
+                        {isMichigan && (
+                          <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: colors.primary }} />
                         )}
                         {renderSchoolName(school.name)}
                         {idx < 3 && (
@@ -2489,7 +2466,7 @@ function BenchmarkTab() {
                       </div>
                     </td>
                     {!isConference && <td className="px-4 py-3 text-xs text-gray-500 hidden md:table-cell">{school.conf}</td>}
-                    <td className="px-4 py-3 text-right font-semibold" style={{ color: isOSU ? colors.scarlet : colors.text }}>
+                    <td className="px-4 py-3 text-right font-semibold" style={{ color: isMichigan ? colors.primary : colors.text }}>
                       {formatNumber(school.followers)}
                     </td>
                     <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{formatNumber(school.posts)}</td>
@@ -2671,8 +2648,8 @@ function ContentTab() {
         });
 
         const ohioTeamRows = (await fetchFirstJson([
-          '/data/Ohio.team_contents.json',
-          '/data/ohio.team_contents.json',
+          '/data/michigan-team-contents.json',
+          '/data/michigan-team-contents.json',
         ])) || [];
         const normalizedOhioTeamPosts: TeamPostItem[] = ohioTeamRows.map((post, index) => {
           const likes = Number(post?.metrics?.likes || 0);
@@ -2802,7 +2779,7 @@ function ContentTab() {
           <div className="flex items-start gap-3">
             <span
               className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-1"
-              style={{ backgroundColor: rank <= 3 ? colors.scarlet : '#e5e7eb', color: rank <= 3 ? '#fff' : colors.textMuted }}
+              style={{ backgroundColor: rank <= 3 ? colors.primary : '#e5e7eb', color: rank <= 3 ? '#fff' : colors.textMuted }}
             >
               {rank}
             </span>
@@ -2818,7 +2795,7 @@ function ContentTab() {
                 <p className="text-sm text-gray-600 line-clamp-2 mt-1">{post.caption}</p>
               )}
               <div className="flex flex-wrap gap-1.5 mt-3">
-                <span className="px-2.5 py-1 rounded-full text-xs font-medium" style={{ backgroundColor: `${colors.scarlet}14`, border: `1px solid ${colors.scarlet}40`, color: colors.scarlet }}>
+                <span className="px-2.5 py-1 rounded-full text-xs font-medium" style={{ backgroundColor: `${colors.primary}14`, border: `1px solid ${colors.primary}40`, color: colors.primary }}>
                   {post.ipSignal}
                 </span>
               </div>
@@ -2857,7 +2834,7 @@ function ContentTab() {
         <GlassCard>
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-5 h-5 rounded-full border-2 border-gray-200 border-t-transparent animate-spin" style={{ borderTopColor: colors.scarlet }} />
+              <div className="w-5 h-5 rounded-full border-2 border-gray-200 border-t-transparent animate-spin" style={{ borderTopColor: colors.primary }} />
               <div>
                 <p className="text-sm font-semibold" style={{ color: colors.text }}>Loading content performance...</p>
                 <p className="text-xs" style={{ color: colors.textMuted }}>Pulling athlete and team posts for Michigan.</p>
@@ -2913,7 +2890,7 @@ function ContentTab() {
                         </div>
                         <div>
                           <p className="text-gray-400 uppercase tracking-wider">IP Signal</p>
-                          <p className="font-semibold" style={{ color: colors.scarlet }}>{item.post.ipSignal}</p>
+                          <p className="font-semibold" style={{ color: colors.primary }}>{item.post.ipSignal}</p>
                         </div>
                       </div>
                     </a>
@@ -3009,7 +2986,7 @@ function ContentTab() {
                         <div className="flex items-start gap-3">
                           <span
                             className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-1"
-                            style={{ backgroundColor: idx < 3 ? colors.scarlet : '#e5e7eb', color: idx < 3 ? '#fff' : colors.textMuted }}
+                            style={{ backgroundColor: idx < 3 ? colors.primary : '#e5e7eb', color: idx < 3 ? '#fff' : colors.textMuted }}
                           >
                             {idx + 1}
                           </span>
@@ -3099,12 +3076,12 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
     let cancelled = false;
     const loadFollowers = async () => {
       try {
-        let rows: OhioRosterTeam[] | null = null;
-        for (const path of ['/data/Ohio.roster_teams.json', '/data/ohio.roster_teams.json']) {
+        let rows: MichiganRosterTeam[] | null = null;
+        for (const path of ['/data/michigan-roster-teams.json', '/data/Big10roster.json']) {
           try {
             const response = await fetch(path);
             if (response.ok) {
-              rows = (await response.json()) as OhioRosterTeam[];
+              rows = (await response.json()) as MichiganRosterTeam[];
               break;
             }
           } catch {
@@ -3256,7 +3233,7 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
     { id: 'posts', label: 'Posts' },
   ];
 
-  const osuScarlet = colors.scarlet;
+  const osuScarlet = colors.primary;
 
   const SortIcon = ({ col }: { col: TeamSortKey }) => {
     if (sortKey !== col) return <ChevronDown className="w-3 h-3 opacity-30" />;
@@ -3289,7 +3266,7 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
             className="px-4 py-1.5 rounded-md text-xs font-semibold transition-all motion-reduce:transition-none"
             style={{
               backgroundColor: view === 'overview' ? '#fff' : 'transparent',
-              color: view === 'overview' ? colors.scarlet : colors.textMuted,
+              color: view === 'overview' ? colors.primary : colors.textMuted,
               boxShadow: view === 'overview' ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
             }}
           >
@@ -3300,7 +3277,7 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
             className="px-4 py-1.5 rounded-md text-xs font-semibold transition-all motion-reduce:transition-none"
             style={{
               backgroundColor: view === 'leaderboard' ? '#fff' : 'transparent',
-              color: view === 'leaderboard' ? colors.scarlet : colors.textMuted,
+              color: view === 'leaderboard' ? colors.primary : colors.textMuted,
               boxShadow: view === 'leaderboard' ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
             }}
           >
@@ -3549,8 +3526,8 @@ function TeamPageLeaderboard() {
     return Object.values(map).sort((a, b) => b[sortMetric] - a[sortMetric]);
   }, [rawRows, scope, selectedSport, sortMetric, isConference]);
 
-  const osuIndex = filtered.findIndex(s => s.name === 'Michigan');
-  const osuRank = osuIndex >= 0 ? osuIndex + 1 : null;
+  const michiganLeaderboardIndex = filtered.findIndex(s => s.name === 'Michigan');
+  const michiganLeaderboardRank = michiganLeaderboardIndex >= 0 ? michiganLeaderboardIndex + 1 : null;
   const scopeLabel = isConference ? 'Big 10' : 'NCAA';
   const sportLabel = selectedSport === 'ALL' ? 'All Sports' : formatSportLabel(selectedSport);
 
@@ -3588,7 +3565,7 @@ function TeamPageLeaderboard() {
             className="px-4 py-2 rounded-md text-xs font-semibold transition-all motion-reduce:transition-none"
             style={{
               backgroundColor: isConference ? '#fff' : 'transparent',
-              color: isConference ? colors.scarlet : colors.textMuted,
+              color: isConference ? colors.primary : colors.textMuted,
               boxShadow: isConference ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
             }}
           >
@@ -3599,7 +3576,7 @@ function TeamPageLeaderboard() {
             className="px-4 py-2 rounded-md text-xs font-semibold transition-all motion-reduce:transition-none"
             style={{
               backgroundColor: !isConference ? '#fff' : 'transparent',
-              color: !isConference ? colors.scarlet : colors.textMuted,
+              color: !isConference ? colors.primary : colors.textMuted,
               boxShadow: !isConference ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
             }}
           >
@@ -3609,22 +3586,22 @@ function TeamPageLeaderboard() {
       </div>
 
       {/* Summary Cards */}
-      {osuRank != null && (
+      {michiganLeaderboardRank != null && (
         <div className="grid md:grid-cols-3 gap-4">
           <GlassCard className="p-5">
             <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Michigan {sportLabel} Rank</p>
-            <p className="text-4xl font-black" style={{ color: colors.scarlet }}>#{osuRank} <span className="text-sm font-normal text-gray-500">of {filtered.length}</span></p>
+            <p className="text-4xl font-black" style={{ color: colors.primary }}>#{michiganLeaderboardRank} <span className="text-sm font-normal text-gray-500">of {filtered.length}</span></p>
             <p className="text-xs text-gray-400 mt-1">{scopeLabel} · {sportLabel} · by followers</p>
           </GlassCard>
           <GlassCard className="p-5">
             <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Followers</p>
-            <p className="text-4xl font-black text-gray-900">{formatNumber(filtered[osuIndex]?.followers || 0)}</p>
-            <p className="text-xs text-gray-400 mt-1">{formatNumber(filtered[osuIndex]?.posts || 0)} posts (30 days)</p>
+            <p className="text-4xl font-black text-gray-900">{formatNumber(filtered[michiganLeaderboardIndex]?.followers || 0)}</p>
+            <p className="text-xs text-gray-400 mt-1">{formatNumber(filtered[michiganLeaderboardIndex]?.posts || 0)} posts (30 days)</p>
           </GlassCard>
           <GlassCard className="p-5">
             <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">30-Day Likes</p>
-            <p className="text-4xl font-black text-gray-900">{formatNumber(filtered[osuIndex]?.likes || 0)}</p>
-            <p className="text-xs text-gray-400 mt-1">{filtered[osuIndex]?.posts ? Math.round((filtered[osuIndex]?.likes || 0) / filtered[osuIndex].posts).toLocaleString() : 0} avg per post</p>
+            <p className="text-4xl font-black text-gray-900">{formatNumber(filtered[michiganLeaderboardIndex]?.likes || 0)}</p>
+            <p className="text-xs text-gray-400 mt-1">{filtered[michiganLeaderboardIndex]?.posts ? Math.round((filtered[michiganLeaderboardIndex]?.likes || 0) / filtered[michiganLeaderboardIndex].posts).toLocaleString() : 0} avg per post</p>
           </GlassCard>
         </div>
       )}
@@ -3633,7 +3610,7 @@ function TeamPageLeaderboard() {
       <div className="rounded-2xl bg-white overflow-hidden max-h-[500px] overflow-y-auto shadow-sm">
         <table className="w-full">
           <thead className="sticky top-0 z-10">
-            <tr style={{ backgroundColor: colors.scarlet }}>
+            <tr style={{ backgroundColor: colors.primary }}>
               <th className="text-center px-3 py-3.5 text-xs font-semibold uppercase tracking-wider text-white w-10">#</th>
               <th className="text-left px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white">School</th>
               {!isConference && <th className="text-left px-4 py-3.5 text-xs font-semibold uppercase tracking-wider text-white hidden md:table-cell">Conf</th>}
@@ -3644,34 +3621,34 @@ function TeamPageLeaderboard() {
           </thead>
           <tbody>
             {filtered.map((school, idx) => {
-              const isOSU = school.name === 'Michigan';
+              const isMichigan = school.name === 'Michigan';
               return (
                 <tr
                   key={school.name}
-                  className={`border-b border-gray-100 transition-colors ${isOSU ? 'hover:bg-blue-50/30' : idx % 2 === 1 ? 'bg-gray-50/50 hover:bg-gray-50' : 'hover:bg-gray-50'}`}
-                  style={isOSU ? { backgroundColor: '#00274C0D' } : undefined}
+                  className={`border-b border-gray-100 transition-colors ${isMichigan ? 'hover:bg-blue-50/30' : idx % 2 === 1 ? 'bg-gray-50/50 hover:bg-gray-50' : 'hover:bg-gray-50'}`}
+                  style={isMichigan ? { backgroundColor: '#00274C0D' } : undefined}
                 >
                   <td className="px-3 py-3 text-center">
                     {idx < 3 ? (
-                      <span className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold mx-auto" style={{ backgroundColor: isOSU ? colors.scarlet : '#d1d5db', color: isOSU ? '#fff' : colors.text }}>
+                      <span className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold mx-auto" style={{ backgroundColor: isMichigan ? colors.primary : '#d1d5db', color: isMichigan ? '#fff' : colors.text }}>
                         {idx + 1}
                       </span>
-                    ) : isOSU ? (
-                      <span className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold mx-auto" style={{ backgroundColor: colors.scarlet, color: '#fff' }}>
+                    ) : isMichigan ? (
+                      <span className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold mx-auto" style={{ backgroundColor: colors.primary, color: '#fff' }}>
                         {idx + 1}
                       </span>
                     ) : (
                       <span className="text-sm text-gray-400 font-medium">{idx + 1}</span>
                     )}
                   </td>
-                  <td className={`px-4 py-3 ${isOSU ? 'font-bold' : 'font-semibold'}`} style={{ color: isOSU ? colors.scarlet : colors.text }}>
+                  <td className={`px-4 py-3 ${isMichigan ? 'font-bold' : 'font-semibold'}`} style={{ color: isMichigan ? colors.primary : colors.text }}>
                     <div className="flex items-center gap-2">
-                      {isOSU && <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: colors.scarlet }} />}
+                      {isMichigan && <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: colors.primary }} />}
                       {renderSchoolName(school.name)}
                     </div>
                   </td>
                   {!isConference && <td className="px-4 py-3 text-xs text-gray-500 hidden md:table-cell">{school.conf}</td>}
-                  <td className="px-4 py-3 text-right font-semibold" style={{ color: isOSU ? colors.scarlet : colors.text }}>{formatNumber(school.followers)}</td>
+                  <td className="px-4 py-3 text-right font-semibold" style={{ color: isMichigan ? colors.primary : colors.text }}>{formatNumber(school.followers)}</td>
                   <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{formatNumber(school.posts)}</td>
                   <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{formatNumber(school.likes)}</td>
                 </tr>
@@ -3709,7 +3686,7 @@ export function MichiganIPImpact({ onBack }: { onBack?: () => void }) {
       try {
         // Preferred source for IP Comparison by sport (athlete-focused by-sport dataset).
         try {
-          const bySportResponse = await fetch('/data/ohio-state-by-sport.json');
+          const bySportResponse = await fetch('/data/michigan-by-sport.json');
           if (bySportResponse.ok) {
             const bySportData = (await bySportResponse.json()) as SportSignalData;
             if (!isCancelled && bySportData?.ALL_SPORTS) {
@@ -3721,12 +3698,12 @@ export function MichiganIPImpact({ onBack }: { onBack?: () => void }) {
           // Fall back to roster-derived dataset below.
         }
 
-        let rows: OhioRosterTeam[] | null = null;
-        for (const path of ['/data/Ohio.roster_teams.json', '/data/ohio.roster_teams.json']) {
+        let rows: MichiganRosterTeam[] | null = null;
+        for (const path of ['/data/michigan-roster-teams.json', '/data/Big10roster.json']) {
           try {
             const response = await fetch(path);
             if (response.ok) {
-              rows = (await response.json()) as OhioRosterTeam[];
+              rows = (await response.json()) as MichiganRosterTeam[];
               break;
             }
           } catch {
@@ -3809,7 +3786,7 @@ export function MichiganIPImpact({ onBack }: { onBack?: () => void }) {
                   className="text-lg sm:text-2xl font-bold uppercase tracking-tight whitespace-nowrap"
                   style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }}
                 >
-                  <span style={{ color: colors.scarlet }}>Michigan </span>
+                  <span style={{ color: colors.primary }}>Michigan </span>
                   <span className="hidden sm:inline" style={{ color: colors.headerGray }}>IP Impact Report</span>
                   <span className="sm:hidden" style={{ color: colors.headerGray }}>IP Impact</span>
                 </h1>
@@ -3832,8 +3809,8 @@ export function MichiganIPImpact({ onBack }: { onBack?: () => void }) {
                     className="px-3 sm:px-4 py-2 rounded-t-lg text-xs sm:text-sm font-medium transition-colors border-b-2 whitespace-nowrap snap-start motion-reduce:transition-none"
                     style={{
                       backgroundColor: activeTab === tab.id ? '#fff' : 'transparent',
-                      color: activeTab === tab.id ? colors.scarlet : colors.textMuted,
-                      borderColor: activeTab === tab.id ? colors.scarlet : 'transparent',
+                      color: activeTab === tab.id ? colors.primary : colors.textMuted,
+                      borderColor: activeTab === tab.id ? colors.primary : 'transparent',
                     }}
                   >
                     {tab.label}
