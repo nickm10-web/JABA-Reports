@@ -1,0 +1,68 @@
+{
+  "followers": 1872147,
+  "school": {
+    "_id": "697c00f4a3ae1605b1d014e8",
+    "name": "Virginia Tech"
+  },
+  "overall": {
+    "totalContents": 3946,
+    "totalLikes": 2646755,
+    "totalComments": 145659,
+    "engagementRate": 1.491557019828037,
+    "emv": 67501
+  },
+  "counts": {
+    "hasOrganizationInCaption": 600,
+    "isOrganizationCollaboration": 4,
+    "hasOrganizationLogo": 1924,
+    "withIp": 2033
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 600,
+      "likes": 987.285,
+      "comments": 35.778333333333336,
+      "engagementRate": 0.0005464652793468319,
+      "emv": 23.32
+    },
+    "no": {
+      "contents": 3346,
+      "likes": 613.9820681410639,
+      "comments": 37.11655708308428,
+      "engagementRate": 0.00034778178488342434
+    },
+    "avgLift": 57.12878106310421
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 4,
+      "likes": 934.25,
+      "comments": 25.75,
+      "engagementRate": 0.0005127802464229571,
+      "emv": 21.26
+    },
+    "no": {
+      "contents": 3942,
+      "likes": 670.4764079147641,
+      "comments": 36.924403855910704,
+      "engagementRate": 0.0003778553776870485
+    },
+    "avgLift": 35.70807158067169
+  },
+  "logo": {
+    "yes": {
+      "contents": 1924,
+      "likes": 888.1538461538462,
+      "comments": 40.15488565488565,
+      "engagementRate": 0.0004958524794306921,
+      "emv": 21.78
+    },
+    "no": {
+      "contents": 2022,
+      "likes": 463.8709198813056,
+      "comments": 33.82838773491593,
+      "engagementRate": 0.00026584413917081376
+    },
+    "avgLift": 86.5199966330987
+  }
+}

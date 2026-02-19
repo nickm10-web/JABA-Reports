@@ -1,8 +1,8 @@
 // ═══════════════════════════════════════════════════════════════
 // UCLA NIL Intelligence Report — Insight Drawer
 // ═══════════════════════════════════════════════════════════════
-import { useEffect } from 'react';
-import { X, Heart, MessageCircle, Share2, Bookmark, ExternalLink, Tag } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { X, Heart, MessageCircle, Share2, Bookmark, ExternalLink, Tag, ChevronDown, ChevronUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { uclaColors, formatNumber, formatCurrency, formatSportName, formatDate } from './uclaColors';
 import { DrawerPayload, BrandGroup, AthleteIndex, SponsorPost, IPMetricDrawerData } from './uclaTypes';
@@ -66,9 +66,35 @@ export function UCLAInsightDrawer({ isOpen, onClose, payload }: InsightDrawerPro
 }
 
 // ─── Brand Detail ───────────────────────────────────────────
+type AthleteSortKey = 'name' | 'sport' | 'posts' | 'followers' | 'likes';
+
 function BrandDetail({ brand }: { brand: BrandGroup }) {
   const totalLikes = brand.posts.reduce((s, p) => s + p.metrics.likes, 0);
   const totalComments = brand.posts.reduce((s, p) => s + p.metrics.comments, 0);
+  const [athleteSortKey, setAthleteSortKey] = useState<AthleteSortKey>('posts');
+  const [athleteSortAsc, setAthleteSortAsc] = useState(false);
+
+  const handleAthleteSort = (key: AthleteSortKey) => {
+    if (key === athleteSortKey) setAthleteSortAsc(!athleteSortAsc);
+    else { setAthleteSortKey(key); setAthleteSortAsc(false); }
+  };
+
+  const sortedAthletes = [...brand.athleteGroups].sort((a, b) => {
+    let cmp = 0;
+    switch (athleteSortKey) {
+      case 'name': cmp = a.name.localeCompare(b.name); break;
+      case 'sport': cmp = formatSportName(a.sport).localeCompare(formatSportName(b.sport)); break;
+      case 'posts': cmp = a.posts.length - b.posts.length; break;
+      case 'followers': cmp = a.followers - b.followers; break;
+      case 'likes': cmp = a.posts.reduce((s, p) => s + p.metrics.likes, 0) - b.posts.reduce((s, p) => s + p.metrics.likes, 0); break;
+    }
+    return athleteSortAsc ? cmp : -cmp;
+  });
+
+  const SortIcon = ({ col }: { col: AthleteSortKey }) => {
+    if (col !== athleteSortKey) return <ChevronDown className="w-3 h-3 opacity-30" />;
+    return athleteSortAsc ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />;
+  };
 
   return (
     <div>
@@ -105,19 +131,41 @@ function BrandDetail({ brand }: { brand: BrandGroup }) {
         </div>
       </Section>
 
-      {/* Athletes */}
+      {/* Athletes - Sortable Table */}
       <Section title="Athletes">
-        <div className="space-y-2">
-          {brand.athleteGroups.map(ag => (
-            <div key={ag.id} className="flex items-center gap-3 py-2 border-b" style={{ borderColor: uclaColors.border }}>
-              <AthleteAvatar name={ag.name} size={36} />
-              <div className="flex-1 min-w-0">
-                <p className="text-sm font-semibold truncate" style={{ color: uclaColors.text }}>{ag.name}</p>
-                <p className="text-[10px]" style={{ color: uclaColors.textDim }}>{formatSportName(ag.sport)} &bull; {ag.posts.length} posts</p>
-              </div>
-              <span className="text-sm font-bold" style={{ color: uclaColors.blue }}>{formatNumber(ag.posts.reduce((s, p) => s + p.metrics.likes, 0))} likes</span>
-            </div>
-          ))}
+        <div className="overflow-x-auto -mx-2">
+          <table className="w-full text-xs">
+            <thead>
+              <tr className="border-b" style={{ borderColor: uclaColors.border, backgroundColor: uclaColors.lightBg }}>
+                <ThSort label="Name" col="name" current={athleteSortKey} onSort={handleAthleteSort}><SortIcon col="name" /></ThSort>
+                <ThSort label="Sport" col="sport" current={athleteSortKey} onSort={handleAthleteSort}><SortIcon col="sport" /></ThSort>
+                <ThSort label="Posts" col="posts" current={athleteSortKey} onSort={handleAthleteSort} align="right"><SortIcon col="posts" /></ThSort>
+                <ThSort label="Followers" col="followers" current={athleteSortKey} onSort={handleAthleteSort} align="right"><SortIcon col="followers" /></ThSort>
+                <ThSort label="Likes" col="likes" current={athleteSortKey} onSort={handleAthleteSort} align="right"><SortIcon col="likes" /></ThSort>
+              </tr>
+            </thead>
+            <tbody>
+              {sortedAthletes.map(ag => (
+                <tr key={ag.id} className="border-b hover:bg-blue-50/40 transition-colors" style={{ borderColor: uclaColors.border }}>
+                  <td className="py-2 pr-2">
+                    <div className="flex items-center gap-2">
+                      <AthleteAvatar name={ag.name} size={28} />
+                      <span className="font-semibold truncate" style={{ color: uclaColors.text }}>{ag.name}</span>
+                    </div>
+                  </td>
+                  <td className="py-2 pr-2">
+                    <span className="px-1.5 py-0.5 rounded text-[10px] font-semibold whitespace-nowrap"
+                      style={{ backgroundColor: (sportColors[ag.sport] || uclaColors.textDim) + '18', color: sportColors[ag.sport] || uclaColors.textDim }}>
+                      {formatSportName(ag.sport)}
+                    </span>
+                  </td>
+                  <td className="py-2 pr-2 text-right font-medium" style={{ color: uclaColors.text }}>{ag.posts.length}</td>
+                  <td className="py-2 pr-2 text-right font-medium" style={{ color: uclaColors.text }}>{formatNumber(ag.followers)}</td>
+                  <td className="py-2 text-right font-bold" style={{ color: uclaColors.blue }}>{formatNumber(ag.posts.reduce((s, p) => s + p.metrics.likes, 0))}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </Section>
 
@@ -130,6 +178,19 @@ function BrandDetail({ brand }: { brand: BrandGroup }) {
         </div>
       </Section>
     </div>
+  );
+}
+
+// Table header with sorting
+function ThSort({ label, col, current, onSort, align, children }: {
+  label: string; col: AthleteSortKey; current: AthleteSortKey; onSort: (k: AthleteSortKey) => void; align?: string; children: React.ReactNode;
+}) {
+  return (
+    <th className={`py-2 pr-2 font-semibold text-[10px] uppercase tracking-wider cursor-pointer select-none hover:opacity-70 ${align === 'right' ? 'text-right' : 'text-left'}`}
+      style={{ color: col === current ? uclaColors.blue : uclaColors.textDim }}
+      onClick={() => onSort(col)}>
+      <span className="inline-flex items-center gap-1">{label} {children}</span>
+    </th>
   );
 }
 

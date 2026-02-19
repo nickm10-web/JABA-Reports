@@ -1,0 +1,68 @@
+{
+  "followers": 5543153,
+  "school": {
+    "_id": "68e5c539c5a108ee73bb8419",
+    "name": "Ohio State"
+  },
+  "overall": {
+    "totalContents": 8918,
+    "totalLikes": 15258706,
+    "totalComments": 401948,
+    "engagementRate": 2.8252249216285388,
+    "emv": 345368.92
+  },
+  "counts": {
+    "hasOrganizationInCaption": 1929,
+    "isOrganizationCollaboration": 23,
+    "hasOrganizationLogo": 1206,
+    "withIp": 2686
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 1929,
+      "likes": 2647.249351995853,
+      "comments": 47.37532400207361,
+      "engagementRate": 0.0004861176799554201,
+      "emv": 57.68
+    },
+    "no": {
+      "contents": 6989,
+      "likes": 1452.591500930033,
+      "comments": 44.43568464730291,
+      "engagementRate": 0.0002700678089847666
+    },
+    "avgLift": 79.99837958578766
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 23,
+      "likes": 15118.95652173913,
+      "comments": 204.17391304347825,
+      "engagementRate": 0.002764334745005705,
+      "emv": 322.8
+    },
+    "no": {
+      "contents": 8895,
+      "likes": 1676.3316469926924,
+      "comments": 44.660146149522205,
+      "engagementRate": 0.0003104716382791914
+    },
+    "avgLift": 790.3662699521296
+  },
+  "logo": {
+    "yes": {
+      "contents": 1206,
+      "likes": 3676.495854063018,
+      "comments": 70.31923714759536,
+      "engagementRate": 0.0006759357158661529,
+      "emv": 80.56
+    },
+    "no": {
+      "contents": 7712,
+      "likes": 1403.63744813278,
+      "comments": 41.123314315352694,
+      "engagementRate": 0.0002606388029426813
+    },
+    "avgLift": 159.33809863867512
+  }
+}

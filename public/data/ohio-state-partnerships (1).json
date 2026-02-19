@@ -1,0 +1,2536 @@
+{
+  "school": {
+    "_id": "68e5c539c5a108ee73bb8419",
+    "name": "Ohio State"
+  },
+  "followers": 5543153,
+  "overall": {
+    "totalContents": 8918,
+    "avgLikes": 1711.0078492935636,
+    "avgComments": 45.071540704193765,
+    "engagementRate": 0.00031680153695879537,
+    "emv": 38.73
+  },
+  "sponsorPartners": [
+    {
+      "totalContents": 1,
+      "avgLikes": 171980,
+      "avgComments": 631,
+      "sponsorPartner": "redbullusa",
+      "engagementRate": 0.031139497682997383,
+      "emv": 3502.7,
+      "engagementRateLift": 9729.339207734818
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 37682,
+      "avgComments": 121,
+      "sponsorPartner": "epicpartner",
+      "engagementRate": 0.006819764852242036,
+      "emv": 765.74,
+      "engagementRateLift": 2052.6931080290324
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 36233,
+      "avgComments": 763,
+      "sponsorPartner": "on3recruits",
+      "engagementRate": 0.006674179839524545,
+      "emv": 800.96,
+      "engagementRateLift": 2006.7384658530298
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 23610,
+      "avgComments": 114,
+      "sponsorPartner": "discover",
+      "engagementRate": 0.004279874648958815,
+      "emv": 483.6,
+      "engagementRateLift": 1250.9639789138632
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 20788,
+      "avgComments": 174.5,
+      "sponsorPartner": "dickssportinggoods",
+      "engagementRate": 0.0037816924771876224,
+      "emv": 433.21,
+      "engagementRateLift": 1093.7102684194003
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 15460,
+      "avgComments": 226,
+      "sponsorPartner": "thehenrylegacy",
+      "engagementRate": 0.002829797409524868,
+      "emv": 331.8,
+      "engagementRateLift": 793.2397982314474
+    },
+    {
+      "totalContents": 4,
+      "avgLikes": 14822,
+      "avgComments": 139.25,
+      "sponsorPartner": "easportscollege",
+      "engagementRate": 0.0026990505223290786,
+      "emv": 310.37,
+      "engagementRateLift": 751.9688850752416
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 13628.5,
+      "avgComments": 153,
+      "sponsorPartner": "gianteagle",
+      "engagementRate": 0.0024862203875664264,
+      "emv": 287.87,
+      "engagementRateLift": 684.7879815967544
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 11208,
+      "avgComments": 21,
+      "sponsorPartner": "naturemadevitamins",
+      "engagementRate": 0.0020257423888534196,
+      "emv": 226.26,
+      "engagementRateLift": 539.4357831404387
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 10148,
+      "avgComments": 33,
+      "sponsorPartner": "defensesoap",
+      "engagementRate": 0.0018366803153367767,
+      "emv": 206.26,
+      "engagementRateLift": 479.7573878486781
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 10029,
+      "avgComments": 139,
+      "sponsorPartner": "lv",
+      "engagementRate": 0.0018343350796920092,
+      "emv": 214.48,
+      "engagementRateLift": 479.0171024108987
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 9275,
+      "avgComments": 2,
+      "sponsorPartner": "rebelcrystalofficial",
+      "engagementRate": 0.0016735962366544817,
+      "emv": 185.7,
+      "engagementRateLift": 428.2790774061671
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 9006,
+      "avgComments": 33,
+      "sponsorPartner": "paycom",
+      "engagementRate": 0.0016306603840810455,
+      "emv": 183.42,
+      "engagementRateLift": 414.7261593914352
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 8334,
+      "avgComments": 45,
+      "sponsorPartner": "athleteps",
+      "engagementRate": 0.0015115945744236178,
+      "emv": 171.18,
+      "engagementRateLift": 377.14243716570815
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 7652,
+      "avgComments": 23.5,
+      "sponsorPartner": "doordash",
+      "engagementRate": 0.001384681245493314,
+      "emv": 155.39,
+      "engagementRateLift": 337.08160597510357
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 6996,
+      "avgComments": 16,
+      "sponsorPartner": "cliffkeenathletic",
+      "engagementRate": 0.001264984026239218,
+      "emv": 141.52,
+      "engagementRateLift": 299.2985761315128
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 6636.5,
+      "avgComments": 44,
+      "sponsorPartner": "allstate",
+      "engagementRate": 0.0012051805172976463,
+      "emv": 137.13,
+      "engagementRateLift": 280.4212974681362
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 5565,
+      "avgComments": 258,
+      "sponsorPartner": "wingstop",
+      "engagementRate": 0.0010504851661139428,
+      "emv": 137.1,
+      "engagementRateLift": 231.59093109152863
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 5581,
+      "avgComments": 48.5,
+      "sponsorPartner": "keybank",
+      "engagementRate": 0.0010155772355552877,
+      "emv": 116.47,
+      "engagementRateLift": 220.57206707534948
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 4917,
+      "avgComments": 72,
+      "sponsorPartner": "serialashaeco",
+      "engagementRate": 0.0009000292793650113,
+      "emv": 105.54,
+      "engagementRateLift": 184.09877300629168
+    },
+    {
+      "totalContents": 5,
+      "avgLikes": 4866,
+      "avgComments": 28.6,
+      "sponsorPartner": "paycomsoftware",
+      "engagementRate": 0.000882999260529161,
+      "emv": 100.18,
+      "engagementRateLift": 178.7231618273392
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 4013,
+      "avgComments": 22,
+      "sponsorPartner": "the.courageousathlete",
+      "engagementRate": 0.0007279250635874564,
+      "emv": 82.46,
+      "engagementRateLift": 129.77321088001338
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 3769,
+      "avgComments": 113,
+      "sponsorPartner": "jlabaudio",
+      "engagementRate": 0.0007003234440759619,
+      "emv": 86.68,
+      "engagementRateLift": 121.06062072768576
+    },
+    {
+      "totalContents": 4,
+      "avgLikes": 3776.5,
+      "avgComments": 29.25,
+      "sponsorPartner": "directv",
+      "engagementRate": 0.0006865677350056908,
+      "emv": 78.45,
+      "engagementRateLift": 116.71856190994075
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 2802,
+      "avgComments": 95,
+      "sponsorPartner": "rivalsdotcom",
+      "engagementRate": 0.0005226267432993461,
+      "emv": 65.54,
+      "engagementRateLift": 64.96976255747184
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 2797,
+      "avgComments": 27,
+      "sponsorPartner": "leesfamouschick",
+      "engagementRate": 0.0005094573431402669,
+      "emv": 58.64,
+      "engagementRateLift": 60.8127750991717
+    },
+    {
+      "totalContents": 12,
+      "avgLikes": 2651.4166666666665,
+      "avgComments": 42.75,
+      "sponsorPartner": "heydude",
+      "engagementRate": 0.0004860350538162426,
+      "emv": 57.3,
+      "engagementRateLift": 53.41941156032286
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 2646,
+      "avgComments": 20,
+      "sponsorPartner": "nike_wrestling",
+      "engagementRate": 0.00048095370991924633,
+      "emv": 54.92,
+      "engagementRateLift": 51.81545977846734
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 2366,
+      "avgComments": 35.5,
+      "sponsorPartner": "chipotle",
+      "engagementRate": 0.0004332371846853226,
+      "emv": 50.87,
+      "engagementRateLift": 36.75349837133882
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 2353,
+      "avgComments": 31,
+      "sponsorPartner": "oikos",
+      "engagementRate": 0.0004300801367019817,
+      "emv": 50.16,
+      "engagementRateLift": 35.75696028202031
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 2237,
+      "avgComments": 12,
+      "sponsorPartner": "celsiusbrandpartner",
+      "engagementRate": 0.00040572576654478057,
+      "emv": 45.94,
+      "engagementRateLift": 28.069380735848853
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 2141,
+      "avgComments": 41,
+      "sponsorPartner": "gametimeapp",
+      "engagementRate": 0.0003936387828371326,
+      "emv": 46.92,
+      "engagementRateLift": 24.254063479600806
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 2060.5,
+      "avgComments": 34.5,
+      "sponsorPartner": "peppermayo",
+      "engagementRate": 0.00037794374429138075,
+      "emv": 44.66,
+      "engagementRateLift": 19.299845549845866
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 2007,
+      "avgComments": 18,
+      "sponsorPartner": "nash",
+      "engagementRate": 0.0003653155523580172,
+      "emv": 41.94,
+      "engagementRateLift": 15.313693192571781
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 1839,
+      "avgComments": 55,
+      "sponsorPartner": "ricartautomotive",
+      "engagementRate": 0.0003416827931684368,
+      "emv": 42.28,
+      "engagementRateLift": 7.853893781101698
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 1753.5,
+      "avgComments": 23,
+      "sponsorPartner": "seatgeek",
+      "engagementRate": 0.00032048547099457653,
+      "emv": 37.37,
+      "engagementRateLift": 1.1628523242487638
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 1622,
+      "avgComments": 101,
+      "sponsorPartner": "_yarn.lab_",
+      "engagementRate": 0.0003108339243026487,
+      "emv": 42.54,
+      "engagementRateLift": -1.8837069773821398
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 1659,
+      "avgComments": 32,
+      "sponsorPartner": "crackerbarrel",
+      "engagementRate": 0.00030506103656168247,
+      "emv": 36.38,
+      "engagementRateLift": -3.705948054993155
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 1656,
+      "avgComments": 32,
+      "sponsorPartner": "aladdinseatery",
+      "engagementRate": 0.00030451982833596693,
+      "emv": 36.32,
+      "engagementRateLift": -3.876783156019174
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 1642,
+      "avgComments": 13,
+      "sponsorPartner": "his_huddle",
+      "engagementRate": 0.0002985665378530955,
+      "emv": 34.14,
+      "engagementRateLift": -5.755969267305542
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 1627,
+      "avgComments": 26,
+      "sponsorPartner": "pressplay",
+      "engagementRate": 0.0002982057323692851,
+      "emv": 35.14,
+      "engagementRateLift": -5.869859334656226
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 1626,
+      "avgComments": 8,
+      "sponsorPartner": "mcdonalds_greaterohio",
+      "engagementRate": 0.00029477808027308645,
+      "emv": 33.32,
+      "engagementRateLift": -6.951814974487762
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 1471.5,
+      "avgComments": 38,
+      "sponsorPartner": "shootaway",
+      "engagementRate": 0.00027231793890588983,
+      "emv": 33.23,
+      "engagementRateLift": -14.041471667068103
+    },
+    {
+      "totalContents": 3,
+      "avgLikes": 1461,
+      "avgComments": 30.333333333333332,
+      "sponsorPartner": "whereimfrom",
+      "engagementRate": 0.00026904062242794546,
+      "emv": 32.25,
+      "engagementRateLift": -15.075973112170193
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 1427,
+      "avgComments": 28,
+      "sponsorPartner": "aabonnbc",
+      "engagementRate": 0.00026248598947205677,
+      "emv": 31.34,
+      "engagementRateLift": -17.14497600237436
+    },
+    {
+      "totalContents": 6,
+      "avgLikes": 1310,
+      "avgComments": 30.166666666666668,
+      "sponsorPartner": "brooksrunning",
+      "engagementRate": 0.0002417697412766104,
+      "emv": 29.22,
+      "engagementRateLift": -23.684164036093026
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 1285,
+      "avgComments": 15.5,
+      "sponsorPartner": "wrestlingbucks",
+      "engagementRate": 0.00023461376584770437,
+      "emv": 27.25,
+      "engagementRateLift": -25.94298370521501
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 1294,
+      "avgComments": 3,
+      "sponsorPartner": "kinatraxinc",
+      "engagementRate": 0.0002339823562510362,
+      "emv": 26.18,
+      "engagementRateLift": -26.142291323078716
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 1213,
+      "avgComments": 47,
+      "sponsorPartner": "gvartwork",
+      "engagementRate": 0.000227307454800544,
+      "emv": 28.96,
+      "engagementRateLift": -28.249257569066454
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 1221,
+      "avgComments": 16,
+      "sponsorPartner": "qpeezy_0",
+      "engagementRate": 0.00022315819173672458,
+      "emv": 26.02,
+      "engagementRateLift": -29.55899334359936
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 1231.5,
+      "avgComments": 5,
+      "sponsorPartner": "stxmlax",
+      "engagementRate": 0.00022306799036577197,
+      "emv": 25.13,
+      "engagementRateLift": -29.587465860437035
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 1203,
+      "avgComments": 18,
+      "sponsorPartner": "krogerco",
+      "engagementRate": 0.00022027174786624147,
+      "emv": 25.86,
+      "engagementRateLift": -30.47011388240487
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 1172,
+      "avgComments": 28,
+      "sponsorPartner": "littlewesttavern",
+      "engagementRate": 0.0002164832902862324,
+      "emv": 26.24,
+      "engagementRateLift": -31.665959589587096
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 1137,
+      "avgComments": 47,
+      "sponsorPartner": "brody_marcet9",
+      "engagementRate": 0.0002135968464157493,
+      "emv": 27.44,
+      "engagementRateLift": -32.5770801283926
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 1085,
+      "avgComments": 34.5,
+      "sponsorPartner": "nikelacrosse",
+      "engagementRate": 0.0002019608695628643,
+      "emv": 25.15,
+      "engagementRateLift": -36.2500348004523
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 1042,
+      "avgComments": 71,
+      "sponsorPartner": "adoreme",
+      "engagementRate": 0.00020078825174048054,
+      "emv": 27.94,
+      "engagementRateLift": -36.620177519342036
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 1068,
+      "avgComments": 16,
+      "sponsorPartner": "starbucks",
+      "engagementRate": 0.00019555657222522992,
+      "emv": 22.96,
+      "engagementRateLift": -38.27158349592701
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 1039.5,
+      "avgComments": 38.5,
+      "sponsorPartner": "bauerhockey",
+      "engagementRate": 0.00019447415577379876,
+      "emv": 24.64,
+      "engagementRateLift": -38.613253697979076
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 969,
+      "avgComments": 77,
+      "sponsorPartner": "kamaruclothing",
+      "engagementRate": 0.00018870126803283258,
+      "emv": 27.08,
+      "engagementRateLift": -40.43549477559009
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 932,
+      "avgComments": 93,
+      "sponsorPartner": "phillies",
+      "engagementRate": 0.0001849128104528235,
+      "emv": 27.94,
+      "engagementRateLift": -41.631340482772316
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 985,
+      "avgComments": 16,
+      "sponsorPartner": "slimchickens",
+      "engagementRate": 0.00018058314464709885,
+      "emv": 21.3,
+      "engagementRateLift": -42.99802129098057
+    },
+    {
+      "totalContents": 45,
+      "avgLikes": 979.6222222222223,
+      "avgComments": 19.955555555555556,
+      "sponsorPartner": "hollister",
+      "engagementRate": 0.00018032657185861148,
+      "emv": 21.59,
+      "engagementRateLift": -43.07900978331883
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 956,
+      "avgComments": 36,
+      "sponsorPartner": "alltohim_apparel",
+      "engagementRate": 0.00017895951996995212,
+      "emv": 22.72,
+      "engagementRateLift": -43.51052659405866
+    },
+    {
+      "totalContents": 4,
+      "avgLikes": 972.75,
+      "avgComments": 18.25,
+      "sponsorPartner": "donatospizza",
+      "engagementRate": 0.00017877911722804694,
+      "emv": 21.28,
+      "engagementRateLift": -43.56747162773401
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 950,
+      "avgComments": 35,
+      "sponsorPartner": "bobboydlincoln",
+      "engagementRate": 0.00017769670077661577,
+      "emv": 22.5,
+      "engagementRateLift": -43.909141829786066
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 964,
+      "avgComments": 18,
+      "sponsorPartner": "honeystinger",
+      "engagementRate": 0.00017715549255090018,
+      "emv": 21.08,
+      "engagementRateLift": -44.07997693081211
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 915,
+      "avgComments": 18,
+      "sponsorPartner": "goodyearblimp",
+      "engagementRate": 0.0001683157581975457,
+      "emv": 20.1,
+      "engagementRateLift": -46.870283580903966
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 911,
+      "avgComments": 5,
+      "sponsorPartner": "tmobile",
+      "engagementRate": 0.0001652489115851574,
+      "emv": 18.72,
+      "engagementRateLift": -47.83834915338481
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 835,
+      "avgComments": 10,
+      "sponsorPartner": "yungluth",
+      "engagementRate": 0.00015244031690988866,
+      "emv": 17.7,
+      "engagementRateLift": -51.88144654433424
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 826,
+      "avgComments": 11,
+      "sponsorPartner": "statefarm",
+      "engagementRate": 0.0001509970949746471,
+      "emv": 17.62,
+      "engagementRateLift": -52.337006813737005
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 785,
+      "avgComments": 34,
+      "sponsorPartner": "nhljets",
+      "engagementRate": 0.0001477498456203536,
+      "emv": 19.1,
+      "engagementRateLift": -53.36201741989319
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 754,
+      "avgComments": 17,
+      "sponsorPartner": "dickshouseofsport",
+      "engagementRate": 0.0001390905140089043,
+      "emv": 16.78,
+      "engagementRateLift": -56.09537903630971
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 746,
+      "avgComments": 14,
+      "sponsorPartner": "raisingcanes",
+      "engagementRate": 0.00013710608384794718,
+      "emv": 16.32,
+      "engagementRateLift": -56.721774406738504
+    },
+    {
+      "totalContents": 3,
+      "avgLikes": 744,
+      "avgComments": 13,
+      "sponsorPartner": "thefoundationohio",
+      "engagementRate": 0.0001365648756222316,
+      "emv": 16.18,
+      "engagementRateLift": -56.892609507764526
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 696,
+      "avgComments": 43,
+      "sponsorPartner": "alex.dixon_",
+      "engagementRate": 0.00013331762626793813,
+      "emv": 18.22,
+      "engagementRateLift": -57.91762011392072
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 734,
+      "avgComments": 3,
+      "sponsorPartner": "gainbridgelife",
+      "engagementRate": 0.00013295682078412772,
+      "emv": 14.98,
+      "engagementRateLift": -58.03151018127141
+    },
+    {
+      "totalContents": 5,
+      "avgLikes": 688.8,
+      "avgComments": 16,
+      "sponsorPartner": "neweracap",
+      "engagementRate": 0.00012714785249478048,
+      "emv": 15.38,
+      "engagementRateLift": -59.86514026561749
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 669,
+      "avgComments": 35,
+      "sponsorPartner": "underarmour",
+      "engagementRate": 0.00012700353030125635,
+      "emv": 16.88,
+      "engagementRateLift": -59.910696292557766
+    },
+    {
+      "totalContents": 3,
+      "avgLikes": 637.3333333333334,
+      "avgComments": 50,
+      "sponsorPartner": "thriveresidents",
+      "engagementRate": 0.0001239968179361698,
+      "emv": 17.75,
+      "engagementRateLift": -60.859780187146825
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 653,
+      "avgComments": 26.5,
+      "sponsorPartner": "princesspolly",
+      "engagementRate": 0.0001225836631245791,
+      "emv": 15.71,
+      "engagementRateLift": -61.30584961760369
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 641,
+      "avgComments": 36,
+      "sponsorPartner": "undrdawg",
+      "engagementRate": 0.0001221326562698161,
+      "emv": 16.42,
+      "engagementRateLift": -61.44821220179205
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 622,
+      "avgComments": 53,
+      "sponsorPartner": "hockeycanada",
+      "engagementRate": 0.00012177185078600573,
+      "emv": 17.74,
+      "engagementRateLift": -61.56210226914274
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 612,
+      "avgComments": 47.5,
+      "sponsorPartner": "dannydlawn",
+      "engagementRate": 0.00011897560828647522,
+      "emv": 16.99,
+      "engagementRateLift": -62.44475029111057
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 565,
+      "avgComments": 84,
+      "sponsorPartner": "carterscamera",
+      "engagementRate": 0.00011708137949647069,
+      "emv": 19.7,
+      "engagementRateLift": -63.04267314470168
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 615,
+      "avgComments": 30.5,
+      "sponsorPartner": "gatorade",
+      "engagementRate": 0.00011644996989980252,
+      "emv": 15.35,
+      "engagementRateLift": -63.24198076256538
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 627,
+      "avgComments": 16,
+      "sponsorPartner": "olyforest",
+      "engagementRate": 0.00011599896304503953,
+      "emv": 14.14,
+      "engagementRateLift": -63.38434334675376
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 615,
+      "avgComments": 14,
+      "sponsorPartner": "ohiobeef",
+      "engagementRate": 0.00011347332465836682,
+      "emv": 13.7,
+      "engagementRateLift": -64.18157381820858
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 626,
+      "avgComments": 0,
+      "sponsorPartner": "nolteroofing",
+      "engagementRate": 0.00011293211643265124,
+      "emv": 12.52,
+      "engagementRateLift": -64.3524089192346
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 591,
+      "avgComments": 3,
+      "sponsorPartner": "rhoback",
+      "engagementRate": 0.00010715922869168504,
+      "emv": 12.12,
+      "engagementRateLift": -66.17464999684562
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 559,
+      "avgComments": 28,
+      "sponsorPartner": "raisinbran_us",
+      "engagementRate": 0.00010589640949834869,
+      "emv": 13.98,
+      "engagementRateLift": -66.57326523257302
+    },
+    {
+      "totalContents": 3,
+      "avgLikes": 576,
+      "avgComments": 9.333333333333334,
+      "sponsorPartner": "tytusgrills",
+      "engagementRate": 0.00010559573826184003,
+      "emv": 12.45,
+      "engagementRateLift": -66.66817362203193
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 557,
+      "avgComments": 14,
+      "sponsorPartner": "allinklusivesports",
+      "engagementRate": 0.00010300996562786558,
+      "emv": 12.54,
+      "engagementRateLift": -67.48438577137853
+    },
+    {
+      "totalContents": 3,
+      "avgLikes": 554.6666666666666,
+      "avgComments": 15.333333333333334,
+      "sponsorPartner": "popeyes",
+      "engagementRate": 0.00010282956288596039,
+      "emv": 12.63,
+      "engagementRateLift": -67.54133080505386
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 567,
+      "avgComments": 1,
+      "sponsorPartner": "puregreenhighstreet",
+      "engagementRate": 0.00010246875740215,
+      "emv": 11.44,
+      "engagementRateLift": -67.65522087240457
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 560,
+      "avgComments": 6,
+      "sponsorPartner": "7brewcoffee",
+      "engagementRate": 0.00010210795191833962,
+      "emv": 11.8,
+      "engagementRateLift": -67.76911093975525
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 523,
+      "avgComments": 41,
+      "sponsorPartner": "liquidiv",
+      "engagementRate": 0.00010174714643452923,
+      "emv": 14.56,
+      "engagementRateLift": -67.88300100710593
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 531,
+      "avgComments": 9,
+      "sponsorPartner": "ikoniik.co",
+      "engagementRate": 0.00009741748062880458,
+      "emv": 11.52,
+      "engagementRateLift": -69.24968181531419
+    },
+    {
+      "totalContents": 7,
+      "avgLikes": 530.7142857142857,
+      "avgComments": 4.571428571428571,
+      "sponsorPartner": "theviewonfifth",
+      "engagementRate": 0.00009656701055982294,
+      "emv": 11.07,
+      "engagementRateLift": -69.51813697406939
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 497,
+      "avgComments": 19,
+      "sponsorPartner": "bankofamerica",
+      "engagementRate": 0.00009308781482307994,
+      "emv": 11.84,
+      "engagementRateLift": -70.61636262352245
+    },
+    {
+      "totalContents": 6,
+      "avgLikes": 483.5,
+      "avgComments": 23.333333333333332,
+      "sponsorPartner": "clever_made",
+      "engagementRate": 0.00009143412302228232,
+      "emv": 12,
+      "engagementRateLift": -71.13835876554644
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 464,
+      "avgComments": 36,
+      "sponsorPartner": "brittanyshope",
+      "engagementRate": 0.00009020137095259683,
+      "emv": 12.88,
+      "engagementRateLift": -71.52748316232795
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 463,
+      "avgComments": 18,
+      "sponsorPartner": "clevermade",
+      "engagementRate": 0.00008677371885639816,
+      "emv": 11.06,
+      "engagementRateLift": -72.6094388021595
+    },
+    {
+      "totalContents": 17,
+      "avgLikes": 447.5882352941176,
+      "avgComments": 30,
+      "sponsorPartner": "americaneagle",
+      "engagementRate": 0.00008615822714872161,
+      "emv": 11.95,
+      "engagementRateLift": -72.80372185822831
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 462,
+      "avgComments": 11,
+      "sponsorPartner": "glocknerautomotive",
+      "engagementRate": 0.0000853304969211566,
+      "emv": 10.34,
+      "engagementRateLift": -73.06499907156224
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 439,
+      "avgComments": 15,
+      "sponsorPartner": "palshealth",
+      "engagementRate": 0.00008190284482495793,
+      "emv": 10.28,
+      "engagementRateLift": -74.14695471139378
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 444,
+      "avgComments": 2,
+      "sponsorPartner": "citybarbecue",
+      "engagementRate": 0.00008045962288971638,
+      "emv": 9.08,
+      "engagementRateLift": -74.60251498079654
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 410,
+      "avgComments": 33,
+      "sponsorPartner": "ohiostswimdive",
+      "engagementRate": 0.0000799184146640008,
+      "emv": 11.5,
+      "engagementRateLift": -74.77335008182257
+    },
+    {
+      "totalContents": 3,
+      "avgLikes": 406.3333333333333,
+      "avgComments": 34,
+      "sponsorPartner": "chickfila",
+      "engagementRate": 0.00007943734068558694,
+      "emv": 11.53,
+      "engagementRateLift": -74.92520350495683
+    },
+    {
+      "totalContents": 4,
+      "avgLikes": 412,
+      "avgComments": 11.25,
+      "sponsorPartner": "colab_collective",
+      "engagementRate": 0.00007635546051137323,
+      "emv": 9.37,
+      "engagementRateLift": -75.8980144969106
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 406,
+      "avgComments": 2,
+      "sponsorPartner": "big_tasty_hawk",
+      "engagementRate": 0.00007360431869731902,
+      "emv": 8.32,
+      "engagementRateLift": -76.76642626045961
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 394,
+      "avgComments": 14,
+      "sponsorPartner": "comfrt",
+      "engagementRate": 0.00007360431869731902,
+      "emv": 9.28,
+      "engagementRateLift": -76.76642626045961
+    },
+    {
+      "totalContents": 14,
+      "avgLikes": 391.14285714285717,
+      "avgComments": 12.571428571428571,
+      "sponsorPartner": "pursuityourself",
+      "engagementRate": 0.00007283116408915391,
+      "emv": 9.08,
+      "engagementRateLift": -77.01047640478251
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 403,
+      "avgComments": 0,
+      "sponsorPartner": "gooseitcompany",
+      "engagementRate": 0.00007270230498779305,
+      "emv": 8.06,
+      "engagementRateLift": -77.05115142883633
+    },
+    {
+      "totalContents": 11,
+      "avgLikes": 358.8181818181818,
+      "avgComments": 35.18181818181818,
+      "sponsorPartner": "c4energy",
+      "engagementRate": 0.0000710786803106463,
+      "emv": 10.69,
+      "engagementRateLift": -77.56365673191445
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 387,
+      "avgComments": 5,
+      "sponsorPartner": "xx_xyathletics",
+      "engagementRate": 0.00007071787482683591,
+      "emv": 8.24,
+      "engagementRateLift": -77.67754679926513
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 383,
+      "avgComments": 6,
+      "sponsorPartner": "statsports",
+      "engagementRate": 0.00007017666660112033,
+      "emv": 8.26,
+      "engagementRateLift": -77.84838190029114
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 362,
+      "avgComments": 23,
+      "sponsorPartner": "laorganicsco",
+      "engagementRate": 0.00006945505563349956,
+      "emv": 9.54,
+      "engagementRateLift": -78.07616203499254
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 362,
+      "avgComments": 21,
+      "sponsorPartner": "jesselee_pakele",
+      "engagementRate": 0.00006909425014968917,
+      "emv": 9.34,
+      "engagementRateLift": -78.19005210234322
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 359,
+      "avgComments": 3,
+      "sponsorPartner": "ohiopoultry",
+      "engagementRate": 0.0000653057925696801,
+      "emv": 7.48,
+      "engagementRateLift": -79.38589780952545
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 330,
+      "avgComments": 32,
+      "sponsorPartner": "dwccollection",
+      "engagementRate": 0.0000653057925696801,
+      "emv": 9.8,
+      "engagementRateLift": -79.38589780952545
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 343,
+      "avgComments": 10,
+      "sponsorPartner": "prodigydanceconvention",
+      "engagementRate": 0.00006368216789253336,
+      "emv": 7.86,
+      "engagementRateLift": -79.89840311260355
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 341,
+      "avgComments": 6,
+      "sponsorPartner": "spartancombat",
+      "engagementRate": 0.0000625997514411022,
+      "emv": 7.42,
+      "engagementRateLift": -80.2400733146556
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 295,
+      "avgComments": 49,
+      "sponsorPartner": "vertical_protein",
+      "engagementRate": 0.00006205854321538662,
+      "emv": 10.8,
+      "engagementRateLift": -80.41090841568163
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 336,
+      "avgComments": 3,
+      "sponsorPartner": "newbalance",
+      "engagementRate": 0.00006115652950586065,
+      "emv": 7.02,
+      "engagementRateLift": -80.69563358405836
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 329,
+      "avgComments": 8,
+      "sponsorPartner": "ritfit.sports",
+      "engagementRate": 0.000060795724022050264,
+      "emv": 7.38,
+      "engagementRateLift": -80.80952365140904
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 324,
+      "avgComments": 7,
+      "sponsorPartner": "fanoutfitters",
+      "engagementRate": 0.0000597133075706191,
+      "emv": 7.18,
+      "engagementRateLift": -81.1511938534611
+    },
+    {
+      "totalContents": 4,
+      "avgLikes": 280.75,
+      "avgComments": 42.25,
+      "sponsorPartner": "drpepper",
+      "engagementRate": 0.000058270085635377556,
+      "emv": 9.84,
+      "engagementRateLift": -81.60675412286386
+    },
+    {
+      "totalContents": 5,
+      "avgLikes": 302.4,
+      "avgComments": 18,
+      "sponsorPartner": "drinkolipop",
+      "engagementRate": 0.00005780103850642405,
+      "emv": 7.85,
+      "engagementRateLift": -81.75481121041976
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 313,
+      "avgComments": 7,
+      "sponsorPartner": "ritzpartner",
+      "engagementRate": 0.000057728877409661975,
+      "emv": 6.96,
+      "engagementRateLift": -81.77758922388989
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 308,
+      "avgComments": 11,
+      "sponsorPartner": "bwwings",
+      "engagementRate": 0.00005754847466775678,
+      "emv": 7.26,
+      "engagementRateLift": -81.83453425756522
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 289,
+      "avgComments": 14,
+      "sponsorPartner": "drinkunwell",
+      "engagementRate": 0.00005466203079727368,
+      "emv": 7.18,
+      "engagementRateLift": -82.74565479637074
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 290.5,
+      "avgComments": 11.5,
+      "sponsorPartner": "carhartt",
+      "engagementRate": 0.00005448162805536849,
+      "emv": 6.96,
+      "engagementRateLift": -82.80259983004608
+    },
+    {
+      "totalContents": 3,
+      "avgLikes": 278.3333333333333,
+      "avgComments": 16.333333333333332,
+      "sponsorPartner": "drinkbubblr",
+      "engagementRate": 0.00005315867461473039,
+      "emv": 7.2,
+      "engagementRateLift": -83.22019674366528
+    },
+    {
+      "totalContents": 5,
+      "avgLikes": 285.6,
+      "avgComments": 6.4,
+      "sponsorPartner": "ramblercolumbus",
+      "engagementRate": 0.00005267760063631655,
+      "emv": 6.35,
+      "engagementRateLift": -83.37205016679953
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 252,
+      "avgComments": 39,
+      "sponsorPartner": "aquahawgs",
+      "engagementRate": 0.00005249719789441136,
+      "emv": 8.94,
+      "engagementRateLift": -83.42899520047487
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 283,
+      "avgComments": 5.5,
+      "sponsorPartner": "bckr.hq",
+      "engagementRate": 0.00005204619103964837,
+      "emv": 6.21,
+      "engagementRateLift": -83.57135778466322
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 278,
+      "avgComments": 9,
+      "sponsorPartner": "rmhcofcentraloh",
+      "engagementRate": 0.00005177558692679058,
+      "emv": 6.46,
+      "engagementRateLift": -83.65677533517625
+    },
+    {
+      "totalContents": 3,
+      "avgLikes": 264.3333333333333,
+      "avgComments": 21.666666666666668,
+      "sponsorPartner": "homage",
+      "engagementRate": 0.00005159518418488539,
+      "emv": 7.45,
+      "engagementRateLift": -83.7137203688516
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 273,
+      "avgComments": 12.5,
+      "sponsorPartner": "thebuckeyecorner",
+      "engagementRate": 0.00005150498281393279,
+      "emv": 6.71,
+      "engagementRateLift": -83.74219288568926
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 257,
+      "avgComments": 22,
+      "sponsorPartner": "thespiritgolf",
+      "engagementRate": 0.000050332364991549034,
+      "emv": 7.34,
+      "engagementRateLift": -84.112335604579
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 261,
+      "avgComments": 17,
+      "sponsorPartner": "porkrindsdotcom",
+      "engagementRate": 0.00005015196224964384,
+      "emv": 6.92,
+      "engagementRateLift": -84.16928063825434
+    },
+    {
+      "totalContents": 3,
+      "avgLikes": 264,
+      "avgComments": 13,
+      "sponsorPartner": "foresightsports_upnext",
+      "engagementRate": 0.00004997155950773865,
+      "emv": 6.58,
+      "engagementRateLift": -84.22622567192968
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 258,
+      "avgComments": 17,
+      "sponsorPartner": "nakashima_bryce",
+      "engagementRate": 0.00004961075402392826,
+      "emv": 6.86,
+      "engagementRateLift": -84.34011573928038
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 254,
+      "avgComments": 16,
+      "sponsorPartner": "suncruisers",
+      "engagementRate": 0.00004870874031440229,
+      "emv": 6.68,
+      "engagementRateLift": -84.6248409076571
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 250,
+      "avgComments": 12,
+      "sponsorPartner": "drkwtr",
+      "engagementRate": 0.00004726551837916074,
+      "emv": 6.2,
+      "engagementRateLift": -85.08040117705985
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 254,
+      "avgComments": 7,
+      "sponsorPartner": "heatedcolumbus",
+      "engagementRate": 0.00004708511563725555,
+      "emv": 5.78,
+      "engagementRateLift": -85.13734621073519
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 241,
+      "avgComments": 19,
+      "sponsorPartner": "therandagolf",
+      "engagementRate": 0.000046904712895350354,
+      "emv": 6.72,
+      "engagementRateLift": -85.19429124441054
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 235,
+      "avgComments": 24,
+      "sponsorPartner": "england.golf",
+      "engagementRate": 0.00004672431015344516,
+      "emv": 7.1,
+      "engagementRateLift": -85.25123627808587
+    },
+    {
+      "totalContents": 4,
+      "avgLikes": 247.5,
+      "avgComments": 10.75,
+      "sponsorPartner": "selectproformance",
+      "engagementRate": 0.000046589008097016266,
+      "emv": 6.03,
+      "engagementRateLift": -85.29394505334238
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 252,
+      "avgComments": 6,
+      "sponsorPartner": "truff",
+      "engagementRate": 0.00004654390741153997,
+      "emv": 5.64,
+      "engagementRateLift": -85.30818131176122
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 255,
+      "avgComments": 2,
+      "sponsorPartner": "snapsclothingco",
+      "engagementRate": 0.00004636350466963477,
+      "emv": 5.3,
+      "engagementRateLift": -85.36512634543656
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 250.5,
+      "avgComments": 3,
+      "sponsorPartner": "fireflyrecovery",
+      "engagementRate": 0.0000457320950729666,
+      "emv": 5.31,
+      "engagementRateLift": -85.56443396330027
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 226,
+      "avgComments": 21.5,
+      "sponsorPartner": "elementelectronics",
+      "engagementRate": 0.00004464967862153543,
+      "emv": 6.67,
+      "engagementRateLift": -85.90610416535233
+    },
+    {
+      "totalContents": 3,
+      "avgLikes": 219,
+      "avgComments": 24.333333333333332,
+      "sponsorPartner": "monsterenergy",
+      "engagementRate": 0.00004389800053026379,
+      "emv": 6.81,
+      "engagementRateLift": -86.14337513899962
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 3,
+      "avgComments": 240,
+      "sponsorPartner": "goodfoodcro",
+      "engagementRate": 0.00004383786628296206,
+      "emv": 24.06,
+      "engagementRateLift": -86.16235681689139
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 220,
+      "avgComments": 22,
+      "sponsorPartner": "tylenol",
+      "engagementRate": 0.00004365746354105687,
+      "emv": 6.6,
+      "engagementRateLift": -86.21930185056672
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 226,
+      "avgComments": 15,
+      "sponsorPartner": "titleist_anz",
+      "engagementRate": 0.000043477060799151674,
+      "emv": 6.02,
+      "engagementRateLift": -86.27624688424208
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 232.5,
+      "avgComments": 4,
+      "sponsorPartner": "blue84licensed",
+      "engagementRate": 0.0000426652484605783,
+      "emv": 5.05,
+      "engagementRateLift": -86.53249953578113
+    },
+    {
+      "totalContents": 3,
+      "avgLikes": 233.66666666666666,
+      "avgComments": 0.3333333333333333,
+      "sponsorPartner": "riterugflooring",
+      "engagementRate": 0.000042214241605815316,
+      "emv": 4.71,
+      "engagementRateLift": -86.67486211996949
+    },
+    {
+      "totalContents": 3,
+      "avgLikes": 215.33333333333334,
+      "avgComments": 16.666666666666668,
+      "sponsorPartner": "nike",
+      "engagementRate": 0.00004185343612200493,
+      "emv": 5.97,
+      "engagementRateLift": -86.78875218732017
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 228,
+      "avgComments": 3,
+      "sponsorPartner": "thetrackatnewbalance",
+      "engagementRate": 0.000041673033380099736,
+      "emv": 4.86,
+      "engagementRateLift": -86.84569722099552
+    },
+    {
+      "totalContents": 4,
+      "avgLikes": 216.5,
+      "avgComments": 9,
+      "sponsorPartner": "goodr",
+      "engagementRate": 0.000040680818299621176,
+      "emv": 5.23,
+      "engagementRateLift": -87.15889490620991
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 218,
+      "avgComments": 0,
+      "sponsorPartner": "theyeethree",
+      "engagementRate": 0.00003932779773533222,
+      "emv": 4.36,
+      "engagementRateLift": -87.58598265877498
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 211,
+      "avgComments": 6,
+      "sponsorPartner": "nilstore",
+      "engagementRate": 0.00003914739499342703,
+      "emv": 4.82,
+      "engagementRateLift": -87.64292769245033
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 208,
+      "avgComments": 3,
+      "sponsorPartner": "cat.speed.style",
+      "engagementRate": 0.000038064978541995867,
+      "emv": 4.46,
+      "engagementRateLift": -87.98459789450239
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 206,
+      "avgComments": 4,
+      "sponsorPartner": "thefeed",
+      "engagementRate": 0.00003788457580009067,
+      "emv": 4.52,
+      "engagementRateLift": -88.04154292817773
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 197,
+      "avgComments": 10,
+      "sponsorPartner": "bonvillegolfresort",
+      "engagementRate": 0.00003734336757437509,
+      "emv": 4.94,
+      "engagementRateLift": -88.21237802920378
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 201,
+      "avgComments": 4,
+      "sponsorPartner": "costco",
+      "engagementRate": 0.000036982562090564705,
+      "emv": 4.42,
+      "engagementRateLift": -88.32626809655446
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 179,
+      "avgComments": 20,
+      "sponsorPartner": "dsw",
+      "engagementRate": 0.00003590014563913354,
+      "emv": 5.58,
+      "engagementRateLift": -88.66793829860653
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 187,
+      "avgComments": 8,
+      "sponsorPartner": "sealy",
+      "engagementRate": 0.00003517853467151277,
+      "emv": 4.54,
+      "engagementRateLift": -88.8957184333079
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 189.5,
+      "avgComments": 3,
+      "sponsorPartner": "specialteamsu",
+      "engagementRate": 0.00003472752781674978,
+      "emv": 4.09,
+      "engagementRateLift": -89.03808101749627
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 176,
+      "avgComments": 16,
+      "sponsorPartner": "drinkpurekick",
+      "engagementRate": 0.000034637326445797186,
+      "emv": 5.12,
+      "engagementRateLift": -89.06655353433393
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 186,
+      "avgComments": 5,
+      "sponsorPartner": "reathlete",
+      "engagementRate": 0.00003445692370389199,
+      "emv": 4.22,
+      "engagementRateLift": -89.12349856800927
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 184,
+      "avgComments": 4,
+      "sponsorPartner": "jcpenney",
+      "engagementRate": 0.00003391571547817641,
+      "emv": 4.08,
+      "engagementRateLift": -89.29433366903531
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 176,
+      "avgComments": 9.5,
+      "sponsorPartner": "onnit",
+      "engagementRate": 0.000033464708623413424,
+      "emv": 4.47,
+      "engagementRateLift": -89.43669625322369
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 182,
+      "avgComments": 1,
+      "sponsorPartner": "pitchcom.softball",
+      "engagementRate": 0.000033013701768650444,
+      "emv": 3.74,
+      "engagementRateLift": -89.57905883741203
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 178,
+      "avgComments": 5,
+      "sponsorPartner": "golfnow",
+      "engagementRate": 0.000033013701768650444,
+      "emv": 4.06,
+      "engagementRateLift": -89.57905883741203
+    },
+    {
+      "totalContents": 9,
+      "avgLikes": 177.22222222222223,
+      "avgComments": 4.333333333333333,
+      "sponsorPartner": "the.nil.store",
+      "engagementRate": 0.00003275312003034294,
+      "emv": 3.98,
+      "engagementRateLift": -89.6613127749431
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 160,
+      "avgComments": 21,
+      "sponsorPartner": "trendmicro",
+      "engagementRate": 0.00003265289628484005,
+      "emv": 5.3,
+      "engagementRateLift": -89.69294890476272
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 177,
+      "avgComments": 3,
+      "sponsorPartner": "bubblr",
+      "engagementRate": 0.000032472493542934864,
+      "emv": 3.84,
+      "engagementRateLift": -89.74989393843808
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 179,
+      "avgComments": 0,
+      "sponsorPartner": "bonitabrooklynn",
+      "engagementRate": 0.00003229209080102967,
+      "emv": 3.58,
+      "engagementRateLift": -89.8068389721134
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 178,
+      "avgComments": 0,
+      "sponsorPartner": "g2a_com",
+      "engagementRate": 0.00003211168805912447,
+      "emv": 3.56,
+      "engagementRateLift": -89.86378400578876
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 171,
+      "avgComments": 6,
+      "sponsorPartner": "fanatic_wrestling",
+      "engagementRate": 0.000031931285317219276,
+      "emv": 4.02,
+      "engagementRateLift": -89.92072903946409
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 171,
+      "avgComments": 4,
+      "sponsorPartner": "connyct_university",
+      "engagementRate": 0.00003157047983340889,
+      "emv": 3.82,
+      "engagementRateLift": -90.0346191068148
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 170.5,
+      "avgComments": 4,
+      "sponsorPartner": "nil.store___",
+      "engagementRate": 0.000031480278462456297,
+      "emv": 3.81,
+      "engagementRateLift": -90.06309162365245
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 153,
+      "avgComments": 9,
+      "sponsorPartner": "nocco.usa",
+      "engagementRate": 0.000029225244188641376,
+      "emv": 3.96,
+      "engagementRateLift": -90.77490454459426
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 154,
+      "avgComments": 7,
+      "sponsorPartner": "playabowls",
+      "engagementRate": 0.00002904484144673618,
+      "emv": 3.78,
+      "engagementRateLift": -90.83184957826961
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 155,
+      "avgComments": 5,
+      "sponsorPartner": "goodyear",
+      "engagementRate": 0.000028864438704830988,
+      "emv": 3.6,
+      "engagementRateLift": -90.88879461194493
+    },
+    {
+      "totalContents": 6,
+      "avgLikes": 155,
+      "avgComments": 2.5,
+      "sponsorPartner": "myplayersports",
+      "engagementRate": 0.000028413431850068,
+      "emv": 3.35,
+      "engagementRateLift": -91.03115719613331
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 136,
+      "avgComments": 21,
+      "sponsorPartner": "maaxgum",
+      "engagementRate": 0.000028323230479115407,
+      "emv": 4.82,
+      "engagementRateLift": -91.05962971297097
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 121,
+      "avgComments": 32,
+      "sponsorPartner": "redbull",
+      "engagementRate": 0.00002760161951149463,
+      "emv": 5.62,
+      "engagementRateLift": -91.28740984767235
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 149,
+      "avgComments": 4,
+      "sponsorPartner": "theoonlane",
+      "engagementRate": 0.00002760161951149463,
+      "emv": 3.38,
+      "engagementRateLift": -91.28740984767235
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 133.5,
+      "avgComments": 18,
+      "sponsorPartner": "newera",
+      "engagementRate": 0.00002733101539863684,
+      "emv": 4.47,
+      "engagementRateLift": -91.37282739818536
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 136,
+      "avgComments": 15,
+      "sponsorPartner": "wearstand",
+      "engagementRate": 0.000027240814027684245,
+      "emv": 4.22,
+      "engagementRateLift": -91.40129991502305
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 147,
+      "avgComments": 4,
+      "sponsorPartner": "maybelline",
+      "engagementRate": 0.000027240814027684245,
+      "emv": 3.34,
+      "engagementRateLift": -91.40129991502305
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 126,
+      "avgComments": 21,
+      "sponsorPartner": "travismathew",
+      "engagementRate": 0.00002651920306006347,
+      "emv": 4.62,
+      "engagementRateLift": -91.62908004972442
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 131,
+      "avgComments": 10,
+      "sponsorPartner": "voacountrymusicfest",
+      "engagementRate": 0.000025436786608632307,
+      "emv": 3.62,
+      "engagementRateLift": -91.9707502517765
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 119,
+      "avgComments": 21,
+      "sponsorPartner": "laoororganics",
+      "engagementRate": 0.000025256383866727115,
+      "emv": 4.48,
+      "engagementRateLift": -92.02769528545183
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 3,
+      "avgComments": 137,
+      "sponsorPartner": "powerade_us",
+      "engagementRate": 0.000025256383866727115,
+      "emv": 13.76,
+      "engagementRateLift": -92.02769528545183
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 128.5,
+      "avgComments": 6,
+      "sponsorPartner": "amazon",
+      "engagementRate": 0.000024264168786248548,
+      "emv": 3.17,
+      "engagementRateLift": -92.3408929706662
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 131,
+      "avgComments": 0,
+      "sponsorPartner": "representthecode",
+      "engagementRate": 0.00002363275918958037,
+      "emv": 2.62,
+      "engagementRateLift": -92.54020058852991
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 125,
+      "avgComments": 5,
+      "sponsorPartner": "checkersrallys",
+      "engagementRate": 0.000023452356447675177,
+      "emv": 3,
+      "engagementRateLift": -92.59714562220526
+    },
+    {
+      "totalContents": 7,
+      "avgLikes": 127,
+      "avgComments": 2.5714285714285716,
+      "sponsorPartner": "cvspharmacy",
+      "engagementRate": 0.000023375040986858668,
+      "emv": 2.8,
+      "engagementRateLift": -92.62155063663756
+    },
+    {
+      "totalContents": 3,
+      "avgLikes": 109.33333333333333,
+      "avgComments": 14,
+      "sponsorPartner": "shopmascella",
+      "engagementRate": 0.00002224967150164055,
+      "emv": 3.59,
+      "engagementRateLift": -92.97677918004091
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 118,
+      "avgComments": 5,
+      "sponsorPartner": "ecofit_h2o",
+      "engagementRate": 0.00002218953725433882,
+      "emv": 2.86,
+      "engagementRateLift": -92.99576085793268
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 123,
+      "sponsorPartner": "dietcoke",
+      "engagementRate": 0.00002218953725433882,
+      "emv": 12.3,
+      "engagementRateLift": -92.99576085793268
+    },
+    {
+      "totalContents": 6,
+      "avgLikes": 116.66666666666667,
+      "avgComments": 5.666666666666667,
+      "sponsorPartner": "postgame.official",
+      "engagementRate": 0.00002206926875973536,
+      "emv": 2.9,
+      "engagementRateLift": -93.03372421371623
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 119,
+      "avgComments": 3,
+      "sponsorPartner": "themarcpro",
+      "engagementRate": 0.000022009134512433627,
+      "emv": 2.68,
+      "engagementRateLift": -93.05270589160803
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 109,
+      "avgComments": 10,
+      "sponsorPartner": "lootedapparel_",
+      "engagementRate": 0.000021467926286718047,
+      "emv": 3.18,
+      "engagementRateLift": -93.22354099263404
+    },
+    {
+      "totalContents": 29,
+      "avgLikes": 109.93103448275862,
+      "avgComments": 2.0689655172413794,
+      "sponsorPartner": "buckeye.threads",
+      "engagementRate": 0.00002020510709338169,
+      "emv": 2.41,
+      "engagementRateLift": -93.62215622836145
+    },
+    {
+      "totalContents": 3,
+      "avgLikes": 108.33333333333333,
+      "avgComments": 2,
+      "sponsorPartner": "thefishbacks",
+      "engagementRate": 0.000019904435856873035,
+      "emv": 2.37,
+      "engagementRateLift": -93.71706461782036
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 104,
+      "avgComments": 5,
+      "sponsorPartner": "toro_tour_golf_",
+      "engagementRate": 0.00001966389886766611,
+      "emv": 2.58,
+      "engagementRateLift": -93.79299132938749
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 80.5,
+      "avgComments": 28,
+      "sponsorPartner": "vuoriclothing",
+      "engagementRate": 0.000019573697496713514,
+      "emv": 4.41,
+      "engagementRateLift": -93.82146384622516
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 105,
+      "avgComments": 0,
+      "sponsorPartner": "nush",
+      "engagementRate": 0.000018942287900045335,
+      "emv": 2.1,
+      "engagementRateLift": -94.02077146408888
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 90,
+      "avgComments": 9.5,
+      "sponsorPartner": "drink_phx",
+      "engagementRate": 0.00001795007281956677,
+      "emv": 2.75,
+      "engagementRateLift": -94.33396914930327
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 93,
+      "avgComments": 0.5,
+      "sponsorPartner": "athletesthread",
+      "engagementRate": 0.000016867656368135607,
+      "emv": 1.91,
+      "engagementRateLift": -94.67563935135533
+    },
+    {
+      "totalContents": 9,
+      "avgLikes": 84.33333333333333,
+      "avgComments": 4.888888888888889,
+      "sponsorPartner": "myplayerathlete",
+      "engagementRate": 0.00001609593352776339,
+      "emv": 2.18,
+      "engagementRateLift": -94.91923755096653
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 84,
+      "avgComments": 4,
+      "sponsorPartner": "drinkbiolyte",
+      "engagementRate": 0.000015875441287657043,
+      "emv": 2.08,
+      "engagementRateLift": -94.9888370365697
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 70,
+      "avgComments": 13,
+      "sponsorPartner": "nfmlendingohio",
+      "engagementRate": 0.000014973427578131074,
+      "emv": 2.7,
+      "engagementRateLift": -95.27356220494644
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 74,
+      "avgComments": 5,
+      "sponsorPartner": "blitz_athletics_ohio",
+      "engagementRate": 0.0000142518166105103,
+      "emv": 1.98,
+      "engagementRateLift": -95.50134233964782
+    },
+    {
+      "totalContents": 6,
+      "avgLikes": 66.33333333333333,
+      "avgComments": 10.666666666666666,
+      "sponsorPartner": "rootsnk",
+      "engagementRate": 0.000013891011126699913,
+      "emv": 2.39,
+      "engagementRateLift": -95.6152324069985
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 76.5,
+      "avgComments": 0,
+      "sponsorPartner": "greeniesportscards",
+      "engagementRate": 0.000013800809755747315,
+      "emv": 1.53,
+      "engagementRateLift": -95.64370492383617
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 3,
+      "avgComments": 73,
+      "sponsorPartner": "yourstruly_rochele",
+      "engagementRate": 0.000013710608384794719,
+      "emv": 7.36,
+      "engagementRateLift": -95.67217744067385
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 67,
+      "avgComments": 6,
+      "sponsorPartner": "southwest.ua.allamerica",
+      "engagementRate": 0.000013169400159079138,
+      "emv": 1.94,
+      "engagementRateLift": -95.84301254169988
+    },
+    {
+      "totalContents": 5,
+      "avgLikes": 67,
+      "avgComments": 3.4,
+      "sponsorPartner": "campusparc",
+      "engagementRate": 0.000012700353030125636,
+      "emv": 1.68,
+      "engagementRateLift": -95.99106962925578
+    },
+    {
+      "totalContents": 3,
+      "avgLikes": 69.33333333333333,
+      "avgComments": 0.6666666666666666,
+      "sponsorPartner": "fclbestinclass",
+      "engagementRate": 0.000012628191933363557,
+      "emv": 1.45,
+      "engagementRateLift": -96.01384764272592
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 68,
+      "avgComments": 1,
+      "sponsorPartner": "getjams",
+      "engagementRate": 0.000012447789191458363,
+      "emv": 1.46,
+      "engagementRateLift": -96.07079267640127
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 66,
+      "avgComments": 0,
+      "sponsorPartner": "tecovas",
+      "engagementRate": 0.000011906580965742783,
+      "emv": 1.32,
+      "engagementRateLift": -96.24162777742728
+    },
+    {
+      "totalContents": 18,
+      "avgLikes": 59.44444444444444,
+      "avgComments": 6.111111111111111,
+      "sponsorPartner": "drinkaccelerator",
+      "engagementRate": 0.000011826401969340475,
+      "emv": 1.8,
+      "engagementRateLift": -96.266936681283
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 50.5,
+      "avgComments": 8,
+      "sponsorPartner": "bambooboutiqueedinburgh",
+      "engagementRate": 0.000010553560401453829,
+      "emv": 1.81,
+      "engagementRateLift": -96.66871552999238
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 53,
+      "avgComments": 5,
+      "sponsorPartner": "the.bronzing.bar",
+      "engagementRate": 0.000010463359030501233,
+      "emv": 1.56,
+      "engagementRateLift": -96.69718804683004
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 51,
+      "avgComments": 7,
+      "sponsorPartner": "yesly",
+      "engagementRate": 0.000010463359030501233,
+      "emv": 1.72,
+      "engagementRateLift": -96.69718804683004
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 54,
+      "avgComments": 3,
+      "sponsorPartner": "underarmour150",
+      "engagementRate": 0.000010282956288596039,
+      "emv": 1.38,
+      "engagementRateLift": -96.75413308050538
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 3,
+      "avgComments": 54,
+      "sponsorPartner": "mcdonalds",
+      "engagementRate": 0.000010282956288596039,
+      "emv": 5.46,
+      "engagementRateLift": -96.75413308050538
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 3,
+      "avgComments": 54,
+      "sponsorPartner": "goodmolecules",
+      "engagementRate": 0.000010282956288596039,
+      "emv": 5.46,
+      "engagementRateLift": -96.75413308050538
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 48,
+      "avgComments": 4,
+      "sponsorPartner": "pockyusa",
+      "engagementRate": 0.000009380942579070071,
+      "emv": 1.36,
+      "engagementRateLift": -97.03885824888211
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 45,
+      "avgComments": 4,
+      "sponsorPartner": "gopuff",
+      "engagementRate": 0.000008839734353354489,
+      "emv": 1.3,
+      "engagementRateLift": -97.20969334990814
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 43.5,
+      "avgComments": 0,
+      "sponsorPartner": "onlyfreshdesigns",
+      "engagementRate": 0.000007847519272875924,
+      "emv": 0.87,
+      "engagementRateLift": -97.52289103512254
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 41,
+      "sponsorPartner": "flexworkmgt",
+      "engagementRate": 0.00000739651241811294,
+      "emv": 4.1,
+      "engagementRateLift": -97.66525361931089
+    },
+    {
+      "totalContents": 5,
+      "avgLikes": 34.2,
+      "avgComments": 6.2,
+      "sponsorPartner": "murryave",
+      "engagementRate": 0.000007288270772969825,
+      "emv": 1.3,
+      "engagementRateLift": -97.69942063951609
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 27,
+      "sponsorPartner": "homagepartner",
+      "engagementRate": 0.000004870874031440229,
+      "emv": 2.7,
+      "engagementRateLift": -98.4624840907657
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 27,
+      "sponsorPartner": "donatos",
+      "engagementRate": 0.000004870874031440229,
+      "emv": 2.7,
+      "engagementRateLift": -98.4624840907657
+    },
+    {
+      "totalContents": 4,
+      "avgLikes": 1.5,
+      "avgComments": 24.75,
+      "sponsorPartner": "crocs",
+      "engagementRate": 0.000004735571975011334,
+      "emv": 2.5,
+      "engagementRateLift": -98.50519286602223
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 3,
+      "avgComments": 23,
+      "sponsorPartner": "b1gvolleyball",
+      "engagementRate": 0.000004690471289535036,
+      "emv": 2.36,
+      "engagementRateLift": -98.51942912444106
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 0,
+      "avgComments": 25,
+      "sponsorPartner": "abbottglobal",
+      "engagementRate": 0.000004510068547629842,
+      "emv": 2.5,
+      "engagementRateLift": -98.57637415811638
+    },
+    {
+      "totalContents": 5,
+      "avgLikes": 17.4,
+      "avgComments": 7,
+      "sponsorPartner": "thenoblemethod",
+      "engagementRate": 0.000004401826902486725,
+      "emv": 1.05,
+      "engagementRateLift": -98.61054117832161
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 24,
+      "sponsorPartner": "tflapparel",
+      "engagementRate": 0.000004329665805724648,
+      "emv": 2.4,
+      "engagementRateLift": -98.63331919179174
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 3,
+      "avgComments": 19,
+      "sponsorPartner": "lilbaby",
+      "engagementRate": 0.000003968860321914261,
+      "emv": 1.96,
+      "engagementRateLift": -98.74720925914244
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 18,
+      "sponsorPartner": "onlyatarchetype",
+      "engagementRate": 0.000003247249354293486,
+      "emv": 1.8,
+      "engagementRateLift": -98.9749893938438
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 16,
+      "sponsorPartner": "hairofparadise7",
+      "engagementRate": 0.0000028864438704830986,
+      "emv": 1.6,
+      "engagementRateLift": -99.0888794611945
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 3,
+      "avgComments": 13,
+      "sponsorPartner": "breakaway",
+      "engagementRate": 0.0000028864438704830986,
+      "emv": 1.36,
+      "engagementRateLift": -99.0888794611945
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 16,
+      "avgComments": 0,
+      "sponsorPartner": "bambooboutique",
+      "engagementRate": 0.0000028864438704830986,
+      "emv": 0.32,
+      "engagementRateLift": -99.0888794611945
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 16,
+      "sponsorPartner": "ohiostatemgolf",
+      "engagementRate": 0.0000028864438704830986,
+      "emv": 1.6,
+      "engagementRateLift": -99.0888794611945
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 3,
+      "avgComments": 12,
+      "sponsorPartner": "stickermule",
+      "engagementRate": 0.000002706041128577905,
+      "emv": 1.26,
+      "engagementRateLift": -99.14582449486984
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 15,
+      "sponsorPartner": "kwikgoal",
+      "engagementRate": 0.000002706041128577905,
+      "emv": 1.5,
+      "engagementRateLift": -99.14582449486984
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 14,
+      "sponsorPartner": "topdrawersoccer",
+      "engagementRate": 0.000002525638386672711,
+      "emv": 1.4,
+      "engagementRateLift": -99.20276952854519
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 14,
+      "sponsorPartner": "tlfapparel",
+      "engagementRate": 0.000002525638386672711,
+      "emv": 1.4,
+      "engagementRateLift": -99.20276952854519
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 3,
+      "avgComments": 10,
+      "sponsorPartner": "dollarshaveclub",
+      "engagementRate": 0.000002345235644767518,
+      "emv": 1.06,
+      "engagementRateLift": -99.25971456222052
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 3,
+      "avgComments": 9,
+      "sponsorPartner": "livvydunne",
+      "engagementRate": 0.000002164832902862324,
+      "emv": 0.96,
+      "engagementRateLift": -99.31665959589587
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 12,
+      "sponsorPartner": "livingtestimony_athletix",
+      "engagementRate": 0.000002164832902862324,
+      "emv": 1.2,
+      "engagementRateLift": -99.31665959589587
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 12,
+      "sponsorPartner": "wearethewildco",
+      "engagementRate": 0.000002164832902862324,
+      "emv": 1.2,
+      "engagementRateLift": -99.31665959589587
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 3,
+      "avgComments": 7,
+      "sponsorPartner": "vitacoco",
+      "engagementRate": 0.0000018040274190519367,
+      "emv": 0.76,
+      "engagementRateLift": -99.43054966324655
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 10,
+      "sponsorPartner": "ovrjump",
+      "engagementRate": 0.0000018040274190519367,
+      "emv": 1,
+      "engagementRateLift": -99.43054966324655
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 10,
+      "sponsorPartner": "lgusa",
+      "engagementRate": 0.0000018040274190519367,
+      "emv": 1,
+      "engagementRateLift": -99.43054966324655
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 3,
+      "avgComments": 7,
+      "sponsorPartner": "drinkdripdrop",
+      "engagementRate": 0.0000018040274190519367,
+      "emv": 0.76,
+      "engagementRateLift": -99.43054966324655
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 9,
+      "sponsorPartner": "caahockey",
+      "engagementRate": 0.000001623624677146743,
+      "emv": 0.9,
+      "engagementRateLift": -99.48749469692191
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 3,
+      "avgComments": 6,
+      "sponsorPartner": "mondayhaircare",
+      "engagementRate": 0.000001623624677146743,
+      "emv": 0.66,
+      "engagementRateLift": -99.48749469692191
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 3,
+      "avgComments": 5,
+      "sponsorPartner": "gabbydoesmytattts",
+      "engagementRate": 0.0000014432219352415493,
+      "emv": 0.56,
+      "engagementRateLift": -99.54443973059725
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 7,
+      "sponsorPartner": "holstrength",
+      "engagementRate": 0.0000012628191933363556,
+      "emv": 0.7,
+      "engagementRateLift": -99.6013847642726
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 3,
+      "avgComments": 4,
+      "sponsorPartner": "cvs",
+      "engagementRate": 0.0000012628191933363556,
+      "emv": 0.46,
+      "engagementRateLift": -99.6013847642726
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 6,
+      "sponsorPartner": "brenzpizzaco",
+      "engagementRate": 0.000001082416451431162,
+      "emv": 0.6,
+      "engagementRateLift": -99.65832979794793
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 0,
+      "avgComments": 5.5,
+      "sponsorPartner": "brandedbills",
+      "engagementRate": 9.922150804785652e-7,
+      "emv": 0.55,
+      "engagementRateLift": -99.68680231478561
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 3,
+      "avgComments": 2,
+      "sponsorPartner": "carharttxlids",
+      "engagementRate": 9.020137095259684e-7,
+      "emv": 0.26,
+      "engagementRateLift": -99.71527483162328
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 3,
+      "sponsorPartner": "trysuji",
+      "engagementRate": 5.41208225715581e-7,
+      "emv": 0.3,
+      "engagementRateLift": -99.82916489897397
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 3,
+      "sponsorPartner": "proactiv",
+      "engagementRate": 5.41208225715581e-7,
+      "emv": 0.3,
+      "engagementRateLift": -99.82916489897397
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 2,
+      "sponsorPartner": "evolvedbodyart",
+      "engagementRate": 3.608054838103873e-7,
+      "emv": 0.2,
+      "engagementRateLift": -99.88610993264932
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 2,
+      "sponsorPartner": "sunriseshack",
+      "engagementRate": 3.608054838103873e-7,
+      "emv": 0.2,
+      "engagementRateLift": -99.88610993264932
+    },
+    {
+      "totalContents": 2,
+      "avgLikes": 0,
+      "avgComments": 1.5,
+      "sponsorPartner": "prozis",
+      "engagementRate": 2.706041128577905e-7,
+      "emv": 0.15,
+      "engagementRateLift": -99.91458244948697
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 0,
+      "sponsorPartner": "mizzouthreads",
+      "engagementRate": 0,
+      "emv": 0,
+      "engagementRateLift": -100
+    },
+    {
+      "totalContents": 1,
+      "avgLikes": 0,
+      "avgComments": 0,
+      "sponsorPartner": "drinkpoppi",
+      "engagementRate": 0,
+      "emv": 0,
+      "engagementRateLift": -100
+    }
+  ]
+}

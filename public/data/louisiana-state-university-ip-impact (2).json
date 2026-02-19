@@ -1,0 +1,68 @@
+{
+  "followers": 5169111,
+  "school": {
+    "_id": "68add81d24ae2ac4d2c3b47a",
+    "name": "Louisiana State University"
+  },
+  "overall": {
+    "totalContents": 4680,
+    "totalLikes": 11253477,
+    "totalComments": 299110,
+    "engagementRate": 2.234927243775574,
+    "emv": 254980.54
+  },
+  "counts": {
+    "hasOrganizationInCaption": 800,
+    "isOrganizationCollaboration": 138,
+    "hasOrganizationLogo": 2307,
+    "withIp": 2535
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 800,
+      "likes": 3892.4225,
+      "comments": 79.19625,
+      "engagementRate": 0.0007683369055143138,
+      "emv": 85.77
+    },
+    "no": {
+      "contents": 3880,
+      "likes": 2097.819329896907,
+      "comments": 60.761082474226804,
+      "engagementRate": 0.00041759219571240277
+    },
+    "avgLift": 83.9921611091291
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 138,
+      "likes": 7180.963768115942,
+      "comments": 161.268115942029,
+      "engagementRate": 0.0014204051497555326,
+      "emv": 159.75
+    },
+    "no": {
+      "contents": 4542,
+      "likes": 2259.4680757375604,
+      "comments": 60.95442536327609,
+      "engagementRate": 0.0004489016585445421
+    },
+    "avgLift": 216.4178885773917
+  },
+  "logo": {
+    "yes": {
+      "contents": 2307,
+      "likes": 3423.236237537928,
+      "comments": 73.51278716948418,
+      "engagementRate": 0.0006764700979931389,
+      "emv": 75.82
+    },
+    "no": {
+      "contents": 2373,
+      "likes": 1414.2734934681837,
+      "comments": 54.579013906447535,
+      "engagementRate": 0.0002841595986959133
+    },
+    "avgLift": 138.05991460349978
+  }
+}

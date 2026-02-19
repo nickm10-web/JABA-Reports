@@ -1,0 +1,68 @@
+{
+  "followers": 406830,
+  "school": {
+    "_id": "691b2b339ee7e60ca0923d6b",
+    "name": "Old Dominion University"
+  },
+  "overall": {
+    "totalContents": 1564,
+    "totalLikes": 2314481,
+    "totalComments": 57189,
+    "engagementRate": 5.829633999459234,
+    "emv": 52008.52
+  },
+  "counts": {
+    "hasOrganizationInCaption": 229,
+    "isOrganizationCollaboration": 21,
+    "hasOrganizationLogo": 907,
+    "withIp": 942
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 229,
+      "likes": 463.94323144104806,
+      "comments": 21.550218340611355,
+      "engagementRate": 0.0011933570527779649,
+      "emv": 11.43
+    },
+    "no": {
+      "contents": 1335,
+      "likes": 1654.110861423221,
+      "comments": 39.141573033707864,
+      "engagementRate": 0.004162063845972344
+    },
+    "avgLift": -71.32775716708949
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 21,
+      "likes": 1371.1904761904761,
+      "comments": 24.476190476190474,
+      "engagementRate": 0.003430589353456398,
+      "emv": 29.87
+    },
+    "no": {
+      "contents": 1543,
+      "likes": 1481.3259883344135,
+      "comments": 36.730395333765394,
+      "engagementRate": 0.003731426845778775
+    },
+    "avgLift": -8.062264242502923
+  },
+  "logo": {
+    "yes": {
+      "contents": 907,
+      "likes": 415.77618522601983,
+      "comments": 34.936052921719956,
+      "engagementRate": 0.001107863820632057,
+      "emv": 11.81
+    },
+    "no": {
+      "contents": 657,
+      "likes": 2948.8158295281582,
+      "comments": 38.8158295281583,
+      "engagementRate": 0.007343685714072995
+    },
+    "avgLift": -84.91406272317708
+  }
+}

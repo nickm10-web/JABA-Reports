@@ -10,13 +10,50 @@ import { OhioStateIPImpact } from './OhioStateIPImpact';
 import { GeorgiaIPImpact } from './GeorgiaIPImpact';
 import { MichiganIPImpact } from './MichiganIPImpact';
 import { UCLABrandDeals } from './UCLABrandDeals';
+import { SchoolAthleteReport } from './SchoolAthleteReport';
 import { StJudeAthleteEventImpactReport } from './StJudeAthleteEventImpactReport';
+import {
+  michiganConfig, alabamaConfig, arkansasConfig,
+  oklahomaConfig, notredameConfig, boiseStateConfig,
+} from '../config/schoolConfigs';
+
+
+// Inline cards for schools not in SCHOOLS map
+const ARKANSAS_CARD: SchoolConfig = {
+  id: 'arkansas', name: 'University of Arkansas', shortName: 'Arkansas',
+  mascot: 'Razorbacks', primaryColor: '#9D2235', secondaryColor: '#FFFFFF',
+  accentColor: '#9D2235', conference: 'SEC', location: 'Fayetteville, AR',
+  dataName: 'University of Arkansas', logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/8.png',
+};
+const MICHIGAN_NIL_CARD: SchoolConfig = {
+  id: 'michigan-nil', name: 'University of Michigan', shortName: 'Michigan NIL',
+  mascot: 'Wolverines', primaryColor: '#00274C', secondaryColor: '#FFCB05',
+  accentColor: '#FFCB05', conference: 'Big Ten', location: 'Ann Arbor, MI',
+  dataName: 'University of Michigan', logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/130.png',
+};
 
 export function SchoolReportsPage() {
   const [selectedSchool, setSelectedSchool] = useState<SchoolConfig | null>(null);
 
-  // Show Playfly, Auburn, Baylor, Kentucky, Ohio State, UCLA, and St. Jude
-  const allSchools = [SCHOOLS['playfly'], SCHOOLS['auburn'], SCHOOLS['baylor'], SCHOOLS['georgia'], SCHOOLS['kentucky'], SCHOOLS['michigan'], SCHOOLS['ohio-state'], SCHOOLS['ucla'], SCHOOLS['saint-jude']].filter(Boolean);
+  // Full school list
+  const allSchools = [
+    SCHOOLS['playfly'],
+    SCHOOLS['auburn'],
+    SCHOOLS['baylor'],
+    SCHOOLS['georgia'],
+    SCHOOLS['kentucky'],
+    SCHOOLS['michigan'],
+    SCHOOLS['ohio-state'],
+    SCHOOLS['ucla'],
+    SCHOOLS['saint-jude'],
+    // NIL Intelligence reports
+    MICHIGAN_NIL_CARD,
+    SCHOOLS['alabama'],
+    ARKANSAS_CARD,
+    SCHOOLS['oklahoma'],
+    SCHOOLS['notre-dame'],
+    SCHOOLS['boise-state'],
+  ].filter(Boolean);
 
   // If a school is selected, show the appropriate view
   if (selectedSchool) {
@@ -64,10 +101,41 @@ export function SchoolReportsPage() {
         <KentuckyIPImpact onBack={() => setSelectedSchool(null)} />
       );
     }
-    // If UCLA is selected, show the UCLA report
+    // If UCLA is selected, show the UCLA-specific report
     if (selectedSchool.id === 'ucla') {
       return (
         <UCLABrandDeals onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    // NIL Intelligence reports
+    if (selectedSchool.id === 'michigan-nil') {
+      return (
+        <SchoolAthleteReport config={michiganConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'alabama') {
+      return (
+        <SchoolAthleteReport config={alabamaConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'arkansas') {
+      return (
+        <SchoolAthleteReport config={arkansasConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'oklahoma') {
+      return (
+        <SchoolAthleteReport config={oklahomaConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'notre-dame') {
+      return (
+        <SchoolAthleteReport config={notredameConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'boise-state') {
+      return (
+        <SchoolAthleteReport config={boiseStateConfig} onBack={() => setSelectedSchool(null)} />
       );
     }
     // If St. Jude is selected, show the brand impact report

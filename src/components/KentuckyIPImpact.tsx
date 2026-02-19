@@ -86,10 +86,39 @@ interface KentuckyRosterTeam {
 
 interface SchoolFollowerRosterRow {
   schoolName?: string;
+  conferenceName?: string;
+  sport?: string;
   metrics?: {
-    ninetyDays?: { followers?: number };
-    thirtyDays?: { followers?: number };
-    sevenDays?: { followers?: number };
+    ninetyDays?: {
+      followers?: number;
+      contentCount?: number;
+      logoContentCount?: number;
+      collaborationContentCount?: number;
+      organizationCollaborationContentCount?: number;
+      avgEngagementRateWithLogo?: number;
+      avgEngagementRateWithCollaboration?: number;
+      avgEngagementRateWithOrganizationCollaboration?: number;
+    };
+    thirtyDays?: {
+      followers?: number;
+      contentCount?: number;
+      logoContentCount?: number;
+      collaborationContentCount?: number;
+      organizationCollaborationContentCount?: number;
+      avgEngagementRateWithLogo?: number;
+      avgEngagementRateWithCollaboration?: number;
+      avgEngagementRateWithOrganizationCollaboration?: number;
+    };
+    sevenDays?: {
+      followers?: number;
+      contentCount?: number;
+      logoContentCount?: number;
+      collaborationContentCount?: number;
+      organizationCollaborationContentCount?: number;
+      avgEngagementRateWithLogo?: number;
+      avgEngagementRateWithCollaboration?: number;
+      avgEngagementRateWithOrganizationCollaboration?: number;
+    };
   };
 }
 
@@ -1532,12 +1561,25 @@ function PartnershipsTab() {
 
 
 function BenchmarkTab() {
+  type BenchmarkSchool = {
+    name: string;
+    conf: string;
+    posts: number;
+    adoption: number;
+    logoEng: number;
+    mentionEng: number;
+    collabEng: number;
+    followers: number;
+  };
+
   const [benchmarkType, setBenchmarkType] = useState<'conference' | 'ncaa'>('conference');
+  const [selectedSport, setSelectedSport] = useState<string>('ALL');
   const [rankingMetric, setRankingMetric] = useState<'followers' | 'posts' | 'ipPosts' | 'logoEng' | 'mentionEng' | 'collabEng'>('followers');
+  const [rosterRows, setRosterRows] = useState<SchoolFollowerRosterRow[]>([]);
   const [followersBySchool, setFollowersBySchool] = useState<Record<string, number>>({});
   const isConference = benchmarkType === 'conference';
-  const schools = useMemo(() => {
-    const base = isConference ? secSchools : ncaaD1Schools;
+  const baseSchools: BenchmarkSchool[] = useMemo(() => {
+    const base = (isConference ? secSchools : ncaaD1Schools) as BenchmarkSchool[];
     const followerFallbackBySchool: Record<string, number> = {
       Iowa: 1004448,
       TCU: 732360,
@@ -1560,6 +1602,94 @@ function BenchmarkTab() {
       };
     });
   }, [isConference, followersBySchool]);
+
+  const availableSports = useMemo(() => {
+    const sports = rosterRows
+      .filter((row) => normalizeSchoolKey(String(row.schoolName || '')) === 'kentucky')
+      .map((row) => row.sport)
+      .filter((sport): sport is string => Boolean(sport));
+    return [...new Set(sports)].sort((a, b) => formatSportLabel(a).localeCompare(formatSportLabel(b)));
+  }, [rosterRows]);
+
+  const schools: BenchmarkSchool[] = useMemo(() => {
+    if (selectedSport === 'ALL') return baseSchools;
+
+    const nameByKey: Record<string, string> = {};
+    for (const school of [...secSchools, ...ncaaD1Schools] as BenchmarkSchool[]) {
+      const key = normalizeSchoolKey(school.name);
+      if (!nameByKey[key]) nameByKey[key] = school.name;
+    }
+
+    const map: Record<string, {
+      name: string;
+      conf: string;
+      followers: number;
+      posts: number;
+      logoPosts: number;
+      mentionPosts: number;
+      collabPosts: number;
+      logoEngTotal: number;
+      mentionEngTotal: number;
+      collabEngTotal: number;
+    }> = {};
+
+    for (const row of rosterRows) {
+      if (row.sport !== selectedSport) continue;
+      if (isConference && row.conferenceName !== 'SEC') continue;
+
+      const schoolName = String(row.schoolName || '').trim();
+      const key = normalizeSchoolKey(schoolName);
+      if (!key) continue;
+
+      const m = row.metrics?.ninetyDays ?? row.metrics?.thirtyDays ?? row.metrics?.sevenDays;
+      if (!m) continue;
+
+      if (!map[key]) {
+        map[key] = {
+          name: nameByKey[key] || schoolName || key,
+          conf: String(row.conferenceName || ''),
+          followers: 0,
+          posts: 0,
+          logoPosts: 0,
+          mentionPosts: 0,
+          collabPosts: 0,
+          logoEngTotal: 0,
+          mentionEngTotal: 0,
+          collabEngTotal: 0,
+        };
+      }
+
+      const posts = toNumber(m.contentCount);
+      const logoPosts = toNumber(m.logoContentCount);
+      const mentionPosts = toNumber(m.organizationCollaborationContentCount);
+      const collabPosts = toNumber(m.collaborationContentCount);
+
+      map[key].followers += toNumber(m.followers);
+      map[key].posts += posts;
+      map[key].logoPosts += logoPosts;
+      map[key].mentionPosts += mentionPosts;
+      map[key].collabPosts += collabPosts;
+      map[key].logoEngTotal += toNumber(m.avgEngagementRateWithLogo) * logoPosts;
+      map[key].mentionEngTotal += toNumber(m.avgEngagementRateWithOrganizationCollaboration) * mentionPosts;
+      map[key].collabEngTotal += toNumber(m.avgEngagementRateWithCollaboration) * collabPosts;
+    }
+
+    return Object.values(map).map((entry) => {
+      const ipPosts = Math.max(entry.logoPosts, entry.mentionPosts, entry.collabPosts);
+      const adoption = entry.posts > 0 ? (ipPosts / entry.posts) * 100 : 0;
+      return {
+        name: entry.name,
+        conf: entry.conf,
+        posts: entry.posts,
+        adoption,
+        logoEng: entry.logoPosts > 0 ? entry.logoEngTotal / entry.logoPosts : 0,
+        mentionEng: entry.mentionPosts > 0 ? entry.mentionEngTotal / entry.mentionPosts : 0,
+        collabEng: entry.collabPosts > 0 ? entry.collabEngTotal / entry.collabPosts : 0,
+        followers: entry.followers,
+      };
+    });
+  }, [selectedSport, baseSchools, rosterRows, isConference]);
+
   const benchmarkLabel = isConference ? 'SEC' : 'NCAA D1';
   const metricLabels = {
     followers: 'Followers',
@@ -1573,19 +1703,29 @@ function BenchmarkTab() {
     followers: 0,
     posts: 0,
     ipPosts: 0,
-    logoEng: isConference ? conferenceAvg.logoEng : ncaaD1Avg.logoEng,
-    mentionEng: isConference ? conferenceAvg.mentionEng : ncaaD1Avg.mentionEng,
-    collabEng: isConference ? conferenceAvg.collabEng : ncaaD1Avg.collabEng,
+    logoEng:
+      selectedSport === 'ALL'
+        ? (isConference ? conferenceAvg.logoEng : ncaaD1Avg.logoEng)
+        : (schools.reduce((sum, school) => sum + school.logoEng, 0) / Math.max(1, schools.length)),
+    mentionEng:
+      selectedSport === 'ALL'
+        ? (isConference ? conferenceAvg.mentionEng : ncaaD1Avg.mentionEng)
+        : (schools.reduce((sum, school) => sum + school.mentionEng, 0) / Math.max(1, schools.length)),
+    collabEng:
+      selectedSport === 'ALL'
+        ? (isConference ? conferenceAvg.collabEng : ncaaD1Avg.collabEng)
+        : (schools.reduce((sum, school) => sum + school.collabEng, 0) / Math.max(1, schools.length)),
   };
 
   useEffect(() => {
     let cancelled = false;
-    const loadFollowers = async () => {
+    const loadRosterData = async () => {
       try {
         const res = await fetch('/data/roster_teams.json');
         if (!res.ok) return;
         const rows = (await res.json()) as SchoolFollowerRosterRow[];
         if (cancelled || !Array.isArray(rows)) return;
+        if (!cancelled) setRosterRows(rows);
 
         const next: Record<string, number> = {};
         for (const row of rows) {
@@ -1601,7 +1741,7 @@ function BenchmarkTab() {
         // keep static fallback values when dataset is unavailable
       }
     };
-    loadFollowers();
+    loadRosterData();
     return () => { cancelled = true; };
   }, []);
 
@@ -1626,10 +1766,26 @@ function BenchmarkTab() {
         <div>
           <SectionHeader primary="IP " secondary="RANKINGS" />
           <p className="text-sm text-gray-500 mt-2">
-            Kentucky vs {benchmarkLabel} schools ranked by {metricLabels[rankingMetric].toLowerCase()}. Data reflects all athlete posts.
+            Kentucky vs {benchmarkLabel} schools ranked by {metricLabels[rankingMetric].toLowerCase()}. Data reflects {selectedSport === 'ALL' ? 'all athlete posts' : `${formatSportLabel(selectedSport)} athlete posts`}.
           </p>
         </div>
         <div className="flex items-center gap-3">
+          <div className="relative">
+            <select
+              value={selectedSport}
+              onChange={(e) => setSelectedSport(e.target.value)}
+              className="px-3 py-1.5 pr-8 text-xs font-semibold rounded-md border appearance-none cursor-pointer bg-white"
+              style={{ color: colors.text, borderColor: colors.glassBorder }}
+            >
+              <option value="ALL">All Sports</option>
+              {availableSports.map((sport) => (
+                <option key={sport} value={sport}>{formatSportLabel(sport)}</option>
+              ))}
+            </select>
+            <div className="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none">
+              <ChevronDown className="w-3.5 h-3.5 text-gray-400" />
+            </div>
+          </div>
           <div className="flex items-center bg-gray-100 rounded-lg p-0.5">
             <button
               onClick={() => setBenchmarkType('conference')}

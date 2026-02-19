@@ -1,0 +1,59 @@
+{
+  "sourceFile": "ncaa_roster_updated_feb_17.json",
+  "generatedAt": "2026-02-19T06:12:20.494Z",
+  "school": "Georgia",
+  "matchedSchools": [
+    "University Of Georgia"
+  ],
+  "totalPosts": 6868,
+  "totalLikes": 11407105,
+  "totalComments": 344563,
+  "postsWithIP": 1628,
+  "ipAdoptionRate": 23.7,
+  "avgLift": 31.7,
+  "totalEmv": 6220397,
+  "collaboration": {
+    "posts": 80,
+    "likes": 7869.175,
+    "comments": 119.6375,
+    "engagementRate": 0.5543099844402389,
+    "delta": 242.60585812257312,
+    "emv": 329123.5,
+    "baselineEngRate": 0.16179232529115864,
+    "baselinePosts": 6788,
+    "baselineLikes": 1587.7388037713613,
+    "baselineComments": 49.35061873895109
+  },
+  "logo": {
+    "posts": 729,
+    "likes": 3299.5034293552812,
+    "comments": 74.58299039780522,
+    "engagementRate": 0.17422843795501314,
+    "delta": 4.4763356817664235,
+    "emv": 1284225.5,
+    "baselineEngRate": 0.16676354201942029,
+    "baselinePosts": 6139,
+    "baselineLikes": 1466.32464570777,
+    "baselineComments": 47.27023945267959
+  },
+  "mention": {
+    "posts": 906,
+    "likes": 2226.689845474614,
+    "comments": 34.74834437086093,
+    "engagementRate": 0.2169878881102173,
+    "delta": 35.063416072476606,
+    "emv": 1055913.5,
+    "baselineEngRate": 0.16065630088445199,
+    "baselinePosts": 5962,
+    "baselineLikes": 1574.928547467293,
+    "baselineComments": 52.51274740020128
+  },
+  "counters": {
+    "isSponsored": 501,
+    "sponsorPartner": 496,
+    "isOrganizationCollaboration": 80,
+    "hasOrganizationInCaption": 906,
+    "hasOrganizationLogo": 729,
+    "isCollaboration": 1506
+  }
+}

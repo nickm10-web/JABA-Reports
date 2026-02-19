@@ -1,0 +1,59 @@
+{
+  "sourceFile": "ncaa_roster_updated_feb_17.json",
+  "generatedAt": "2026-02-18T15:14:23.056Z",
+  "school": "Michigan",
+  "matchedSchools": [
+    "Michigan"
+  ],
+  "totalPosts": 4042,
+  "totalLikes": 5654589,
+  "totalComments": 189346,
+  "postsWithIP": 2271,
+  "ipAdoptionRate": 56.2,
+  "avgLift": 96.6,
+  "totalEmv": 3111313.5,
+  "collaboration": {
+    "posts": 4,
+    "likes": 2144.5,
+    "comments": 49.75,
+    "engagementRate": 0.38317471404872083,
+    "delta": 61.93628152965069,
+    "emv": 4587.5,
+    "baselineEngRate": 0.23662066982720062,
+    "baselinePosts": 4038,
+    "baselineLikes": 1398.2196631996037,
+    "baselineComments": 46.841753343239226
+  },
+  "logo": {
+    "posts": 2152,
+    "likes": 2061.7295539033457,
+    "comments": 58.420539033457246,
+    "engagementRate": 0.2862493304210859,
+    "delta": 95.33858649833681,
+    "emv": 2407002.5,
+    "baselineEngRate": 0.14654008486107437,
+    "baselinePosts": 1890,
+    "baselineLikes": 644.310582010582,
+    "baselineComments": 33.664021164021165
+  },
+  "mention": {
+    "posts": 828,
+    "likes": 2574.753623188406,
+    "comments": 61.96497584541063,
+    "engagementRate": 0.3848753978189131,
+    "delta": 99.87233065632738,
+    "emv": 1142908.5,
+    "baselineEngRate": 0.1925606193489039,
+    "baselinePosts": 3214,
+    "baselineLikes": 1096.0463596764157,
+    "baselineComments": 42.94928438083385
+  },
+  "counters": {
+    "isSponsored": 239,
+    "sponsorPartner": 224,
+    "isOrganizationCollaboration": 4,
+    "hasOrganizationInCaption": 828,
+    "hasOrganizationLogo": 2152,
+    "isCollaboration": 949
+  }
+}

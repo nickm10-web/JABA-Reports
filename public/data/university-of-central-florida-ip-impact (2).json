@@ -1,0 +1,68 @@
+{
+  "followers": 1137996,
+  "school": {
+    "_id": "690235fdf719b77ba3f097f5",
+    "name": "University of Central Florida"
+  },
+  "overall": {
+    "totalContents": 1756,
+    "totalLikes": 2002211,
+    "totalComments": 85523,
+    "engagementRate": 1.8345705960302146,
+    "emv": 48596.52
+  },
+  "counts": {
+    "hasOrganizationInCaption": 193,
+    "isOrganizationCollaboration": 0,
+    "hasOrganizationLogo": 827,
+    "withIp": 866
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 193,
+      "likes": 1231.4663212435232,
+      "comments": 41.373056994818654,
+      "engagementRate": 0.001118491961516861,
+      "emv": 28.77
+    },
+    "no": {
+      "contents": 1563,
+      "likes": 1128.9430582213693,
+      "comments": 49.6084452975048,
+      "engagementRate": 0.001035637650324671
+    },
+    "avgLift": 8.000318563757837
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 0,
+      "likes": 0,
+      "comments": 0,
+      "engagementRate": 0,
+      "emv": 0
+    },
+    "no": {
+      "contents": 1756,
+      "likes": 1140.2112756264237,
+      "comments": 48.703302961275625,
+      "engagementRate": 0.0010447440751880492
+    },
+    "avgLift": -100
+  },
+  "logo": {
+    "yes": {
+      "contents": 827,
+      "likes": 1048.1741233373639,
+      "comments": 47.557436517533255,
+      "engagementRate": 0.0009628606426164038,
+      "emv": 25.72
+    },
+    "no": {
+      "contents": 929,
+      "likes": 1222.1431646932185,
+      "comments": 49.723358449946176,
+      "engagementRate": 0.0011176370770575332
+    },
+    "avgLift": -13.848541500485837
+  }
+}

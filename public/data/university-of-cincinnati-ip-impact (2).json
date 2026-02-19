@@ -1,0 +1,68 @@
+{
+  "followers": 1031767,
+  "school": {
+    "_id": "68f876c47804265f86eb36fb",
+    "name": "University of Cincinnati"
+  },
+  "overall": {
+    "totalContents": 4309,
+    "totalLikes": 2555683,
+    "totalComments": 167355,
+    "engagementRate": 2.6391985787488843,
+    "emv": 67849.16
+  },
+  "counts": {
+    "hasOrganizationInCaption": 803,
+    "isOrganizationCollaboration": 22,
+    "hasOrganizationLogo": 1963,
+    "withIp": 2134
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 803,
+      "likes": 905.1531755915317,
+      "comments": 36.94769613947696,
+      "engagementRate": 0.0009130945957091172,
+      "emv": 21.8
+    },
+    "no": {
+      "contents": 3506,
+      "likes": 521.6329150028522,
+      "comments": 39.27153451226469,
+      "engagementRate": 0.0005436348027365838
+    },
+    "avgLift": 67.96102661432325
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 22,
+      "likes": 748.7272727272727,
+      "comments": 22.954545454545453,
+      "engagementRate": 0.0007479225621499992,
+      "emv": 17.27
+    },
+    "no": {
+      "contents": 4287,
+      "likes": 592.3048752041054,
+      "comments": 38.919990669465825,
+      "engagementRate": 0.0006117901288503812
+    },
+    "avgLift": 22.25149228141771
+  },
+  "logo": {
+    "yes": {
+      "contents": 1963,
+      "likes": 767.7524197656649,
+      "comments": 42.679572083545594,
+      "engagementRate": 0.0007854796595056932,
+      "emv": 19.62
+    },
+    "no": {
+      "contents": 2346,
+      "likes": 446.9671781756181,
+      "comments": 35.62446717817562,
+      "engagementRate": 0.0004677331658734905
+    },
+    "avgLift": 67.93328265247385
+  }
+}
