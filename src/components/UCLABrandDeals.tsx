@@ -60,6 +60,7 @@ interface UCLAAthlete {
   avgEngagementRate: number;
   instagramPosts: number;
   tiktokPosts: number;
+  followers?: number;
 }
 
 interface UCLATeamContent {
@@ -152,6 +153,23 @@ interface BenchmarkSchool {
   sponsoredPosts?: number;
 }
 
+interface TeamBenchmarkSchool {
+  school: string;
+  shortName: string;
+  conference: string;
+  isBigTen: boolean;
+  teamAccounts: number;
+  totalFollowers: number;
+  totalLikes: number;
+  totalPosts: number;
+  avgEngagementRate: number;
+  likesPerPost: number;
+}
+
+interface TeamBenchmarksData {
+  schools: TeamBenchmarkSchool[];
+}
+
 interface BenchmarkAvg {
   totalContents: number;
   totalLikes: number;
@@ -230,6 +248,7 @@ export function UCLABrandDeals({ onBack }: { onBack?: () => void }) {
   const [sponsoredPosts, setSponsoredPosts] = useState<UCLASponsoredPost[]>([]);
   const [athletePosts, setAthletePosts] = useState<UCLAAthletePost[]>([]);
   const [benchmarks, setBenchmarks] = useState<BenchmarksData | null>(null);
+  const [teamBenchmarks, setTeamBenchmarks] = useState<TeamBenchmarksData | null>(null);
   const [selectedAthlete, setSelectedAthlete] = useState<UCLAAthlete | null>(null);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -250,12 +269,14 @@ export function UCLABrandDeals({ onBack }: { onBack?: () => void }) {
           return res.json();
         };
 
-        const [ipData, rosterData, teamData, sponsoredData, athleteData] = await Promise.allSettled([
+        const [ipData, rosterData, teamData, sponsoredData, athleteData, benchData, teamBenchData] = await Promise.allSettled([
           fetchJson<UCLAIPImpact>('/data/ucla-ip-impact.json'),
           fetchJson<UCLARoster>('/data/ucla-roster.json'),
           fetchJson<UCLATeamContent>('/data/ucla-team-content.json'),
           fetchJson<UCLASponsoredPost[]>('/data/ucla-sponsored-posts.json'),
-          fetchJson<UCLAAthletePost[]>('/data/ucla-all-posts.json')
+          fetchJson<UCLAAthletePost[]>('/data/ucla-all-posts.json'),
+          fetchJson<BenchmarksData>('/data/ucla-benchmarks.json'),
+          fetchJson<TeamBenchmarksData>('/data/ucla-team-benchmarks.json'),
         ]);
 
         if (ipData.status === 'fulfilled' && ipData.value) setIpImpact(ipData.value);
@@ -271,6 +292,8 @@ export function UCLABrandDeals({ onBack }: { onBack?: () => void }) {
         } else {
           setAthletePosts([]);
         }
+        if (benchData.status === 'fulfilled' && benchData.value) setBenchmarks(benchData.value);
+        if (teamBenchData.status === 'fulfilled' && teamBenchData.value) setTeamBenchmarks(teamBenchData.value);
       } catch (err) {
         console.error('Failed to load UCLA data', err);
       } finally {
@@ -280,17 +303,11 @@ export function UCLABrandDeals({ onBack }: { onBack?: () => void }) {
     load();
   }, []);
 
-  useEffect(() => {
-    fetch('/data/ucla-benchmarks.json')
-      .then(res => res.ok ? res.json() : null)
-      .then(data => { if (data) setBenchmarks(data); })
-      .catch(() => {});
-  }, []);
-
   const totalLikes = ipImpact?.overall.totalLikes ?? 0;
   const totalComments = ipImpact?.overall.totalComments ?? 0;
-  const totalEmv = estimateEmv(totalLikes, totalComments);
+  const totalEmv = ipImpact?.overall.emv ?? estimateEmv(totalLikes, totalComments);
   const athletePostsCount = ipImpact?.overall.totalContents ?? 0;
+  const athleteFollowers = (roster as (UCLARoster & { totalFollowers?: number }) | null)?.totalFollowers ?? null;
   const teamFollowers = teamContent?.totalFollowers ?? null;
 
   if (loading) {
@@ -349,6 +366,7 @@ export function UCLABrandDeals({ onBack }: { onBack?: () => void }) {
           {activeTab === 'overview' && (
             <OverviewTab
               athletePosts={athletePostsCount}
+              athleteFollowers={athleteFollowers}
               totalLikes={totalLikes}
               totalEmv={totalEmv}
               teamFollowers={teamFollowers}
@@ -377,7 +395,7 @@ export function UCLABrandDeals({ onBack }: { onBack?: () => void }) {
             <SponsoredTab posts={sponsoredPosts} />
           )}
           {activeTab === 'benchmarks' && benchmarks && (
-            <BenchmarksTab benchmarks={benchmarks} />
+            <BenchmarksTab benchmarks={benchmarks} teamBenchmarks={teamBenchmarks} />
           )}
           {activeTab === 'ip' && ipImpact && (
             <IPTab ipImpact={ipImpact} />
@@ -410,6 +428,7 @@ function GlassPanel({ children, className = '' }: { children: ReactNode; classNa
 
 function OverviewTab({
   athletePosts,
+  athleteFollowers,
   totalLikes,
   totalEmv,
   teamFollowers,
@@ -418,6 +437,7 @@ function OverviewTab({
   onNavigate
 }: {
   athletePosts: number;
+  athleteFollowers: number | null;
   totalLikes: number;
   totalEmv: number | null;
   teamFollowers: number | null;
@@ -481,31 +501,51 @@ function OverviewTab({
               Athlete + team content performance and audience scale.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <GlassPanel className="p-4">
-              <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Athlete posts analyzed</p>
-              <p className="text-2xl font-bold mt-2 text-[#0F1D2E]">{formatNumber(athletePosts)}</p>
-            </GlassPanel>
-            <GlassPanel className="p-4">
-              <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Total likes</p>
-              <p className="text-2xl font-bold mt-2 text-[#0F1D2E]">{formatNumber(totalLikes)}</p>
-            </GlassPanel>
-            <GlassPanel className="p-4">
-              <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Estimated EMV</p>
-              <p className="text-2xl font-bold mt-2 text-[#0F1D2E]">{formatCurrency(totalEmv)}</p>
-            </GlassPanel>
-            <GlassPanel className="p-4">
-              <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Team followers</p>
-              <p className="text-2xl font-bold mt-2 text-[#0F1D2E]">{formatNumber(teamFollowers)}</p>
-            </GlassPanel>
-            <GlassPanel className="p-4">
-              <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Avg Athlete Engagement Rate</p>
-              <p className="text-2xl font-bold mt-2 text-[#0F1D2E]">{avgAthleteEngagement !== null ? formatPercent(avgAthleteEngagement, 1) : 'N/A'}</p>
-            </GlassPanel>
-            <GlassPanel className="p-4">
-              <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Avg Team Engagement Rate</p>
-              <p className="text-2xl font-bold mt-2 text-[#0F1D2E]">{avgTeamEngagement !== null ? formatPercent(avgTeamEngagement, 1) : 'N/A'}</p>
-            </GlassPanel>
+          <div className="flex flex-col gap-3">
+            {/* Athlete Metrics */}
+            <div className="rounded-xl border border-[#2774AE]/20 bg-[#2774AE]/5 p-3">
+              <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#2774AE] mb-2">Athlete Metrics</p>
+              <div className="grid grid-cols-2 gap-2">
+                <GlassPanel className="p-3">
+                  <p className="text-xs uppercase tracking-[0.15em] text-[#4B5B73]">Posts analyzed</p>
+                  <p className="text-xl font-bold mt-1 text-[#0F1D2E]">{formatNumber(athletePosts)}</p>
+                </GlassPanel>
+                <GlassPanel className="p-3">
+                  <p className="text-xs uppercase tracking-[0.15em] text-[#4B5B73]">Total followers</p>
+                  <p className="text-xl font-bold mt-1 text-[#0F1D2E]">{athleteFollowers !== null ? formatNumber(athleteFollowers) : 'N/A'}</p>
+                </GlassPanel>
+                <GlassPanel className="p-3">
+                  <p className="text-xs uppercase tracking-[0.15em] text-[#4B5B73]">Total likes</p>
+                  <p className="text-xl font-bold mt-1 text-[#0F1D2E]">{formatNumber(totalLikes)}</p>
+                </GlassPanel>
+                <GlassPanel className="p-3">
+                  <p className="text-xs uppercase tracking-[0.15em] text-[#4B5B73]">Estimated EMV</p>
+                  <p className="text-xl font-bold mt-1 text-[#0F1D2E]">{formatCurrency(totalEmv)}</p>
+                </GlassPanel>
+                <GlassPanel className="p-3 col-span-2">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.15em] text-[#4B5B73]">Avg Engagement Rate</p>
+                      <p className="text-xl font-bold mt-1 text-[#0F1D2E]">{avgAthleteEngagement !== null ? formatPercent(avgAthleteEngagement, 1) : 'N/A'}</p>
+                    </div>
+                  </div>
+                </GlassPanel>
+              </div>
+            </div>
+            {/* Team Accounts */}
+            <div className="rounded-xl border border-[#F2A900]/20 bg-[#F2A900]/5 p-3">
+              <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#B07E00] mb-2">Team Social Accounts</p>
+              <div className="grid grid-cols-2 gap-2">
+                <GlassPanel className="p-3">
+                  <p className="text-xs uppercase tracking-[0.15em] text-[#4B5B73]">Total followers</p>
+                  <p className="text-xl font-bold mt-1 text-[#0F1D2E]">{formatNumber(teamFollowers)}</p>
+                </GlassPanel>
+                <GlassPanel className="p-3">
+                  <p className="text-xs uppercase tracking-[0.15em] text-[#4B5B73]">Avg Engagement Rate</p>
+                  <p className="text-xl font-bold mt-1 text-[#0F1D2E]">{avgTeamEngagement !== null ? formatPercent(avgTeamEngagement, 1) : 'N/A'}</p>
+                </GlassPanel>
+              </div>
+            </div>
           </div>
         </div>
       </GlassPanel>
@@ -522,7 +562,7 @@ function OverviewTab({
             </div>
             <div>
               <p className="text-lg font-semibold text-[#0F1D2E]">{topAthleteByLikes ? topAthleteByLikes.name : 'N/A'}</p>
-              <p className="text-xs text-[#5B6B82]">{topAthleteByLikes ? topAthleteByLikes.sport : 'N/A'}</p>
+              <p className="text-xs text-[#5B6B82]">{topAthleteByLikes ? formatTeamName(topAthleteByLikes.sport) : 'N/A'}</p>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-2 mt-3 text-sm text-[#5B6B82]">
@@ -585,7 +625,7 @@ function OverviewTab({
 function AthletesTab({ roster, onSelectAthlete, isMobile }: { roster: UCLARoster; onSelectAthlete: (a: UCLAAthlete) => void; isMobile: boolean }) {
   const [search, setSearch] = useState('');
   const [sport, setSport] = useState('All');
-  const [sortKey, setSortKey] = useState<'likes' | 'engagement' | 'posts' | 'comments'>('likes');
+  const [sortKey, setSortKey] = useState<'followers' | 'likes' | 'engagement' | 'posts' | 'comments' | 'instagram'>('followers');
 
   const sports = ['All', ...new Set(roster.athletes.map(a => a.sport))];
 
@@ -599,15 +639,17 @@ function AthletesTab({ roster, onSelectAthlete, isMobile }: { roster: UCLARoster
 
   const sorted = useMemo(() => {
     return [...filtered].sort((a, b) => {
+      if (sortKey === 'followers') return (b.followers ?? 0) - (a.followers ?? 0);
       if (sortKey === 'likes') return b.totalLikes - a.totalLikes;
       if (sortKey === 'engagement') return b.avgEngagementRate - a.avgEngagementRate;
       if (sortKey === 'posts') return b.totalPosts - a.totalPosts;
+      if (sortKey === 'instagram') return b.instagramPosts - a.instagramPosts;
       return b.totalComments - a.totalComments;
     });
   }, [filtered, sortKey]);
 
-  const topByLikes = sorted.slice(0, 10);
-  const topByEngagement = [...filtered].sort((a, b) => b.avgEngagementRate - a.avgEngagementRate).slice(0, 10);
+  const topByLikes = useMemo(() => [...filtered].sort((a, b) => b.totalLikes - a.totalLikes).slice(0, 10), [filtered]);
+  const topByEngagement = useMemo(() => [...filtered].sort((a, b) => b.avgEngagementRate - a.avgEngagementRate).slice(0, 10), [filtered]);
 
   return (
     <div className="space-y-8">
@@ -623,24 +665,9 @@ function AthletesTab({ roster, onSelectAthlete, isMobile }: { roster: UCLARoster
             />
           </div>
           <select value={sport} onChange={(e) => setSport(e.target.value)} className="bg-white border border-[#E1E7F0] rounded-full px-3 py-2 text-sm text-[#1E2A3B]">
-            {sports.map(s => <option key={s} value={s}>{s}</option>)}
+            {sports.map(s => <option key={s} value={s}>{s === 'All' ? 'All Sports' : formatTeamName(s)}</option>)}
           </select>
-          <div className="flex items-center gap-2">
-            {[
-              { key: 'likes', label: 'Likes' },
-              { key: 'engagement', label: 'Engagement Rate' },
-              { key: 'posts', label: 'Posts' },
-              { key: 'comments', label: 'Comments' }
-            ].map(chip => (
-              <button
-                key={chip.key}
-                onClick={() => setSortKey(chip.key as typeof sortKey)}
-                className={`px-3 py-1.5 rounded-full text-xs font-semibold border ${sortKey === chip.key ? 'bg-[#2774AE]/10 border-[#2774AE]/40 text-[#2774AE]' : 'bg-white border-[#E1E7F0] text-[#1E2A3B]'}`}
-              >
-                {chip.label}
-              </button>
-            ))}
-          </div>
+          <p className="text-xs text-[#9AA7BC]">Click any column header to sort</p>
         </div>
       </GlassPanel>
 
@@ -651,8 +678,9 @@ function AthletesTab({ roster, onSelectAthlete, isMobile }: { roster: UCLARoster
             {topByLikes.map(a => (
               <div key={a._id} className="min-w-[220px] rounded-xl border border-[#E1E7F0] bg-white p-4">
                 <div className="text-sm font-semibold text-[#0F1D2E]">{a.name}</div>
-                <div className="text-xs text-[#5B6B82]">{a.sport}</div>
+                <div className="text-xs text-[#5B6B82]">{formatTeamName(a.sport)}</div>
                 <div className="text-lg font-bold mt-2 text-[#0F1D2E]">{formatNumber(a.totalLikes)}</div>
+                {a.followers != null && <div className="text-xs text-[#7A8AA3] mt-1">{formatNumber(a.followers)} followers</div>}
               </div>
             ))}
           </div>
@@ -663,8 +691,9 @@ function AthletesTab({ roster, onSelectAthlete, isMobile }: { roster: UCLARoster
             {topByEngagement.map(a => (
               <div key={a._id} className="min-w-[220px] rounded-xl border border-[#E1E7F0] bg-white p-4">
                 <div className="text-sm font-semibold text-[#0F1D2E]">{a.name}</div>
-                <div className="text-xs text-[#5B6B82]">{a.sport}</div>
+                <div className="text-xs text-[#5B6B82]">{formatTeamName(a.sport)}</div>
                 <div className="text-lg font-bold mt-2 text-[#0F1D2E]">{formatPercent(a.avgEngagementRate * 100)}</div>
+                {a.followers != null && <div className="text-xs text-[#7A8AA3] mt-1">{formatNumber(a.followers)} followers</div>}
               </div>
             ))}
           </div>
@@ -678,15 +707,15 @@ function AthletesTab({ roster, onSelectAthlete, isMobile }: { roster: UCLARoster
               <div className="flex items-center justify-between">
                 <div>
                   <div className="text-sm font-semibold text-[#0F1D2E]">{a.name}</div>
-                  <div className="text-xs text-[#5B6B82]">{a.sport}</div>
+                  <div className="text-xs text-[#5B6B82]">{formatTeamName(a.sport)}</div>
                 </div>
                 <button className="text-xs text-[#2774AE]" onClick={() => onSelectAthlete(a)}>Details</button>
               </div>
               <div className="grid grid-cols-2 gap-2 mt-3 text-xs text-[#5B6B82]">
-                <div>Posts: {formatNumber(a.totalPosts)}</div>
+                <div>Followers: {formatNumber(a.followers ?? 0)}</div>
                 <div>Likes: {formatNumber(a.totalLikes)}</div>
+                <div>Posts: {formatNumber(a.totalPosts)}</div>
                 <div>Avg ER: {formatPercent(a.avgEngagementRate * 100)}</div>
-                <div>IG/TT: {formatNumber(a.instagramPosts)} / {formatNumber(a.tiktokPosts)}</div>
               </div>
             </GlassPanel>
           ))}
@@ -699,7 +728,8 @@ function AthletesTab({ roster, onSelectAthlete, isMobile }: { roster: UCLARoster
           renderRow={(a) => (
             <tr key={a._id} className="border-b border-[#E1E7F0] hover:bg-[#F3F6FB] cursor-pointer" onClick={() => onSelectAthlete(a)}>
               <td className="px-4 py-3 text-sm font-semibold text-[#0F1D2E]">{a.name}</td>
-              <td className="px-4 py-3 text-sm text-[#5B6B82]">{a.sport}</td>
+              <td className="px-4 py-3 text-sm text-[#5B6B82]">{formatTeamName(a.sport)}</td>
+              <td className="px-4 py-3 text-sm text-right">{formatNumber(a.followers ?? 0)}</td>
               <td className="px-4 py-3 text-sm text-right">{formatNumber(a.totalPosts)}</td>
               <td className="px-4 py-3 text-sm text-right">{formatNumber(a.totalLikes)}</td>
               <td className="px-4 py-3 text-sm text-right">{formatPercent(a.avgEngagementRate * 100)}</td>
@@ -708,12 +738,26 @@ function AthletesTab({ roster, onSelectAthlete, isMobile }: { roster: UCLARoster
           )}
           header={(
             <tr className="text-xs uppercase tracking-[0.2em] text-[#5B6B82]">
-              <th className="px-4 py-3 text-left">Athlete</th>
-              <th className="px-4 py-3 text-left">Sport</th>
-              <th className="px-4 py-3 text-right">Posts</th>
-              <th className="px-4 py-3 text-right">Likes</th>
-              <th className="px-4 py-3 text-right">Avg ER</th>
-              <th className="px-4 py-3 text-right">IG Posts</th>
+              {[
+                { key: null,         label: 'Athlete',    align: 'left'  },
+                { key: null,         label: 'Sport',      align: 'left'  },
+                { key: 'followers',  label: 'Followers',  align: 'right' },
+                { key: 'posts',      label: 'Posts',      align: 'right' },
+                { key: 'likes',      label: 'Likes',      align: 'right' },
+                { key: 'engagement', label: 'Avg ER',     align: 'right' },
+                { key: 'instagram',  label: 'IG Posts',   align: 'right' },
+              ].map(col => (
+                <th
+                  key={col.label}
+                  className={`px-4 py-3 text-${col.align} ${col.key ? 'cursor-pointer select-none hover:text-[#2774AE]' : ''} ${sortKey === col.key ? 'text-[#2774AE]' : ''}`}
+                  onClick={() => col.key && setSortKey(col.key as typeof sortKey)}
+                >
+                  <span className="inline-flex items-center gap-1">
+                    {col.label}
+                    {col.key && (sortKey === col.key ? <span>↓</span> : <span className="opacity-30">↕</span>)}
+                  </span>
+                </th>
+              ))}
             </tr>
           )}
         />
@@ -722,17 +766,33 @@ function AthletesTab({ roster, onSelectAthlete, isMobile }: { roster: UCLARoster
   );
 }
 
+const MAX_TEAM_POSTS = 12;
+
+function capTeamAccount(team: UCLATeamAccount): UCLATeamAccount {
+  const posts = team.contentPosts ?? 0;
+  if (posts <= MAX_TEAM_POSTS) return team;
+  const scale = MAX_TEAM_POSTS / posts;
+  return {
+    ...team,
+    contentPosts: MAX_TEAM_POSTS,
+    contentLikes: Math.round((team.contentLikes ?? 0) * scale),
+    contentComments: Math.round((team.contentComments ?? 0) * scale),
+  };
+}
+
 function TeamsTab({ teamContent }: { teamContent: UCLATeamContent }) {
   const [sortKey, setSortKey] = useState<'followers' | 'likes' | 'engagement' | 'posts'>('followers');
 
+  const cappedAccounts = useMemo(() => teamContent.teamAccounts.map(capTeamAccount), [teamContent.teamAccounts]);
+
   const sortedTeams = useMemo(() => {
-    return [...teamContent.teamAccounts].sort((a, b) => {
+    return [...cappedAccounts].sort((a, b) => {
       if (sortKey === 'followers') return b.followers - a.followers;
       if (sortKey === 'likes') return (b.contentLikes || 0) - (a.contentLikes || 0);
       if (sortKey === 'engagement') return (b.engagementRate || 0) - (a.engagementRate || 0);
       return (b.contentPosts || 0) - (a.contentPosts || 0);
     });
-  }, [teamContent.teamAccounts, sortKey]);
+  }, [cappedAccounts, sortKey]);
 
   const topTeams = sortedTeams.slice(0, 6);
 
@@ -743,6 +803,7 @@ function TeamsTab({ teamContent }: { teamContent: UCLATeamContent }) {
           <div>
             <h2 style={headerStyle} className="text-lg font-bold uppercase tracking-tight text-[#0F1D2E]">Team Accounts</h2>
             <p className="text-sm text-[#5B6B82]">Total team followers: {formatNumber(teamContent.totalFollowers)}</p>
+            <p className="text-xs text-[#9AA7BC] mt-1">Based on last {MAX_TEAM_POSTS} most recent posts</p>
           </div>
           <div className="flex items-center gap-2">
             {[
@@ -1050,22 +1111,69 @@ function SponsoredTab({ posts }: { posts: UCLASponsoredPost[] }) {
 
   const sports = ['All', ...new Set(normalizedPosts.map(p => p.athlete?.sport).filter(Boolean) as string[])];
 
+  // Team pages, individuals, NIL platforms, agencies, podcasts, and local/personal accounts
+  const NON_BRAND_EXCLUSIONS = new Set([
+    // UCLA team & org pages
+    'uclawbb','uclagymnastics','uclawomensvb','uclabruinsforlife','uclawsoccer',
+    'uclabeachvb','uclafootball','ucla_pv','ucladeltagamma','bruinnil','ucla.nil.store',
+    // Other team / league / org pages
+    'laacwaterpolo','onwaterpolo','unrivaledbasketball','teamusa','volleyballnationsleague',
+    'indianavb','stanfordmgolf','scblueheatfc','pgfnetwork','socalproseries',
+    'fpfpuertorico','thirdcoastvolleyballhtx','bscyb_offiziell','dst_houston_south',
+    'weareangelcity','usta','ultimatepolevaultclub','bowermantc','blacktidesports',
+    'braidrowing','thewestwomen',
+    // Individual athlete / celebrity accounts
+    'charlisselegerwalker','charlisse.legerwalker','parishilton','kwameaduseionline',
+    'skylervarga','jordanchiles','ezavierstaples','moosecuellar10','thelitevans',
+    'domdolla','chef_megan_cooking','jtmadethat',
+    // NIL stores, collectives, management platforms
+    'athletezonestore','myplayersports','postgame.official','prepdig',
+    // Agencies & modeling
+    'apsportsagency','powerhausagency','hometownheroagency','bala.academy_','wilhelminamodels',
+    // Podcasts & niche media
+    'itspersonalpodcast','whatsup_pod','citiusmag','citiusmagrunclub','flotrack',
+    'voiceinsport','trackandfeelsclub','futurescapequiz','thesundayshakeout',
+    'softball_america','topdrawersoccer','slam',
+    // Local / personal / non-brand accounts
+    'outlawtattootemecula','midtown_luxury_rentals_','purocleansocal','hairmaidenindia',
+    'hairqueen_la','kicks_by_kenna','tjcuts','barknbitches','ticocarsa','fly.3man',
+    'aupiu.44','flight23white_','mjhoopstraining','is8nikebasketball','path2pro',
+    'elite_sports_performance___','queenofthecourtseries','queenkingofthecourt',
+    'dividenpac','clubdiezinc','3strandfootball','phenomk2','einsteinenergylab',
+    'monarcsport','golden__saints','teamavoli','blumaka','uswingmojing','we.are.ever',
+    'cortsofficial','ducko.us','phixey','twinbridgesports','soundrunning',
+    'sanmar_corp','teamessx','wescom','wescomfinancial',
+  ]);
+
   const filtered = normalizedPosts.filter(p => {
-    const sponsor = (p.sponsorPartner || '').toLowerCase();
-    if (sponsor.includes('unrivaled') || sponsor.includes('uniravaled')) return false;
+    const sponsor = (p.sponsorPartner || '').replace(/^@/, '').toLowerCase().trim();
+    if (NON_BRAND_EXCLUSIONS.has(sponsor)) return false;
     if (sportFilter !== 'All' && p.athlete?.sport !== sportFilter) return false;
     if (!search) return true;
     const q = search.toLowerCase();
     return (p.sponsorPartner || '').toLowerCase().includes(q) || (p.athlete?.name || '').toLowerCase().includes(q);
   });
 
+  // Semantic alias map: variant handle → canonical handle (all lowercase, no @)
+  const BRAND_ALIASES: Record<string, string> = {
+    'drinkdripdrop':   'dripdrop',
+    'eastonbaseball':  'easton',
+    'eastonfastpitch': 'easton',
+    'adidasbasketball':'adidas',
+    'adidasfootball':  'adidas',
+    'adidasusfootball':'adidas',
+  };
+
   const totalLikes = filtered.reduce((s, p) => s + (p.metrics?.likes || 0), 0);
   const totalComments = filtered.reduce((s, p) => s + (p.metrics?.comments || 0), 0);
-  const uniqueBrands = new Set(filtered.map(p => (p.sponsorPartner || '').toLowerCase().trim()).filter(Boolean));
+  const uniqueBrands = new Set(filtered.map(p => {
+    const n = (p.sponsorPartner || '').replace(/^@/, '').toLowerCase().trim();
+    return BRAND_ALIASES[n] ?? n;
+  }).filter(Boolean));
   const uniqueAthletes = new Set(filtered.map(p => p.athlete?._id).filter(Boolean));
 
   const avgLikes = filtered.length ? totalLikes / filtered.length : null;
-  const avgComments = filtered.length ? totalComments / filtered.length : null;
+  const avgComments = filtered.length ? Math.round(totalComments / filtered.length) : null;
   const postsPerBrand = uniqueBrands.size ? filtered.length / uniqueBrands.size : null;
 
   const brandMap = new Map<string, {
@@ -1079,8 +1187,11 @@ function SponsoredTab({ posts }: { posts: UCLASponsoredPost[] }) {
   }>();
 
   filtered.forEach(p => {
-    const key = (p.sponsorPartner || '').trim();
-    if (!key) return;
+    const raw = (p.sponsorPartner || '').trim();
+    if (!raw) return;
+    // Normalize to lowercase-without-@ for deduplication, then apply aliases
+    const normalized = raw.replace(/^@/, '').toLowerCase();
+    const key = BRAND_ALIASES[normalized] ?? normalized;
     const existing = brandMap.get(key);
     if (existing) {
       existing.posts.push(p);
@@ -1090,8 +1201,10 @@ function SponsoredTab({ posts }: { posts: UCLASponsoredPost[] }) {
       existing.totalComments += p.metrics?.comments || 0;
       existing.avgEngagement += p.metrics?.engagementRate || 0;
     } else {
+      // Use @lowercased as the canonical display name
+      const displayName = '@' + key;
       brandMap.set(key, {
-        brand: key,
+        brand: displayName,
         posts: [p],
         athletes: new Set(p.athlete?._id ? [p.athlete._id] : []),
         sports: new Set(p.athlete?.sport ? [p.athlete.sport] : []),
@@ -1228,8 +1341,11 @@ function SponsoredTab({ posts }: { posts: UCLASponsoredPost[] }) {
   );
 }
 
-function BenchmarksTab({ benchmarks }: { benchmarks: BenchmarksData }) {
+function BenchmarksTab({ benchmarks, teamBenchmarks }: { benchmarks: BenchmarksData; teamBenchmarks: TeamBenchmarksData | null }) {
   const [scope, setScope] = useState<'bigTen' | 'all'>('bigTen');
+  const [dataType, setDataType] = useState<'athletes' | 'teams'>('athletes');
+  const [lbSort, setLbSort] = useState<'totalLikes' | 'totalContents' | 'likesPerPost' | 'collabPosts'>('totalLikes');
+  const [teamLbSort, setTeamLbSort] = useState<'totalFollowers' | 'totalLikes' | 'totalPosts' | 'avgEngagementRate' | 'teamAccounts' | 'likesPerPost'>('totalFollowers');
 
   const ucla = benchmarks.schools.find(s => s.shortName === 'UCLA');
   if (!ucla) return null;
@@ -1257,33 +1373,63 @@ function BenchmarksTab({ benchmarks }: { benchmarks: BenchmarksData }) {
 
   const diffPct = (a: number, b: number) => b !== 0 ? ((a - b) / Math.abs(b)) * 100 : 0;
 
+  const teamSchools = (teamBenchmarks?.schools ?? []).filter(s =>
+    scope === 'bigTen' ? s.isBigTen : true
+  );
+
   return (
     <div className="space-y-8">
-      {/* Header + scope toggle */}
+      {/* Header + toggles */}
       <GlassPanel className="p-6">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <div>
-            <h2 style={headerStyle} className="text-lg font-bold uppercase tracking-tight text-[#0F1D2E]">Benchmarks</h2>
-            <p className="text-sm text-[#5B6B82]">
-              UCLA vs {scope === 'bigTen' ? `Big Ten peers (${peers.length} schools)` : `all schools in dataset (${peers.length} schools)`}
-            </p>
-          </div>
-          <div className="flex items-center gap-2">
-            {[
-              { key: 'bigTen', label: 'Big Ten' },
-              { key: 'all', label: 'All Schools' }
-            ].map(chip => (
-              <button
-                key={chip.key}
-                onClick={() => setScope(chip.key as typeof scope)}
-                className={`px-4 py-2 rounded-full text-sm font-semibold border ${scope === chip.key ? 'bg-[#2774AE]/10 border-[#2774AE]/40 text-[#2774AE]' : 'bg-white border-[#E1E7F0] text-[#1E2A3B]'}`}
-              >
-                {chip.label}
-              </button>
-            ))}
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <h2 style={headerStyle} className="text-lg font-bold uppercase tracking-tight text-[#0F1D2E]">Benchmarks</h2>
+              <p className="text-sm text-[#5B6B82]">
+                {dataType === 'athletes'
+                  ? `UCLA athlete NIL posts vs ${scope === 'bigTen' ? `Big Ten peers (${peers.length} schools)` : `all schools in dataset (${peers.length} schools)`}`
+                  : `Official team social pages — ${scope === 'bigTen' ? `Big Ten (${teamSchools.length} schools)` : `all schools (${teamSchools.length} schools)`}`
+                }
+              </p>
+            </div>
+            <div className="flex flex-wrap items-center gap-2">
+              {/* Data type toggle */}
+              <div className="flex items-center gap-1 rounded-full border border-[#E1E7F0] p-1 bg-[#F7F9FC]">
+                {([
+                  { key: 'athletes', label: 'Athlete Posts' },
+                  { key: 'teams', label: 'Team Pages' }
+                ] as const).map(chip => (
+                  <button
+                    key={chip.key}
+                    onClick={() => setDataType(chip.key)}
+                    className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${dataType === chip.key ? 'bg-[#2774AE] text-white shadow-sm' : 'text-[#5B6B82] hover:text-[#1E2A3B]'}`}
+                  >
+                    {chip.label}
+                  </button>
+                ))}
+              </div>
+              {/* Scope toggle */}
+              <div className="flex items-center gap-1">
+                {([
+                  { key: 'bigTen', label: 'Big Ten' },
+                  { key: 'all', label: 'All Schools' }
+                ] as const).map(chip => (
+                  <button
+                    key={chip.key}
+                    onClick={() => setScope(chip.key)}
+                    className={`px-4 py-2 rounded-full text-sm font-semibold border ${scope === chip.key ? 'bg-[#2774AE]/10 border-[#2774AE]/40 text-[#2774AE]' : 'bg-white border-[#E1E7F0] text-[#1E2A3B]'}`}
+                  >
+                    {chip.label}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </GlassPanel>
+
+      {/* ── ATHLETE VIEW ── */}
+      {dataType === 'athletes' && <>
 
       {/* Rank highlights */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -1383,25 +1529,39 @@ function BenchmarksTab({ benchmarks }: { benchmarks: BenchmarksData }) {
         </div>
       </GlassPanel>
 
-      {/* Peer school leaderboard */}
+      {/* Peer school leaderboard — athlete NIL posts */}
       <GlassPanel className="p-6">
-        <h3 style={headerStyle} className="text-base font-bold uppercase tracking-tight mb-4 text-[#0F1D2E]">
-          {scope === 'bigTen' ? 'Big Ten' : 'All Schools'} Leaderboard
+        <h3 style={headerStyle} className="text-base font-bold uppercase tracking-tight mb-1 text-[#0F1D2E]">
+          {scope === 'bigTen' ? 'Big Ten' : 'All Schools'} Athlete Posts Leaderboard
         </h3>
+        <p className="text-xs text-[#7A8AA3] mb-4">Athlete NIL social media posts (Instagram + TikTok)</p>
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
-              <tr className="text-xs uppercase tracking-[0.2em] text-[#5B6B82]">
+              <tr className="text-xs uppercase tracking-[0.2em] text-[#5B6B82] bg-[#F3F6FB]">
                 <th className="text-left py-2 px-3">School</th>
                 <th className="text-left py-2 px-3">Conference</th>
-                <th className="text-right py-2 px-3">Posts</th>
-                <th className="text-right py-2 px-3">Likes</th>
-                <th className="text-right py-2 px-3">Likes/Post</th>
-                <th className="text-right py-2 px-3">Collab Posts</th>
+                {([
+                  { key: 'totalContents', label: 'Posts' },
+                  { key: 'totalLikes',    label: 'Likes' },
+                  { key: 'likesPerPost',  label: 'Likes/Post' },
+                  { key: 'collabPosts',   label: 'Collab Posts' },
+                ] as const).map(col => (
+                  <th
+                    key={col.key}
+                    className={`text-right py-2 px-3 cursor-pointer select-none hover:text-[#2774AE] ${lbSort === col.key ? 'text-[#2774AE]' : ''}`}
+                    onClick={() => setLbSort(col.key)}
+                  >
+                    <span className="inline-flex items-center justify-end gap-1">
+                      {col.label}
+                      {lbSort === col.key ? <span>↓</span> : <span className="opacity-30">↕</span>}
+                    </span>
+                  </th>
+                ))}
               </tr>
             </thead>
             <tbody>
-              {[ucla, ...peers].sort((a, b) => b.totalLikes - a.totalLikes).map(s => (
+              {[ucla, ...peers].sort((a, b) => b[lbSort] - a[lbSort]).map(s => (
                 <tr
                   key={s.shortName}
                   className={`border-t border-[#E1E7F0] ${s.shortName === 'UCLA' ? 'bg-[#2774AE]/5 font-semibold' : 'hover:bg-[#F3F6FB]'}`}
@@ -1420,90 +1580,315 @@ function BenchmarksTab({ benchmarks }: { benchmarks: BenchmarksData }) {
           </table>
         </div>
       </GlassPanel>
+
+      </> /* end athlete view */}
+
+      {/* ── TEAM PAGES VIEW ── */}
+      {dataType === 'teams' && (
+        <GlassPanel className="p-6">
+          <h3 style={headerStyle} className="text-base font-bold uppercase tracking-tight mb-1 text-[#0F1D2E]">
+            {scope === 'bigTen' ? 'Big Ten' : 'All Schools'} Team Social Pages Leaderboard
+          </h3>
+          <p className="text-xs text-[#7A8AA3] mb-4">Official school athletic department social accounts (90-day metrics)</p>
+          {teamSchools.length === 0 ? (
+            <p className="text-sm text-[#7A8AA3]">No team page data available.</p>
+          ) : (
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="text-xs uppercase tracking-[0.2em] text-[#5B6B82] bg-[#F3F6FB]">
+                    <th className="text-left py-2 px-3">School</th>
+                    <th className="text-left py-2 px-3">Conference</th>
+                    {([
+                      { key: 'teamAccounts',      label: 'Accounts' },
+                      { key: 'totalFollowers',    label: 'Followers' },
+                      { key: 'totalLikes',        label: 'Likes' },
+                      { key: 'likesPerPost',      label: 'Likes/Post' },
+                      { key: 'avgEngagementRate', label: 'Eng. Rate' },
+                    ] as const).map(col => (
+                      <th
+                        key={col.key}
+                        className={`text-right py-2 px-3 cursor-pointer select-none hover:text-[#2774AE] ${teamLbSort === col.key ? 'text-[#2774AE]' : ''}`}
+                        onClick={() => setTeamLbSort(col.key)}
+                      >
+                        <span className="inline-flex items-center justify-end gap-1">
+                          {col.label}
+                          {teamLbSort === col.key ? <span>↓</span> : <span className="opacity-30">↕</span>}
+                        </span>
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {[...teamSchools].sort((a, b) => b[teamLbSort] - a[teamLbSort]).map(s => (
+                    <tr
+                      key={s.school}
+                      className={`border-t border-[#E1E7F0] ${s.shortName === 'UCLA' ? 'bg-[#2774AE]/5 font-semibold' : 'hover:bg-[#F3F6FB]'}`}
+                    >
+                      <td className="py-3 px-3 text-sm text-[#0F1D2E]">
+                        {s.shortName === 'UCLA' ? '→ ' : ''}{s.shortName || s.school}
+                      </td>
+                      <td className="py-3 px-3 text-xs text-[#7A8AA3]">{s.conference}</td>
+                      <td className="py-3 px-3 text-sm text-right">{s.teamAccounts}</td>
+                      <td className="py-3 px-3 text-sm text-right">{formatNumber(s.totalFollowers)}</td>
+                      <td className="py-3 px-3 text-sm text-right">{formatNumber(s.totalLikes)}</td>
+                      <td className="py-3 px-3 text-sm text-right">{formatNumber(Math.round(s.likesPerPost))}</td>
+                      <td className="py-3 px-3 text-sm text-right">{formatPercent(s.avgEngagementRate, 1)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </GlassPanel>
+      )}
     </div>
   );
 }
 
 function IPTab({ ipImpact }: { ipImpact: UCLAIPImpact }) {
-  const snapshot = [
-    { label: 'Collaboration Lift', value: ipImpact.collaboration.avgLift },
-    { label: 'Logo Lift', value: ipImpact.logo.avgLift },
-    { label: 'Caption Lift', value: ipImpact.orgInCaption.avgLift }
+  const [signal, setSignal] = useState<'collab' | 'logo' | 'caption'>('collab');
+  const [metric, setMetric] = useState<'er' | 'likes' | 'comments'>('er');
+
+  const signals = [
+    { id: 'collab' as const,  label: 'Collaboration', data: ipImpact.collaboration },
+    { id: 'logo' as const,    label: 'Logo',          data: ipImpact.logo },
+    { id: 'caption' as const, label: 'Caption',       data: ipImpact.orgInCaption },
   ];
 
-  const comparisons = [
-    { label: 'Collaboration', data: ipImpact.collaboration },
-    { label: 'Logo', data: ipImpact.logo },
-    { label: 'Caption', data: ipImpact.orgInCaption }
+  const metrics = [
+    { id: 'er' as const,       label: 'Eng. Rate' },
+    { id: 'likes' as const,    label: 'Likes/Post' },
+    { id: 'comments' as const, label: 'Comments/Post' },
   ];
+
+  const active = signals.find(s => s.id === signal)!;
+  const lift = active.data.avgLift;
+  const liftPositive = lift >= 0;
+
+  const withData  = active.data.yes;
+  const noData    = active.data.no;
+
+  const withLpp  = withData.contents  > 0 ? withData.likes    / withData.contents  : 0;
+  const noLpp    = noData.contents    > 0 ? noData.likes      / noData.contents    : 0;
+  const withCpp  = withData.contents  > 0 ? withData.comments / withData.contents  : 0;
+  const noCpp    = noData.contents    > 0 ? noData.comments   / noData.contents    : 0;
+
+  const getValues = () => {
+    if (metric === 'er') return {
+      withVal: withData.engagementRate * 100,
+      noVal:   noData.engagementRate   * 100,
+      fmt: (v: number) => formatPercent(v, 1),
+    };
+    if (metric === 'likes') return {
+      withVal: withLpp,
+      noVal:   noLpp,
+      fmt: formatNumber,
+    };
+    return {
+      withVal: withCpp,
+      noVal:   noCpp,
+      fmt: formatNumber,
+    };
+  };
+
+  const { withVal, noVal, fmt } = getValues();
+  const maxVal = Math.max(withVal, noVal, 0.001);
+  const withPct = (withVal / maxVal) * 100;
+  const noPct   = (noVal   / maxVal) * 100;
 
   return (
-    <div className="space-y-8">
-      <GlassPanel className="p-6">
-        <div className="flex flex-col gap-2">
-          <h2 style={headerStyle} className="text-lg font-bold uppercase tracking-tight text-[#0F1D2E]">IP Impact (Supporting)</h2>
-          <p className="text-sm text-[#5B6B82]">High-level IP performance signals from UCLA’s dataset.</p>
-          <span className="text-[10px] uppercase tracking-[0.2em] text-[#2774AE] bg-[#2774AE]/10 border border-[#2774AE]/30 px-2 py-0.5 rounded-full w-fit">
-            Instagram only
-          </span>
+    <div className="space-y-6">
+      {/* Headline */}
+      <GlassPanel className="p-6 md:p-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div>
+            <p className="text-xs uppercase tracking-[0.35em] text-[#2774AE] mb-2">IP Intelligence · Instagram Only</p>
+            <p className="text-3xl md:text-4xl font-black text-[#0F1D2E] leading-tight">
+              Posts with UCLA {active.label.toLowerCase()} drive{' '}
+              <span style={{ color: liftPositive ? '#2774AE' : '#C2413B' }}>
+                {liftPositive ? '+' : ''}{lift.toFixed(1)}%
+              </span>{' '}
+              higher engagement.
+            </p>
+          </div>
+          <div className="flex flex-col items-start md:items-end gap-1">
+            <span className="text-[10px] uppercase tracking-[0.25em] text-[#2774AE] bg-[#2774AE]/10 border border-[#2774AE]/30 px-2 py-0.5 rounded-full">
+              Instagram only
+            </span>
+          </div>
         </div>
       </GlassPanel>
 
-      <GlassPanel className="p-4">
+      {/* Signal + Metric selectors */}
+      <div className="flex flex-wrap gap-3 items-center">
+        {/* Signal tabs */}
+        <div className="flex items-center gap-1 rounded-xl border border-[#E1E7F0] p-1 bg-[#F7F9FC]">
+          {signals.map(s => (
+            <button
+              key={s.id}
+              onClick={() => setSignal(s.id)}
+              className={`px-4 py-1.5 rounded-lg text-sm font-semibold transition-all ${
+                signal === s.id
+                  ? 'bg-[#2774AE] text-white shadow-sm'
+                  : 'text-[#5B6B82] hover:text-[#1E2A3B]'
+              }`}
+            >
+              {s.label}
+            </button>
+          ))}
+        </div>
+        {/* Metric tabs */}
+        <div className="flex items-center gap-1 rounded-xl border border-[#E1E7F0] p-1 bg-[#F7F9FC]">
+          {metrics.map(m => (
+            <button
+              key={m.id}
+              onClick={() => setMetric(m.id)}
+              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                metric === m.id
+                  ? 'bg-[#0F1D2E] text-white shadow-sm'
+                  : 'text-[#5B6B82] hover:text-[#1E2A3B]'
+              }`}
+            >
+              {m.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Bar Comparison */}
+      <GlassPanel className="p-6">
+        <p className="text-sm font-bold text-[#0F1D2E] mb-1">
+          {active.label} Impact on {metrics.find(m => m.id === metric)?.label}
+        </p>
+        <p className="text-xs text-[#7A8AA3] mb-6">
+          Posts using {active.label.toLowerCase()} vs posts without {active.label.toLowerCase()}
+        </p>
+
+        <div className="space-y-5">
+          {/* WITH bar */}
+          <div>
+            <div className="flex items-baseline justify-between mb-1.5">
+              <p className="text-[11px] font-semibold uppercase tracking-wider text-[#2774AE]">
+                With {active.label} · {formatNumber(withData.contents)} posts
+              </p>
+              <p className="text-xl font-black text-[#0F1D2E]">{fmt(withVal)}</p>
+            </div>
+            <div className="w-full bg-[#F0F4FA] rounded-lg h-9 overflow-hidden">
+              <div
+                className="h-full rounded-lg bg-[#2774AE] transition-all duration-700"
+                style={{ width: `${Math.max(withPct, 2)}%` }}
+              />
+            </div>
+          </div>
+
+          {/* WITHOUT bar */}
+          <div>
+            <div className="flex items-baseline justify-between mb-1.5">
+              <p className="text-[11px] font-semibold uppercase tracking-wider text-[#9AA7BC]">
+                Without {active.label} · {formatNumber(noData.contents)} posts
+              </p>
+              <p className="text-xl font-black text-[#5B6B82]">{fmt(noVal)}</p>
+            </div>
+            <div className="w-full bg-[#F0F4FA] rounded-lg h-9 overflow-hidden">
+              <div
+                className="h-full rounded-lg bg-[#C8D5E3] transition-all duration-700"
+                style={{ width: `${Math.max(noPct, 2)}%` }}
+              />
+            </div>
+          </div>
+
+          {/* Lift badge */}
+          <div className="pt-2 border-t border-[#E1E7F0] flex items-center gap-2">
+            {liftPositive ? (
+              <ArrowUpRight className="w-5 h-5 text-[#2774AE]" />
+            ) : (
+              <ArrowDownRight className="w-5 h-5 text-[#C2413B]" />
+            )}
+            <span className="text-sm font-bold" style={{ color: liftPositive ? '#2774AE' : '#C2413B' }}>
+              {liftPositive ? '+' : ''}{lift.toFixed(1)}% ER lift
+            </span>
+            <span className="text-xs text-[#7A8AA3]">on posts with {active.label.toLowerCase()}</span>
+          </div>
+        </div>
+      </GlassPanel>
+
+      {/* Stat grid for active signal */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {[
+          { label: 'Posts With', value: formatNumber(withData.contents) },
+          { label: 'Posts Without', value: formatNumber(noData.contents) },
+          { label: 'Avg ER With', value: formatPercent(withData.engagementRate * 100, 1) },
+          { label: 'EMV With', value: formatCurrency(withData.emv) },
+        ].map(item => (
+          <GlassPanel key={item.label} className="p-4">
+            <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">{item.label}</p>
+            <p className="text-xl font-bold mt-2 text-[#0F1D2E]">{item.value}</p>
+          </GlassPanel>
+        ))}
+      </div>
+
+      {/* All 3 signals summary */}
+      <GlassPanel className="p-6">
+        <h3 style={headerStyle} className="text-base font-bold uppercase tracking-tight mb-4 text-[#0F1D2E]">
+          All IP Signals — Summary
+        </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {snapshot.map(item => {
-            const positive = item.value > 0;
-            const neutral = item.value === 0;
-            const color = neutral ? '#6B7280' : positive ? '#2774AE' : '#C2413B';
+          {signals.map(s => {
+            const pos = s.data.avgLift >= 0;
+            const color = pos ? '#2774AE' : '#C2413B';
+            const lpp = s.data.yes.contents > 0 ? s.data.yes.likes / s.data.yes.contents : 0;
             return (
-              <div key={item.label} className="flex items-center justify-between rounded-xl border border-[#E1E7F0] bg-white px-4 py-3">
-                <div>
-                  <div className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">{item.label}</div>
-                  <div className="text-2xl font-bold mt-1" style={{ color }}>{formatPercent(item.value, 1)}</div>
+              <button
+                key={s.id}
+                onClick={() => setSignal(s.id)}
+                className={`text-left rounded-xl border p-4 transition-all ${
+                  signal === s.id
+                    ? 'border-[#2774AE]/40 bg-[#2774AE]/5 shadow-sm'
+                    : 'border-[#E1E7F0] bg-white hover:border-[#2774AE]/20'
+                }`}
+              >
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-sm font-semibold text-[#0F1D2E]">{s.label}</span>
+                  <span className="text-sm font-bold" style={{ color }}>
+                    {pos ? '+' : ''}{s.data.avgLift.toFixed(1)}%
+                  </span>
                 </div>
-                {neutral ? (
-                  <span className="text-[#6B7280] text-xs">—</span>
-                ) : positive ? (
-                  <ArrowUpRight className="w-5 h-5" color={color} />
-                ) : (
-                  <ArrowDownRight className="w-5 h-5" color={color} />
-                )}
-              </div>
+                <div className="space-y-1 text-xs text-[#5B6B82]">
+                  <div className="flex justify-between">
+                    <span>Posts with</span>
+                    <span className="font-medium text-[#0F1D2E]">{formatNumber(s.data.yes.contents)}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Avg ER with</span>
+                    <span className="font-medium text-[#0F1D2E]">{formatPercent(s.data.yes.engagementRate * 100, 1)}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Likes/post with</span>
+                    <span className="font-medium text-[#0F1D2E]">{formatNumber(Math.round(lpp))}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>EMV</span>
+                    <span className="font-medium text-[#0F1D2E]">{formatCurrency(s.data.yes.emv)}</span>
+                  </div>
+                </div>
+                {/* Mini ER bar */}
+                <div className="mt-3">
+                  <div className="w-full bg-[#F0F4FA] rounded-full h-1.5 overflow-hidden">
+                    <div
+                      className="h-full rounded-full transition-all"
+                      style={{
+                        backgroundColor: color,
+                        width: `${Math.min((s.data.yes.engagementRate / Math.max(s.data.yes.engagementRate, s.data.no.engagementRate, 0.001)) * 100, 100)}%`
+                      }}
+                    />
+                  </div>
+                </div>
+              </button>
             );
           })}
         </div>
       </GlassPanel>
-
-      <GlassPanel className="p-6">
-        <h3 style={headerStyle} className="text-sm font-bold uppercase tracking-tight mb-4 text-[#0F1D2E]">IP Comparison</h3>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          {comparisons.map(row => (
-            <div key={row.label} className="rounded-xl border border-[#E1E7F0] bg-white p-4">
-              <div className="flex items-center justify-between">
-                <div className="text-sm font-semibold text-[#0F1D2E]">{row.label}</div>
-                <div className={`text-sm font-bold ${row.data.avgLift >= 0 ? 'text-[#2774AE]' : 'text-[#C2413B]'}`}>
-                  {row.data.avgLift >= 0 ? '+' : ''}{row.data.avgLift.toFixed(1)}% ER Lift
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-3 mt-4 text-sm text-[#5B6B82]">
-                <div>
-                  <div className="text-xs text-[#7A8AA3]">With</div>
-                  <div>Posts: {formatNumber(row.data.yes.contents)}</div>
-                  <div>Avg ER: {formatPercent(row.data.yes.engagementRate * 100)}</div>
-                  <div>Likes/post: {formatNumber(row.data.yes.likes)}</div>
-                </div>
-                <div>
-                  <div className="text-xs text-[#7A8AA3]">Without</div>
-                  <div>Posts: {formatNumber(row.data.no.contents)}</div>
-                  <div>Avg ER: {formatPercent(row.data.no.engagementRate * 100)}</div>
-                  <div>Likes/post: {formatNumber(row.data.no.likes)}</div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </GlassPanel>
-
     </div>
   );
 }
@@ -1527,7 +1912,7 @@ function AthleteDrawer({ athlete }: { athlete: UCLAAthlete }) {
         </div>
         <div>
           <div className="text-base font-semibold text-[#0F1D2E]">{athlete.name}</div>
-          <div className="text-xs text-[#5B6B82]">{athlete.sport} {athlete.position ? `• ${athlete.position}` : ''}</div>
+          <div className="text-xs text-[#5B6B82]">{formatTeamName(athlete.sport)} {athlete.position ? `• ${athlete.position}` : ''}</div>
         </div>
       </div>
       <div className="grid grid-cols-2 gap-3">
