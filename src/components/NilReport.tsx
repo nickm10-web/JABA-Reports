@@ -56,12 +56,24 @@ function normalizePost(p: any, schoolName: string, conferenceName: string): Spon
   } as SponsorPost;
 }
 
+// Base non-brand handles excluded from all schools (NIL platforms, social platforms, etc.)
+const BASE_BRAND_EXCLUSIONS = new Set([
+  'facebook', 'postgame.official', 'myplayersports', 'myplayerathlete',
+  'prepdig', 'athletezonestore', 'bruinnil', 'ucla.nil.store',
+]);
+
 // ─── Brand Group Builder ─────────────────────────────────────
-function buildBrandGroups(posts: SponsorPost[]): BrandGroup[] {
+function buildBrandGroups(
+  posts: SponsorPost[],
+  exclusions: Set<string> = new Set(),
+  aliases: Record<string, string> = {},
+): BrandGroup[] {
   const map = new Map<string, SponsorPost[]>();
   for (const p of posts) {
-    const key = (p.sponsorPartner || '').toLowerCase().trim();
-    if (!key) continue;
+    const raw = (p.sponsorPartner || '').replace(/^@/, '').toLowerCase().trim();
+    if (!raw) continue;
+    if (BASE_BRAND_EXCLUSIONS.has(raw) || exclusions.has(raw)) continue;
+    const key = aliases[raw] ?? raw;
     if (!map.has(key)) map.set(key, []);
     map.get(key)!.push(p);
   }
@@ -98,7 +110,7 @@ function buildBrandGroups(posts: SponsorPost[]): BrandGroup[] {
 
     groups.push({
       key,
-      displayName: groupPosts[0].sponsorPartner,
+      displayName: '@' + key,
       handle: key,
       posts: groupPosts,
       uniqueAthletes: [...athleteIds],
@@ -228,7 +240,9 @@ export function NilReport({ config, onBack }: NilReportProps) {
   }, [config.dataFile]);
 
   // Derived data
-  const brandGroups = useMemo(() => buildBrandGroups(posts), [posts]);
+  const exclusionSet = useMemo(() => new Set(config.brandExclusions ?? []), [config.brandExclusions]);
+  const aliases = useMemo(() => config.brandAliases ?? {}, [config.brandAliases]);
+  const brandGroups = useMemo(() => buildBrandGroups(posts, exclusionSet, aliases), [posts, exclusionSet, aliases]);
   const monthlyTrends = useMemo(() => buildMonthlyTrends(posts), [posts]);
   const athleteIndex = useMemo(() => buildAthleteIndex(posts), [posts]);
   const stats = useMemo(() => computeStats(posts), [posts]);

@@ -22,6 +22,10 @@ export interface SchoolConfig {
   colors: NilSchoolColors;
   peerSchools: PeerSchool[];
   benchmark: PeerSchool;
+  /** Lowercase, no-@ handles to exclude from brand deals (NIL stores, collectives, team pages, etc.) */
+  brandExclusions?: string[];
+  /** Lowercase no-@ alias map: variant → canonical (for semantic deduplication) */
+  brandAliases?: Record<string, string>;
 }
 
 // ─── Helper to build PeerSchool entries ──────────────────────
@@ -120,6 +124,8 @@ export const michiganConfig: SchoolConfig = {
   },
   peerSchools: BIG_TEN_PEERS.filter(p => p.id !== 'michigan'),
   benchmark: peer('michigan', 'University of Michigan', 'Michigan', 130, 'Big Ten', 427, 4661075, 27.28, 'Football', 395, 243, [4,4,4,4,4,4,4,4,4,4,4,4]),
+  brandExclusions: ['championscircle.nilshop', 'champmediaco', 'championscircleuofm', 'swingcityracketsports'],
+  brandAliases: { 'drinkdripdrop': 'dripdrop' },
 };
 
 export const alabamaConfig: SchoolConfig = {
@@ -138,6 +144,7 @@ export const alabamaConfig: SchoolConfig = {
   },
   peerSchools: SEC_PEERS.filter(p => p.id !== 'alabama'),
   benchmark: peer('alabama', 'The University of Alabama', 'Alabama', 333, 'SEC', 489, 7923447, 24.52, 'Football', 379, 261, [5,5,5,5,5,5,5,5,5,5,5,5]),
+  brandExclusions: ['crimsontidethreads', 'athletesthread', 'pantsstore', 'hidethetideofficial', 'yea_ala'],
 };
 
 export const arkansasConfig: SchoolConfig = {
@@ -156,6 +163,7 @@ export const arkansasConfig: SchoolConfig = {
   },
   peerSchools: SEC_PEERS.filter(p => p.id !== 'arkansas'),
   benchmark: peer('arkansas', 'University of Arkansas', 'Arkansas', 8, 'SEC', 380, 4355212, 22.87, 'Football', 384, 246, [7,7,7,7,7,7,7,7,7,7,7,7]),
+  brandExclusions: ['razorbackthreads', 'xx_xyathletics'],
 };
 
 export const oklahomaConfig: SchoolConfig = {
@@ -174,6 +182,7 @@ export const oklahomaConfig: SchoolConfig = {
   },
   peerSchools: SEC_PEERS.filter(p => p.id !== 'oklahoma'),
   benchmark: peer('oklahoma', 'University of Oklahoma', 'Oklahoma', 201, 'SEC', 237, 2870594, 30.59, 'Football', 225, 127, [8,8,8,8,8,8,8,8,8,8,8,8]),
+  brandExclusions: ['soonersthreads', 'influxersooners', 'myplayerathlete'],
 };
 
 export const notredameConfig: SchoolConfig = {
@@ -192,6 +201,7 @@ export const notredameConfig: SchoolConfig = {
   },
   peerSchools: NOTRE_DAME_PEERS.filter(p => p.id !== 'notre-dame'),
   benchmark: peer('notre-dame', 'University of Notre Dame', 'Notre Dame', 87, 'Independent / ACC', 197, 4107244, 30.6, 'Football', 200, 102, [4,4,4,4,4,4,4,4,4,4,4,4]),
+  brandExclusions: ['notredamethreads', 'invescous'],
 };
 
 export const boiseStateConfig: SchoolConfig = {
@@ -210,4 +220,5 @@ export const boiseStateConfig: SchoolConfig = {
   },
   peerSchools: MOUNTAIN_WEST_PEERS.filter(p => p.id !== 'boise-state'),
   benchmark: peer('boise-state', 'Boise State University', 'Boise State', 68, 'Mountain West', 288, 1273728, 24.71, 'Football', 300, 142, [1,1,1,1,1,1,1,1,1,1,1,1]),
+  brandExclusions: ['boisestatethreads', 'broncosports', 'voxnclothing'],
 };

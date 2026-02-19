@@ -7,7 +7,7 @@ import { KentuckyIPImpact } from './components/KentuckyIPImpact';
 import { GeorgiaIPImpact } from './components/GeorgiaIPImpact';
 import { MichiganIPImpact } from './components/MichiganIPImpact';
 import { PlayflyReportHub } from './components/PlayflyReportHub';
-import { UCLAReport } from './components/UCLAReport';
+import { UCLABrandDeals } from './components/UCLABrandDeals';
 import { NilReport } from './components/NilReport';
 import {
   michiganConfig,
@@ -59,7 +59,7 @@ function PlayflyRoute() {
 function UCLARoute() {
   const navigate = useNavigate();
   const canGoBack = window.history.length > 2;
-  return <UCLAReport onBack={canGoBack ? () => navigate('/') : undefined} />;
+  return <UCLABrandDeals onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
 function MichiganNilRoute() {

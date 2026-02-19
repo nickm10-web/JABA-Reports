@@ -1,7 +1,9 @@
 // ═══════════════════════════════════════════════════════════════
 // UCLA NIL Intelligence Report — IP Intelligence Tab
-// Analyzes how UCLA intellectual property (logos, marks, facilities,
+// Analyzes how school intellectual property (logos, marks, facilities,
 // uniforms, official team assets) impacts NIL performance.
+// Uses real post signals: isCollaboration, hasOrganizationLogo,
+// hasOrganizationInCaption — no seeded random.
 // ═══════════════════════════════════════════════════════════════
 import { useState, useMemo } from 'react';
 import { ChevronDown, ChevronUp, Lightbulb } from 'lucide-react';
@@ -12,27 +14,45 @@ import { sportColors } from './uclaColors';
 import { useNilContext } from './NilReportContext';
 import { calculatePostEMV } from '../../utils/emvCalculator';
 
-// ─── Deterministic seeded random (matches mock data seed) ───
-function seededRandom(seed: number) {
-  let s = seed;
-  return () => { s = (s * 16807 + 0) % 2147483647; return (s - 1) / 2147483646; };
-}
+// ─── Signal config ───────────────────────────────────────────
+type IPSignal = 'collab' | 'logo' | 'caption';
+type IPMetric = 'er' | 'likes' | 'comments';
 
-// ─── IP classification ──────────────────────────────────────
-// Deterministically assigns IP usage to posts so numbers stay
-// consistent across renders and match across tabs.
-function classifyIPUsage(posts: SponsorPost[]): Map<string, boolean> {
-  const rand = seededRandom(777);
-  const map = new Map<string, boolean>();
-  for (const p of posts) {
-    // Posts that are collaborations, have org logo, or org in caption → likely IP usage
-    const hasSignals = p.isCollaboration || p.hasOrganizationLogo || p.hasOrganizationInCaption;
-    // ~42% of posts use IP (based on mock data signals + random)
-    const usesIP = hasSignals ? rand() < 0.72 : rand() < 0.28;
-    map.set(p._id, usesIP);
-  }
-  return map;
-}
+const SIGNAL_CONFIG: Record<IPSignal, { label: string; shortLabel: string; test: (p: SponsorPost) => boolean }> = {
+  collab: {
+    label: 'Collaboration Tag',
+    shortLabel: 'Collab',
+    test: p => !!(p.isCollaboration || p.isOrganizationCollaboration),
+  },
+  logo: {
+    label: 'Logo Present',
+    shortLabel: 'Logo',
+    test: p => !!p.hasOrganizationLogo,
+  },
+  caption: {
+    label: 'Caption Mention',
+    shortLabel: 'Caption',
+    test: p => !!p.hasOrganizationInCaption,
+  },
+};
+
+const METRIC_CONFIG: Record<IPMetric, { label: string; getValue: (p: SponsorPost) => number; format: (v: number) => string }> = {
+  er: {
+    label: 'Avg Engagement Rate',
+    getValue: p => p.metrics.engagementRate,
+    format: v => v.toFixed(2) + '%',
+  },
+  likes: {
+    label: 'Avg Likes',
+    getValue: p => p.metrics.likes,
+    format: v => formatNumber(Math.round(v)),
+  },
+  comments: {
+    label: 'Avg Comments',
+    getValue: p => p.metrics.comments,
+    format: v => formatNumber(Math.round(v)),
+  },
+};
 
 interface IPIntelligenceProps {
   posts: SponsorPost[];
@@ -44,84 +64,120 @@ export function UCLAIPIntelligenceTab({ posts, brandGroups, onOpenDrawer }: IPIn
   const { schoolId, shortName, conference, colors, peerSchools, benchmark: schoolBenchmark } = useNilContext();
   const BLUE = colors.primary;
 
-  // ─── Classify all posts ─────────────────────────────────
-  const ipMap = useMemo(() => classifyIPUsage(posts), [posts]);
+  const [activeSignal, setActiveSignal] = useState<IPSignal>('logo');
+  const [activeMetric, setActiveMetric] = useState<IPMetric>('er');
+  const [animKey, setAnimKey] = useState(0);
 
-  const withIP = useMemo(() => posts.filter(p => ipMap.get(p._id)), [posts, ipMap]);
-  const withoutIP = useMemo(() => posts.filter(p => !ipMap.get(p._id)), [posts, ipMap]);
+  function selectSignal(s: IPSignal) {
+    setActiveSignal(s);
+    setAnimKey(k => k + 1);
+  }
 
-  const ipRate = posts.length > 0 ? (withIP.length / posts.length) * 100 : 0;
+  // ─── Per-signal counts (for selector tiles) ─────────────
+  const signalCounts = useMemo(() => {
+    const counts: Record<IPSignal, number> = { collab: 0, logo: 0, caption: 0 };
+    for (const p of posts) {
+      if (SIGNAL_CONFIG.collab.test(p)) counts.collab++;
+      if (SIGNAL_CONFIG.logo.test(p)) counts.logo++;
+      if (SIGNAL_CONFIG.caption.test(p)) counts.caption++;
+    }
+    return counts;
+  }, [posts]);
+
+  // ─── Active signal splits ────────────────────────────────
+  const signalTest = SIGNAL_CONFIG[activeSignal].test;
+  const withSignal = useMemo(() => posts.filter(signalTest), [posts, signalTest]);
+  const withoutSignal = useMemo(() => posts.filter(p => !signalTest(p)), [posts, signalTest]);
+
+  const ipRate = posts.length > 0 ? (withSignal.length / posts.length) * 100 : 0;
 
   // ─── Performance metrics ────────────────────────────────
-  const metricsWithIP = useMemo(() => computeGroupMetrics(withIP), [withIP]);
-  const metricsWithoutIP = useMemo(() => computeGroupMetrics(withoutIP), [withoutIP]);
+  const metricsWithIP = useMemo(() => computeGroupMetrics(withSignal), [withSignal]);
+  const metricsWithoutIP = useMemo(() => computeGroupMetrics(withoutSignal), [withoutSignal]);
 
-  // ─── IP usage by sport ──────────────────────────────────
+  // ─── Bar comparison values ───────────────────────────────
+  const metricCfg = METRIC_CONFIG[activeMetric];
+  const barWithVal = withSignal.length > 0
+    ? withSignal.reduce((s, p) => s + metricCfg.getValue(p), 0) / withSignal.length
+    : 0;
+  const barWithoutVal = withoutSignal.length > 0
+    ? withoutSignal.reduce((s, p) => s + metricCfg.getValue(p), 0) / withoutSignal.length
+    : 0;
+  const barMax = Math.max(barWithVal, barWithoutVal, 0.001);
+  const barLift = computeLift(barWithVal, barWithoutVal);
+
+  // ─── IP usage by sport (real signals) ───────────────────
   const sportIPData = useMemo(() => {
-    const sportMap = new Map<string, { total: number; withIP: number; liftEng: number }>();
-    const sportWithIP = new Map<string, SponsorPost[]>();
-    const sportWithoutIP = new Map<string, SponsorPost[]>();
+    const sportWith = new Map<string, SponsorPost[]>();
+    const sportWithout = new Map<string, SponsorPost[]>();
 
-    posts.forEach(p => {
+    for (const p of posts) {
       const s = p.athlete.sport;
-      if (!sportMap.has(s)) sportMap.set(s, { total: 0, withIP: 0, liftEng: 0 });
-      const entry = sportMap.get(s)!;
-      entry.total++;
-      if (ipMap.get(p._id)) {
-        entry.withIP++;
-        if (!sportWithIP.has(s)) sportWithIP.set(s, []);
-        sportWithIP.get(s)!.push(p);
+      if (signalTest(p)) {
+        if (!sportWith.has(s)) sportWith.set(s, []);
+        sportWith.get(s)!.push(p);
       } else {
-        if (!sportWithoutIP.has(s)) sportWithoutIP.set(s, []);
-        sportWithoutIP.get(s)!.push(p);
+        if (!sportWithout.has(s)) sportWithout.set(s, []);
+        sportWithout.get(s)!.push(p);
       }
-    });
+    }
 
-    return [...sportMap.entries()].map(([sport, data]) => {
-      const wPosts = sportWithIP.get(sport) || [];
-      const woPosts = sportWithoutIP.get(sport) || [];
-      const avgEngWith = wPosts.length > 0 ? wPosts.reduce((s, p) => s + p.metrics.engagementRate, 0) / wPosts.length : 0;
-      const avgEngWithout = woPosts.length > 0 ? woPosts.reduce((s, p) => s + p.metrics.engagementRate, 0) / woPosts.length : 0;
-      const liftEng = avgEngWithout > 0 ? ((avgEngWith - avgEngWithout) / avgEngWithout) * 100 : 0;
+    const sports = new Set([...sportWith.keys(), ...sportWithout.keys()]);
+    return [...sports].map(sport => {
+      const wPosts = sportWith.get(sport) || [];
+      const woPosts = sportWithout.get(sport) || [];
+      const total = wPosts.length + woPosts.length;
+      const avgEngWith = wPosts.length > 0
+        ? wPosts.reduce((s, p) => s + p.metrics.engagementRate, 0) / wPosts.length : 0;
+      const avgEngWithout = woPosts.length > 0
+        ? woPosts.reduce((s, p) => s + p.metrics.engagementRate, 0) / woPosts.length : 0;
+      const liftEng = computeLift(avgEngWith, avgEngWithout);
 
       return {
         sport,
-        total: data.total,
-        withIP: data.withIP,
-        ipRate: data.total > 0 ? (data.withIP / data.total) * 100 : 0,
+        total,
+        withIP: wPosts.length,
+        ipRate: total > 0 ? (wPosts.length / total) * 100 : 0,
         avgEngWith,
         avgEngWithout,
         liftEng,
       };
     }).sort((a, b) => b.liftEng - a.liftEng);
-  }, [posts, ipMap]);
+  }, [posts, signalTest]);
 
-  // ─── Conference benchmark (mock) ────────────────────────
+  // ─── Conference benchmark (mock for peers, real for this school) ─
   const conferenceBenchmark = useMemo(() => {
-    const rand = seededRandom(555);
+    // Deterministic seeded random for peer schools (no real IP data available)
+    let s = 555 + schoolId.charCodeAt(0);
+    const rand = () => { s = (s * 16807) % 2147483647; return (s - 1) / 2147483646; };
+
     const schools = [
-      { ...schoolBenchmark, ipPct: ipRate, engLift: computeLift(metricsWithIP.avgEngagement, metricsWithoutIP.avgEngagement) },
-      ...peerSchools.map(s => {
-        const pct = 25 + rand() * 35; // 25-60%
-        const lift = 8 + rand() * 45; // 8-53%
-        return { ...s, ipPct: pct, engLift: lift };
-      }),
+      {
+        ...schoolBenchmark,
+        ipPct: ipRate,
+        engLift: computeLift(metricsWithIP.avgEngagement, metricsWithoutIP.avgEngagement),
+      },
+      ...peerSchools.map(peer => ({
+        ...peer,
+        ipPct: 20 + rand() * 45,
+        engLift: 5 + rand() * 50,
+      })),
     ].sort((a, b) => b.ipPct - a.ipPct);
 
-    return schools.map((s, i) => ({ ...s, ipRank: i + 1 }));
-  }, [ipRate, metricsWithIP.avgEngagement, metricsWithoutIP.avgEngagement]);
+    return schools.map((sc, i) => ({ ...sc, ipRank: i + 1 }));
+  }, [ipRate, metricsWithIP.avgEngagement, metricsWithoutIP.avgEngagement, schoolId]);
 
-  const uclaConf = conferenceBenchmark.find(s => s.id === schoolId)!;
-  const bigTenMedianIPPct = (() => {
+  const uclaConf = conferenceBenchmark.find(sc => sc.id === schoolId)!;
+  const confMedianIPPct = (() => {
     const sorted = [...conferenceBenchmark].sort((a, b) => a.ipPct - b.ipPct);
     return sorted[Math.floor(sorted.length / 2)].ipPct;
   })();
   const highestIPPct = conferenceBenchmark[0];
 
-  // ─── Brand + IP alignment ──────────────────────────────
+  // ─── Brand + IP alignment (real signals) ────────────────
   const brandIPData = useMemo(() => {
     return brandGroups.map(bg => {
-      const ipPosts = bg.posts.filter(p => ipMap.get(p._id));
+      const ipPosts = bg.posts.filter(signalTest);
       const totalEMV = bg.posts.reduce((s, p) => s + calculatePostEMV({
         athleteFollowers: p.metrics.followers || 0, likes: p.metrics.likes, comments: p.metrics.comments,
       }), 0);
@@ -138,56 +194,63 @@ export function UCLAIPIntelligenceTab({ posts, brandGroups, onOpenDrawer }: IPIn
         sports: bg.sports,
       };
     }).sort((a, b) => b.ipRate - a.ipRate);
-  }, [brandGroups, ipMap]);
+  }, [brandGroups, signalTest]);
 
-  // ─── IP usage trend (6 months) ─────────────────────────
+  // ─── IP usage trend (6 months, real signal) ─────────────
   const ipTrend = useMemo(() => {
     const months: { label: string; ipRate: number }[] = [];
     for (let m = 7; m <= 12; m++) {
       const mStr = `2025-${String(m).padStart(2, '0')}`;
       const mPosts = posts.filter(p => p.publishedAt.$date.startsWith(mStr));
-      const mIP = mPosts.filter(p => ipMap.get(p._id));
+      const mIP = mPosts.filter(signalTest);
       months.push({
         label: ['Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][m - 7],
         ipRate: mPosts.length > 0 ? (mIP.length / mPosts.length) * 100 : 0,
       });
     }
     return months;
-  }, [posts, ipMap]);
+  }, [posts, signalTest]);
 
-  // ─── AI Insights (data-driven) ─────────────────────────
+  // ─── AI Insights (data-driven, real signal) ─────────────
   const insights = useMemo(() => {
     const items: string[] = [];
+    const signalLabel = SIGNAL_CONFIG[activeSignal].label;
     const topSport = sportIPData[0];
     if (topSport) {
-      items.push(`${formatSportName(topSport.sport)} sees the highest engagement lift from IP usage at +${topSport.liftEng.toFixed(0)}%, driven by ${topSport.withIP} IP-tagged posts.`);
+      items.push(`${formatSportName(topSport.sport)} sees the highest engagement lift from ${signalLabel} at +${topSport.liftEng.toFixed(0)}%, driven by ${topSport.withIP} qualifying posts.`);
     }
     const engLift = computeLift(metricsWithIP.avgEngagement, metricsWithoutIP.avgEngagement);
-    items.push(`Posts featuring ${shortName} IP generate ${engLift.toFixed(0)}% higher engagement on average (${metricsWithIP.avgEngagement.toFixed(1)}% vs ${metricsWithoutIP.avgEngagement.toFixed(1)}%).`);
+    items.push(`Posts with ${signalLabel} generate ${engLift.toFixed(0)}% ${engLift >= 0 ? 'higher' : 'lower'} engagement on average (${metricsWithIP.avgEngagement.toFixed(1)}% vs ${metricsWithoutIP.avgEngagement.toFixed(1)}%).`);
 
     const emvLift = computeLift(metricsWithIP.avgEMV, metricsWithoutIP.avgEMV);
-    items.push(`Estimated EMV per post is ${emvLift.toFixed(0)}% higher when ${shortName} marks are present (${formatCurrency(metricsWithIP.avgEMV)} vs ${formatCurrency(metricsWithoutIP.avgEMV)}).`);
+    items.push(`Estimated EMV per post is ${emvLift.toFixed(0)}% ${emvLift >= 0 ? 'higher' : 'lower'} when ${signalLabel} is present (${formatCurrency(metricsWithIP.avgEMV)} vs ${formatCurrency(metricsWithoutIP.avgEMV)}).`);
 
     if (uclaConf) {
-      items.push(`${shortName} ranks #${uclaConf.ipRank} in the ${conference} for IP utilization rate at ${ipRate.toFixed(0)}%, compared to the conference median of ${bigTenMedianIPPct.toFixed(0)}%.`);
+      items.push(`${shortName} ranks #${uclaConf.ipRank} in the ${conference} for ${signalLabel} utilization rate at ${ipRate.toFixed(0)}%, compared to the conference median of ${confMedianIPPct.toFixed(0)}%.`);
     }
 
     const topIPBrand = brandIPData.find(b => b.ipPostCount > 0 && b.totalPosts >= 3);
     if (topIPBrand) {
-      items.push(`${topIPBrand.brand} leads in IP alignment with ${topIPBrand.ipRate.toFixed(0)}% of their ${topIPBrand.totalPosts} posts featuring ${shortName} marks.`);
+      items.push(`${topIPBrand.brand} leads in IP alignment with ${topIPBrand.ipRate.toFixed(0)}% of their ${topIPBrand.totalPosts} posts featuring ${signalLabel}.`);
     }
 
-    const lowIPSport = [...sportIPData].sort((a, b) => a.ipRate - b.ipRate).find(s => s.total >= 5);
+    const lowIPSport = [...sportIPData].sort((a, b) => a.ipRate - b.ipRate).find(sp => sp.total >= 5);
     if (lowIPSport) {
-      items.push(`${formatSportName(lowIPSport.sport)} has the lowest IP utilization at ${lowIPSport.ipRate.toFixed(0)}% — increasing this could unlock significant engagement gains.`);
+      items.push(`${formatSportName(lowIPSport.sport)} has the lowest ${signalLabel} rate at ${lowIPSport.ipRate.toFixed(0)}% — increasing this could unlock engagement gains.`);
     }
 
     return items;
-  }, [sportIPData, metricsWithIP, metricsWithoutIP, ipRate, uclaConf, bigTenMedianIPPct, brandIPData]);
+  }, [sportIPData, metricsWithIP, metricsWithoutIP, ipRate, uclaConf, confMedianIPPct, brandIPData, activeSignal]);
 
   // ─── Drawer helpers ─────────────────────────────────────
-  function openIPMetric(metric: string, definition: string, uclaValue: string, conferenceAvg: string, rank: string, insight: string) {
-    const data: IPMetricDrawerData = { metric, definition, uclaValue, conferenceAvg, rank, insight };
+  function openIPMetric(metric: string, definition: string, uclaValue: string, insight: string) {
+    const data: IPMetricDrawerData = {
+      metric, definition,
+      uclaValue,
+      conferenceAvg: confMedianIPPct.toFixed(1) + '%',
+      rank: `#${uclaConf?.ipRank || '—'} of ${conferenceBenchmark.length}`,
+      insight,
+    };
     onOpenDrawer({ type: 'ip-metric', data });
   }
 
@@ -213,67 +276,177 @@ export function UCLAIPIntelligenceTab({ posts, brandGroups, onOpenDrawer }: IPIn
   // ─── Render ─────────────────────────────────────────────
   return (
     <div className="flex gap-6">
-      {/* Main content (left) */}
+      {/* Main content */}
       <div className="flex-1 min-w-0 space-y-8">
 
-        {/* ═══ 1) IP UTILIZATION RATE ═══════════════════════════ */}
+        {/* ═══ 1) SIGNAL SELECTOR + BAR COMPARISON ══════════════ */}
         <section>
-          <SectionHeader number="01" title="IP Utilization Rate" />
+          <SectionHeader number="01" title="IP Signal Overview" />
 
-          <div className="mt-5 rounded-xl border bg-white overflow-hidden" style={{ borderColor: uclaColors.border, boxShadow: uclaColors.cardShadow }}>
-            {/* Top row: UCLA rate + trend */}
-            <div className="px-6 py-5 border-b" style={{ borderColor: uclaColors.border }}>
-              <div className="flex items-baseline gap-6 flex-wrap">
-                <button onClick={() => openIPMetric(
-                  'IP Utilization Rate',
-                  `Percentage of NIL-related posts that feature ${shortName} intellectual property (logos, marks, facilities, uniforms, official team assets).`,
-                  ipRate.toFixed(1) + '%',
-                  bigTenMedianIPPct.toFixed(1) + '%',
-                  `#${uclaConf?.ipRank || '—'} of ${conferenceBenchmark.length}`,
-                  insights[3] || '',
-                )} className="group text-left">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.15em] mb-1" style={{ color: uclaColors.textDim }}>
-                    Athlete Sponsored Posts with {shortName} IP
-                  </p>
-                  <p className="text-3xl font-bold group-hover:opacity-80 transition-opacity" style={{ color: BLUE }}>
-                    {ipRate.toFixed(1)}%
-                  </p>
-                </button>
+          <div className="mt-5 space-y-4">
+            {/* Signal selector tiles */}
+            <div className="grid grid-cols-3 gap-3">
+              {(Object.keys(SIGNAL_CONFIG) as IPSignal[]).map(sig => {
+                const cfg = SIGNAL_CONFIG[sig];
+                const count = signalCounts[sig];
+                const pct = posts.length > 0 ? (count / posts.length) * 100 : 0;
+                const isActive = sig === activeSignal;
+                return (
+                  <button
+                    key={sig}
+                    onClick={() => selectSignal(sig)}
+                    className="rounded-xl border p-4 text-left transition-all"
+                    style={{
+                      borderColor: isActive ? BLUE : uclaColors.border,
+                      backgroundColor: isActive ? BLUE + '08' : 'white',
+                      boxShadow: isActive ? `0 0 0 2px ${BLUE}30` : uclaColors.cardShadow,
+                    }}
+                  >
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.15em] mb-2"
+                      style={{ color: isActive ? BLUE : uclaColors.textDim }}>
+                      {cfg.label}
+                    </p>
+                    <p className="text-2xl font-bold mb-0.5"
+                      style={{ color: isActive ? BLUE : uclaColors.text }}>
+                      {pct.toFixed(1)}%
+                    </p>
+                    <p className="text-xs" style={{ color: uclaColors.textMuted }}>
+                      {formatNumber(count)} of {formatNumber(posts.length)} posts
+                    </p>
+                  </button>
+                );
+              })}
+            </div>
 
-                <Separator />
-
+            {/* Bar comparison card */}
+            <div className="rounded-xl border bg-white p-5"
+              style={{ borderColor: uclaColors.border, boxShadow: uclaColors.cardShadow }}>
+              {/* Header + metric toggle */}
+              <div className="flex items-center justify-between mb-5">
                 <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.15em] mb-1" style={{ color: uclaColors.textDim }}>
-                    Posts with IP
+                  <p className="text-xs font-semibold uppercase tracking-[0.15em]"
+                    style={{ color: uclaColors.textMuted }}>
+                    Performance: With vs Without {SIGNAL_CONFIG[activeSignal].shortLabel}
                   </p>
-                  <p className="text-lg font-bold" style={{ color: uclaColors.text }}>
-                    {withIP.length} <span className="text-sm font-normal" style={{ color: uclaColors.textMuted }}>of {posts.length}</span>
+                  {barLift !== 0 && (
+                    <p className="text-[11px] mt-0.5" style={{ color: uclaColors.textDim }}>
+                      {barLift > 0 ? `+${barLift.toFixed(1)}% lift when signal is present` : `${barLift.toFixed(1)}% when signal is present`}
+                    </p>
+                  )}
+                </div>
+                {/* Metric pill toggle */}
+                <div className="flex gap-1 p-0.5 rounded-lg" style={{ backgroundColor: uclaColors.lightBg }}>
+                  {(Object.keys(METRIC_CONFIG) as IPMetric[]).map(m => (
+                    <button
+                      key={m}
+                      onClick={() => setActiveMetric(m)}
+                      className="px-2.5 py-1 rounded-md text-[11px] font-semibold transition-all"
+                      style={{
+                        backgroundColor: activeMetric === m ? 'white' : 'transparent',
+                        color: activeMetric === m ? BLUE : uclaColors.textMuted,
+                        boxShadow: activeMetric === m ? '0 1px 3px rgba(0,0,0,0.08)' : undefined,
+                      }}
+                    >
+                      {METRIC_CONFIG[m].label.split(' ').pop()}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Bars */}
+              <div className="space-y-4" key={animKey}>
+                {/* With signal */}
+                <div>
+                  <div className="flex justify-between items-baseline mb-1.5">
+                    <span className="text-xs font-medium" style={{ color: BLUE }}>
+                      With {SIGNAL_CONFIG[activeSignal].shortLabel}
+                    </span>
+                    <span className="text-sm font-bold" style={{ color: BLUE }}>
+                      {metricCfg.format(barWithVal)}
+                      {barLift > 0 && (
+                        <span className="ml-1.5 text-[10px] font-bold px-1.5 py-0.5 rounded-full"
+                          style={{ backgroundColor: '#dcfce7', color: '#166534' }}>
+                          +{barLift.toFixed(1)}%
+                        </span>
+                      )}
+                    </span>
+                  </div>
+                  <div className="h-7 rounded-lg overflow-hidden" style={{ backgroundColor: uclaColors.border }}>
+                    <div
+                      className="h-full rounded-lg transition-all duration-700 ease-out"
+                      style={{
+                        width: `${(barWithVal / barMax) * 100}%`,
+                        backgroundColor: BLUE,
+                      }}
+                    />
+                  </div>
+                  <p className="text-[10px] mt-1" style={{ color: uclaColors.textDim }}>
+                    {formatNumber(withSignal.length)} posts
                   </p>
                 </div>
 
-                <Separator />
-
+                {/* Without signal */}
                 <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.15em] mb-1" style={{ color: uclaColors.textDim }}>
-                    Last 6 Months
+                  <div className="flex justify-between items-baseline mb-1.5">
+                    <span className="text-xs font-medium" style={{ color: uclaColors.textMuted }}>
+                      Without {SIGNAL_CONFIG[activeSignal].shortLabel}
+                    </span>
+                    <span className="text-sm font-bold" style={{ color: uclaColors.textMuted }}>
+                      {metricCfg.format(barWithoutVal)}
+                    </span>
+                  </div>
+                  <div className="h-7 rounded-lg overflow-hidden" style={{ backgroundColor: uclaColors.border }}>
+                    <div
+                      className="h-full rounded-lg transition-all duration-700 ease-out"
+                      style={{
+                        width: `${(barWithoutVal / barMax) * 100}%`,
+                        backgroundColor: uclaColors.textDim,
+                        opacity: 0.5,
+                      }}
+                    />
+                  </div>
+                  <p className="text-[10px] mt-1" style={{ color: uclaColors.textDim }}>
+                    {formatNumber(withoutSignal.length)} posts
                   </p>
-                  <SparklineChart
-                    data={ipTrend.map(t => t.ipRate)}
-                    width={100} height={28}
-                    color={uclaColors.gold}
-                    showArea={false}
-                  />
                 </div>
+              </div>
+
+              {/* All-3-signals summary strip */}
+              <div className="mt-5 pt-4 border-t grid grid-cols-3 gap-3" style={{ borderColor: uclaColors.border }}>
+                {(Object.keys(SIGNAL_CONFIG) as IPSignal[]).map(sig => {
+                  const wv = withSignal.length > 0 && sig === activeSignal
+                    ? barWithVal
+                    : posts.filter(SIGNAL_CONFIG[sig].test).length > 0
+                      ? posts.filter(SIGNAL_CONFIG[sig].test).reduce((s, p) => s + metricCfg.getValue(p), 0) / posts.filter(SIGNAL_CONFIG[sig].test).length
+                      : 0;
+                  const wov = posts.filter(p => !SIGNAL_CONFIG[sig].test(p)).length > 0
+                    ? posts.filter(p => !SIGNAL_CONFIG[sig].test(p)).reduce((s, p) => s + metricCfg.getValue(p), 0) / posts.filter(p => !SIGNAL_CONFIG[sig].test(p)).length
+                    : 0;
+                  const lift = computeLift(wv, wov);
+                  const isActive = sig === activeSignal;
+                  return (
+                    <div key={sig} className="text-center">
+                      <p className="text-[10px] font-medium mb-0.5"
+                        style={{ color: isActive ? BLUE : uclaColors.textDim }}>
+                        {SIGNAL_CONFIG[sig].shortLabel}
+                      </p>
+                      <p className="text-xs font-bold"
+                        style={{ color: lift > 0 ? '#166534' : lift < 0 ? '#991b1b' : uclaColors.textMuted }}>
+                        {lift > 0 ? '+' : ''}{lift.toFixed(1)}% lift
+                      </p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
-            {/* Benchmark comparison strip */}
-            <div className="px-6 py-4" style={{ backgroundColor: uclaColors.lightBg }}>
+            {/* Benchmark strip + trend */}
+            <div className="rounded-xl border bg-white px-6 py-4" style={{ borderColor: uclaColors.border, boxShadow: uclaColors.cardShadow }}>
               <div className="flex items-center gap-8 flex-wrap text-sm">
                 <BenchmarkChip
                   label={`${conference} Median`}
-                  value={bigTenMedianIPPct.toFixed(0) + '%'}
-                  highlight={ipRate > bigTenMedianIPPct}
+                  value={confMedianIPPct.toFixed(0) + '%'}
+                  highlight={ipRate > confMedianIPPct}
                 />
                 <BenchmarkChip
                   label={`Highest (${conference})`}
@@ -284,28 +457,39 @@ export function UCLAIPIntelligenceTab({ posts, brandGroups, onOpenDrawer }: IPIn
                   value={`#${uclaConf?.ipRank || '—'}`}
                   highlight
                 />
+                <div className="ml-auto">
+                  <p className="text-[10px] font-semibold uppercase tracking-wider mb-1" style={{ color: uclaColors.textDim }}>
+                    6-Month Trend
+                  </p>
+                  <SparklineChart
+                    data={ipTrend.map(t => t.ipRate)}
+                    width={100} height={28}
+                    color={BLUE}
+                    showArea={false}
+                  />
+                </div>
               </div>
             </div>
 
-            {/* IP by sport */}
-            <div className="px-6 py-5">
+            {/* IP usage by sport bars */}
+            <div className="rounded-xl border bg-white px-6 py-5" style={{ borderColor: uclaColors.border, boxShadow: uclaColors.cardShadow }}>
               <p className="text-[10px] font-semibold uppercase tracking-[0.15em] mb-3" style={{ color: uclaColors.textDim }}>
-                IP Usage by Sport
+                {SIGNAL_CONFIG[activeSignal].label} Rate by Sport
               </p>
               <div className="space-y-2.5">
-                {sportIPData.slice(0, 8).map(s => (
-                  <div key={s.sport} className="flex items-center gap-3">
+                {sportIPData.slice(0, 8).map(sp => (
+                  <div key={sp.sport} className="flex items-center gap-3">
                     <span className="text-xs font-medium w-[130px] truncate" style={{ color: uclaColors.text }}>
-                      {formatSportName(s.sport)}
+                      {formatSportName(sp.sport)}
                     </span>
                     <div className="flex-1 h-2 rounded-full overflow-hidden" style={{ backgroundColor: uclaColors.border }}>
                       <div className="h-full rounded-full transition-all" style={{
-                        width: `${s.ipRate}%`,
-                        backgroundColor: sportColors[s.sport] || BLUE,
+                        width: `${sp.ipRate}%`,
+                        backgroundColor: sportColors[sp.sport] || BLUE,
                       }} />
                     </div>
                     <span className="text-xs font-bold w-[40px] text-right" style={{ color: uclaColors.text }}>
-                      {s.ipRate.toFixed(0)}%
+                      {sp.ipRate.toFixed(0)}%
                     </span>
                   </div>
                 ))}
@@ -321,7 +505,7 @@ export function UCLAIPIntelligenceTab({ posts, brandGroups, onOpenDrawer }: IPIn
           <div className="mt-5 rounded-xl border bg-white overflow-hidden" style={{ borderColor: uclaColors.border, boxShadow: uclaColors.cardShadow }}>
             <div className="px-6 py-4 border-b" style={{ borderColor: uclaColors.border }}>
               <p className="text-xs" style={{ color: uclaColors.textMuted }}>
-                Comparing performance of NIL posts with and without {shortName} intellectual property
+                Comparing performance of NIL posts with and without {SIGNAL_CONFIG[activeSignal].label}
               </p>
             </div>
 
@@ -330,8 +514,8 @@ export function UCLAIPIntelligenceTab({ posts, brandGroups, onOpenDrawer }: IPIn
                 <thead>
                   <tr className="border-b" style={{ borderColor: uclaColors.border, backgroundColor: uclaColors.lightBg }}>
                     <th className="text-left py-3 pl-6 pr-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: uclaColors.textDim }}>Metric</th>
-                    <th className="text-right py-3 px-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: BLUE }}>With IP</th>
-                    <th className="text-right py-3 px-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: uclaColors.textDim }}>Without IP</th>
+                    <th className="text-right py-3 px-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: BLUE }}>With Signal</th>
+                    <th className="text-right py-3 px-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: uclaColors.textDim }}>Without Signal</th>
                     <th className="text-right py-3 pr-6 pl-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: uclaColors.gold }}>Lift %</th>
                   </tr>
                 </thead>
@@ -380,9 +564,7 @@ export function UCLAIPIntelligenceTab({ posts, brandGroups, onOpenDrawer }: IPIn
                         row.metric,
                         row.drawerDef,
                         row.withVal,
-                        metricsWithoutIP.avgEngagement > 0 ? 'N/A (internal comparison)' : '—',
-                        '—',
-                        `Posts with ${shortName} IP show a ${row.lift > 0 ? '+' : ''}${row.lift.toFixed(1)}% lift in ${row.metric.toLowerCase()}.`,
+                        `Posts with ${SIGNAL_CONFIG[activeSignal].label} show a ${row.lift > 0 ? '+' : ''}${row.lift.toFixed(1)}% lift in ${row.metric.toLowerCase()}.`,
                       )}>
                       <td className="py-4 pl-6 pr-4">
                         <span className="text-sm font-medium" style={{ color: uclaColors.text }}>{row.metric}</span>
@@ -416,28 +598,28 @@ export function UCLAIPIntelligenceTab({ posts, brandGroups, onOpenDrawer }: IPIn
                     <th className="text-left py-3 pl-6 pr-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: uclaColors.textDim }}>#</th>
                     <SortTh label="Sport" active={sportSort === 'sport'} onClick={() => handleSportSort('sport')} asc={sportSortAsc && sportSort === 'sport'} />
                     <th className="text-right py-3 px-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: uclaColors.textDim }}>Posts</th>
-                    <SortTh label="IP Rate" active={sportSort === 'ipRate'} onClick={() => handleSportSort('ipRate')} align="right" asc={sportSortAsc && sportSort === 'ipRate'} />
-                    <th className="text-right py-3 px-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: uclaColors.textDim }}>Eng. w/ IP</th>
-                    <th className="text-right py-3 px-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: uclaColors.textDim }}>Eng. w/o IP</th>
+                    <SortTh label="Signal Rate" active={sportSort === 'ipRate'} onClick={() => handleSportSort('ipRate')} align="right" asc={sportSortAsc && sportSort === 'ipRate'} />
+                    <th className="text-right py-3 px-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: uclaColors.textDim }}>Eng. w/ Signal</th>
+                    <th className="text-right py-3 px-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: uclaColors.textDim }}>Eng. w/o Signal</th>
                     <SortTh label="Lift" active={sportSort === 'lift'} onClick={() => handleSportSort('lift')} align="right" asc={sportSortAsc && sportSort === 'lift'} />
                   </tr>
                 </thead>
                 <tbody>
-                  {sortedSportData.map((s, i) => (
-                    <tr key={s.sport} className="border-b last:border-b-0 hover:bg-blue-50/30 transition-colors"
+                  {sortedSportData.map((sp, i) => (
+                    <tr key={sp.sport} className="border-b last:border-b-0 hover:bg-blue-50/30 transition-colors"
                       style={{ borderColor: uclaColors.border }}>
                       <td className="py-3.5 pl-6 pr-4 font-medium" style={{ color: uclaColors.textDim }}>{i + 1}</td>
                       <td className="py-3.5 pr-4">
                         <div className="flex items-center gap-2">
-                          <div className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ backgroundColor: sportColors[s.sport] || uclaColors.textDim }} />
-                          <span className="font-medium" style={{ color: uclaColors.text }}>{formatSportName(s.sport)}</span>
+                          <div className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ backgroundColor: sportColors[sp.sport] || uclaColors.textDim }} />
+                          <span className="font-medium" style={{ color: uclaColors.text }}>{formatSportName(sp.sport)}</span>
                         </div>
                       </td>
-                      <td className="py-3.5 px-4 text-right" style={{ color: uclaColors.textMuted }}>{s.total}</td>
-                      <td className="py-3.5 px-4 text-right font-medium" style={{ color: uclaColors.text }}>{s.ipRate.toFixed(0)}%</td>
-                      <td className="py-3.5 px-4 text-right font-medium" style={{ color: BLUE }}>{s.avgEngWith.toFixed(2)}%</td>
-                      <td className="py-3.5 px-4 text-right" style={{ color: uclaColors.textMuted }}>{s.avgEngWithout.toFixed(2)}%</td>
-                      <td className="py-3.5 px-4 text-right"><LiftBadge value={s.liftEng} /></td>
+                      <td className="py-3.5 px-4 text-right" style={{ color: uclaColors.textMuted }}>{sp.total}</td>
+                      <td className="py-3.5 px-4 text-right font-medium" style={{ color: uclaColors.text }}>{sp.ipRate.toFixed(0)}%</td>
+                      <td className="py-3.5 px-4 text-right font-medium" style={{ color: BLUE }}>{sp.avgEngWith.toFixed(2)}%</td>
+                      <td className="py-3.5 px-4 text-right" style={{ color: uclaColors.textMuted }}>{sp.avgEngWithout.toFixed(2)}%</td>
+                      <td className="py-3.5 px-4 text-right"><LiftBadge value={sp.liftEng} /></td>
                     </tr>
                   ))}
                 </tbody>
@@ -457,40 +639,40 @@ export function UCLAIPIntelligenceTab({ posts, brandGroups, onOpenDrawer }: IPIn
                   <tr className="border-b" style={{ borderColor: uclaColors.border, backgroundColor: uclaColors.lightBg }}>
                     <th className="text-left py-3 pl-6 pr-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: uclaColors.textDim }}>Rank</th>
                     <th className="text-left py-3 pr-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: uclaColors.textDim }}>School</th>
-                    <th className="text-right py-3 px-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: uclaColors.textDim }}>% NIL Posts w/ IP</th>
+                    <th className="text-right py-3 px-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: uclaColors.textDim }}>% Posts w/ IP</th>
                     <th className="text-right py-3 px-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: uclaColors.textDim }}>Eng. Lift from IP</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {conferenceBenchmark.map(s => {
-                    const isUcla = s.id === schoolId;
+                  {conferenceBenchmark.map(sc => {
+                    const isThis = sc.id === schoolId;
                     return (
-                      <tr key={s.id}
+                      <tr key={sc.id}
                         className="border-b last:border-b-0 transition-colors"
                         style={{
                           borderColor: uclaColors.border,
-                          backgroundColor: isUcla ? BLUE + '06' : undefined,
+                          backgroundColor: isThis ? BLUE + '06' : undefined,
                         }}>
                         <td className="py-3.5 pl-6 pr-4">
-                          <span className={`text-sm ${isUcla ? 'font-bold' : 'font-medium'}`}
-                            style={{ color: isUcla ? BLUE : uclaColors.textMuted }}>
-                            {s.ipRank}
+                          <span className={`text-sm ${isThis ? 'font-bold' : 'font-medium'}`}
+                            style={{ color: isThis ? BLUE : uclaColors.textMuted }}>
+                            {sc.ipRank}
                           </span>
                         </td>
                         <td className="py-3.5 pr-4">
                           <div className="flex items-center gap-2.5">
-                            <img src={s.logoUrl} alt={s.shortName} className="w-5 h-5 object-contain" />
-                            <span className={isUcla ? 'font-bold' : 'font-medium'}
-                              style={{ color: isUcla ? BLUE : uclaColors.text }}>
-                              {s.shortName}
+                            <img src={sc.logoUrl} alt={sc.shortName} className="w-5 h-5 object-contain" />
+                            <span className={isThis ? 'font-bold' : 'font-medium'}
+                              style={{ color: isThis ? BLUE : uclaColors.text }}>
+                              {sc.shortName}
                             </span>
                           </div>
                         </td>
                         <td className="py-3.5 px-4 text-right font-medium" style={{ color: uclaColors.text }}>
-                          {s.ipPct.toFixed(1)}%
+                          {sc.ipPct.toFixed(1)}%
                         </td>
                         <td className="py-3.5 px-4 text-right">
-                          <LiftBadge value={s.engLift} />
+                          <LiftBadge value={sc.engLift} />
                         </td>
                       </tr>
                     );
@@ -511,9 +693,9 @@ export function UCLAIPIntelligenceTab({ posts, brandGroups, onOpenDrawer }: IPIn
                 <thead>
                   <tr className="border-b" style={{ borderColor: uclaColors.border, backgroundColor: uclaColors.lightBg }}>
                     <th className="text-left py-3 pl-6 pr-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: uclaColors.textDim }}>Brand</th>
-                    <th className="text-center py-3 px-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: uclaColors.textDim }}>Uses {shortName} IP?</th>
+                    <th className="text-center py-3 px-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: uclaColors.textDim }}>{SIGNAL_CONFIG[activeSignal].shortLabel} Signal?</th>
                     <th className="text-right py-3 px-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: uclaColors.textDim }}># Posts</th>
-                    <th className="text-right py-3 px-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: uclaColors.textDim }}>IP Posts</th>
+                    <th className="text-right py-3 px-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: uclaColors.textDim }}>Signal Posts</th>
                     <th className="text-right py-3 px-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: uclaColors.textDim }}>Est. EMV</th>
                     <th className="text-center py-3 px-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: uclaColors.textDim }}>Recurring?</th>
                     <th className="text-left py-3 pr-6 pl-4 text-[10px] font-semibold uppercase tracking-wider" style={{ color: uclaColors.textDim }}>Sports</th>
@@ -558,10 +740,10 @@ export function UCLAIPIntelligenceTab({ posts, brandGroups, onOpenDrawer }: IPIn
                       </td>
                       <td className="py-3 pr-6 pl-4">
                         <div className="flex flex-wrap gap-1">
-                          {b.sports.slice(0, 2).map(s => (
-                            <span key={s} className="px-1.5 py-0.5 rounded text-[9px] font-medium"
+                          {b.sports.slice(0, 2).map(sp => (
+                            <span key={sp} className="px-1.5 py-0.5 rounded text-[9px] font-medium"
                               style={{ backgroundColor: BLUE + '10', color: BLUE }}>
-                              {formatSportName(s).split(' ').pop()}
+                              {formatSportName(sp).split(' ').pop()}
                             </span>
                           ))}
                           {b.sports.length > 2 && (
@@ -578,7 +760,7 @@ export function UCLAIPIntelligenceTab({ posts, brandGroups, onOpenDrawer }: IPIn
         </section>
       </div>
 
-      {/* ═══ 6) AI INSIGHT BLOCK (Right sidebar) ═════════════ */}
+      {/* ═══ AI INSIGHT BLOCK (Right sidebar) ════════════════ */}
       <aside className="hidden xl:block w-[280px] flex-shrink-0">
         <div className="sticky top-[120px] rounded-xl border bg-white p-5" style={{ borderColor: uclaColors.border, boxShadow: uclaColors.cardShadow }}>
           <div className="flex items-center gap-2 mb-4">
@@ -619,11 +801,10 @@ function computeGroupMetrics(posts: SponsorPost[]) {
   const totalShares = posts.reduce((s, p) => s + (p.metrics.shares || 0), 0);
   const totalInteractions = posts.reduce((s, p) => s + p.metrics.likes + p.metrics.comments + (p.metrics.shares || 0), 0);
 
-  // Brand recurrence: % of brands appearing 3+ times
   const brandCounts = new Map<string, number>();
   posts.forEach(p => {
-    const key = p.sponsorPartner.toLowerCase();
-    brandCounts.set(key, (brandCounts.get(key) || 0) + 1);
+    const key = (p.sponsorPartner || '').toLowerCase();
+    if (key) brandCounts.set(key, (brandCounts.get(key) || 0) + 1);
   });
   const totalBrands = brandCounts.size;
   const recurringBrands = [...brandCounts.values()].filter(c => c >= 3).length;
@@ -649,10 +830,6 @@ function SectionHeader({ number, title }: { number: string; title: string }) {
       <h2 className="text-base font-bold tracking-tight" style={{ color: uclaColors.text }}>{title}</h2>
     </div>
   );
-}
-
-function Separator() {
-  return <div className="hidden sm:block w-px h-10 self-center" style={{ backgroundColor: uclaColors.border }} />;
 }
 
 function BenchmarkChip({ label, value, highlight }: { label: string; value: string; highlight?: boolean }) {
