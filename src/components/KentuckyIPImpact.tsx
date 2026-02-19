@@ -1332,7 +1332,10 @@ function PartnershipsTab() {
       {/* Full Table Section */}
       <div>
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
-          <SectionHeader primary="ALL " secondary="PARTNERSHIPS" />
+          <div>
+            <SectionHeader primary="ALL " secondary="PARTNERSHIPS" />
+            <p className="text-sm text-gray-500 mt-1">All brands with disclosed sponsorships in athlete posts, sorted by {(sortOptions as Array<{key: keyof Partnership; label: string}>).find(o => o.key === sortKey)?.label.toLowerCase() ?? 'engagement lift'}.</p>
+          </div>
           <div className="relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
             <input
@@ -2081,6 +2084,7 @@ function ContentTab() {
   return (
     <div className="space-y-6">
       <SectionHeader primary="CONTENT " secondary="PERFORMANCE" />
+      <p className="text-sm text-gray-500 mt-2">Top athlete and team page posts from all posts analyzed. Engagement lift is measured against the school-wide median post.</p>
 
       <div className="flex items-center gap-2">
         <span className="text-xs uppercase tracking-wider text-gray-500 font-semibold mr-1">Content Type</span>
