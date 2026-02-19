@@ -2585,7 +2585,7 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
                 ? `${formatNumber(row.totalPosts > 0 ? row.totalLikes / row.totalPosts : 0)} avg likes/post`
                 : activeMetric === 'engagementRate'
                   ? `${formatNumber(row.totalInteractions)} interactions`
-                  : `${formatNumber(row.ipPosts)} with ${signal}`;
+                  : `${formatNumber(row.followers)} followers`;
           const primaryValue = activeMetric === 'engagementRate' ? formatPercent(value, 2) : formatNumber(value);
 
           return (
