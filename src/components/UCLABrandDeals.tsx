@@ -1669,10 +1669,11 @@ function IPTab({ ipImpact }: { ipImpact: UCLAIPImpact }) {
   const withData  = active.data.yes;
   const noData    = active.data.no;
 
-  const withLpp  = withData.contents  > 0 ? withData.likes    / withData.contents  : 0;
-  const noLpp    = noData.contents    > 0 ? noData.likes      / noData.contents    : 0;
-  const withCpp  = withData.contents  > 0 ? withData.comments / withData.contents  : 0;
-  const noCpp    = noData.contents    > 0 ? noData.comments   / noData.contents    : 0;
+  // likes/comments in the JSON are already per-post averages — no division needed
+  const withLpp  = withData.likes;
+  const noLpp    = noData.likes;
+  const withCpp  = withData.comments;
+  const noCpp    = noData.comments;
 
   const getValues = () => {
     if (metric === 'er') return {
@@ -1837,7 +1838,7 @@ function IPTab({ ipImpact }: { ipImpact: UCLAIPImpact }) {
           {signals.map(s => {
             const pos = s.data.avgLift >= 0;
             const color = pos ? '#2774AE' : '#C2413B';
-            const lpp = s.data.yes.contents > 0 ? s.data.yes.likes / s.data.yes.contents : 0;
+            const lpp = s.data.yes.likes; // already a per-post average
             return (
               <button
                 key={s.id}
