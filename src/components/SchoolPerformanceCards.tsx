@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { Search, TrendingUp, Users, ChevronDown, ChevronRight } from 'lucide-react';
-import { usePlayflyData, formatNumber, formatSportName } from '../contexts/PlayflyDataContext';
+import { usePlayflyData, formatNumber, formatSportName, type SchoolMetrics, type AthleteMetric } from '../contexts/PlayflyDataContext';
 import { getTeamsBySchool } from '../data/jabaRealData';
 
 export function SchoolPerformanceCards() {
@@ -12,7 +12,7 @@ export function SchoolPerformanceCards() {
 
   // Build school list from real metrics data
   const schoolList = useMemo(() => {
-    return Object.entries(schools)
+    return (Object.entries(schools) as [string, SchoolMetrics][])
       .map(([name, data]) => {
         const brandInfo = brandSummary?.schoolStats.find(s => s.schoolName === name);
         return {
@@ -36,8 +36,8 @@ export function SchoolPerformanceCards() {
   // Get real athletes for a school
   const getAthletesForSchool = (schoolName: string) => {
     return athletes
-      .filter(a => a.school === schoolName)
-      .sort((a, b) => b.followers - a.followers)
+      .filter((a: AthleteMetric) => a.school === schoolName)
+      .sort((a: AthleteMetric, b: AthleteMetric) => b.followers - a.followers)
       .slice(0, 10);
   };
 
@@ -60,7 +60,7 @@ export function SchoolPerformanceCards() {
   };
 
   // Get brands active at a school from brand summary
-  const getBrandsForSchool = (schoolName: string) => {
+  const getBrandsForSchool = (schoolName: string): SchoolMetrics['topBrands'] => {
     const schoolMetrics = schools[schoolName];
     if (!schoolMetrics) return [];
     return schoolMetrics.topBrands
@@ -287,7 +287,7 @@ export function SchoolPerformanceCards() {
                                   <td className="py-3 text-right text-[#3B9FD9] font-semibold">{brand.engagement.toLocaleString()}</td>
                                   <td className="py-3">
                                     <div className="flex gap-1">
-                                      {brand.ipTypesUsed.length > 0 ? brand.ipTypesUsed.map(t => (
+                                      {brand.ipTypesUsed.length > 0 ? brand.ipTypesUsed.map((t: string) => (
                                         <span key={t} className="px-2 py-0.5 bg-[#1770C0]/20 text-[#3B9FD9] rounded text-xs">{t}</span>
                                       )) : (
                                         <span className="text-gray-500 text-xs">none</span>

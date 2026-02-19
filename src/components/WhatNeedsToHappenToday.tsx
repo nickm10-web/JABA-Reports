@@ -1,5 +1,5 @@
 import { Calendar, Zap, TrendingUp } from 'lucide-react';
-import { usePlayflyData, formatNumber } from '../contexts/PlayflyDataContext';
+import { usePlayflyData, formatNumber, type AthleteMetric } from '../contexts/PlayflyDataContext';
 
 export function WhatNeedsToHappenToday() {
   const { networkTotals, athletes, isLoading } = usePlayflyData();
@@ -17,10 +17,10 @@ export function WhatNeedsToHappenToday() {
   // Compute high-engagement unsponsored athletes:
   // Athletes with above-average engagement rate but no sponsored posts detected
   const avgEngagement = athletes.length > 0
-    ? athletes.reduce((sum, a) => sum + a.engagementRate, 0) / athletes.length
+    ? athletes.reduce((sum: number, a: AthleteMetric) => sum + a.engagementRate, 0) / athletes.length
     : 0;
   const highEngagementUnsponsored = athletes.filter(
-    a => a.engagementRate > avgEngagement * 2 && a.postCount > 5
+    (a: AthleteMetric) => a.engagementRate > avgEngagement * 2 && a.postCount > 5
   );
   const unsponsoredCount = highEngagementUnsponsored.length;
 
