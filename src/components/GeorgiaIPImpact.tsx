@@ -1585,12 +1585,12 @@ function BenchmarkTab() {
     return [...schools].sort((a, b) => b[rankingMetric] - a[rankingMetric]);
   }, [schools, rankingMetric]);
 
-  const kyIndex = rankedSchools.findIndex((s) => s.name === 'Georgia');
-  const kyRank = kyIndex >= 0 ? kyIndex + 1 : null;
-  const kySchool = rankedSchools.find((s) => s.name === 'Georgia') ?? null;
-  const kyValue = kySchool ? (rankingMetric === 'ipPosts' ? Math.round(kySchool.posts * kySchool.adoption / 100) : kySchool[rankingMetric]) : 0;
+  const georgiaIndex = rankedSchools.findIndex((s) => s.name === 'Georgia');
+  const georgiaRank = georgiaIndex >= 0 ? georgiaIndex + 1 : null;
+  const georgiaSchool = rankedSchools.find((s) => s.name === 'Georgia') ?? null;
+  const georgiaValue = georgiaSchool ? (rankingMetric === 'ipPosts' ? Math.round(georgiaSchool.posts * georgiaSchool.adoption / 100) : georgiaSchool[rankingMetric]) : 0;
   const avgValue = metricAverage[rankingMetric];
-  const deltaVsAvg = kyValue - avgValue;
+  const deltaVsAvg = georgiaValue - avgValue;
   const topSchool = rankedSchools[0];
 
   return (
@@ -1636,7 +1636,7 @@ function BenchmarkTab() {
           <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Georgia Rank</p>
           <div className="flex items-end gap-2">
             <p className="text-4xl font-black" style={{ color: colors.primary }}>
-              {kyRank ? `#${kyRank}` : 'N/A'}
+              {georgiaRank ? `#${georgiaRank}` : 'N/A'}
             </p>
             <p className="text-sm text-gray-500 mb-1">of {rankedSchools.length}</p>
           </div>
@@ -1647,7 +1647,7 @@ function BenchmarkTab() {
           <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Georgia Value</p>
           <div className="flex items-end gap-2">
             <p className="text-4xl font-black text-gray-900">
-              {rankingMetric === 'followers' || rankingMetric === 'posts' || rankingMetric === 'ipPosts' ? formatNumber(kyValue) : `${kyValue.toFixed(1)}%`}
+              {rankingMetric === 'followers' || rankingMetric === 'posts' || rankingMetric === 'ipPosts' ? formatNumber(georgiaValue) : `${georgiaValue.toFixed(1)}%`}
             </p>
             {avgValue > 0 && (
               <p
@@ -1668,7 +1668,7 @@ function BenchmarkTab() {
           </div>
           <p className="text-sm text-gray-700">
             {topSchool
-              ? <>Current leader is <span className="font-semibold">{topSchool.name}</span> at {rankingMetric === 'followers' || rankingMetric === 'posts' || rankingMetric === 'ipPosts' ? formatNumber(rankingMetric === 'ipPosts' ? Math.round(topSchool.posts * topSchool.adoption / 100) : topSchool[rankingMetric]) : `${topSchool[rankingMetric].toFixed(1)}%`}. Georgia is {kyRank ? `#${kyRank}` : 'unranked'} with {rankingMetric === 'followers' || rankingMetric === 'posts' || rankingMetric === 'ipPosts' ? formatNumber(kyValue) : `${kyValue.toFixed(1)}%`}.</>
+              ? <>Current leader is <span className="font-semibold">{topSchool.name}</span> at {rankingMetric === 'followers' || rankingMetric === 'posts' || rankingMetric === 'ipPosts' ? formatNumber(rankingMetric === 'ipPosts' ? Math.round(topSchool.posts * topSchool.adoption / 100) : topSchool[rankingMetric]) : `${topSchool[rankingMetric].toFixed(1)}%`}. Georgia is {georgiaRank ? `#${georgiaRank}` : 'unranked'} with {rankingMetric === 'followers' || rankingMetric === 'posts' || rankingMetric === 'ipPosts' ? formatNumber(georgiaValue) : `${georgiaValue.toFixed(1)}%`}.</>
               : <>No ranking data available for this view.</>
             }
           </p>
@@ -1696,24 +1696,24 @@ function BenchmarkTab() {
             </thead>
             <tbody>
               {rankedSchools.map((school, idx) => {
-                const isKY = school.name === 'Georgia';
+                const isGeorgia = school.name === 'Georgia';
                 return (
                   <tr
                     key={school.name}
-                    className={`border-b border-gray-100 transition-colors ${isKY ? 'bg-blue-50 hover:bg-blue-100/50' : idx % 2 === 1 ? 'bg-gray-50/50 hover:bg-gray-50' : 'hover:bg-gray-50'}`}
+                    className={`border-b border-gray-100 transition-colors ${isGeorgia ? 'bg-blue-50 hover:bg-blue-100/50' : idx % 2 === 1 ? 'bg-gray-50/50 hover:bg-gray-50' : 'hover:bg-gray-50'}`}
                   >
                     <td className="px-3 py-3 text-center">
                       {idx < 3 ? (
                         <span
                           className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold mx-auto"
                           style={{
-                            backgroundColor: isKY ? colors.primary : '#d1d5db',
-                            color: isKY ? colors.white : colors.text,
+                            backgroundColor: isGeorgia ? colors.primary : '#d1d5db',
+                            color: isGeorgia ? colors.white : colors.text,
                           }}
                         >
                           {idx + 1}
                         </span>
-                      ) : isKY ? (
+                      ) : isGeorgia ? (
                         <span
                           className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold mx-auto"
                           style={{ backgroundColor: colors.primary, color: colors.white }}
@@ -1724,9 +1724,9 @@ function BenchmarkTab() {
                         <span className="text-sm text-gray-400 font-medium">{idx + 1}</span>
                       )}
                     </td>
-                    <td className={`px-4 py-3 ${isKY ? 'font-bold' : 'font-semibold'}`} style={{ color: isKY ? colors.primary : colors.text }}>
+                    <td className={`px-4 py-3 ${isGeorgia ? 'font-bold' : 'font-semibold'}`} style={{ color: isGeorgia ? colors.primary : colors.text }}>
                       <div className="flex items-center gap-2">
-                        {isKY && (
+                        {isGeorgia && (
                           <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: colors.primary }} />
                         )}
                         {school.name}
@@ -1744,7 +1744,7 @@ function BenchmarkTab() {
                       </div>
                     </td>
                     {!isConference && <td className="px-4 py-3 text-xs text-gray-500 hidden md:table-cell">{school.conf}</td>}
-                    <td className="px-4 py-3 text-right font-semibold" style={{ color: isKY ? colors.primary : colors.text }}>
+                    <td className="px-4 py-3 text-right font-semibold" style={{ color: isGeorgia ? colors.primary : colors.text }}>
                       {formatNumber(school.followers)}
                     </td>
                     <td className="px-4 py-3 text-right text-gray-600 hidden md:table-cell">{formatNumber(school.posts)}</td>
@@ -2568,14 +2568,14 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
     { id: 'posts', label: 'Posts' },
   ];
 
-  const ukBlue = '#BA0C2F';
+
 
   const SortIcon = ({ col }: { col: TeamSortKey }) => {
     if (sortKey !== col) return <ChevronDown className="w-3 h-3 opacity-30" />;
     return sortDir === 'desc' ? (
-      <ChevronDown className="w-3 h-3" style={{ color: ukBlue }} />
+      <ChevronDown className="w-3 h-3" style={{ color: colors.primary }} />
     ) : (
-      <ChevronUp className="w-3 h-3" style={{ color: ukBlue }} />
+      <ChevronUp className="w-3 h-3" style={{ color: colors.primary }} />
     );
   };
 
@@ -2641,8 +2641,8 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
               }}
               className="px-3.5 py-2 rounded-full text-xs font-semibold border transition-colors"
               style={{
-                backgroundColor: activeMetric === mb.id ? ukBlue : '#fff',
-                borderColor: activeMetric === mb.id ? ukBlue : 'rgba(0,0,0,0.12)',
+                backgroundColor: activeMetric === mb.id ? colors.primary : '#fff',
+                borderColor: activeMetric === mb.id ? colors.primary : 'rgba(0,0,0,0.12)',
                 color: activeMetric === mb.id ? '#fff' : colors.textMuted,
               }}
             >
@@ -2697,8 +2697,8 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
                 <span
                   className="w-7 h-7 rounded-full text-xs font-bold flex items-center justify-center"
                   style={{
-                    backgroundColor: rank <= 3 ? `${ukBlue}15` : '#f3f4f6',
-                    color: rank <= 3 ? ukBlue : colors.textMuted,
+                    backgroundColor: rank <= 3 ? `${colors.primary}15` : '#f3f4f6',
+                    color: rank <= 3 ? colors.primary : colors.textMuted,
                   }}
                 >
                   #{rank}
@@ -2709,7 +2709,7 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
               </p>
               <div className="mt-3 flex items-center justify-between text-xs">
                 <span style={{ color: colors.textMuted }}>Share of total</span>
-                <span className="font-semibold" style={{ color: ukBlue }}>
+                <span className="font-semibold" style={{ color: colors.primary }}>
                   {sharePct.toFixed(1)}%
                 </span>
               </div>
@@ -2756,7 +2756,7 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
                   key={row.sportKey}
                   className="border-b border-gray-50 hover:bg-blue-50/30 transition-colors motion-reduce:transition-none"
                 >
-                  <td className="px-4 py-3 font-semibold" style={{ color: ukBlue }}>
+                  <td className="px-4 py-3 font-semibold" style={{ color: colors.primary }}>
                     #{idx + 1}
                   </td>
                   <td className="px-4 py-3 font-medium" style={{ color: colors.text }}>
@@ -2790,7 +2790,7 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
 // ═══════════════════════════════════════════════════════════════
 // TEAM PAGE LEADERBOARD (Georgia)
 // ═══════════════════════════════════════════════════════════════
-interface KYTeamRosterRow {
+interface GeorgiaTeamRosterRow {
   schoolName: string;
   conferenceName: string;
   sport: string;
@@ -2807,7 +2807,7 @@ interface KYSportSchoolEntry {
 }
 
 function GeorgiaTeamPageLeaderboard() {
-  const [rawRows, setRawRows] = useState<KYTeamRosterRow[]>([]);
+  const [rawRows, setRawRows] = useState<GeorgiaTeamRosterRow[]>([]);
   const [scope, setScope] = useState<'conference' | 'ncaa'>('conference');
   const [selectedSport, setSelectedSport] = useState<string>('ALL');
   const [sortMetric, setSortMetric] = useState<'followers' | 'posts' | 'likes'>('followers');
@@ -2818,7 +2818,7 @@ function GeorgiaTeamPageLeaderboard() {
       try {
         const res = await fetch('/data/roster_teams.json');
         if (!res.ok) return;
-        const rows = (await res.json()) as KYTeamRosterRow[];
+        const rows = (await res.json()) as GeorgiaTeamRosterRow[];
         if (!cancelled) setRawRows(rows);
       } catch { /* ignore */ }
     };
@@ -2827,7 +2827,7 @@ function GeorgiaTeamPageLeaderboard() {
   }, []);
 
   // Get available sports that Georgia has
-  const ukSports = useMemo(() => {
+  const georgiaSports = useMemo(() => {
     const sports = rawRows.filter(r => r.schoolName === 'Georgia').map(r => r.sport);
     return [...new Set(sports)].sort((a, b) => formatSportLabel(a).localeCompare(formatSportLabel(b)));
   }, [rawRows]);
@@ -2878,7 +2878,7 @@ function GeorgiaTeamPageLeaderboard() {
               style={{ color: colors.text, borderColor: colors.glassBorder }}
             >
               <option value="ALL">All Sports</option>
-              {ukSports.map(s => (
+              {georgiaSports.map(s => (
                 <option key={s} value={s}>{formatSportLabel(s)}</option>
               ))}
             </select>
