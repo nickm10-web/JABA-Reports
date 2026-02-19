@@ -84,8 +84,61 @@ interface KentuckyRosterTeam {
   };
 }
 
+interface SchoolFollowerRosterRow {
+  schoolName?: string;
+  metrics?: {
+    ninetyDays?: { followers?: number };
+    thirtyDays?: { followers?: number };
+    sevenDays?: { followers?: number };
+  };
+}
+
 function toNumber(value: unknown): number {
   return typeof value === 'number' && Number.isFinite(value) ? value : 0;
+}
+
+function normalizeSchoolKey(name: string): string {
+  const cleaned = String(name || '')
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/\([^)]*\)/g, '')
+    .trim();
+  const condensed = cleaned.replace(/[^a-z0-9]/g, '');
+  if (!condensed) return '';
+
+  const aliases: Record<string, string> = {
+    universityofmaryland: 'maryland',
+    universityofnewmexico: 'newmexico',
+    newmexicostateuniversity: 'newmexicostate',
+    wichitastateuniversity: 'wichitastate',
+    southernmethodistuniversity: 'smu',
+    southernmethodistuniversitysmu: 'smu',
+    riceuniversity: 'rice',
+    brighamyounguniversity: 'byu',
+    brighamyounguniversitybyu: 'byu',
+    byu: 'byu',
+    olemiss: 'olemiss',
+    universityofmississippi: 'mississippi',
+    mississippi: 'mississippi',
+    mississippistate: 'mississippistate',
+    mississippistateuniversity: 'mississippistate',
+    msstate: 'mississippistate',
+    texasam: 'texasam',
+    texasaandm: 'texasam',
+    vanderbilt: 'vanderbilt',
+    kentucky: 'kentucky',
+    universityofkentucky: 'kentucky',
+  };
+
+  if (aliases[condensed]) return aliases[condensed];
+
+  const simplified = cleaned
+    .split(/[^a-z0-9]+/)
+    .filter(Boolean)
+    .filter((token) => !['the', 'university', 'college', 'of', 'at'].includes(token))
+    .join('');
+
+  return aliases[simplified] ?? simplified;
 }
 
 function formatSportLabel(sportKey: string): string {
@@ -1481,8 +1534,32 @@ function PartnershipsTab() {
 function BenchmarkTab() {
   const [benchmarkType, setBenchmarkType] = useState<'conference' | 'ncaa'>('conference');
   const [rankingMetric, setRankingMetric] = useState<'followers' | 'posts' | 'ipPosts' | 'logoEng' | 'mentionEng' | 'collabEng'>('followers');
+  const [followersBySchool, setFollowersBySchool] = useState<Record<string, number>>({});
   const isConference = benchmarkType === 'conference';
-  const schools = isConference ? secSchools : ncaaD1Schools;
+  const schools = useMemo(() => {
+    const base = isConference ? secSchools : ncaaD1Schools;
+    const followerFallbackBySchool: Record<string, number> = {
+      Iowa: 1004448,
+      TCU: 732360,
+      'Iowa State': 1238932,
+    };
+    return base.map((school) => {
+      const normalized = normalizeSchoolKey(school.name);
+      const rosterFollowers =
+        normalized === 'mississippistate'
+          ? (followersBySchool[normalized] ?? followersBySchool.mississippi)
+          : followersBySchool[normalized];
+      return {
+        ...school,
+        followers:
+          rosterFollowers && rosterFollowers > 0
+            ? rosterFollowers
+            : school.followers > 0
+              ? school.followers
+              : followerFallbackBySchool[school.name] ?? 0,
+      };
+    });
+  }, [isConference, followersBySchool]);
   const benchmarkLabel = isConference ? 'SEC' : 'NCAA D1';
   const metricLabels = {
     followers: 'Followers',
@@ -1500,6 +1577,33 @@ function BenchmarkTab() {
     mentionEng: isConference ? conferenceAvg.mentionEng : ncaaD1Avg.mentionEng,
     collabEng: isConference ? conferenceAvg.collabEng : ncaaD1Avg.collabEng,
   };
+
+  useEffect(() => {
+    let cancelled = false;
+    const loadFollowers = async () => {
+      try {
+        const res = await fetch('/data/roster_teams.json');
+        if (!res.ok) return;
+        const rows = (await res.json()) as SchoolFollowerRosterRow[];
+        if (cancelled || !Array.isArray(rows)) return;
+
+        const next: Record<string, number> = {};
+        for (const row of rows) {
+          const key = normalizeSchoolKey(String(row.schoolName || ''));
+          if (!key) continue;
+          const metrics = row.metrics?.ninetyDays ?? row.metrics?.thirtyDays ?? row.metrics?.sevenDays;
+          const followers = toNumber(metrics?.followers);
+          if (followers > 0) next[key] = (next[key] || 0) + followers;
+        }
+
+        if (!cancelled) setFollowersBySchool(next);
+      } catch {
+        // keep static fallback values when dataset is unavailable
+      }
+    };
+    loadFollowers();
+    return () => { cancelled = true; };
+  }, []);
 
   const rankedSchools = useMemo(() => {
     if (rankingMetric === 'ipPosts') {
@@ -2098,6 +2202,21 @@ function ContentTab() {
         />
       </div>
 
+      <div
+        className="rounded-xl px-4 py-3 text-sm"
+        style={{ backgroundColor: `${colors.accent}0D`, border: `1px solid ${colors.accent}33`, color: colors.textMuted }}
+      >
+        {contentView === 'athlete' ? (
+          <>
+            This view reflects <span className="font-semibold">Kentucky athlete personal posts only</span> (not official team pages).
+          </>
+        ) : (
+          <>
+            This view reflects <span className="font-semibold">official Kentucky team page posts only</span> (not athlete personal posts).
+          </>
+        )}
+      </div>
+
       {isLoading ? (
         <GlassCard>
           <div className="space-y-4">
@@ -2510,6 +2629,9 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
           <SectionHeader primary="KENTUCKY " secondary="TEAM PAGES" />
           <p className="text-sm mt-2" style={{ color: colors.textMuted }}>
             {view === 'overview' ? 'Official Kentucky athletics social account performance.' : 'Benchmark Kentucky team pages against conference and NCAA.'}
+          </p>
+          <p className="text-xs mt-1" style={{ color: colors.textDim }}>
+            This tab uses <span className="font-semibold">official Kentucky team page accounts</span>, not athlete personal posts.
           </p>
           {view === 'overview' && (
             <p className="text-xs mt-1" style={{ color: colors.textDim }}>
