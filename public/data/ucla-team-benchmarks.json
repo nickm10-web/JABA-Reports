@@ -742,19 +742,6 @@
       "isBigTen": false
     },
     {
-      "school": "Richmond AFL",
-      "shortName": "Richmond AFL",
-      "conference": "The Ladder",
-      "teamAccounts": 1,
-      "totalFollowers": 323003,
-      "totalLikes": 3248,
-      "totalComments": 18,
-      "totalPosts": 9,
-      "avgEngagementRate": 1.011,
-      "likesPerPost": 360.9,
-      "isBigTen": false
-    },
-    {
       "school": "Rutgers",
       "shortName": "Rutgers",
       "conference": "Big 10",
@@ -820,8 +807,8 @@
       "isBigTen": false
     },
     {
-      "school": "St. John\u2019s University",
-      "shortName": "St. John\u2019s University",
+      "school": "St. John’s University",
+      "shortName": "St. John’s University",
       "conference": "Big East",
       "teamAccounts": 10,
       "totalFollowers": 47602,
