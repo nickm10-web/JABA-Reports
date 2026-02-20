@@ -540,14 +540,49 @@ function AthletesTab({ athletes, primaryColor, onSelectAthlete }: {
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead className="bg-[#F3F6FB] sticky top-0">
-              <tr className="text-xs uppercase tracking-[0.2em] text-[#5B6B82]">
-                <th className="text-left px-4 py-3">Athlete</th>
-                <th className="text-left px-4 py-3">Sport</th>
-                <th className="text-right px-4 py-3">Posts</th>
-                <th className="text-right px-4 py-3">Followers</th>
-                <th className="text-right px-4 py-3">Likes</th>
-                <th className="text-right px-4 py-3">Comments</th>
-                <th className="text-right px-4 py-3">Avg ER</th>
+              <tr className="text-xs uppercase tracking-[0.2em]">
+                <th className="text-left px-4 py-3 text-[#5B6B82]">Athlete</th>
+                <th className="text-left px-4 py-3 text-[#5B6B82]">Sport</th>
+                <th onClick={() => setSortKey('posts')}
+                    className="text-right px-4 py-3 cursor-pointer hover:text-[#1770C0] transition-colors"
+                    style={{ color: sortKey === 'posts' ? primaryColor : '#5B6B82' }}>
+                  <div className="flex items-center justify-end gap-1">
+                    Posts
+                    {sortKey === 'posts' && <span style={{ color: primaryColor }}>↓</span>}
+                  </div>
+                </th>
+                <th onClick={() => setSortKey('followers')}
+                    className="text-right px-4 py-3 cursor-pointer hover:text-[#1770C0] transition-colors"
+                    style={{ color: sortKey === 'followers' ? primaryColor : '#5B6B82' }}>
+                  <div className="flex items-center justify-end gap-1">
+                    Followers
+                    {sortKey === 'followers' && <span style={{ color: primaryColor }}>↓</span>}
+                  </div>
+                </th>
+                <th onClick={() => setSortKey('likes')}
+                    className="text-right px-4 py-3 cursor-pointer hover:text-[#1770C0] transition-colors"
+                    style={{ color: sortKey === 'likes' ? primaryColor : '#5B6B82' }}>
+                  <div className="flex items-center justify-end gap-1">
+                    Likes
+                    {sortKey === 'likes' && <span style={{ color: primaryColor }}>↓</span>}
+                  </div>
+                </th>
+                <th onClick={() => setSortKey('comments')}
+                    className="text-right px-4 py-3 cursor-pointer hover:text-[#1770C0] transition-colors"
+                    style={{ color: sortKey === 'comments' ? primaryColor : '#5B6B82' }}>
+                  <div className="flex items-center justify-end gap-1">
+                    Comments
+                    {sortKey === 'comments' && <span style={{ color: primaryColor }}>↓</span>}
+                  </div>
+                </th>
+                <th onClick={() => setSortKey('engagement')}
+                    className="text-right px-4 py-3 cursor-pointer hover:text-[#1770C0] transition-colors"
+                    style={{ color: sortKey === 'engagement' ? primaryColor : '#5B6B82' }}>
+                  <div className="flex items-center justify-end gap-1">
+                    Avg ER
+                    {sortKey === 'engagement' && <span style={{ color: primaryColor }}>↓</span>}
+                  </div>
+                </th>
               </tr>
             </thead>
             <tbody>
