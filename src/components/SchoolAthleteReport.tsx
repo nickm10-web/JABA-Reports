@@ -118,7 +118,9 @@ function derivePosts(raw: RawPost[]) {
     a.totalPosts++;
     a.totalLikes += p.metrics?.likes || 0;
     a.totalComments += p.metrics?.comments || 0;
-    if (p.metrics?.followers) a.followers = Math.max(a.followers, p.metrics.followers);
+    // Check both athlete.followers and metrics.followers
+    const followerCount = p.athlete?.followers || p.metrics?.followers || 0;
+    if (followerCount > 0) a.followers = Math.max(a.followers, followerCount);
     const er = p.metrics?.engagementRate || 0;
     if (er > 0) { a.engSum += er; a.engCount++; }
 
