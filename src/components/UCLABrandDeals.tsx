@@ -1823,7 +1823,7 @@ function IPTab({ ipImpact }: { ipImpact: UCLAIPImpact }) {
           { label: 'Posts With', value: formatNumber(withData.contents) },
           { label: 'Posts Without', value: formatNumber(noData.contents) },
           { label: 'Avg ER With', value: formatPercent(withData.engagementRate * 100, 1) },
-          { label: 'EMV With', value: formatCurrency(withData.emv) },
+          { label: 'Total EMV', value: formatCurrency(withData.emv * withData.contents) },
         ].map(item => (
           <GlassPanel key={item.label} className="p-4">
             <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">{item.label}</p>
@@ -1872,8 +1872,8 @@ function IPTab({ ipImpact }: { ipImpact: UCLAIPImpact }) {
                     <span className="font-medium text-[#0F1D2E]">{formatNumber(Math.round(lpp))}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>EMV</span>
-                    <span className="font-medium text-[#0F1D2E]">{formatCurrency(s.data.yes.emv)}</span>
+                    <span>Total EMV</span>
+                    <span className="font-medium text-[#0F1D2E]">{formatCurrency(s.data.yes.emv * s.data.yes.contents)}</span>
                   </div>
                 </div>
                 {/* Mini ER bar */}

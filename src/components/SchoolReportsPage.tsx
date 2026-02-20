@@ -13,6 +13,7 @@ import { UCLABrandDeals } from './UCLABrandDeals';
 import { NotreDameBrandDeals } from './NotreDameBrandDeals';
 import { SchoolAthleteReport } from './SchoolAthleteReport';
 import { StJudeAthleteEventImpactReport } from './StJudeAthleteEventImpactReport';
+import { NilReport } from './NilReport';
 import {
   michiganConfig, alabamaConfig, arkansasConfig,
   oklahomaConfig, boiseStateConfig,
