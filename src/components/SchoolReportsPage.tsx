@@ -10,11 +10,12 @@ import { OhioStateIPImpact } from './OhioStateIPImpact';
 import { GeorgiaIPImpact } from './GeorgiaIPImpact';
 import { MichiganIPImpact } from './MichiganIPImpact';
 import { UCLABrandDeals } from './UCLABrandDeals';
+import { NotreDameBrandDeals } from './NotreDameBrandDeals';
 import { SchoolAthleteReport } from './SchoolAthleteReport';
 import { StJudeAthleteEventImpactReport } from './StJudeAthleteEventImpactReport';
 import {
   michiganConfig, alabamaConfig, arkansasConfig,
-  oklahomaConfig, notredameConfig, boiseStateConfig,
+  oklahomaConfig, boiseStateConfig,
 } from '../config/schoolConfigs';
 
 
@@ -130,7 +131,7 @@ export function SchoolReportsPage() {
     }
     if (selectedSchool.id === 'notre-dame') {
       return (
-        <SchoolAthleteReport config={notredameConfig} onBack={() => setSelectedSchool(null)} />
+        <NotreDameBrandDeals onBack={() => setSelectedSchool(null)} />
       );
     }
     if (selectedSchool.id === 'boise-state') {
