@@ -202,20 +202,45 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
   const [activeTab, setActiveTab] = useState<TabId>('overview');
   const [loading, setLoading] = useState(true);
   const [rawPosts, setRawPosts] = useState<RawPost[]>([]);
+  const [rosterData, setRosterData] = useState<any>(null);
   const [selectedAthlete, setSelectedAthlete] = useState<DerivedAthlete | null>(null);
 
   const primaryColor = config.colors.primary;
   const secondaryColor = config.colors.secondary;
 
   useEffect(() => {
-    fetch(config.dataFile)
+    // Fetch content posts
+    const postsPromise = fetch(config.dataFile)
       .then(r => r.ok ? r.json() : [])
-      .then((data: RawPost[]) => { setRawPosts(Array.isArray(data) ? data : []); })
-      .catch(() => {})
-      .finally(() => setLoading(false));
-  }, [config.dataFile]);
+      .then((data: RawPost[]) => Array.isArray(data) ? data : [])
+      .catch(() => []);
 
-  const { athletes, sponsored } = useMemo(() => derivePosts(rawPosts), [rawPosts]);
+    // Try to fetch roster file (optional)
+    const rosterFile = `/data/${config.id}-roster.json`;
+    const rosterPromise = fetch(rosterFile)
+      .then(r => r.ok ? r.json() : null)
+      .catch(() => null);
+
+    Promise.all([postsPromise, rosterPromise])
+      .then(([posts, roster]) => {
+        setRawPosts(posts);
+        setRosterData(roster);
+      })
+      .finally(() => setLoading(false));
+  }, [config.dataFile, config.id]);
+
+  const { athletes, sponsored } = useMemo(() => {
+    const derived = derivePosts(rawPosts);
+    // Merge follower data from roster if available
+    if (rosterData?.athletes) {
+      const rosterMap = new Map(rosterData.athletes.map((a: any) => [a._id, a.followers || 0]));
+      derived.athletes.forEach(athlete => {
+        const rosterFollowers = rosterMap.get(athlete.id);
+        if (typeof rosterFollowers === 'number') athlete.followers = rosterFollowers;
+      });
+    }
+    return derived;
+  }, [rawPosts, rosterData]);
   const sports = useMemo(() => deriveSports(athletes), [athletes]);
   const ipComparisons = useMemo(() => deriveIPComparisons(rawPosts), [rawPosts]);
 

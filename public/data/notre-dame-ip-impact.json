@@ -1,0 +1,68 @@
+{
+  "followers": 1583426,
+  "school": {
+    "_id": "68fc8b597804265f86eb4181",
+    "name": "Notre Dame"
+  },
+  "overall": {
+    "totalContents": 3158,
+    "totalLikes": 8597826,
+    "totalComments": 188224,
+    "engagementRate": 5.548759462077799,
+    "emv": 190778.92
+  },
+  "counts": {
+    "hasOrganizationInCaption": 662,
+    "isOrganizationCollaboration": 5,
+    "hasOrganizationLogo": 1304,
+    "withIp": 1499
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 662,
+      "likes": 4539.841389728097,
+      "comments": 51.67824773413897,
+      "engagementRate": 0.0028997374285013866,
+      "emv": 95.96
+    },
+    "no": {
+      "contents": 2496,
+      "likes": 2240.5653044871797,
+      "comments": 61.703926282051285,
+      "engagementRate": 0.0014539796812539588
+    },
+    "avgLift": 99.43452208359335
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 5,
+      "likes": 5127.6,
+      "comments": 131.4,
+      "engagementRate": 0.003321279301969274,
+      "emv": 115.69
+    },
+    "no": {
+      "contents": 3153,
+      "likes": 2718.7402473834445,
+      "comments": 59.488423723438,
+      "engagementRate": 0.0017545680512426108
+    },
+    "avgLift": 89.29327361324603
+  },
+  "logo": {
+    "yes": {
+      "contents": 1304,
+      "likes": 3424.1970858895706,
+      "comments": 74.15950920245399,
+      "engagementRate": 0.0022093590702009598,
+      "emv": 75.9
+    },
+    "no": {
+      "contents": 1854,
+      "likes": 2229.0577130528586,
+      "comments": 49.36353829557713,
+      "engagementRate": 0.0014389186809793675
+    },
+    "avgLift": 53.543011110065606
+  }
+}
