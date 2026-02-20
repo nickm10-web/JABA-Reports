@@ -34,6 +34,7 @@ interface DerivedAthlete {
   totalPosts: number;
   totalLikes: number;
   totalComments: number;
+  followers: number;
   avgEngagementRate: number; // decimal 0-1
 }
 
@@ -85,9 +86,11 @@ const fmtDate = (v?: string) => {
 };
 const fmtSport = (s?: string) => {
   if (!s) return 'N/A';
-  return s.replace(/_/g, ' ').replace(/\b(mens|womens)\b/gi, w =>
-    w.toLowerCase() === 'mens' ? "Men's" : "Women's"
-  ).replace(/\b\w/g, c => c.toUpperCase());
+  // First replace underscores and title case, then fix Men's/Women's
+  return s.replace(/_/g, ' ')
+    .replace(/\b\w/g, c => c.toUpperCase())
+    .replace(/\bMens\b/g, "Men's")
+    .replace(/\bWomens\b/g, "Women's");
 };
 const emv = (likes: number, comments: number) => likes * 0.5 + comments * 1.5;
 
@@ -107,7 +110,7 @@ function derivePosts(raw: RawPost[]) {
         sport: p.athlete?.sport || 'Unknown',
         image: p.athlete?.image,
         position: p.athlete?.position,
-        totalPosts: 0, totalLikes: 0, totalComments: 0,
+        totalPosts: 0, totalLikes: 0, totalComments: 0, followers: 0,
         avgEngagementRate: 0, engSum: 0, engCount: 0,
       });
     }
@@ -115,6 +118,7 @@ function derivePosts(raw: RawPost[]) {
     a.totalPosts++;
     a.totalLikes += p.metrics?.likes || 0;
     a.totalComments += p.metrics?.comments || 0;
+    if (p.metrics?.followers) a.followers = Math.max(a.followers, p.metrics.followers);
     const er = p.metrics?.engagementRate || 0;
     if (er > 0) { a.engSum += er; a.engCount++; }
 
@@ -457,7 +461,7 @@ function AthletesTab({ athletes, primaryColor, onSelectAthlete }: {
 }) {
   const [search, setSearch] = useState('');
   const [sport, setSport] = useState('All');
-  const [sortKey, setSortKey] = useState<'likes' | 'engagement' | 'posts' | 'comments'>('likes');
+  const [sortKey, setSortKey] = useState<'likes' | 'engagement' | 'posts' | 'comments' | 'followers'>('likes');
 
   const sports = ['All', ...new Set(athletes.map(a => a.sport))];
 
@@ -471,6 +475,7 @@ function AthletesTab({ athletes, primaryColor, onSelectAthlete }: {
     if (sortKey === 'likes') return b.totalLikes - a.totalLikes;
     if (sortKey === 'engagement') return b.avgEngagementRate - a.avgEngagementRate;
     if (sortKey === 'posts') return b.totalPosts - a.totalPosts;
+    if (sortKey === 'followers') return b.followers - a.followers;
     return b.totalComments - a.totalComments;
   }), [filtered, sortKey]);
 
@@ -498,8 +503,8 @@ function AthletesTab({ athletes, primaryColor, onSelectAthlete }: {
             className="bg-white border border-[#E1E7F0] rounded-full px-3 py-2 text-sm text-[#1E2A3B]">
             {sports.map(s => <option key={s} value={s}>{fmtSport(s)}</option>)}
           </select>
-          <div className="flex items-center gap-2">
-            {chip('likes', 'Likes')}{chip('engagement', 'Engagement Rate')}{chip('posts', 'Posts')}{chip('comments', 'Comments')}
+          <div className="flex items-center gap-2 flex-wrap">
+            {chip('likes', 'Likes')}{chip('followers', 'Followers')}{chip('engagement', 'Engagement Rate')}{chip('posts', 'Posts')}{chip('comments', 'Comments')}
           </div>
         </div>
       </GlassPanel>
@@ -539,6 +544,7 @@ function AthletesTab({ athletes, primaryColor, onSelectAthlete }: {
                 <th className="text-left px-4 py-3">Athlete</th>
                 <th className="text-left px-4 py-3">Sport</th>
                 <th className="text-right px-4 py-3">Posts</th>
+                <th className="text-right px-4 py-3">Followers</th>
                 <th className="text-right px-4 py-3">Likes</th>
                 <th className="text-right px-4 py-3">Comments</th>
                 <th className="text-right px-4 py-3">Avg ER</th>
@@ -551,6 +557,7 @@ function AthletesTab({ athletes, primaryColor, onSelectAthlete }: {
                   <td className="px-4 py-3 text-sm font-semibold text-[#0F1D2E]">{a.name}</td>
                   <td className="px-4 py-3 text-sm text-[#5B6B82]">{fmtSport(a.sport)}</td>
                   <td className="px-4 py-3 text-sm text-right">{fmtN(a.totalPosts)}</td>
+                  <td className="px-4 py-3 text-sm text-right">{fmtN(a.followers)}</td>
                   <td className="px-4 py-3 text-sm text-right">{fmtN(a.totalLikes)}</td>
                   <td className="px-4 py-3 text-sm text-right">{fmtN(a.totalComments)}</td>
                   <td className="px-4 py-3 text-sm text-right">{fmtPct(a.avgEngagementRate * 100)}</td>

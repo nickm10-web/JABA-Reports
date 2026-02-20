@@ -3,3 +3,8 @@ dist
 .env
 .env.local
 .env.*.local
+.next
+baumhowersauburn
+public/data/last_ip_data_contents.json
+public/data/ncaa_updated_ip_contents_feb_18.json
+public/data/ncaa_roster_updated_feb_17.json
