@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { ArrowLeft, Handshake } from 'lucide-react';
+import { ArrowLeft, Handshake, Megaphone } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { BaylorBrandDeals } from './BaylorBrandDeals';
+import { TyceArmstrongEarnedMediaImpactReport } from './TyceArmstrongEarnedMediaImpactReport';
 
-type View = 'hub' | 'brand-deals';
+type View = 'hub' | 'brand-deals' | 'earned-media-impact';
 
 interface BaylorReportHubProps {
   onBack?: () => void;
@@ -14,6 +15,9 @@ export function BaylorReportHub({ onBack }: BaylorReportHubProps) {
 
   if (activeView === 'brand-deals') {
     return <BaylorBrandDeals onBack={() => setActiveView('hub')} />;
+  }
+  if (activeView === 'earned-media-impact') {
+    return <TyceArmstrongEarnedMediaImpactReport onBack={() => setActiveView('hub')} />;
   }
 
   return (
@@ -41,7 +45,7 @@ export function BaylorReportHub({ onBack }: BaylorReportHubProps) {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 pb-16 relative z-10">
-        <div className="grid grid-cols-1 gap-6 max-w-xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <motion.button
             onClick={() => setActiveView('brand-deals')}
             className="group relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-green-400/50 transition-all duration-300 text-left w-full"
@@ -55,6 +59,27 @@ export function BaylorReportHub({ onBack }: BaylorReportHubProps) {
               <h2 className="text-2xl font-bold text-white mb-3">Brand Deals 2025</h2>
               <p className="text-gray-300 text-base mb-6">All brand partnership posts from Baylor athletes in 2025</p>
               <div className="flex items-center gap-2 text-green-400 text-sm font-semibold">
+                <span>View Report</span>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+          </motion.button>
+
+          <motion.button
+            onClick={() => setActiveView('earned-media-impact')}
+            className="group relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-yellow-300/60 transition-all duration-300 text-left w-full"
+            whileHover={{ scale: 1.02, y: -5 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <div className="relative z-10">
+              <div className="w-14 h-14 bg-gradient-to-br from-yellow-500 to-green-700 rounded-xl flex items-center justify-center mb-4">
+                <Megaphone className="w-7 h-7 text-white" />
+              </div>
+              <h2 className="text-2xl font-bold text-white mb-3">Tyce Armstrong Earned Media Impact</h2>
+              <p className="text-gray-300 text-base mb-6">Executive earned media impact report from X social listening preview data</p>
+              <div className="flex items-center gap-2 text-yellow-300 text-sm font-semibold">
                 <span>View Report</span>
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

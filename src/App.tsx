@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate, useNavigate, useSearchParams } 
 import { SchoolReportsPage } from './components/SchoolReportsPage';
 import { AuburnCampaignOverview } from './components/AuburnCampaignOverview';
 import { BaylorBrandDeals } from './components/BaylorBrandDeals';
+import { TyceArmstrongEarnedMediaImpactReport } from './components/TyceArmstrongEarnedMediaImpactReport';
 import { OhioStateIPImpact } from './components/OhioStateIPImpact';
 import { KentuckyIPImpact } from './components/KentuckyIPImpact';
 import { GeorgiaIPImpact } from './components/GeorgiaIPImpact';
@@ -25,6 +26,12 @@ function AuburnRoute() {
 
 function BaylorRoute() {
   return <BaylorBrandDeals />;
+}
+
+function BaylorEarnedMediaImpactRoute() {
+  const navigate = useNavigate();
+  const canGoBack = window.history.length > 2;
+  return <TyceArmstrongEarnedMediaImpactReport onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
 function OhioStateRoute() {
@@ -107,6 +114,9 @@ function App() {
         <Route path="/" element={<HomeRoute />} />
         <Route path="/auburn" element={<AuburnRoute />} />
         <Route path="/baylor" element={<BaylorRoute />} />
+        <Route path="/baylor/tyce" element={<BaylorEarnedMediaImpactRoute />} />
+        <Route path="/baylor-earned-media-impact" element={<BaylorEarnedMediaImpactRoute />} />
+        <Route path="/tyce-armstrong-earned-media-impact" element={<BaylorEarnedMediaImpactRoute />} />
         <Route path="/ohiostate" element={<OhioStateRoute />} />
         <Route path="/kentucky" element={<KentuckyRoute />} />
         <Route path="/georgia" element={<GeorgiaRoute />} />

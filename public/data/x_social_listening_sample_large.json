@@ -1,0 +1,411 @@
+{
+  "topic": "Tyce Armstrong / Baylor Baseball / 3 grand slams / season debut / NCAA record",
+  "platform": "X",
+  "generated_at": "2026-02-19T20:26:54.162966+00:00",
+  "query_used": "(\"Tyce Armstrong\" OR \"Baylor Baseball\" OR \"3 grand slams\" OR \"season debut\" OR \"NCAA record\") lang:en -is:retweet",
+  "search_meta": {
+    "pages_fetched": 10,
+    "target_posts": 1000,
+    "collected_posts": 1000,
+    "last_next_token": "b26v89c19zqg8o3jueehup3fsxh0ajedj145uwu0maiyl",
+    "last_page_meta": {
+      "newest_id": "2022489976781389862",
+      "oldest_id": "2022451329906454794",
+      "result_count": 100,
+      "next_token": "b26v89c19zqg8o3jueehup3fsxh0ajedj145uwu0maiyl"
+    }
+  },
+  "window_utc": {
+    "from": "2026-02-13T23:22:27.000Z",
+    "to": "2026-02-19T20:20:49.000Z"
+  },
+  "totals_all_query_results": {
+    "tweet_count": 1000,
+    "impressions": 11743942,
+    "engagements": 130843,
+    "likes": 115205,
+    "replies": 1768,
+    "retweets": 8577,
+    "quotes": 1380,
+    "bookmarks": 3913
+  },
+  "totals_topic_matched": {
+    "tweet_count": 652,
+    "impressions": 10589468,
+    "engagements": 92699,
+    "likes": 80193,
+    "replies": 1329,
+    "retweets": 6440,
+    "quotes": 1236,
+    "bookmarks": 3501
+  },
+  "top_posts_by_impressions": [
+    {
+      "id": "2022494686783459770",
+      "url": "https://x.com/ESPNInsights/status/2022494686783459770",
+      "created_at": "2026-02-14T02:14:44.000Z",
+      "author": {
+        "id": "53120768",
+        "username": "ESPNInsights",
+        "name": "ESPN Insights",
+        "verified": true
+      },
+      "text": "Baylor's Tyce Armstrong hit three grand slams in his team debut, while also recording 12 RBIs \ud83d\ude31 \n\nHe is the second player to hit three grand slams in a D-I baseball game since the NCAA started recording stats in 1957. https://t.co/8eiMHjTiUa",
+      "matched_terms": [
+        "tyce armstrong",
+        "three grand slams"
+      ],
+      "public_metrics": {
+        "retweet_count": 283,
+        "reply_count": 155,
+        "like_count": 2432,
+        "quote_count": 160,
+        "bookmark_count": 121,
+        "impression_count": 3367357
+      }
+    },
+    {
+      "id": "2022492332029816990",
+      "url": "https://x.com/SportsCenter/status/2022492332029816990",
+      "created_at": "2026-02-14T02:05:22.000Z",
+      "author": {
+        "id": "26257166",
+        "username": "SportsCenter",
+        "name": "SportsCenter",
+        "verified": true
+      },
+      "text": "BAYLOR FIRST BASEMAN TYCE ARMSTRONG HITS THREE GRAND SLAMS TO START THE SEASON \ud83e\udd2f \n\nHe\u2019s only the second player since 1957 to hit three grand slams in a D-I game. https://t.co/cFQ1qGRBrn",
+      "matched_terms": [
+        "tyce armstrong",
+        "three grand slams"
+      ],
+      "public_metrics": {
+        "retweet_count": 2647,
+        "reply_count": 297,
+        "like_count": 25265,
+        "quote_count": 558,
+        "bookmark_count": 1549,
+        "impression_count": 2125200
+      }
+    },
+    {
+      "id": "2022474319113392374",
+      "url": "https://x.com/bigdonkey47/status/2022474319113392374",
+      "created_at": "2026-02-14T00:53:48.000Z",
+      "author": {
+        "id": "346745652",
+        "username": "bigdonkey47",
+        "name": "Stephen Schoch",
+        "verified": false
+      },
+      "text": "Tyce Armstrong has hit THREE grand slams today in his @BaylorBaseball debut. Ties the national record for grand slams in a single game https://t.co/5Xfjf7GPS1",
+      "matched_terms": [
+        "tyce armstrong",
+        "baylorbaseball",
+        "three grand slams"
+      ],
+      "public_metrics": {
+        "retweet_count": 379,
+        "reply_count": 110,
+        "like_count": 5350,
+        "quote_count": 163,
+        "bookmark_count": 291,
+        "impression_count": 740609
+      }
+    },
+    {
+      "id": "2022502608779264424",
+      "url": "https://x.com/MLB/status/2022502608779264424",
+      "created_at": "2026-02-14T02:46:12.000Z",
+      "author": {
+        "id": "18479513",
+        "username": "MLB",
+        "name": "MLB",
+        "verified": true
+      },
+      "text": "Have a NIGHT \ud83d\ude33\n\nBaylor's Tyce Armstrong hit THREE GRAND SLAMS in the season opener\nhttps://t.co/pv0noILepM https://t.co/VsexkDOojN",
+      "matched_terms": [
+        "tyce armstrong",
+        "three grand slams"
+      ],
+      "public_metrics": {
+        "retweet_count": 154,
+        "reply_count": 23,
+        "like_count": 1593,
+        "quote_count": 12,
+        "bookmark_count": 64,
+        "impression_count": 707577
+      }
+    },
+    {
+      "id": "2022722804148506875",
+      "url": "https://x.com/MLB/status/2022722804148506875",
+      "created_at": "2026-02-14T17:21:11.000Z",
+      "author": {
+        "id": "18479513",
+        "username": "MLB",
+        "name": "MLB",
+        "verified": true
+      },
+      "text": "How rare is a 3-grand-slam game?\n\nOnly 1 TEAM has ever had 3 grand slams in a MLB game ... the 2011 Yankees \ud83d\ude31 https://t.co/7hvWyjUm3K https://t.co/gxR0s5tXCC",
+      "matched_terms": [
+        "3 grand slams"
+      ],
+      "public_metrics": {
+        "retweet_count": 397,
+        "reply_count": 45,
+        "like_count": 4460,
+        "quote_count": 31,
+        "bookmark_count": 243,
+        "impression_count": 489244
+      }
+    }
+  ],
+  "sample_posts": [
+    {
+      "id": "2022494686783459770",
+      "url": "https://x.com/ESPNInsights/status/2022494686783459770",
+      "created_at": "2026-02-14T02:14:44.000Z",
+      "author": {
+        "id": "53120768",
+        "username": "ESPNInsights",
+        "name": "ESPN Insights",
+        "verified": true
+      },
+      "text": "Baylor's Tyce Armstrong hit three grand slams in his team debut, while also recording 12 RBIs \ud83d\ude31 \n\nHe is the second player to hit three grand slams in a D-I baseball game since the NCAA started recording stats in 1957. https://t.co/8eiMHjTiUa",
+      "matched_terms": [
+        "tyce armstrong",
+        "three grand slams"
+      ],
+      "public_metrics": {
+        "retweet_count": 283,
+        "reply_count": 155,
+        "like_count": 2432,
+        "quote_count": 160,
+        "bookmark_count": 121,
+        "impression_count": 3367357
+      }
+    },
+    {
+      "id": "2022492332029816990",
+      "url": "https://x.com/SportsCenter/status/2022492332029816990",
+      "created_at": "2026-02-14T02:05:22.000Z",
+      "author": {
+        "id": "26257166",
+        "username": "SportsCenter",
+        "name": "SportsCenter",
+        "verified": true
+      },
+      "text": "BAYLOR FIRST BASEMAN TYCE ARMSTRONG HITS THREE GRAND SLAMS TO START THE SEASON \ud83e\udd2f \n\nHe\u2019s only the second player since 1957 to hit three grand slams in a D-I game. https://t.co/cFQ1qGRBrn",
+      "matched_terms": [
+        "tyce armstrong",
+        "three grand slams"
+      ],
+      "public_metrics": {
+        "retweet_count": 2647,
+        "reply_count": 297,
+        "like_count": 25265,
+        "quote_count": 558,
+        "bookmark_count": 1549,
+        "impression_count": 2125200
+      }
+    },
+    {
+      "id": "2022474319113392374",
+      "url": "https://x.com/bigdonkey47/status/2022474319113392374",
+      "created_at": "2026-02-14T00:53:48.000Z",
+      "author": {
+        "id": "346745652",
+        "username": "bigdonkey47",
+        "name": "Stephen Schoch",
+        "verified": false
+      },
+      "text": "Tyce Armstrong has hit THREE grand slams today in his @BaylorBaseball debut. Ties the national record for grand slams in a single game https://t.co/5Xfjf7GPS1",
+      "matched_terms": [
+        "tyce armstrong",
+        "baylorbaseball",
+        "three grand slams"
+      ],
+      "public_metrics": {
+        "retweet_count": 379,
+        "reply_count": 110,
+        "like_count": 5350,
+        "quote_count": 163,
+        "bookmark_count": 291,
+        "impression_count": 740609
+      }
+    },
+    {
+      "id": "2022502608779264424",
+      "url": "https://x.com/MLB/status/2022502608779264424",
+      "created_at": "2026-02-14T02:46:12.000Z",
+      "author": {
+        "id": "18479513",
+        "username": "MLB",
+        "name": "MLB",
+        "verified": true
+      },
+      "text": "Have a NIGHT \ud83d\ude33\n\nBaylor's Tyce Armstrong hit THREE GRAND SLAMS in the season opener\nhttps://t.co/pv0noILepM https://t.co/VsexkDOojN",
+      "matched_terms": [
+        "tyce armstrong",
+        "three grand slams"
+      ],
+      "public_metrics": {
+        "retweet_count": 154,
+        "reply_count": 23,
+        "like_count": 1593,
+        "quote_count": 12,
+        "bookmark_count": 64,
+        "impression_count": 707577
+      }
+    },
+    {
+      "id": "2022722804148506875",
+      "url": "https://x.com/MLB/status/2022722804148506875",
+      "created_at": "2026-02-14T17:21:11.000Z",
+      "author": {
+        "id": "18479513",
+        "username": "MLB",
+        "name": "MLB",
+        "verified": true
+      },
+      "text": "How rare is a 3-grand-slam game?\n\nOnly 1 TEAM has ever had 3 grand slams in a MLB game ... the 2011 Yankees \ud83d\ude31 https://t.co/7hvWyjUm3K https://t.co/gxR0s5tXCC",
+      "matched_terms": [
+        "3 grand slams"
+      ],
+      "public_metrics": {
+        "retweet_count": 397,
+        "reply_count": 45,
+        "like_count": 4460,
+        "quote_count": 31,
+        "bookmark_count": 243,
+        "impression_count": 489244
+      }
+    },
+    {
+      "id": "2022501268346765736",
+      "url": "https://x.com/BallParkBuzz/status/2022501268346765736",
+      "created_at": "2026-02-14T02:40:53.000Z",
+      "author": {
+        "id": "2284348794",
+        "username": "BallParkBuzz",
+        "name": "BallPark Buzz",
+        "verified": false
+      },
+      "text": "To come up with the bases loaded 3 times in a game is pretty rare. To get 3 hits with the bases loaded is extremely rare. To hit 3 grand slams in the same game feels like trying to fly to mars in a 1999 Toyota Camry. https://t.co/eMRtCuztJd",
+      "matched_terms": [
+        "3 grand slams"
+      ],
+      "public_metrics": {
+        "retweet_count": 578,
+        "reply_count": 17,
+        "like_count": 7534,
+        "quote_count": 4,
+        "bookmark_count": 258,
+        "impression_count": 307275
+      }
+    },
+    {
+      "id": "2022476521378660358",
+      "url": "https://x.com/BaseballQuotes1/status/2022476521378660358",
+      "created_at": "2026-02-14T01:02:33.000Z",
+      "author": {
+        "id": "613512037",
+        "username": "BaseballQuotes1",
+        "name": "Baseball Quotes",
+        "verified": false
+      },
+      "text": "Tyce Armstrong hit THREE GRAND SLAMS today for Baylor \ud83d\ude32\n\nNot sure if you can start your season better than that \n\n https://t.co/r7pzQBdrH0",
+      "matched_terms": [
+        "tyce armstrong",
+        "three grand slams"
+      ],
+      "public_metrics": {
+        "retweet_count": 226,
+        "reply_count": 33,
+        "like_count": 2912,
+        "quote_count": 53,
+        "bookmark_count": 182,
+        "impression_count": 265217
+      }
+    },
+    {
+      "id": "2022478627833847830",
+      "url": "https://x.com/11point7/status/2022478627833847830",
+      "created_at": "2026-02-14T01:10:55.000Z",
+      "author": {
+        "id": "1088673077691666433",
+        "username": "11point7",
+        "name": "11Point7 College Baseball",
+        "verified": false
+      },
+      "text": "No no... Not 3 grand slams as a team... 3 grand slams by Tyce Armstrong. A singular player. https://t.co/x4Y0ytTR75 https://t.co/SIpQwbUTUr",
+      "matched_terms": [
+        "tyce armstrong",
+        "3 grand slams"
+      ],
+      "public_metrics": {
+        "retweet_count": 93,
+        "reply_count": 12,
+        "like_count": 2149,
+        "quote_count": 6,
+        "bookmark_count": 64,
+        "impression_count": 231791
+      }
+    },
+    {
+      "id": "2022490289890365445",
+      "url": "https://x.com/barstoolsports/status/2022490289890365445",
+      "created_at": "2026-02-14T01:57:15.000Z",
+      "author": {
+        "id": "22637974",
+        "username": "barstoolsports",
+        "name": "Barstool Sports",
+        "verified": true
+      },
+      "text": "College Baseball is back and Tyce Armstrong kicked off the season with THREE GRAND SLAMS \n\n https://t.co/4DpdrNpTYS",
+      "matched_terms": [
+        "tyce armstrong",
+        "three grand slams"
+      ],
+      "public_metrics": {
+        "retweet_count": 87,
+        "reply_count": 34,
+        "like_count": 1872,
+        "quote_count": 8,
+        "bookmark_count": 37,
+        "impression_count": 208901
+      }
+    },
+    {
+      "id": "2022501385410134461",
+      "url": "https://x.com/BenVerlander/status/2022501385410134461",
+      "created_at": "2026-02-14T02:41:21.000Z",
+      "author": {
+        "id": "284350412",
+        "username": "BenVerlander",
+        "name": "Ben Verlander",
+        "verified": false
+      },
+      "text": "3 GRAND SLAMS ON OPENING DAY \ud83e\udd2f\n\nThe odds of a 3HR game? Slim\n\nThe odds of 1 being a Grand Slam? Slimmer\n\n2 Grand Slams? No way\n\n3 GRAND SLAMS?! IMPOSSIBLE \n\nTyce Armstrong with the game of his life on opening day in his @BaylorBaseball debut \n\n https://t.co/AvDozn8SKr",
+      "matched_terms": [
+        "tyce armstrong",
+        "baylorbaseball",
+        "3 grand slams"
+      ],
+      "public_metrics": {
+        "retweet_count": 177,
+        "reply_count": 38,
+        "like_count": 3086,
+        "quote_count": 13,
+        "bookmark_count": 113,
+        "impression_count": 199287
+      }
+    }
+  ],
+  "notes": [
+    "Uses X recent search (not full historical archive).",
+    "Broad query terms like season debut and NCAA record can include non-Baylor posts.",
+    "Topic_matched subset is filtered using Tyce/Baylor/grand-slam related terms."
+  ]
+}
