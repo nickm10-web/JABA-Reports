@@ -62,6 +62,29 @@ interface IPComparison {
   avgLift: number; // percentage points
 }
 
+interface FallbackRosterRow {
+  _id?: string;
+  firstName?: string;
+  lastName?: string;
+  schoolName?: string;
+  metrics?: {
+    ninetyDays?: { followers?: number };
+    thirtyDays?: { followers?: number };
+    sevenDays?: { followers?: number };
+  };
+}
+
+interface ConferenceBenchmarkSchool {
+  id: string;
+  shortName: string;
+  conference: string;
+  totalDeals: number;
+  totalEMV: number;
+  avgEngagement: number;
+  athleteCount: number;
+  brandCount: number;
+}
+
 // ─── Formatters ──────────────────────────────────────────────
 const fmtN = (v?: number | null) => {
   if (v == null || isNaN(v)) return 'N/A';
@@ -86,18 +109,139 @@ const fmtDate = (v?: string) => {
 };
 const fmtSport = (s?: string) => {
   if (!s) return 'N/A';
-  // First replace underscores and title case, then fix Men's/Women's
-  return s.replace(/_/g, ' ')
+  // Normalize casing from raw values like "MENS_BASKETBALL" or "Men'S Basketball".
+  return s
+    .replace(/_/g, ' ')
+    .toLowerCase()
+    .replace(/\bmen'?s\b/g, "men's")
+    .replace(/\bwomen'?s\b/g, "women's")
     .replace(/\b\w/g, c => c.toUpperCase())
-    .replace(/\bMens\b/g, "Men's")
-    .replace(/\bWomens\b/g, "Women's");
+    .replace(/Men'S/g, "Men's")
+    .replace(/Women'S/g, "Women's");
 };
 const emv = (likes: number, comments: number) => likes * 0.5 + comments * 1.5;
 
 const headerStyle = { fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' as const };
 
+const ROSTER_NAME_MATCHERS: Record<string, string[]> = {
+  alabama: ['the university of alabama', 'university of alabama'],
+  arkansas: ['university of arkansas'],
+  oklahoma: ['university of oklahoma', 'oklahoma'],
+  michigan: ['university of michigan', 'michigan'],
+  wisconsin: ['university of wisconsin', 'wisconsin'],
+};
+
+const normalizeName = (v?: string) => (v || '').trim().toLowerCase().replace(/\s+/g, ' ');
+const normalizeHandle = (v?: string) => (v || '').trim().toLowerCase().replace(/^@/, '');
+const canonicalHandle = (v?: string) => normalizeHandle(v).replace(/[^a-z0-9]/g, '');
+
+const getRosterFollowers = (row?: FallbackRosterRow | null) =>
+  Number(
+    row?.metrics?.ninetyDays?.followers ??
+    row?.metrics?.thirtyDays?.followers ??
+    row?.metrics?.sevenDays?.followers ??
+    0
+  );
+
+const normalizeConference = (value?: string) => {
+  const raw = (value || '').trim().toLowerCase();
+  if (!raw) return '';
+  if (raw.includes('big 10') || raw.includes('big ten')) return 'bigten';
+  if (raw.includes('sec')) return 'sec';
+  return raw.replace(/[^a-z0-9]/g, '');
+};
+
+const normalizeSchool = (value?: string) =>
+  (value || '').trim().toLowerCase().replace(/[^a-z0-9]/g, '');
+
+const slugify = (value: string) =>
+  value.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+
+let allBenchmarkSchoolsPromise: Promise<ConferenceBenchmarkSchool[]> | null = null;
+
+async function loadAllBenchmarkSchools(): Promise<ConferenceBenchmarkSchool[]> {
+  if (allBenchmarkSchoolsPromise) return allBenchmarkSchoolsPromise;
+
+  allBenchmarkSchoolsPromise = (async () => {
+    const res = await fetch('/data/ncaa_updated_ip_contents_feb_18.json');
+    if (!res.ok) return [];
+    const rows = await res.json();
+    if (!Array.isArray(rows)) return [];
+
+    const schoolMap = new Map<string, {
+      conference: string;
+      likes: number;
+      comments: number;
+      sponsoredPosts: number;
+      engSum: number;
+      engCount: number;
+      athleteIds: Set<string>;
+      brands: Set<string>;
+    }>();
+
+    for (const post of rows) {
+      const schoolName = String(post?.athlete?.school?.name || '').trim();
+      const postConference = String(post?.athlete?.conference?.name || '').trim();
+      if (!schoolName || !postConference) continue;
+
+      if (!schoolMap.has(schoolName)) {
+        schoolMap.set(schoolName, {
+          conference: postConference,
+          likes: 0,
+          comments: 0,
+          sponsoredPosts: 0,
+          engSum: 0,
+          engCount: 0,
+          athleteIds: new Set<string>(),
+          brands: new Set<string>(),
+        });
+      }
+
+      const school = schoolMap.get(schoolName)!;
+      const likes = Number(post?.metrics?.likes || 0);
+      const comments = Number(post?.metrics?.comments || 0);
+      school.likes += likes;
+      school.comments += comments;
+
+      const athleteId = String(post?.athlete?._id || '').trim();
+      if (athleteId) school.athleteIds.add(athleteId);
+
+      const sponsorHandle = canonicalHandle(post?.sponsorPartner);
+      if (sponsorHandle) {
+        school.sponsoredPosts += 1;
+        school.brands.add(sponsorHandle);
+      }
+
+      const rawER = Number(post?.metrics?.engagementRate || 0);
+      const normalizedER = rawER > 1 ? rawER / 100 : rawER;
+      if (normalizedER > 0) {
+        school.engSum += normalizedER;
+        school.engCount += 1;
+      }
+    }
+
+    return [...schoolMap.entries()]
+      .map(([name, stats]) => ({
+        id: slugify(name),
+        shortName: name,
+        conference: stats.conference,
+        totalDeals: stats.sponsoredPosts,
+        totalEMV: emv(stats.likes, stats.comments),
+        avgEngagement: stats.engCount > 0 ? (stats.engSum / stats.engCount) * 100 : 0,
+        athleteCount: stats.athleteIds.size,
+        brandCount: stats.brands.size,
+      }))
+      .sort((a, b) => b.totalDeals - a.totalDeals);
+  })();
+
+  return allBenchmarkSchoolsPromise;
+}
+
 // ─── Data Derivation ─────────────────────────────────────────
-function derivePosts(raw: RawPost[]) {
+function derivePosts(
+  raw: RawPost[],
+  brandExclusions: Set<string>
+) {
   const athleteMap = new Map<string, DerivedAthlete & { engSum: number; engCount: number }>();
   const sponsored: RawPost[] = [];
 
@@ -124,7 +268,10 @@ function derivePosts(raw: RawPost[]) {
     const er = p.metrics?.engagementRate || 0;
     if (er > 0) { a.engSum += er; a.engCount++; }
 
-    if (p.sponsorPartner) sponsored.push(p);
+    const sponsorHandle = canonicalHandle(p.sponsorPartner);
+    if (sponsorHandle && !brandExclusions.has(sponsorHandle)) {
+      sponsored.push(p);
+    }
   }
 
   const athletes: DerivedAthlete[] = [];
@@ -203,6 +350,7 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
   const [loading, setLoading] = useState(true);
   const [rawPosts, setRawPosts] = useState<RawPost[]>([]);
   const [rosterData, setRosterData] = useState<any>(null);
+  const [fallbackRosterRows, setFallbackRosterRows] = useState<FallbackRosterRow[]>([]);
   const [selectedAthlete, setSelectedAthlete] = useState<DerivedAthlete | null>(null);
 
   const primaryColor = config.colors.primary;
@@ -221,26 +369,70 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
       .then(r => r.ok ? r.json() : null)
       .catch(() => null);
 
-    Promise.all([postsPromise, rosterPromise])
-      .then(([posts, roster]) => {
+    // Fallback roster includes follower counts by athlete name
+    const fallbackRosterPromise = fetch('/data/ncaa_roster_feb_12.json')
+      .then(r => r.ok ? r.json() : [])
+      .then((rows: FallbackRosterRow[]) => Array.isArray(rows) ? rows : [])
+      .catch(() => []);
+
+    Promise.all([postsPromise, rosterPromise, fallbackRosterPromise])
+      .then(([posts, roster, fallbackRows]) => {
         setRawPosts(posts);
         setRosterData(roster);
+        setFallbackRosterRows(fallbackRows);
       })
       .finally(() => setLoading(false));
   }, [config.dataFile, config.id]);
 
   const { athletes, sponsored } = useMemo(() => {
-    const derived = derivePosts(rawPosts);
+    const exclusions = new Set((config.brandExclusions || []).map(canonicalHandle).filter(Boolean));
+    const derived = derivePosts(rawPosts, exclusions);
     // Merge follower data from roster if available
     if (rosterData?.athletes) {
-      const rosterMap = new Map(rosterData.athletes.map((a: any) => [a._id, a.followers || 0]));
+      const rosterMapById = new Map(rosterData.athletes.map((a: any) => [a._id, Number(a.followers || 0)]));
+      const rosterMapByName = new Map(
+        rosterData.athletes.map((a: any) => [normalizeName(a.name), Number(a.followers || 0)])
+      );
       derived.athletes.forEach(athlete => {
-        const rosterFollowers = rosterMap.get(athlete.id);
-        if (typeof rosterFollowers === 'number') athlete.followers = rosterFollowers;
+        const byId = rosterMapById.get(athlete.id);
+        if (typeof byId === 'number' && byId > 0) {
+          athlete.followers = byId;
+          return;
+        }
+        const byName = rosterMapByName.get(normalizeName(athlete.name));
+        if (typeof byName === 'number' && byName > 0) {
+          athlete.followers = byName;
+        }
       });
     }
+
+    // Fallback: map followers from global roster by school + athlete name.
+    if (fallbackRosterRows.length) {
+      const matchers = ROSTER_NAME_MATCHERS[config.id] || [config.name.toLowerCase()];
+      const schoolRows = fallbackRosterRows.filter((row) => {
+        const school = (row.schoolName || '').toLowerCase();
+        return matchers.some((m) => school === m || school.includes(m));
+      });
+      const followersByName = new Map<string, number>();
+      for (const row of schoolRows) {
+        const fullName = normalizeName(`${row.firstName || ''} ${row.lastName || ''}`);
+        if (!fullName) continue;
+        const followers = getRosterFollowers(row);
+        if (!followersByName.has(fullName) || followers > (followersByName.get(fullName) || 0)) {
+          followersByName.set(fullName, followers);
+        }
+      }
+      derived.athletes.forEach((athlete) => {
+        if (athlete.followers > 0) return;
+        const fromFallback = followersByName.get(normalizeName(athlete.name));
+        if (typeof fromFallback === 'number' && fromFallback > 0) {
+          athlete.followers = fromFallback;
+        }
+      });
+    }
+
     return derived;
-  }, [rawPosts, rosterData]);
+  }, [rawPosts, rosterData, fallbackRosterRows, config.id, config.name]);
   const sports = useMemo(() => deriveSports(athletes), [athletes]);
   const ipComparisons = useMemo(() => deriveIPComparisons(rawPosts), [rawPosts]);
 
@@ -261,20 +453,26 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
       {/* Header */}
       <header className="sticky top-0 z-30 backdrop-blur-xl border-b border-[#E1E7F0] bg-white/90">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-4">
-          <div className="flex items-center gap-4">
-            {onBack && (
-              <button onClick={onBack} className="flex items-center gap-2 text-sm text-[#4B5B73] hover:text-[#1E2A3B]">
-                <ArrowLeft className="w-4 h-4" />
-                Back
-              </button>
-            )}
-            <div className="flex items-center gap-3">
-              <img src={config.logoUrl} alt={config.shortName} className="w-9 h-9 object-contain" />
-              <div>
-                <div className="text-lg font-semibold text-[#0F1D2E]">{config.shortName} Athlete + Team Performance Report</div>
-                <div className="text-xs text-[#5B6B82]">Athlete + team content performance and audience scale</div>
+          <div className="flex items-center justify-between gap-4">
+            <div className="flex items-center gap-4">
+              {onBack && (
+                <button onClick={onBack} className="flex items-center gap-2 text-sm text-[#4B5B73] hover:text-[#1E2A3B]">
+                  <ArrowLeft className="w-4 h-4" />
+                  Back
+                </button>
+              )}
+              <div className="flex items-center gap-3">
+                <img src={config.logoUrl} alt={config.shortName} className="w-9 h-9 object-contain" />
+                <div>
+                  <div className="text-lg font-semibold text-[#0F1D2E]">{config.shortName} Athlete + Team Performance Report</div>
+                  <div className="text-xs text-[#5B6B82]">
+                    Athlete + team content performance and audience scale · Generated by{' '}
+                    <span className="font-semibold" style={{ borderBottom: '2px solid #CCFF00' }}>JABA AI</span>
+                  </div>
+                </div>
               </div>
             </div>
+            <img src="/JABA-face.png" alt="JABA" className="h-12 sm:h-16 object-contain flex-shrink-0" />
           </div>
           <div className="mt-3 flex gap-2 overflow-x-auto">
             {TABS.map(tab => (
@@ -319,7 +517,12 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
             <TeamsTab sports={sports} primaryColor={primaryColor} />
           )}
           {activeTab === 'content' && (
-            <ContentTab posts={rawPosts} primaryColor={primaryColor} shortName={config.shortName} />
+            <ContentTab
+              posts={rawPosts}
+              primaryColor={primaryColor}
+              shortName={config.shortName}
+              brandExclusions={new Set((config.brandExclusions || []).map(canonicalHandle))}
+            />
           )}
           {activeTab === 'sponsored' && (
             <SponsoredTab posts={sponsored} primaryColor={primaryColor} shortName={config.shortName} />
@@ -334,7 +537,12 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
             />
           )}
           {activeTab === 'ip' && (
-            <IPTab comparisons={ipComparisons} primaryColor={primaryColor} />
+            <IPTab
+              comparisons={ipComparisons}
+              primaryColor={primaryColor}
+              secondaryColor={secondaryColor}
+              shortName={config.shortName}
+            />
           )}
         </TabTransition>
       </main>
@@ -509,14 +717,6 @@ function AthletesTab({ athletes, primaryColor, onSelectAthlete }: {
   const topByLikes = sorted.slice(0, 10);
   const topByEng = [...filtered].sort((a, b) => b.avgEngagementRate - a.avgEngagementRate).slice(0, 10);
 
-  const chip = (key: typeof sortKey, label: string) => (
-    <button key={key} onClick={() => setSortKey(key)}
-      className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition-all ${sortKey === key ? '' : 'bg-white border-[#E1E7F0] text-[#1E2A3B]'}`}
-      style={sortKey === key ? { backgroundColor: primaryColor + '1A', borderColor: primaryColor + '66', color: primaryColor } : {}}>
-      {label}
-    </button>
-  );
-
   return (
     <div className="space-y-8">
       <GlassPanel className="p-5">
@@ -530,9 +730,6 @@ function AthletesTab({ athletes, primaryColor, onSelectAthlete }: {
             className="bg-white border border-[#E1E7F0] rounded-full px-3 py-2 text-sm text-[#1E2A3B]">
             {sports.map(s => <option key={s} value={s}>{fmtSport(s)}</option>)}
           </select>
-          <div className="flex items-center gap-2 flex-wrap">
-            {chip('likes', 'Likes')}{chip('followers', 'Followers')}{chip('engagement', 'Engagement Rate')}{chip('posts', 'Posts')}{chip('comments', 'Comments')}
-          </div>
         </div>
       </GlassPanel>
 
@@ -635,21 +832,36 @@ function AthletesTab({ athletes, primaryColor, onSelectAthlete }: {
 
 // ─── Teams Tab (sport-level breakdown) ───────────────────────
 function TeamsTab({ sports, primaryColor }: { sports: DerivedSport[]; primaryColor: string }) {
-  const [sortKey, setSortKey] = useState<'likes' | 'engagement' | 'posts' | 'athletes'>('likes');
-  const sorted = useMemo(() => [...sports].sort((a, b) => {
-    if (sortKey === 'likes') return b.totalLikes - a.totalLikes;
-    if (sortKey === 'engagement') return b.avgEngagementRate - a.avgEngagementRate;
-    if (sortKey === 'posts') return b.totalPosts - a.totalPosts;
-    return b.athleteCount - a.athleteCount;
-  }), [sports, sortKey]);
+  type TeamSortKey = 'sport' | 'likes' | 'engagement' | 'posts' | 'athletes';
+  type SortDirection = 'asc' | 'desc';
 
-  const chip = (key: typeof sortKey, label: string) => (
-    <button key={key} onClick={() => setSortKey(key)}
-      className={`px-3 py-1.5 rounded-full text-xs font-semibold border ${sortKey === key ? '' : 'bg-white border-[#E1E7F0] text-[#1E2A3B]'}`}
-      style={sortKey === key ? { backgroundColor: primaryColor + '1A', borderColor: primaryColor + '66', color: primaryColor } : {}}>
-      {label}
-    </button>
-  );
+  const [sortKey, setSortKey] = useState<TeamSortKey>('likes');
+  const [sortDirection, setSortDirection] = useState<SortDirection>('desc');
+
+  const sorted = useMemo(() => {
+    const rows = [...sports].sort((a, b) => {
+      if (sortKey === 'sport') return fmtSport(a.sport).localeCompare(fmtSport(b.sport));
+      if (sortKey === 'likes') return a.totalLikes - b.totalLikes;
+      if (sortKey === 'engagement') return a.avgEngagementRate - b.avgEngagementRate;
+      if (sortKey === 'posts') return a.totalPosts - b.totalPosts;
+      return a.athleteCount - b.athleteCount;
+    });
+    return sortDirection === 'desc' ? rows.reverse() : rows;
+  }, [sports, sortKey, sortDirection]);
+
+  const handleSortChange = (key: TeamSortKey) => {
+    if (sortKey === key) {
+      setSortDirection(prev => (prev === 'desc' ? 'asc' : 'desc'));
+      return;
+    }
+    setSortKey(key);
+    setSortDirection(key === 'sport' ? 'asc' : 'desc');
+  };
+
+  const sortMarker = (key: TeamSortKey) => {
+    if (sortKey !== key) return '';
+    return sortDirection === 'desc' ? ' ↓' : ' ↑';
+  };
 
   return (
     <div className="space-y-8">
@@ -658,10 +870,6 @@ function TeamsTab({ sports, primaryColor }: { sports: DerivedSport[]; primaryCol
           <div>
             <h2 style={headerStyle} className="text-lg font-bold uppercase tracking-tight text-[#0F1D2E]">Sport Breakdown</h2>
             <p className="text-sm text-[#5B6B82]">{sports.length} sports active • Based on athlete post data</p>
-          </div>
-          <div className="flex items-center gap-2">
-            {chip('likes', 'Total Likes')}{chip('engagement', 'Engagement Rate')}
-            {chip('posts', 'Posts')}{chip('athletes', 'Athletes')}
           </div>
         </div>
       </GlassPanel>
@@ -682,11 +890,41 @@ function TeamsTab({ sports, primaryColor }: { sports: DerivedSport[]; primaryCol
           <table className="w-full">
             <thead>
               <tr className="text-xs uppercase tracking-[0.2em] text-[#5B6B82]">
-                <th className="text-left py-2 px-3">Sport</th>
-                <th className="text-right py-2 px-3">Athletes</th>
-                <th className="text-right py-2 px-3">Posts</th>
-                <th className="text-right py-2 px-3">Likes</th>
-                <th className="text-right py-2 px-3">Avg ER</th>
+                <th
+                  className="text-left py-2 px-3 cursor-pointer select-none hover:text-[#1770C0] transition-colors"
+                  style={{ color: sortKey === 'sport' ? primaryColor : '#5B6B82' }}
+                  onClick={() => handleSortChange('sport')}
+                >
+                  Sport{sortMarker('sport')}
+                </th>
+                <th
+                  className="text-right py-2 px-3 cursor-pointer select-none hover:text-[#1770C0] transition-colors"
+                  style={{ color: sortKey === 'athletes' ? primaryColor : '#5B6B82' }}
+                  onClick={() => handleSortChange('athletes')}
+                >
+                  Athletes{sortMarker('athletes')}
+                </th>
+                <th
+                  className="text-right py-2 px-3 cursor-pointer select-none hover:text-[#1770C0] transition-colors"
+                  style={{ color: sortKey === 'posts' ? primaryColor : '#5B6B82' }}
+                  onClick={() => handleSortChange('posts')}
+                >
+                  Posts{sortMarker('posts')}
+                </th>
+                <th
+                  className="text-right py-2 px-3 cursor-pointer select-none hover:text-[#1770C0] transition-colors"
+                  style={{ color: sortKey === 'likes' ? primaryColor : '#5B6B82' }}
+                  onClick={() => handleSortChange('likes')}
+                >
+                  Likes{sortMarker('likes')}
+                </th>
+                <th
+                  className="text-right py-2 px-3 cursor-pointer select-none hover:text-[#1770C0] transition-colors"
+                  style={{ color: sortKey === 'engagement' ? primaryColor : '#5B6B82' }}
+                  onClick={() => handleSortChange('engagement')}
+                >
+                  Avg ER{sortMarker('engagement')}
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -708,7 +946,17 @@ function TeamsTab({ sports, primaryColor }: { sports: DerivedSport[]; primaryCol
 }
 
 // ─── Content Tab ─────────────────────────────────────────────
-function ContentTab({ posts, primaryColor, shortName }: { posts: RawPost[]; primaryColor: string; shortName: string }) {
+function ContentTab({
+  posts,
+  primaryColor,
+  shortName,
+  brandExclusions,
+}: {
+  posts: RawPost[];
+  primaryColor: string;
+  shortName: string;
+  brandExclusions: Set<string>;
+}) {
   const [sortKey, setSortKey] = useState<'likes' | 'engagement' | 'comments'>('likes');
   const [sponsoredOnly, setSponsoredOnly] = useState(false);
 
@@ -723,14 +971,15 @@ function ContentTab({ posts, primaryColor, shortName }: { posts: RawPost[]; prim
     url: p.url,
     permalink: p.permalink,
     publishedAt: typeof p.publishedAt === 'string' ? p.publishedAt : p.publishedAt?.$date,
+    sponsorHandle: canonicalHandle(p.sponsorPartner),
     isSponsored: !!p.sponsorPartner,
   })), [posts]);
 
   const filtered = useMemo(() => {
     let list = normalizedPosts;
-    if (sponsoredOnly) list = list.filter(p => p.isSponsored);
+    if (sponsoredOnly) list = list.filter(p => p.isSponsored && !brandExclusions.has(p.sponsorHandle));
     return list;
-  }, [normalizedPosts, sponsoredOnly]);
+  }, [normalizedPosts, sponsoredOnly, brandExclusions]);
 
   const sorted = useMemo(() => [...filtered].sort((a, b) => {
     if (sortKey === 'likes') return b.likes - a.likes;
@@ -834,6 +1083,38 @@ function SponsoredTab({ posts, shortName }: { posts: RawPost[]; primaryColor: st
   const [search, setSearch] = useState('');
   const [sportFilter, setSportFilter] = useState('All');
   const [sortKey, setSortKey] = useState<'posts' | 'likes' | 'engagement'>('posts');
+  const [brandLogos, setBrandLogos] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const loadBrandLogos = async () => {
+      try {
+        const res = await fetch('/data/socialMedia.brands.json');
+        if (!res.ok) return;
+        const rows = await res.json();
+        if (!Array.isArray(rows) || cancelled) return;
+
+        const next: Record<string, string> = {};
+        for (const row of rows) {
+          const name = String(row?.name || '').trim().toLowerCase();
+          const logo = String(row?.logo || '').trim();
+          if (!name || !logo) continue;
+          const normalized = name.replace(/^@/, '');
+          if (!next[normalized]) next[normalized] = logo;
+          if (!next[name]) next[name] = logo;
+        }
+        if (!cancelled) setBrandLogos(next);
+      } catch {
+        // Non-blocking: cards still render with fallback logos.
+      }
+    };
+
+    loadBrandLogos();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const sports = ['All', ...new Set(posts.map(p => p.athlete?.sport).filter(Boolean) as string[])];
 
@@ -849,31 +1130,59 @@ function SponsoredTab({ posts, shortName }: { posts: RawPost[]; primaryColor: st
   const uniqueBrands = new Set(filtered.map(p => (p.sponsorPartner || '').toLowerCase().trim()).filter(Boolean));
   const uniqueAthletes = new Set(filtered.map(p => p.athlete?._id).filter(Boolean));
   const avgLikes = filtered.length ? totalLikes / filtered.length : null;
-  const avgComments = filtered.length ? totalComments / filtered.length : null;
+  const avgComments = filtered.length ? Math.round(totalComments / filtered.length) : null;
 
-  const brandMap = new Map<string, { posts: RawPost[]; athletes: Set<string>; sports: Set<string>; totalLikes: number; totalComments: number; engSum: number }>();
+  const brandMap = new Map<string, {
+    posts: RawPost[];
+    athletes: Set<string>;
+    athleteNames: Set<string>;
+    sports: Set<string>;
+    totalLikes: number;
+    totalComments: number;
+    engSum: number;
+  }>();
   filtered.forEach(p => {
     const key = (p.sponsorPartner || '').trim();
     if (!key) return;
-    if (!brandMap.has(key)) brandMap.set(key, { posts: [], athletes: new Set(), sports: new Set(), totalLikes: 0, totalComments: 0, engSum: 0 });
+    if (!brandMap.has(key)) {
+      brandMap.set(key, {
+        posts: [],
+        athletes: new Set(),
+        athleteNames: new Set(),
+        sports: new Set(),
+        totalLikes: 0,
+        totalComments: 0,
+        engSum: 0,
+      });
+    }
     const entry = brandMap.get(key)!;
     entry.posts.push(p);
     if (p.athlete?._id) entry.athletes.add(p.athlete._id);
+    if (p.athlete?.name) entry.athleteNames.add(p.athlete.name);
     if (p.athlete?.sport) entry.sports.add(p.athlete.sport);
     entry.totalLikes += p.metrics?.likes || 0;
     entry.totalComments += p.metrics?.comments || 0;
     entry.engSum += (p.metrics?.engagementRate || 0) / 100;
   });
 
-  const brandCards = [...brandMap.entries()].map(([brand, entry]) => ({
-    brand,
-    postCount: entry.posts.length,
-    athleteCount: entry.athletes.size,
-    sportCount: entry.sports.size,
-    totalLikes: entry.totalLikes,
-    totalComments: entry.totalComments,
-    avgEngagement: entry.posts.length ? entry.engSum / entry.posts.length : 0,
-  })).sort((a, b) => {
+  const brandCards = [...brandMap.entries()].map(([brand, entry]) => {
+    const normalizedBrand = brand.toLowerCase().replace(/^@/, '');
+    const logoUrl = brandLogos[normalizedBrand] || brandLogos[brand.toLowerCase()] || '';
+    return {
+      brand,
+      logoUrl,
+      postCount: entry.posts.length,
+      athleteCount: entry.athletes.size,
+      athleteNames: Array.from(entry.athleteNames).sort(),
+      sportCount: entry.sports.size,
+      totalLikes: entry.totalLikes,
+      totalComments: entry.totalComments,
+      avgEngagement: entry.posts.length ? entry.engSum / entry.posts.length : 0,
+      topPosts: [...entry.posts]
+        .sort((a, b) => (b.metrics?.likes || 0) - (a.metrics?.likes || 0))
+        .slice(0, 2),
+    };
+  }).sort((a, b) => {
     if (sortKey === 'likes') return b.totalLikes - a.totalLikes;
     if (sortKey === 'engagement') return b.avgEngagement - a.avgEngagement;
     return b.postCount - a.postCount;
@@ -933,20 +1242,80 @@ function SponsoredTab({ posts, shortName }: { posts: RawPost[]; primaryColor: st
           <GlassPanel key={brand.brand} className="p-5">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-xl bg-[#F3F6FB] border border-[#E1E7F0] flex items-center justify-center overflow-hidden">
-                <img src={`https://logo.dev/${brand.brand.replace(/^@/, '')}.com`} alt={brand.brand}
+                <img
+                  src={brand.logoUrl || `https://logo.dev/${brand.brand.replace(/^@/, '')}.com`}
+                  alt={brand.brand}
                   className="w-full h-full object-contain"
-                  onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }} />
-                <span className="text-sm font-semibold text-[#1E2A3B]">{brand.brand.replace(/^@/, '').slice(0, 2).toUpperCase()}</span>
+                  onError={e => {
+                    const img = e.currentTarget as HTMLImageElement;
+                    img.style.display = 'none';
+                    const fallback = img.nextElementSibling as HTMLElement | null;
+                    if (fallback) fallback.style.display = 'flex';
+                  }}
+                />
+                <span
+                  className="hidden w-full h-full items-center justify-center text-sm font-semibold text-[#1E2A3B]"
+                >
+                  {brand.brand.replace(/^@/, '').slice(0, 2).toUpperCase()}
+                </span>
               </div>
               <div className="flex-1">
                 <div className="text-sm font-semibold text-[#0F1D2E]">{brand.brand}</div>
                 <div className="text-xs text-[#5B6B82]">{brand.postCount} posts • {brand.athleteCount} athletes • {brand.sportCount} sports</div>
               </div>
             </div>
+            <div className="grid grid-cols-2 gap-2 text-xs text-[#5B6B82] mt-3">
+              <div>Posts: {fmtN(brand.postCount)}</div>
+              <div>Athletes: {fmtN(brand.athleteCount)}</div>
+            </div>
             <div className="grid grid-cols-3 gap-2 text-xs text-[#5B6B82] mt-3">
               <div>Likes: {fmtN(brand.totalLikes)}</div>
               <div>Comments: {fmtN(brand.totalComments)}</div>
               <div>Avg ER: {fmtPct(brand.avgEngagement * 100)}</div>
+            </div>
+            <div className="mt-3">
+              <p className="text-[10px] uppercase tracking-[0.2em] text-[#7A8AA3] mb-1">Athletes</p>
+              <p className="text-xs text-[#5B6B82] line-clamp-2">
+                {brand.athleteNames.length > 0
+                  ? `${brand.athleteNames.slice(0, 6).join(', ')}${brand.athleteNames.length > 6 ? ` +${brand.athleteNames.length - 6} more` : ''}`
+                  : 'N/A'}
+              </p>
+            </div>
+            <div className="mt-3 space-y-1">
+              <p className="text-[10px] uppercase tracking-[0.2em] text-[#7A8AA3]">Top Posts</p>
+              {brand.topPosts.map((post, idx) => {
+                const postDate = typeof post.publishedAt === 'string' ? post.publishedAt : post.publishedAt?.$date;
+                const postUrl = post.permalink || post.url;
+                const thumbnailUrl = post.url || post.permalink;
+                return (
+                  <div key={`${brand.brand}-${idx}`} className="text-xs text-[#5B6B82] flex items-center gap-2">
+                    {postUrl ? (
+                      <a
+                        href={postUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="w-10 h-10 rounded-md overflow-hidden border border-[#E1E7F0] bg-[#F3F6FB] shrink-0"
+                      >
+                        {thumbnailUrl ? (
+                          <img src={thumbnailUrl} alt={`${brand.brand} post`} className="w-full h-full object-cover" />
+                        ) : (
+                          <div className="w-full h-full flex items-center justify-center text-[9px] text-[#9AA7BC]">N/A</div>
+                        )}
+                      </a>
+                    ) : (
+                      <div className="w-10 h-10 rounded-md overflow-hidden border border-[#E1E7F0] bg-[#F3F6FB] shrink-0 flex items-center justify-center text-[9px] text-[#9AA7BC]">
+                        N/A
+                      </div>
+                    )}
+                    <div className="min-w-0 flex-1">
+                      <div className="truncate">
+                        {(post.athlete?.name || 'Unknown')} • {fmtN(post.metrics?.likes || 0)} likes
+                      </div>
+                      <div className="text-[#7A8AA3]">{fmtDate(postDate)}</div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </GlassPanel>
         ))}
@@ -964,15 +1333,64 @@ function BenchmarksTab({ config, athletes, primaryColor }: {
   secondaryColor: string;
 }) {
   const { benchmark, peerSchools, shortName, conference } = config;
+  const [scope, setScope] = useState<'conference' | 'all'>('conference');
+  const [datasetSchools, setDatasetSchools] = useState<ConferenceBenchmarkSchool[] | null>(null);
+  const [comparisonSortKey, setComparisonSortKey] = useState<'metric' | 'thisVal' | 'medVal' | 'diff' | 'rank'>('rank');
+  const [comparisonSortDir, setComparisonSortDir] = useState<'asc' | 'desc'>('asc');
+  const [leaderSortKey, setLeaderSortKey] = useState<'school' | 'deals' | 'emv' | 'engagement' | 'athletes' | 'brands'>('deals');
+  const [leaderSortDir, setLeaderSortDir] = useState<'asc' | 'desc'>('desc');
+
+  useEffect(() => {
+    let cancelled = false;
+    loadAllBenchmarkSchools()
+      .then((schools) => {
+        if (cancelled) return;
+        setDatasetSchools(schools.length ? schools : null);
+      })
+      .catch(() => {
+        if (!cancelled) setDatasetSchools(null);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const totalLikes = athletes.reduce((s, a) => s + a.totalLikes, 0);
   const totalPosts = athletes.reduce((s, a) => s + a.totalPosts, 0);
   const avgEngagement = athletes.length ? athletes.reduce((s, a) => s + a.avgEngagementRate, 0) / athletes.length * 100 : 0;
 
-  // Build peer list with this school
-  const allSchools = [...peerSchools, benchmark];
+  const fallbackSchools: ConferenceBenchmarkSchool[] = [...peerSchools, benchmark].map((s) => ({
+    id: s.id,
+    shortName: s.shortName,
+    conference: s.conference,
+    totalDeals: s.totalDeals,
+    totalEMV: s.totalEMV,
+    avgEngagement: s.avgEngagement,
+    athleteCount: s.athleteCount,
+    brandCount: s.brandCount,
+  }));
+
+  const conferenceKey = normalizeConference(conference);
+  const datasetConferenceSchools = (datasetSchools || []).filter((s) => normalizeConference(s.conference) === conferenceKey);
+  const scopedDatasetSchools = scope === 'conference' ? datasetConferenceSchools : (datasetSchools || []);
+  const allSchools = scopedDatasetSchools.length ? scopedDatasetSchools : fallbackSchools;
+
+  const targetSchoolKeys = new Set<string>([
+    normalizeSchool(config.shortName),
+    normalizeSchool(config.name),
+    ...(ROSTER_NAME_MATCHERS[config.id] || []).map(normalizeSchool),
+  ]);
+
+  const selfSchool =
+    allSchools.find((s) => targetSchoolKeys.has(normalizeSchool(s.shortName))) ||
+    allSchools.find((s) => s.id === config.id) ||
+    allSchools.find((s) => normalizeSchool(s.shortName).includes(normalizeSchool(config.shortName))) ||
+    allSchools[0];
+
+  const peers = allSchools.filter((s) => s.id !== selfSchool?.id);
+
   const confMedian = (key: keyof typeof benchmark) => {
-    const vals = peerSchools.map(p => p[key] as number).sort((a, b) => a - b);
+    const vals = peers.map(p => p[key as keyof ConferenceBenchmarkSchool] as number).sort((a, b) => a - b);
     return vals.length ? vals[Math.floor(vals.length / 2)] : 0;
   };
   const medianDeals = confMedian('totalDeals');
@@ -984,17 +1402,17 @@ function BenchmarksTab({ config, athletes, primaryColor }: {
   // Compute rank for each metric based on benchmark stats
   const rankOf = (field: keyof typeof benchmark, higher = true) => {
     const sorted = [...allSchools].sort((a, b) => higher
-      ? (b[field] as number) - (a[field] as number)
-      : (a[field] as number) - (b[field] as number));
-    return { rank: sorted.findIndex(s => s.id === benchmark.id) + 1, of: allSchools.length };
+      ? (b[field as keyof ConferenceBenchmarkSchool] as number) - (a[field as keyof ConferenceBenchmarkSchool] as number)
+      : (a[field as keyof ConferenceBenchmarkSchool] as number) - (b[field as keyof ConferenceBenchmarkSchool] as number));
+    return { rank: sorted.findIndex(s => s.id === selfSchool?.id) + 1, of: allSchools.length };
   };
 
   const metricRows = [
-    { label: 'Sponsored Deals', thisVal: benchmark.totalDeals, medVal: medianDeals, format: fmtN, rankKey: 'totalDeals' as const },
-    { label: 'Est. Total EMV', thisVal: benchmark.totalEMV, medVal: medianEMV, format: fmtCur, rankKey: 'totalEMV' as const },
-    { label: 'Avg Engagement', thisVal: benchmark.avgEngagement, medVal: medianEng, format: (v: number) => fmtPct(v), rankKey: 'avgEngagement' as const },
-    { label: 'Athletes Active', thisVal: benchmark.athleteCount, medVal: medianAthletes, format: fmtN, rankKey: 'athleteCount' as const },
-    { label: 'Unique Brands', thisVal: benchmark.brandCount, medVal: medianBrands, format: fmtN, rankKey: 'brandCount' as const },
+    { label: 'Sponsored Deals', thisVal: selfSchool?.totalDeals || 0, medVal: medianDeals, format: fmtN, rankKey: 'totalDeals' as const },
+    { label: 'Est. Total EMV', thisVal: selfSchool?.totalEMV || 0, medVal: medianEMV, format: fmtCur, rankKey: 'totalEMV' as const },
+    { label: 'Avg Engagement', thisVal: selfSchool?.avgEngagement || 0, medVal: medianEng, format: (v: number) => fmtPct(v), rankKey: 'avgEngagement' as const },
+    { label: 'Athletes Active', thisVal: selfSchool?.athleteCount || 0, medVal: medianAthletes, format: fmtN, rankKey: 'athleteCount' as const },
+    { label: 'Unique Brands', thisVal: selfSchool?.brandCount || 0, medVal: medianBrands, format: fmtN, rankKey: 'brandCount' as const },
   ];
 
   const highlightRanks = [
@@ -1004,13 +1422,83 @@ function BenchmarksTab({ config, athletes, primaryColor }: {
     { label: 'Brands', key: 'brandCount' as const },
   ];
 
+  const sortedMetricRows = useMemo(() => {
+    const rows = metricRows.map((row) => {
+      const diff = row.medVal !== 0 ? ((row.thisVal - row.medVal) / Math.abs(row.medVal)) * 100 : 0;
+      const rank = rankOf(row.rankKey).rank;
+      return { ...row, diff, rank };
+    });
+
+    const sorted = [...rows].sort((a, b) => {
+      if (comparisonSortKey === 'metric') return a.label.localeCompare(b.label);
+      if (comparisonSortKey === 'thisVal') return a.thisVal - b.thisVal;
+      if (comparisonSortKey === 'medVal') return a.medVal - b.medVal;
+      if (comparisonSortKey === 'diff') return a.diff - b.diff;
+      return a.rank - b.rank;
+    });
+    return comparisonSortDir === 'desc' ? sorted.reverse() : sorted;
+  }, [metricRows, comparisonSortKey, comparisonSortDir]);
+
+  const sortedLeaderboard = useMemo(() => {
+    const rows = [...allSchools].sort((a, b) => {
+      if (leaderSortKey === 'school') return a.shortName.localeCompare(b.shortName);
+      if (leaderSortKey === 'deals') return a.totalDeals - b.totalDeals;
+      if (leaderSortKey === 'emv') return a.totalEMV - b.totalEMV;
+      if (leaderSortKey === 'engagement') return a.avgEngagement - b.avgEngagement;
+      if (leaderSortKey === 'athletes') return a.athleteCount - b.athleteCount;
+      return a.brandCount - b.brandCount;
+    });
+    return leaderSortDir === 'desc' ? rows.reverse() : rows;
+  }, [allSchools, leaderSortKey, leaderSortDir]);
+
+  const toggleComparisonSort = (key: 'metric' | 'thisVal' | 'medVal' | 'diff' | 'rank') => {
+    if (comparisonSortKey === key) {
+      setComparisonSortDir((prev) => (prev === 'asc' ? 'desc' : 'asc'));
+      return;
+    }
+    setComparisonSortKey(key);
+    setComparisonSortDir(key === 'metric' ? 'asc' : 'desc');
+  };
+
+  const toggleLeaderSort = (key: 'school' | 'deals' | 'emv' | 'engagement' | 'athletes' | 'brands') => {
+    if (leaderSortKey === key) {
+      setLeaderSortDir((prev) => (prev === 'asc' ? 'desc' : 'asc'));
+      return;
+    }
+    setLeaderSortKey(key);
+    setLeaderSortDir(key === 'school' ? 'asc' : 'desc');
+  };
+
+  const sortMarker = (active: boolean, dir: 'asc' | 'desc') => active ? (dir === 'desc' ? ' ↓' : ' ↑') : '';
+
   return (
     <div className="space-y-8">
       <GlassPanel className="p-6">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
             <h2 style={headerStyle} className="text-lg font-bold uppercase tracking-tight text-[#0F1D2E]">Benchmarks</h2>
-            <p className="text-sm text-[#5B6B82]">{shortName} vs {conference} conference peers ({peerSchools.length} schools)</p>
+            <p className="text-sm text-[#5B6B82]">
+              {shortName} vs {scope === 'conference' ? `${conference} conference peers` : 'NCAA schools in dataset'} ({allSchools.length} schools)
+            </p>
+          </div>
+          <div className="flex items-center gap-2">
+            {([
+              { key: 'conference', label: conference },
+              { key: 'all', label: 'NCAA' },
+            ] as const).map(chip => (
+              <button
+                key={chip.key}
+                onClick={() => setScope(chip.key)}
+                className={`px-4 py-2 rounded-full text-sm font-semibold border ${
+                  scope === chip.key
+                    ? 'border-opacity-40 text-white'
+                    : 'bg-white border-[#E1E7F0] text-[#1E2A3B] hover:border-opacity-30'
+                }`}
+                style={scope === chip.key ? { backgroundColor: primaryColor + '20', borderColor: primaryColor + '66', color: primaryColor } : {}}
+              >
+                {chip.label}
+              </button>
+            ))}
           </div>
           <div className="text-sm text-[#5B6B82]">
             Live stats: {fmtN(totalPosts)} posts • {fmtN(totalLikes)} likes • {fmtPct(avgEngagement)} avg ER
@@ -1035,30 +1523,59 @@ function BenchmarksTab({ config, athletes, primaryColor }: {
       {/* Comparison table */}
       <GlassPanel className="p-6">
         <h3 style={headerStyle} className="text-base font-bold uppercase tracking-tight mb-4 text-[#0F1D2E]">
-          {shortName} vs {conference} Median
+          {shortName} vs {scope === 'conference' ? conference : 'NCAA Dataset'} Median
         </h3>
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
               <tr className="text-xs uppercase tracking-[0.2em] text-[#5B6B82]">
-                <th className="text-left py-2 px-3">Metric</th>
-                <th className="text-right py-2 px-3">{shortName}</th>
-                <th className="text-right py-2 px-3">{conference} Median</th>
-                <th className="text-right py-2 px-3">Diff</th>
-                <th className="text-right py-2 px-3">Rank</th>
+                <th
+                  className="text-left py-2 px-3 cursor-pointer select-none hover:text-[#1770C0] transition-colors"
+                  style={{ color: comparisonSortKey === 'metric' ? primaryColor : '#5B6B82' }}
+                  onClick={() => toggleComparisonSort('metric')}
+                >
+                  Metric{sortMarker(comparisonSortKey === 'metric', comparisonSortDir)}
+                </th>
+                <th
+                  className="text-right py-2 px-3 cursor-pointer select-none hover:text-[#1770C0] transition-colors"
+                  style={{ color: comparisonSortKey === 'thisVal' ? primaryColor : '#5B6B82' }}
+                  onClick={() => toggleComparisonSort('thisVal')}
+                >
+                  {shortName}{sortMarker(comparisonSortKey === 'thisVal', comparisonSortDir)}
+                </th>
+                <th
+                  className="text-right py-2 px-3 cursor-pointer select-none hover:text-[#1770C0] transition-colors"
+                  style={{ color: comparisonSortKey === 'medVal' ? primaryColor : '#5B6B82' }}
+                  onClick={() => toggleComparisonSort('medVal')}
+                >
+                  {scope === 'conference' ? `${conference} Median` : 'NCAA Median'}{sortMarker(comparisonSortKey === 'medVal', comparisonSortDir)}
+                </th>
+                <th
+                  className="text-right py-2 px-3 cursor-pointer select-none hover:text-[#1770C0] transition-colors"
+                  style={{ color: comparisonSortKey === 'diff' ? primaryColor : '#5B6B82' }}
+                  onClick={() => toggleComparisonSort('diff')}
+                >
+                  Diff{sortMarker(comparisonSortKey === 'diff', comparisonSortDir)}
+                </th>
+                <th
+                  className="text-right py-2 px-3 cursor-pointer select-none hover:text-[#1770C0] transition-colors"
+                  style={{ color: comparisonSortKey === 'rank' ? primaryColor : '#5B6B82' }}
+                  onClick={() => toggleComparisonSort('rank')}
+                >
+                  Rank{sortMarker(comparisonSortKey === 'rank', comparisonSortDir)}
+                </th>
               </tr>
             </thead>
             <tbody>
-              {metricRows.map(row => {
-                const diff = row.medVal !== 0 ? ((row.thisVal - row.medVal) / Math.abs(row.medVal)) * 100 : 0;
+              {sortedMetricRows.map(row => {
                 const r = rankOf(row.rankKey);
                 return (
                   <tr key={row.label} className="border-t border-[#E1E7F0] hover:bg-[#F3F6FB]">
                     <td className="py-3 px-3 text-sm font-medium text-[#0F1D2E]">{row.label}</td>
                     <td className="py-3 px-3 text-sm text-right font-semibold text-[#0F1D2E]">{row.format(row.thisVal)}</td>
                     <td className="py-3 px-3 text-sm text-right text-[#5B6B82]">{row.format(row.medVal)}</td>
-                    <td className={`py-3 px-3 text-sm text-right font-semibold ${diff >= 0 ? 'text-green-600' : 'text-red-500'}`}>
-                      {diff >= 0 ? '+' : ''}{diff.toFixed(1)}%
+                    <td className={`py-3 px-3 text-sm text-right font-semibold ${row.diff >= 0 ? 'text-green-600' : 'text-red-500'}`}>
+                      {row.diff >= 0 ? '+' : ''}{row.diff.toFixed(1)}%
                     </td>
                     <td className="py-3 px-3 text-sm text-right text-[#5B6B82]">#{r.rank}/{r.of}</td>
                   </tr>
@@ -1072,7 +1589,7 @@ function BenchmarksTab({ config, athletes, primaryColor }: {
       {/* Visual bars */}
       <GlassPanel className="p-6">
         <h3 style={headerStyle} className="text-base font-bold uppercase tracking-tight mb-4 text-[#0F1D2E]">
-          Key Metrics vs {conference}
+          Key Metrics vs {scope === 'conference' ? conference : 'NCAA Dataset'}
         </h3>
         <div className="space-y-5">
           {[
@@ -1109,26 +1626,64 @@ function BenchmarksTab({ config, athletes, primaryColor }: {
 
       {/* Peer leaderboard */}
       <GlassPanel className="p-6">
-        <h3 style={headerStyle} className="text-base font-bold uppercase tracking-tight mb-4 text-[#0F1D2E]">{conference} Leaderboard</h3>
+        <h3 style={headerStyle} className="text-base font-bold uppercase tracking-tight mb-4 text-[#0F1D2E]">
+          {scope === 'conference' ? `${conference} Leaderboard` : 'NCAA Dataset Leaderboard'}
+        </h3>
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
               <tr className="text-xs uppercase tracking-[0.2em] text-[#5B6B82]">
-                <th className="text-left py-2 px-3">School</th>
-                <th className="text-right py-2 px-3">Deals</th>
-                <th className="text-right py-2 px-3">EMV</th>
-                <th className="text-right py-2 px-3">Avg Eng.</th>
-                <th className="text-right py-2 px-3">Athletes</th>
-                <th className="text-right py-2 px-3">Brands</th>
+                <th
+                  className="text-left py-2 px-3 cursor-pointer select-none hover:text-[#1770C0] transition-colors"
+                  style={{ color: leaderSortKey === 'school' ? primaryColor : '#5B6B82' }}
+                  onClick={() => toggleLeaderSort('school')}
+                >
+                  School{sortMarker(leaderSortKey === 'school', leaderSortDir)}
+                </th>
+                <th
+                  className="text-right py-2 px-3 cursor-pointer select-none hover:text-[#1770C0] transition-colors"
+                  style={{ color: leaderSortKey === 'deals' ? primaryColor : '#5B6B82' }}
+                  onClick={() => toggleLeaderSort('deals')}
+                >
+                  Deals{sortMarker(leaderSortKey === 'deals', leaderSortDir)}
+                </th>
+                <th
+                  className="text-right py-2 px-3 cursor-pointer select-none hover:text-[#1770C0] transition-colors"
+                  style={{ color: leaderSortKey === 'emv' ? primaryColor : '#5B6B82' }}
+                  onClick={() => toggleLeaderSort('emv')}
+                >
+                  EMV{sortMarker(leaderSortKey === 'emv', leaderSortDir)}
+                </th>
+                <th
+                  className="text-right py-2 px-3 cursor-pointer select-none hover:text-[#1770C0] transition-colors"
+                  style={{ color: leaderSortKey === 'engagement' ? primaryColor : '#5B6B82' }}
+                  onClick={() => toggleLeaderSort('engagement')}
+                >
+                  Avg Eng.{sortMarker(leaderSortKey === 'engagement', leaderSortDir)}
+                </th>
+                <th
+                  className="text-right py-2 px-3 cursor-pointer select-none hover:text-[#1770C0] transition-colors"
+                  style={{ color: leaderSortKey === 'athletes' ? primaryColor : '#5B6B82' }}
+                  onClick={() => toggleLeaderSort('athletes')}
+                >
+                  Athletes{sortMarker(leaderSortKey === 'athletes', leaderSortDir)}
+                </th>
+                <th
+                  className="text-right py-2 px-3 cursor-pointer select-none hover:text-[#1770C0] transition-colors"
+                  style={{ color: leaderSortKey === 'brands' ? primaryColor : '#5B6B82' }}
+                  onClick={() => toggleLeaderSort('brands')}
+                >
+                  Brands{sortMarker(leaderSortKey === 'brands', leaderSortDir)}
+                </th>
               </tr>
             </thead>
             <tbody>
-              {[...allSchools].sort((a, b) => b.totalDeals - a.totalDeals).map(s => (
+              {sortedLeaderboard.map(s => (
                 <tr key={s.id}
-                  className={`border-t border-[#E1E7F0] ${s.id === benchmark.id ? 'font-semibold' : 'hover:bg-[#F3F6FB]'}`}
-                  style={s.id === benchmark.id ? { backgroundColor: primaryColor + '0D' } : {}}>
+                  className={`border-t border-[#E1E7F0] ${s.id === selfSchool?.id ? 'font-semibold' : 'hover:bg-[#F3F6FB]'}`}
+                  style={s.id === selfSchool?.id ? { backgroundColor: primaryColor + '0D' } : {}}>
                   <td className="py-3 px-3 text-sm text-[#0F1D2E]">
-                    {s.id === benchmark.id ? '→ ' : ''}{s.shortName}
+                    {s.id === selfSchool?.id ? '→ ' : ''}{s.shortName}
                   </td>
                   <td className="py-3 px-3 text-sm text-right">{fmtN(s.totalDeals)}</td>
                   <td className="py-3 px-3 text-sm text-right">{fmtCur(s.totalEMV)}</td>
@@ -1146,68 +1701,218 @@ function BenchmarksTab({ config, athletes, primaryColor }: {
 }
 
 // ─── IP Tab ──────────────────────────────────────────────────
-function IPTab({ comparisons, primaryColor }: { comparisons: IPComparison[]; primaryColor: string }) {
+function IPTab({
+  comparisons,
+  primaryColor,
+  secondaryColor,
+  shortName,
+}: {
+  comparisons: IPComparison[];
+  primaryColor: string;
+  secondaryColor: string;
+  shortName: string;
+}) {
+  const [signal, setSignal] = useState<'collab' | 'logo' | 'caption'>('collab');
+  const [metric, setMetric] = useState<'er' | 'likes' | 'comments'>('er');
+
+  const signals = [
+    { id: 'collab' as const, label: 'Collaboration', data: comparisons.find(c => c.label === 'Collaboration') },
+    { id: 'logo' as const, label: 'Logo', data: comparisons.find(c => c.label === 'Logo') },
+    { id: 'caption' as const, label: 'Caption', data: comparisons.find(c => c.label === 'Caption') },
+  ].filter((s): s is { id: 'collab' | 'logo' | 'caption'; label: string; data: IPComparison } => Boolean(s.data));
+
+  const metrics = [
+    { id: 'er' as const, label: 'Eng. Rate' },
+    { id: 'likes' as const, label: 'Likes/Post' },
+    { id: 'comments' as const, label: 'Comments/Post' },
+  ];
+
+  const active = signals.find(s => s.id === signal) ?? signals[0];
+  if (!active) {
+    return (
+      <div className="space-y-8">
+        <GlassPanel className="p-6">
+          <p className="text-sm text-[#5B6B82]">No IP comparison data is available for this school yet.</p>
+        </GlassPanel>
+      </div>
+    );
+  }
+
+  const withData = active.data.yes;
+  const noData = active.data.no;
+  const lift = active.data.avgLift;
+  const liftPositive = lift >= 0;
+
+  const metricValue = () => {
+    if (metric === 'er') {
+      return {
+        withVal: withData.engagementRate * 100,
+        noVal: noData.engagementRate * 100,
+        fmt: (v: number) => fmtPct(v, 1),
+      };
+    }
+    if (metric === 'likes') {
+      return {
+        withVal: withData.likes,
+        noVal: noData.likes,
+        fmt: (v: number) => fmtN(Math.round(v)),
+      };
+    }
+    return {
+      withVal: withData.comments,
+      noVal: noData.comments,
+      fmt: (v: number) => fmtN(Math.round(v)),
+    };
+  };
+
+  const { withVal, noVal, fmt } = metricValue();
+  const maxVal = Math.max(withVal, noVal, 0.001);
+  const withPct = (withVal / maxVal) * 100;
+  const noPct = (noVal / maxVal) * 100;
+
+  const secondaryIsLight = ['#fff', '#ffffff', '#fdf9d8'].includes(secondaryColor.toLowerCase());
+
   return (
-    <div className="space-y-8">
-      <GlassPanel className="p-6">
-        <div className="flex flex-col gap-2">
-          <h2 style={headerStyle} className="text-lg font-bold uppercase tracking-tight text-[#0F1D2E]">IP Impact (Supporting)</h2>
-          <p className="text-sm text-[#5B6B82]">Engagement lift when Playfly IP signals are present.</p>
-          <span className="text-[10px] uppercase tracking-[0.2em] px-2 py-0.5 rounded-full w-fit border"
-            style={{ color: primaryColor, backgroundColor: primaryColor + '1A', borderColor: primaryColor + '4D' }}>
+    <div className="space-y-6">
+      <GlassPanel className="p-6 md:p-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div>
+            <p className="text-xs uppercase tracking-[0.35em] mb-2" style={{ color: primaryColor }}>
+              IP Intelligence · Instagram Only
+            </p>
+            <p className="text-3xl md:text-4xl font-black text-[#0F1D2E] leading-tight">
+              Posts with {shortName} {active.label.toLowerCase()} drive{' '}
+              <span style={{ color: liftPositive ? primaryColor : '#C2413B' }}>
+                {liftPositive ? '+' : ''}{lift.toFixed(1)}%
+              </span>{' '}
+              higher engagement.
+            </p>
+          </div>
+          <span
+            className="text-[10px] uppercase tracking-[0.25em] px-3 py-0.5 rounded-full border w-fit whitespace-nowrap"
+            style={{ color: primaryColor, backgroundColor: primaryColor + '14', borderColor: primaryColor + '55' }}
+          >
             Instagram only
           </span>
         </div>
       </GlassPanel>
 
-      <GlassPanel className="p-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {comparisons.map(item => {
-            const positive = item.avgLift > 0;
-            const neutral = item.avgLift === 0;
-            const color = neutral ? '#6B7280' : positive ? primaryColor : '#C2413B';
-            return (
-              <div key={item.label} className="flex items-center justify-between rounded-xl border border-[#E1E7F0] bg-white px-4 py-3">
-                <div>
-                  <div className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">{item.label}</div>
-                  <div className="text-2xl font-bold mt-1" style={{ color }}>{fmtPct(item.avgLift)}</div>
-                </div>
-                {neutral ? <span className="text-[#6B7280] text-xs">—</span>
-                  : positive ? <ArrowUpRight className="w-5 h-5" color={color} />
-                  : <ArrowDownRight className="w-5 h-5" color={color} />}
-              </div>
-            );
-          })}
+      <div className="flex flex-wrap gap-3 items-center">
+        <div className="flex items-center gap-1 rounded-xl border border-[#E1E7F0] p-1 bg-[#F7F9FC]">
+          {signals.map(s => (
+            <button
+              key={s.id}
+              onClick={() => setSignal(s.id)}
+              className={`px-4 py-1.5 rounded-lg text-sm font-semibold transition-all ${
+                signal === s.id ? 'text-white shadow-sm' : 'text-[#5B6B82] hover:text-[#1E2A3B]'
+              }`}
+              style={signal === s.id ? { backgroundColor: primaryColor } : undefined}
+            >
+              {s.label}
+            </button>
+          ))}
+        </div>
+        <div className="flex items-center gap-1 rounded-xl border border-[#E1E7F0] p-1 bg-[#F7F9FC]">
+          {metrics.map(m => (
+            <button
+              key={m.id}
+              onClick={() => setMetric(m.id)}
+              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                metric === m.id ? 'text-[#0F1D2E] shadow-sm' : 'text-[#5B6B82] hover:text-[#1E2A3B]'
+              }`}
+              style={metric === m.id
+                ? { backgroundColor: secondaryColor, border: secondaryIsLight ? '1px solid #D6DEE8' : undefined }
+                : undefined}
+            >
+              {m.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <GlassPanel className="p-6">
+        <p className="text-sm font-bold text-[#0F1D2E] mb-1">
+          {active.label} Impact on {metrics.find(m => m.id === metric)?.label}
+        </p>
+        <p className="text-xs text-[#7A8AA3] mb-6">
+          Posts using {active.label.toLowerCase()} vs posts without {active.label.toLowerCase()}
+        </p>
+        <div className="space-y-5">
+          <div>
+            <div className="flex items-baseline justify-between mb-1.5">
+              <p className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: primaryColor }}>
+                With {active.label} · {fmtN(withData.contents)} posts
+              </p>
+              <p className="text-xl font-black text-[#0F1D2E]">{fmt(withVal)}</p>
+            </div>
+            <div className="w-full bg-[#F0F4FA] rounded-lg h-9 overflow-hidden">
+              <div className="h-full rounded-lg transition-all duration-700" style={{ width: `${Math.max(withPct, 2)}%`, backgroundColor: primaryColor }} />
+            </div>
+          </div>
+          <div>
+            <div className="flex items-baseline justify-between mb-1.5">
+              <p className="text-[11px] font-semibold uppercase tracking-wider text-[#9AA7BC]">
+                Without {active.label} · {fmtN(noData.contents)} posts
+              </p>
+              <p className="text-xl font-black text-[#5B6B82]">{fmt(noVal)}</p>
+            </div>
+            <div className="w-full bg-[#F0F4FA] rounded-lg h-9 overflow-hidden">
+              <div className="h-full rounded-lg bg-[#C8D5E3] transition-all duration-700" style={{ width: `${Math.max(noPct, 2)}%` }} />
+            </div>
+          </div>
+          <div className="pt-2 border-t border-[#E1E7F0] flex items-center gap-2">
+            {liftPositive ? <ArrowUpRight className="w-5 h-5" style={{ color: primaryColor }} /> : <ArrowDownRight className="w-5 h-5 text-[#C2413B]" />}
+            <span className="text-sm font-bold" style={{ color: liftPositive ? primaryColor : '#C2413B' }}>
+              {liftPositive ? '+' : ''}{lift.toFixed(1)}% ER lift
+            </span>
+            <span className="text-xs text-[#7A8AA3]">on posts with {active.label.toLowerCase()}</span>
+          </div>
         </div>
       </GlassPanel>
 
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {[
+          { label: 'Posts With', value: fmtN(withData.contents) },
+          { label: 'Posts Without', value: fmtN(noData.contents) },
+          { label: 'Avg ER With', value: fmtPct(withData.engagementRate * 100, 1) },
+          { label: 'EMV With', value: fmtCur(withData.emv) },
+        ].map(item => (
+          <GlassPanel key={item.label} className="p-4">
+            <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">{item.label}</p>
+            <p className="text-xl font-bold mt-2 text-[#0F1D2E]">{item.value}</p>
+          </GlassPanel>
+        ))}
+      </div>
+
       <GlassPanel className="p-6">
-        <h3 style={headerStyle} className="text-sm font-bold uppercase tracking-tight mb-4 text-[#0F1D2E]">IP Comparison</h3>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          {comparisons.map(row => (
-            <div key={row.label} className="rounded-xl border border-[#E1E7F0] bg-white p-4">
-              <div className="flex items-center justify-between">
-                <div className="text-sm font-semibold text-[#0F1D2E]">{row.label}</div>
-                <div className={`text-sm font-bold ${row.avgLift >= 0 ? '' : 'text-[#C2413B]'}`} style={row.avgLift >= 0 ? { color: primaryColor } : {}}>
-                  {row.avgLift >= 0 ? '+' : ''}{row.avgLift.toFixed(1)}% ER Lift
+        <h3 style={headerStyle} className="text-base font-bold uppercase tracking-tight mb-4 text-[#0F1D2E]">
+          All IP Signals — Summary
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {signals.map(s => {
+            const pos = s.data.avgLift >= 0;
+            const color = pos ? primaryColor : '#C2413B';
+            return (
+              <button
+                key={s.id}
+                onClick={() => setSignal(s.id)}
+                className="text-left rounded-xl border p-4 transition-all border-[#E1E7F0] bg-white hover:border-[#CBD7E6]"
+                style={signal === s.id ? { borderColor: primaryColor + '66', backgroundColor: primaryColor + '0D' } : undefined}
+              >
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-sm font-semibold text-[#0F1D2E]">{s.label}</span>
+                  <span className="text-sm font-bold" style={{ color }}>
+                    {pos ? '+' : ''}{s.data.avgLift.toFixed(1)}%
+                  </span>
                 </div>
-              </div>
-              <div className="grid grid-cols-2 gap-3 mt-4 text-sm text-[#5B6B82]">
-                <div>
-                  <div className="text-xs text-[#7A8AA3]">With</div>
-                  <div>Posts: {fmtN(row.yes.contents)}</div>
-                  <div>Avg ER: {fmtPct(row.yes.engagementRate * 100)}</div>
-                  <div>Likes/post: {fmtN(row.yes.likes)}</div>
+                <div className="space-y-1 text-xs text-[#5B6B82]">
+                  <div className="flex justify-between"><span>Posts with</span><span className="font-medium text-[#0F1D2E]">{fmtN(s.data.yes.contents)}</span></div>
+                  <div className="flex justify-between"><span>Avg ER with</span><span className="font-medium text-[#0F1D2E]">{fmtPct(s.data.yes.engagementRate * 100, 1)}</span></div>
+                  <div className="flex justify-between"><span>Likes/post with</span><span className="font-medium text-[#0F1D2E]">{fmtN(Math.round(s.data.yes.likes))}</span></div>
                 </div>
-                <div>
-                  <div className="text-xs text-[#7A8AA3]">Without</div>
-                  <div>Posts: {fmtN(row.no.contents)}</div>
-                  <div>Avg ER: {fmtPct(row.no.engagementRate * 100)}</div>
-                  <div>Likes/post: {fmtN(row.no.likes)}</div>
-                </div>
-              </div>
-            </div>
-          ))}
+              </button>
+            );
+          })}
         </div>
       </GlassPanel>
     </div>

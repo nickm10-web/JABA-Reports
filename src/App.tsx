@@ -10,11 +10,13 @@ import { PlayflyReportHub } from './components/PlayflyReportHub';
 import { UCLABrandDeals } from './components/UCLABrandDeals';
 import { NotreDameBrandDeals } from './components/NotreDameBrandDeals';
 import { NilReport } from './components/NilReport';
+import { SchoolAthleteReport } from './components/SchoolAthleteReport';
 import {
   michiganConfig,
   alabamaConfig,
   arkansasConfig,
   oklahomaConfig,
+  wisconsinConfig,
   boiseStateConfig,
 } from './config/schoolConfigs';
 
@@ -65,25 +67,31 @@ function UCLARoute() {
 function MichiganRoute() {
   const navigate = useNavigate();
   const canGoBack = window.history.length > 2;
-  return <NilReport config={michiganConfig} onBack={canGoBack ? () => navigate('/') : undefined} />;
+  return <SchoolAthleteReport config={michiganConfig} onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
 function AlabamaRoute() {
   const navigate = useNavigate();
   const canGoBack = window.history.length > 2;
-  return <NilReport config={alabamaConfig} onBack={canGoBack ? () => navigate('/') : undefined} />;
+  return <SchoolAthleteReport config={alabamaConfig} onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
 function ArkansasRoute() {
   const navigate = useNavigate();
   const canGoBack = window.history.length > 2;
-  return <NilReport config={arkansasConfig} onBack={canGoBack ? () => navigate('/') : undefined} />;
+  return <SchoolAthleteReport config={arkansasConfig} onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
 function OklahomaRoute() {
   const navigate = useNavigate();
   const canGoBack = window.history.length > 2;
-  return <NilReport config={oklahomaConfig} onBack={canGoBack ? () => navigate('/') : undefined} />;
+  return <SchoolAthleteReport config={oklahomaConfig} onBack={canGoBack ? () => navigate('/') : undefined} />;
+}
+
+function WisconsinRoute() {
+  const navigate = useNavigate();
+  const canGoBack = window.history.length > 2;
+  return <SchoolAthleteReport config={wisconsinConfig} onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
 function NotreDameRoute() {
@@ -123,9 +131,12 @@ function App() {
         <Route path="/michigan" element={<MichiganRoute />} />
         <Route path="/playfly" element={<PlayflyRoute />} />
         <Route path="/ucla" element={<UCLARoute />} />
+        <Route path="/alabama" element={<AlabamaRoute />} />
         <Route path="/alabama-nil" element={<AlabamaRoute />} />
+        <Route path="/arkansas" element={<ArkansasRoute />} />
         <Route path="/arkansas-nil" element={<ArkansasRoute />} />
         <Route path="/oklahoma" element={<OklahomaRoute />} />
+        <Route path="/wisconsin" element={<WisconsinRoute />} />
         <Route path="/notre-dame" element={<NotreDameRoute />} />
         <Route path="/notredame" element={<NotreDameRoute />} />
         <Route path="/boise-state" element={<BoiseStateRoute />} />
