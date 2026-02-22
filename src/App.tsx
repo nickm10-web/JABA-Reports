@@ -65,33 +65,23 @@ function UCLARoute() {
 }
 
 function MichiganRoute() {
-  const navigate = useNavigate();
-  const canGoBack = window.history.length > 2;
-  return <SchoolAthleteReport config={michiganConfig} onBack={canGoBack ? () => navigate('/') : undefined} />;
+  return <SchoolAthleteReport config={michiganConfig} />;
 }
 
 function AlabamaRoute() {
-  const navigate = useNavigate();
-  const canGoBack = window.history.length > 2;
-  return <SchoolAthleteReport config={alabamaConfig} onBack={canGoBack ? () => navigate('/') : undefined} />;
+  return <SchoolAthleteReport config={alabamaConfig} />;
 }
 
 function ArkansasRoute() {
-  const navigate = useNavigate();
-  const canGoBack = window.history.length > 2;
-  return <SchoolAthleteReport config={arkansasConfig} onBack={canGoBack ? () => navigate('/') : undefined} />;
+  return <SchoolAthleteReport config={arkansasConfig} />;
 }
 
 function OklahomaRoute() {
-  const navigate = useNavigate();
-  const canGoBack = window.history.length > 2;
-  return <SchoolAthleteReport config={oklahomaConfig} onBack={canGoBack ? () => navigate('/') : undefined} />;
+  return <SchoolAthleteReport config={oklahomaConfig} />;
 }
 
 function WisconsinRoute() {
-  const navigate = useNavigate();
-  const canGoBack = window.history.length > 2;
-  return <SchoolAthleteReport config={wisconsinConfig} onBack={canGoBack ? () => navigate('/') : undefined} />;
+  return <SchoolAthleteReport config={wisconsinConfig} />;
 }
 
 function NotreDameRoute() {
