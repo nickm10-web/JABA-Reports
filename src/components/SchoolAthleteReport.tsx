@@ -4,7 +4,7 @@
 // content-posts.json. Matches the UCLA report design.
 // ═══════════════════════════════════════════════════════════════
 import { useEffect, useMemo, useState } from 'react';
-import { ArrowLeft, ExternalLink, ArrowUpRight, ArrowDownRight, Search } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, ArrowDownRight, Search, Lightbulb, Users, Heart, MessageCircle, Zap } from 'lucide-react';
 import { DrawerPanel, TabTransition } from './playfly/PlayflyUI';
 import type { SchoolConfig } from '../config/schoolConfigs';
 
@@ -35,6 +35,7 @@ interface DerivedAthlete {
   totalLikes: number;
   totalComments: number;
   followers: number;
+  marketabilityScore: number;
   avgEngagementRate: number; // decimal 0-1
 }
 
@@ -68,10 +69,38 @@ interface FallbackRosterRow {
   lastName?: string;
   schoolName?: string;
   metrics?: {
-    ninetyDays?: { followers?: number };
+    ninetyDays?: { followers?: number; marketability?: number };
     thirtyDays?: { followers?: number };
     sevenDays?: { followers?: number };
   };
+}
+
+interface TeamRosterRow {
+  schoolName?: string;
+  sport?: string;
+  handle?: string;
+  instagramHandle?: string;
+  username?: string;
+  metrics?: {
+    ninetyDays?: {
+      followers?: number;
+      likes?: number;
+      comments?: number;
+      contentCount?: number;
+      engagementRate?: number;
+    };
+  };
+}
+
+interface TeamPageStat {
+  sport: string;
+  handle: string;
+  accountCount: number;
+  followers: number;
+  totalPosts: number;
+  totalLikes: number;
+  totalComments: number;
+  avgEngagementRate: number; // decimal 0-1
 }
 
 interface ConferenceBenchmarkSchool {
@@ -142,6 +171,18 @@ const getRosterFollowers = (row?: FallbackRosterRow | null) =>
     row?.metrics?.sevenDays?.followers ??
     0
   );
+const getRosterMarketability = (row?: FallbackRosterRow | null) =>
+  Number(row?.metrics?.ninetyDays?.marketability ?? 0);
+
+const parsePostDate = (post: RawPost): Date | null => {
+  const raw = typeof post?.publishedAt === 'string'
+    ? post.publishedAt
+    : post?.publishedAt?.$date || post?.createdAt?.$date || post?.createdAt;
+  if (!raw) return null;
+  const d = new Date(raw);
+  if (Number.isNaN(d.getTime()) || d.getFullYear() < 2020) return null;
+  return d;
+};
 
 const normalizeConference = (value?: string) => {
   const raw = (value || '').trim().toLowerCase();
@@ -156,6 +197,7 @@ const normalizeSchool = (value?: string) =>
 
 const slugify = (value: string) =>
   value.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+const compactToken = (value: string) => value.toLowerCase().replace(/[^a-z0-9]/g, '');
 
 let allBenchmarkSchoolsPromise: Promise<ConferenceBenchmarkSchool[]> | null = null;
 
@@ -255,6 +297,7 @@ function derivePosts(
         image: p.athlete?.image,
         position: p.athlete?.position,
         totalPosts: 0, totalLikes: 0, totalComments: 0, followers: 0,
+        marketabilityScore: 0,
         avgEngagementRate: 0, engSum: 0, engCount: 0,
       });
     }
@@ -351,6 +394,7 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
   const [rawPosts, setRawPosts] = useState<RawPost[]>([]);
   const [rosterData, setRosterData] = useState<any>(null);
   const [fallbackRosterRows, setFallbackRosterRows] = useState<FallbackRosterRow[]>([]);
+  const [teamRosterRows, setTeamRosterRows] = useState<TeamRosterRow[]>([]);
   const [selectedAthlete, setSelectedAthlete] = useState<DerivedAthlete | null>(null);
 
   const primaryColor = config.colors.primary;
@@ -375,11 +419,17 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
       .then((rows: FallbackRosterRow[]) => Array.isArray(rows) ? rows : [])
       .catch(() => []);
 
-    Promise.all([postsPromise, rosterPromise, fallbackRosterPromise])
-      .then(([posts, roster, fallbackRows]) => {
+    const teamRosterPromise = fetch('/data/roster_teams.json')
+      .then(r => r.ok ? r.json() : [])
+      .then((rows: TeamRosterRow[]) => Array.isArray(rows) ? rows : [])
+      .catch(() => []);
+
+    Promise.all([postsPromise, rosterPromise, fallbackRosterPromise, teamRosterPromise])
+      .then(([posts, roster, fallbackRows, teamRows]) => {
         setRawPosts(posts);
         setRosterData(roster);
         setFallbackRosterRows(fallbackRows);
+        setTeamRosterRows(teamRows);
       })
       .finally(() => setLoading(false));
   }, [config.dataFile, config.id]);
@@ -393,15 +443,30 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
       const rosterMapByName = new Map(
         rosterData.athletes.map((a: any) => [normalizeName(a.name), Number(a.followers || 0)])
       );
+      const rosterMarketabilityById = new Map(
+        rosterData.athletes.map((a: any) => [a._id, Number(a.marketabilityScore ?? a.marketability ?? a.score ?? 0)])
+      );
+      const rosterMarketabilityByName = new Map(
+        rosterData.athletes.map((a: any) => [normalizeName(a.name), Number(a.marketabilityScore ?? a.marketability ?? a.score ?? 0)])
+      );
       derived.athletes.forEach(athlete => {
         const byId = rosterMapById.get(athlete.id);
         if (typeof byId === 'number' && byId > 0) {
           athlete.followers = byId;
-          return;
+        } else {
+          const byName = rosterMapByName.get(normalizeName(athlete.name));
+          if (typeof byName === 'number' && byName > 0) {
+            athlete.followers = byName;
+          }
         }
-        const byName = rosterMapByName.get(normalizeName(athlete.name));
-        if (typeof byName === 'number' && byName > 0) {
-          athlete.followers = byName;
+        const marketById = rosterMarketabilityById.get(athlete.id);
+        if (typeof marketById === 'number' && marketById > 0) {
+          athlete.marketabilityScore = marketById;
+        } else {
+          const marketByName = rosterMarketabilityByName.get(normalizeName(athlete.name));
+          if (typeof marketByName === 'number' && marketByName > 0) {
+            athlete.marketabilityScore = marketByName;
+          }
         }
       });
     }
@@ -414,12 +479,17 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
         return matchers.some((m) => school === m || school.includes(m));
       });
       const followersByName = new Map<string, number>();
+      const marketabilityByName = new Map<string, number>();
       for (const row of schoolRows) {
         const fullName = normalizeName(`${row.firstName || ''} ${row.lastName || ''}`);
         if (!fullName) continue;
         const followers = getRosterFollowers(row);
+        const marketability = getRosterMarketability(row);
         if (!followersByName.has(fullName) || followers > (followersByName.get(fullName) || 0)) {
           followersByName.set(fullName, followers);
+        }
+        if (!marketabilityByName.has(fullName) || marketability > (marketabilityByName.get(fullName) || 0)) {
+          marketabilityByName.set(fullName, marketability);
         }
       }
       derived.athletes.forEach((athlete) => {
@@ -429,16 +499,113 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
           athlete.followers = fromFallback;
         }
       });
+      derived.athletes.forEach((athlete) => {
+        if (athlete.marketabilityScore > 0) return;
+        const fromFallback = marketabilityByName.get(normalizeName(athlete.name));
+        if (typeof fromFallback === 'number' && fromFallback > 0) {
+          athlete.marketabilityScore = fromFallback;
+        }
+      });
     }
 
     return derived;
   }, [rawPosts, rosterData, fallbackRosterRows, config.id, config.name]);
   const sports = useMemo(() => deriveSports(athletes), [athletes]);
+  const teamPages = useMemo(() => {
+    if (!teamRosterRows.length) return [];
+    const schoolHandleBase = compactToken(config.id || config.shortName || config.name || 'team');
+    const matchers = (ROSTER_NAME_MATCHERS[config.id] || [config.name.toLowerCase()]).map((m) => m.toLowerCase());
+    const rows = teamRosterRows.filter((row) => {
+      const school = (row.schoolName || '').toLowerCase();
+      return matchers.some((m) => school === m || school.includes(m));
+    });
+    const map = new Map<string, {
+      handle: string;
+      accountCount: number;
+      followers: number;
+      totalPosts: number;
+      totalLikes: number;
+      totalComments: number;
+      erNumerator: number;
+      erDenominator: number;
+    }>();
+    for (const row of rows) {
+      const sport = row.sport || 'UNKNOWN';
+      const sportHandleToken = compactToken(fmtSport(sport));
+      const rawHandle =
+        row.handle ||
+        row.instagramHandle ||
+        row.username ||
+        '';
+      const normalizedHandle = normalizeHandle(rawHandle);
+      const fallbackHandle = `${schoolHandleBase}${sportHandleToken}`;
+      const m = row.metrics?.ninetyDays || {};
+      const followers = Number(m.followers || 0);
+      const likes = Number(m.likes || 0);
+      const comments = Number(m.comments || 0);
+      const posts = Number(m.contentCount || 0);
+      if (!map.has(sport)) {
+        map.set(sport, {
+          handle: normalizedHandle || fallbackHandle,
+          accountCount: 0,
+          followers: 0,
+          totalPosts: 0,
+          totalLikes: 0,
+          totalComments: 0,
+          erNumerator: 0,
+          erDenominator: 0,
+        });
+      }
+      const acc = map.get(sport)!;
+      if (!acc.handle) {
+        acc.handle = normalizedHandle || fallbackHandle;
+      }
+      acc.accountCount += 1;
+      acc.followers += followers;
+      acc.totalPosts += posts;
+      acc.totalLikes += likes;
+      acc.totalComments += comments;
+      // Compute ER from account-level post totals only:
+      // (likes + comments) / (followers * postCount).
+      if (followers > 0 && posts > 0) {
+        acc.erNumerator += likes + comments;
+        acc.erDenominator += followers * posts;
+      }
+    }
+    return [...map.entries()].map(([sport, v]) => {
+      const avgEngagementRate = v.erDenominator > 0 ? v.erNumerator / v.erDenominator : 0;
+      if (avgEngagementRate > 0.15 && v.followers < 50_000) {
+        // Testing guardrail: flag potentially inflated ER for low-follower team accounts.
+        console.warn(
+          `[TeamsTab ER anomaly] ${config.shortName} ${fmtSport(sport)}: ER=${(avgEngagementRate * 100).toFixed(2)}%, followers=${v.followers}, likes=${v.totalLikes}, comments=${v.totalComments}, posts=${v.totalPosts}`
+        );
+      }
+      return {
+        sport,
+        handle: `@${normalizeHandle(v.handle)}`,
+        accountCount: v.accountCount,
+        followers: v.followers,
+        totalPosts: v.totalPosts,
+        totalLikes: v.totalLikes,
+        totalComments: v.totalComments,
+        avgEngagementRate,
+      };
+    });
+  }, [teamRosterRows, config.id, config.shortName, config.name]);
   const ipComparisons = useMemo(() => deriveIPComparisons(rawPosts), [rawPosts]);
 
   const totalLikes = useMemo(() => rawPosts.reduce((s, p) => s + (p.metrics?.likes || 0), 0), [rawPosts]);
   const totalComments = useMemo(() => rawPosts.reduce((s, p) => s + (p.metrics?.comments || 0), 0), [rawPosts]);
+  // Canonical EMV source for report-wide totals and benchmark comparisons.
   const totalEmv = emv(totalLikes, totalComments);
+  const dateRange = useMemo(() => {
+    const dates = rawPosts.map(parsePostDate).filter((d): d is Date => d !== null);
+    if (!dates.length) return null;
+    const min = new Date(Math.min(...dates.map((d) => d.getTime())));
+    const max = new Date(Math.max(...dates.map((d) => d.getTime())));
+    const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    return `${fmt(min)} - ${fmt(max)}`;
+  }, [rawPosts]);
 
   if (loading) {
     return (
@@ -479,10 +646,10 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
               <button key={tab.id} onClick={() => setActiveTab(tab.id)}
                 className={`px-4 py-2 rounded-full text-sm font-semibold border transition-all ${
                   activeTab === tab.id
-                    ? 'border-opacity-40 text-white'
+                    ? 'text-white shadow-sm'
                     : 'bg-white border-[#E1E7F0] text-[#1E2A3B] hover:border-opacity-30'
                 }`}
-                style={activeTab === tab.id ? { backgroundColor: primaryColor + '20', borderColor: primaryColor + '66', color: primaryColor } : {}}
+                style={activeTab === tab.id ? { backgroundColor: primaryColor, borderColor: primaryColor, color: '#FFFFFF' } : {}}
               >
                 {tab.label}
               </button>
@@ -497,12 +664,20 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
           {activeTab === 'overview' && (
             <OverviewTab
               shortName={config.shortName}
+              schoolId={config.id}
+              schoolName={config.name}
+              conference={config.conference}
               primaryColor={primaryColor}
+              primaryDeepColor={config.colors.primaryDeep}
               totalLikes={totalLikes}
               totalPosts={rawPosts.length}
               totalEmv={totalEmv}
+              posts={rawPosts}
               athletes={athletes}
               sports={sports}
+              teamPages={teamPages}
+              peerSchools={config.peerSchools}
+              dateRange={dateRange}
               onNavigate={setActiveTab}
             />
           )}
@@ -510,11 +685,14 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
             <AthletesTab
               athletes={athletes}
               primaryColor={primaryColor}
+              primaryDeepColor={config.colors.primaryDeep}
+              shortName={config.shortName}
+              dateRange={dateRange}
               onSelectAthlete={setSelectedAthlete}
             />
           )}
           {activeTab === 'teams' && (
-            <TeamsTab sports={sports} primaryColor={primaryColor} />
+            <TeamsTab teamPages={teamPages} primaryColor={primaryColor} />
           )}
           {activeTab === 'content' && (
             <ContentTab
@@ -525,13 +703,18 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
             />
           )}
           {activeTab === 'sponsored' && (
-            <SponsoredTab posts={sponsored} primaryColor={primaryColor} shortName={config.shortName} />
+            <SponsoredTab
+              posts={sponsored}
+              allPosts={rawPosts}
+              primaryColor={primaryColor}
+            />
           )}
           {activeTab === 'benchmarks' && (
             <BenchmarksTab
               config={config}
               athletes={athletes}
               sponsored={sponsored}
+              totalEmv={totalEmv}
               primaryColor={primaryColor}
               secondaryColor={secondaryColor}
             />
@@ -560,145 +743,351 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
 }
 
 // ─── Overview Tab ────────────────────────────────────────────
-function OverviewTab({ shortName, primaryColor, totalLikes, totalPosts, totalEmv, athletes, sports, onNavigate }: {
+function OverviewTab({ shortName, schoolId, schoolName, conference, primaryColor, primaryDeepColor, totalLikes, totalPosts, totalEmv, posts, athletes, sports, teamPages, peerSchools, dateRange, onNavigate }: {
   shortName: string;
+  schoolId: string;
+  schoolName: string;
+  conference: string;
   primaryColor: string;
+  primaryDeepColor: string;
   totalLikes: number;
   totalPosts: number;
   totalEmv: number;
+  posts: RawPost[];
   athletes: DerivedAthlete[];
   sports: DerivedSport[];
+  teamPages: TeamPageStat[];
+  peerSchools: SchoolConfig['peerSchools'];
+  dateRange: string | null;
   onNavigate: (tab: TabId) => void;
 }) {
   const topByLikes = athletes[0];
+  const topPostByLikes = useMemo(
+    () => [...posts].sort((a, b) => (b.metrics?.likes || 0) - (a.metrics?.likes || 0))[0] || null,
+    [posts]
+  );
+  const topPostImageUrl = (topPostByLikes?.url || topPostByLikes?.imageUrl || topPostByLikes?.thumbnailUrl || '') as string;
+  const topPostFallbackImage = (topPostByLikes?.athlete?.image || topByLikes?.image || '') as string;
   const topSportByFollowers = sports[0];
-  const totalLikesAll = athletes.reduce((s, a) => s + a.totalLikes, 0);
-  const top10 = athletes.slice(0, 10);
-  const top10Share = totalLikesAll > 0 ? (top10.reduce((s, a) => s + a.totalLikes, 0) / totalLikesAll) * 100 : null;
-  const avgAthleteEngagement = athletes.length
-    ? (athletes.reduce((s, a) => s + a.avgEngagementRate, 0) / athletes.length) * 100
-    : null;
-  const topSportsByLikes = sports.slice(0, 3);
-  const topSportsByEng = [...sports].sort((a, b) => b.avgEngagementRate - a.avgEngagementRate).slice(0, 3);
+  const topSportByEngagement = [...sports].sort((a, b) => b.avgEngagementRate - a.avgEngagementRate)[0];
+  const athleteCount = athletes.length;
+  const sportsActive = sports.length;
+  const totalFollowerReach = athletes.reduce((s, a) => s + (a.followers || 0), 0);
+  const teamFollowerReach = teamPages.reduce((s, t) => s + (t.followers || 0), 0);
+  const teamAccountCount = teamPages.reduce((s, t) => s + (t.accountCount || 0), 0);
+  const combinedFollowerReach = totalFollowerReach + teamFollowerReach;
+  const highestFollowersAthlete = [...athletes]
+    .filter((a) => a.followers > 0)
+    .sort((a, b) => b.followers - a.followers)[0];
+  const topReachFirstName = (highestFollowersAthlete?.name || '').trim().split(/\s+/)[0] || highestFollowersAthlete?.name || 'This athlete';
+  const topTeamSportByLikes = [...teamPages].sort((a, b) => b.totalLikes - a.totalLikes)[0];
+  const topTeamSportByEngagement = [...teamPages].sort((a, b) => b.avgEngagementRate - a.avgEngagementRate)[0];
+  const emvRank = [...peerSchools, {
+    id: 'current',
+    name: shortName,
+    shortName,
+    logoUrl: '',
+    conference: '',
+    totalDeals: 0,
+    totalEMV: totalEmv,
+    avgEngagement: 0,
+    topSport: '',
+    athleteCount: 0,
+    brandCount: 0,
+    monthlyRanks: [],
+  }].sort((a, b) => b.totalEMV - a.totalEMV).findIndex((s) => s.id === 'current') + 1;
+  const emvRankTotal = peerSchools.length + 1;
+  const [conferenceEmvRank, setConferenceEmvRank] = useState<{ rank: number; total: number } | null>(null);
+  const [conferenceRankLoading, setConferenceRankLoading] = useState(true);
+  const [dataWindowStart, dataWindowEnd] = dateRange?.split(' - ') ?? ['N/A', 'N/A'];
+  const topSportHeroImage =
+    schoolId === 'alabama'
+      ? '/Alabama_football.png'
+      : schoolId === 'arkansas'
+        ? '/arkansas_football.png'
+        : schoolId === 'michigan'
+          ? '/michigan_football.png'
+          : schoolId === 'wisconsin'
+            ? '/wisconsin_football.png'
+            : schoolId === 'oklahoma'
+              ? '/oklahoma_football.png'
+        : null;
+
+  useEffect(() => {
+    let cancelled = false;
+    setConferenceRankLoading(true);
+    loadAllBenchmarkSchools()
+      .then((schools) => {
+        if (cancelled) return;
+        const confKey = normalizeConference(conference);
+        const conferenceSchools = schools.filter((s) => normalizeConference(s.conference) === confKey);
+        if (!conferenceSchools.length) {
+          setConferenceEmvRank({ rank: emvRank, total: emvRankTotal });
+          return;
+        }
+
+        const targetSchoolKeys = new Set<string>([
+          normalizeSchool(shortName),
+          normalizeSchool(schoolName),
+          ...((ROSTER_NAME_MATCHERS[schoolId] || []).map(normalizeSchool)),
+        ]);
+        const selfSchool =
+          conferenceSchools.find((s) => targetSchoolKeys.has(normalizeSchool(s.shortName))) ||
+          conferenceSchools.find((s) => s.id === schoolId) ||
+          conferenceSchools.find((s) => normalizeSchool(s.shortName).includes(normalizeSchool(shortName))) ||
+          null;
+
+        if (selfSchool) {
+          const ranked = [...conferenceSchools].sort((a, b) => b.totalEMV - a.totalEMV);
+          const rank = ranked.findIndex((s) => s.id === selfSchool.id) + 1;
+          setConferenceEmvRank({ rank, total: conferenceSchools.length });
+          return;
+        }
+
+        const betterSchools = conferenceSchools.filter((s) => s.totalEMV > totalEmv).length;
+        setConferenceEmvRank({ rank: betterSchools + 1, total: conferenceSchools.length });
+      })
+      .catch(() => {
+        if (!cancelled) setConferenceEmvRank({ rank: emvRank, total: emvRankTotal });
+      })
+      .finally(() => {
+        if (!cancelled) setConferenceRankLoading(false);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [conference, emvRank, emvRankTotal, schoolId, schoolName, shortName, totalEmv]);
 
   return (
     <div className="space-y-10">
       <GlassPanel className="p-6 md:p-8">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_0.7fr] gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.45fr_0.55fr] gap-6">
           <div>
-            <p className="text-xs uppercase tracking-[0.35em]" style={{ color: primaryColor }}>{shortName.toUpperCase()} SOCIAL PERFORMANCE</p>
+            <p className="text-xs uppercase tracking-[0.35em]" style={{ color: primaryColor }}>{shortName.toUpperCase()} OVERVIEW</p>
             <div className="h-0.5 w-12 mt-2" style={{ backgroundColor: primaryColor }} />
-            <p className="text-4xl md:text-5xl font-bold mt-4 text-[#0F1D2E]">
-              {fmtN(totalLikes)} total likes generated across {fmtN(totalPosts)} athlete posts
+            <p className="text-4xl md:text-5xl font-black mt-4 text-[#0F1D2E] leading-tight">
+              JABA analyzed {fmtN(totalPosts)} posts across {fmtN(athleteCount)} {shortName} athletes — generating <span style={{ color: primaryColor }}>{fmtN(totalLikes)}</span> in likes, <span style={{ color: primaryColor }}>{fmtCur(totalEmv)}</span> in EMV across {fmtN(sportsActive)} sports.
             </p>
-            <p className="text-[#5B6B82] mt-3 text-base">Athlete + team content performance and audience scale.</p>
+            <div
+              className="mt-4 rounded-xl border-l-4 border px-4 py-3"
+              style={{ borderColor: primaryColor, backgroundColor: primaryColor + '14' }}
+            >
+              <div className="flex items-center gap-2">
+                <Lightbulb className="w-4 h-4" style={{ color: primaryColor }} />
+                <p className="text-xs uppercase tracking-[0.2em] font-semibold" style={{ color: primaryColor }}>AI Insight</p>
+              </div>
+              <p className="text-sm text-[#2E3E55] mt-1 font-medium">
+                {fmtSport(topSportByFollowers?.sport)} is the dominant content engine by volume, while {fmtSport(topSportByEngagement?.sport)} generates the strongest engagement efficiency — signaling a program with both scale and depth.
+              </p>
+            </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <GlassPanel className="p-4">
-              <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Athlete posts analyzed</p>
-              <p className="text-2xl font-bold mt-2 text-[#0F1D2E]">{fmtN(totalPosts)}</p>
+          <div className="flex flex-col gap-4 self-stretch min-h-0">
+            <GlassPanel className="p-4 flex-1 min-h-0 flex">
+              <div className="h-full w-full rounded-xl p-4 flex-1 flex flex-col justify-between" style={{ backgroundColor: `${primaryColor}14` }}>
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Estimated EMV</p>
+                  <p className="text-3xl font-black mt-2" style={{ color: primaryColor }}>{fmtCur(totalEmv)}</p>
+                </div>
+                <p className="text-xs text-[#5B6B82] mt-2">
+                  {conferenceRankLoading
+                    ? `Loading ${conference} ranking by estimated earned media value.`
+                    : `${shortName} ranks #${conferenceEmvRank?.rank || emvRank} in the ${conference} by estimated earned media value.`}
+                </p>
+              </div>
             </GlassPanel>
-            <GlassPanel className="p-4">
-              <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Total likes</p>
-              <p className="text-2xl font-bold mt-2 text-[#0F1D2E]">{fmtN(totalLikes)}</p>
+            <GlassPanel className="p-4 flex-1 min-h-0 flex">
+              <div className="h-full w-full rounded-xl p-4 flex-1 flex flex-col justify-between" style={{ backgroundColor: `${primaryColor}14` }}>
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Combined Followers</p>
+                  <p className="text-3xl font-black mt-2 text-[#0F1D2E]">{fmtN(totalFollowerReach)}</p>
+                </div>
+                <p className="text-xs text-[#5B6B82] mt-2">Across {fmtN(athleteCount)} tracked athlete accounts.</p>
+              </div>
             </GlassPanel>
-            <GlassPanel className="p-4">
-              <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Estimated EMV</p>
-              <p className="text-2xl font-bold mt-2 text-[#0F1D2E]">{fmtCur(totalEmv)}</p>
-            </GlassPanel>
-            <GlassPanel className="p-4">
-              <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Sports active</p>
-              <p className="text-2xl font-bold mt-2 text-[#0F1D2E]">{sports.length}</p>
-            </GlassPanel>
-            <GlassPanel className="p-4">
-              <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Avg Athlete Engagement Rate</p>
-              <p className="text-2xl font-bold mt-2 text-[#0F1D2E]">{avgAthleteEngagement != null ? fmtPct(avgAthleteEngagement) : 'N/A'}</p>
-            </GlassPanel>
-            <GlassPanel className="p-4">
-              <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Athletes tracked</p>
-              <p className="text-2xl font-bold mt-2 text-[#0F1D2E]">{fmtN(athletes.length)}</p>
-            </GlassPanel>
+          </div>
+        </div>
+      </GlassPanel>
+
+      <GlassPanel className="p-6">
+        <h2 className="text-lg font-bold uppercase tracking-[0.08em] text-[#0F1D2E] mb-4">Key Insights</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+          <div className="rounded-xl border border-[#D7E0ED] bg-white p-5">
+            <div className="flex items-center gap-2">
+              <Lightbulb className="w-4 h-4" style={{ color: primaryColor }} />
+              <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Team Accounts</p>
+            </div>
+            <p className="text-lg font-bold mt-2 text-[#0F1D2E]">
+              {fmtSport(topTeamSportByEngagement?.sport)} leads team accounts in ER at {fmtPct((topTeamSportByEngagement?.avgEngagementRate || 0) * 100)}
+            </p>
+            <p className="text-sm text-[#5B6B82] mt-2">
+              Among {shortName} official team pages, {fmtSport(topTeamSportByLikes?.sport)} drives the most likes while {fmtSport(topTeamSportByEngagement?.sport)} leads in engagement rate.
+            </p>
+          </div>
+
+          <div className="rounded-xl border border-[#D7E0ED] bg-white p-5">
+            <div className="flex items-center gap-2">
+              <Lightbulb className="w-4 h-4" style={{ color: primaryColor }} />
+              <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Top Athlete Reach</p>
+            </div>
+            <p className="text-lg font-bold mt-2 text-[#0F1D2E]">
+              {highestFollowersAthlete
+                ? `${highestFollowersAthlete.name}: ${fmtN(highestFollowersAthlete.followers)} followers`
+                : 'N/A'}
+            </p>
+            <p className="text-sm text-[#5B6B82] mt-2">
+              {highestFollowersAthlete
+                ? `${topReachFirstName} is ${shortName}'s most-followed athlete, representing the program's largest individual audience reach.`
+                : 'Not enough follower data to identify the top individual audience reach.'}
+            </p>
+          </div>
+
+          <div className="rounded-xl border border-[#D7E0ED] bg-white p-5">
+            <div className="flex items-center gap-2">
+              <Lightbulb className="w-4 h-4" style={{ color: primaryColor }} />
+              <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Total Reach</p>
+            </div>
+            <p className="text-lg font-bold mt-2 text-[#0F1D2E]">
+              {fmtN(combinedFollowerReach)} combined followers
+            </p>
+            <p className="text-sm text-[#5B6B82] mt-2">
+              Total audience reach across {fmtN(athleteCount)} athlete accounts and {fmtN(teamAccountCount)} official {shortName} team pages.
+            </p>
+          </div>
+
+          <div className="rounded-xl border border-[#D7E0ED] bg-white p-5">
+            <div className="flex items-center gap-2">
+              <Lightbulb className="w-4 h-4" style={{ color: primaryColor }} />
+              <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">{conference} EMV Rank</p>
+            </div>
+            <p className="text-lg font-bold mt-2 text-[#0F1D2E]">
+              {conferenceRankLoading
+                ? `… in EMV in the ${conference}`
+                : `#${conferenceEmvRank?.rank || emvRank} in EMV in the ${conference}`}
+            </p>
+            <p className="text-sm text-[#5B6B82] mt-2">
+              {conferenceRankLoading
+                ? `Loading ${conference} school rankings by estimated earned media value.`
+                : `Ranks #${conferenceEmvRank?.rank || emvRank} of ${conferenceEmvRank?.total || emvRankTotal} ${conference} schools by estimated earned media value.`}
+            </p>
           </div>
         </div>
       </GlassPanel>
 
       {/* Spotlight row */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        <GlassPanel className="p-5 relative">
+        <GlassPanel className="p-5 relative h-full flex flex-col">
           <span className="absolute top-4 right-4 text-[10px] font-semibold text-[#7A8AA3] bg-[#F3F6FB] border border-[#E1E7F0] px-2 py-0.5 rounded-full">#1 by Likes</span>
           <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Top Athlete by Likes</p>
-          <div className="flex items-center gap-3 mt-3">
-            <div className="w-10 h-10 rounded-full bg-[#F0F4FA] overflow-hidden border border-[#E1E7F0]">
-              {topByLikes?.image && <img src={topByLikes.image} alt={topByLikes.name} className="w-full h-full object-cover" />}
-            </div>
-            <div>
-              <p className="text-lg font-semibold text-[#0F1D2E]">{topByLikes?.name || 'N/A'}</p>
-              <p className="text-xs text-[#5B6B82]">{fmtSport(topByLikes?.sport)}</p>
+          <div className="mt-3 w-full rounded-xl overflow-hidden relative flex-1 min-h-[360px]">
+            {topByLikes?.image ? (
+              <img src={topByLikes.image} alt={topByLikes.name} className="absolute inset-0 w-full h-full object-cover object-center" />
+            ) : (
+              <div className="absolute inset-0 w-full h-full flex items-center justify-center text-xs text-[#9AA7BC] bg-[#F0F4FA]">No image</div>
+            )}
+            <div
+              className="absolute inset-0"
+              style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.0) 50%)' }}
+            />
+            <div className="absolute inset-x-5 bottom-5 z-10 text-left text-white">
+              <p className="text-2xl font-extrabold leading-tight">{topByLikes?.name || 'N/A'}</p>
+              <p className="text-xs text-white/85 mt-1">{fmtSport(topByLikes?.sport)}</p>
+              <div className="grid grid-cols-2 gap-2 mt-3 text-sm text-white/90">
+                <div>Likes: {fmtN(topByLikes?.totalLikes)}</div>
+                <div>Posts: {fmtN(topByLikes?.totalPosts)}</div>
+              </div>
+              <button className="text-sm mt-3 text-white/95" onClick={() => onNavigate('athletes')}>View →</button>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-2 mt-3 text-sm text-[#5B6B82]">
-            <div>Likes: {fmtN(topByLikes?.totalLikes)}</div>
-            <div>Posts: {fmtN(topByLikes?.totalPosts)}</div>
-            <div>Avg ER: {fmtPct((topByLikes?.avgEngagementRate || 0) * 100)}</div>
-          </div>
-          <button className="text-sm mt-3" style={{ color: primaryColor }} onClick={() => onNavigate('athletes')}>View →</button>
         </GlassPanel>
 
-        <GlassPanel className="p-5 relative">
+        <GlassPanel className="p-5 relative h-full flex flex-col">
           <span className="absolute top-4 right-4 text-[10px] font-semibold text-[#7A8AA3] bg-[#F3F6FB] border border-[#E1E7F0] px-2 py-0.5 rounded-full">#1 by Likes</span>
           <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Top Sport by Likes</p>
-          <p className="text-lg font-semibold mt-2 text-[#0F1D2E]">{fmtSport(topSportByFollowers?.sport) || 'N/A'}</p>
-          <p className="text-sm text-[#5B6B82]">{fmtN(topSportByFollowers?.totalLikes)} total likes</p>
-          <button className="text-sm mt-3" style={{ color: primaryColor }} onClick={() => onNavigate('teams')}>View →</button>
+          <div
+            className="mt-3 w-full rounded-xl overflow-hidden relative flex-1 min-h-[360px]"
+          >
+            <div
+              className="absolute inset-0"
+              style={topSportHeroImage
+                ? {
+                    backgroundImage: `url('${topSportHeroImage}')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                  }
+                : { background: `linear-gradient(145deg, ${primaryColor} 0%, ${primaryDeepColor} 100%)` }}
+            />
+            <div
+              className="absolute inset-0"
+              style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.15) 60%, rgba(0,0,0,0) 100%)' }}
+            />
+            <div className="absolute inset-x-5 bottom-5 z-10 text-left">
+              <p
+                className="text-[30px] font-extrabold text-white leading-tight"
+                style={{ textShadow: '0 2px 12px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.8)' }}
+              >
+                {fmtSport(topSportByFollowers?.sport) || 'N/A'}
+              </p>
+              <p className="text-sm text-white/90 mt-2">{fmtN(topSportByFollowers?.totalLikes)} total likes</p>
+              <button className="text-sm mt-3 text-white/95" onClick={() => onNavigate('teams')}>View →</button>
+            </div>
+          </div>
         </GlassPanel>
 
-        <GlassPanel className="p-5 relative">
+        <GlassPanel className="p-5 relative h-full flex flex-col">
           <span className="absolute top-4 right-4 text-[10px] font-semibold text-[#7A8AA3] bg-[#F3F6FB] border border-[#E1E7F0] px-2 py-0.5 rounded-full">#1 by Likes</span>
           <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Top Athlete Post</p>
-          <p className="text-lg font-semibold mt-2 text-[#0F1D2E]">{topByLikes?.name || 'N/A'}</p>
-          <p className="text-sm text-[#5B6B82]">{fmtN(topByLikes?.totalLikes)} likes</p>
-          <button className="text-sm mt-3" style={{ color: primaryColor }} onClick={() => onNavigate('content')}>View →</button>
+          <div className="mt-3 w-full rounded-xl bg-[#F0F4FA] overflow-hidden relative flex-1 min-h-[360px]">
+            {(topPostImageUrl || topPostFallbackImage) ? (
+              <img
+                src={topPostImageUrl || topPostFallbackImage}
+                alt={topPostByLikes?.athlete?.name || topByLikes?.name || 'Top athlete post'}
+                className="absolute inset-0 w-full h-full object-cover object-center"
+              />
+            ) : (
+              <div className="absolute inset-0 w-full h-full flex items-center justify-center text-xs text-[#9AA7BC]">No image</div>
+            )}
+            <div
+              className="absolute inset-0"
+              style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.0) 50%)' }}
+            />
+            <div className="absolute inset-x-5 bottom-5 z-10 text-left text-white">
+              <p className="text-2xl font-extrabold leading-tight">{topPostByLikes?.athlete?.name || topByLikes?.name || 'N/A'}</p>
+              <p className="text-sm text-white/90 mt-2">{fmtN(topPostByLikes?.metrics?.likes || 0)} likes</p>
+              <button className="text-sm mt-3 text-white/95" onClick={() => onNavigate('content')}>View →</button>
+            </div>
+          </div>
         </GlassPanel>
       </div>
 
-      {/* At a glance */}
-      <GlassPanel className="p-6">
-        <h2 style={headerStyle} className="text-lg font-bold uppercase tracking-tight text-[#0F1D2E] mb-4">At a glance</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="rounded-xl border border-[#E1E7F0] bg-white p-4">
-            <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Top 10 share of likes</p>
-            <p className="text-xl font-bold mt-2 text-[#0F1D2E]">{top10Share != null ? fmtPct(top10Share) : 'N/A'}</p>
-            <p className="text-xs text-[#7A8AA3] mt-2">Share of total athlete likes from top 10 athletes.</p>
-          </div>
-          <div className="rounded-xl border border-[#E1E7F0] bg-white p-4">
-            <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Avg Athlete Engagement Rate</p>
-            <p className="text-2xl font-bold mt-2 text-[#0F1D2E]">{avgAthleteEngagement != null ? fmtPct(avgAthleteEngagement) : 'N/A'}</p>
-            <p className="text-sm text-[#5B6B82]">Across {fmtN(athletes.length)} athletes</p>
-          </div>
-          <div className="rounded-xl border border-[#E1E7F0] bg-white p-4">
-            <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Sports leaders</p>
-            <div className="text-sm text-[#5B6B82] mt-2">
-              <div>Likes: {topSportsByLikes.map(s => fmtSport(s.sport)).join(', ')}</div>
-              <div>Engagement: {topSportsByEng.map(s => fmtSport(s.sport)).join(', ')}</div>
-            </div>
-          </div>
-        </div>
-      </GlassPanel>
+      <div className="rounded-xl border border-[#D3DAE6] bg-[#F3F6FB] px-4 py-3 text-sm text-[#4B5B73]">
+        <p>
+          <span className="mr-1">ℹ️</span>
+          Data reflects {shortName} athlete personal social media accounts. Analysis covers {fmtN(totalPosts)} posts from {fmtN(athletes.length)} tracked athletes, {dataWindowStart} - {dataWindowEnd}.
+        </p>
+      </div>
     </div>
   );
 }
 
 // ─── Athletes Tab ────────────────────────────────────────────
-function AthletesTab({ athletes, primaryColor, onSelectAthlete }: {
+function AthletesTab({ athletes, primaryColor, primaryDeepColor, shortName, dateRange, onSelectAthlete }: {
   athletes: DerivedAthlete[];
   primaryColor: string;
+  primaryDeepColor: string;
+  shortName: string;
+  dateRange: string | null;
   onSelectAthlete: (a: DerivedAthlete) => void;
 }) {
   const [search, setSearch] = useState('');
   const [sport, setSport] = useState('All');
-  const [sortKey, setSortKey] = useState<'likes' | 'engagement' | 'posts' | 'comments' | 'followers'>('likes');
+  const [viewMode, setViewMode] = useState<'list' | 'cards'>('cards');
+  const [sortKey, setSortKey] = useState<'likes' | 'engagement' | 'posts' | 'comments' | 'followers' | 'marketability'>('likes');
+  const [dataWindowStart, dataWindowEnd] = dateRange?.split(' - ') ?? ['N/A', 'N/A'];
 
   const sports = ['All', ...new Set(athletes.map(a => a.sport))];
+  const sportCount = sports.length - 1;
 
   const filtered = useMemo(() => athletes.filter(a => {
     if (sport !== 'All' && a.sport !== sport) return false;
@@ -706,19 +1095,178 @@ function AthletesTab({ athletes, primaryColor, onSelectAthlete }: {
     return true;
   }), [athletes, sport, search]);
 
-  const sorted = useMemo(() => [...filtered].sort((a, b) => {
+  const marketabilityBadgeByAthleteId = useMemo(() => {
+    const scoreMap = new Map<string, number>();
+    athletes.forEach((athlete) => {
+      const raw = Number(athlete.marketabilityScore || 0);
+      const normalized = raw > 0 && raw <= 1 ? raw * 100 : raw;
+      const score = Math.round(Math.max(0, Math.min(99, normalized)));
+      scoreMap.set(athlete.id, score);
+    });
+    return scoreMap;
+  }, [athletes]);
+  const sortedList = useMemo(() => [...filtered].sort((a, b) => {
     if (sortKey === 'likes') return b.totalLikes - a.totalLikes;
     if (sortKey === 'engagement') return b.avgEngagementRate - a.avgEngagementRate;
     if (sortKey === 'posts') return b.totalPosts - a.totalPosts;
     if (sortKey === 'followers') return b.followers - a.followers;
+    if (sortKey === 'marketability') return (marketabilityBadgeByAthleteId.get(b.id) || 0) - (marketabilityBadgeByAthleteId.get(a.id) || 0);
     return b.totalComments - a.totalComments;
-  }), [filtered, sortKey]);
-
-  const topByLikes = sorted.slice(0, 10);
-  const topByEng = [...filtered].sort((a, b) => b.avgEngagementRate - a.avgEngagementRate).slice(0, 10);
+  }), [filtered, sortKey, marketabilityBadgeByAthleteId]);
+  const sortedCards = useMemo(
+    () => [...filtered].sort((a, b) => (marketabilityBadgeByAthleteId.get(b.id) || 0) - (marketabilityBadgeByAthleteId.get(a.id) || 0)),
+    [filtered, marketabilityBadgeByAthleteId]
+  );
+  const topByFollowers = useMemo(
+    () => [...athletes].sort((a, b) => b.followers - a.followers).slice(0, 5),
+    [athletes]
+  );
+  const topByLikes = useMemo(
+    () => [...athletes].sort((a, b) => b.totalLikes - a.totalLikes).slice(0, 5),
+    [athletes]
+  );
+  const topByComments = useMemo(
+    () => [...athletes].sort((a, b) => b.totalComments - a.totalComments).slice(0, 5),
+    [athletes]
+  );
+  const topByEngagement = useMemo(
+    () => [...athletes].sort((a, b) => b.avgEngagementRate - a.avgEngagementRate).slice(0, 5),
+    [athletes]
+  );
+  const standoutAthlete = useMemo(() => {
+    const leaders = [topByFollowers[0], topByLikes[0], topByComments[0], topByEngagement[0]].filter(Boolean) as DerivedAthlete[];
+    const countById = new Map<string, { athlete: DerivedAthlete; count: number }>();
+    leaders.forEach((athlete) => {
+      const current = countById.get(athlete.id);
+      if (current) {
+        current.count += 1;
+      } else {
+        countById.set(athlete.id, { athlete, count: 1 });
+      }
+    });
+    const best = [...countById.values()].sort((a, b) => b.count - a.count)[0];
+    return best && best.count >= 3 ? best : null;
+  }, [topByFollowers, topByLikes, topByComments, topByEngagement]);
+  const likesRankByAthleteId = useMemo(() => {
+    const map = new Map<string, number>();
+    [...athletes]
+      .sort((a, b) => b.totalLikes - a.totalLikes)
+      .forEach((athlete, index) => map.set(athlete.id, index + 1));
+    return map;
+  }, [athletes]);
+  const commentsRankByAthleteId = useMemo(() => {
+    const map = new Map<string, number>();
+    [...athletes]
+      .sort((a, b) => b.totalComments - a.totalComments)
+      .forEach((athlete, index) => map.set(athlete.id, index + 1));
+    return map;
+  }, [athletes]);
+  const followersRankByAthleteId = useMemo(() => {
+    const map = new Map<string, number>();
+    [...athletes]
+      .sort((a, b) => b.followers - a.followers)
+      .forEach((athlete, index) => map.set(athlete.id, index + 1));
+    return map;
+  }, [athletes]);
+  const engagementRankByAthleteId = useMemo(() => {
+    const map = new Map<string, number>();
+    [...athletes]
+      .sort((a, b) => b.avgEngagementRate - a.avgEngagementRate)
+      .forEach((athlete, index) => map.set(athlete.id, index + 1));
+    return map;
+  }, [athletes]);
+  const marketabilityRankByAthleteId = useMemo(() => {
+    const map = new Map<string, number>();
+    [...athletes]
+      .sort((a, b) => (marketabilityBadgeByAthleteId.get(b.id) || 0) - (marketabilityBadgeByAthleteId.get(a.id) || 0))
+      .forEach((athlete, index) => map.set(athlete.id, index + 1));
+    return map;
+  }, [athletes, marketabilityBadgeByAthleteId]);
+  const programAvgER = useMemo(
+    () => athletes.reduce((sum, a) => sum + a.avgEngagementRate, 0) / Math.max(athletes.length, 1),
+    [athletes]
+  );
 
   return (
     <div className="space-y-8">
+      <GlassPanel className="p-6">
+        <div className="mb-5">
+          <div>
+            <h2 style={headerStyle} className="text-lg font-bold uppercase tracking-tight text-[#0F1D2E]">
+              {shortName} Athletes
+            </h2>
+            <p className="text-sm text-[#5B6B82] mt-2">
+              {fmtN(athletes.length)} athletes tracked across {fmtN(sportCount)} sports · {dataWindowStart} - {dataWindowEnd}
+            </p>
+          </div>
+        </div>
+        <div className="mb-3">
+          <p className="text-xs uppercase tracking-[0.22em] font-semibold text-[#4B5B73]">Leaderboards</p>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          {[
+            { title: 'Top 5 by Total Followers', icon: Users, rows: topByFollowers, value: (a: DerivedAthlete) => fmtN(a.followers) },
+            { title: 'Top 5 by Total Likes', icon: Heart, rows: topByLikes, value: (a: DerivedAthlete) => fmtN(a.totalLikes) },
+            { title: 'Top 5 by Total Comments', icon: MessageCircle, rows: topByComments, value: (a: DerivedAthlete) => fmtN(a.totalComments) },
+            { title: 'Top 5 by Avg Engagement Rate', icon: Zap, rows: topByEngagement, value: (a: DerivedAthlete) => fmtPct(a.avgEngagementRate * 100) },
+          ].map((panel) => (
+            <div key={panel.title} className="rounded-xl border border-[#E1E7F0] bg-white p-4">
+              <h3 className="text-sm font-bold text-[#0F1D2E] mb-3 flex items-center gap-2">
+                <panel.icon className="w-4 h-4" style={{ color: primaryColor }} />
+                <span>{panel.title}</span>
+              </h3>
+              <div className="space-y-2">
+                {panel.rows.map((a, idx) => (
+                  <div
+                    key={a.id}
+                    className="flex items-center justify-between gap-3 rounded-lg border border-[#EEF2F7] px-3 py-2"
+                    style={idx === 0 ? { backgroundColor: primaryColor + '0D' } : {}}
+                  >
+                    <div className="min-w-0 flex items-center gap-2">
+                      <span
+                        className="inline-flex h-5 min-w-5 items-center justify-center rounded-full px-1 text-[11px] font-bold"
+                        style={{ backgroundColor: primaryColor, color: '#FFFFFF' }}
+                      >
+                        {idx + 1}
+                      </span>
+                      <div className={`${idx === 0 ? 'text-lg font-bold' : 'text-sm font-semibold'} text-[#0F1D2E]`}>
+                        {a.name}
+                      </div>
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="text-xs text-[#5B6B82]">{fmtSport(a.sport)}</div>
+                    </div>
+                    <div className={`${idx === 0 ? 'text-lg font-extrabold' : 'text-sm font-bold'} text-[#0F1D2E] whitespace-nowrap`}>
+                      {panel.value(a)}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </GlassPanel>
+
+      {standoutAthlete && (
+        <div
+          className="w-full rounded-xl px-5 py-4"
+          style={{
+            background: `linear-gradient(90deg, ${primaryColor} 0%, ${primaryDeepColor} 100%)`,
+            boxShadow: `0 10px 24px ${primaryColor}44`,
+          }}
+        >
+          <div className="flex items-start gap-3">
+            <span className="text-xl leading-none">🏆</span>
+            <div className="min-w-0">
+              <p className="text-[11px] uppercase tracking-[0.2em] text-white/80 font-semibold">Standout Athlete</p>
+              <p className="mt-1 text-base md:text-lg font-bold text-white leading-snug">
+                {standoutAthlete.athlete.name} leads {standoutAthlete.count} of 4 categories — {shortName}&apos;s standout athlete by every volume metric.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
       <GlassPanel className="p-5">
         <div className="flex flex-col md:flex-row md:items-center gap-4">
           <div className="relative flex-1">
@@ -726,128 +1274,270 @@ function AthletesTab({ athletes, primaryColor, onSelectAthlete }: {
             <input value={search} onChange={e => setSearch(e.target.value)} placeholder="Search athlete"
               className="w-full bg-white border border-[#E1E7F0] rounded-full pl-9 pr-4 py-2 text-sm text-[#1E2A3B]" />
           </div>
-          <select value={sport} onChange={e => setSport(e.target.value)}
-            className="bg-white border border-[#E1E7F0] rounded-full px-3 py-2 text-sm text-[#1E2A3B]">
-            {sports.map(s => <option key={s} value={s}>{fmtSport(s)}</option>)}
-          </select>
+          <div className="flex items-center gap-3">
+            <select value={sport} onChange={e => setSport(e.target.value)}
+              className="bg-white border border-[#E1E7F0] rounded-full px-3 py-2 text-sm text-[#1E2A3B]">
+              {sports.map(s => <option key={s} value={s}>{fmtSport(s)}</option>)}
+            </select>
+            <div className="inline-flex items-center rounded-full border border-[#E1E7F0] bg-white p-1">
+              <button
+                type="button"
+                onClick={() => setViewMode('cards')}
+                className={`px-3 py-1.5 rounded-full text-sm font-semibold transition-colors ${viewMode === 'cards' ? 'text-white' : 'text-[#5B6B82]'}`}
+                style={viewMode === 'cards' ? { backgroundColor: primaryColor } : {}}
+              >
+                Cards
+              </button>
+              <button
+                type="button"
+                onClick={() => setViewMode('list')}
+                className={`px-3 py-1.5 rounded-full text-sm font-semibold transition-colors ${viewMode === 'list' ? 'text-white' : 'text-[#5B6B82]'}`}
+                style={viewMode === 'list' ? { backgroundColor: primaryColor } : {}}
+              >
+                List
+              </button>
+            </div>
+          </div>
         </div>
       </GlassPanel>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <GlassPanel className="p-5">
-          <h3 style={headerStyle} className="text-base font-bold uppercase tracking-tight mb-4 text-[#0F1D2E]">Top 10 Athletes by Likes</h3>
-          <div className="flex gap-3 overflow-x-auto">
-            {topByLikes.map(a => (
-              <div key={a.id} className="min-w-[200px] rounded-xl border border-[#E1E7F0] bg-white p-4">
-                <div className="text-sm font-semibold text-[#0F1D2E]">{a.name}</div>
-                <div className="text-xs text-[#5B6B82]">{fmtSport(a.sport)}</div>
-                <div className="text-lg font-bold mt-2 text-[#0F1D2E]">{fmtN(a.totalLikes)}</div>
-              </div>
-            ))}
-          </div>
-        </GlassPanel>
-        <GlassPanel className="p-5">
-          <h3 style={headerStyle} className="text-base font-bold uppercase tracking-tight mb-4 text-[#0F1D2E]">Top 10 Athletes by Engagement Rate</h3>
-          <div className="flex gap-3 overflow-x-auto">
-            {topByEng.map(a => (
-              <div key={a.id} className="min-w-[200px] rounded-xl border border-[#E1E7F0] bg-white p-4">
-                <div className="text-sm font-semibold text-[#0F1D2E]">{a.name}</div>
-                <div className="text-xs text-[#5B6B82]">{fmtSport(a.sport)}</div>
-                <div className="text-lg font-bold mt-2 text-[#0F1D2E]">{fmtPct(a.avgEngagementRate * 100)}</div>
-              </div>
-            ))}
-          </div>
-        </GlassPanel>
-      </div>
-
-      <GlassPanel className="overflow-hidden">
-        <div className="overflow-x-auto">
-          <table className="w-full">
-            <thead className="bg-[#F3F6FB] sticky top-0">
-              <tr className="text-xs uppercase tracking-[0.2em]">
-                <th className="text-left px-4 py-3 text-[#5B6B82]">Athlete</th>
-                <th className="text-left px-4 py-3 text-[#5B6B82]">Sport</th>
-                <th onClick={() => setSortKey('posts')}
-                    className="text-right px-4 py-3 cursor-pointer hover:text-[#1770C0] transition-colors"
-                    style={{ color: sortKey === 'posts' ? primaryColor : '#5B6B82' }}>
-                  <div className="flex items-center justify-end gap-1">
-                    Posts
-                    {sortKey === 'posts' && <span style={{ color: primaryColor }}>↓</span>}
-                  </div>
-                </th>
-                <th onClick={() => setSortKey('followers')}
-                    className="text-right px-4 py-3 cursor-pointer hover:text-[#1770C0] transition-colors"
-                    style={{ color: sortKey === 'followers' ? primaryColor : '#5B6B82' }}>
-                  <div className="flex items-center justify-end gap-1">
-                    Followers
-                    {sortKey === 'followers' && <span style={{ color: primaryColor }}>↓</span>}
-                  </div>
-                </th>
-                <th onClick={() => setSortKey('likes')}
-                    className="text-right px-4 py-3 cursor-pointer hover:text-[#1770C0] transition-colors"
-                    style={{ color: sortKey === 'likes' ? primaryColor : '#5B6B82' }}>
-                  <div className="flex items-center justify-end gap-1">
-                    Likes
-                    {sortKey === 'likes' && <span style={{ color: primaryColor }}>↓</span>}
-                  </div>
-                </th>
-                <th onClick={() => setSortKey('comments')}
-                    className="text-right px-4 py-3 cursor-pointer hover:text-[#1770C0] transition-colors"
-                    style={{ color: sortKey === 'comments' ? primaryColor : '#5B6B82' }}>
-                  <div className="flex items-center justify-end gap-1">
-                    Comments
-                    {sortKey === 'comments' && <span style={{ color: primaryColor }}>↓</span>}
-                  </div>
-                </th>
-                <th onClick={() => setSortKey('engagement')}
-                    className="text-right px-4 py-3 cursor-pointer hover:text-[#1770C0] transition-colors"
-                    style={{ color: sortKey === 'engagement' ? primaryColor : '#5B6B82' }}>
-                  <div className="flex items-center justify-end gap-1">
-                    Avg ER
-                    {sortKey === 'engagement' && <span style={{ color: primaryColor }}>↓</span>}
-                  </div>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {sorted.slice(0, 200).map(a => (
-                <tr key={a.id} onClick={() => onSelectAthlete(a)}
-                  className="border-t border-[#E1E7F0] hover:bg-[#F3F6FB] cursor-pointer">
-                  <td className="px-4 py-3 text-sm font-semibold text-[#0F1D2E]">{a.name}</td>
-                  <td className="px-4 py-3 text-sm text-[#5B6B82]">{fmtSport(a.sport)}</td>
-                  <td className="px-4 py-3 text-sm text-right">{fmtN(a.totalPosts)}</td>
-                  <td className="px-4 py-3 text-sm text-right">{fmtN(a.followers)}</td>
-                  <td className="px-4 py-3 text-sm text-right">{fmtN(a.totalLikes)}</td>
-                  <td className="px-4 py-3 text-sm text-right">{fmtN(a.totalComments)}</td>
-                  <td className="px-4 py-3 text-sm text-right">{fmtPct(a.avgEngagementRate * 100)}</td>
+      {viewMode === 'list' ? (
+        <GlassPanel className="overflow-hidden">
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <thead className="bg-[#F3F6FB] sticky top-0">
+                <tr className="text-xs uppercase tracking-[0.2em]">
+                  <th className="text-left px-4 py-3 text-[#5B6B82]">Athlete</th>
+                  <th className="text-left px-4 py-3 text-[#5B6B82]">Sport</th>
+                  <th onClick={() => setSortKey('posts')}
+                      className="text-right px-4 py-3 cursor-pointer hover:text-[#1770C0] transition-colors"
+                      style={{ color: sortKey === 'posts' ? primaryColor : '#5B6B82' }}>
+                    <div className="flex items-center justify-end gap-1">
+                      Posts
+                      {sortKey === 'posts' && <span style={{ color: primaryColor }}>↓</span>}
+                    </div>
+                  </th>
+                  <th onClick={() => setSortKey('followers')}
+                      className="text-right px-4 py-3 cursor-pointer hover:text-[#1770C0] transition-colors"
+                      style={{ color: sortKey === 'followers' ? primaryColor : '#5B6B82' }}>
+                    <div className="flex items-center justify-end gap-1">
+                      Followers
+                      {sortKey === 'followers' && <span style={{ color: primaryColor }}>↓</span>}
+                    </div>
+                  </th>
+                  <th onClick={() => setSortKey('likes')}
+                      className="text-right px-4 py-3 cursor-pointer hover:text-[#1770C0] transition-colors"
+                      style={{ color: sortKey === 'likes' ? primaryColor : '#5B6B82' }}>
+                    <div className="flex items-center justify-end gap-1">
+                      Likes
+                      {sortKey === 'likes' && <span style={{ color: primaryColor }}>↓</span>}
+                    </div>
+                  </th>
+                  <th onClick={() => setSortKey('comments')}
+                      className="text-right px-4 py-3 cursor-pointer hover:text-[#1770C0] transition-colors"
+                      style={{ color: sortKey === 'comments' ? primaryColor : '#5B6B82' }}>
+                    <div className="flex items-center justify-end gap-1">
+                      Comments
+                      {sortKey === 'comments' && <span style={{ color: primaryColor }}>↓</span>}
+                    </div>
+                  </th>
+                  <th onClick={() => setSortKey('engagement')}
+                      className="text-right px-4 py-3 cursor-pointer hover:text-[#1770C0] transition-colors"
+                      style={{ color: sortKey === 'engagement' ? primaryColor : '#5B6B82' }}>
+                    <div className="flex items-center justify-end gap-1">
+                      Avg ER
+                      {sortKey === 'engagement' && <span style={{ color: primaryColor }}>↓</span>}
+                    </div>
+                  </th>
+                  <th onClick={() => setSortKey('marketability')}
+                      className="text-right px-4 py-3 cursor-pointer hover:text-[#1770C0] transition-colors"
+                      style={{ color: sortKey === 'marketability' ? primaryColor : '#5B6B82' }}>
+                    <div className="flex items-center justify-end gap-1">
+                      MKT Score
+                      {sortKey === 'marketability' && <span style={{ color: primaryColor }}>↓</span>}
+                    </div>
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </GlassPanel>
+              </thead>
+              <tbody>
+                {(() => {
+                  const visibleRows = sortedList.slice(0, 200);
+                  const topVisibleScore = visibleRows.length
+                    ? Math.max(...visibleRows.map(row => marketabilityBadgeByAthleteId.get(row.id) || 0))
+                    : 0;
+                  return visibleRows.map(a => {
+                  const marketabilityScore = marketabilityBadgeByAthleteId.get(a.id) || 0;
+                  return (
+                  <tr key={a.id} onClick={() => onSelectAthlete(a)}
+                    className="border-t border-[#E1E7F0] hover:bg-[#F3F6FB] cursor-pointer">
+                    <td className="px-4 py-3 text-sm font-semibold text-[#0F1D2E]">{a.name}</td>
+                    <td className="px-4 py-3 text-sm text-[#5B6B82]">{fmtSport(a.sport)}</td>
+                    <td className="px-4 py-3 text-sm text-right">{fmtN(a.totalPosts)}</td>
+                    <td className="px-4 py-3 text-sm text-right">{fmtN(a.followers)}</td>
+                    <td className="px-4 py-3 text-sm text-right">{fmtN(a.totalLikes)}</td>
+                    <td className="px-4 py-3 text-sm text-right">{fmtN(a.totalComments)}</td>
+                    <td className="px-4 py-3 text-sm text-right">{fmtPct(a.avgEngagementRate * 100)}</td>
+                    <td
+                      className="px-4 py-3 text-sm text-right font-semibold"
+                      style={marketabilityScore === topVisibleScore && topVisibleScore > 0 ? { color: primaryColor } : { color: '#0F1D2E' }}
+                    >
+                      {marketabilityScore}
+                    </td>
+                  </tr>
+                  );
+                  });
+                })()}
+              </tbody>
+            </table>
+          </div>
+        </GlassPanel>
+      ) : (
+        <GlassPanel className="p-5 bg-[#090909] border-[#1A1A1A]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+            {sortedCards.slice(0, 200).map((a) => {
+              const likesRank = likesRankByAthleteId.get(a.id) || 0;
+              const commentsRank = commentsRankByAthleteId.get(a.id) || 0;
+              const followersRank = followersRankByAthleteId.get(a.id) || 0;
+              const engagementRank = engagementRankByAthleteId.get(a.id) || 0;
+              const marketabilityRank = marketabilityRankByAthleteId.get(a.id) || 0;
+              const score = marketabilityBadgeByAthleteId.get(a.id) || 0;
+              const avgComments = Math.round(a.totalComments / Math.max(a.totalPosts, 1));
+              const firstName = (a.name || '').trim().split(/\s+/)[0] || a.name;
+              const categoryLeads: string[] = [];
+              if (followersRank === 1) categoryLeads.push('followers');
+              if (likesRank === 1) categoryLeads.push('total likes');
+              if (commentsRank === 1) categoryLeads.push('comments');
+              if (engagementRank === 1) categoryLeads.push('engagement rate');
+              const topDecileThreshold = Math.max(1, Math.ceil(athletes.length * 0.1));
+              const engagementMultiple = programAvgER > 0 ? a.avgEngagementRate / programAvgER : 0;
+              let insight = '';
+              if (categoryLeads.length > 0) {
+                const leadText = categoryLeads.length === 1
+                  ? categoryLeads[0]
+                  : `${categoryLeads.slice(0, -1).join(', ')}, and ${categoryLeads[categoryLeads.length - 1]}`;
+                insight = `${firstName} leads all ${shortName} athletes in ${leadText}.`;
+              } else if (a.avgEngagementRate > programAvgER && programAvgER > 0) {
+                insight = `${firstName}'s ${fmtPct(a.avgEngagementRate * 100)} engagement rate is ${engagementMultiple.toFixed(1)}x the program average.`;
+              } else if (marketabilityRank <= topDecileThreshold && athletes.length > 0) {
+                const percentile = Math.max(1, Math.round((marketabilityRank / athletes.length) * 100));
+                insight = `Top ${percentile}% marketability score among all ${shortName} athletes.`;
+              } else {
+                const fallbackRankLabel = likesRank > 10 ? '#10+' : `#${Math.max(1, likesRank)}`;
+                insight = `${firstName} ranks ${fallbackRankLabel} by total likes among ${fmtN(athletes.length)} tracked athletes.`;
+              }
+              return (
+                <button
+                  key={a.id}
+                  type="button"
+                  onClick={() => onSelectAthlete(a)}
+                  className="text-left rounded-[12px] overflow-hidden border-2 transition-transform hover:-translate-y-0.5 flex flex-col"
+                  style={{
+                    borderColor: primaryColor,
+                    minHeight: 640,
+                    background: `radial-gradient(ellipse at top, ${primaryColor}18 0%, #0a0a0a 70%), linear-gradient(180deg, #111111 0%, ${primaryDeepColor}55 100%)`,
+                    boxShadow: `0 0 20px 4px ${primaryColor}44, 0 0 40px 8px ${primaryColor}22`,
+                  }}
+                >
+                  <div className="relative h-[55%] min-h-[340px] w-full flex-shrink-0">
+                    {a.image ? (
+                      <img
+                        src={a.image}
+                        alt={a.name}
+                        className="w-full h-full block object-cover"
+                        style={{ objectPosition: 'top center' }}
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-xs text-[#9AA7BC]">No image</div>
+                    )}
+                    <span
+                      className="absolute top-3 right-3 px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-[0.12em] text-white"
+                      style={{ backgroundColor: primaryColor, boxShadow: `0 2px 8px ${primaryColor}88` }}
+                    >
+                      {fmtSport(a.sport)}
+                    </span>
+                    <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 z-10">
+                      <div className="w-[68px] h-[68px] flex flex-col items-center justify-center">
+                        <div
+                          className="w-[68px] h-[68px] rounded-full flex flex-col items-center justify-center border-[3px] text-white shadow-lg"
+                          style={{
+                            borderColor: primaryColor,
+                            background: `radial-gradient(circle, #1a1a1a 60%, ${primaryColor}44 100%)`,
+                            boxShadow: `0 0 0 4px ${primaryColor}55, 0 0 20px 6px ${primaryColor}66`,
+                          }}
+                        >
+                          <span className="text-[8px] uppercase tracking-[0.16em] text-white leading-none">SCORE</span>
+                          <span className="text-[22px] font-black leading-tight">{score}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="pt-12 pb-3 px-3 flex-1">
+                    <div
+                      className="px-3 py-2 text-center text-sm font-black uppercase tracking-[0.08em] text-white truncate"
+                      style={{ background: `linear-gradient(90deg, ${primaryDeepColor} 0%, ${primaryColor}cc 50%, ${primaryDeepColor} 100%)` }}
+                    >
+                      {a.name}
+                    </div>
+
+                    <div className="mt-3 space-y-2">
+                      <div className="flex items-center justify-between rounded-[4px] border border-[#333333] bg-[#111111] px-[10px] py-[6px]">
+                        <span className="text-[10px] uppercase tracking-[0.2em] text-[#9CA3AF]">Followers</span>
+                        <span className="text-xl font-black text-white">{fmtN(a.followers)}</span>
+                      </div>
+                      <div className="flex items-center justify-between rounded-[4px] border border-[#333333] bg-[#111111] px-[10px] py-[6px]">
+                        <span className="text-[10px] uppercase tracking-[0.2em] text-[#9CA3AF]">Avg Engagement Rate</span>
+                        <span className="text-xl font-black text-white">{fmtPct(a.avgEngagementRate * 100)}</span>
+                      </div>
+                      <div className="flex items-center justify-between rounded-[4px] border border-[#333333] bg-[#111111] px-[10px] py-[6px]">
+                        <span className="text-[10px] uppercase tracking-[0.2em] text-[#9CA3AF]">Avg Comments</span>
+                        <span className="text-xl font-black text-white">{fmtN(avgComments)}</span>
+                      </div>
+                    </div>
+
+                    <p className="mt-3 text-xs italic text-[#C2CBD7]">
+                      {insight}
+                    </p>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </GlassPanel>
+      )}
     </div>
   );
 }
 
 // ─── Teams Tab (sport-level breakdown) ───────────────────────
-function TeamsTab({ sports, primaryColor }: { sports: DerivedSport[]; primaryColor: string }) {
-  type TeamSortKey = 'sport' | 'likes' | 'engagement' | 'posts' | 'athletes';
+function TeamsTab({ teamPages, primaryColor }: { teamPages: TeamPageStat[]; primaryColor: string }) {
+  type TeamSortKey = 'sport' | 'likes' | 'engagement' | 'posts' | 'followers';
   type SortDirection = 'asc' | 'desc';
 
   const [sortKey, setSortKey] = useState<TeamSortKey>('likes');
   const [sortDirection, setSortDirection] = useState<SortDirection>('desc');
 
   const sorted = useMemo(() => {
-    const rows = [...sports].sort((a, b) => {
+    const rows = [...teamPages].sort((a, b) => {
       if (sortKey === 'sport') return fmtSport(a.sport).localeCompare(fmtSport(b.sport));
       if (sortKey === 'likes') return a.totalLikes - b.totalLikes;
       if (sortKey === 'engagement') return a.avgEngagementRate - b.avgEngagementRate;
       if (sortKey === 'posts') return a.totalPosts - b.totalPosts;
-      return a.athleteCount - b.athleteCount;
+      if (sortKey === 'followers') return a.followers - b.followers;
+      return 0;
     });
     return sortDirection === 'desc' ? rows.reverse() : rows;
-  }, [sports, sortKey, sortDirection]);
+  }, [teamPages, sortKey, sortDirection]);
+  const topByFollowers = useMemo(
+    () => [...teamPages].sort((a, b) => b.followers - a.followers),
+    [teamPages]
+  );
+  const topTeamByFollowers = topByFollowers[0];
+  const secondTeamByFollowers = topByFollowers[1];
+  const topTeamByEngagement = useMemo(
+    () => [...teamPages].sort((a, b) => b.avgEngagementRate - a.avgEngagementRate)[0],
+    [teamPages]
+  );
 
   const handleSortChange = (key: TeamSortKey) => {
     if (sortKey === key) {
@@ -869,19 +1559,81 @@ function TeamsTab({ sports, primaryColor }: { sports: DerivedSport[]; primaryCol
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
             <h2 style={headerStyle} className="text-lg font-bold uppercase tracking-tight text-[#0F1D2E]">Sport Breakdown</h2>
-            <p className="text-sm text-[#5B6B82]">{sports.length} sports active • Based on athlete post data</p>
+            <p className="text-sm text-[#5B6B82]">
+              {teamPages.length} team pages active •{' '}
+              <span className="font-semibold" style={{ color: primaryColor }}>
+                Based on official team account metrics
+              </span>
+            </p>
           </div>
         </div>
       </GlassPanel>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-        {sorted.slice(0, 6).map(s => (
-          <GlassPanel key={s.sport} className="p-5">
+        {sorted.slice(0, 6).map((s, idx) => (
+          <GlassPanel key={s.sport} className="p-5 relative">
+            <span
+              className="absolute top-4 right-4 text-[10px] font-semibold px-2 py-0.5 rounded-full"
+              style={{ backgroundColor: primaryColor + '14', color: primaryColor }}
+            >
+              #{idx + 1}
+            </span>
             <div className="text-sm font-semibold text-[#0F1D2E]">{fmtSport(s.sport)}</div>
-            <div className="mt-3 text-sm text-[#5B6B82]">Total likes: {fmtN(s.totalLikes)}</div>
-            <div className="text-xs text-[#7A8AA3]">{s.athleteCount} athletes • {fmtN(s.totalPosts)} posts</div>
+            <div className="text-xs text-[#7A8AA3] mt-1">{s.handle}</div>
+            <div className="mt-4 text-xs uppercase tracking-[0.16em] text-[#7A8AA3]">Followers</div>
+            <div className="text-3xl font-bold text-[#0F1D2E] leading-tight">{fmtN(s.followers)}</div>
+            <div className="mt-3 grid grid-cols-3 gap-2 text-xs">
+              <div>
+                <div className="uppercase tracking-[0.14em] text-[#7A8AA3]">Likes</div>
+                <div className="text-sm font-semibold text-[#0F1D2E]">{fmtN(s.totalLikes)}</div>
+              </div>
+              <div>
+                <div className="uppercase tracking-[0.14em] text-[#7A8AA3]">Avg ER</div>
+                <div className="text-sm font-semibold text-[#0F1D2E]">{fmtPct(s.avgEngagementRate * 100)}</div>
+              </div>
+              <div>
+                <div className="uppercase tracking-[0.14em] text-[#7A8AA3]">Posts</div>
+                <div className="text-sm font-semibold text-[#0F1D2E]">{fmtN(s.totalPosts)}</div>
+              </div>
+            </div>
           </GlassPanel>
         ))}
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div
+          className="rounded-xl border-l-4 border px-4 py-3"
+          style={{ borderColor: primaryColor, backgroundColor: primaryColor + '14' }}
+        >
+          <div className="flex items-center gap-2">
+            <Lightbulb className="w-4 h-4" style={{ color: primaryColor }} />
+            <p className="text-xs uppercase tracking-[0.2em] font-semibold" style={{ color: primaryColor }}>Key Insight</p>
+          </div>
+          <p className="text-sm text-[#2E3E55] mt-1 font-medium">
+            {topTeamByFollowers
+              ? `${fmtSport(topTeamByFollowers.sport)} leads with ${fmtN(topTeamByFollowers.followers)} followers — ${
+                secondTeamByFollowers && secondTeamByFollowers.followers > 0
+                  ? `${(topTeamByFollowers.followers / secondTeamByFollowers.followers).toFixed(1)}x more than the next largest team account (${fmtSport(secondTeamByFollowers.sport)} at ${fmtN(secondTeamByFollowers.followers)}).`
+                  : 'no clear #2 team account follower baseline yet.'
+              }`
+              : 'No team-account follower insight is available yet.'}
+          </p>
+        </div>
+
+        <div
+          className="rounded-xl border-l-4 border px-4 py-3"
+          style={{ borderColor: primaryColor, backgroundColor: primaryColor + '14' }}
+        >
+          <div className="flex items-center gap-2">
+            <Lightbulb className="w-4 h-4" style={{ color: primaryColor }} />
+            <p className="text-xs uppercase tracking-[0.2em] font-semibold" style={{ color: primaryColor }}>Key Insight</p>
+          </div>
+          <p className="text-sm text-[#2E3E55] mt-1 font-medium">
+            {topTeamByEngagement
+              ? `${fmtSport(topTeamByEngagement.sport)} has the highest engagement rate at ${fmtPct(topTeamByEngagement.avgEngagementRate * 100)} — the most active audience relative to its size.`
+              : 'No team-account engagement insight is available yet.'}
+          </p>
+        </div>
       </div>
 
       <GlassPanel className="p-6">
@@ -899,10 +1651,10 @@ function TeamsTab({ sports, primaryColor }: { sports: DerivedSport[]; primaryCol
                 </th>
                 <th
                   className="text-right py-2 px-3 cursor-pointer select-none hover:text-[#1770C0] transition-colors"
-                  style={{ color: sortKey === 'athletes' ? primaryColor : '#5B6B82' }}
-                  onClick={() => handleSortChange('athletes')}
+                  style={{ color: sortKey === 'followers' ? primaryColor : '#5B6B82' }}
+                  onClick={() => handleSortChange('followers')}
                 >
-                  Athletes{sortMarker('athletes')}
+                  Followers{sortMarker('followers')}
                 </th>
                 <th
                   className="text-right py-2 px-3 cursor-pointer select-none hover:text-[#1770C0] transition-colors"
@@ -916,7 +1668,10 @@ function TeamsTab({ sports, primaryColor }: { sports: DerivedSport[]; primaryCol
                   style={{ color: sortKey === 'likes' ? primaryColor : '#5B6B82' }}
                   onClick={() => handleSortChange('likes')}
                 >
-                  Likes{sortMarker('likes')}
+                  <span className="inline-flex flex-col items-end leading-tight">
+                    <span>Total Likes{sortMarker('likes')}</span>
+                    <span className="text-[10px] normal-case tracking-normal text-[#7A8AA3]">(across all posts)</span>
+                  </span>
                 </th>
                 <th
                   className="text-right py-2 px-3 cursor-pointer select-none hover:text-[#1770C0] transition-colors"
@@ -931,7 +1686,7 @@ function TeamsTab({ sports, primaryColor }: { sports: DerivedSport[]; primaryCol
               {sorted.map(s => (
                 <tr key={s.sport} className="border-t border-[#E1E7F0] hover:bg-[#F3F6FB]">
                   <td className="py-3 px-3 text-sm font-semibold text-[#0F1D2E]">{fmtSport(s.sport)}</td>
-                  <td className="py-3 px-3 text-sm text-right">{fmtN(s.athleteCount)}</td>
+                  <td className="py-3 px-3 text-sm text-right">{fmtN(s.followers)}</td>
                   <td className="py-3 px-3 text-sm text-right">{fmtN(s.totalPosts)}</td>
                   <td className="py-3 px-3 text-sm text-right">{fmtN(s.totalLikes)}</td>
                   <td className="py-3 px-3 text-sm text-right">{fmtPct(s.avgEngagementRate * 100)}</td>
@@ -959,6 +1714,7 @@ function ContentTab({
 }) {
   const [sortKey, setSortKey] = useState<'likes' | 'engagement' | 'comments'>('likes');
   const [sponsoredOnly, setSponsoredOnly] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(9);
 
   const normalizedPosts = useMemo(() => posts.map(p => ({
     id: p._id,
@@ -980,6 +1736,17 @@ function ContentTab({
     if (sponsoredOnly) list = list.filter(p => p.isSponsored && !brandExclusions.has(p.sponsorHandle));
     return list;
   }, [normalizedPosts, sponsoredOnly, brandExclusions]);
+  const isGiveawayCaption = (caption?: string) => {
+    const text = (caption || '').toLowerCase();
+    if (!text) return false;
+    return [
+      'giveaway',
+      'contest',
+      'enter to win',
+      'tag to win',
+      'follow to win',
+    ].some((keyword) => text.includes(keyword));
+  };
 
   const sorted = useMemo(() => [...filtered].sort((a, b) => {
     if (sortKey === 'likes') return b.likes - a.likes;
@@ -987,99 +1754,204 @@ function ContentTab({
     return b.engagementRate - a.engagementRate;
   }), [filtered, sortKey]);
 
-  const top3 = sorted.slice(0, 3);
-  const top10 = sorted.slice(0, 10);
+  useEffect(() => {
+    setVisibleCount(9);
+  }, [sortKey, sponsoredOnly, filtered.length]);
+
+  const bestByVolume = useMemo(
+    () => [...filtered].sort((a, b) => b.likes - a.likes)[0] || null,
+    [filtered]
+  );
+  const bestByEngagement = useMemo(
+    () => [...filtered].sort((a, b) => b.engagementRate - a.engagementRate)[0] || null,
+    [filtered]
+  );
+  const bestByComments = useMemo(
+    () => {
+      const hasCaptionData = filtered.some((p) => (p.caption || '').trim().length > 0);
+      const erQualified = filtered.filter((p) => p.engagementRate > 0.005);
+
+      if (!hasCaptionData) {
+        const fallbackByER = [...erQualified].sort((a, b) => b.comments - a.comments)[0];
+        return fallbackByER || [...filtered].sort((a, b) => b.comments - a.comments)[0] || null;
+      }
+
+      const nonGiveaway = filtered.filter((p) => !isGiveawayCaption(p.caption));
+      if (nonGiveaway.length) {
+        return [...nonGiveaway].sort((a, b) => b.comments - a.comments)[0] || null;
+      }
+
+      const fallbackByER = [...erQualified].sort((a, b) => b.comments - a.comments)[0];
+      return fallbackByER || [...filtered].sort((a, b) => b.comments - a.comments)[0] || null;
+    },
+    [filtered]
+  );
+  const spotlightIds = useMemo(() => new Set(
+    [bestByVolume?.id, bestByEngagement?.id, bestByComments?.id].filter(Boolean) as string[]
+  ), [bestByVolume?.id, bestByEngagement?.id, bestByComments?.id]);
+  const feedPool = useMemo(
+    () => sorted.filter((p) => !spotlightIds.has(p.id)),
+    [sorted, spotlightIds]
+  );
+  const visibleFeedPosts = useMemo(
+    () => feedPool.slice(0, visibleCount),
+    [feedPool, visibleCount]
+  );
 
   return (
     <div className="space-y-8">
       <GlassPanel className="p-6 bg-[#F3F6FB]">
+        <div>
+          <h2 style={headerStyle} className="text-lg font-bold uppercase tracking-tight text-[#0F1D2E]">{shortName}'s Highest Performing Content</h2>
+          <p className="text-sm text-[#5B6B82]">Top posts across {shortName} athlete accounts</p>
+        </div>
+      </GlassPanel>
+
+      <GlassPanel className="p-6">
+        <h3 style={headerStyle} className="text-base font-bold uppercase tracking-tight text-[#0F1D2E]">
+          Top Post Spotlight
+        </h3>
+        <div className="mt-4 grid grid-cols-1 lg:grid-cols-3 gap-4">
+          {[
+            { label: 'Most Liked', post: bestByVolume },
+            { label: 'Highest Engagement Rate', post: bestByEngagement },
+            { label: 'Most Comments', post: bestByComments },
+          ].map((item) => (
+            <div key={item.label} className="rounded-xl border border-[#E1E7F0] bg-white p-5">
+              <div className="flex items-center justify-between text-xs text-[#7A8AA3] mb-3">
+                <span className="px-2 py-0.5 rounded-full border border-[#E1E7F0] bg-[#F3F6FB]">{item.label}</span>
+                <span>{fmtDate(item.post?.publishedAt)}</span>
+              </div>
+              <div className="w-full aspect-[4/5] rounded-xl bg-[#F0F4FA] overflow-hidden">
+                {item.post?.url ? (
+                  <img src={item.post.url} alt={item.post.title} className="w-full h-full object-cover object-center" />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-xs text-[#9AA7BC]">No image</div>
+                )}
+              </div>
+              <div className="mt-3">
+                <p className="text-sm font-semibold text-[#0F1D2E]">{item.post?.title || 'N/A'}</p>
+                <p className="text-xs text-[#5B6B82] mt-1">{item.post?.caption?.slice(0, 80) || 'No caption'}</p>
+              </div>
+              <div className="grid grid-cols-3 gap-2 text-xs text-[#5B6B82] mt-3">
+                <div>Likes: {fmtN(item.post?.likes)}</div>
+                <div>Comments: {fmtN(item.post?.comments)}</div>
+                <div>ER: {fmtPct((item.post?.engagementRate || 0) * 100)}</div>
+              </div>
+              {(item.post?.permalink || item.post?.url) && (
+                <a
+                  href={item.post.permalink || item.post.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-xs mt-3 inline-block"
+                  style={{ color: primaryColor }}
+                >
+                  Open post
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+      </GlassPanel>
+
+      <GlassPanel className="p-6">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
-          <div>
-            <h2 style={headerStyle} className="text-lg font-bold uppercase tracking-tight text-[#0F1D2E]">{shortName}'s Highest Performing Content</h2>
-            <p className="text-sm text-[#5B6B82]">Top posts across {shortName} athlete accounts</p>
-          </div>
+          <h3 style={headerStyle} className="text-base font-bold uppercase tracking-tight text-[#0F1D2E]">
+            Top Posts
+          </h3>
           <div className="flex flex-wrap items-center gap-2">
             <label className="flex items-center gap-2 cursor-pointer">
               <span className="text-xs text-[#5B6B82]">Sponsored only</span>
-              <button role="switch" aria-checked={sponsoredOnly} onClick={() => setSponsoredOnly(!sponsoredOnly)}
-                className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors`}
-                style={{ backgroundColor: sponsoredOnly ? primaryColor : '#D1D5DB' }}>
+              <button
+                role="switch"
+                aria-checked={sponsoredOnly}
+                onClick={() => setSponsoredOnly(!sponsoredOnly)}
+                className="relative inline-flex h-5 w-9 items-center rounded-full transition-colors"
+                style={{ backgroundColor: sponsoredOnly ? primaryColor : '#D1D5DB' }}
+              >
                 <span className={`inline-block h-3.5 w-3.5 rounded-full bg-white shadow transition-transform ${sponsoredOnly ? 'translate-x-[18px]' : 'translate-x-[3px]'}`} />
               </button>
             </label>
-            <select value={sortKey} onChange={e => setSortKey(e.target.value as typeof sortKey)}
-              className="bg-white border border-[#E1E7F0] rounded-full px-3 py-2 text-sm text-[#1E2A3B] h-9">
+            <select
+              value={sortKey}
+              onChange={e => setSortKey(e.target.value as typeof sortKey)}
+              className="bg-white border border-[#E1E7F0] rounded-full px-3 py-2 text-sm text-[#1E2A3B] h-9"
+            >
               <option value="likes">Likes</option>
               <option value="engagement">Engagement Rate</option>
               <option value="comments">Comments</option>
             </select>
           </div>
         </div>
-      </GlassPanel>
-
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        {top3.map((post, idx) => (
-          <GlassPanel key={`${post.id}-${idx}`} className="p-5">
-            <div className="w-full h-48 rounded-xl bg-[#F0F4FA] overflow-hidden">
-              {post.url ? <img src={post.url} alt={post.title} className="w-full h-full object-cover" /> :
-                <div className="w-full h-full flex items-center justify-center text-xs text-[#9AA7BC]">No image</div>}
-            </div>
-            <div className="mt-4 flex items-center justify-between text-xs text-[#7A8AA3]">
-              <span className="px-2 py-0.5 rounded-full bg-[#F3F6FB] border border-[#E1E7F0]">{post.title}</span>
-              <span>{fmtDate(post.publishedAt)}</span>
-            </div>
-            <p className="text-sm font-semibold text-[#0F1D2E] mt-2">{post.caption?.slice(0, 90) || 'No caption'}</p>
-            <div className="grid grid-cols-3 gap-2 text-xs text-[#5B6B82] mt-3">
-              <div>Likes: {fmtN(post.likes)}</div>
-              <div>Comments: {fmtN(post.comments)}</div>
-              <div>ER: {fmtPct(post.engagementRate * 100)}</div>
-            </div>
-            {post.permalink && <a href={post.permalink} target="_blank" rel="noreferrer" className="text-xs mt-3 block" style={{ color: primaryColor }}>Open post</a>}
-          </GlassPanel>
-        ))}
-      </div>
-
-      <GlassPanel className="p-6">
-        <h3 style={headerStyle} className="text-base font-bold uppercase tracking-tight text-[#0F1D2E]">
-          Top 10 Posts by {sortKey === 'likes' ? 'Likes' : sortKey === 'comments' ? 'Comments' : 'Engagement Rate'}
-        </h3>
-        <div className="mt-4 overflow-x-auto">
-          <table className="w-full">
-            <thead>
-              <tr className="text-xs uppercase tracking-[0.2em] text-[#5B6B82]">
-                <th className="text-left py-2 px-3">#</th>
-                <th className="text-left py-2 px-3">Athlete</th>
-                <th className="text-left py-2 px-3">Sport</th>
-                <th className="text-right py-2 px-3">Likes</th>
-                <th className="text-right py-2 px-3">ER</th>
-                <th className="text-right py-2 px-3">Date</th>
-                <th className="text-right py-2 px-3"></th>
-              </tr>
-            </thead>
-            <tbody>
-              {top10.map((post, idx) => (
-                <tr key={`${post.id}-${idx}`} className="border-t border-[#E1E7F0] hover:bg-[#F3F6FB]">
-                  <td className="py-3 px-3 text-sm text-[#5B6B82]">#{idx + 1}</td>
-                  <td className="py-3 px-3 text-sm text-[#0F1D2E]">{post.title}</td>
-                  <td className="py-3 px-3 text-sm text-[#5B6B82]">{fmtSport(post.sport)}</td>
-                  <td className="py-3 px-3 text-sm text-right">{fmtN(post.likes)}</td>
-                  <td className="py-3 px-3 text-sm text-right">{fmtPct(post.engagementRate * 100)}</td>
-                  <td className="py-3 px-3 text-sm text-right">{fmtDate(post.publishedAt)}</td>
-                  <td className="py-3 px-3 text-right">
-                    {post.permalink && <a href={post.permalink} target="_blank" rel="noreferrer" style={{ color: primaryColor }}><ExternalLink className="w-4 h-4" /></a>}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {visibleFeedPosts.map((post, idx) => (
+            <GlassPanel key={`${post.id}-${idx}`} className="p-3 bg-white">
+              <div className="relative">
+                <div className="w-full aspect-[4/5] rounded-xl bg-[#F0F4FA] overflow-hidden">
+                  {post.url ? (
+                    <img src={post.url} alt={post.title} className="w-full h-full object-cover" />
+                  ) : (
+                  <div className="w-full h-full flex items-center justify-center text-xs text-[#9AA7BC]">No image</div>
+                  )}
+                </div>
+                <span
+                  className="absolute top-2 left-2 text-xs font-bold px-2 py-1 rounded-full"
+                  style={{ backgroundColor: primaryColor, color: '#FFFFFF' }}
+                >
+                  #{idx + 1}
+                </span>
+              </div>
+              <div className="mt-3">
+                <p className="text-sm font-semibold text-[#0F1D2E] truncate">{post.title}</p>
+                <p className="text-xs text-[#5B6B82]">{fmtSport(post.sport)}</p>
+                <div className="mt-2 grid grid-cols-3 gap-2 text-xs text-[#5B6B82]">
+                  <div>Likes: {fmtN(post.likes)}</div>
+                  <div>Comments: {fmtN(post.comments)}</div>
+                  <div>ER: {fmtPct(post.engagementRate * 100)}</div>
+                </div>
+                <p className="mt-2 text-xs text-[#8A96A8]">{fmtDate(post.publishedAt)}</p>
+                {(post.permalink || post.url) && (
+                  <a
+                    href={post.permalink || post.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-xs mt-2 inline-block"
+                    style={{ color: primaryColor }}
+                  >
+                    Open post
+                  </a>
+                )}
+              </div>
+            </GlassPanel>
+          ))}
         </div>
+        {visibleCount < feedPool.length && (
+          <div className="mt-5 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setVisibleCount((count) => Math.min(count + 9, feedPool.length))}
+              className="px-4 py-2 rounded-full border text-sm font-semibold transition-colors"
+              style={{ borderColor: primaryColor, color: primaryColor }}
+            >
+              Show more
+            </button>
+          </div>
+        )}
       </GlassPanel>
     </div>
   );
 }
 
 // ─── Sponsored Tab ───────────────────────────────────────────
-function SponsoredTab({ posts, shortName }: { posts: RawPost[]; primaryColor: string; shortName: string }) {
+function SponsoredTab({
+  posts,
+  allPosts,
+  primaryColor,
+}: {
+  posts: RawPost[];
+  allPosts: RawPost[];
+  primaryColor: string;
+}) {
   const [search, setSearch] = useState('');
   const [sportFilter, setSportFilter] = useState('All');
   const [sortKey, setSortKey] = useState<'posts' | 'likes' | 'engagement'>('posts');
@@ -1131,6 +2003,83 @@ function SponsoredTab({ posts, shortName }: { posts: RawPost[]; primaryColor: st
   const uniqueAthletes = new Set(filtered.map(p => p.athlete?._id).filter(Boolean));
   const avgLikes = filtered.length ? totalLikes / filtered.length : null;
   const avgComments = filtered.length ? Math.round(totalComments / filtered.length) : null;
+  const normalizeER = (value: number) => (value > 1 ? value / 100 : value);
+  const organicPosts = allPosts.filter((p) => !canonicalHandle(p.sponsorPartner));
+  const avgOrganicER = organicPosts.length
+    ? organicPosts.reduce((sum, p) => sum + normalizeER(Number(p.metrics?.engagementRate || 0)), 0) / organicPosts.length
+    : 0;
+  const sponsoredEmv = emv(totalLikes, totalComments);
+  const totalSponsoredPostsAll = posts.length;
+  const emvPerLikeConstant = totalLikes > 0 ? sponsoredEmv / totalLikes : 0;
+  const avgSponsoredERAll = totalSponsoredPostsAll
+    ? posts.reduce((sum, p) => sum + normalizeER(Number(p.metrics?.engagementRate || 0)), 0) / totalSponsoredPostsAll
+    : 0;
+
+  const sponsoredSportCounts = new Map<string, number>();
+  const sponsoredAthleteCounts = new Map<string, { name: string; count: number }>();
+  const athleteIdsBySport = new Map<string, Set<string>>();
+  const allAthleteIds = new Set<string>();
+
+  for (const p of posts) {
+    const sport = p.athlete?.sport || 'UNKNOWN';
+    sponsoredSportCounts.set(sport, (sponsoredSportCounts.get(sport) || 0) + 1);
+
+    const athleteKey = p.athlete?._id || p.athlete?.name || 'unknown-athlete';
+    const athleteName = p.athlete?.name || 'Unknown Athlete';
+    if (!sponsoredAthleteCounts.has(athleteKey)) sponsoredAthleteCounts.set(athleteKey, { name: athleteName, count: 0 });
+    sponsoredAthleteCounts.get(athleteKey)!.count += 1;
+  }
+
+  for (const p of allPosts) {
+    const athleteId = p.athlete?._id;
+    const sport = p.athlete?.sport || 'UNKNOWN';
+    if (!athleteId) continue;
+    allAthleteIds.add(athleteId);
+    if (!athleteIdsBySport.has(sport)) athleteIdsBySport.set(sport, new Set<string>());
+    athleteIdsBySport.get(sport)!.add(athleteId);
+  }
+
+  const sponsoredSportRanked = [...sponsoredSportCounts.entries()]
+    .map(([sport, count]) => ({ sport, count }))
+    .sort((a, b) => b.count - a.count);
+  const topSponsoredSport = sponsoredSportRanked[0];
+  const secondSponsoredSport = sponsoredSportRanked[1];
+  const thirdSponsoredSport = sponsoredSportRanked[2];
+
+  const topAthleteEntry = [...sponsoredAthleteCounts.values()].sort((a, b) => b.count - a.count)[0];
+
+  const sportDealPct = topSponsoredSport && totalSponsoredPostsAll > 0
+    ? (topSponsoredSport.count / totalSponsoredPostsAll) * 100
+    : 0;
+  const sportAthletePct = topSponsoredSport && allAthleteIds.size > 0
+    ? ((athleteIdsBySport.get(topSponsoredSport.sport)?.size || 0) / allAthleteIds.size) * 100
+    : 0;
+  const athleteDealPct = topAthleteEntry && totalSponsoredPostsAll > 0
+    ? (topAthleteEntry.count / totalSponsoredPostsAll) * 100
+    : 0;
+
+  const erDiffPctPoints = Math.abs(avgSponsoredERAll - avgOrganicER) * 100;
+  const comparison = avgSponsoredERAll >= avgOrganicER * 1.08 ? 'above' : 'on par with';
+  const receptivityStatement = avgSponsoredERAll >= avgOrganicER * 1.08
+    ? 'are highly receptive to partnerships'
+    : 'respond naturally to brand content';
+
+  const sportConcentrationScore = Math.max(0, sportDealPct - sportAthletePct);
+  const athleteConcentrationScore = athleteDealPct;
+  const erSignalScore = erDiffPctPoints;
+
+  const insightType =
+    sportConcentrationScore >= athleteConcentrationScore && sportConcentrationScore >= erSignalScore
+      ? 'sport'
+      : athleteConcentrationScore >= erSignalScore
+        ? 'athlete'
+        : 'er';
+
+  const sponsorshipInsight = insightType === 'sport' && topSponsoredSport
+    ? `${fmtSport(topSponsoredSport.sport)} athletes account for ${fmtPct(sportDealPct)} of sponsored posts but only ${fmtPct(sportAthletePct)} of total athletes, with next-highest sponsored volume from ${fmtSport(secondSponsoredSport?.sport || 'other sports')} and ${fmtSport(thirdSponsoredSport?.sport || 'emerging groups')}.`
+    : insightType === 'athlete' && topAthleteEntry
+      ? `${topAthleteEntry.name} alone accounts for ${fmtPct(athleteDealPct)} of all sponsored posts — brand activity is heavily concentrated in one athlete, creating roster diversification opportunity.`
+      : `Sponsored posts generate an average ${fmtPct(avgSponsoredERAll * 100)} engagement rate across ${fmtN(totalSponsoredPostsAll)} posts — ${comparison} the ${fmtPct(avgOrganicER * 100)} program-wide average, indicating audiences ${receptivityStatement}.`;
 
   const brandMap = new Map<string, {
     posts: RawPost[];
@@ -1140,6 +2089,7 @@ function SponsoredTab({ posts, shortName }: { posts: RawPost[]; primaryColor: st
     totalLikes: number;
     totalComments: number;
     engSum: number;
+    totalEmv: number;
   }>();
   filtered.forEach(p => {
     const key = (p.sponsorPartner || '').trim();
@@ -1153,6 +2103,7 @@ function SponsoredTab({ posts, shortName }: { posts: RawPost[]; primaryColor: st
         totalLikes: 0,
         totalComments: 0,
         engSum: 0,
+        totalEmv: 0,
       });
     }
     const entry = brandMap.get(key)!;
@@ -1163,11 +2114,15 @@ function SponsoredTab({ posts, shortName }: { posts: RawPost[]; primaryColor: st
     entry.totalLikes += p.metrics?.likes || 0;
     entry.totalComments += p.metrics?.comments || 0;
     entry.engSum += (p.metrics?.engagementRate || 0) / 100;
+    entry.totalEmv += emv(p.metrics?.likes || 0, p.metrics?.comments || 0);
   });
 
   const brandCards = [...brandMap.entries()].map(([brand, entry]) => {
     const normalizedBrand = brand.toLowerCase().replace(/^@/, '');
     const logoUrl = brandLogos[normalizedBrand] || brandLogos[brand.toLowerCase()] || '';
+    const avgLikesPerPost = entry.posts.length ? entry.totalLikes / entry.posts.length : 0;
+    const estimatedEmvFallback = entry.posts.length * avgLikesPerPost * emvPerLikeConstant;
+    const estimatedValue = entry.totalEmv > 0 ? entry.totalEmv : estimatedEmvFallback;
     return {
       brand,
       logoUrl,
@@ -1177,6 +2132,8 @@ function SponsoredTab({ posts, shortName }: { posts: RawPost[]; primaryColor: st
       sportCount: entry.sports.size,
       totalLikes: entry.totalLikes,
       totalComments: entry.totalComments,
+      totalEmv: entry.totalEmv,
+      estimatedValue,
       avgEngagement: entry.posts.length ? entry.engSum / entry.posts.length : 0,
       topPosts: [...entry.posts]
         .sort((a, b) => (b.metrics?.likes || 0) - (a.metrics?.likes || 0))
@@ -1187,24 +2144,45 @@ function SponsoredTab({ posts, shortName }: { posts: RawPost[]; primaryColor: st
     if (sortKey === 'engagement') return b.avgEngagement - a.avgEngagement;
     return b.postCount - a.postCount;
   });
-
   return (
     <div className="space-y-8">
-      <GlassPanel className="p-6">
-        <div className="flex items-center justify-between">
-          <div>
-            <h2 style={headerStyle} className="text-lg font-bold uppercase tracking-tight text-[#0F1D2E]">Sponsored Posts</h2>
-            <p className="text-sm text-[#5B6B82]">Sponsored posts across {shortName} athletes</p>
+      <GlassPanel className="p-6" >
+        <div
+          className="rounded-2xl p-6 border"
+          style={{ backgroundColor: primaryColor, borderColor: primaryColor + '40' }}
+        >
+          <p className="text-xs uppercase tracking-[0.22em] text-white/75">Estimated Brand Value Generated</p>
+          <p className="text-4xl md:text-5xl font-black text-white mt-2">{fmtCur(sponsoredEmv)}</p>
+          <p className="text-sm text-white/80 mt-2">
+            From {fmtN(totalSponsoredPostsAll)} identified brand partnership posts.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-5">
+            <div className="rounded-xl border border-white/20 bg-white/10 px-3 py-2">
+              <p className="text-[11px] uppercase tracking-[0.18em] text-white/70">Sponsored Posts</p>
+              <p className="text-xl font-bold text-white mt-1">{fmtN(filtered.length)}</p>
+            </div>
+            <div className="rounded-xl border border-white/20 bg-white/10 px-3 py-2">
+              <p className="text-[11px] uppercase tracking-[0.18em] text-white/70">Unique Brands</p>
+              <p className="text-xl font-bold text-white mt-1">{fmtN(uniqueBrands.size)}</p>
+            </div>
+            <div className="rounded-xl border border-white/20 bg-white/10 px-3 py-2">
+              <p className="text-[11px] uppercase tracking-[0.18em] text-white/70">Athletes with Deals</p>
+              <p className="text-xl font-bold text-white mt-1">{fmtN(uniqueAthletes.size)}</p>
+            </div>
           </div>
-          <div className="text-sm text-[#5B6B82]">{uniqueBrands.size} total brands</div>
         </div>
       </GlassPanel>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
-        <GlassPanel className="p-4"><p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Sponsored posts</p><p className="text-2xl font-bold mt-2 text-[#0F1D2E]">{fmtN(filtered.length)}</p></GlassPanel>
-        <GlassPanel className="p-4"><p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Unique brands</p><p className="text-2xl font-bold mt-2 text-[#0F1D2E]">{fmtN(uniqueBrands.size)}</p></GlassPanel>
-        <GlassPanel className="p-4"><p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Total likes</p><p className="text-2xl font-bold mt-2 text-[#0F1D2E]">{fmtN(totalLikes)}</p></GlassPanel>
-        <GlassPanel className="p-4"><p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Athletes with deals</p><p className="text-2xl font-bold mt-2 text-[#0F1D2E]">{fmtN(uniqueAthletes.size)}</p></GlassPanel>
+      <div
+        className="rounded-xl border-l-4 border px-4 py-3"
+        style={{ borderColor: primaryColor, backgroundColor: primaryColor + '14' }}
+      >
+        <p className="text-xs uppercase tracking-[0.2em] font-semibold" style={{ color: primaryColor }}>
+          Sponsorship Insight
+        </p>
+        <p className="text-sm mt-1 font-medium text-[#2E3E55]">
+          {sponsorshipInsight}
+        </p>
       </div>
 
       <GlassPanel className="p-5">
@@ -1231,9 +2209,13 @@ function SponsoredTab({ posts, shortName }: { posts: RawPost[]; primaryColor: st
             </select>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4 text-sm text-[#5B6B82]">
-          <div>Avg likes per sponsored post: {avgLikes != null ? fmtN(avgLikes) : 'N/A'}</div>
-          <div>Avg comments per sponsored post: {avgComments != null ? fmtN(avgComments) : 'N/A'}</div>
+        <div className="flex flex-wrap gap-2 mt-4">
+          <span className="inline-flex items-center rounded-full border border-[#E1E7F0] bg-[#F3F6FB] px-3 py-1 text-xs font-semibold text-[#4B5B73]">
+            Avg Likes/Post: {avgLikes != null ? fmtN(avgLikes) : 'N/A'}
+          </span>
+          <span className="inline-flex items-center rounded-full border border-[#E1E7F0] bg-[#F3F6FB] px-3 py-1 text-xs font-semibold text-[#4B5B73]">
+            Avg Comments/Post: {avgComments != null ? fmtN(avgComments) : 'N/A'}
+          </span>
         </div>
       </GlassPanel>
 
@@ -1273,13 +2255,31 @@ function SponsoredTab({ posts, shortName }: { posts: RawPost[]; primaryColor: st
               <div>Comments: {fmtN(brand.totalComments)}</div>
               <div>Avg ER: {fmtPct(brand.avgEngagement * 100)}</div>
             </div>
+            <div className="mt-2 flex items-center justify-between rounded-md border border-[#E1E7F0] bg-[#F7FAFF] px-2.5 py-1.5">
+              <span className="text-[10px] uppercase tracking-[0.18em] text-[#7A8AA3]">Est. Value</span>
+              <span className="text-xs font-bold text-[#0F1D2E]">{fmtCur(brand.estimatedValue)}</span>
+            </div>
             <div className="mt-3">
               <p className="text-[10px] uppercase tracking-[0.2em] text-[#7A8AA3] mb-1">Athletes</p>
-              <p className="text-xs text-[#5B6B82] line-clamp-2">
-                {brand.athleteNames.length > 0
-                  ? `${brand.athleteNames.slice(0, 6).join(', ')}${brand.athleteNames.length > 6 ? ` +${brand.athleteNames.length - 6} more` : ''}`
-                  : 'N/A'}
-              </p>
+              {brand.athleteNames.length > 0 ? (
+                <div className="flex flex-wrap gap-1.5">
+                  {brand.athleteNames.slice(0, 3).map((name) => (
+                    <span
+                      key={`${brand.brand}-${name}`}
+                      className="inline-flex items-center rounded-full border border-[#E1E7F0] bg-[#F3F6FB] px-2 py-0.5 text-[11px] text-[#4B5B73]"
+                    >
+                      {name}
+                    </span>
+                  ))}
+                  {brand.athleteNames.length > 3 && (
+                    <span className="inline-flex items-center rounded-full border border-[#E1E7F0] bg-[#F3F6FB] px-2 py-0.5 text-[11px] text-[#4B5B73]">
+                      +{brand.athleteNames.length - 3} more
+                    </span>
+                  )}
+                </div>
+              ) : (
+                <p className="text-xs text-[#5B6B82]">N/A</p>
+              )}
             </div>
             <div className="mt-3 space-y-1">
               <p className="text-[10px] uppercase tracking-[0.2em] text-[#7A8AA3]">Top Posts</p>
@@ -1325,10 +2325,11 @@ function SponsoredTab({ posts, shortName }: { posts: RawPost[]; primaryColor: st
 }
 
 // ─── Benchmarks Tab ──────────────────────────────────────────
-function BenchmarksTab({ config, athletes, primaryColor }: {
+function BenchmarksTab({ config, athletes, totalEmv, primaryColor }: {
   config: SchoolConfig;
   athletes: DerivedAthlete[];
   sponsored: RawPost[];
+  totalEmv: number;
   primaryColor: string;
   secondaryColor: string;
 }) {
@@ -1345,10 +2346,10 @@ function BenchmarksTab({ config, athletes, primaryColor }: {
     loadAllBenchmarkSchools()
       .then((schools) => {
         if (cancelled) return;
-        setDatasetSchools(schools.length ? schools : null);
+        setDatasetSchools(schools);
       })
       .catch(() => {
-        if (!cancelled) setDatasetSchools(null);
+        if (!cancelled) setDatasetSchools([]);
       });
     return () => {
       cancelled = true;
@@ -1371,9 +2372,14 @@ function BenchmarksTab({ config, athletes, primaryColor }: {
   }));
 
   const conferenceKey = normalizeConference(conference);
+  const isBenchmarkLoading = datasetSchools === null;
   const datasetConferenceSchools = (datasetSchools || []).filter((s) => normalizeConference(s.conference) === conferenceKey);
   const scopedDatasetSchools = scope === 'conference' ? datasetConferenceSchools : (datasetSchools || []);
-  const allSchools = scopedDatasetSchools.length ? scopedDatasetSchools : fallbackSchools;
+  const allSchools = scopedDatasetSchools.length
+    ? scopedDatasetSchools
+    : isBenchmarkLoading
+      ? []
+      : fallbackSchools;
 
   const targetSchoolKeys = new Set<string>([
     normalizeSchool(config.shortName),
@@ -1401,32 +2407,40 @@ function BenchmarksTab({ config, athletes, primaryColor }: {
 
   // Compute rank for each metric based on benchmark stats
   const rankOf = (field: keyof typeof benchmark, higher = true) => {
+    if (!allSchools.length || !selfSchool) return { rank: 0, of: 0 };
     const sorted = [...allSchools].sort((a, b) => higher
       ? (b[field as keyof ConferenceBenchmarkSchool] as number) - (a[field as keyof ConferenceBenchmarkSchool] as number)
       : (a[field as keyof ConferenceBenchmarkSchool] as number) - (b[field as keyof ConferenceBenchmarkSchool] as number));
     return { rank: sorted.findIndex(s => s.id === selfSchool?.id) + 1, of: allSchools.length };
   };
+  const rankForCanonicalEmv = () => {
+    if (!allSchools.length) return { rank: 0, of: 0 };
+    const better = allSchools.filter((s) => s.totalEMV > totalEmv).length;
+    return { rank: better + 1, of: allSchools.length };
+  };
 
   const metricRows = [
     { label: 'Sponsored Deals', thisVal: selfSchool?.totalDeals || 0, medVal: medianDeals, format: fmtN, rankKey: 'totalDeals' as const },
-    { label: 'Est. Total EMV', thisVal: selfSchool?.totalEMV || 0, medVal: medianEMV, format: fmtCur, rankKey: 'totalEMV' as const },
+    { label: 'Est. Total EMV', thisVal: totalEmv, medVal: medianEMV, format: fmtCur, rankKey: 'totalEMV' as const },
     { label: 'Avg Engagement', thisVal: selfSchool?.avgEngagement || 0, medVal: medianEng, format: (v: number) => fmtPct(v), rankKey: 'avgEngagement' as const },
     { label: 'Athletes Active', thisVal: selfSchool?.athleteCount || 0, medVal: medianAthletes, format: fmtN, rankKey: 'athleteCount' as const },
     { label: 'Unique Brands', thisVal: selfSchool?.brandCount || 0, medVal: medianBrands, format: fmtN, rankKey: 'brandCount' as const },
   ];
 
-  const highlightRanks = [
-    { label: 'Sponsored Deals', key: 'totalDeals' as const },
-    { label: 'Total EMV', key: 'totalEMV' as const },
-    { label: 'Avg Engagement', key: 'avgEngagement' as const },
-    { label: 'Brands', key: 'brandCount' as const },
+  const standingMetrics = [
+    { label: `${conference} Rank by Total EMV`, key: 'totalEMV' as const },
+    { label: `${conference} Rank by Sponsored Deals`, key: 'totalDeals' as const },
+    { label: `${conference} Rank by Unique Brands`, key: 'brandCount' as const },
+    { label: `${conference} Rank by Athletes Active`, key: 'athleteCount' as const },
   ];
+  const standingRanks = standingMetrics.map((item) => ({ ...item, rank: rankOf(item.key) }));
+  const bestRankValue = Math.min(...standingRanks.map((item) => item.rank.rank || Number.MAX_SAFE_INTEGER));
 
   const sortedMetricRows = useMemo(() => {
     const rows = metricRows.map((row) => {
       const diff = row.medVal !== 0 ? ((row.thisVal - row.medVal) / Math.abs(row.medVal)) * 100 : 0;
-      const rank = rankOf(row.rankKey).rank;
-      return { ...row, diff, rank };
+      const rankData = row.rankKey === 'totalEMV' ? rankForCanonicalEmv() : rankOf(row.rankKey);
+      return { ...row, diff, rank: rankData.rank, rankOf: rankData.of };
     });
 
     const sorted = [...rows].sort((a, b) => {
@@ -1506,19 +2520,39 @@ function BenchmarksTab({ config, athletes, primaryColor }: {
         </div>
       </GlassPanel>
 
-      {/* Rank highlights */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {highlightRanks.map(item => {
-          const r = rankOf(item.key);
-          return (
-            <GlassPanel key={item.key} className="p-4">
-              <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">{item.label}</p>
-              <p className="text-2xl font-bold mt-2 text-[#0F1D2E]">#{r.rank}</p>
-              <p className="text-xs text-[#7A8AA3]">of {r.of} schools</p>
-            </GlassPanel>
-          );
-        })}
-      </div>
+      {/* Where school stands */}
+      <GlassPanel className="p-6">
+        <h3 className="text-lg font-bold uppercase tracking-[0.08em] text-[#0F1D2E] mb-4">
+          Where {shortName} Stands
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+          {standingRanks.map((item) => {
+            const isBest = item.rank.rank === bestRankValue;
+            return (
+              <div
+                key={item.key}
+                className={`rounded-xl border p-4 ${isBest ? 'shadow-sm' : ''}`}
+                style={isBest
+                  ? { borderColor: primaryColor + '66', backgroundColor: primaryColor + '12' }
+                  : { borderColor: '#E1E7F0', backgroundColor: '#FFFFFF' }}
+              >
+                <p className="text-[11px] uppercase tracking-[0.18em] text-[#4B5B73]">{item.label}</p>
+                <p className="text-3xl font-black mt-2" style={{ color: isBest ? primaryColor : '#0F1D2E' }}>
+                  {isBenchmarkLoading ? '…' : `#${item.rank.rank}`}
+                </p>
+                <p className="text-xs text-[#7A8AA3]">
+                  {isBenchmarkLoading ? 'Loading conference benchmarks…' : `of ${item.rank.of} schools`}
+                </p>
+                {isBest && (
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] mt-2" style={{ color: primaryColor }}>
+                    Highest Position
+                  </p>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </GlassPanel>
 
       {/* Comparison table */}
       <GlassPanel className="p-6">
@@ -1567,20 +2601,17 @@ function BenchmarksTab({ config, athletes, primaryColor }: {
               </tr>
             </thead>
             <tbody>
-              {sortedMetricRows.map(row => {
-                const r = rankOf(row.rankKey);
-                return (
-                  <tr key={row.label} className="border-t border-[#E1E7F0] hover:bg-[#F3F6FB]">
-                    <td className="py-3 px-3 text-sm font-medium text-[#0F1D2E]">{row.label}</td>
-                    <td className="py-3 px-3 text-sm text-right font-semibold text-[#0F1D2E]">{row.format(row.thisVal)}</td>
-                    <td className="py-3 px-3 text-sm text-right text-[#5B6B82]">{row.format(row.medVal)}</td>
-                    <td className={`py-3 px-3 text-sm text-right font-semibold ${row.diff >= 0 ? 'text-green-600' : 'text-red-500'}`}>
-                      {row.diff >= 0 ? '+' : ''}{row.diff.toFixed(1)}%
-                    </td>
-                    <td className="py-3 px-3 text-sm text-right text-[#5B6B82]">#{r.rank}/{r.of}</td>
-                  </tr>
-                );
-              })}
+              {sortedMetricRows.map(row => (
+                <tr key={row.label} className="border-t border-[#E1E7F0] hover:bg-[#F3F6FB]">
+                  <td className="py-3 px-3 text-sm font-medium text-[#0F1D2E]">{row.label}</td>
+                  <td className="py-3 px-3 text-sm text-right font-semibold text-[#0F1D2E]">{row.format(row.thisVal)}</td>
+                  <td className="py-3 px-3 text-sm text-right text-[#5B6B82]">{row.format(row.medVal)}</td>
+                  <td className={`py-3 px-3 text-sm text-right font-semibold ${row.diff >= 0 ? 'text-green-600' : 'text-red-500'}`}>
+                    {row.diff >= 0 ? '+' : ''}{row.diff.toFixed(1)}%
+                  </td>
+                  <td className="py-3 px-3 text-sm text-right text-[#5B6B82]">#{row.rank}/{row.rankOf}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
@@ -1594,27 +2625,34 @@ function BenchmarksTab({ config, athletes, primaryColor }: {
         <div className="space-y-5">
           {[
             { label: 'Sponsored Deals', thisVal: benchmark.totalDeals, medVal: medianDeals },
-            { label: 'Total EMV', thisVal: benchmark.totalEMV, medVal: medianEMV },
+            { label: 'Total EMV', thisVal: totalEmv, medVal: medianEMV },
             { label: 'Avg Engagement', thisVal: benchmark.avgEngagement, medVal: medianEng },
           ].map(item => {
-            const max = Math.max(item.thisVal, item.medVal) || 1;
+            const isEngagementMetric = item.label === 'Avg Engagement';
+            const normalizeEngagementPct = (value: number) => (value <= 1 ? value * 100 : value);
+            const thisVal = isEngagementMetric ? normalizeEngagementPct(item.thisVal) : item.thisVal;
+            const medVal = isEngagementMetric ? normalizeEngagementPct(item.medVal) : item.medVal;
+            const max = Math.max(thisVal, medVal) || 1;
+            const valueLabel = isEngagementMetric
+              ? `${shortName} ${fmtPct(thisVal, 1)} vs Median ${fmtPct(medVal, 1)}`
+              : `${shortName} ${fmtN(thisVal)} vs Median ${fmtN(medVal)}`;
             return (
               <div key={item.label}>
                 <div className="flex items-center justify-between text-sm mb-1">
                   <span className="font-medium text-[#0F1D2E]">{item.label}</span>
-                  <span className="text-xs text-[#7A8AA3]">{shortName} {fmtN(item.thisVal)} vs Median {fmtN(item.medVal)}</span>
+                  <span className="text-xs text-[#7A8AA3]">{valueLabel}</span>
                 </div>
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
                     <span className="text-xs w-14 truncate" style={{ color: primaryColor }}>{shortName}</span>
                     <div className="flex-1 h-5 bg-[#F0F4FA] rounded-full overflow-hidden">
-                      <div className="h-full rounded-full" style={{ width: `${(item.thisVal / max) * 100}%`, backgroundColor: primaryColor }} />
+                      <div className="h-full rounded-full" style={{ width: `${(thisVal / max) * 100}%`, backgroundColor: primaryColor }} />
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-xs w-14 text-[#9AA7BC]">Median</span>
                     <div className="flex-1 h-5 bg-[#F0F4FA] rounded-full overflow-hidden">
-                      <div className="h-full bg-[#C8D5E3] rounded-full" style={{ width: `${(item.medVal / max) * 100}%` }} />
+                      <div className="h-full bg-[#C8D5E3] rounded-full" style={{ width: `${(medVal / max) * 100}%` }} />
                     </div>
                   </div>
                 </div>
@@ -1775,7 +2813,7 @@ function IPTab({
   return (
     <div className="space-y-6">
       <GlassPanel className="p-6 md:p-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div className="flex flex-col gap-4">
           <div>
             <p className="text-xs uppercase tracking-[0.35em] mb-2" style={{ color: primaryColor }}>
               IP Intelligence · Instagram Only
@@ -1788,45 +2826,48 @@ function IPTab({
               higher engagement.
             </p>
           </div>
-          <span
-            className="text-[10px] uppercase tracking-[0.25em] px-3 py-0.5 rounded-full border w-fit whitespace-nowrap"
-            style={{ color: primaryColor, backgroundColor: primaryColor + '14', borderColor: primaryColor + '55' }}
-          >
-            Instagram only
-          </span>
         </div>
       </GlassPanel>
 
-      <div className="flex flex-wrap gap-3 items-center">
-        <div className="flex items-center gap-1 rounded-xl border border-[#E1E7F0] p-1 bg-[#F7F9FC]">
-          {signals.map(s => (
-            <button
-              key={s.id}
-              onClick={() => setSignal(s.id)}
-              className={`px-4 py-1.5 rounded-lg text-sm font-semibold transition-all ${
-                signal === s.id ? 'text-white shadow-sm' : 'text-[#5B6B82] hover:text-[#1E2A3B]'
-              }`}
-              style={signal === s.id ? { backgroundColor: primaryColor } : undefined}
-            >
-              {s.label}
-            </button>
-          ))}
+      <div className="flex flex-wrap items-center gap-3">
+        <div className="flex flex-col gap-1">
+          <p className="text-[10px] uppercase tracking-[0.2em] text-[#7A8AA3] leading-none">By Signal</p>
+          <div className="flex items-center gap-1 rounded-xl border border-[#E1E7F0] p-1 bg-[#F7F9FC]">
+            {signals.map(s => (
+              <button
+                key={s.id}
+                onClick={() => setSignal(s.id)}
+                className={`px-4 py-1.5 rounded-lg text-sm font-semibold transition-all ${
+                  signal === s.id ? 'text-white shadow-sm' : 'text-[#5B6B82] hover:text-[#1E2A3B]'
+                }`}
+                style={signal === s.id ? { backgroundColor: primaryColor } : undefined}
+              >
+                {s.label}
+              </button>
+            ))}
+          </div>
         </div>
-        <div className="flex items-center gap-1 rounded-xl border border-[#E1E7F0] p-1 bg-[#F7F9FC]">
-          {metrics.map(m => (
-            <button
-              key={m.id}
-              onClick={() => setMetric(m.id)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-                metric === m.id ? 'text-[#0F1D2E] shadow-sm' : 'text-[#5B6B82] hover:text-[#1E2A3B]'
-              }`}
-              style={metric === m.id
-                ? { backgroundColor: secondaryColor, border: secondaryIsLight ? '1px solid #D6DEE8' : undefined }
-                : undefined}
-            >
-              {m.label}
-            </button>
-          ))}
+
+        <div className="h-12 w-px self-stretch bg-[#D3DAE6] mx-1" />
+
+        <div className="flex flex-col gap-1">
+          <p className="text-[10px] uppercase tracking-[0.2em] text-[#7A8AA3] leading-none">By Metric</p>
+          <div className="flex items-center gap-1 rounded-xl border border-[#E1E7F0] p-1 bg-[#F7F9FC]">
+            {metrics.map(m => (
+              <button
+                key={m.id}
+                onClick={() => setMetric(m.id)}
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                  metric === m.id ? 'text-[#0F1D2E] shadow-sm' : 'text-[#5B6B82] hover:text-[#1E2A3B]'
+                }`}
+                style={metric === m.id
+                  ? { backgroundColor: secondaryColor, border: secondaryIsLight ? '1px solid #D6DEE8' : undefined }
+                  : undefined}
+              >
+                {m.label}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -1874,8 +2915,8 @@ function IPTab({
         {[
           { label: 'Posts With', value: fmtN(withData.contents) },
           { label: 'Posts Without', value: fmtN(noData.contents) },
-          { label: 'Avg ER With', value: fmtPct(withData.engagementRate * 100, 1) },
-          { label: 'EMV With', value: fmtCur(withData.emv) },
+          { label: 'Avg ER (With IP)', value: fmtPct(withData.engagementRate * 100, 1) },
+          { label: 'EMV (With IP)', value: fmtCur(withData.emv) },
         ].map(item => (
           <GlassPanel key={item.label} className="p-4">
             <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">{item.label}</p>
