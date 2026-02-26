@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate, useNavigate, useSearchParams } from 'react-router-dom';
 import { SchoolReportsPage } from './components/SchoolReportsPage';
-import { AuburnCampaignOverview } from './components/AuburnCampaignOverview';
+import { AuburnReportHub } from './components/AuburnReportHub';
 import { BaylorBrandDeals } from './components/BaylorBrandDeals';
 import { TyceArmstrongEarnedMediaImpactReport } from './components/TyceArmstrongEarnedMediaImpactReport';
 import { OhioStateIPImpact } from './components/OhioStateIPImpact';
@@ -11,6 +11,9 @@ import { UCLABrandDeals } from './components/UCLABrandDeals';
 import { NotreDameBrandDeals } from './components/NotreDameBrandDeals';
 import { NilReport } from './components/NilReport';
 import { SchoolAthleteReport } from './components/SchoolAthleteReport';
+import { QCollarReport } from './components/QCollarReport';
+import { PostgameReport } from './components/PostgameReport';
+import { AuburnDudewipesCampaign } from './components/AuburnDudewipesCampaign';
 import {
   michiganConfig,
   alabamaConfig,
@@ -23,7 +26,13 @@ import {
 // Wrapper components that provide navigation
 // Only show back button if user navigated from within the app
 function AuburnRoute() {
-  return <AuburnCampaignOverview />;
+  return <AuburnReportHub />;
+}
+
+function AuburnHeyDudeRoute() {
+  const navigate = useNavigate();
+  const canGoBack = window.history.length > 2;
+  return <AuburnDudewipesCampaign onBack={canGoBack ? () => navigate('/auburn') : undefined} />;
 }
 
 function BaylorRoute() {
@@ -96,6 +105,18 @@ function BoiseStateRoute() {
   return <NilReport config={boiseStateConfig} onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
+function QCollarRoute() {
+  const navigate = useNavigate();
+  const canGoBack = window.history.length > 2;
+  return <QCollarReport onBack={canGoBack ? () => navigate('/') : undefined} />;
+}
+
+function PostgameRoute() {
+  const navigate = useNavigate();
+  const canGoBack = window.history.length > 2;
+  return <PostgameReport onBack={canGoBack ? () => navigate('/') : undefined} />;
+}
+
 // Handle ?playfly query param - show Playfly hub without back button
 function HomeRoute() {
   const [searchParams] = useSearchParams();
@@ -111,6 +132,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeRoute />} />
         <Route path="/auburn" element={<AuburnRoute />} />
+        <Route path="/auburn/heydude" element={<AuburnHeyDudeRoute />} />
         <Route path="/baylor" element={<BaylorRoute />} />
         <Route path="/baylor/tyce" element={<BaylorEarnedMediaImpactRoute />} />
         <Route path="/baylor-earned-media-impact" element={<BaylorEarnedMediaImpactRoute />} />
@@ -130,6 +152,9 @@ function App() {
         <Route path="/notre-dame" element={<NotreDameRoute />} />
         <Route path="/notredame" element={<NotreDameRoute />} />
         <Route path="/boise-state" element={<BoiseStateRoute />} />
+        <Route path="/q-collar" element={<QCollarRoute />} />
+        <Route path="/qcollar" element={<QCollarRoute />} />
+        <Route path="/postgame" element={<PostgameRoute />} />
         {/* Redirect any unknown routes to home */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
