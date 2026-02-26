@@ -132,7 +132,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeRoute />} />
         <Route path="/auburn" element={<AuburnRoute />} />
-        <Route path="/auburn/heydude" element={<AuburnHeyDudeRoute />} />
+        <Route path="/auburn/dudewipes" element={<AuburnHeyDudeRoute />} />
+        <Route path="/auburn/heydude" element={<Navigate to="/auburn/dudewipes" replace />} />
         <Route path="/baylor" element={<BaylorRoute />} />
         <Route path="/baylor/tyce" element={<BaylorEarnedMediaImpactRoute />} />
         <Route path="/baylor-earned-media-impact" element={<BaylorEarnedMediaImpactRoute />} />
