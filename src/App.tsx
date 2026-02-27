@@ -217,19 +217,28 @@ function App() {
         <Route path="/boise-state" element={<BoiseStateRoute />} />
         <Route path="/boisest" element={<BoiseStateRoute />} />
         <Route path="/lsu" element={<LSURoute />} />
+        <Route path="/LSU" element={<LSURoute />} />
         <Route path="/virginia" element={<VirginiaRoute />} />
+        <Route path="/Virginia" element={<VirginiaRoute />} />
         <Route path="/old-dominion" element={<OldDominionRoute />} />
         <Route path="/odu" element={<OldDominionRoute />} />
         <Route path="/michigan-state" element={<MichiganStateRoute />} />
         <Route path="/michiganstate" element={<MichiganStateRoute />} />
+        <Route path="/MichiganState" element={<MichiganStateRoute />} />
         <Route path="/usc" element={<USCRoute />} />
+        <Route path="/USC" element={<USCRoute />} />
         <Route path="/nc-state" element={<NCStateRoute />} />
         <Route path="/ncstate" element={<NCStateRoute />} />
+        <Route path="/NCState" element={<NCStateRoute />} />
         <Route path="/penn-state" element={<PennStateRoute />} />
         <Route path="/pennstate" element={<PennStateRoute />} />
+        <Route path="/PennState" element={<PennStateRoute />} />
         <Route path="/unc" element={<UNCRoute />} />
+        <Route path="/UNC" element={<UNCRoute />} />
         <Route path="/texas" element={<TexasRoute />} />
+        <Route path="/Texas" element={<TexasRoute />} />
         <Route path="/arizona" element={<ArizonaRoute />} />
+        <Route path="/Arizona" element={<ArizonaRoute />} />
         <Route path="/q-collar" element={<QCollarRoute />} />
         <Route path="/qcollar" element={<QCollarRoute />} />
         <Route path="/postgame" element={<PostgameRoute />} />
