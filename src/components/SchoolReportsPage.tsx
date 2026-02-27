@@ -3,18 +3,23 @@ import { FileText } from 'lucide-react';
 import { SCHOOLS, SchoolConfig } from '../data/schoolConfig';
 import { SchoolReportView } from './SchoolReportView';
 import { PlayflyReportHub } from './PlayflyReportHub';
-import { AuburnCampaignOverview } from './AuburnCampaignOverview';
+import { AuburnReportHub } from './AuburnReportHub';
 import { BaylorReportHub } from './BaylorReportHub';
 import { KentuckyIPImpact } from './KentuckyIPImpact';
 import { OhioStateIPImpact } from './OhioStateIPImpact';
 import { GeorgiaIPImpact } from './GeorgiaIPImpact';
+import { ClemsonIPImpact } from './ClemsonIPImpact';
 import { UCLABrandDeals } from './UCLABrandDeals';
 import { NotreDameBrandDeals } from './NotreDameBrandDeals';
 import { SchoolAthleteReport } from './SchoolAthleteReport';
 import { StJudeAthleteEventImpactReport } from './StJudeAthleteEventImpactReport';
+import { QCollarReport } from './QCollarReport';
+import { PostgameReport } from './PostgameReport';
 import {
   michiganConfig, alabamaConfig, arkansasConfig,
   oklahomaConfig, boiseStateConfig, wisconsinConfig,
+  lsuConfig, virginiaConfig, oldDominionConfig, michiganStateConfig,
+  uscConfig, ncStateConfig, pennStateConfig, uncConfig, texasConfig, arizonaConfig,
 } from '../config/schoolConfigs';
 
 
@@ -24,6 +29,20 @@ const ARKANSAS_CARD: SchoolConfig = {
   mascot: 'Razorbacks', primaryColor: '#9D2235', secondaryColor: '#FFFFFF',
   accentColor: '#9D2235', conference: 'SEC', location: 'Fayetteville, AR',
   dataName: 'University of Arkansas', logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/8.png',
+};
+
+const POSTGAME_CARD: SchoolConfig = {
+  id: 'postgame', name: 'Postgame', shortName: 'Postgame',
+  mascot: 'Brand', primaryColor: '#101827', secondaryColor: '#FFFFFF',
+  accentColor: '#1D4ED8', conference: 'Brand', location: 'United States',
+  dataName: 'Postgame', logoUrl: '/JABA-face.png',
+};
+
+const OLD_DOMINION_CARD: SchoolConfig = {
+  id: 'old-dominion', name: 'Old Dominion University', shortName: 'Old Dominion',
+  mascot: 'Monarchs', primaryColor: '#003057', secondaryColor: '#7C878E',
+  accentColor: '#003057', conference: 'Sun Belt', location: 'Norfolk, VA',
+  dataName: 'Old Dominion University', logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/295.png',
 };
 
 export function SchoolReportsPage() {
@@ -40,12 +59,25 @@ export function SchoolReportsPage() {
     SCHOOLS['ohio-state'],
     SCHOOLS['ucla'],
     SCHOOLS['saint-jude'],
+    SCHOOLS['q-collar'],
+    POSTGAME_CARD,
     SCHOOLS['alabama'],
     ARKANSAS_CARD,
     SCHOOLS['oklahoma'],
     SCHOOLS['wisconsin'],
+    SCHOOLS['clemson'],
     SCHOOLS['notre-dame'],
     SCHOOLS['boise-state'],
+    SCHOOLS['lsu'],
+    SCHOOLS['virginia'],
+    OLD_DOMINION_CARD,
+    SCHOOLS['michigan-state'],
+    SCHOOLS['usc'],
+    SCHOOLS['nc-state'],
+    SCHOOLS['penn-state'],
+    SCHOOLS['unc'],
+    SCHOOLS['texas'],
+    SCHOOLS['arizona'],
   ].filter(Boolean);
 
   // If a school is selected, show the appropriate view
@@ -58,10 +90,10 @@ export function SchoolReportsPage() {
         />
       );
     }
-    // If Auburn is selected, go directly to Campaign Overview
+    // If Auburn is selected, show Auburn report landing
     if (selectedSchool.id === 'auburn') {
       return (
-        <AuburnCampaignOverview onBack={() => setSelectedSchool(null)} />
+        <AuburnReportHub onBack={() => setSelectedSchool(null)} />
       );
     }
     // If Ohio State is selected, show IP Impact report
@@ -120,6 +152,11 @@ export function SchoolReportsPage() {
         <SchoolAthleteReport config={wisconsinConfig} onBack={() => setSelectedSchool(null)} />
       );
     }
+    if (selectedSchool.id === 'clemson') {
+      return (
+        <ClemsonIPImpact onBack={() => setSelectedSchool(null)} />
+      );
+    }
     if (selectedSchool.id === 'notre-dame') {
       return (
         <NotreDameBrandDeals onBack={() => setSelectedSchool(null)} />
@@ -130,10 +167,70 @@ export function SchoolReportsPage() {
         <SchoolAthleteReport config={boiseStateConfig} onBack={() => setSelectedSchool(null)} />
       );
     }
+    if (selectedSchool.id === 'lsu') {
+      return (
+        <SchoolAthleteReport config={lsuConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'virginia') {
+      return (
+        <SchoolAthleteReport config={virginiaConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'old-dominion') {
+      return (
+        <SchoolAthleteReport config={oldDominionConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'michigan-state') {
+      return (
+        <SchoolAthleteReport config={michiganStateConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'usc') {
+      return (
+        <SchoolAthleteReport config={uscConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'nc-state') {
+      return (
+        <SchoolAthleteReport config={ncStateConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'penn-state') {
+      return (
+        <SchoolAthleteReport config={pennStateConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'unc') {
+      return (
+        <SchoolAthleteReport config={uncConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'texas') {
+      return (
+        <SchoolAthleteReport config={texasConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'arizona') {
+      return (
+        <SchoolAthleteReport config={arizonaConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
     // If St. Jude is selected, show the brand impact report
     if (selectedSchool.id === 'saint-jude') {
       return (
         <StJudeAthleteEventImpactReport onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'q-collar') {
+      return (
+        <QCollarReport onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'postgame') {
+      return (
+        <PostgameReport onBack={() => setSelectedSchool(null)} />
       );
     }
     // Otherwise show regular school report view

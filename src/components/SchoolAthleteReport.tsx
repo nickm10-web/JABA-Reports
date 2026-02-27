@@ -157,8 +157,43 @@ const ROSTER_NAME_MATCHERS: Record<string, string[]> = {
   arkansas: ['university of arkansas'],
   oklahoma: ['university of oklahoma', 'oklahoma'],
   michigan: ['university of michigan', 'michigan'],
+  'michigan-state': ['michigan state university', 'michigan state'],
   wisconsin: ['university of wisconsin', 'wisconsin'],
+  clemson: ['clemson', 'clemson university'],
+  lsu: ['louisiana state university', 'lsu'],
+  virginia: ['university of virginia', 'virginia'],
+  'boise-state': ['boise state', 'boise state university'],
+  'old-dominion': ['old dominion university', 'old dominion'],
+  usc: ['university of southern california (usc)', 'university of southern california', 'usc'],
+  'nc-state': ['north carolina state university', 'north carolina state', 'nc state'],
+  'penn-state': ['penn state university', 'penn state'],
+  unc: ['university of north carolina (unc)', 'university of north carolina', 'unc'],
+  texas: ['university of texas', 'university of texas at austin', 'university of texas austin'],
+  arizona: ['the university of arizona', 'university of arizona'],
 };
+
+const SCHOOL_THUMBNAILS: Record<string, string> = {
+  lsu: '/LSU_thumbnail.png',
+  'michigan-state': '/Michigan_state_thumbnail.png',
+  usc: '/USC_thumbnail.png',
+  'nc-state': '/NC_State_thumbnail.png',
+  'penn-state': '/Penn_State_thumbnail.png',
+  unc: '/UNC_thumbnail.png',
+  texas: '/Texas_thumbnail.png',
+  arizona: '/Arizona_thumbnail.png',
+  // Keep existing legacy backgrounds
+  alabama: '/Alabama_football.png',
+  arkansas: '/arkansas_football.png',
+  michigan: '/michigan_football.png',
+  wisconsin: '/wisconsin_football.png',
+  oklahoma: '/oklahoma_football.png',
+  // Expected names if present
+  virginia: '/Virginia_thumnail.png',
+  'boise-state': '/Boise_thumbnail.png',
+  'old-dominion': '/OldDominion_thumnail.png',
+};
+
+const GLOBAL_BRAND_EXCLUSIONS = new Set(['bleacherreport', 'br_hoops', 'brhoops']);
 
 const normalizeName = (v?: string) => (v || '').trim().toLowerCase().replace(/\s+/g, ' ');
 const normalizeHandle = (v?: string) => (v || '').trim().toLowerCase().replace(/^@/, '');
@@ -282,7 +317,9 @@ async function loadAllBenchmarkSchools(): Promise<ConferenceBenchmarkSchool[]> {
 // ─── Data Derivation ─────────────────────────────────────────
 function derivePosts(
   raw: RawPost[],
-  brandExclusions: Set<string>
+  brandExclusions: Set<string>,
+  schoolHandleMatchers: string[],
+  sponsoredPostExclusions: Set<string>
 ) {
   const athleteMap = new Map<string, DerivedAthlete & { engSum: number; engCount: number }>();
   const sponsored: RawPost[] = [];
@@ -312,7 +349,15 @@ function derivePosts(
     if (er > 0) { a.engSum += er; a.engCount++; }
 
     const sponsorHandle = canonicalHandle(p.sponsorPartner);
-    if (sponsorHandle && !brandExclusions.has(sponsorHandle)) {
+    const isMarkedSponsored = Boolean(p.isSponsored || p.sponsored);
+    const isSchoolTeamCollab =
+      !!p.isCollaboration &&
+      sponsorHandle &&
+      isLikelySchoolTeamHandle(sponsorHandle, schoolHandleMatchers);
+
+    const postId = String(p?._id || '');
+    const isExplicitlyExcluded = postId && sponsoredPostExclusions.has(postId);
+    if (sponsorHandle && isMarkedSponsored && !brandExclusions.has(sponsorHandle) && !isSchoolTeamCollab && !isExplicitlyExcluded) {
       sponsored.push(p);
     }
   }
@@ -326,6 +371,27 @@ function derivePosts(
   athletes.sort((a, b) => b.totalLikes - a.totalLikes);
 
   return { athletes, sponsored };
+}
+
+function isLikelySchoolTeamHandle(handle: string, schoolHandleMatchers: string[]) {
+  const canonical = canonicalHandle(handle);
+  if (!canonical) return false;
+
+  const compactHandle = canonical.replace(/[^a-z0-9]/g, '');
+  const compactMatchers = schoolHandleMatchers
+    .map((m) => normalizeSchool(m))
+    .filter(Boolean);
+
+  const matchesSchool = compactMatchers.some((m) => compactHandle.includes(m) || m.includes(compactHandle));
+  if (!matchesSchool) return false;
+
+  const teamTokens = [
+    'football', 'basketball', 'baseball', 'soccer', 'softball', 'volleyball',
+    'wbb', 'wbkb', 'mbb', 'athletics', 'sports', 'track', 'swim', 'golf',
+    'tennis', 'wrestling', 'gym', 'gymnastics', 'beachvb', 'triathlon',
+  ];
+
+  return teamTokens.some((token) => compactHandle.includes(token));
 }
 
 function deriveSports(athletes: DerivedAthlete[]): DerivedSport[] {
@@ -435,8 +501,13 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
   }, [config.dataFile, config.id]);
 
   const { athletes, sponsored } = useMemo(() => {
-    const exclusions = new Set((config.brandExclusions || []).map(canonicalHandle).filter(Boolean));
-    const derived = derivePosts(rawPosts, exclusions);
+    const exclusions = new Set([
+      ...GLOBAL_BRAND_EXCLUSIONS,
+      ...(config.brandExclusions || []).map(canonicalHandle).filter(Boolean),
+    ]);
+    const sponsoredPostExclusions = new Set((config.sponsoredPostExclusions || []).map(String));
+    const schoolHandleMatchers = [config.shortName, config.name, ...(ROSTER_NAME_MATCHERS[config.id] || [])];
+    const derived = derivePosts(rawPosts, exclusions, schoolHandleMatchers, sponsoredPostExclusions);
     // Merge follower data from roster if available
     if (rosterData?.athletes) {
       const rosterMapById = new Map(rosterData.athletes.map((a: any) => [a._id, Number(a.followers || 0)]));
@@ -509,7 +580,7 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
     }
 
     return derived;
-  }, [rawPosts, rosterData, fallbackRosterRows, config.id, config.name]);
+  }, [rawPosts, rosterData, fallbackRosterRows, config.id, config.name, config.shortName]);
   const sports = useMemo(() => deriveSports(athletes), [athletes]);
   const teamPages = useMemo(() => {
     if (!teamRosterRows.length) return [];
@@ -699,7 +770,12 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
               posts={rawPosts}
               primaryColor={primaryColor}
               shortName={config.shortName}
-              brandExclusions={new Set((config.brandExclusions || []).map(canonicalHandle))}
+              brandExclusions={new Set([
+                ...GLOBAL_BRAND_EXCLUSIONS,
+                ...(config.brandExclusions || []).map(canonicalHandle),
+              ])}
+              sponsoredPostExclusions={new Set((config.sponsoredPostExclusions || []).map(String))}
+              schoolHandleMatchers={[config.shortName, config.name, ...(ROSTER_NAME_MATCHERS[config.id] || [])]}
             />
           )}
           {activeTab === 'sponsored' && (
@@ -800,18 +876,7 @@ function OverviewTab({ shortName, schoolId, schoolName, conference, primaryColor
   const [conferenceEmvRank, setConferenceEmvRank] = useState<{ rank: number; total: number } | null>(null);
   const [conferenceRankLoading, setConferenceRankLoading] = useState(true);
   const [dataWindowStart, dataWindowEnd] = dateRange?.split(' - ') ?? ['N/A', 'N/A'];
-  const topSportHeroImage =
-    schoolId === 'alabama'
-      ? '/Alabama_football.png'
-      : schoolId === 'arkansas'
-        ? '/arkansas_football.png'
-        : schoolId === 'michigan'
-          ? '/michigan_football.png'
-          : schoolId === 'wisconsin'
-            ? '/wisconsin_football.png'
-            : schoolId === 'oklahoma'
-              ? '/oklahoma_football.png'
-        : null;
+  const topSportHeroImage = SCHOOL_THUMBNAILS[schoolId] || null;
 
   useEffect(() => {
     let cancelled = false;
@@ -1706,11 +1771,15 @@ function ContentTab({
   primaryColor,
   shortName,
   brandExclusions,
+  sponsoredPostExclusions,
+  schoolHandleMatchers,
 }: {
   posts: RawPost[];
   primaryColor: string;
   shortName: string;
   brandExclusions: Set<string>;
+  sponsoredPostExclusions: Set<string>;
+  schoolHandleMatchers: string[];
 }) {
   const [sortKey, setSortKey] = useState<'likes' | 'engagement' | 'comments'>('likes');
   const [sponsoredOnly, setSponsoredOnly] = useState(false);
@@ -1728,14 +1797,22 @@ function ContentTab({
     permalink: p.permalink,
     publishedAt: typeof p.publishedAt === 'string' ? p.publishedAt : p.publishedAt?.$date,
     sponsorHandle: canonicalHandle(p.sponsorPartner),
-    isSponsored: !!p.sponsorPartner,
-  })), [posts]);
+    isSchoolTeamCollab: !!p.isCollaboration && isLikelySchoolTeamHandle(canonicalHandle(p.sponsorPartner), schoolHandleMatchers),
+    isSponsored: !!canonicalHandle(p.sponsorPartner) && Boolean(p.isSponsored || p.sponsored),
+  })), [posts, schoolHandleMatchers]);
 
   const filtered = useMemo(() => {
     let list = normalizedPosts;
-    if (sponsoredOnly) list = list.filter(p => p.isSponsored && !brandExclusions.has(p.sponsorHandle));
+    if (sponsoredOnly) {
+      list = list.filter(
+        (p) => p.isSponsored &&
+          !brandExclusions.has(p.sponsorHandle) &&
+          !p.isSchoolTeamCollab &&
+          !sponsoredPostExclusions.has(String(p.id))
+      );
+    }
     return list;
-  }, [normalizedPosts, sponsoredOnly, brandExclusions]);
+  }, [normalizedPosts, sponsoredOnly, brandExclusions, sponsoredPostExclusions]);
   const isGiveawayCaption = (caption?: string) => {
     const text = (caption || '').toLowerCase();
     if (!text) return false;

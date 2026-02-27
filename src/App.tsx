@@ -6,10 +6,10 @@ import { TyceArmstrongEarnedMediaImpactReport } from './components/TyceArmstrong
 import { OhioStateIPImpact } from './components/OhioStateIPImpact';
 import { KentuckyIPImpact } from './components/KentuckyIPImpact';
 import { GeorgiaIPImpact } from './components/GeorgiaIPImpact';
+import { ClemsonIPImpact } from './components/ClemsonIPImpact';
 import { PlayflyReportHub } from './components/PlayflyReportHub';
 import { UCLABrandDeals } from './components/UCLABrandDeals';
 import { NotreDameBrandDeals } from './components/NotreDameBrandDeals';
-import { NilReport } from './components/NilReport';
 import { SchoolAthleteReport } from './components/SchoolAthleteReport';
 import { QCollarReport } from './components/QCollarReport';
 import { PostgameReport } from './components/PostgameReport';
@@ -19,8 +19,19 @@ import {
   alabamaConfig,
   arkansasConfig,
   oklahomaConfig,
+  clemsonConfig,
   wisconsinConfig,
   boiseStateConfig,
+  lsuConfig,
+  virginiaConfig,
+  oldDominionConfig,
+  michiganStateConfig,
+  uscConfig,
+  ncStateConfig,
+  pennStateConfig,
+  uncConfig,
+  texasConfig,
+  arizonaConfig,
 } from './config/schoolConfigs';
 
 // Wrapper components that provide navigation
@@ -93,6 +104,16 @@ function WisconsinRoute() {
   return <SchoolAthleteReport config={wisconsinConfig} />;
 }
 
+function ClemsonRoute() {
+  return <SchoolAthleteReport config={clemsonConfig} />;
+}
+
+function ClemsonIPRoute() {
+  const navigate = useNavigate();
+  const canGoBack = window.history.length > 2;
+  return <ClemsonIPImpact onBack={canGoBack ? () => navigate('/') : undefined} />;
+}
+
 function NotreDameRoute() {
   const navigate = useNavigate();
   const canGoBack = window.history.length > 2;
@@ -100,9 +121,47 @@ function NotreDameRoute() {
 }
 
 function BoiseStateRoute() {
-  const navigate = useNavigate();
-  const canGoBack = window.history.length > 2;
-  return <NilReport config={boiseStateConfig} onBack={canGoBack ? () => navigate('/') : undefined} />;
+  return <SchoolAthleteReport config={boiseStateConfig} />;
+}
+
+function LSURoute() {
+  return <SchoolAthleteReport config={lsuConfig} />;
+}
+
+function VirginiaRoute() {
+  return <SchoolAthleteReport config={virginiaConfig} />;
+}
+
+function OldDominionRoute() {
+  return <SchoolAthleteReport config={oldDominionConfig} />;
+}
+
+function MichiganStateRoute() {
+  return <SchoolAthleteReport config={michiganStateConfig} />;
+}
+
+function USCRoute() {
+  return <SchoolAthleteReport config={uscConfig} />;
+}
+
+function NCStateRoute() {
+  return <SchoolAthleteReport config={ncStateConfig} />;
+}
+
+function PennStateRoute() {
+  return <SchoolAthleteReport config={pennStateConfig} />;
+}
+
+function UNCRoute() {
+  return <SchoolAthleteReport config={uncConfig} />;
+}
+
+function TexasRoute() {
+  return <SchoolAthleteReport config={texasConfig} />;
+}
+
+function ArizonaRoute() {
+  return <SchoolAthleteReport config={arizonaConfig} />;
 }
 
 function QCollarRoute() {
@@ -150,9 +209,27 @@ function App() {
         <Route path="/arkansas-nil" element={<ArkansasRoute />} />
         <Route path="/oklahoma" element={<OklahomaRoute />} />
         <Route path="/wisconsin" element={<WisconsinRoute />} />
+        <Route path="/clemson" element={<ClemsonIPRoute />} />
+        <Route path="/clemson-athlete" element={<ClemsonRoute />} />
+        <Route path="/clemson-ip" element={<ClemsonIPRoute />} />
         <Route path="/notre-dame" element={<NotreDameRoute />} />
         <Route path="/notredame" element={<NotreDameRoute />} />
         <Route path="/boise-state" element={<BoiseStateRoute />} />
+        <Route path="/boisest" element={<BoiseStateRoute />} />
+        <Route path="/lsu" element={<LSURoute />} />
+        <Route path="/virginia" element={<VirginiaRoute />} />
+        <Route path="/old-dominion" element={<OldDominionRoute />} />
+        <Route path="/odu" element={<OldDominionRoute />} />
+        <Route path="/michigan-state" element={<MichiganStateRoute />} />
+        <Route path="/michiganstate" element={<MichiganStateRoute />} />
+        <Route path="/usc" element={<USCRoute />} />
+        <Route path="/nc-state" element={<NCStateRoute />} />
+        <Route path="/ncstate" element={<NCStateRoute />} />
+        <Route path="/penn-state" element={<PennStateRoute />} />
+        <Route path="/pennstate" element={<PennStateRoute />} />
+        <Route path="/unc" element={<UNCRoute />} />
+        <Route path="/texas" element={<TexasRoute />} />
+        <Route path="/arizona" element={<ArizonaRoute />} />
         <Route path="/q-collar" element={<QCollarRoute />} />
         <Route path="/qcollar" element={<QCollarRoute />} />
         <Route path="/postgame" element={<PostgameRoute />} />
