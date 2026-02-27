@@ -965,9 +965,9 @@ function OverviewTab({ shortName, schoolId, schoolName, conference, primaryColor
               <div className="h-full w-full rounded-xl p-4 flex-1 flex flex-col justify-between" style={{ backgroundColor: `${primaryColor}14` }}>
                 <div>
                   <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Combined Followers</p>
-                  <p className="text-3xl font-black mt-2 text-[#0F1D2E]">{fmtN(totalFollowerReach)}</p>
+                  <p className="text-3xl font-black mt-2 text-[#0F1D2E]">{fmtN(combinedFollowerReach)}</p>
                 </div>
-                <p className="text-xs text-[#5B6B82] mt-2">Across {fmtN(athleteCount)} tracked athlete accounts.</p>
+                <p className="text-xs text-[#5B6B82] mt-2">Across {fmtN(athleteCount)} tracked athlete accounts and {fmtN(teamAccountCount)} official team pages.</p>
               </div>
             </GlassPanel>
           </div>
