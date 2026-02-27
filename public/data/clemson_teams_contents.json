@@ -1,0 +1,5884 @@
+[
+  {
+    "_id": "698d1bb54c50d2954b9fb743",
+    "caption": "Loading: Team 129⏳\n\n#Clemson",
+    "createdAt": {
+      "$date": "2026-02-11T13:01:37.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#Clemson"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 6,
+      "likes": 1469,
+      "engagementRate": 0.008568158978559271,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUnlj-zju6p",
+    "publishedAt": {
+      "$date": "2026-02-11T13:01:37.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "69728f7b5eba931994de9bf3",
+      "name": "BASEBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:15:52.141Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18102438184880376"
+  },
+  {
+    "_id": "698d1bb47e8048a688c4ef73",
+    "caption": "Words of wisdom from the seniors. 👏 \n\n#Clemson",
+    "createdAt": {
+      "$date": "2026-02-10T13:01:34.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#Clemson"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 0,
+      "likes": 629,
+      "engagementRate": 0.003653811523738157,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUlAwgqD7jJ",
+    "publishedAt": {
+      "$date": "2026-02-10T13:01:34.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "69728f7b5eba931994de9bf3",
+      "name": "BASEBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:15:53.592Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17896228584393086"
+  },
+  {
+    "_id": "698d1bb4be281991f117a1e3",
+    "caption": "Here’s your first look at @clemsonbaseball in @mlbtheshow!! 👀⚾️",
+    "createdAt": {
+      "$date": "2026-02-10T00:33:33.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 54,
+      "likes": 6148,
+      "engagementRate": 0.02231609551087379,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUjrNTMDf3r",
+    "publishedAt": {
+      "$date": "2026-02-10T00:33:33.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "69728f7b5eba931994de9bf3",
+      "name": "BASEBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:45.200Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18063944957304460"
+  },
+  {
+    "_id": "698d1bb5be281991f117a1ea",
+    "caption": "Begin your Road to The Show and leave your mark with @clemsonbaseball ! \n\n#Clemson #MLBTheShow",
+    "createdAt": {
+      "$date": "2026-02-09T21:00:10.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#Clemson",
+      "#MLBTheShow"
+    ],
+    "isSponsored": true,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 81,
+      "likes": 5100,
+      "engagementRate": 0.030096021469773276,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUjSyXXAWUY",
+    "publishedAt": {
+      "$date": "2026-02-09T21:00:10.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "@clemsonbaseball",
+    "team": {
+      "profileId": "69728f7b5eba931994de9bf3",
+      "name": "BASEBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:15:53.163Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17898597486384374"
+  },
+  {
+    "_id": "698d1bb54c50d2954b9fb751",
+    "caption": "1️⃣7️⃣ 📈 @ncbwa \n\n#Clemson",
+    "createdAt": {
+      "$date": "2026-02-09T20:28:00.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#Clemson"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 2,
+      "likes": 1066,
+      "engagementRate": 0.006203927992611052,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUjPGvGFrFl",
+    "publishedAt": {
+      "$date": "2026-02-09T20:28:00.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "69728f7b5eba931994de9bf3",
+      "name": "BASEBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:15:52.876Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18054596105448706"
+  },
+  {
+    "_id": "698d1bb57e8048a688c4ef81",
+    "caption": "One day isn't enough for us to honor our heroes, so we're honoring them all weekend during the Army West Point series! 🇺🇸\n\nThe show includes pregame flyovers & on-field recognitions.\n\nPregame activities begin 30 minutes prior to first pitch! #CUatDKS \n\nPick up your tickets at ClemsonTigers.com!",
+    "createdAt": {
+      "$date": "2026-02-09T13:00:13.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#CUatDKS"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 5,
+      "likes": 907,
+      "engagementRate": 0.0052977362633532575,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUib3K9AXZZ",
+    "publishedAt": {
+      "$date": "2026-02-09T13:00:13.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "69728f7b5eba931994de9bf3",
+      "name": "BASEBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:15:52.600Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18082932701229157"
+  },
+  {
+    "_id": "698d1bb54c50d2954b9fb74a",
+    "caption": "Coming soon 😍\n\n#CUatDKS",
+    "createdAt": {
+      "$date": "2026-02-09T01:16:16.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "hashtags": [
+      "#CUatDKS"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 3,
+      "likes": 1082,
+      "engagementRate": 0.006302679655414786,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUhLQQPjet1",
+    "publishedAt": {
+      "$date": "2026-02-09T01:16:16.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "69728f7b5eba931994de9bf3",
+      "name": "BASEBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:15:52.423Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18381437608080796"
+  },
+  {
+    "_id": "698d1bb5be281991f117a1f1",
+    "caption": "Loved seeing family & friends at our party yesterday. 🎉\n\n#Clemson",
+    "createdAt": {
+      "$date": "2026-02-08T17:01:04.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#Clemson"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 5,
+      "likes": 601,
+      "engagementRate": 0.0035202063328860465,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUgSoU0CKO_",
+    "publishedAt": {
+      "$date": "2026-02-08T17:01:04.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "69728f7b5eba931994de9bf3",
+      "name": "BASEBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:15:51.849Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18110518678656608"
+  },
+  {
+    "_id": "698d1bb54c50d2954b9fb758",
+    "caption": "Thank you to all the fans who made our We Like to Party Party a success!\n\nWe look forward to seeing everyone at DKS on Friday for #OpeningDay!",
+    "createdAt": {
+      "$date": "2026-02-07T22:01:09.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#OpeningDay"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 5,
+      "likes": 1664,
+      "engagementRate": 0.009695089718790118,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUeQLUnlEk4",
+    "publishedAt": {
+      "$date": "2026-02-07T22:01:09.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "69728f7b5eba931994de9bf3",
+      "name": "BASEBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:15:53.121Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18090353141010189"
+  },
+  {
+    "_id": "698d1bb47e8048a688c4ef7a",
+    "caption": "We like to party @ariabyx @clemsonbaseball @coacherikbakich",
+    "createdAt": {
+      "$date": "2026-02-07T20:35:51.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 19,
+      "likes": 970,
+      "engagementRate": 0.0057450232066407585,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUeGWbYkSun",
+    "publishedAt": {
+      "$date": "2026-02-07T20:35:51.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "69728f7b5eba931994de9bf3",
+      "name": "BASEBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:15:52.784Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18039129695765546"
+  },
+  {
+    "_id": "698d1bb57e8048a688c4ef88",
+    "caption": "One week until showtime 🐅",
+    "createdAt": {
+      "$date": "2026-02-06T22:17:19.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 1,
+      "likes": 1024,
+      "engagementRate": 0.005954144374931019,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUbtO1hDKo1",
+    "publishedAt": {
+      "$date": "2026-02-06T22:17:19.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "69728f7b5eba931994de9bf3",
+      "name": "BASEBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:15:53.366Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18092747680824272"
+  },
+  {
+    "_id": "698d1bec7e8048a688c4f19b",
+    "caption": "Regan Byrne’s behind-the-back goal landed at #7 on @sportscenter’s Top Ten today 🐅🤯",
+    "createdAt": {
+      "$date": "2026-02-11T19:09:33.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#7"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 14,
+      "likes": 722,
+      "engagementRate": 0.0026482822147699306,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUoPt-zAend",
+    "publishedAt": {
+      "$date": "2026-02-11T19:09:33.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10962",
+      "name": "GENERAL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:48.841Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18119124454578735"
+  },
+  {
+    "_id": "698d1bec4c50d2954b9fb9e8",
+    "caption": "Still thinking about Clemson LIFE day yesterday 🤗",
+    "createdAt": {
+      "$date": "2026-02-09T21:00:00.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 8,
+      "likes": 840,
+      "engagementRate": 0.040026432549797035,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUjSzDCjJLs",
+    "publishedAt": {
+      "$date": "2026-02-09T21:00:00.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10962",
+      "name": "GENERAL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:51.392Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18116393902533036"
+  },
+  {
+    "_id": "698d1bec4c50d2954b9fb9ef",
+    "caption": "A HUGE shoutout to our friends from @clemsonlife for joining us today and bringing the energy! We can't thank you enough for your support! 🧡💜",
+    "createdAt": {
+      "$date": "2026-02-08T22:17:24.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 14,
+      "likes": 500,
+      "engagementRate": 0.0018494796989018264,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUg2sH1j5uQ",
+    "publishedAt": {
+      "$date": "2026-02-08T22:17:24.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10962",
+      "name": "GENERAL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:49.802Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17888506944305457"
+  },
+  {
+    "_id": "698d1bed4c50d2954b9fb9f6",
+    "caption": "#ClemsonGRIT 🐅🏀",
+    "createdAt": {
+      "$date": "2026-02-08T17:23:15.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#ClemsonGRIT"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 13,
+      "likes": 2538,
+      "engagementRate": 0.009179032513421321,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUgVKzvkZBF",
+    "publishedAt": {
+      "$date": "2026-02-08T17:23:15.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10962",
+      "name": "GENERAL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:48.370Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18053467280443556"
+  },
+  {
+    "_id": "698d1bec4c50d2954b9fb9e1",
+    "caption": "C-L-E-M-S-O-N 🐅🗣️",
+    "createdAt": {
+      "$date": "2026-02-08T00:50:32.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": true,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 0,
+      "likes": 0,
+      "engagementRate": 0,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUejQEajdsO",
+    "publishedAt": {
+      "$date": "2026-02-08T00:50:32.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10962",
+      "name": "GENERAL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:48.220Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17967883478858784"
+  },
+  {
+    "_id": "698d1bedbe281991f117a45f",
+    "caption": "@clemsongymnastics is wearing a new leo tonight against Cal!! 👀🤍💜",
+    "createdAt": {
+      "$date": "2026-02-07T23:51:15.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 4,
+      "likes": 1737,
+      "engagementRate": 0.006264482793362023,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUecxwwAQ12",
+    "publishedAt": {
+      "$date": "2026-02-07T23:51:15.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10962",
+      "name": "GENERAL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:48.473Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17856450021561190"
+  },
+  {
+    "_id": "698d1bed4c50d2954b9fb9fd",
+    "caption": "Celebrating NGWSD with the Clemson Family 🧡💜",
+    "createdAt": {
+      "$date": "2026-02-07T22:58:12.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 7,
+      "likes": 888,
+      "engagementRate": 0.003220397530188978,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUeWtIdAYuC",
+    "publishedAt": {
+      "$date": "2026-02-07T22:58:12.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10962",
+      "name": "GENERAL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:50.073Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18207590737326277"
+  },
+  {
+    "_id": "698d1bec7e8048a688c4f1a7",
+    "caption": "What a full-circle moment for @alexaspallina1 and @emmarp_10 🐅🧡",
+    "createdAt": {
+      "$date": "2026-02-07T19:28:55.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 6,
+      "likes": 1868,
+      "engagementRate": 0.006743044660976698,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUd-dGyAere",
+    "publishedAt": {
+      "$date": "2026-02-07T19:28:55.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10962",
+      "name": "GENERAL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:50.805Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18120670270593029"
+  },
+  {
+    "_id": "698d1bec4c50d2954b9fb9d9",
+    "caption": "Write this down… @georgestrait’s coming to Clemson for a good time on May 2, 2026! 🐅",
+    "createdAt": {
+      "$date": "2025-10-17T15:59:11.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 67,
+      "likes": 17418,
+      "engagementRate": 0.06291469364844053,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DP6o7UPDQM9",
+    "publishedAt": {
+      "$date": "2025-10-17T15:59:11.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10962",
+      "name": "GENERAL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:48.454Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18068294783340125"
+  },
+  {
+    "_id": "698d1becbe281991f117a453",
+    "caption": "She Will Triumph 🧡💜 \n\nWe are excited to announce that today officially marks the beginning of our year-long celebration of the 50th year of varsity Women’s Athletics at Clemson!",
+    "createdAt": {
+      "$date": "2024-07-18T20:02:34.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 13,
+      "likes": 3542,
+      "engagementRate": 0.012791634882482477,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/C9k6MAAPXIO",
+    "publishedAt": {
+      "$date": "2024-07-18T20:02:34.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10962",
+      "name": "GENERAL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:47.910Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18110327023365153"
+  },
+  {
+    "_id": "698d1bd87e8048a688c4f0e0",
+    "caption": "It was simple to Chad Morris 🐅\n\nFull episode of the podcast is out now! Links are in the bio 🎙️",
+    "createdAt": {
+      "$date": "2026-02-10T17:03:23.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 12,
+      "likes": 1803,
+      "engagementRate": 0.006530750298651391,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUlcfA8EZV2",
+    "publishedAt": {
+      "$date": "2026-02-10T17:03:23.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10963",
+      "name": "FOOTBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:44.624Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18069899429562517"
+  },
+  {
+    "_id": "698d1bd84c50d2954b9fb907",
+    "caption": "Can confirm, @darealmike_dub was certainly a player 🐅\n\nCheck out the full episode with Chad Morris. Links are in the bio 🎙️",
+    "createdAt": {
+      "$date": "2026-02-09T20:03:13.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 24,
+      "likes": 3270,
+      "engagementRate": 0.004109865924046084,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUjMRUOESk6",
+    "publishedAt": {
+      "$date": "2026-02-09T20:03:13.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10963",
+      "name": "FOOTBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:28.935Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17917164540266710"
+  },
+  {
+    "_id": "698d1bd8be281991f117a361",
+    "caption": "The Chad Morris 2 Right Turns episode has dropped! All things offense, former players and much more. Listen now 🎙️🐅 Link in bio.",
+    "createdAt": {
+      "$date": "2026-02-09T13:11:24.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": true,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 16,
+      "likes": 679,
+      "engagementRate": 0.0008671392887711077,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUicp1YEQLg",
+    "publishedAt": {
+      "$date": "2026-02-09T13:11:24.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "clemsonfb",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10963",
+      "name": "FOOTBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:27.884Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18173858077376003"
+  },
+  {
+    "_id": "698d1bd84c50d2954b9fb900",
+    "caption": "too many @clemsonfb legends, but who had the BETTER list? & who’s missing?!\n\nthoughts? ⬇️🐅\n\nSuper Bowl 60 \n\n#clemson #clemsonfootball #college #football #legends",
+    "createdAt": {
+      "$date": "2026-02-07T00:34:07.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "hashtags": [
+      "#clemson",
+      "#clemsonfootball",
+      "#college",
+      "#football",
+      "#legends"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 173,
+      "likes": 7469,
+      "engagementRate": 0.009534789129192525,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUb8erKDxNS",
+    "publishedAt": {
+      "$date": "2026-02-07T00:34:07.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10963",
+      "name": "FOOTBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:26.942Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18506831941074872"
+  },
+  {
+    "_id": "698d1bd87e8048a688c4f0d9",
+    "caption": "Are you spending time or investing time? 🐅",
+    "createdAt": {
+      "$date": "2026-02-06T21:47:33.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 6,
+      "likes": 2305,
+      "engagementRate": 0.002883394095467669,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUbpzYBkSOJ",
+    "publishedAt": {
+      "$date": "2026-02-06T21:47:33.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10963",
+      "name": "FOOTBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:28.851Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18007254431835362"
+  },
+  {
+    "_id": "698d1bd8be281991f117a368",
+    "caption": "Stay tuned for a new episode of Two Right Turns coming Monday, with Offensive Coordinator, Chad Morris. You won’t want to miss it! 🎙️🐅",
+    "createdAt": {
+      "$date": "2026-02-06T16:58:01.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 15,
+      "likes": 1091,
+      "engagementRate": 0.0013799367674544533,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUbIsL0ERKe",
+    "publishedAt": {
+      "$date": "2026-02-06T16:58:01.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10963",
+      "name": "FOOTBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:28.042Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17910303198326730"
+  },
+  {
+    "_id": "698d1bd87e8048a688c4f0e7",
+    "caption": "Feed the focus. Starve the distractions. 🐅",
+    "createdAt": {
+      "$date": "2026-02-05T19:41:49.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 14,
+      "likes": 2283,
+      "engagementRate": 0.002865926541449258,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUY2pAzEYbB",
+    "publishedAt": {
+      "$date": "2026-02-05T19:41:49.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10963",
+      "name": "FOOTBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:28.315Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17867676156557476"
+  },
+  {
+    "_id": "698d1bd97e8048a688c4f0ee",
+    "caption": "Today we celebrate the women within our program that continually make us great! 🧡🐅 \n\n#NGWSD",
+    "createdAt": {
+      "$date": "2026-02-04T16:52:57.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#NGWSD"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 40,
+      "likes": 1474,
+      "engagementRate": 0.0018889911988481396,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUV-hb0EfLe",
+    "publishedAt": {
+      "$date": "2026-02-04T16:52:57.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10963",
+      "name": "FOOTBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:29.288Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18116603800621825"
+  },
+  {
+    "_id": "698d1bd9be281991f117a374",
+    "caption": "Pen to paper! ✍️ Welcome to the Clemson Family, @blivvvvv! 🐅 #ALLIN",
+    "createdAt": {
+      "$date": "2026-02-04T15:09:01.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#ALLIN"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 51,
+      "likes": 2899,
+      "engagementRate": 0.003680663168165133,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUVyoNakctx",
+    "publishedAt": {
+      "$date": "2026-02-04T15:09:01.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10963",
+      "name": "FOOTBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:30.539Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17959922031044230"
+  },
+  {
+    "_id": "698d1bd77e8048a688c4f0d0",
+    "caption": "Clemson Alum Joe Sherman wrote these words 56 years ago, and they’re still true today. Welcome back, Tigers. 🐅🏠",
+    "createdAt": {
+      "$date": "2025-10-31T12:00:00.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 59,
+      "likes": 4122,
+      "engagementRate": 0.005216560239355398,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DQeQtT3kXEj",
+    "publishedAt": {
+      "$date": "2025-10-31T12:00:00.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10963",
+      "name": "FOOTBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:26.766Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17959535921858950"
+  },
+  {
+    "_id": "698d1bd8be281991f117a355",
+    "caption": "It’s not just about the wins. It’s about HOW you win. \n\nGreat moment from the locker room after Coach Swinney’s record-breaking win. 🐅🧡 #ALLIN",
+    "createdAt": {
+      "$date": "2024-10-06T21:15:49.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#ALLIN"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 294,
+      "likes": 18541,
+      "engagementRate": 0.023500098566911962,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DAzCBGIRybz",
+    "publishedAt": {
+      "$date": "2024-10-06T21:15:49.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10963",
+      "name": "FOOTBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:27.223Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18044732665855933"
+  },
+  {
+    "_id": "698d1bde7e8048a688c4f11b",
+    "caption": "Dialed.",
+    "createdAt": {
+      "$date": "2026-02-11T23:25:35.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 2,
+      "likes": 201,
+      "engagementRate": 0.001994870333428327,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUotBLlDcNn",
+    "publishedAt": {
+      "$date": "2026-02-11T23:25:35.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10964",
+      "name": "MENS_BASKETBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:35.387Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18098086405736463"
+  },
+  {
+    "_id": "698d1bdebe281991f117a3d0",
+    "caption": "Tigers have arrived 🐅🐅🐅",
+    "createdAt": {
+      "$date": "2026-02-11T22:32:25.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 3,
+      "likes": 354,
+      "engagementRate": 0.0035082202415463682,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUom74TEv65",
+    "publishedAt": {
+      "$date": "2026-02-11T22:32:25.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10964",
+      "name": "MENS_BASKETBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:34.984Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17942600361123009"
+  },
+  {
+    "_id": "698d1bdebe281991f117a3c9",
+    "caption": "Before tonight’s @clemsonmbb game, stop by the IPTAY table in Burton Gallery to make your Annual Fund donation and enter to win a Coach Brownell signed basketball! 🏀🖊️\n\nBig one tonight at 7:00 - Beat Virginia Tech!\n\n🎟️: ClemsonTigers.com/tickets",
+    "createdAt": {
+      "$date": "2026-02-11T18:42:24.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": true,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 4,
+      "likes": 0,
+      "engagementRate": 0,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUoMYC-ETC0",
+    "publishedAt": {
+      "$date": "2026-02-11T18:42:24.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10964",
+      "name": "MENS_BASKETBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:34.400Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18557456788031456"
+  },
+  {
+    "_id": "698d1bde7e8048a688c4f114",
+    "caption": "Game prep",
+    "createdAt": {
+      "$date": "2026-02-11T16:38:20.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 2,
+      "likes": 404,
+      "engagementRate": 0.003989740666856654,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUn-afdjvs0",
+    "publishedAt": {
+      "$date": "2026-02-11T16:38:20.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10964",
+      "name": "MENS_BASKETBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:35.623Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18253383292289260"
+  },
+  {
+    "_id": "698d1bde4c50d2954b9fb937",
+    "caption": "Back home!",
+    "createdAt": {
+      "$date": "2026-02-11T14:11:28.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 17,
+      "likes": 1908,
+      "engagementRate": 0.018916873851475516,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUntlXMDW8j",
+    "publishedAt": {
+      "$date": "2026-02-11T14:11:28.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10964",
+      "name": "MENS_BASKETBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:35.124Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18000752765855613"
+  },
+  {
+    "_id": "698d1bdf4c50d2954b9fb93e",
+    "caption": "Want to win one of these basketballs signed by Coach Brownell? 👀🏀\n\nJoin IPTAY or renew your Annual Fund pledge at the donation table at TONIGHT’s game vs. Virginia Tech for a chance to win!\n\nC-U in the Littlejohn Burton Gallery later tonight! Tip-off at 7:00 PM.",
+    "createdAt": {
+      "$date": "2026-02-11T14:01:24.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": true,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 0,
+      "likes": 0,
+      "engagementRate": 0,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUnru6eDTYv",
+    "publishedAt": {
+      "$date": "2026-02-11T14:01:24.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10964",
+      "name": "MENS_BASKETBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:34.703Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18085901509929146"
+  },
+  {
+    "_id": "698d1bdfbe281991f117a3de",
+    "caption": "Tiger Hour with Head Coach Brad Brownell airs tonight at 8 p.m. on the Clemson Athletic Network with an appearance from Nick and Blake Davidson!",
+    "createdAt": {
+      "$date": "2026-02-09T22:30:43.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 7,
+      "likes": 502,
+      "engagementRate": 0.005001916254753786,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUjdJnakleI",
+    "publishedAt": {
+      "$date": "2026-02-09T22:30:43.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10964",
+      "name": "MENS_BASKETBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:35.320Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18094554116078270"
+  },
+  {
+    "_id": "698d1bdfbe281991f117a3d7",
+    "caption": "#️⃣2️⃣0️⃣ AP Poll\n#️⃣1️⃣8️⃣ Coaches Poll",
+    "createdAt": {
+      "$date": "2026-02-09T18:01:10.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 27,
+      "likes": 2786,
+      "engagementRate": 0.027643203191792535,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUi-TZBEZfa",
+    "publishedAt": {
+      "$date": "2026-02-09T18:01:10.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10964",
+      "name": "MENS_BASKETBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:35.017Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18394706269197844"
+  },
+  {
+    "_id": "698d1bdfbe281991f117a3e5",
+    "caption": "Balled out in Berkeley🎥",
+    "createdAt": {
+      "$date": "2026-02-08T23:01:52.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 11,
+      "likes": 697,
+      "engagementRate": 0.006957478798360865,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUg7pbIjdfh",
+    "publishedAt": {
+      "$date": "2026-02-08T23:01:52.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10964",
+      "name": "MENS_BASKETBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:36.200Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17909902380321004"
+  },
+  {
+    "_id": "698d1bdf4c50d2954b9fb94a",
+    "caption": "Had an Ace up our sleeve ♠️",
+    "createdAt": {
+      "$date": "2026-02-08T22:32:54.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 2,
+      "likes": 351,
+      "engagementRate": 0.0034689124517251206,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUg4UxBEloQ",
+    "publishedAt": {
+      "$date": "2026-02-08T22:32:54.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10964",
+      "name": "MENS_BASKETBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:35.468Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18073648025419505"
+  },
+  {
+    "_id": "698d1bdf7e8048a688c4f122",
+    "caption": "The best 📸 from the Bay",
+    "createdAt": {
+      "$date": "2026-02-08T21:08:34.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 4,
+      "likes": 477,
+      "engagementRate": 0.004726761726005051,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUgu9BFEol2",
+    "publishedAt": {
+      "$date": "2026-02-08T21:08:34.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10964",
+      "name": "MENS_BASKETBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:35.502Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18428105677119190"
+  },
+  {
+    "_id": "698d1bf07e8048a688c4f200",
+    "caption": "Tiger Family we need YOU on Thursday night for our Hoopin' for Hope game against Georgia Tech! 📢\n\nClick the link on our story to purchase tickets or go to the link in our bio! 🎟️",
+    "createdAt": {
+      "$date": "2026-02-11T22:29:34.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 0,
+      "likes": 115,
+      "engagementRate": 0.005428112904748419,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUomm8SDwkD",
+    "publishedAt": {
+      "$date": "2026-02-11T22:29:34.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10965",
+      "name": "WOMENS_BASKETBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:52.250Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18075386282373613"
+  },
+  {
+    "_id": "698d1bf07e8048a688c4f1f9",
+    "caption": "We are so thankful for Lyn and Emily for speaking to us about their journeys with cancer and the importance Thursday's #Play4Kay game! 🩷\n\nJoin us in Littlejohn on Thursday at 8:00pm for our Hoopin' for Hope game to unite in the fight against cancers affecting women!",
+    "createdAt": {
+      "$date": "2026-02-10T23:59:24.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#Play4Kay"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 1,
+      "likes": 118,
+      "engagementRate": 0.005616916831870103,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUmMF_HjD62",
+    "publishedAt": {
+      "$date": "2026-02-10T23:59:24.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10965",
+      "name": "WOMENS_BASKETBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:52.456Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18090897923026605"
+  },
+  {
+    "_id": "698d1bf04c50d2954b9fba21",
+    "caption": "Coach Syd's turn! 🎤",
+    "createdAt": {
+      "$date": "2026-02-10T17:00:00.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 30,
+      "likes": 316,
+      "engagementRate": 0.016331539696025677,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUlcHpsDJDH",
+    "publishedAt": {
+      "$date": "2026-02-10T17:00:00.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10965",
+      "name": "WOMENS_BASKETBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:51.499Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18053515409446128"
+  },
+  {
+    "_id": "698d1bf0be281991f117a491",
+    "caption": "Do you think you have what it takes to beat @coach_poppie ‘s time? Come to Collegiate Club Classic on February 18th to test your skills! Register now at the link in our bio. CU there! Go Tigers! 🐅",
+    "createdAt": {
+      "$date": "2026-02-09T21:02:39.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": true,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 43,
+      "likes": 0,
+      "engagementRate": 0,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUjSuJdD48f",
+    "publishedAt": {
+      "$date": "2026-02-09T21:02:39.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10965",
+      "name": "WOMENS_BASKETBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:51.210Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18081267923462653"
+  },
+  {
+    "_id": "698d1bf0be281991f117a4a1",
+    "caption": "2️⃣ double-doubles, 2️⃣x the fun 🤝\n\nM. Moore: 30 points (10-13 FG, 4-5 3FG), 12 rebounds \nD. Hinds: 14 points (7-8 FG), 11 rebounds",
+    "createdAt": {
+      "$date": "2026-02-09T16:00:00.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 5,
+      "likes": 109,
+      "engagementRate": 0.0053809119229679975,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUiweGjjCUl",
+    "publishedAt": {
+      "$date": "2026-02-09T16:00:00.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10965",
+      "name": "WOMENS_BASKETBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:17:08.303Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18093888464488284"
+  },
+  {
+    "_id": "698d1bf04c50d2954b9fba32",
+    "caption": "Clemson Women’s Basketball. 2/22.",
+    "createdAt": {
+      "$date": "2026-02-09T14:53:01.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 0,
+      "likes": 99,
+      "engagementRate": 0.004672897196261682,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUioP-djENe",
+    "publishedAt": {
+      "$date": "2026-02-09T14:53:01.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10965",
+      "name": "WOMENS_BASKETBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:52.568Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18000514940855193"
+  },
+  {
+    "_id": "698d1bf0be281991f117a4a8",
+    "caption": "A force in the paint, and a threat from deep\n\nOur @jerseymikes Naismith Girls’ High School POY Midseason Team standout, and @clemsonwbb signee, @trinity_jones10, was making her presence known last night for @nchsgbb. Her 31 points, 12 rebounds, and 6 blocks proves she’s ready to wear that Tiger uniform.\n\nVideo: @overtimeselect",
+    "createdAt": {
+      "$date": "2026-02-08T23:49:21.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 3,
+      "likes": 181,
+      "engagementRate": 0.00868498064759747,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUhBN1jDPRr",
+    "publishedAt": {
+      "$date": "2026-02-08T23:49:21.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10965",
+      "name": "WOMENS_BASKETBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:52.759Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17911696137147682"
+  },
+  {
+    "_id": "698d1bf0be281991f117a4b2",
+    "caption": "Mia Moore was in TAKEOVER mode 🎯\n\nShe dropped a career-high 30 points, hit 4-5 from deep, and added 12 rebounds and six assists to power the Tigers the win over Boston College.",
+    "createdAt": {
+      "$date": "2026-02-08T22:43:21.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 3,
+      "likes": 295,
+      "engagementRate": 0.014065892570565468,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUg5xIcDgRK",
+    "publishedAt": {
+      "$date": "2026-02-08T22:43:21.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10965",
+      "name": "WOMENS_BASKETBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:51.509Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18046075589710686"
+  },
+  {
+    "_id": "698d1bf07e8048a688c4f1f2",
+    "caption": "Building something special.",
+    "createdAt": {
+      "$date": "2026-01-27T16:00:00.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 16,
+      "likes": 1194,
+      "engagementRate": 0.05711318795430945,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUBSLM2juzX",
+    "publishedAt": {
+      "$date": "2026-01-27T16:00:00.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10965",
+      "name": "WOMENS_BASKETBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:52.013Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17859226398536181"
+  },
+  {
+    "_id": "698d1bf0be281991f117a48e",
+    "caption": "Tigers on the rise 📈🗣️",
+    "createdAt": {
+      "$date": "2026-01-06T14:47:01.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 4,
+      "likes": 194,
+      "engagementRate": 0.009345794392523364,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DTLFDoHDkiI",
+    "publishedAt": {
+      "$date": "2026-01-06T14:47:01.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10965",
+      "name": "WOMENS_BASKETBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:52.380Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17947817252949054"
+  },
+  {
+    "_id": "698d1bf07e8048a688c4f1e7",
+    "caption": "“He’s (@coach_poppie) done an excellent job, and he’s already brought in a tremendous recruiting class with signing day this week. Five new players, the No. 5 overall-ranked class by @espn. It’s impressive. It’s a special place here at Clemson!” - @debbieantonelli12",
+    "createdAt": {
+      "$date": "2025-11-17T20:44:18.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 6,
+      "likes": 755,
+      "engagementRate": 0.035919947134900404,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DRK96AOkclR",
+    "publishedAt": {
+      "$date": "2025-11-17T20:44:18.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10965",
+      "name": "WOMENS_BASKETBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:51.270Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18067986893611582"
+  },
+  {
+    "_id": "698d1be94c50d2954b9fb999",
+    "caption": "Abby Dunning's taking advantage of her final year in a collegiate uniform - this time in Orange and Regalia\n\nCheck out and read Abby's full feature today on ClemsonTigers.com",
+    "createdAt": {
+      "$date": "2026-02-11T15:30:13.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": true,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 1,
+      "likes": 0,
+      "engagementRate": 0,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUn2nmbgoVb",
+    "publishedAt": {
+      "$date": "2026-02-11T15:30:13.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10966",
+      "name": "SOFTBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:43.921Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18036609455769832"
+  },
+  {
+    "_id": "698d1be97e8048a688c4f14a",
+    "caption": "Sure was great being back in McWhorter 🤩\n\nGrab your tickets to next week’s Clemson Classic to enjoy all the action this month!",
+    "createdAt": {
+      "$date": "2026-02-11T13:15:00.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": true,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 2,
+      "likes": 0,
+      "engagementRate": 0,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUnnMR6FvcH",
+    "publishedAt": {
+      "$date": "2026-02-11T13:15:00.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10966",
+      "name": "SOFTBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:45.759Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18115919689529262"
+  },
+  {
+    "_id": "698d1be97e8048a688c4f151",
+    "caption": "Scenes from our home opener 📸",
+    "createdAt": {
+      "$date": "2026-02-11T01:21:27.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": true,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 6,
+      "likes": 0,
+      "engagementRate": 0,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUmVe_olv99",
+    "publishedAt": {
+      "$date": "2026-02-11T01:21:27.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10966",
+      "name": "SOFTBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:44.919Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18558384646040410"
+  },
+  {
+    "_id": "698d1be94c50d2954b9fb9a0",
+    "caption": "TIGERS WIN! TIGERS WIN!! \nClemson run rules Furman and takes the home opener!!🔥",
+    "createdAt": {
+      "$date": "2026-02-11T01:12:28.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 1,
+      "likes": 1508,
+      "engagementRate": 0.013314040180343925,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUmULCkEj9-",
+    "publishedAt": {
+      "$date": "2026-02-11T01:12:28.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10966",
+      "name": "SOFTBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:46.254Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18100630036716066"
+  },
+  {
+    "_id": "698d1be94c50d2954b9fb9a7",
+    "caption": "Channell brings the juice with a game ending homer for the Tigers’ first win at home!🧃",
+    "createdAt": {
+      "$date": "2026-02-11T01:09:21.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 2,
+      "likes": 967,
+      "engagementRate": 0.008549572521373932,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUmUGX4lgix",
+    "publishedAt": {
+      "$date": "2026-02-11T01:09:21.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10966",
+      "name": "SOFTBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:44.682Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18067501175559531"
+  },
+  {
+    "_id": "698d1be9be281991f117a420",
+    "caption": "Jamison Brockenbrough and Marian Collins give Clemson the 3-0 lead against Furman after those home runs!!🔥🔥\n\n📺ACCNX",
+    "createdAt": {
+      "$date": "2026-02-10T23:45:10.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 4,
+      "likes": 1233,
+      "engagementRate": 0.010914160174344224,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUmKd0Djx8e",
+    "publishedAt": {
+      "$date": "2026-02-10T23:45:10.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10966",
+      "name": "SOFTBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:44.789Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18067918337217866"
+  },
+  {
+    "_id": "698d1be94c50d2954b9fb9ae",
+    "caption": "Attack The Moment: Game 6 \n\n🆚 Furman\n🕕 6 p.m.\n📍 McWhorter Stadium\n📺 ACCNX\n📊 ClemsonTigers.com or the ClemsonTigers App\n⬜️ White Jerseys\n✨ Home Opener",
+    "createdAt": {
+      "$date": "2026-02-10T15:30:05.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": true,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 1,
+      "likes": 0,
+      "engagementRate": 0,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUlRzlulb8f",
+    "publishedAt": {
+      "$date": "2026-02-10T15:30:05.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10966",
+      "name": "SOFTBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:45.412Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18071512472168644"
+  },
+  {
+    "_id": "698d1be84c50d2954b9fb992",
+    "caption": "Absolutely St(d)unning 🤩\n\nAbby Dunning picked up her 400th career strikeout during opening weekend in Clearwater",
+    "createdAt": {
+      "$date": "2026-02-09T21:50:59.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": true,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 4,
+      "likes": 0,
+      "engagementRate": 0,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUjWa9rkpDL",
+    "publishedAt": {
+      "$date": "2026-02-09T21:50:59.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10966",
+      "name": "SOFTBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:44.080Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18043216868721727"
+  },
+  {
+    "_id": "698d1be9be281991f117a42e",
+    "caption": "Clemson finishes out the NFCA D1 Leadoff Classic. The Tigers are back at McWhorter Stadium vs. Furman Tuesday night at 6 p.m. EST.🐅\n\nClemson 2 | Michigan St. 5",
+    "createdAt": {
+      "$date": "2026-02-08T17:29:28.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": true,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 5,
+      "likes": 0,
+      "engagementRate": 0,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUgVk2MEpg2",
+    "publishedAt": {
+      "$date": "2026-02-08T17:29:28.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10966",
+      "name": "SOFTBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:45.773Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18071515022435538"
+  },
+  {
+    "_id": "698d1be97e8048a688c4f15f",
+    "caption": "Tigers staying in it🐅\n\nClemson 2 | Michigan St. 3",
+    "createdAt": {
+      "$date": "2026-02-08T16:29:09.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": true,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 3,
+      "likes": 0,
+      "engagementRate": 0,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUgO-jPADux",
+    "publishedAt": {
+      "$date": "2026-02-08T16:29:09.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10966",
+      "name": "SOFTBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:45.389Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17935792269155159"
+  },
+  {
+    "_id": "698d1be97e8048a688c4f158",
+    "caption": "Gear up for the 2026 season by grabbing the team poster, which will be available at all home games, including the Orange vs. Purple scrimmage on Feb. 1!\n\nReminder the Orange vs. Purple scrimmage is free and open to the public with gates opening at 11:15 a.m.",
+    "createdAt": {
+      "$date": "2026-01-19T17:55:44.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 7,
+      "likes": 1217,
+      "engagementRate": 0.01079946002699865,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DTs4_NYj0eY",
+    "publishedAt": {
+      "$date": "2026-01-19T17:55:44.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10966",
+      "name": "SOFTBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:45.642Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18116011978608341"
+  },
+  {
+    "_id": "698d1be9be281991f117a427",
+    "caption": "100 days from now, this team hits the field.",
+    "createdAt": {
+      "$date": "2025-10-28T22:57:52.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 9,
+      "likes": 4675,
+      "engagementRate": 0.04132734539743601,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DQXtlfSD3Js",
+    "publishedAt": {
+      "$date": "2025-10-28T22:57:52.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10966",
+      "name": "SOFTBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:45.664Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17889050187241024"
+  },
+  {
+    "_id": "698d1bd24c50d2954b9fb898",
+    "caption": "Back in the lab💪🏼\n#ClemsonUnited",
+    "createdAt": {
+      "$date": "2026-02-05T13:48:35.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#ClemsonUnited"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 5,
+      "likes": 1083,
+      "engagementRate": 0.01380991064175467,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUYON2ykaSg",
+    "publishedAt": {
+      "$date": "2026-02-05T13:48:35.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10967",
+      "name": "MENS_SOCCER",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:23.381Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17844226302686206"
+  },
+  {
+    "_id": "698d1bd24c50d2954b9fb8b4",
+    "caption": "Smart, skilled, and All-ACC Academic approved 😤📚\n#ClemsonUnited",
+    "createdAt": {
+      "$date": "2026-01-29T21:01:38.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#ClemsonUnited"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 2,
+      "likes": 400,
+      "engagementRate": 0.005102558895207149,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUG-NVXkeez",
+    "publishedAt": {
+      "$date": "2026-01-29T21:01:38.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10967",
+      "name": "MENS_SOCCER",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:22.684Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18252882163293274"
+  },
+  {
+    "_id": "698d1bd2be281991f117a31e",
+    "caption": "Happy birthday Arthur! \n#ClemsonUnited",
+    "createdAt": {
+      "$date": "2026-01-20T13:22:33.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#ClemsonUnited"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 3,
+      "likes": 713,
+      "engagementRate": 0.009088139723801788,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DTu-hQtkd4L",
+    "publishedAt": {
+      "$date": "2026-01-20T13:22:33.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10967",
+      "name": "MENS_SOCCER",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:22.872Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18105840514682713"
+  },
+  {
+    "_id": "698d1bd24c50d2954b9fb89f",
+    "caption": "Spring soccer at Riggs!🔥🔥\n#ClemsonUnited",
+    "createdAt": {
+      "$date": "2026-01-16T00:30:36.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#ClemsonUnited"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 6,
+      "likes": 737,
+      "engagementRate": 0.009430848903330626,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DTjS_0gES_x",
+    "publishedAt": {
+      "$date": "2026-01-16T00:30:36.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10967",
+      "name": "MENS_SOCCER",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:22.165Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18115168459592010"
+  },
+  {
+    "_id": "698d1bd14c50d2954b9fb88a",
+    "caption": "Throwback to one of the top goals of the season:\n\nIt started here-and the rest was history. Floki Stephensen 💣⚽️\n#ClemsonUnited",
+    "createdAt": {
+      "$date": "2026-01-09T15:30:44.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#ClemsonUnited"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 3,
+      "likes": 435,
+      "engagementRate": 0.005559504467912266,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DTS4Z5mkTdq",
+    "publishedAt": {
+      "$date": "2026-01-09T15:30:44.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10967",
+      "name": "MENS_SOCCER",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:20.854Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18096480301915731"
+  },
+  {
+    "_id": "698d1bd27e8048a688c4f0a3",
+    "caption": "Clemson mourns the passing of former goalkeeper Jaro Zawislan. Zawislan was named the 1993 ACC Tournament MVP. He played 5 seasons of professional soccer before embarking on a college coaching career for more than 25 years. \n\nLink to article: clemsontigers.com\n\n#ClemsonUnited",
+    "createdAt": {
+      "$date": "2026-01-08T16:39:46.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#ClemsonUnited"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 6,
+      "likes": 1065,
+      "engagementRate": 0.013594130787977254,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DTQbjMukUfB",
+    "publishedAt": {
+      "$date": "2026-01-08T16:39:46.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10967",
+      "name": "MENS_SOCCER",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:22.025Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17855630745598737"
+  },
+  {
+    "_id": "698d1bd24c50d2954b9fb8a6",
+    "caption": "Happy birthday Kyle!\n#ClemsonUnited",
+    "createdAt": {
+      "$date": "2026-01-08T13:34:51.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#ClemsonUnited"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 10,
+      "likes": 435,
+      "engagementRate": 0.005648354995938262,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DTQGY3gETpO",
+    "publishedAt": {
+      "$date": "2026-01-08T13:34:51.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10967",
+      "name": "MENS_SOCCER",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:24.165Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18087578455860973"
+  },
+  {
+    "_id": "698d1bd24c50d2954b9fb891",
+    "caption": "Rivalry game. Statement night. Some of the best goals of the season. FOUR times over😮‍💨\n#ClemsonUnited",
+    "createdAt": {
+      "$date": "2026-01-07T14:48:13.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#ClemsonUnited"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 5,
+      "likes": 2441,
+      "engagementRate": 0.031046913078797724,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DTNp_TCkSVh",
+    "publishedAt": {
+      "$date": "2026-01-07T14:48:13.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10967",
+      "name": "MENS_SOCCER",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:20.971Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17873159064496469"
+  },
+  {
+    "_id": "698d1bd24c50d2954b9fb8bb",
+    "caption": "Leadership you can’t teach. Impact you won’t forget. Captain James Kelly. \n#ClemsonUnited",
+    "createdAt": {
+      "$date": "2026-01-06T20:10:41.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#ClemsonUnited"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 3,
+      "likes": 700,
+      "engagementRate": 0.00892313160032494,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DTLqGRkET8l",
+    "publishedAt": {
+      "$date": "2026-01-06T20:10:41.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10967",
+      "name": "MENS_SOCCER",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:22.281Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18438516001106713"
+  },
+  {
+    "_id": "698d1bd27e8048a688c4f095",
+    "caption": "Signed ✍️\n\nWelcome to the #ClemsonUnited family Martin!",
+    "createdAt": {
+      "$date": "2026-01-06T01:16:09.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#ClemsonUnited"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 5,
+      "likes": 530,
+      "engagementRate": 0.006790718927701056,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DTJoQvCEbP2",
+    "publishedAt": {
+      "$date": "2026-01-06T01:16:09.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10967",
+      "name": "MENS_SOCCER",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:24.266Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17985787499921932"
+  },
+  {
+    "_id": "698d1bd24c50d2954b9fb8ad",
+    "caption": "#ClemsonUnited -the pathway to success 🏆\n\nSince 2019 the Tigers have seen 27 drafted in the MLS SuperDraft with 12 coming in the first round!",
+    "createdAt": {
+      "$date": "2025-12-22T14:46:00.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#ClemsonUnited"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 5,
+      "likes": 1062,
+      "engagementRate": 0.013543359057676686,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DSkdBDQkQbZ",
+    "publishedAt": {
+      "$date": "2025-12-22T14:46:00.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10967",
+      "name": "MENS_SOCCER",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:40.511Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17917386753249794"
+  },
+  {
+    "_id": "698d1bd27e8048a688c4f09c",
+    "caption": "Mark your calendars 🗓️ The Tigers 2025 schedule is set 🐅\n\n#ClemsonUnited",
+    "createdAt": {
+      "$date": "2025-06-04T15:16:36.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#ClemsonUnited"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 10,
+      "likes": 2653,
+      "engagementRate": 0.033801279447603576,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DKe8vSyOjDy",
+    "publishedAt": {
+      "$date": "2025-06-04T15:16:36.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10967",
+      "name": "MENS_SOCCER",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:23.394Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18046985636398250"
+  },
+  {
+    "_id": "698d1bc64c50d2954b9fb7f0",
+    "caption": "🚨New ID Camp Announcement🚨\n\nClemson women's soccer will hold a spring ID camp on April 11 for grades 8-12 ⚽️\n\nClaim your spot here ➡️ https://clemsontigers.com/tiger-girls-soccer-camp/",
+    "createdAt": {
+      "$date": "2026-02-07T06:35:31.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 1,
+      "likes": 381,
+      "engagementRate": 0.006016979854143368,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUcmPudjC1V",
+    "publishedAt": {
+      "$date": "2026-02-07T06:35:31.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10968",
+      "name": "WOMENS_SOCCER",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:10.801Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18111577861658913"
+  },
+  {
+    "_id": "698d1bc6be281991f117a26e",
+    "caption": "Ready to seize the moment this spring ⚽️",
+    "createdAt": {
+      "$date": "2026-02-05T19:09:45.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 0,
+      "likes": 332,
+      "engagementRate": 0.0052294170460094195,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUYy-LskpNB",
+    "publishedAt": {
+      "$date": "2026-02-05T19:09:45.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10968",
+      "name": "WOMENS_SOCCER",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:10.914Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18091568501107473"
+  },
+  {
+    "_id": "698d1bc67e8048a688c4f019",
+    "caption": "Happy National Girls and Women in Sports Day from Clemson Womens' Soccer 🐾",
+    "createdAt": {
+      "$date": "2026-02-04T18:01:37.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 4,
+      "likes": 1142,
+      "engagementRate": 0.018050939562430104,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUWGVE-gMmr",
+    "publishedAt": {
+      "$date": "2026-02-04T18:01:37.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10968",
+      "name": "WOMENS_SOCCER",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:09.269Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18335872705240209"
+  },
+  {
+    "_id": "698d1bc64c50d2954b9fb7e9",
+    "caption": "Today, February 4th, is National Girls and Women in Sport Day, and to honor #ngwsd, the RHBSSI is highlighting seven female student-athletes from all different Clemson sports! \n\nWhat does it mean to be a woman in sports?\n\n“Being a woman in sports means being strong, resilient, and unstoppable,” Sade Gray, @clemsontrackxc, Marketing major \n\n“Being a woman in sports is all about representation and feeling confident in myself,” Bianca Martinez, @clemsontrackxc, @clemsonvb, Sociology major\n\n“Being a woman in sports means having a big community of strong and inspirational women to look up to,” Madison Roush, @clemsontrackxc, Biomedical Engineering major\n\n“Being a woman in sports means showing up with strength, discipline, and confidence in spaces that haven’t always made room for us,” Tatum Short @clemsonwsoccer, Psychology major \n\n“It means embracing the pressure that comes with higher expectations and learning how to carry myself with purpose both in competition and in everyday life,” Trinity Webb, @clemsongymnastics, Communications major\n\n“It means overcoming challenges, proving my abilities, and staying confident in spaces where women are sometimes underestimated,” Shaunque Williams, @clemsontrackxc, Psychology major, RHBSSI Intern\n\n“Being a woman in sports means pursuing passion and excellence while often overcoming inequality and stereotypes,” Oneka Wilson, @clemsontrackxc, Parks, Recreation and Tourism Management major\n\nClick the link in our bio to learn more about their stories as women in sport!",
+    "createdAt": {
+      "$date": "2026-02-04T14:06:57.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#ngwsd"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 4,
+      "likes": 492,
+      "engagementRate": 0.007812623056688771,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUVrhnakSWs",
+    "publishedAt": {
+      "$date": "2026-02-04T14:06:57.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10968",
+      "name": "WOMENS_SOCCER",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:09.769Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18032780498686121"
+  },
+  {
+    "_id": "698d1bc77e8048a688c4f031",
+    "caption": "Registration for the Pre-Elite and Elite ID summer camps are now open! \n\n⚽️ Register on clemsontigers.com",
+    "createdAt": {
+      "$date": "2026-01-31T02:31:39.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 0,
+      "likes": 405,
+      "engagementRate": 0.0063792587458849845,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUKIxhmjuSL",
+    "publishedAt": {
+      "$date": "2026-01-31T02:31:39.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10968",
+      "name": "WOMENS_SOCCER",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:10.741Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18116740972614527"
+  },
+  {
+    "_id": "698d1bc77e8048a688c4f027",
+    "caption": "Hats off to our athletes who were named to the All-ACC Academic Team 📚",
+    "createdAt": {
+      "$date": "2026-01-29T20:24:22.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 8,
+      "likes": 292,
+      "engagementRate": 0.004725376848803692,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUG58gJAOUk",
+    "publishedAt": {
+      "$date": "2026-01-29T20:24:22.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10968",
+      "name": "WOMENS_SOCCER",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:09.670Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17914116555268112"
+  },
+  {
+    "_id": "698d1bc74c50d2954b9fb7f7",
+    "caption": "🚨Winter ID Update🚨\n\nOut of precautionary measures, we have decided to cancel this weekend's Winter ID Camp.\n\nStay tuned for more information about future camps",
+    "createdAt": {
+      "$date": "2026-01-28T16:36:00.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 1,
+      "likes": 530,
+      "engagementRate": 0.008363917022382535,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUD7BHnDIgI",
+    "publishedAt": {
+      "$date": "2026-01-28T16:36:00.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10968",
+      "name": "WOMENS_SOCCER",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:10.309Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18040731251728697"
+  },
+  {
+    "_id": "698d1bc74c50d2954b9fb7fe",
+    "caption": "Congrats to Renee Lyles on receiving a preseason camp invite from the Portland Thorns 👏👏👏",
+    "createdAt": {
+      "$date": "2026-01-26T18:43:25.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 15,
+      "likes": 481,
+      "engagementRate": 0.007812623056688771,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DT_AAj7kiZl",
+    "publishedAt": {
+      "$date": "2026-01-26T18:43:25.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10968",
+      "name": "WOMENS_SOCCER",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:11.508Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18097911493908566"
+  },
+  {
+    "_id": "698d1bc77e8048a688c4f020",
+    "caption": "Let's give a warm welcome to Gabby Hoschek 👋\n\nGabby is a midfielder transferring in from Elon. As a junior last season, she appeared in all 21 matches, making 18 starts. The Raleigh native is highly decorated as she comes in with the following accolades:\n\n- 2025 CAA Champion\n- 2025 All-CAA First Team\n- 2025 CSC Academic All-District\n- 2024 All-CAA Second Team\n- 2x CAA Rookie of the Week (2023)",
+    "createdAt": {
+      "$date": "2026-01-25T17:19:23.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 30,
+      "likes": 1541,
+      "engagementRate": 0.024745223431568666,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DT8RmN_kmDw",
+    "publishedAt": {
+      "$date": "2026-01-25T17:19:23.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10968",
+      "name": "WOMENS_SOCCER",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:11.107Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18119456428603824"
+  },
+  {
+    "_id": "698d1bc77e8048a688c4f02e",
+    "caption": "Hal Hershfelt has been participating in the U.S. Women’s National Team’s January training camp and is set to compete against Paraguay today, followed by a matchup with Chile on Jan. 27.‼️\n\nBest of luck, Hal!",
+    "createdAt": {
+      "$date": "2026-01-24T22:32:38.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 3,
+      "likes": 669,
+      "engagementRate": 0.010584844141320271,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DT6QpmKDNR_",
+    "publishedAt": {
+      "$date": "2026-01-24T22:32:38.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10968",
+      "name": "WOMENS_SOCCER",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:11.202Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18361659583161120"
+  },
+  {
+    "_id": "698d1bc7be281991f117a275",
+    "caption": "We have three updated times for our 2025 schedule!\n\n- 8/21 @ Virginia Tech, now 8 pm\n- 10/9 @ SMU, now 7 pm\n- 10/24 @ Boston College, now 3 pm\n\nFor more information on the 2025 season, visit the official Clemson Tigers website.",
+    "createdAt": {
+      "$date": "2025-07-29T18:04:29.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 9,
+      "likes": 944,
+      "engagementRate": 0.015010947123033061,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DMs3rCGtQDW",
+    "publishedAt": {
+      "$date": "2025-07-29T18:04:29.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10968",
+      "name": "WOMENS_SOCCER",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:10.832Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18035471342442268"
+  },
+  {
+    "_id": "698d1bc6be281991f117a267",
+    "caption": "Working towards success in a new space! 🤩\n\nWe are so excited for the brand new Watt Family Performance and Wellness Center! 🐅",
+    "createdAt": {
+      "$date": "2025-04-09T15:46:27.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 5,
+      "likes": 687,
+      "engagementRate": 0.01089986926457385,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DIOzo9_xTQ2",
+    "publishedAt": {
+      "$date": "2025-04-09T15:46:27.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10968",
+      "name": "WOMENS_SOCCER",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:09.151Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17921376351065693"
+  },
+  {
+    "_id": "698d1bbe4c50d2954b9fb7b6",
+    "caption": "We want to see you in Clemson this summer!\n\nHead over to ClemsonVBCamps.com to register for our Elite Camp on June 5 and check out the remaining camp offerings this summer!\n\n#OwnToday",
+    "createdAt": {
+      "$date": "2026-02-11T15:15:06.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#OwnToday"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 0,
+      "likes": 226,
+      "engagementRate": 0.002864022303890508,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUn04xRjZxp",
+    "publishedAt": {
+      "$date": "2026-02-11T15:15:06.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10969",
+      "name": "WOMENS_VOLLEYBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:02.965Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18436759552116184"
+  },
+  {
+    "_id": "698d1bbe4c50d2954b9fb7af",
+    "caption": "Looking for our next student manager - Applications close Feb. 20!",
+    "createdAt": {
+      "$date": "2026-02-09T17:01:08.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 0,
+      "likes": 319,
+      "engagementRate": 0.004042580154606514,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUi3bpmDVOp",
+    "publishedAt": {
+      "$date": "2026-02-09T17:01:08.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10969",
+      "name": "WOMENS_VOLLEYBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:02.107Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18342479929236086"
+  },
+  {
+    "_id": "698d1bbe7e8048a688c4efd7",
+    "caption": "Right where we belong 🧡\n\n#OwnToday",
+    "createdAt": {
+      "$date": "2026-02-04T15:49:53.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#OwnToday"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 1,
+      "likes": 251,
+      "engagementRate": 0.0031935115954885313,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUV3G5HEXRJ",
+    "publishedAt": {
+      "$date": "2026-02-04T15:49:53.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10969",
+      "name": "WOMENS_VOLLEYBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:00.963Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18040709954751599"
+  },
+  {
+    "_id": "698d1bbebe281991f117a228",
+    "caption": "E + R = O\n\n#OwnToday",
+    "createdAt": {
+      "$date": "2026-02-03T00:56:50.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#OwnToday"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 2,
+      "likes": 508,
+      "engagementRate": 0.006463059181345837,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DURsTuYEfln",
+    "publishedAt": {
+      "$date": "2026-02-03T00:56:50.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10969",
+      "name": "WOMENS_VOLLEYBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:02.723Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18185143411317873"
+  },
+  {
+    "_id": "698d1bbe4c50d2954b9fb79a",
+    "caption": "Locked in and all in 🔒\n\nWelcome Lauren Schneider to the Clemson Family! #OwnToday",
+    "createdAt": {
+      "$date": "2026-01-30T16:50:56.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#OwnToday"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 20,
+      "likes": 390,
+      "engagementRate": 0.0051957926751995944,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUJGTzdkbTc",
+    "publishedAt": {
+      "$date": "2026-01-30T16:50:56.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10969",
+      "name": "WOMENS_VOLLEYBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:01.426Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18072665972410541"
+  },
+  {
+    "_id": "698d1bbe4c50d2954b9fb7a1",
+    "caption": "She’s ready to be a Tiger 🐾\n\nWelcome Anika Groom to the Clemson Volleyball Team! #OwnToday",
+    "createdAt": {
+      "$date": "2026-01-30T16:50:28.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#OwnToday"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 34,
+      "likes": 651,
+      "engagementRate": 0.008680775567101761,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUJGQRiERPs",
+    "publishedAt": {
+      "$date": "2026-01-30T16:50:28.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10969",
+      "name": "WOMENS_VOLLEYBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:01.027Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18253325815290582"
+  },
+  {
+    "_id": "698d1bbebe281991f117a221",
+    "caption": "Ready to get to work 😤\n\nWelcome Alyssa Irwin to the Clemson Family! #OwnToday",
+    "createdAt": {
+      "$date": "2026-01-30T16:50:04.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#OwnToday"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 48,
+      "likes": 406,
+      "engagementRate": 0.005753389937903941,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUJGMiekWQo",
+    "publishedAt": {
+      "$date": "2026-01-30T16:50:04.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10969",
+      "name": "WOMENS_VOLLEYBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:01.225Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18031859327785580"
+  },
+  {
+    "_id": "698d1bbe7e8048a688c4efde",
+    "caption": "Different colors, same passion 🟪🟧\n\nWelcome Lina Merz to the Clemson Volleyball Team! #OwnToday",
+    "createdAt": {
+      "$date": "2026-01-30T16:49:34.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#OwnToday"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 11,
+      "likes": 434,
+      "engagementRate": 0.0056393359523507795,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUJGIz0EX-k",
+    "publishedAt": {
+      "$date": "2026-01-30T16:49:34.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10969",
+      "name": "WOMENS_VOLLEYBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:01.392Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18153110722437923"
+  },
+  {
+    "_id": "698d1bbe4c50d2954b9fb7a8",
+    "caption": "Bringing her talents to Clemson 😎\n\nWelcome Talea Mitchell to our Clemson Family! #OwnToday",
+    "createdAt": {
+      "$date": "2026-01-30T16:49:06.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#OwnToday"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 36,
+      "likes": 385,
+      "engagementRate": 0.005335191990875681,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUJGGX1ET45",
+    "publishedAt": {
+      "$date": "2026-01-30T16:49:06.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10969",
+      "name": "WOMENS_VOLLEYBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:01.589Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18415450309185696"
+  },
+  {
+    "_id": "698d1bbf7e8048a688c4efef",
+    "caption": "Entering Jervey Gym with nothing but gratitude 🫶\n\nThank you to everyone that helped make the renovation of Jervey Gym possible. We can’t wait to share it with our fans on Sept. 19 for our home opener!\n\n#OwnToday",
+    "createdAt": {
+      "$date": "2024-09-09T19:38:58.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#OwnToday"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 4,
+      "likes": 1292,
+      "engagementRate": 0.016423773919655302,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/C_tVIRWSJOF",
+    "publishedAt": {
+      "$date": "2024-09-09T19:38:58.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10969",
+      "name": "WOMENS_VOLLEYBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:03.258Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18001617320652285"
+  },
+  {
+    "_id": "698d1bbe4c50d2954b9fb78f",
+    "caption": "Jervey is home 🧡💜",
+    "createdAt": {
+      "$date": "2023-12-18T14:07:43.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 7,
+      "likes": 1535,
+      "engagementRate": 0.01954124952477506,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/C0_0D8jOAL9",
+    "publishedAt": {
+      "$date": "2023-12-18T14:07:43.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec10969",
+      "name": "WOMENS_VOLLEYBALL",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:01.257Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18012534770030201"
+  },
+  {
+    "_id": "698d1bcbbe281991f117a2b7",
+    "caption": "📈 📈  We’re in the preseason rankings for the first time since 2014. Time to get to work! 🐅",
+    "createdAt": {
+      "$date": "2026-02-11T17:11:16.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 3,
+      "likes": 145,
+      "engagementRate": 0.016059027777777776,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUoCIr0Du8g",
+    "publishedAt": {
+      "$date": "2026-02-11T17:11:16.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec1096b",
+      "name": "WOMENS_ROWING",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:15.208Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17868627195556808"
+  },
+  {
+    "_id": "698d1bcbbe281991f117a2b0",
+    "caption": "T-52 days 🐾🐅",
+    "createdAt": {
+      "$date": "2026-02-10T18:08:24.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 0,
+      "likes": 271,
+      "engagementRate": 0.029405381944444444,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUljHTgia1p",
+    "publishedAt": {
+      "$date": "2026-02-10T18:08:24.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec1096b",
+      "name": "WOMENS_ROWING",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:14.500Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17949210018082587"
+  },
+  {
+    "_id": "698d1bcb7e8048a688c4f066",
+    "caption": "Rise and Grind",
+    "createdAt": {
+      "$date": "2026-02-10T14:07:28.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 4,
+      "likes": 386,
+      "engagementRate": 0.042317708333333336,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUlH9egji8A",
+    "publishedAt": {
+      "$date": "2026-02-10T14:07:28.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec1096b",
+      "name": "WOMENS_ROWING",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:14.038Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18065749760262971"
+  },
+  {
+    "_id": "698d1bcbbe281991f117a2be",
+    "caption": "National Women and Girls in Sport day!\n\nSo thankful for the amazing women that make up Clemson University Rowing. 🐅💜",
+    "createdAt": {
+      "$date": "2026-02-05T00:38:26.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 4,
+      "likes": 356,
+      "engagementRate": 0.0390625,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUWzysfjGPO",
+    "publishedAt": {
+      "$date": "2026-02-05T00:38:26.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec1096b",
+      "name": "WOMENS_ROWING",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:15.104Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18092948942075352"
+  },
+  {
+    "_id": "698d1bcb4c50d2954b9fb838",
+    "caption": "We’re excited to feature our team doctor, Dr. Tenley (Palisin) Murphy, for our next alumni shoutout! ✨ We are so grateful to have a team doctor who understands our sport and shares our love for Clemson! \n\nDr. Murphy’s journey is nothing short of remarkable:\n🐅 Member of the inaugural Clemson Women’s Rowing team (Class of 2001)\n🐅 University of South Carolina School of Medicine graduate (2005)\n🐅 Completed a Sports Medicine fellowship following residency\n🐅 Currently serves as Assistant Athletic Director of Sports Medicine at Clemson\n🐅 One of the first women in sports medicine to serve as a Power 5 team physician 🔥\n🐅 Has supported countless Clemson successes, including the Women’s Soccer College Cup, National Championships in Men’s Soccer, multiple ACC titles in Softball and Track\n\nDr. Murphy shared, “It’s been an incredible journey through sports medicine to provide care to our student-athletes, support them in their endeavors, and celebrate their successes.”\n\nShe is deeply grateful for the support of her husband, Dr. Brett Murphy, and their amazing daughter, Addison (13).\n\nThank you, Dr. Murphy, for all that you do for our team — and for continuing to inspire Clemson student-athletes on and off the water. 🧡💜🐅",
+    "createdAt": {
+      "$date": "2026-01-27T17:14:34.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 3,
+      "likes": 344,
+      "engagementRate": 0.037651909722222224,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DUBaouqDtfu",
+    "publishedAt": {
+      "$date": "2026-01-27T17:14:34.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec1096b",
+      "name": "WOMENS_ROWING",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:15.178Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18092270783064573"
+  },
+  {
+    "_id": "698d1bcb4c50d2954b9fb844",
+    "caption": "Always pursuing excellence, on and off the water 💫\n\nProud of our 1️⃣1️⃣ 4.0 athletes, and all who worked hard in the class this fall! {swipe for more stats}",
+    "createdAt": {
+      "$date": "2026-01-21T01:14:08.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 8,
+      "likes": 360,
+      "engagementRate": 0.03993055555555555,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DTwP9A2jpKY",
+    "publishedAt": {
+      "$date": "2026-01-21T01:14:08.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec1096b",
+      "name": "WOMENS_ROWING",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:15.374Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18055878716377884"
+  },
+  {
+    "_id": "698d1bcbbe281991f117a2cc",
+    "caption": "Coach Zoe is in her homeland on the recruiting trail! ✈️ Find her at Irish Indoors or the Talent ID camp, or anywhere in between.",
+    "createdAt": {
+      "$date": "2026-01-15T14:22:32.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 3,
+      "likes": 194,
+      "engagementRate": 0.021375868055555556,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DTiNaIoDi_-",
+    "publishedAt": {
+      "$date": "2026-01-15T14:22:32.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec1096b",
+      "name": "WOMENS_ROWING",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:16.273Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17993541407864939"
+  },
+  {
+    "_id": "698d1bcbbe281991f117a2d3",
+    "caption": "Some responses from our team. What's YOUR plan for 2026? We'd love to hear 🤩✨",
+    "createdAt": {
+      "$date": "2026-01-09T13:24:21.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 2,
+      "likes": 148,
+      "engagementRate": 0.016276041666666668,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DTSp4Ywjvs5",
+    "publishedAt": {
+      "$date": "2026-01-09T13:24:21.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec1096b",
+      "name": "WOMENS_ROWING",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:14.962Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17937500532109928"
+  },
+  {
+    "_id": "698d1bcbbe281991f117a2c5",
+    "caption": "It's been a great 2025, Tigers! Swipe for some of our favorite shots from the year 📸 \n\nLet's #ride into the new year... starting with our winter training camp tomorrow! 🐅",
+    "createdAt": {
+      "$date": "2025-12-31T00:49:17.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "hashtags": [
+      "#ride"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 4,
+      "likes": 595,
+      "engagementRate": 0.06499565972222222,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DS6IarcDs7i",
+    "publishedAt": {
+      "$date": "2025-12-31T00:49:17.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec1096b",
+      "name": "WOMENS_ROWING",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:15.774Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18084641468037149"
+  },
+  {
+    "_id": "698d1bcc4c50d2954b9fb84b",
+    "caption": "Happy Holidays from our Clemson family to yours 🧡💜",
+    "createdAt": {
+      "$date": "2025-12-25T14:38:08.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 0,
+      "likes": 94,
+      "engagementRate": 0.010199652777777778,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DSsKgB8jo34",
+    "publishedAt": {
+      "$date": "2025-12-25T14:38:08.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec1096b",
+      "name": "WOMENS_ROWING",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:15.193Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18085175135028692"
+  },
+  {
+    "_id": "698d1bcb7e8048a688c4f06d",
+    "caption": "2026 🔜",
+    "createdAt": {
+      "$date": "2025-11-19T20:58:33.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 2,
+      "likes": 187,
+      "engagementRate": 0.0205078125,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DRQJazskUdy",
+    "publishedAt": {
+      "$date": "2025-11-19T20:58:33.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec1096b",
+      "name": "WOMENS_ROWING",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:15.740Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18084535808059224"
+  },
+  {
+    "_id": "698d1bcc7e8048a688c4f074",
+    "caption": "Time to be great",
+    "createdAt": {
+      "$date": "2025-02-14T20:42:52.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 6,
+      "likes": 254,
+      "engagementRate": 0.028211805555555556,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "permalink": "https://www.instagram.com/p/DGERwe2R6sT",
+    "publishedAt": {
+      "$date": "2025-02-14T20:42:52.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "team": {
+      "profileId": "697a49d7a36a7c442ec1096b",
+      "name": "WOMENS_ROWING",
+      "school": {
+        "_id": "68f9cc6d7804265f86eb3963",
+        "name": "Clemson"
+      },
+      "conference": {
+        "_id": "69000bac75e0f078544d9c0b",
+        "name": "ACC"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      }
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:16:17.000Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17856497043373225"
+  }
+]

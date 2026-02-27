@@ -8,6 +8,7 @@ import { BaylorReportHub } from './BaylorReportHub';
 import { KentuckyIPImpact } from './KentuckyIPImpact';
 import { OhioStateIPImpact } from './OhioStateIPImpact';
 import { GeorgiaIPImpact } from './GeorgiaIPImpact';
+import { ClemsonIPImpact } from './ClemsonIPImpact';
 import { UCLABrandDeals } from './UCLABrandDeals';
 import { NotreDameBrandDeals } from './NotreDameBrandDeals';
 import { SchoolAthleteReport } from './SchoolAthleteReport';
@@ -16,7 +17,7 @@ import { QCollarReport } from './QCollarReport';
 import { PostgameReport } from './PostgameReport';
 import {
   michiganConfig, alabamaConfig, arkansasConfig,
-  oklahomaConfig, boiseStateConfig, wisconsinConfig, clemsonConfig,
+  oklahomaConfig, boiseStateConfig, wisconsinConfig,
   lsuConfig, virginiaConfig, oldDominionConfig, michiganStateConfig,
   uscConfig, ncStateConfig, pennStateConfig, uncConfig, texasConfig, arizonaConfig,
 } from '../config/schoolConfigs';
@@ -153,7 +154,7 @@ export function SchoolReportsPage() {
     }
     if (selectedSchool.id === 'clemson') {
       return (
-        <SchoolAthleteReport config={clemsonConfig} onBack={() => setSelectedSchool(null)} />
+        <ClemsonIPImpact onBack={() => setSelectedSchool(null)} />
       );
     }
     if (selectedSchool.id === 'notre-dame') {

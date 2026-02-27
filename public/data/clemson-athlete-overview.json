@@ -1,0 +1,47 @@
+{
+  "sourceFile": "clemson-content-posts.json",
+  "generatedAt": "2026-02-27T03:46:25.022Z",
+  "totalPosts": 3360,
+  "totalLikes": 7010378,
+  "totalComments": 174587,
+  "postsWithIP": 1244,
+  "ipAdoptionRate": 37,
+  "avgLift": 345.4765817965427,
+  "totalEmv": 3767069.5,
+  "collaboration": {
+    "posts": 848,
+    "likes": 4533.615566037736,
+    "comments": 58.014150943396224,
+    "engagementRate": 0.7141261866533185,
+    "delta": 279.78367146744137,
+    "emv": 1996047,
+    "baselineEngRate": 0.18803498947019373,
+    "baselinePosts": 2512,
+    "baselineLikes": 1260.2993630573249,
+    "baselineComments": 49.91679936305732
+  },
+  "logo": {
+    "posts": 585,
+    "likes": 2962.7470085470086,
+    "comments": 73.06495726495727,
+    "engagementRate": 0.3575670959107585,
+    "delta": 14.216183013933403,
+    "emv": 930718,
+    "baselineEngRate": 0.31306167521562017,
+    "baselinePosts": 2775,
+    "baselineLikes": 1901.6832432432432,
+    "baselineComments": 47.51135135135135
+  },
+  "mention": {
+    "posts": 124,
+    "likes": 14921.620967741936,
+    "comments": 188.49193548387098,
+    "engagementRate": 2.121365461398767,
+    "delta": 742.4298909082534,
+    "emv": 960200,
+    "baselineEngRate": 0.25181507497456534,
+    "baselinePosts": 3236,
+    "baselineLikes": 1594.5911619283065,
+    "baselineComments": 46.72867737948084
+  }
+}

@@ -6,6 +6,7 @@ import { TyceArmstrongEarnedMediaImpactReport } from './components/TyceArmstrong
 import { OhioStateIPImpact } from './components/OhioStateIPImpact';
 import { KentuckyIPImpact } from './components/KentuckyIPImpact';
 import { GeorgiaIPImpact } from './components/GeorgiaIPImpact';
+import { ClemsonIPImpact } from './components/ClemsonIPImpact';
 import { PlayflyReportHub } from './components/PlayflyReportHub';
 import { UCLABrandDeals } from './components/UCLABrandDeals';
 import { NotreDameBrandDeals } from './components/NotreDameBrandDeals';
@@ -18,7 +19,6 @@ import {
   alabamaConfig,
   arkansasConfig,
   oklahomaConfig,
-  clemsonConfig,
   wisconsinConfig,
   boiseStateConfig,
   lsuConfig,
@@ -104,7 +104,9 @@ function WisconsinRoute() {
 }
 
 function ClemsonRoute() {
-  return <SchoolAthleteReport config={clemsonConfig} />;
+  const navigate = useNavigate();
+  const canGoBack = window.history.length > 2;
+  return <ClemsonIPImpact onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
 function NotreDameRoute() {
@@ -203,7 +205,7 @@ function App() {
         <Route path="/oklahoma" element={<OklahomaRoute />} />
         <Route path="/wisconsin" element={<WisconsinRoute />} />
         <Route path="/clemson" element={<ClemsonRoute />} />
-        <Route path="/clemson-athlete" element={<ClemsonRoute />} />
+        <Route path="/clemson-athlete" element={<Navigate to="/clemson" replace />} />
         <Route path="/clemson-ip" element={<ClemsonRoute />} />
         <Route path="/notre-dame" element={<NotreDameRoute />} />
         <Route path="/notredame" element={<NotreDameRoute />} />
