@@ -520,7 +520,7 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
       const rosterMapById = new Map(
         rosterData.athletes
           .map((a: any) => [String(a?._id?.$oid || a?._id || ''), Number(a.followers || 0)] as const)
-          .filter(([id]) => !!id)
+          .filter(([id]: readonly [string, number]) => !!id)
       );
       const rosterMapByName = new Map(
         rosterData.athletes.map((a: any) => [normalizeName(a.name), Number(a.followers || 0)])
@@ -528,7 +528,7 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
       const rosterMarketabilityById = new Map(
         rosterData.athletes
           .map((a: any) => [String(a?._id?.$oid || a?._id || ''), Number(a.marketabilityScore ?? a.marketability ?? a.score ?? 0)] as const)
-          .filter(([id]) => !!id)
+          .filter(([id]: readonly [string, number]) => !!id)
       );
       const rosterMarketabilityByName = new Map(
         rosterData.athletes.map((a: any) => [normalizeName(a.name), Number(a.marketabilityScore ?? a.marketability ?? a.score ?? 0)])
