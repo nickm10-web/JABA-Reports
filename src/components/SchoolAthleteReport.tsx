@@ -195,7 +195,14 @@ const SCHOOL_THUMBNAILS: Record<string, string> = {
 
 const GLOBAL_BRAND_EXCLUSIONS = new Set(['bleacherreport', 'br_hoops', 'brhoops']);
 
-const normalizeName = (v?: string) => (v || '').trim().toLowerCase().replace(/\s+/g, ' ');
+const normalizeName = (v?: string) =>
+  (v || '')
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-zA-Z0-9\s]/g, ' ')
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, ' ');
 const normalizeHandle = (v?: string) => (v || '').trim().toLowerCase().replace(/^@/, '');
 const canonicalHandle = (v?: string) => normalizeHandle(v).replace(/[^a-z0-9]/g, '');
 
@@ -510,12 +517,18 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
     const derived = derivePosts(rawPosts, exclusions, schoolHandleMatchers, sponsoredPostExclusions);
     // Merge follower data from roster if available
     if (rosterData?.athletes) {
-      const rosterMapById = new Map(rosterData.athletes.map((a: any) => [a._id, Number(a.followers || 0)]));
+      const rosterMapById = new Map(
+        rosterData.athletes
+          .map((a: any) => [String(a?._id?.$oid || a?._id || ''), Number(a.followers || 0)] as const)
+          .filter(([id]) => !!id)
+      );
       const rosterMapByName = new Map(
         rosterData.athletes.map((a: any) => [normalizeName(a.name), Number(a.followers || 0)])
       );
       const rosterMarketabilityById = new Map(
-        rosterData.athletes.map((a: any) => [a._id, Number(a.marketabilityScore ?? a.marketability ?? a.score ?? 0)])
+        rosterData.athletes
+          .map((a: any) => [String(a?._id?.$oid || a?._id || ''), Number(a.marketabilityScore ?? a.marketability ?? a.score ?? 0)] as const)
+          .filter(([id]) => !!id)
       );
       const rosterMarketabilityByName = new Map(
         rosterData.athletes.map((a: any) => [normalizeName(a.name), Number(a.marketabilityScore ?? a.marketability ?? a.score ?? 0)])
