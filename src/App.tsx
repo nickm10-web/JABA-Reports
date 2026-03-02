@@ -8,6 +8,7 @@ import { KentuckyIPImpact } from './components/KentuckyIPImpact';
 import { GeorgiaIPImpact } from './components/GeorgiaIPImpact';
 import { ClemsonIPImpact } from './components/ClemsonIPImpact';
 import { VirginiaIPImpact } from './components/VirginiaIPImpact';
+import { ArizonaIPImpact } from './components/ArizonaIPImpact';
 import { PlayflyReportHub } from './components/PlayflyReportHub';
 import { UCLABrandDeals } from './components/UCLABrandDeals';
 import { SchoolAthleteReport } from './components/SchoolAthleteReport';
@@ -30,7 +31,6 @@ import {
   pennStateConfig,
   uncConfig,
   texasConfig,
-  arizonaConfig,
 } from './config/schoolConfigs';
 
 // Wrapper components that provide navigation
@@ -156,7 +156,9 @@ function TexasRoute() {
 }
 
 function ArizonaRoute() {
-  return <SchoolAthleteReport config={arizonaConfig} />;
+  const navigate = useNavigate();
+  const canGoBack = window.history.length > 2;
+  return <ArizonaIPImpact onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
 function QCollarRoute() {

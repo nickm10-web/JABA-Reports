@@ -10,6 +10,7 @@ import { OhioStateIPImpact } from './OhioStateIPImpact';
 import { GeorgiaIPImpact } from './GeorgiaIPImpact';
 import { ClemsonIPImpact } from './ClemsonIPImpact';
 import { VirginiaIPImpact } from './VirginiaIPImpact';
+import { ArizonaIPImpact } from './ArizonaIPImpact';
 import { UCLABrandDeals } from './UCLABrandDeals';
 import { SchoolAthleteReport } from './SchoolAthleteReport';
 import { StJudeAthleteEventImpactReport } from './StJudeAthleteEventImpactReport';
@@ -19,7 +20,7 @@ import {
   michiganConfig, alabamaConfig, arkansasConfig,
   oklahomaConfig, boiseStateConfig, wisconsinConfig, notredameConfig,
   lsuConfig, oldDominionConfig, michiganStateConfig,
-  uscConfig, ncStateConfig, pennStateConfig, uncConfig, texasConfig, arizonaConfig,
+  uscConfig, ncStateConfig, pennStateConfig, uncConfig, texasConfig,
 } from '../config/schoolConfigs';
 
 
@@ -214,7 +215,7 @@ export function SchoolReportsPage() {
     }
     if (selectedSchool.id === 'arizona') {
       return (
-        <SchoolAthleteReport config={arizonaConfig} onBack={() => setSelectedSchool(null)} />
+        <ArizonaIPImpact onBack={() => setSelectedSchool(null)} />
       );
     }
     // If St. Jude is selected, show the brand impact report
