@@ -694,6 +694,7 @@ function OverviewTab({ overviewData }: { overviewData?: OverviewData | null }) {
     mention: ipData.mention,
   };
   const totalInteractions = overview.totalLikes + overview.totalComments;
+  const ipAdoptionDisplay = Number(overview.ipAdoptionRate || 0).toFixed(1);
   const collabEMV = overview.collaboration.posts * calculateEMV(overview.collaboration.likes, overview.collaboration.comments);
   const logoEMV = overview.logo.posts * calculateEMV(overview.logo.likes, overview.logo.comments);
   const mentionEMV = overview.mention.posts * calculateEMV(overview.mention.likes, overview.mention.comments);
@@ -775,7 +776,7 @@ function OverviewTab({ overviewData }: { overviewData?: OverviewData | null }) {
               </div>
               <p className="text-sm text-gray-700 leading-relaxed">
                 Virginia posts show{' '}
-                <span className="font-bold" style={{ color: colors.primary }}>{overview.ipAdoptionRate}% IP adoption</span>{' '}
+                <span className="font-bold" style={{ color: colors.primary }}>{ipAdoptionDisplay}% IP adoption</span>{' '}
                 across the program, signaling strong and consistent use of school identity in athlete content.
               </p>
             </div>
@@ -789,7 +790,7 @@ function OverviewTab({ overviewData }: { overviewData?: OverviewData | null }) {
                 <Lightbulb className="w-5 h-5" style={{ color: colors.primary }} />
               </div>
               <p className="text-sm text-gray-700 leading-relaxed">
-                <span className="font-bold">{formatNumber(overview.postsWithIP)} posts</span> ({overview.ipAdoptionRate}%) feature Virginia IP,
+                <span className="font-bold">{formatNumber(overview.postsWithIP)} posts</span> ({ipAdoptionDisplay}%) feature Virginia IP,
                 generating{' '}
                 <span className="font-bold" style={{ color: colors.primary }}>
                   {formatCurrency(overview.totalEmv)}
