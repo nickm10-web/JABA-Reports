@@ -184,6 +184,27 @@ function formatSportLabel(sportKey: string): string {
     .join(' ');
 }
 
+function formatTeamPageLabel(teamName: string): string {
+  const raw = String(teamName || '').trim();
+  if (!raw) return 'Virginia Team';
+
+  const normalized = raw.replace(/\s+/g, '_');
+  const looksLikeSportKey = normalized.includes('_') || /^[A-Z0-9_&]+$/.test(normalized);
+  if (!looksLikeSportKey) return raw;
+
+  return normalized
+    .toLowerCase()
+    .split('_')
+    .filter(Boolean)
+    .map((word) => {
+      if (word === 'mens') return "Men's";
+      if (word === 'womens') return "Women's";
+      if (word === 'and') return '&';
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join(' ');
+}
+
 function buildSportDataFromRoster(rows: VirginiaRosterTeam[]): SportSignalData {
   type Accumulator = {
     withPosts: number;
@@ -2508,9 +2529,9 @@ function ContentTab() {
                     rel="noopener noreferrer"
                     className="grid grid-cols-1 md:grid-cols-2 gap-4"
                   >
-                    {renderThumbnail(topVirginiaTeamPost.thumbnail, topVirginiaTeamPost.teamName)}
+                    {renderThumbnail(topVirginiaTeamPost.thumbnail, formatTeamPageLabel(topVirginiaTeamPost.teamName))}
                     <div className="space-y-3">
-                      <p className="font-semibold text-base" style={{ color: colors.text }}>{topVirginiaTeamPost.teamName}</p>
+                      <p className="font-semibold text-base" style={{ color: colors.text }}>{formatTeamPageLabel(topVirginiaTeamPost.teamName)}</p>
                       <p className="text-xs text-gray-500">{topVirginiaTeamPost.dateLabel}</p>
                       {topVirginiaTeamPost.caption && (
                         <p className="text-sm line-clamp-3" style={{ color: colors.textMuted }}>
@@ -2562,12 +2583,12 @@ function ContentTab() {
                           {idx + 1}
                         </span>
                         {post.thumbnail ? (
-                          <img src={post.thumbnail} alt={post.teamName} className="h-16 w-16 rounded-xl object-cover border border-gray-200 shadow-sm flex-shrink-0" loading="lazy" />
+                          <img src={post.thumbnail} alt={formatTeamPageLabel(post.teamName)} className="h-16 w-16 rounded-xl object-cover border border-gray-200 shadow-sm flex-shrink-0" loading="lazy" />
                         ) : (
                           <div className="h-16 w-16 rounded-xl bg-gray-100 border border-gray-200 flex-shrink-0" />
                         )}
                         <div className="min-w-0">
-                          <p className="text-base font-semibold text-gray-900 truncate">{post.teamName}</p>
+                          <p className="text-base font-semibold text-gray-900 truncate">{formatTeamPageLabel(post.teamName)}</p>
                           <p className="text-sm text-gray-600 truncate">{post.dateLabel}</p>
                           {post.caption && (
                             <p className="text-sm text-gray-600 line-clamp-2 mt-1">{post.caption}</p>
