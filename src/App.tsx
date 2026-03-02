@@ -9,7 +9,6 @@ import { GeorgiaIPImpact } from './components/GeorgiaIPImpact';
 import { ClemsonIPImpact } from './components/ClemsonIPImpact';
 import { PlayflyReportHub } from './components/PlayflyReportHub';
 import { UCLABrandDeals } from './components/UCLABrandDeals';
-import { NotreDameBrandDeals } from './components/NotreDameBrandDeals';
 import { SchoolAthleteReport } from './components/SchoolAthleteReport';
 import { QCollarReport } from './components/QCollarReport';
 import { PostgameReport } from './components/PostgameReport';
@@ -20,6 +19,7 @@ import {
   arkansasConfig,
   oklahomaConfig,
   wisconsinConfig,
+  notredameConfig,
   boiseStateConfig,
   lsuConfig,
   virginiaConfig,
@@ -110,9 +110,7 @@ function ClemsonRoute() {
 }
 
 function NotreDameRoute() {
-  const navigate = useNavigate();
-  const canGoBack = window.history.length > 2;
-  return <NotreDameBrandDeals onBack={canGoBack ? () => navigate('/') : undefined} />;
+  return <SchoolAthleteReport config={notredameConfig} />;
 }
 
 function BoiseStateRoute() {
