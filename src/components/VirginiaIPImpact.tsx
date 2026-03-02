@@ -2838,7 +2838,7 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
     <div className="space-y-6">
       <div className="flex items-start justify-between gap-4">
         <div>
-          <SectionHeader primary="CLEMSON " secondary="TEAM PAGES" />
+          <SectionHeader primary="VIRGINIA " secondary="TEAM PAGES" />
           <p className="text-sm mt-2" style={{ color: colors.textMuted }}>
             {view === 'overview' ? 'Official Virginia athletics social account performance.' : 'Benchmark Virginia team pages against conference and NCAA.'}
           </p>
@@ -3064,6 +3064,27 @@ interface KYSportSchoolEntry {
   engagementRate: number;
 }
 
+const ACC_TEAM_SCHOOL_KEYS = new Set<string>([
+  'bostoncollege',
+  'california',
+  'clemson',
+  'duke',
+  'floridastate',
+  'georgiatech',
+  'louisville',
+  'miami',
+  'ncstate',
+  'notredame',
+  'pittsburgh',
+  'smu',
+  'stanford',
+  'syracuse',
+  'unc',
+  'virginia',
+  'virginiatech',
+  'wakeforest',
+]);
+
 function VirginiaTeamPageLeaderboard() {
   const [rawRows, setRawRows] = useState<KYTeamRosterRow[]>([]);
   const [scope, setScope] = useState<'conference' | 'ncaa'>('conference');
@@ -3086,7 +3107,9 @@ function VirginiaTeamPageLeaderboard() {
 
   // Get available sports that Virginia has
   const ukSports = useMemo(() => {
-    const sports = rawRows.filter(r => r.schoolName === 'University of Virginia').map(r => r.sport);
+    const sports = rawRows
+      .filter((r) => normalizeSchoolKey(r.schoolName) === 'virginia')
+      .map((r) => r.sport);
     return [...new Set(sports)].sort((a, b) => formatSportLabel(a).localeCompare(formatSportLabel(b)));
   }, [rawRows]);
 
@@ -3094,30 +3117,40 @@ function VirginiaTeamPageLeaderboard() {
 
   const filtered = useMemo(() => {
     let rows = rawRows;
-    if (isConference) rows = rows.filter(r => r.conferenceName === 'ACC');
+    if (isConference) {
+      rows = rows.filter((r) => ACC_TEAM_SCHOOL_KEYS.has(normalizeSchoolKey(r.schoolName)));
+    }
     if (selectedSport !== 'ALL') rows = rows.filter(r => r.sport === selectedSport);
 
     // Aggregate by school
     const map: Record<string, KYSportSchoolEntry> = {};
     for (const row of rows) {
-      const s = row.schoolName;
-      if (!s) continue;
-      if (!map[s]) map[s] = { name: s, conf: row.conferenceName || '', followers: 0, posts: 0, likes: 0, engagementRate: 0 };
+      const schoolName = String(row.schoolName || '').trim();
+      const schoolKey = normalizeSchoolKey(schoolName);
+      if (!schoolKey) continue;
+      if (!map[schoolKey]) {
+        map[schoolKey] = {
+          name: schoolName,
+          conf: ACC_TEAM_SCHOOL_KEYS.has(schoolKey) ? 'ACC' : (row.conferenceName || ''),
+          followers: 0,
+          posts: 0,
+          likes: 0,
+          engagementRate: 0,
+        };
+      }
       const m = row.metrics?.thirtyDays;
-      map[s].followers += m?.followers || 0;
-      map[s].posts += m?.contentCount || 0;
-      map[s].likes += m?.likes || 0;
+      map[schoolKey].followers += m?.followers || 0;
+      map[schoolKey].posts += m?.contentCount || 0;
+      map[schoolKey].likes += m?.likes || 0;
     }
     for (const s of Object.values(map)) {
       s.engagementRate = s.posts > 0 ? s.likes / s.posts : 0;
     }
-    const MIN_FOLLOWERS_FOR_TEAM_LEADERBOARD = 10000;
     return Object.values(map)
-      .filter((school) => school.followers >= MIN_FOLLOWERS_FOR_TEAM_LEADERBOARD)
       .sort((a, b) => b[sortMetric] - a[sortMetric]);
   }, [rawRows, scope, selectedSport, sortMetric, isConference]);
 
-  const ukIndex = filtered.findIndex(s => s.name === 'Virginia');
+  const ukIndex = filtered.findIndex((s) => normalizeSchoolKey(s.name) === 'virginia');
   const ukRank = ukIndex >= 0 ? ukIndex + 1 : null;
   const scopeLabel = isConference ? 'ACC' : 'NCAA';
   const sportLabel = selectedSport === 'ALL' ? 'All Sports' : formatSportLabel(selectedSport);
@@ -3212,7 +3245,7 @@ function VirginiaTeamPageLeaderboard() {
           </thead>
           <tbody>
             {filtered.map((school, idx) => {
-              const isUK = school.name === 'Virginia';
+              const isUK = normalizeSchoolKey(school.name) === 'virginia';
               return (
                 <tr
                   key={school.name}
