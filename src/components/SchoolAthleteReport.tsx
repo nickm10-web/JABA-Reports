@@ -3113,10 +3113,14 @@ function IPTab({
                 key={m.id}
                 onClick={() => setMetric(m.id)}
                 className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-                  metric === m.id ? 'text-[#0F1D2E] shadow-sm' : 'text-[#5B6B82] hover:text-[#1E2A3B]'
+                  metric === m.id ? 'shadow-sm' : 'text-[#5B6B82] hover:text-[#1E2A3B]'
                 }`}
                 style={metric === m.id
-                  ? { backgroundColor: secondaryColor, border: secondaryIsLight ? '1px solid #D6DEE8' : undefined }
+                  ? {
+                      backgroundColor: secondaryColor,
+                      color: secondaryIsLight ? '#0F1D2E' : '#FFFFFF',
+                      border: secondaryIsLight ? '1px solid #D6DEE8' : undefined,
+                    }
                   : undefined}
               >
                 {m.label}
