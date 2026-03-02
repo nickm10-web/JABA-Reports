@@ -7,6 +7,7 @@ import { OhioStateIPImpact } from './components/OhioStateIPImpact';
 import { KentuckyIPImpact } from './components/KentuckyIPImpact';
 import { GeorgiaIPImpact } from './components/GeorgiaIPImpact';
 import { ClemsonIPImpact } from './components/ClemsonIPImpact';
+import { VirginiaIPImpact } from './components/VirginiaIPImpact';
 import { PlayflyReportHub } from './components/PlayflyReportHub';
 import { UCLABrandDeals } from './components/UCLABrandDeals';
 import { SchoolAthleteReport } from './components/SchoolAthleteReport';
@@ -22,7 +23,6 @@ import {
   notredameConfig,
   boiseStateConfig,
   lsuConfig,
-  virginiaConfig,
   oldDominionConfig,
   michiganStateConfig,
   uscConfig,
@@ -122,7 +122,9 @@ function LSURoute() {
 }
 
 function VirginiaRoute() {
-  return <SchoolAthleteReport config={virginiaConfig} />;
+  const navigate = useNavigate();
+  const canGoBack = window.history.length > 2;
+  return <VirginiaIPImpact onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
 function OldDominionRoute() {

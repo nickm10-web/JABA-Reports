@@ -9,6 +9,7 @@ import { KentuckyIPImpact } from './KentuckyIPImpact';
 import { OhioStateIPImpact } from './OhioStateIPImpact';
 import { GeorgiaIPImpact } from './GeorgiaIPImpact';
 import { ClemsonIPImpact } from './ClemsonIPImpact';
+import { VirginiaIPImpact } from './VirginiaIPImpact';
 import { UCLABrandDeals } from './UCLABrandDeals';
 import { SchoolAthleteReport } from './SchoolAthleteReport';
 import { StJudeAthleteEventImpactReport } from './StJudeAthleteEventImpactReport';
@@ -17,7 +18,7 @@ import { PostgameReport } from './PostgameReport';
 import {
   michiganConfig, alabamaConfig, arkansasConfig,
   oklahomaConfig, boiseStateConfig, wisconsinConfig, notredameConfig,
-  lsuConfig, virginiaConfig, oldDominionConfig, michiganStateConfig,
+  lsuConfig, oldDominionConfig, michiganStateConfig,
   uscConfig, ncStateConfig, pennStateConfig, uncConfig, texasConfig, arizonaConfig,
 } from '../config/schoolConfigs';
 
@@ -173,7 +174,7 @@ export function SchoolReportsPage() {
     }
     if (selectedSchool.id === 'virginia') {
       return (
-        <SchoolAthleteReport config={virginiaConfig} onBack={() => setSelectedSchool(null)} />
+        <VirginiaIPImpact onBack={() => setSelectedSchool(null)} />
       );
     }
     if (selectedSchool.id === 'old-dominion') {
