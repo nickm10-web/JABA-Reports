@@ -420,24 +420,6 @@ const fallbackSportData: Record<string, Record<string, { with: { posts: number; 
 
 const fallbackTeamFollowersBySport: Record<string, number> = {};
 
-const secSchools = [
-  { name: 'Virginia', conf: 'ACC', posts: 4299, adoption: 47.7, logoEng: 26.91, mentionEng: 22.80, collabEng: 42.84, followers: 1671393 },
-  { name: 'Texas A&M', conf: 'ACC', posts: 4317, adoption: 51.4, logoEng: 37.33, mentionEng: 70.72, collabEng: 69.92, followers: 1878601 },
-  { name: 'Auburn', conf: 'ACC', posts: 6405, adoption: 48.1, logoEng: 32.51, mentionEng: 40.00, collabEng: 60.09, followers: 2323541 },
-  { name: 'LSU', conf: 'ACC', posts: 5450, adoption: 46.1, logoEng: 36.15, mentionEng: 48.38, collabEng: 77.49, followers: 5170563 },
-  { name: 'Oklahoma', conf: 'ACC', posts: 2802, adoption: 45.6, logoEng: 38.26, mentionEng: 18.39, collabEng: 0, followers: 1703577 },
-  { name: 'Ole Miss', conf: 'ACC', posts: 2309, adoption: 43.6, logoEng: 35.18, mentionEng: 46.81, collabEng: 61.42, followers: 0 },
-  { name: 'Missouri', conf: 'ACC', posts: 5726, adoption: 42.6, logoEng: 34.86, mentionEng: 38.38, collabEng: 86.37, followers: 1271953 },
-  { name: 'Alabama', conf: 'ACC', posts: 5750, adoption: 40.3, logoEng: 34.34, mentionEng: 47.36, collabEng: 44.94, followers: 3966222 },
-  { name: 'Arkansas', conf: 'ACC', posts: 5715, adoption: 36.8, logoEng: 36.05, mentionEng: 50.99, collabEng: 67.65, followers: 2827038 },
-  { name: 'Mississippi State', conf: 'ACC', posts: 2239, adoption: 34.4, logoEng: 23.38, mentionEng: 12.26, collabEng: 35.50, followers: 0 },
-  { name: 'Vanderbilt', conf: 'ACC', posts: 2246, adoption: 30.0, logoEng: 25.10, mentionEng: 56.55, collabEng: 115.29, followers: 0 },
-  { name: 'Texas', conf: 'ACC', posts: 6186, adoption: 26.4, logoEng: 37.31, mentionEng: 44.84, collabEng: 86.53, followers: 3552007 },
-  { name: 'Georgia', conf: 'ACC', posts: 6868, adoption: 44.9, logoEng: 27.14, mentionEng: 39.78, collabEng: 61.81, followers: 2864099 },
-  { name: 'Tennessee', conf: 'ACC', posts: 2459, adoption: 14.5, logoEng: 32.32, mentionEng: 21.92, collabEng: 87.13, followers: 1848323 },
-  { name: 'Florida', conf: 'ACC', posts: 2693, adoption: 12.9, logoEng: 33.36, mentionEng: 0, collabEng: 0, followers: 3163738 },
-];
-
 const ncaaD1Schools = [
   { name: 'Old Dominion', conf: 'Sun Belt', posts: 1577, adoption: 60.1, logoEng: 18.46, mentionEng: 18.06, collabEng: 37.56, followers: 406916 },
   { name: 'New Mexico', conf: 'MWC', posts: 1182, adoption: 55.6, logoEng: 26.86, mentionEng: 44.00, collabEng: 50.58, followers: 0 },
@@ -1598,7 +1580,9 @@ function BenchmarkTab() {
     return [...byKey.values()];
   };
   const baseSchools: BenchmarkSchool[] = useMemo(() => {
-    const base = (isConference ? secSchools : ncaaD1Schools) as BenchmarkSchool[];
+    const base = (isConference
+      ? ncaaD1Schools.filter((school) => school.conf === 'ACC')
+      : ncaaD1Schools) as BenchmarkSchool[];
     const followerFallbackBySchool: Record<string, number> = {
       Iowa: 1004448,
       TCU: 732360,
@@ -1635,7 +1619,7 @@ function BenchmarkTab() {
     if (selectedSport === 'ALL') return baseSchools;
 
     const nameByKey: Record<string, string> = {};
-    for (const school of [...secSchools, ...ncaaD1Schools] as BenchmarkSchool[]) {
+    for (const school of ncaaD1Schools as BenchmarkSchool[]) {
       const key = normalizeSchoolKey(school.name);
       if (!nameByKey[key]) nameByKey[key] = school.name;
     }
