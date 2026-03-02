@@ -284,6 +284,12 @@ const canonicalizeSchoolName = (value?: string) => {
   if (tokens.includes('tcu')) return 'tcu';
   if (tokens.includes('utsa')) return 'utsa';
   if (tokens.includes('ole') && tokens.includes('miss')) return 'olemiss';
+  // Resolve full-name patterns to acronym IDs where appropriate.
+  if (tokens.includes('california') && tokens.includes('los') && tokens.includes('angeles')) return 'ucla';
+  if (tokens.includes('southern') && tokens.includes('california')) return 'usc';
+  if (tokens.includes('north') && tokens.includes('carolina')) return 'unc';
+  if (tokens.includes('louisiana') && tokens.includes('state')) return 'lsu';
+  if (tokens.includes('central') && tokens.includes('florida')) return 'ucf';
 
   const stripped = tokens.filter((token) => !['the', 'university', 'college', 'of', 'at', 'and'].includes(token));
   return stripped.join('');
@@ -2578,11 +2584,12 @@ function BenchmarksTab({ config, athletes, totalEmv, primaryColor }: {
   const canonicalFallbackKeys = useMemo(() => {
     const rows = fallbackSchools.map((school) => {
       const canonical = normalizeSchool(school.id || school.shortName);
+      const acronym = normalizeSchool(acronymSchool(school.shortName));
       const variants = new Set<string>([
         normalizeSchool(school.id),
         normalizeSchool(school.shortName),
         canonicalizeSchoolName(school.shortName),
-        normalizeSchool(acronymSchool(school.shortName)),
+        acronym.length >= 2 ? acronym : '',
       ]);
       return { canonical, variants };
     });
@@ -2593,20 +2600,11 @@ function BenchmarksTab({ config, athletes, totalEmv, primaryColor }: {
     const primary = normalizeSchool(school.id || school.shortName);
     const loose = canonicalizeSchoolName(school.shortName);
     const acronym = normalizeSchool(acronymSchool(school.shortName));
-    const candidates = [primary, normalizeSchool(school.shortName), loose, acronym].filter(Boolean);
+    const candidates = [primary, normalizeSchool(school.shortName), loose, acronym.length >= 2 ? acronym : ''].filter(Boolean);
     if (!candidates.length) return '';
 
     for (const row of canonicalFallbackKeys) {
       if (candidates.some((c) => row.variants.has(c))) return row.canonical;
-    }
-
-    for (const candidate of candidates) {
-      for (const row of canonicalFallbackKeys) {
-        for (const variant of row.variants) {
-          if (!variant) continue;
-          if (candidate.includes(variant) || variant.includes(candidate)) return row.canonical;
-        }
-      }
     }
 
     return loose || primary;
