@@ -2633,6 +2633,22 @@ function BenchmarksTab({ config, athletes, totalEmv, primaryColor }: {
     const key = canonicalSchoolKey(school);
     if (key) mergedSchoolsMap.set(key, school);
   }
+  // Always pin the current school row to config benchmark values so curated school stats
+  // are not diluted by alternate dataset naming/aggregation.
+  const selfBenchmarkRow: ConferenceBenchmarkSchool = {
+    id: benchmark.id,
+    shortName: benchmark.shortName,
+    conference: benchmark.conference,
+    totalDeals: benchmark.totalDeals,
+    totalEMV: benchmark.totalEMV,
+    avgEngagement: benchmark.avgEngagement,
+    athleteCount: benchmark.athleteCount,
+    brandCount: benchmark.brandCount,
+  };
+  const selfBenchmarkKey = canonicalSchoolKey(selfBenchmarkRow);
+  if (selfBenchmarkKey) {
+    mergedSchoolsMap.set(selfBenchmarkKey, selfBenchmarkRow);
+  }
   const allSchools = mergedSchoolsMap.size
     ? [...mergedSchoolsMap.values()]
     : isBenchmarkLoading
