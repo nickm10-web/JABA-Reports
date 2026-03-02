@@ -1209,6 +1209,23 @@ function PartnershipsTab() {
   const pageSize = 20;
 
   const normalizeBrandKey = (brand: string) => brand.toLowerCase().replace(/^@/, '').replace(/[^a-z0-9]/g, '');
+  const normalizeSponsorPartner = (partner: string) => {
+    const cleaned = String(partner || '').trim();
+    if (!cleaned) return '';
+    const withAt = cleaned.startsWith('@') ? cleaned : `@${cleaned}`;
+    return withAt.toLowerCase();
+  };
+  const isLikelyNonBrandPartner = (partner: string) => {
+    const p = normalizeSponsorPartner(partner);
+    if (!p) return true;
+    // Filter obvious Arizona team/program handles from sponsored brand rows.
+    return (
+      p.startsWith('@arizona') ||
+      p.startsWith('@uarizona') ||
+      p.includes('wildcat') ||
+      p.includes('bear_down')
+    );
+  };
   const getBrandInitials = (brand: string) => brand.replace('@', '').trim().slice(0, 2).toUpperCase();
   const getBrandLogo = (brand: string) => brandLogoMap[normalizeBrandKey(brand)];
 
@@ -1247,22 +1264,75 @@ function PartnershipsTab() {
             // try next source
           }
         }
-        if (!payload) return;
-        const sponsorPartners = Array.isArray(payload?.sponsorPartners) ? payload.sponsorPartners : [];
-        const mapped = sponsorPartners
-          .map((row: any): Partnership => ({
-            brand: String(row?.sponsorPartner || '').trim(),
-            posts: Number(row?.totalContents || 0),
-            avgLikes: Number(row?.avgLikes || 0),
-            avgComments: Number(row?.avgComments || 0),
-            emv: Number(row?.emv || 0),
-            engagementRate: Number(row?.engagementRate || 0),
-            liftMultiplier: Number(row?.engagementRateLift || 0),
-          }))
-          .filter((row: Partnership) => row.brand.length > 0 && row.posts > 0);
+        if (payload) {
+          const sponsorPartners = Array.isArray(payload?.sponsorPartners) ? payload.sponsorPartners : [];
+          const mapped = sponsorPartners
+            .map((row: any): Partnership => ({
+              brand: normalizeSponsorPartner(row?.sponsorPartner || ''),
+              posts: Number(row?.totalContents || 0),
+              avgLikes: Number(row?.avgLikes || 0),
+              avgComments: Number(row?.avgComments || 0),
+              emv: Number(row?.emv || 0),
+              engagementRate: Number(row?.engagementRate || 0),
+              liftMultiplier: Number(row?.engagementRateLift || 0),
+            }))
+            .filter((row: Partnership) => row.brand.length > 0 && row.posts > 0 && !isLikelyNonBrandPartner(row.brand));
 
-        if (!canceled) {
-          setPartnershipRows(mapped);
+          if (!canceled && mapped.length > 0) {
+            setPartnershipRows(mapped);
+          }
+        }
+      } catch {
+        // Fall back to deriving sponsorship partners from Arizona content posts.
+      }
+
+      try {
+        const contentResponse = await fetch('/data/arizona-content-posts.json');
+        if (!contentResponse.ok) return;
+        const contentRows = (await contentResponse.json()) as any[];
+        const sponsoredRows = contentRows.filter((row) => Boolean(row?.isSponsored) && row?.sponsorPartner);
+        if (!sponsoredRows.length) return;
+
+        const baselineRows = contentRows.filter((row) => !row?.isSponsored);
+        const baselineER =
+          baselineRows.length > 0
+            ? baselineRows.reduce((sum, row) => sum + Number(row?.metrics?.engagementRate || 0), 0) / baselineRows.length
+            : 0;
+
+        type Bucket = { posts: number; likesTotal: number; commentsTotal: number; erTotal: number };
+        const byPartner: Record<string, Bucket> = {};
+        for (const row of sponsoredRows) {
+          const partner = normalizeSponsorPartner(row?.sponsorPartner || '');
+          if (!partner || isLikelyNonBrandPartner(partner)) continue;
+          if (!byPartner[partner]) {
+            byPartner[partner] = { posts: 0, likesTotal: 0, commentsTotal: 0, erTotal: 0 };
+          }
+          byPartner[partner].posts += 1;
+          byPartner[partner].likesTotal += Number(row?.metrics?.likes || 0);
+          byPartner[partner].commentsTotal += Number(row?.metrics?.comments || 0);
+          byPartner[partner].erTotal += Number(row?.metrics?.engagementRate || 0);
+        }
+
+        const derived: Partnership[] = Object.entries(byPartner)
+          .map(([brand, bucket]) => {
+            const avgLikes = bucket.posts > 0 ? bucket.likesTotal / bucket.posts : 0;
+            const avgComments = bucket.posts > 0 ? bucket.commentsTotal / bucket.posts : 0;
+            const engagementRate = bucket.posts > 0 ? bucket.erTotal / bucket.posts : 0;
+            const liftMultiplier = baselineER > 0 ? engagementRate / baselineER : 0;
+            return {
+              brand,
+              posts: bucket.posts,
+              avgLikes,
+              avgComments,
+              emv: calculateEMV(bucket.likesTotal, bucket.commentsTotal),
+              engagementRate,
+              liftMultiplier,
+            };
+          })
+          .filter((row) => row.posts > 0);
+
+        if (!canceled && derived.length > 0) {
+          setPartnershipRows((prev) => (prev.length > 0 ? prev : derived));
         }
       } catch {
         // keep fallback below
@@ -3599,7 +3669,7 @@ export function ArizonaIPImpact({ onBack }: { onBack?: () => void }) {
                   style={{ fontFamily: "'Oswald', sans-serif", fontStyle: 'italic' }}
                 >
                   <span style={{ color: colors.primary }}>Arizona </span>
-                  <span className="hidden sm:inline"><span style={{ color: colors.primary }}>Cavaliers </span><span style={{ color: colors.headerGray }}>IP Impact Report</span></span>
+                  <span className="hidden sm:inline"><span style={{ color: colors.primary }}>Wildcats </span><span style={{ color: colors.headerGray }}>IP Impact Report</span></span>
                   <span className="sm:hidden" style={{ color: colors.headerGray }}>IP Impact</span>
                 </h1>
                 <p className="text-[10px] uppercase tracking-[0.2em] text-gray-400 mt-0.5">
