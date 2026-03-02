@@ -19,6 +19,10 @@ export interface SchoolConfig {
   logoUrl: string;
   conference: string;
   dataFile: string;
+  /** Optional override for athlete roster metrics data */
+  rosterDataFile?: string;
+  /** Optional override for official team-account metrics data */
+  teamDataFile?: string;
   colors: NilSchoolColors;
   peerSchools: PeerSchool[];
   benchmark: PeerSchool;
@@ -409,6 +413,8 @@ export const notredameConfig: SchoolConfig = {
   logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/87.png',
   conference: 'Independent / ACC',
   dataFile: '/data/notre-dame-content-posts.json',
+  rosterDataFile: '/data/NotreRoster.json',
+  teamDataFile: '/data/NotreTeams.json',
   colors: {
     primary: '#0C2340',
     secondary: '#C99700',

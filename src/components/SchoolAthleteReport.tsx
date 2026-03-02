@@ -167,6 +167,7 @@ const ROSTER_NAME_MATCHERS: Record<string, string[]> = {
   virginia: ['university of virginia', 'virginia'],
   'boise-state': ['boise state', 'boise state university'],
   'old-dominion': ['old dominion university', 'old dominion'],
+  'notre-dame': ['notre dame', 'university of notre dame', 'the university of notre dame'],
   usc: ['university of southern california (usc)', 'university of southern california', 'usc'],
   'nc-state': ['north carolina state university', 'north carolina state', 'nc state'],
   'penn-state': ['penn state university', 'penn state'],
@@ -513,7 +514,7 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
       .catch(() => []);
 
     // Try to fetch roster file (optional)
-    const rosterFile = `/data/${config.id}-roster.json`;
+    const rosterFile = config.rosterDataFile || `/data/${config.id}-roster.json`;
     const rosterPromise = fetch(rosterFile)
       .then(r => r.ok ? r.json() : null)
       .catch(() => null);
@@ -539,7 +540,8 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
       return [] as FallbackRosterRow[];
     })();
 
-    const teamRosterPromise = fetch('/data/roster_teams.json')
+    const teamRosterFile = config.teamDataFile || '/data/roster_teams.json';
+    const teamRosterPromise = fetch(teamRosterFile)
       .then(r => r.ok ? r.json() : [])
       .then((rows: TeamRosterRow[]) => Array.isArray(rows) ? rows : [])
       .catch(() => []);
@@ -552,7 +554,7 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
         setTeamRosterRows(teamRows);
       })
       .finally(() => setLoading(false));
-  }, [config.dataFile, config.id]);
+  }, [config.dataFile, config.id, config.rosterDataFile, config.teamDataFile]);
 
   const { athletes, sponsored } = useMemo(() => {
     const exclusions = new Set([
