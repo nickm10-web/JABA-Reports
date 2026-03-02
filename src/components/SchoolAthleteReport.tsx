@@ -264,6 +264,30 @@ const acronymSchool = (value?: string) =>
     .filter((part) => part !== 'of' && part !== 'the' && part !== 'at' && part !== 'and')
     .map((part) => part[0])
     .join('');
+const canonicalizeSchoolName = (value?: string) => {
+  const tokens = (value || '')
+    .toLowerCase()
+    .replace(/&/g, ' and ')
+    .replace(/\([^)]*\)/g, ' ')
+    .split(/[^a-z0-9]+/)
+    .filter(Boolean);
+  if (!tokens.length) return '';
+
+  // Common acronym schools that should collapse to canonical IDs.
+  if (tokens.includes('ucla')) return 'ucla';
+  if (tokens.includes('usc')) return 'usc';
+  if (tokens.includes('unc')) return 'unc';
+  if (tokens.includes('lsu')) return 'lsu';
+  if (tokens.includes('ucf')) return 'ucf';
+  if (tokens.includes('byu')) return 'byu';
+  if (tokens.includes('smu')) return 'smu';
+  if (tokens.includes('tcu')) return 'tcu';
+  if (tokens.includes('utsa')) return 'utsa';
+  if (tokens.includes('ole') && tokens.includes('miss')) return 'olemiss';
+
+  const stripped = tokens.filter((token) => !['the', 'university', 'college', 'of', 'at', 'and'].includes(token));
+  return stripped.join('');
+};
 
 const slugify = (value: string) =>
   value.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
@@ -2557,6 +2581,8 @@ function BenchmarksTab({ config, athletes, totalEmv, primaryColor }: {
       const variants = new Set<string>([
         normalizeSchool(school.id),
         normalizeSchool(school.shortName),
+        canonicalizeSchoolName(school.shortName),
+        normalizeSchool(acronymSchool(school.shortName)),
       ]);
       return { canonical, variants };
     });
@@ -2565,32 +2591,25 @@ function BenchmarksTab({ config, athletes, totalEmv, primaryColor }: {
 
   const canonicalSchoolKey = (school: ConferenceBenchmarkSchool) => {
     const primary = normalizeSchool(school.id || school.shortName);
-    if (!primary) return '';
+    const loose = canonicalizeSchoolName(school.shortName);
+    const acronym = normalizeSchool(acronymSchool(school.shortName));
+    const candidates = [primary, normalizeSchool(school.shortName), loose, acronym].filter(Boolean);
+    if (!candidates.length) return '';
 
     for (const row of canonicalFallbackKeys) {
-      if (row.variants.has(primary)) return row.canonical;
+      if (candidates.some((c) => row.variants.has(c))) return row.canonical;
     }
 
-    const shortNorm = normalizeSchool(school.shortName);
-    if (shortNorm) {
+    for (const candidate of candidates) {
       for (const row of canonicalFallbackKeys) {
         for (const variant of row.variants) {
           if (!variant) continue;
-          if (shortNorm.includes(variant) || variant.includes(shortNorm)) return row.canonical;
+          if (candidate.includes(variant) || variant.includes(candidate)) return row.canonical;
         }
       }
     }
 
-    const acronym = normalizeSchool(acronymSchool(school.shortName));
-    if (acronym) {
-      for (const row of canonicalFallbackKeys) {
-        for (const variant of row.variants) {
-          if (acronym === variant) return row.canonical;
-        }
-      }
-    }
-
-    return primary;
+    return loose || primary;
   };
 
   const conferenceKey = normalizeConference(conference);
