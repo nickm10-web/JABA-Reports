@@ -57,14 +57,22 @@ const BIG_TEN_PEERS: PeerSchool[] = [
 
 // SEC (for Alabama + Arkansas + Oklahoma)
 const SEC_PEERS: PeerSchool[] = [
-  peer('ohio-state', 'The Ohio State University', 'Ohio State', 194, 'Big Ten', 1021, 12886615, 35.29, 'Football', 707, 437, [1,1,1,1,1,1,1,1,1,1,1,1]),
-  peer('texas', 'University of Texas', 'Texas', 251, 'SEC', 609, 6849245, 28.26, 'Football', 432, 294, [2,2,2,2,2,2,2,2,2,2,2,2]),
-  peer('georgia', 'University of Georgia', 'Georgia', 61, 'SEC', 617, 6221304, 22.51, 'Football', 370, 357, [3,3,3,3,3,3,3,3,3,3,3,3]),
-  peer('lsu', 'Louisiana State University', 'LSU', 99, 'SEC', 353, 7590985, 25.89, 'Football', 305, 219, [4,4,4,4,4,4,4,4,4,4,4,4]),
-  peer('alabama', 'The University of Alabama', 'Alabama', 333, 'SEC', 489, 7923447, 24.52, 'Football', 379, 261, [5,5,5,5,5,5,5,5,5,5,5,5]),
-  peer('auburn', 'Auburn University', 'Auburn', 2, 'SEC', 298, 4971634, 24.35, 'Football', 384, 164, [6,6,6,6,6,6,6,6,6,6,6,6]),
-  peer('arkansas', 'University of Arkansas', 'Arkansas', 8, 'SEC', 380, 4355212, 22.87, 'Football', 384, 246, [7,7,7,7,7,7,7,7,7,7,7,7]),
-  peer('texas-am', 'Texas A&M University', 'Texas A&M', 245, 'SEC', 274, 4332778, 31.51, 'Football', 274, 163, [8,8,8,8,8,8,8,8,8,8,8,8]),
+  peer('georgia', 'University of Georgia', 'Georgia', 61, 'SEC', 617, 6221304, 20.24, 'Football', 370, 334, [1,1,1,1,1,1,1,1,1,1,1,1]),
+  peer('texas', 'University of Texas', 'Texas', 251, 'SEC', 609, 6849245, 21.96, 'Football', 432, 278, [2,2,2,2,2,2,2,2,2,2,2,2]),
+  peer('alabama', 'The University of Alabama', 'Alabama', 333, 'SEC', 489, 7923447, 20.52, 'Football', 379, 243, [3,3,3,3,3,3,3,3,3,3,3,3]),
+  peer('arkansas', 'University of Arkansas', 'Arkansas', 8, 'SEC', 380, 4355212, 20.29, 'Football', 384, 240, [4,4,4,4,4,4,4,4,4,4,4,4]),
+  peer('lsu', 'Louisiana State University', 'LSU', 99, 'SEC', 353, 7590985, 19.88, 'Football', 305, 210, [5,5,5,5,5,5,5,5,5,5,5,5]),
+  peer('missouri', 'University of Missouri', 'Missouri', 142, 'SEC', 328, 2914584, 24.26, 'Football', 400, 169, [6,6,6,6,6,6,6,6,6,6,6,6]),
+  peer('auburn', 'Auburn University', 'Auburn', 2, 'SEC', 307, 4971634, 20.78, 'Football', 384, 160, [7,7,7,7,7,7,7,7,7,7,7,7]),
+  peer('texas-am', 'Texas A&M University', 'Texas A&M', 245, 'SEC', 274, 4332778, 21.73, 'Football', 274, 157, [8,8,8,8,8,8,8,8,8,8,8,8]),
+  peer('kentucky', 'University of Kentucky', 'Kentucky', 96, 'SEC', 257, 4427364, 20.13, 'Football', 219, 153, [9,9,9,9,9,9,9,9,9,9,9,9]),
+  peer('oklahoma', 'University of Oklahoma', 'Oklahoma', 201, 'SEC', 237, 2870594, 22.26, 'Football', 225, 124, [10,10,10,10,10,10,10,10,10,10,10,10]),
+  peer('florida', 'University of Florida', 'Florida', 57, 'SEC', 230, 4834251, 19.89, 'Football', 210, 116, [11,11,11,11,11,11,11,11,11,11,11,11]),
+  peer('vanderbilt', 'Vanderbilt University', 'Vanderbilt', 238, 'SEC', 197, 1630532, 23.15, 'Football', 186, 94, [12,12,12,12,12,12,12,12,12,12,12,12]),
+  peer('tennessee', 'University of Tennessee', 'Tennessee', 2633, 'SEC', 165, 3021359, 23.06, 'Football', 199, 117, [13,13,13,13,13,13,13,13,13,13,13,13]),
+  peer('ole-miss', 'University of Mississippi (Ole Miss)', 'Ole Miss', 145, 'SEC', 104, 3329460, 22.67, 'Football', 192, 76, [14,14,14,14,14,14,14,14,14,14,14,14]),
+  peer('south-carolina', 'University of South Carolina', 'South Carolina', 2579, 'SEC', 0, 0, 0, 'Football', 0, 0, [15,15,15,15,15,15,15,15,15,15,15,15]),
+  peer('mississippi-state', 'Mississippi State University', 'Mississippi State', 344, 'SEC', 0, 0, 0, 'Football', 0, 0, [16,16,16,16,16,16,16,16,16,16,16,16]),
 ];
 
 // Notre Dame national peers
