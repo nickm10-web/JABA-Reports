@@ -243,6 +243,12 @@ const normalizeConference = (value?: string) => {
   if (!raw) return '';
   if (raw.includes('big 10') || raw.includes('big ten')) return 'bigten';
   if (raw.includes('sec')) return 'sec';
+  if (raw.includes('acc') || raw.includes('atlantic coast')) return 'acc';
+  if (raw.includes('big 12') || raw.includes('big12')) return 'big12';
+  if (raw.includes('mountain west')) return 'mountainwest';
+  if (raw.includes('sun belt')) return 'sunbelt';
+  if (raw.includes('aac') || raw.includes('american athletic')) return 'aac';
+  if (raw.includes('independent')) return 'independent';
   return raw.replace(/[^a-z0-9]/g, '');
 };
 

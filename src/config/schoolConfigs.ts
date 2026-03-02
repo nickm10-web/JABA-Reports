@@ -79,6 +79,15 @@ const NOTRE_DAME_PEERS: PeerSchool[] = [
   peer('unc', 'University of North Carolina', 'UNC', 153, 'ACC', 198, 3044521, 29.9, 'Football', 226, 115, [8,8,8,8,8,8,8,8,8,8,8,8]),
 ];
 
+// ACC conference peers
+const ACC_PEERS: PeerSchool[] = [
+  peer('clemson', 'Clemson University', 'Clemson', 228, 'ACC', 259, 3767070, 32.08, 'Football', 240, 134, [1,1,1,1,1,1,1,1,1,1,1,1]),
+  peer('virginia', 'University of Virginia', 'Virginia', 258, 'ACC', 321, 6262872, 23.07, 'Football', 468, 188, [2,2,2,2,2,2,2,2,2,2,2,2]),
+  peer('unc', 'University of North Carolina', 'UNC', 153, 'ACC', 198, 3044521, 29.9, 'Football', 226, 115, [3,3,3,3,3,3,3,3,3,3,3,3]),
+  peer('nc-state', 'North Carolina State University', 'NC State', 152, 'ACC', 64, 1491590, 22.24, 'Football', 211, 41, [4,4,4,4,4,4,4,4,4,4,4,4]),
+  peer('notre-dame', 'University of Notre Dame', 'Notre Dame', 87, 'ACC', 197, 4107244, 30.6, 'Football', 200, 102, [5,5,5,5,5,5,5,5,5,5,5,5]),
+];
+
 // Mountain West (for Boise State)
 const MOUNTAIN_WEST_PEERS: PeerSchool[] = [
   peer('san-diego-state', 'San Diego State University', 'San Diego State', 21, 'Mountain West', 191, 928954, 17.87, 'Football', 311, 94, [1,1,1,1,1,1,1,1,1,1,1,1]),
@@ -361,7 +370,7 @@ export const clemsonConfig: SchoolConfig = {
     primaryDark: '#C74F00',
     primaryDeep: '#6F2A00',
   },
-  peerSchools: NOTRE_DAME_PEERS.filter(p => p.id !== 'clemson'),
+  peerSchools: ACC_PEERS.filter(p => p.id !== 'clemson'),
   benchmark: peer('clemson', 'Clemson University', 'Clemson', 228, 'ACC', 259, 3767070, 32.08, 'Football', 240, 134, [2,2,2,2,2,2,2,2,2,2,2,2]),
   brandExclusions: [
     'clemsonthreads',
@@ -489,7 +498,7 @@ export const virginiaConfig: SchoolConfig = {
     primaryDark: '#1a2138',
     primaryDeep: '#101523',
   },
-  peerSchools: NOTRE_DAME_PEERS,
+  peerSchools: ACC_PEERS.filter(p => p.id !== 'virginia'),
   benchmark: peer('virginia', 'University of Virginia', 'Virginia', 258, 'ACC', 321, 6262872, 23.07, 'Football', 468, 188, [5,5,5,5,5,5,5,5,5,5,5,5]),
   brandExclusions: [
     'arenausa',
@@ -616,7 +625,7 @@ export const ncStateConfig: SchoolConfig = {
     primaryDark: '#990000',
     primaryDeep: '#6f0000',
   },
-  peerSchools: NOTRE_DAME_PEERS,
+  peerSchools: ACC_PEERS.filter(p => p.id !== 'nc-state'),
   benchmark: peer('nc-state', 'North Carolina State University', 'NC State', 152, 'ACC', 64, 1491590, 22.24, 'Football', 211, 41, [6,6,6,6,6,6,6,6,6,6,6,6]),
   brandExclusions: [
     'athletesthread',
@@ -672,7 +681,7 @@ export const uncConfig: SchoolConfig = {
     primaryDark: '#5588ab',
     primaryDeep: '#355672',
   },
-  peerSchools: NOTRE_DAME_PEERS.filter(p => p.id !== 'unc'),
+  peerSchools: ACC_PEERS.filter(p => p.id !== 'unc'),
   benchmark: peer('unc', 'University of North Carolina', 'UNC', 153, 'ACC', 198, 3044521, 29.9, 'Football', 226, 115, [8,8,8,8,8,8,8,8,8,8,8,8]),
   brandExclusions: [
     'athletesthread',
