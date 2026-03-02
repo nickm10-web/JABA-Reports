@@ -3365,17 +3365,6 @@ export function VirginiaIPImpact({ onBack }: { onBack?: () => void }) {
 
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: colors.lightBg }}>
-      {/* Virginia background */}
-      <div
-        className="fixed inset-0 z-0 opacity-[0.03]"
-        style={{
-          backgroundImage: 'url(/Virginia_thumnail.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
-        }}
-      />
-
       {/* Sticky Command Bar */}
       <header
         ref={headerRef}
