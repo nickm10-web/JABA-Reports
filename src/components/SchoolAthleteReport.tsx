@@ -2607,7 +2607,7 @@ function BenchmarksTab({ config, athletes, totalEmv, primaryColor }: {
       if (candidates.some((c) => row.variants.has(c))) return row.canonical;
     }
 
-    return loose || primary;
+    return primary;
   };
 
   const conferenceKey = normalizeConference(conference);
