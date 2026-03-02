@@ -1579,6 +1579,24 @@ function BenchmarkTab() {
   const [rosterRows, setRosterRows] = useState<SchoolFollowerRosterRow[]>([]);
   const [followersBySchool, setFollowersBySchool] = useState<Record<string, number>>({});
   const isConference = benchmarkType === 'conference';
+  const dedupeSchools = (rows: BenchmarkSchool[]): BenchmarkSchool[] => {
+    const byKey = new Map<string, BenchmarkSchool>();
+    for (const row of rows) {
+      const key = normalizeSchoolKey(row.name);
+      if (!key) continue;
+      const prev = byKey.get(key);
+      if (!prev) {
+        byKey.set(key, row);
+        continue;
+      }
+      // Keep the most representative row when duplicates exist in static benchmark arrays.
+      // Prefer larger post volume, then larger follower base.
+      if (row.posts > prev.posts || (row.posts === prev.posts && row.followers > prev.followers)) {
+        byKey.set(key, row);
+      }
+    }
+    return [...byKey.values()];
+  };
   const baseSchools: BenchmarkSchool[] = useMemo(() => {
     const base = (isConference ? secSchools : ncaaD1Schools) as BenchmarkSchool[];
     const followerFallbackBySchool: Record<string, number> = {
@@ -1586,7 +1604,7 @@ function BenchmarkTab() {
       TCU: 732360,
       'Iowa State': 1238932,
     };
-    return base.map((school) => {
+    const enriched = base.map((school) => {
       const normalized = normalizeSchoolKey(school.name);
       const rosterFollowers =
         normalized === 'mississippistate'
@@ -1602,6 +1620,7 @@ function BenchmarkTab() {
               : followerFallbackBySchool[school.name] ?? 0,
       };
     });
+    return dedupeSchools(enriched);
   }, [isConference, followersBySchool]);
 
   const availableSports = useMemo(() => {
