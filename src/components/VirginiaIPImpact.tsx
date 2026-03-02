@@ -1561,6 +1561,26 @@ function BenchmarkTab() {
   const [rosterRows, setRosterRows] = useState<SchoolFollowerRosterRow[]>([]);
   const [followersBySchool, setFollowersBySchool] = useState<Record<string, number>>({});
   const isConference = benchmarkType === 'conference';
+  const ACC_SCHOOL_KEYS = new Set<string>([
+    'bostoncollege',
+    'california',
+    'clemson',
+    'duke',
+    'floridastate',
+    'georgiatech',
+    'louisville',
+    'miami',
+    'ncstate',
+    'notredame',
+    'pittsburgh',
+    'smu',
+    'stanford',
+    'syracuse',
+    'unc',
+    'virginia',
+    'virginiatech',
+    'wakeforest',
+  ]);
   const dedupeSchools = (rows: BenchmarkSchool[]): BenchmarkSchool[] => {
     const byKey = new Map<string, BenchmarkSchool>();
     for (const row of rows) {
@@ -1581,7 +1601,7 @@ function BenchmarkTab() {
   };
   const baseSchools: BenchmarkSchool[] = useMemo(() => {
     const base = (isConference
-      ? ncaaD1Schools.filter((school) => school.conf === 'ACC')
+      ? ncaaD1Schools.filter((school) => ACC_SCHOOL_KEYS.has(normalizeSchoolKey(school.name)))
       : ncaaD1Schools) as BenchmarkSchool[];
     const followerFallbackBySchool: Record<string, number> = {
       Iowa: 1004448,
@@ -1639,7 +1659,10 @@ function BenchmarkTab() {
 
     for (const row of rosterRows) {
       if (row.sport !== selectedSport) continue;
-      if (isConference && row.conferenceName !== 'ACC') continue;
+      if (isConference) {
+        const schoolKey = normalizeSchoolKey(String(row.schoolName || ''));
+        if (!ACC_SCHOOL_KEYS.has(schoolKey)) continue;
+      }
 
       const schoolName = String(row.schoolName || '').trim();
       const key = normalizeSchoolKey(schoolName);
