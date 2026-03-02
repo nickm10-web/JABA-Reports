@@ -694,7 +694,7 @@ function OverviewTab({ overviewData }: { overviewData?: OverviewData | null }) {
     mention: ipData.mention,
   };
   const totalInteractions = overview.totalLikes + overview.totalComments;
-  const ipAdoptionDisplay = Number(overview.ipAdoptionRate || 0).toFixed(1);
+  const ipAdoptionDisplay = Number(overview.ipAdoptionRate || 0).toFixed(2);
   const collabEMV = overview.collaboration.posts * calculateEMV(overview.collaboration.likes, overview.collaboration.comments);
   const logoEMV = overview.logo.posts * calculateEMV(overview.logo.likes, overview.logo.comments);
   const mentionEMV = overview.mention.posts * calculateEMV(overview.mention.likes, overview.mention.comments);
