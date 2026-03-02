@@ -564,23 +564,48 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
     const sponsoredPostExclusions = new Set((config.sponsoredPostExclusions || []).map(String));
     const schoolHandleMatchers = [config.shortName, config.name, ...(ROSTER_NAME_MATCHERS[config.id] || [])];
     const derived = derivePosts(rawPosts, exclusions, schoolHandleMatchers, sponsoredPostExclusions);
-    // Merge follower data from roster if available
-    if (rosterData?.athletes) {
+    // Merge follower + marketability data from roster if available.
+    // Supports both shapes:
+    // 1) { athletes: [...] } and 2) [...] (raw roster array)
+    const rosterAthletes: any[] = Array.isArray(rosterData)
+      ? rosterData
+      : (Array.isArray(rosterData?.athletes) ? rosterData.athletes : []);
+    if (rosterAthletes.length) {
+      const rosterName = (a: any) => a?.name || `${a?.firstName || ''} ${a?.lastName || ''}`.trim();
+      const rosterFollowers = (a: any) =>
+        Number(
+          a?.followers ??
+          a?.metrics?.ninetyDays?.followers ??
+          a?.metrics?.thirtyDays?.followers ??
+          a?.metrics?.sevenDays?.followers ??
+          0
+        );
+      const rosterMarketability = (a: any) =>
+        Number(
+          a?.marketabilityScore ??
+          a?.marketability ??
+          a?.score ??
+          a?.metrics?.ninetyDays?.marketability ??
+          a?.metrics?.thirtyDays?.marketability ??
+          a?.metrics?.sevenDays?.marketability ??
+          0
+        );
+
       const rosterMapById = new Map(
-        rosterData.athletes
-          .map((a: any) => [String(a?._id?.$oid || a?._id || ''), Number(a.followers || 0)] as const)
+        rosterAthletes
+          .map((a: any) => [String(a?._id?.$oid || a?._id || ''), rosterFollowers(a)] as const)
           .filter(([id]: readonly [string, number]) => !!id)
       );
       const rosterMapByName = new Map(
-        rosterData.athletes.map((a: any) => [normalizeName(a.name), Number(a.followers || 0)])
+        rosterAthletes.map((a: any) => [normalizeName(rosterName(a)), rosterFollowers(a)])
       );
       const rosterMarketabilityById = new Map(
-        rosterData.athletes
-          .map((a: any) => [String(a?._id?.$oid || a?._id || ''), Number(a.marketabilityScore ?? a.marketability ?? a.score ?? 0)] as const)
+        rosterAthletes
+          .map((a: any) => [String(a?._id?.$oid || a?._id || ''), rosterMarketability(a)] as const)
           .filter(([id]: readonly [string, number]) => !!id)
       );
       const rosterMarketabilityByName = new Map(
-        rosterData.athletes.map((a: any) => [normalizeName(a.name), Number(a.marketabilityScore ?? a.marketability ?? a.score ?? 0)])
+        rosterAthletes.map((a: any) => [normalizeName(rosterName(a)), rosterMarketability(a)])
       );
       derived.athletes.forEach(athlete => {
         const byId = rosterMapById.get(athlete.id);
