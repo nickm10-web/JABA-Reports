@@ -255,6 +255,15 @@ const normalizeConference = (value?: string) => {
 
 const normalizeSchool = (value?: string) =>
   (value || '').trim().toLowerCase().replace(/[^a-z0-9]/g, '');
+const acronymSchool = (value?: string) =>
+  (value || '')
+    .trim()
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter(Boolean)
+    .filter((part) => part !== 'of' && part !== 'the' && part !== 'at' && part !== 'and')
+    .map((part) => part[0])
+    .join('');
 
 const slugify = (value: string) =>
   value.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
@@ -2542,6 +2551,48 @@ function BenchmarksTab({ config, athletes, totalEmv, primaryColor }: {
     brandCount: s.brandCount,
   }));
 
+  const canonicalFallbackKeys = useMemo(() => {
+    const rows = fallbackSchools.map((school) => {
+      const canonical = normalizeSchool(school.id || school.shortName);
+      const variants = new Set<string>([
+        normalizeSchool(school.id),
+        normalizeSchool(school.shortName),
+      ]);
+      return { canonical, variants };
+    });
+    return rows.filter((r) => r.canonical);
+  }, [fallbackSchools]);
+
+  const canonicalSchoolKey = (school: ConferenceBenchmarkSchool) => {
+    const primary = normalizeSchool(school.id || school.shortName);
+    if (!primary) return '';
+
+    for (const row of canonicalFallbackKeys) {
+      if (row.variants.has(primary)) return row.canonical;
+    }
+
+    const shortNorm = normalizeSchool(school.shortName);
+    if (shortNorm) {
+      for (const row of canonicalFallbackKeys) {
+        for (const variant of row.variants) {
+          if (!variant) continue;
+          if (shortNorm.includes(variant) || variant.includes(shortNorm)) return row.canonical;
+        }
+      }
+    }
+
+    const acronym = normalizeSchool(acronymSchool(school.shortName));
+    if (acronym) {
+      for (const row of canonicalFallbackKeys) {
+        for (const variant of row.variants) {
+          if (acronym === variant) return row.canonical;
+        }
+      }
+    }
+
+    return primary;
+  };
+
   const conferenceKey = normalizeConference(conference);
   const isBenchmarkLoading = datasetSchools === null;
   const effectiveScope: 'conference' | 'all' = ncaaOnlyBenchmarks ? 'all' : scope;
@@ -2552,11 +2603,11 @@ function BenchmarksTab({ config, athletes, totalEmv, primaryColor }: {
     : fallbackSchools);
   const mergedSchoolsMap = new Map<string, ConferenceBenchmarkSchool>();
   for (const school of scopedFallbackSchools) {
-    const key = normalizeSchool(school.id || school.shortName);
+    const key = canonicalSchoolKey(school);
     if (key) mergedSchoolsMap.set(key, school);
   }
   for (const school of scopedDatasetSchools) {
-    const key = normalizeSchool(school.id || school.shortName);
+    const key = canonicalSchoolKey(school);
     if (key) mergedSchoolsMap.set(key, school);
   }
   const allSchools = mergedSchoolsMap.size
