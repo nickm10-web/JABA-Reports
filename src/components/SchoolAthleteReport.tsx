@@ -2512,11 +2512,23 @@ function BenchmarksTab({ config, athletes, totalEmv, primaryColor }: {
   const isBenchmarkLoading = datasetSchools === null;
   const datasetConferenceSchools = (datasetSchools || []).filter((s) => normalizeConference(s.conference) === conferenceKey);
   const scopedDatasetSchools = scope === 'conference' ? datasetConferenceSchools : (datasetSchools || []);
-  const allSchools = scopedDatasetSchools.length
-    ? scopedDatasetSchools
+  const scopedFallbackSchools = (scope === 'conference'
+    ? fallbackSchools.filter((s) => normalizeConference(s.conference) === conferenceKey)
+    : fallbackSchools);
+  const mergedSchoolsMap = new Map<string, ConferenceBenchmarkSchool>();
+  for (const school of scopedFallbackSchools) {
+    const key = normalizeSchool(school.id || school.shortName);
+    if (key) mergedSchoolsMap.set(key, school);
+  }
+  for (const school of scopedDatasetSchools) {
+    const key = normalizeSchool(school.id || school.shortName);
+    if (key) mergedSchoolsMap.set(key, school);
+  }
+  const allSchools = mergedSchoolsMap.size
+    ? [...mergedSchoolsMap.values()]
     : isBenchmarkLoading
       ? []
-      : fallbackSchools;
+      : scopedFallbackSchools;
 
   const targetSchoolKeys = new Set<string>([
     normalizeSchool(config.shortName),
