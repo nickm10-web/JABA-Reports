@@ -2498,7 +2498,8 @@ function BenchmarksTab({ config, athletes, totalEmv, primaryColor }: {
   secondaryColor: string;
 }) {
   const { benchmark, peerSchools, shortName, conference } = config;
-  const [scope, setScope] = useState<'conference' | 'all'>('conference');
+  const ncaaOnlyBenchmarks = config.id === 'notre-dame';
+  const [scope, setScope] = useState<'conference' | 'all'>(ncaaOnlyBenchmarks ? 'all' : 'conference');
   const [datasetSchools, setDatasetSchools] = useState<ConferenceBenchmarkSchool[] | null>(null);
   const [comparisonSortKey, setComparisonSortKey] = useState<'metric' | 'thisVal' | 'medVal' | 'diff' | 'rank'>('rank');
   const [comparisonSortDir, setComparisonSortDir] = useState<'asc' | 'desc'>('asc');
@@ -2520,6 +2521,12 @@ function BenchmarksTab({ config, athletes, totalEmv, primaryColor }: {
     };
   }, []);
 
+  useEffect(() => {
+    if (ncaaOnlyBenchmarks && scope !== 'all') {
+      setScope('all');
+    }
+  }, [ncaaOnlyBenchmarks, scope]);
+
   const totalLikes = athletes.reduce((s, a) => s + a.totalLikes, 0);
   const totalPosts = athletes.reduce((s, a) => s + a.totalPosts, 0);
   const avgEngagement = athletes.length ? athletes.reduce((s, a) => s + a.avgEngagementRate, 0) / athletes.length * 100 : 0;
@@ -2537,9 +2544,10 @@ function BenchmarksTab({ config, athletes, totalEmv, primaryColor }: {
 
   const conferenceKey = normalizeConference(conference);
   const isBenchmarkLoading = datasetSchools === null;
+  const effectiveScope: 'conference' | 'all' = ncaaOnlyBenchmarks ? 'all' : scope;
   const datasetConferenceSchools = (datasetSchools || []).filter((s) => normalizeConference(s.conference) === conferenceKey);
-  const scopedDatasetSchools = scope === 'conference' ? datasetConferenceSchools : (datasetSchools || []);
-  const scopedFallbackSchools = (scope === 'conference'
+  const scopedDatasetSchools = effectiveScope === 'conference' ? datasetConferenceSchools : (datasetSchools || []);
+  const scopedFallbackSchools = (effectiveScope === 'conference'
     ? fallbackSchools.filter((s) => normalizeConference(s.conference) === conferenceKey)
     : fallbackSchools);
   const mergedSchoolsMap = new Map<string, ConferenceBenchmarkSchool>();
@@ -2603,11 +2611,12 @@ function BenchmarksTab({ config, athletes, totalEmv, primaryColor }: {
     { label: 'Unique Brands', thisVal: selfSchool?.brandCount || 0, medVal: medianBrands, format: fmtN, rankKey: 'brandCount' as const },
   ];
 
+  const standingScopeLabel = effectiveScope === 'conference' ? conference : 'NCAA';
   const standingMetrics = [
-    { label: `${conference} Rank by Total EMV`, key: 'totalEMV' as const },
-    { label: `${conference} Rank by Sponsored Deals`, key: 'totalDeals' as const },
-    { label: `${conference} Rank by Unique Brands`, key: 'brandCount' as const },
-    { label: `${conference} Rank by Athletes Active`, key: 'athleteCount' as const },
+    { label: `${standingScopeLabel} Rank by Total EMV`, key: 'totalEMV' as const },
+    { label: `${standingScopeLabel} Rank by Sponsored Deals`, key: 'totalDeals' as const },
+    { label: `${standingScopeLabel} Rank by Unique Brands`, key: 'brandCount' as const },
+    { label: `${standingScopeLabel} Rank by Athletes Active`, key: 'athleteCount' as const },
   ];
   const standingRanks = standingMetrics.map((item) => ({ ...item, rank: rankOf(item.key) }));
   const bestRankValue = Math.min(...standingRanks.map((item) => item.rank.rank || Number.MAX_SAFE_INTEGER));
@@ -2668,12 +2677,12 @@ function BenchmarksTab({ config, athletes, totalEmv, primaryColor }: {
           <div>
             <h2 style={headerStyle} className="text-lg font-bold uppercase tracking-tight text-[#0F1D2E]">Benchmarks</h2>
             <p className="text-sm text-[#5B6B82]">
-              {shortName} vs {scope === 'conference' ? `${conference} conference peers` : 'NCAA schools in dataset'} ({allSchools.length} schools)
+              {shortName} vs {effectiveScope === 'conference' ? `${conference} conference peers` : 'NCAA schools in dataset'} ({allSchools.length} schools)
             </p>
           </div>
           <div className="flex items-center gap-2">
             {([
-              { key: 'conference', label: conference },
+              ...(ncaaOnlyBenchmarks ? [] : [{ key: 'conference', label: conference }] as const),
               { key: 'all', label: 'NCAA' },
             ] as const).map(chip => (
               <button
@@ -2717,7 +2726,7 @@ function BenchmarksTab({ config, athletes, totalEmv, primaryColor }: {
                   {isBenchmarkLoading ? '…' : `#${item.rank.rank}`}
                 </p>
                 <p className="text-xs text-[#7A8AA3]">
-                  {isBenchmarkLoading ? 'Loading conference benchmarks…' : `of ${item.rank.of} schools`}
+                  {isBenchmarkLoading ? `Loading ${standingScopeLabel} benchmarks…` : `of ${item.rank.of} schools`}
                 </p>
                 {isBest && (
                   <p className="text-[10px] font-semibold uppercase tracking-[0.18em] mt-2" style={{ color: primaryColor }}>
@@ -2733,7 +2742,7 @@ function BenchmarksTab({ config, athletes, totalEmv, primaryColor }: {
       {/* Comparison table */}
       <GlassPanel className="p-6">
         <h3 style={headerStyle} className="text-base font-bold uppercase tracking-tight mb-4 text-[#0F1D2E]">
-          {shortName} vs {scope === 'conference' ? conference : 'NCAA Dataset'} Median
+          {shortName} vs {effectiveScope === 'conference' ? conference : 'NCAA Dataset'} Median
         </h3>
         <div className="overflow-x-auto">
           <table className="w-full">
@@ -2758,7 +2767,7 @@ function BenchmarksTab({ config, athletes, totalEmv, primaryColor }: {
                   style={{ color: comparisonSortKey === 'medVal' ? primaryColor : '#5B6B82' }}
                   onClick={() => toggleComparisonSort('medVal')}
                 >
-                  {scope === 'conference' ? `${conference} Median` : 'NCAA Median'}{sortMarker(comparisonSortKey === 'medVal', comparisonSortDir)}
+                  {effectiveScope === 'conference' ? `${conference} Median` : 'NCAA Median'}{sortMarker(comparisonSortKey === 'medVal', comparisonSortDir)}
                 </th>
                 <th
                   className="text-right py-2 px-3 cursor-pointer select-none hover:text-[#1770C0] transition-colors"
@@ -2796,7 +2805,7 @@ function BenchmarksTab({ config, athletes, totalEmv, primaryColor }: {
       {/* Visual bars */}
       <GlassPanel className="p-6">
         <h3 style={headerStyle} className="text-base font-bold uppercase tracking-tight mb-4 text-[#0F1D2E]">
-          Key Metrics vs {scope === 'conference' ? conference : 'NCAA Dataset'}
+          Key Metrics vs {effectiveScope === 'conference' ? conference : 'NCAA Dataset'}
         </h3>
         <div className="space-y-5">
           {[
@@ -2841,7 +2850,7 @@ function BenchmarksTab({ config, athletes, totalEmv, primaryColor }: {
       {/* Peer leaderboard */}
       <GlassPanel className="p-6">
         <h3 style={headerStyle} className="text-base font-bold uppercase tracking-tight mb-4 text-[#0F1D2E]">
-          {scope === 'conference' ? `${conference} Leaderboard` : 'NCAA Dataset Leaderboard'}
+          {effectiveScope === 'conference' ? `${conference} Leaderboard` : 'NCAA Dataset Leaderboard'}
         </h3>
         <div className="overflow-x-auto">
           <table className="w-full">
