@@ -2206,16 +2206,25 @@ function ContentTab() {
           };
         });
 
-        const virginiaTeamRows = (await fetchFirstJson([
-          '/data/virginia_teams_contents.json',
-          '/data/Virginia.team_contents.json',
-          '/data/virginia.team_contents.json',
-        ])) || [];
-        const normalizedVirginiaTeamPosts: TeamPostItem[] = virginiaTeamRows.map((post, index) => {
+        const normalizeValue = (value: unknown) =>
+          String(value || '')
+            .trim()
+            .toLowerCase();
+
+        const isVirginiaSchool = (schoolName: unknown) => {
+          const normalized = normalizeValue(schoolName);
+          if (!normalized) return false;
+          if (normalized === 'university of virginia' || normalized === 'virginia' || normalized === 'uva') return true;
+          if (!normalized.includes('virginia')) return false;
+          if (normalized.includes('virginia tech') || normalized.includes('west virginia')) return false;
+          return true;
+        };
+
+        const toTeamPostItem = (post: any, index: number, prefix: string): TeamPostItem => {
           const likes = Number(post?.metrics?.likes || 0);
           const comments = Number(post?.metrics?.comments || 0);
           return {
-            id: String(post?._id || `virginia-team-${index}`),
+            id: String(post?._id || `${prefix}-${index}`),
             thumbnail: String(post?.url || ''),
             postLink: String(post?.permalink || post?.url || ''),
             caption: getCaptionText(post?.caption || post?.text),
@@ -2226,30 +2235,28 @@ function ContentTab() {
             interactions: likes + comments,
             engagementRate: Number(post?.metrics?.engagementRate || 0),
           };
-        });
+        };
 
+        const virginiaTeamRows = (await fetchFirstJson([
+          '/data/virginia_teams_contents.json',
+          '/data/Virginia.team_contents.json',
+          '/data/virginia.team_contents.json',
+        ])) || [];
         const allTeamRows = (await fetchFirstJson([
           '/data/Team_contents.json',
+          '/data/team_contents (1).json',
           '/data/team_contents.json',
         ])) || [];
+
+        const fallbackVirginiaTeamRows = allTeamRows.filter((post) => isVirginiaSchool(post?.team?.school?.name));
+        const selectedVirginiaTeamRows = virginiaTeamRows.length > 0 ? virginiaTeamRows : fallbackVirginiaTeamRows;
+        const normalizedVirginiaTeamPosts: TeamPostItem[] = selectedVirginiaTeamRows.map((post, index) =>
+          toTeamPostItem(post, index, 'virginia-team'),
+        );
+
         const normalizedSECPosts: TeamPostItem[] = allTeamRows
-          .filter((post) => post?.team?.conference?.name === 'ACC')
-          .map((post, index) => {
-            const likes = Number(post?.metrics?.likes || 0);
-            const comments = Number(post?.metrics?.comments || 0);
-            return {
-              id: String(post?._id || `sec-team-${index}`),
-              thumbnail: String(post?.url || ''),
-              postLink: String(post?.permalink || post?.url || ''),
-              caption: getCaptionText(post?.caption || post?.text),
-              teamName: String(post?.team?.name || 'Team Page'),
-              schoolName: String(post?.team?.school?.name || 'Unknown School'),
-              conferenceName: String(post?.team?.conference?.name || 'ACC'),
-              dateLabel: parseDateLabel(post?.publishedAt || post?.createdAt),
-              interactions: likes + comments,
-              engagementRate: Number(post?.metrics?.engagementRate || 0),
-            };
-          });
+          .filter((post) => normalizeValue(post?.team?.conference?.name) === 'acc')
+          .map((post, index) => toTeamPostItem(post, index, 'acc-team'));
 
         if (!cancelled) {
           setAthletePosts(normalizedAthletePosts);
@@ -2491,7 +2498,7 @@ function ContentTab() {
         <div className="space-y-6">
           {/* Top Virginia Team Page Post */}
           <div>
-            <SectionHeader primary="TOP CLEMSON " secondary="TEAM PAGE POST" />
+            <SectionHeader primary="TOP VIRGINIA " secondary="TEAM PAGE POST" />
             <div className="mt-4">
               <GlassCard>
                 {topVirginiaTeamPost ? (
@@ -2532,7 +2539,7 @@ function ContentTab() {
 
           {/* Top 10 Virginia Team Page Posts */}
           <div>
-            <SectionHeader primary="TOP 10 " secondary="CLEMSON TEAM PAGE POSTS" />
+            <SectionHeader primary="TOP 10 " secondary="VIRGINIA TEAM PAGE POSTS" />
             <div className="space-y-3 mt-4">
               {top10VirginiaTeamPosts.map((post, idx) => (
                 <a
