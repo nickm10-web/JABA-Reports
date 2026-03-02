@@ -1,53 +1,23 @@
 [
   {
-    "id": "the-university-of-alabama",
-    "shortName": "The University of Alabama",
-    "conference": "SEC",
-    "totalDeals": 601,
-    "totalEMV": 8726562,
-    "avgEngagement": 19.91,
-    "athleteCount": 380,
-    "brandCount": 288
+    "id": "ohio-state",
+    "shortName": "Ohio State",
+    "conference": "Big 10",
+    "totalDeals": 1023,
+    "totalEMV": 12886615,
+    "avgEngagement": 21.26,
+    "athleteCount": 707,
+    "brandCount": 418
   },
   {
-    "id": "the-university-of-arizona",
-    "shortName": "The University of Arizona",
+    "id": "arizona-state-university",
+    "shortName": "Arizona State University",
     "conference": "Big 12",
-    "totalDeals": 240,
-    "totalEMV": 3478175,
-    "avgEngagement": 22.64,
-    "athleteCount": 321,
-    "brandCount": 123
-  },
-  {
-    "id": "university-of-arkansas",
-    "shortName": "University of Arkansas",
-    "conference": "SEC",
-    "totalDeals": 497,
-    "totalEMV": 5536401,
-    "avgEngagement": 19.78,
-    "athleteCount": 385,
-    "brandCount": 305
-  },
-  {
-    "id": "boise-state",
-    "shortName": "Boise State",
-    "conference": "Mountain West Conference",
-    "totalDeals": 288,
-    "totalEMV": 1273728,
-    "avgEngagement": 21.78,
-    "athleteCount": 300,
-    "brandCount": 132
-  },
-  {
-    "id": "clemson",
-    "shortName": "Clemson",
-    "conference": "ACC",
-    "totalDeals": 259,
-    "totalEMV": 3767070,
-    "avgEngagement": 21.61,
-    "athleteCount": 240,
-    "brandCount": 126
+    "totalDeals": 686,
+    "totalEMV": 4309034,
+    "avgEngagement": 19.55,
+    "athleteCount": 461,
+    "brandCount": 325
   },
   {
     "id": "university-of-georgia",
@@ -60,114 +30,54 @@
     "brandCount": 334
   },
   {
-    "id": "kentucky",
-    "shortName": "Kentucky",
+    "id": "university-of-texas",
+    "shortName": "University Of Texas",
     "conference": "SEC",
-    "totalDeals": 88,
-    "totalEMV": 2285866,
-    "avgEngagement": 22.04,
-    "athleteCount": 217,
-    "brandCount": 53
+    "totalDeals": 609,
+    "totalEMV": 6849245,
+    "avgEngagement": 21.96,
+    "athleteCount": 432,
+    "brandCount": 278
   },
   {
-    "id": "louisiana-state-university",
-    "shortName": "Louisiana State University",
+    "id": "the-university-of-alabama",
+    "shortName": "The University of Alabama",
     "conference": "SEC",
-    "totalDeals": 353,
-    "totalEMV": 7591657,
-    "avgEngagement": 19.87,
-    "athleteCount": 306,
-    "brandCount": 210
-  },
-  {
-    "id": "michigan",
-    "shortName": "Michigan",
-    "conference": "Big 10",
-    "totalDeals": 427,
-    "totalEMV": 4661157,
-    "avgEngagement": 22.74,
-    "athleteCount": 395,
-    "brandCount": 233
-  },
-  {
-    "id": "michigan-state",
-    "shortName": "Michigan State",
-    "conference": "Big 10",
-    "totalDeals": 242,
-    "totalEMV": 1659476,
-    "avgEngagement": 21.05,
-    "athleteCount": 185,
-    "brandCount": 82
-  },
-  {
-    "id": "north-carolina-state",
-    "shortName": "North Carolina State",
-    "conference": "ACC",
-    "totalDeals": 64,
-    "totalEMV": 1491590,
-    "avgEngagement": 22.24,
-    "athleteCount": 211,
-    "brandCount": 41
-  },
-  {
-    "id": "notre-dame",
-    "shortName": "Notre Dame",
-    "conference": "ACC",
-    "totalDeals": 197,
-    "totalEMV": 4107244,
-    "avgEngagement": 24.12,
-    "athleteCount": 200,
-    "brandCount": 94
-  },
-  {
-    "id": "ohio-state",
-    "shortName": "Ohio State",
-    "conference": "Big 10",
-    "totalDeals": 653,
-    "totalEMV": 8307491,
-    "avgEngagement": 21.91,
-    "athleteCount": 702,
-    "brandCount": 302
-  },
-  {
-    "id": "oklahoma",
-    "shortName": "Oklahoma",
-    "conference": "SEC",
-    "totalDeals": 237,
-    "totalEMV": 2870605,
-    "avgEngagement": 22.26,
-    "athleteCount": 225,
-    "brandCount": 124
-  },
-  {
-    "id": "old-dominion-university",
-    "shortName": "Old Dominion University",
-    "conference": "Sun Belt",
-    "totalDeals": 83,
-    "totalEMV": 1246585,
-    "avgEngagement": 20.61,
-    "athleteCount": 137,
-    "brandCount": 28
+    "totalDeals": 489,
+    "totalEMV": 7923447,
+    "avgEngagement": 20.52,
+    "athleteCount": 379,
+    "brandCount": 243
   },
   {
     "id": "penn-state-university",
     "shortName": "Penn State University",
     "conference": "Big 10",
     "totalDeals": 443,
-    "totalEMV": 8141001,
+    "totalEMV": 8140999,
     "avgEngagement": 21.69,
     "athleteCount": 572,
     "brandCount": 270
   },
   {
-    "id": "university-of-texas",
-    "shortName": "University Of Texas",
-    "conference": "SEC",
-    "totalDeals": 609,
-    "totalEMV": 6852693,
-    "avgEngagement": 21.96,
-    "athleteCount": 433,
-    "brandCount": 278
+    "id": "baylor",
+    "shortName": "Baylor",
+    "conference": "Big 12",
+    "totalDeals": 437,
+    "totalEMV": 4244320,
+    "avgEngagement": 19.91,
+    "athleteCount": 434,
+    "brandCount": 236
+  },
+  {
+    "id": "michigan",
+    "shortName": "Michigan",
+    "conference": "Big 10",
+    "totalDeals": 427,
+    "totalEMV": 4661075,
+    "avgEngagement": 22.54,
+    "athleteCount": 395,
+    "brandCount": 233
   },
   {
     "id": "university-of-california-los-angeles",
@@ -180,24 +90,64 @@
     "brandCount": 248
   },
   {
-    "id": "university-of-north-carolina-unc",
-    "shortName": "University of North Carolina (UNC)",
-    "conference": "ACC",
-    "totalDeals": 198,
-    "totalEMV": 3043849,
-    "avgEngagement": 22.19,
-    "athleteCount": 226,
-    "brandCount": 109
-  },
-  {
     "id": "university-of-southern-california-usc",
     "shortName": "University of Southern California (USC)",
     "conference": "Big 10",
-    "totalDeals": 356,
-    "totalEMV": 5425788,
+    "totalDeals": 412,
+    "totalEMV": 5425791,
     "avgEngagement": 19.99,
     "athleteCount": 423,
-    "brandCount": 207
+    "brandCount": 240
+  },
+  {
+    "id": "university-of-wisconsin",
+    "shortName": "University of Wisconsin",
+    "conference": "Big 10",
+    "totalDeals": 403,
+    "totalEMV": 4372736,
+    "avgEngagement": 22.82,
+    "athleteCount": 475,
+    "brandCount": 197
+  },
+  {
+    "id": "university-of-arkansas",
+    "shortName": "University of Arkansas",
+    "conference": "SEC",
+    "totalDeals": 380,
+    "totalEMV": 4355212,
+    "avgEngagement": 20.29,
+    "athleteCount": 384,
+    "brandCount": 240
+  },
+  {
+    "id": "louisiana-state-university",
+    "shortName": "Louisiana State University",
+    "conference": "SEC",
+    "totalDeals": 353,
+    "totalEMV": 7590985,
+    "avgEngagement": 19.88,
+    "athleteCount": 305,
+    "brandCount": 210
+  },
+  {
+    "id": "university-of-missouri",
+    "shortName": "University of Missouri",
+    "conference": "SEC",
+    "totalDeals": 328,
+    "totalEMV": 2914584,
+    "avgEngagement": 24.26,
+    "athleteCount": 400,
+    "brandCount": 169
+  },
+  {
+    "id": "oregon",
+    "shortName": "Oregon",
+    "conference": "Big 10",
+    "totalDeals": 324,
+    "totalEMV": 4717045,
+    "avgEngagement": 20.63,
+    "athleteCount": 165,
+    "brandCount": 108
   },
   {
     "id": "university-of-virginia",
@@ -210,13 +160,613 @@
     "brandCount": 185
   },
   {
-    "id": "university-of-wisconsin",
-    "shortName": "University of Wisconsin",
+    "id": "university-of-nebraska",
+    "shortName": "University of Nebraska",
     "conference": "Big 10",
-    "totalDeals": 403,
-    "totalEMV": 4372736,
-    "avgEngagement": 22.82,
-    "athleteCount": 475,
-    "brandCount": 197
+    "totalDeals": 313,
+    "totalEMV": 7122549,
+    "avgEngagement": 21.79,
+    "athleteCount": 255,
+    "brandCount": 151
+  },
+  {
+    "id": "auburn-university",
+    "shortName": "Auburn University",
+    "conference": "SEC",
+    "totalDeals": 307,
+    "totalEMV": 4971634,
+    "avgEngagement": 20.78,
+    "athleteCount": 384,
+    "brandCount": 160
+  },
+  {
+    "id": "boise-state",
+    "shortName": "Boise State",
+    "conference": "Mountain West Conference",
+    "totalDeals": 288,
+    "totalEMV": 1273728,
+    "avgEngagement": 21.78,
+    "athleteCount": 300,
+    "brandCount": 132
+  },
+  {
+    "id": "texas-a-m",
+    "shortName": "Texas A&M",
+    "conference": "SEC",
+    "totalDeals": 274,
+    "totalEMV": 4332778,
+    "avgEngagement": 21.73,
+    "athleteCount": 274,
+    "brandCount": 157
+  },
+  {
+    "id": "indiana",
+    "shortName": "Indiana",
+    "conference": "Big 10",
+    "totalDeals": 273,
+    "totalEMV": 2425120,
+    "avgEngagement": 21.69,
+    "athleteCount": 171,
+    "brandCount": 114
+  },
+  {
+    "id": "purdue-university",
+    "shortName": "Purdue University",
+    "conference": "Big 10",
+    "totalDeals": 264,
+    "totalEMV": 2071842,
+    "avgEngagement": 24.08,
+    "athleteCount": 419,
+    "brandCount": 134
+  },
+  {
+    "id": "clemson",
+    "shortName": "Clemson",
+    "conference": "ACC",
+    "totalDeals": 259,
+    "totalEMV": 3767070,
+    "avgEngagement": 21.61,
+    "athleteCount": 240,
+    "brandCount": 126
+  },
+  {
+    "id": "kentucky",
+    "shortName": "Kentucky",
+    "conference": "SEC",
+    "totalDeals": 257,
+    "totalEMV": 4427364,
+    "avgEngagement": 20.13,
+    "athleteCount": 219,
+    "brandCount": 153
+  },
+  {
+    "id": "michigan-state",
+    "shortName": "Michigan State",
+    "conference": "Big 10",
+    "totalDeals": 243,
+    "totalEMV": 1678567,
+    "avgEngagement": 21.07,
+    "athleteCount": 185,
+    "brandCount": 83
+  },
+  {
+    "id": "the-university-of-arizona",
+    "shortName": "The University of Arizona",
+    "conference": "Big 12",
+    "totalDeals": 240,
+    "totalEMV": 3478175,
+    "avgEngagement": 22.64,
+    "athleteCount": 321,
+    "brandCount": 123
+  },
+  {
+    "id": "oklahoma",
+    "shortName": "Oklahoma",
+    "conference": "SEC",
+    "totalDeals": 237,
+    "totalEMV": 2870594,
+    "avgEngagement": 22.26,
+    "athleteCount": 225,
+    "brandCount": 124
+  },
+  {
+    "id": "florida",
+    "shortName": "Florida",
+    "conference": "SEC",
+    "totalDeals": 230,
+    "totalEMV": 4834251,
+    "avgEngagement": 19.89,
+    "athleteCount": 210,
+    "brandCount": 116
+  },
+  {
+    "id": "iowa",
+    "shortName": "Iowa",
+    "conference": "Big 10",
+    "totalDeals": 219,
+    "totalEMV": 2069209,
+    "avgEngagement": 25.39,
+    "athleteCount": 211,
+    "brandCount": 119
+  },
+  {
+    "id": "washington",
+    "shortName": "Washington",
+    "conference": "Big 10",
+    "totalDeals": 198,
+    "totalEMV": 4369015,
+    "avgEngagement": 22.26,
+    "athleteCount": 194,
+    "brandCount": 95
+  },
+  {
+    "id": "university-of-north-carolina-unc",
+    "shortName": "University of North Carolina (UNC)",
+    "conference": "ACC",
+    "totalDeals": 198,
+    "totalEMV": 3044521,
+    "avgEngagement": 22.16,
+    "athleteCount": 226,
+    "brandCount": 109
+  },
+  {
+    "id": "notre-dame",
+    "shortName": "Notre Dame",
+    "conference": "ACC",
+    "totalDeals": 197,
+    "totalEMV": 4107244,
+    "avgEngagement": 24.12,
+    "athleteCount": 200,
+    "brandCount": 94
+  },
+  {
+    "id": "vanderbilt",
+    "shortName": "Vanderbilt",
+    "conference": "SEC",
+    "totalDeals": 197,
+    "totalEMV": 1630532,
+    "avgEngagement": 23.15,
+    "athleteCount": 186,
+    "brandCount": 94
+  },
+  {
+    "id": "san-diego-state-university",
+    "shortName": "San Diego State University",
+    "conference": "Mountain West Conference",
+    "totalDeals": 191,
+    "totalEMV": 928954,
+    "avgEngagement": 22.21,
+    "athleteCount": 311,
+    "brandCount": 89
+  },
+  {
+    "id": "kansas",
+    "shortName": "Kansas",
+    "conference": "Big 12",
+    "totalDeals": 179,
+    "totalEMV": 1330470,
+    "avgEngagement": 24.11,
+    "athleteCount": 210,
+    "brandCount": 75
+  },
+  {
+    "id": "rutgers",
+    "shortName": "Rutgers",
+    "conference": "Big 10",
+    "totalDeals": 171,
+    "totalEMV": 1174744,
+    "avgEngagement": 21.54,
+    "athleteCount": 218,
+    "brandCount": 90
+  },
+  {
+    "id": "minnesota",
+    "shortName": "Minnesota",
+    "conference": "Big 10",
+    "totalDeals": 171,
+    "totalEMV": 1346358,
+    "avgEngagement": 25.79,
+    "athleteCount": 190,
+    "brandCount": 90
+  },
+  {
+    "id": "utah",
+    "shortName": "Utah",
+    "conference": "Big 12",
+    "totalDeals": 168,
+    "totalEMV": 1428774,
+    "avgEngagement": 23.55,
+    "athleteCount": 195,
+    "brandCount": 87
+  },
+  {
+    "id": "university-of-texas-at-san-antonio-utsa",
+    "shortName": "University of Texas at San Antonio (UTSA)",
+    "conference": "AAC",
+    "totalDeals": 167,
+    "totalEMV": 1013385,
+    "avgEngagement": 21.56,
+    "athleteCount": 272,
+    "brandCount": 90
+  },
+  {
+    "id": "tennessee",
+    "shortName": "Tennessee",
+    "conference": "SEC",
+    "totalDeals": 165,
+    "totalEMV": 3021359,
+    "avgEngagement": 23.06,
+    "athleteCount": 199,
+    "brandCount": 117
+  },
+  {
+    "id": "mississippi",
+    "shortName": "Mississippi",
+    "conference": "SEC",
+    "totalDeals": 165,
+    "totalEMV": 1310618,
+    "avgEngagement": 21.11,
+    "athleteCount": 194,
+    "brandCount": 79
+  },
+  {
+    "id": "north-carolina-state",
+    "shortName": "North Carolina State",
+    "conference": "ACC",
+    "totalDeals": 164,
+    "totalEMV": 1491590,
+    "avgEngagement": 22.24,
+    "athleteCount": 211,
+    "brandCount": 96
+  },
+  {
+    "id": "university-of-central-florida",
+    "shortName": "University of Central Florida",
+    "conference": "Big 12",
+    "totalDeals": 159,
+    "totalEMV": 1614611,
+    "avgEngagement": 21.68,
+    "athleteCount": 170,
+    "brandCount": 72
+  },
+  {
+    "id": "brigham-young-university-byu",
+    "shortName": "Brigham Young University(BYU)",
+    "conference": "Big 12",
+    "totalDeals": 159,
+    "totalEMV": 3853931,
+    "avgEngagement": 24.93,
+    "athleteCount": 416,
+    "brandCount": 97
+  },
+  {
+    "id": "miami",
+    "shortName": "Miami",
+    "conference": "ACC",
+    "totalDeals": 153,
+    "totalEMV": 3550622,
+    "avgEngagement": 21.6,
+    "athleteCount": 169,
+    "brandCount": 80
+  },
+  {
+    "id": "west-virginia",
+    "shortName": "West Virginia",
+    "conference": "Big 12",
+    "totalDeals": 141,
+    "totalEMV": 1056186,
+    "avgEngagement": 23.59,
+    "athleteCount": 210,
+    "brandCount": 73
+  },
+  {
+    "id": "florida-state",
+    "shortName": "Florida State",
+    "conference": "ACC",
+    "totalDeals": 139,
+    "totalEMV": 2257364,
+    "avgEngagement": 22.36,
+    "athleteCount": 189,
+    "brandCount": 81
+  },
+  {
+    "id": "university-of-maryland",
+    "shortName": "University of Maryland",
+    "conference": "Big 10",
+    "totalDeals": 135,
+    "totalEMV": 1149150,
+    "avgEngagement": 22.23,
+    "athleteCount": 205,
+    "brandCount": 88
+  },
+  {
+    "id": "oklahoma-state",
+    "shortName": "Oklahoma State",
+    "conference": "Big 12",
+    "totalDeals": 135,
+    "totalEMV": 814207,
+    "avgEngagement": 21.16,
+    "athleteCount": 181,
+    "brandCount": 67
+  },
+  {
+    "id": "creighton-university",
+    "shortName": "Creighton University",
+    "conference": "Big East",
+    "totalDeals": 132,
+    "totalEMV": 775117,
+    "avgEngagement": 24.85,
+    "athleteCount": 189,
+    "brandCount": 64
+  },
+  {
+    "id": "illinois",
+    "shortName": "Illinois",
+    "conference": "Big 10",
+    "totalDeals": 131,
+    "totalEMV": 2651613,
+    "avgEngagement": 22.99,
+    "athleteCount": 210,
+    "brandCount": 92
+  },
+  {
+    "id": "kansas-state",
+    "shortName": "Kansas State",
+    "conference": "Big 12",
+    "totalDeals": 127,
+    "totalEMV": 1214777,
+    "avgEngagement": 28.44,
+    "athleteCount": 158,
+    "brandCount": 68
+  },
+  {
+    "id": "brigham-young-university-byu",
+    "shortName": "Brigham Young University (BYU)",
+    "conference": "Big 12",
+    "totalDeals": 123,
+    "totalEMV": 1625477,
+    "avgEngagement": 22.49,
+    "athleteCount": 220,
+    "brandCount": 84
+  },
+  {
+    "id": "virginia-tech",
+    "shortName": "Virginia Tech",
+    "conference": "SEC",
+    "totalDeals": 119,
+    "totalEMV": 1669387,
+    "avgEngagement": 25.97,
+    "athleteCount": 367,
+    "brandCount": 79
+  },
+  {
+    "id": "university-of-cincinnati",
+    "shortName": "University of Cincinnati",
+    "conference": "Big 12",
+    "totalDeals": 119,
+    "totalEMV": 1871659,
+    "avgEngagement": 22.24,
+    "athleteCount": 345,
+    "brandCount": 67
+  },
+  {
+    "id": "houston",
+    "shortName": "Houston",
+    "conference": "Big 12",
+    "totalDeals": 119,
+    "totalEMV": 1035554,
+    "avgEngagement": 22.13,
+    "athleteCount": 170,
+    "brandCount": 72
+  },
+  {
+    "id": "pittsburgh",
+    "shortName": "Pittsburgh",
+    "conference": "ACC",
+    "totalDeals": 115,
+    "totalEMV": 1738658,
+    "avgEngagement": 24.95,
+    "athleteCount": 211,
+    "brandCount": 61
+  },
+  {
+    "id": "southern-methodist-university-smu",
+    "shortName": "Southern Methodist University (SMU)",
+    "conference": "AAC",
+    "totalDeals": 111,
+    "totalEMV": 1126238,
+    "avgEngagement": 19.49,
+    "athleteCount": 146,
+    "brandCount": 64
+  },
+  {
+    "id": "ole-miss",
+    "shortName": "Ole Miss",
+    "conference": "SEC",
+    "totalDeals": 104,
+    "totalEMV": 3329460,
+    "avgEngagement": 22.67,
+    "athleteCount": 192,
+    "brandCount": 76
+  },
+  {
+    "id": "texas-christian-university",
+    "shortName": "Texas Christian University",
+    "conference": "Big 12",
+    "totalDeals": 96,
+    "totalEMV": 910704,
+    "avgEngagement": 22.23,
+    "athleteCount": 156,
+    "brandCount": 55
+  },
+  {
+    "id": "texas-tech",
+    "shortName": "Texas Tech",
+    "conference": "Big 12",
+    "totalDeals": 94,
+    "totalEMV": 1818723,
+    "avgEngagement": 23.03,
+    "athleteCount": 194,
+    "brandCount": 40
+  },
+  {
+    "id": "university-of-san-diego",
+    "shortName": "University of San Diego",
+    "conference": "West Coast Conference",
+    "totalDeals": 89,
+    "totalEMV": 1445244,
+    "avgEngagement": 18.06,
+    "athleteCount": 150,
+    "brandCount": 56
+  },
+  {
+    "id": "colorado",
+    "shortName": "Colorado",
+    "conference": "Big 12",
+    "totalDeals": 89,
+    "totalEMV": 2316175,
+    "avgEngagement": 18.95,
+    "athleteCount": 123,
+    "brandCount": 60
+  },
+  {
+    "id": "old-dominion-university",
+    "shortName": "Old Dominion University",
+    "conference": "Sun Belt",
+    "totalDeals": 83,
+    "totalEMV": 1246583,
+    "avgEngagement": 20.67,
+    "athleteCount": 137,
+    "brandCount": 28
+  },
+  {
+    "id": "boston-college",
+    "shortName": "Boston College",
+    "conference": "ACC",
+    "totalDeals": 66,
+    "totalEMV": 684723,
+    "avgEngagement": 25.39,
+    "athleteCount": 156,
+    "brandCount": 45
+  },
+  {
+    "id": "robert-morris-university",
+    "shortName": "Robert Morris University",
+    "conference": "Horizon League",
+    "totalDeals": 53,
+    "totalEMV": 446055,
+    "avgEngagement": 22.08,
+    "athleteCount": 239,
+    "brandCount": 26
+  },
+  {
+    "id": "georgia-tech",
+    "shortName": "Georgia Tech",
+    "conference": "ACC",
+    "totalDeals": 52,
+    "totalEMV": 1239349,
+    "avgEngagement": 24.2,
+    "athleteCount": 184,
+    "brandCount": 31
+  },
+  {
+    "id": "washington-state",
+    "shortName": "Washington State",
+    "conference": "Pac-12",
+    "totalDeals": 43,
+    "totalEMV": 325848,
+    "avgEngagement": 25.4,
+    "athleteCount": 79,
+    "brandCount": 29
+  },
+  {
+    "id": "iowa-state",
+    "shortName": "Iowa State",
+    "conference": "Big 12",
+    "totalDeals": 43,
+    "totalEMV": 1287008,
+    "avgEngagement": 26.2,
+    "athleteCount": 193,
+    "brandCount": 32
+  },
+  {
+    "id": "depaul",
+    "shortName": "Depaul",
+    "conference": "Big East",
+    "totalDeals": 42,
+    "totalEMV": 160094,
+    "avgEngagement": 22.9,
+    "athleteCount": 57,
+    "brandCount": 26
+  },
+  {
+    "id": "duke",
+    "shortName": "DUKE",
+    "conference": "ACC",
+    "totalDeals": 38,
+    "totalEMV": 2347763,
+    "avgEngagement": 23.14,
+    "athleteCount": 149,
+    "brandCount": 27
+  },
+  {
+    "id": "providence-college",
+    "shortName": "Providence College",
+    "conference": "Big East",
+    "totalDeals": 27,
+    "totalEMV": 454995,
+    "avgEngagement": 21.56,
+    "athleteCount": 57,
+    "brandCount": 18
+  },
+  {
+    "id": "rice-university",
+    "shortName": "Rice University",
+    "conference": "AAC",
+    "totalDeals": 17,
+    "totalEMV": 142892,
+    "avgEngagement": 25,
+    "athleteCount": 58,
+    "brandCount": 15
+  },
+  {
+    "id": "george-mason",
+    "shortName": "George Mason",
+    "conference": "Atlantic 10",
+    "totalDeals": 2,
+    "totalEMV": 372262,
+    "avgEngagement": 24.52,
+    "athleteCount": 204,
+    "brandCount": 2
+  },
+  {
+    "id": "wichita-state-university",
+    "shortName": "Wichita State University",
+    "conference": "AAC",
+    "totalDeals": 2,
+    "totalEMV": 623822,
+    "avgEngagement": 24.73,
+    "athleteCount": 164,
+    "brandCount": 2
+  },
+  {
+    "id": "new-mexico-state-university",
+    "shortName": "New Mexico State University",
+    "conference": "Conference USA",
+    "totalDeals": 2,
+    "totalEMV": 456647,
+    "avgEngagement": 25.8,
+    "athleteCount": 125,
+    "brandCount": 1
+  },
+  {
+    "id": "university-of-new-mexico",
+    "shortName": "University of New Mexico",
+    "conference": "Mountain West Conference",
+    "totalDeals": 1,
+    "totalEMV": 321520,
+    "avgEngagement": 27.28,
+    "athleteCount": 129,
+    "brandCount": 1
   }
 ]
