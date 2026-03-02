@@ -7,6 +7,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { ArrowLeft, ArrowUpRight, ArrowDownRight, Search, Lightbulb, Users, Heart, MessageCircle, Zap } from 'lucide-react';
 import { DrawerPanel, TabTransition } from './playfly/PlayflyUI';
 import type { SchoolConfig } from '../config/schoolConfigs';
+import bundledBenchmarkSchools from '../data/benchmark-schools-compact.json';
 
 const TABS = [
   { id: 'overview', label: 'Overview' },
@@ -317,6 +318,11 @@ async function loadAllBenchmarkSchools(): Promise<ConferenceBenchmarkSchool[]> {
       }
     } catch {
       // Continue to raw fallback.
+    }
+
+    // Bundle fallback: ensures NCAA leaderboard is available even if static file fetch fails.
+    if (Array.isArray(bundledBenchmarkSchools) && bundledBenchmarkSchools.length) {
+      return bundledBenchmarkSchools as ConferenceBenchmarkSchool[];
     }
 
     const res = await fetch('/data/ncaa_updated_ip_contents_feb_18.json');
