@@ -1,2518 +1,2274 @@
 {
-  "school": {
-    "name": "Oklahoma"
-  },
-  "totalAthletes": 251,
+  "school": "University of Oklahoma",
+  "totalAthletes": 252,
   "athletes": [
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5770"
-      },
+      "_id": "68fc9629b2a30d5364fb5770",
       "name": "Sam Landry",
-      "sport": "Softball",
+      "sport": "SOFTBALL",
       "position": "RHP",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384079446-Sam_Landry_68fc9629b2a30d5364fb5770.png",
-      "followers": 105927
+      "followers": 105927,
+      "marketabilityScore": 74
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56fd"
-      },
+      "_id": "68fc9629b2a30d5364fb56fd",
       "name": "Aaliyah Chavez",
-      "sport": "Women's Basketball",
+      "sport": "WOMENS_BASKETBALL",
       "position": "G",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384083210-Aaliyah_Chavez_68fc9629b2a30d5364fb56fd.png",
-      "followers": 87535
+      "followers": 87535,
+      "marketabilityScore": 72
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb575a"
-      },
+      "_id": "68fc9629b2a30d5364fb575a",
       "name": "John Mateer",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "QB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384086465-John_Mateer_68fc9629b2a30d5364fb575a.png",
-      "followers": 80892
+      "followers": 80892,
+      "marketabilityScore": 77
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5776"
-      },
+      "_id": "68fc9629b2a30d5364fb5776",
       "name": "Jaren Kanak",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "TE",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384090305-Jaren_Kanak_68fc9629b2a30d5364fb5776.png",
-      "followers": 45504
+      "followers": 45504,
+      "marketabilityScore": 71
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5781"
-      },
+      "_id": "68fc9629b2a30d5364fb5781",
       "name": "Deion Burks",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "WR",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384096745-Deion_Burks_68fc9629b2a30d5364fb5781.png",
-      "followers": 40505
+      "followers": 40505,
+      "marketabilityScore": 71
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56cf"
-      },
+      "_id": "68fc9629b2a30d5364fb56cf",
       "name": "David Stone",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384087992-David_Stone_68fc9629b2a30d5364fb56cf.png",
-      "followers": 37965
+      "followers": 37965,
+      "marketabilityScore": 71
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56f9"
-      },
+      "_id": "68fc9629b2a30d5364fb56f9",
       "name": "Dayton Forsythe",
-      "sport": "Men's Basketball",
+      "sport": "MENS_BASKETBALL",
       "position": "G",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384090255-Dayton_Forsythe_68fc9629b2a30d5364fb56f9.png",
-      "followers": 35185
+      "followers": 35185,
+      "marketabilityScore": 65
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5759"
-      },
+      "_id": "68fc9629b2a30d5364fb5759",
       "name": "Michael Hawkins Jr.",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "QB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384084797-Michael_Hawkins Jr._68fc9629b2a30d5364fb5759.png",
-      "followers": 27730
+      "followers": 27730,
+      "marketabilityScore": 68
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb569d"
-      },
+      "_id": "68fc9629b2a30d5364fb569d",
       "name": "Addison Fatta",
-      "sport": "Women's Gymnastics",
+      "sport": "WOMENS_GYMNASTICS",
       "position": "AA",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384092131-Addison_Fatta_68fc9629b2a30d5364fb569d.png",
-      "followers": 25237
+      "followers": 25237,
+      "marketabilityScore": 63
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56c8"
-      },
+      "_id": "68fc9629b2a30d5364fb56c8",
       "name": "Peyton Bowen",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384082336-Peyton_Bowen_68fc9629b2a30d5364fb56c8.png",
-      "followers": 23324
+      "followers": 23324,
+      "marketabilityScore": 67
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56de"
-      },
+      "_id": "68fc9629b2a30d5364fb56de",
       "name": "Jacob Henry",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384095443-Jacob_Henry_68fc9629b2a30d5364fb56de.png",
-      "followers": 23013
+      "followers": 23013,
+      "marketabilityScore": 67
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56eb"
-      },
+      "_id": "68fc9629b2a30d5364fb56eb",
       "name": "Derrion Reid",
-      "sport": "Men's Basketball",
+      "sport": "MENS_BASKETBALL",
       "position": "F",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384096196-Derrion_Reid_68fc9629b2a30d5364fb56eb.png",
-      "followers": 21122
+      "followers": 21122,
+      "marketabilityScore": 68
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5742"
-      },
+      "_id": "68fc9629b2a30d5364fb5742",
       "name": "Eddy Pierre-Louis",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "OL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384096192-Eddy_Pierre-Louis_68fc9629b2a30d5364fb5742.png",
-      "followers": 20643
+      "followers": 20643,
+      "marketabilityScore": 68
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5736"
-      },
+      "_id": "68fc9629b2a30d5364fb5736",
       "name": "Taylor Tatum",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "OF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384087404-Taylor_Tatum_68fc9629b2a30d5364fb5736.png",
-      "followers": 20583
+      "followers": 20583,
+      "marketabilityScore": 65
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5782"
-      },
+      "_id": "68fc9629b2a30d5364fb5782",
       "name": "Isaiah Sategna III",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "WR",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384094851-Isaiah_Sategna III_68fc9629b2a30d5364fb5782.png",
-      "followers": 20401
+      "followers": 20401,
+      "marketabilityScore": 68
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56e1"
-      },
+      "_id": "68fc9629b2a30d5364fb56e1",
       "name": "Marvin Jones Jr.",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384089687-Marvin_Jones Jr._68fc9629b2a30d5364fb56e1.png",
-      "followers": 20074
+      "followers": 20074,
+      "marketabilityScore": 66
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb575d"
-      },
+      "_id": "68fc9629b2a30d5364fb575d",
       "name": "Jaydn Ott",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "RB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384080450-Jaydn_Ott_68fc9629b2a30d5364fb575d.png",
-      "followers": 18923
+      "followers": 18923,
+      "marketabilityScore": 64
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56bf"
-      },
+      "_id": "68fc9629b2a30d5364fb56bf",
       "name": "Courtland Guillory",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384090247-Courtland_Guillory_68fc9629b2a30d5364fb56bf.png",
-      "followers": 18254
+      "followers": 18254,
+      "marketabilityScore": 68
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5780"
-      },
+      "_id": "68fc9629b2a30d5364fb5780",
       "name": "Jayden Gibson",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "WR",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384093755-Jayden_Gibson_68fc9629b2a30d5364fb5780.png",
-      "followers": 17643
+      "followers": 17643,
+      "marketabilityScore": 60
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb569f"
-      },
+      "_id": "68fc9629b2a30d5364fb569f",
       "name": "Ella Murphy",
-      "sport": "Women's Gymnastics",
+      "sport": "WOMENS_GYMNASTICS",
       "position": "AA",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384092252-Ella_Murphy_68fc9629b2a30d5364fb569f.png",
-      "followers": 17492
+      "followers": 17492,
+      "marketabilityScore": 63
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56d7"
-      },
+      "_id": "68fc9629b2a30d5364fb56d7",
       "name": "Damonic Williams",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384095491-Damonic_Williams_68fc9629b2a30d5364fb56d7.png",
-      "followers": 17199
+      "followers": 17199,
+      "marketabilityScore": 64
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56d3"
-      },
+      "_id": "68fc9629b2a30d5364fb56d3",
       "name": "R Mason Thomas",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384096194-R_Mason Thomas_68fc9629b2a30d5364fb56d3.png",
-      "followers": 17009
+      "followers": 17009,
+      "marketabilityScore": 68
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb577d"
-      },
+      "_id": "68fc9629b2a30d5364fb577d",
       "name": "Ella Parker",
-      "sport": "Softball",
+      "sport": "SOFTBALL",
       "position": "UTL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384092822-Ella_Parker_68fc9629b2a30d5364fb577d.png",
-      "followers": 14907
+      "followers": 14907,
+      "marketabilityScore": 63
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5698"
-      },
+      "_id": "68fc9629b2a30d5364fb5698",
       "name": "Lily Pederson",
-      "sport": "Women's Gymnastics",
+      "sport": "WOMENS_GYMNASTICS",
       "position": "-",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384090302-Lily_Pederson_68fc9629b2a30d5364fb5698.png",
-      "followers": 14846
+      "followers": 14846,
+      "marketabilityScore": 59
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56fa"
-      },
+      "_id": "68fc9629b2a30d5364fb56fa",
       "name": "Nijel Pack",
-      "sport": "Men's Basketball",
+      "sport": "MENS_BASKETBALL",
       "position": "G",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384084199-Nijel_Pack_68fc9629b2a30d5364fb56fa.png",
-      "followers": 14498
+      "followers": 14498,
+      "marketabilityScore": 64
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56be"
-      },
+      "_id": "68fc9629b2a30d5364fb56be",
       "name": "Robert Spears-Jennings",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384088572-Robert_Spears-Jennings_68fc9629b2a30d5364fb56be.png",
-      "followers": 14275
+      "followers": 14275,
+      "marketabilityScore": 67
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56c9"
-      },
+      "_id": "68fc9629b2a30d5364fb56c9",
       "name": "Eli Bowen",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384082921-Eli_Bowen_68fc9629b2a30d5364fb56c9.png",
-      "followers": 13872
+      "followers": 13872,
+      "marketabilityScore": 66
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb573a"
-      },
+      "_id": "68fc9629b2a30d5364fb573a",
       "name": "Kasidi Pickering",
-      "sport": "Softball",
+      "sport": "SOFTBALL",
       "position": "OF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384089092-Kasidi_Pickering_68fc9629b2a30d5364fb573a.png",
-      "followers": 13849
+      "followers": 13849,
+      "marketabilityScore": 62
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb571c"
-      },
+      "_id": "68fc9629b2a30d5364fb571c",
       "name": "Kobie McKinzie",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "LB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384078590-Kobie_McKinzie_68fc9629b2a30d5364fb571c.png",
-      "followers": 13512
+      "followers": 13512,
+      "marketabilityScore": 66
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56ff"
-      },
+      "_id": "68fc9629b2a30d5364fb56ff",
       "name": "Payton Verhulst",
-      "sport": "Women's Basketball",
+      "sport": "WOMENS_BASKETBALL",
       "position": "G",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384090926-Payton_Verhulst_68fc9629b2a30d5364fb56ff.png",
-      "followers": 13482
+      "followers": 13482,
+      "marketabilityScore": 60
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb573d"
-      },
+      "_id": "68fc9629b2a30d5364fb573d",
       "name": "Hannah Coor",
-      "sport": "Softball",
+      "sport": "SOFTBALL",
       "position": "OF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384085038-Hannah_Coor_68fc9629b2a30d5364fb573d.png",
-      "followers": 12893
+      "followers": 12893,
+      "marketabilityScore": 60
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56bc"
-      },
+      "_id": "68fc9629b2a30d5364fb56bc",
       "name": "Jaydan Hardy",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384090958-Jaydan_Hardy_68fc9629b2a30d5364fb56bc.png",
-      "followers": 12542
+      "followers": 12542,
+      "marketabilityScore": 65
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb575f"
-      },
+      "_id": "68fc9629b2a30d5364fb575f",
       "name": "Tory Blaylock",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "RB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384080529-Tory_Blaylock_68fc9629b2a30d5364fb575f.png",
-      "followers": 11955
+      "followers": 11955,
+      "marketabilityScore": 64
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5732"
-      },
+      "_id": "68fc9629b2a30d5364fb5732",
       "name": "Kenadie Patterson",
-      "sport": "Women's Volleyball",
+      "sport": "WOMENS_VOLLEYBALL",
       "position": "MB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384092829-Kenadie_Patterson_68fc9629b2a30d5364fb5732.png",
-      "followers": 11837
+      "followers": 11837,
+      "marketabilityScore": 64
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5777"
-      },
+      "_id": "68fc9629b2a30d5364fb5777",
       "name": "Kaden Helms",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "TE",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384079573-Kaden_Helms_68fc9629b2a30d5364fb5777.png",
-      "followers": 10824
+      "followers": 10824,
+      "marketabilityScore": 64
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5714"
-      },
+      "_id": "68fc9629b2a30d5364fb5714",
       "name": "Tate Sandell",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "K",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384092087-Tate_Sandell_68fc9629b2a30d5364fb5714.png",
-      "followers": 10557
+      "followers": 10557,
+      "marketabilityScore": 63
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5722"
-      },
+      "_id": "68fc9629b2a30d5364fb5722",
       "name": "James Nesta",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "LB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384087409-James_Nesta_68fc9629b2a30d5364fb5722.png",
-      "followers": 10369
+      "followers": 10369,
+      "marketabilityScore": 62
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb570c"
-      },
+      "_id": "68fc9629b2a30d5364fb570c",
       "name": "Cydney Sanders",
-      "sport": "Softball",
+      "sport": "SOFTBALL",
       "position": "INF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384084780-Cydney_Sanders_68fc9629b2a30d5364fb570c.png",
-      "followers": 10368
+      "followers": 10368,
+      "marketabilityScore": 65
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56ab"
-      },
+      "_id": "68fc9629b2a30d5364fb56ab",
       "name": "Emre Dodanli",
-      "sport": "Men's Gymnastics",
+      "sport": "MENS_GYMNASTICS",
       "position": "AA",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384080207-Emre_Dodanli_68fc9629b2a30d5364fb56ab.png",
-      "followers": 10296
+      "followers": 10296,
+      "marketabilityScore": 59
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56da"
-      },
+      "_id": "68fc9629b2a30d5364fb56da",
       "name": "Jayden Jackson",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384082286-Jayden_Jackson_68fc9629b2a30d5364fb56da.png",
-      "followers": 10218
+      "followers": 10218,
+      "marketabilityScore": 62
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb575e"
-      },
+      "_id": "68fc9629b2a30d5364fb575e",
       "name": "Jovantae Barnes",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "RB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384078632-Jovantae_Barnes_68fc9629b2a30d5364fb575e.png",
-      "followers": 10119
+      "followers": 10119,
+      "marketabilityScore": 63
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56a5"
-      },
+      "_id": "68fc9629b2a30d5364fb56a5",
       "name": "Faith Torrez",
-      "sport": "Women's Gymnastics",
+      "sport": "WOMENS_GYMNASTICS",
       "position": "AA",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384078658-Faith_Torrez_68fc9629b2a30d5364fb56a5.png",
-      "followers": 10082
+      "followers": 10082,
+      "marketabilityScore": 59
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb570f"
-      },
+      "_id": "68fc9629b2a30d5364fb570f",
       "name": "Gabbie Garcia",
-      "sport": "Softball",
+      "sport": "SOFTBALL",
       "position": "INF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384095460-Gabbie_Garcia_68fc9629b2a30d5364fb570f.png",
-      "followers": 10003
+      "followers": 10003,
+      "marketabilityScore": 58
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5697"
-      },
+      "_id": "68fc9629b2a30d5364fb5697",
       "name": "Elle Mueller",
-      "sport": "Women's Gymnastics",
+      "sport": "WOMENS_GYMNASTICS",
       "position": "-",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384096200-Elle_Mueller_68fc9629b2a30d5364fb5697.png",
-      "followers": 9599
+      "followers": 9599,
+      "marketabilityScore": 60
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5720"
-      },
+      "_id": "68fc9629b2a30d5364fb5720",
       "name": "Owen Heinecke",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "LB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384091514-Owen_Heinecke_68fc9629b2a30d5364fb5720.png",
-      "followers": 9583
+      "followers": 9583,
+      "marketabilityScore": 62
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5713"
-      },
+      "_id": "68fc9629b2a30d5364fb5713",
       "name": "Ailana Agbayani",
-      "sport": "Softball",
+      "sport": "SOFTBALL",
       "position": "INF/RHP",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384086467-Ailana_Agbayani_68fc9629b2a30d5364fb5713.png",
-      "followers": 9566
+      "followers": 9566,
+      "marketabilityScore": 59
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5731"
-      },
+      "_id": "68fc9629b2a30d5364fb5731",
       "name": "Kelli Jo Burgess",
-      "sport": "Women's Volleyball",
+      "sport": "WOMENS_VOLLEYBALL",
       "position": "MB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384086848-Kelli_Jo Burgess_68fc9629b2a30d5364fb5731.png",
-      "followers": 9511
+      "followers": 9511,
+      "marketabilityScore": 60
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb569c"
-      },
+      "_id": "68fc9629b2a30d5364fb569c",
       "name": "Mackenzie Estep",
-      "sport": "Women's Gymnastics",
+      "sport": "WOMENS_GYMNASTICS",
       "position": "AA",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384095517-Mackenzie_Estep_68fc9629b2a30d5364fb569c.png",
-      "followers": 9503
+      "followers": 9503,
+      "marketabilityScore": 60
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5743"
-      },
+      "_id": "68fc9629b2a30d5364fb5743",
       "name": "Michael Fasusi",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "OL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384089633-Michael_Fasusi_68fc9629b2a30d5364fb5743.png",
-      "followers": 9427
+      "followers": 9427,
+      "marketabilityScore": 65
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56d9"
-      },
+      "_id": "68fc9629b2a30d5364fb56d9",
       "name": "Gracen Halton",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384093425-Gracen_Halton_68fc9629b2a30d5364fb56d9.png",
-      "followers": 9189
+      "followers": 9189,
+      "marketabilityScore": 65
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56f7"
-      },
+      "_id": "68fc9629b2a30d5364fb56f7",
       "name": "Xzayvier Brown",
-      "sport": "Men's Basketball",
+      "sport": "MENS_BASKETBALL",
       "position": "G",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384079398-Xzayvier_Brown_68fc9629b2a30d5364fb56f7.png",
-      "followers": 9169
+      "followers": 9169,
+      "marketabilityScore": 66
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5719"
-      },
+      "_id": "68fc9629b2a30d5364fb5719",
       "name": "Kendal Daniels",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "LB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384079487-Kendal_Daniels_68fc9629b2a30d5364fb5719.png",
-      "followers": 9159
+      "followers": 9159,
+      "marketabilityScore": 67
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5784"
-      },
+      "_id": "68fc9629b2a30d5364fb5784",
       "name": "Keontez Lewis",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "WR",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384092792-Keontez_Lewis_68fc9629b2a30d5364fb5784.png",
-      "followers": 8959
+      "followers": 8959,
+      "marketabilityScore": 64
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb571b"
-      },
+      "_id": "68fc9629b2a30d5364fb571b",
       "name": "Kip Lewis",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "LB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384083327-Kip_Lewis_68fc9629b2a30d5364fb571b.png",
-      "followers": 8570
+      "followers": 8570,
+      "marketabilityScore": 63
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56d2"
-      },
+      "_id": "68fc9629b2a30d5364fb56d2",
       "name": "Danny Okoye",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384079516-Danny_Okoye_68fc9629b2a30d5364fb56d2.png",
-      "followers": 8540
+      "followers": 8540,
+      "marketabilityScore": 60
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56e6"
-      },
+      "_id": "68fc9629b2a30d5364fb56e6",
       "name": "Sydney Thompson",
-      "sport": "Women's Volleyball",
+      "sport": "WOMENS_VOLLEYBALL",
       "position": "DS/L",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384096711-Sydney_Thompson_68fc9629b2a30d5364fb56e6.png",
-      "followers": 8511
+      "followers": 8511,
+      "marketabilityScore": 61
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb577e"
-      },
+      "_id": "68fc9629b2a30d5364fb577e",
       "name": "Tia Milloy",
-      "sport": "Softball",
+      "sport": "SOFTBALL",
       "position": "UTL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384089103-Tia_Milloy_68fc9629b2a30d5364fb577e.png",
-      "followers": 8503
+      "followers": 8503,
+      "marketabilityScore": 61
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56bd"
-      },
+      "_id": "68fc9629b2a30d5364fb56bd",
       "name": "Omarion Robinson",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384086443-Omarion_Robinson_68fc9629b2a30d5364fb56bd.png",
-      "followers": 8464
+      "followers": 8464,
+      "marketabilityScore": 63
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5765"
-      },
+      "_id": "68fc9629b2a30d5364fb5765",
       "name": "Kyson Witherspoon",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "RHP",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384084710-Kyson_Witherspoon_68fc9629b2a30d5364fb5765.png",
-      "followers": 8430
+      "followers": 8430,
+      "marketabilityScore": 62
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5712"
-      },
+      "_id": "68fc9629b2a30d5364fb5712",
       "name": "Sydney Barker",
-      "sport": "Softball",
+      "sport": "SOFTBALL",
       "position": "INF/OF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384078619-Sydney_Barker_68fc9629b2a30d5364fb5712.png",
-      "followers": 8418
+      "followers": 8418,
+      "marketabilityScore": 62
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56c5"
-      },
+      "_id": "68fc9629b2a30d5364fb56c5",
       "name": "Jacobe Johnson",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384094338-Jacobe_Johnson_68fc9629b2a30d5364fb56c5.png",
-      "followers": 8140
+      "followers": 8140,
+      "marketabilityScore": 62
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb570d"
-      },
+      "_id": "68fc9629b2a30d5364fb570d",
       "name": "Nelly McEnroe-Marinas",
-      "sport": "Softball",
+      "sport": "SOFTBALL",
       "position": "INF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384079455-Nelly_McEnroe-Marinas_68fc9629b2a30d5364fb570d.png",
-      "followers": 8047
+      "followers": 8047,
+      "marketabilityScore": 61
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5710"
-      },
+      "_id": "68fc9629b2a30d5364fb5710",
       "name": "Brandon Cain",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "INF/OF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384094324-Brandon_Cain_68fc9629b2a30d5364fb5710.png",
-      "followers": 7985
+      "followers": 7985,
+      "marketabilityScore": 61
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5760"
-      },
+      "_id": "68fc9629b2a30d5364fb56c1",
+      "name": "Devon Jordan",
+      "sport": "FOOTBALL",
+      "position": "DB",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384094290-Devon_Jordan_68fc9629b2a30d5364fb56c1.png",
+      "followers": 7954,
+      "marketabilityScore": 61
+    },
+    {
+      "_id": "68fc9629b2a30d5364fb5760",
       "name": "Xavier Robinson",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "RB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384083171-Xavier_Robinson_68fc9629b2a30d5364fb5760.png",
-      "followers": 7779
+      "followers": 7779,
+      "marketabilityScore": 62
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb574e"
-      },
+      "_id": "68fc9629b2a30d5364fb574e",
       "name": "Jacob Sexton",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "OL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384081380-Jacob_Sexton_68fc9629b2a30d5364fb574e.png",
-      "followers": 7664
+      "followers": 7664,
+      "marketabilityScore": 60
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56c2"
-      },
+      "_id": "68fc9629b2a30d5364fb56c2",
       "name": "Reggie Powers III",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384094904-Reggie_Powers III_68fc9629b2a30d5364fb56c2.png",
-      "followers": 7602
+      "followers": 7602,
+      "marketabilityScore": 61
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56a3"
-      },
+      "_id": "68fc9629b2a30d5364fb56a3",
       "name": "Ava Siegfeldt",
-      "sport": "Women's Gymnastics",
+      "sport": "WOMENS_GYMNASTICS",
       "position": "AA",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384084995-Ava_Siegfeldt_68fc9629b2a30d5364fb56a3.png",
-      "followers": 7596
+      "followers": 7596,
+      "marketabilityScore": 58
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56e9"
-      },
+      "_id": "68fc9629b2a30d5364fb56e9",
       "name": "Tae Davis",
-      "sport": "Men's Basketball",
+      "sport": "MENS_BASKETBALL",
       "position": "F",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384087950-Tae_Davis_68fc9629b2a30d5364fb56e9.png",
-      "followers": 7568
+      "followers": 7568,
+      "marketabilityScore": 62
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5786"
-      },
+      "_id": "68fc9629b2a30d5364fb5786",
       "name": "Zion Ragins",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "WR",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384092813-Zion_Ragins_68fc9629b2a30d5364fb5786.png",
-      "followers": 7407
+      "followers": 7407,
+      "marketabilityScore": 60
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5771"
-      },
+      "_id": "68fc9629b2a30d5364fb5771",
       "name": "Sophia Bordi",
-      "sport": "Softball",
+      "sport": "SOFTBALL",
       "position": "RHP",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384084011-Sophia_Bordi_68fc9629b2a30d5364fb5771.png",
-      "followers": 7359
+      "followers": 7359,
+      "marketabilityScore": 63
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56f6"
-      },
+      "_id": "68fc9629b2a30d5364fb56f6",
       "name": "Jake Hansen",
-      "sport": "Men's Basketball",
+      "sport": "MENS_BASKETBALL",
       "position": "G",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384087982-Jake_Hansen_68fc9629b2a30d5364fb56f6.png",
-      "followers": 7358
+      "followers": 7358,
+      "marketabilityScore": 61
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb576e"
-      },
+      "_id": "68fc9629b2a30d5364fb576e",
       "name": "Isabella Smith",
-      "sport": "Softball",
+      "sport": "SOFTBALL",
       "position": "RHP",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384087408-Isabella_Smith_68fc9629b2a30d5364fb576e.png",
-      "followers": 7283
+      "followers": 7283,
+      "marketabilityScore": 60
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56b8"
-      },
+      "_id": "68fc9629b2a30d5364fb56b8",
       "name": "Raegan Beers",
-      "sport": "Women's Basketball",
+      "sport": "WOMENS_BASKETBALL",
       "position": "C",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384088539-Raegan_Beers_68fc9629b2a30d5364fb56b8.png",
-      "followers": 7236
+      "followers": 7236,
+      "marketabilityScore": 58
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56f1"
-      },
+      "_id": "68fc9629b2a30d5364fb56f1",
       "name": "Kai Rogers",
-      "sport": "Men's Basketball",
+      "sport": "MENS_BASKETBALL",
       "position": "F/C",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384084782-Kai_Rogers_68fc9629b2a30d5364fb56f1.png",
-      "followers": 6874
+      "followers": 6874,
+      "marketabilityScore": 59
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb578b"
-      },
+      "_id": "68fc9629b2a30d5364fb578b",
       "name": "Jakeb Snyder",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "WR",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384095471-Jakeb_Snyder_68fc9629b2a30d5364fb578b.png",
-      "followers": 6736
+      "followers": 6736,
+      "marketabilityScore": 60
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb573f"
-      },
+      "_id": "68fc9629b2a30d5364fb573f",
       "name": "Emoni Bush",
-      "sport": "Women's Volleyball",
+      "sport": "WOMENS_VOLLEYBALL",
       "position": "OH",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384092859-Emoni_Bush_68fc9629b2a30d5364fb573f.png",
-      "followers": 6355
+      "followers": 6355,
+      "marketabilityScore": 56
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5785"
-      },
+      "_id": "68fc9629b2a30d5364fb5785",
       "name": "Javonnie Gibson",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "WR",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384078521-Javonnie_Gibson_68fc9629b2a30d5364fb5785.png",
-      "followers": 6274
+      "followers": 6274,
+      "marketabilityScore": 64
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5787"
-      },
+      "_id": "68fc9629b2a30d5364fb5787",
       "name": "Elijah Thomas",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "WR",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384092061-Elijah_Thomas_68fc9629b2a30d5364fb5787.png",
-      "followers": 6235
+      "followers": 6235,
+      "marketabilityScore": 59
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5701"
-      },
+      "_id": "68fc9629b2a30d5364fb5701",
       "name": "Alec Blair",
-      "sport": "Men's Basketball",
+      "sport": "MENS_BASKETBALL",
       "position": "G/F",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384082186-Alec_Blair_68fc9629b2a30d5364fb5701.png",
-      "followers": 6232
+      "followers": 6232,
+      "marketabilityScore": 63
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5766"
-      },
+      "_id": "68fc9629b2a30d5364fb5766",
       "name": "Landon Victorian",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "RHP",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384089656-Landon_Victorian_68fc9629b2a30d5364fb5766.png",
-      "followers": 6157
+      "followers": 6157,
+      "marketabilityScore": 56
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56f0"
-      },
+      "_id": "68fc9629b2a30d5364fb56f0",
       "name": "Mohamed Wague",
-      "sport": "Men's Basketball",
+      "sport": "MENS_BASKETBALL",
       "position": "F/C",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384092794-Mohamed_Wague_68fc9629b2a30d5364fb56f0.png",
-      "followers": 5751
+      "followers": 5751,
+      "marketabilityScore": 60
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56ce"
-      },
+      "_id": "68fc9629b2a30d5364fb56ce",
       "name": "Maliek Hawkins",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384081422-Maliek_Hawkins_68fc9629b2a30d5364fb56ce.png",
-      "followers": 5726
+      "followers": 5726,
+      "marketabilityScore": 58
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5758"
-      },
+      "_id": "68fc9629b2a30d5364fb5758",
       "name": "Alyssa Flack",
-      "sport": "Women's Volleyball",
+      "sport": "WOMENS_VOLLEYBALL",
       "position": "PIN",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384085587-Alyssa_Flack_68fc9629b2a30d5364fb5758.png",
-      "followers": 5686
+      "followers": 5686,
+      "marketabilityScore": 61
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56cb"
-      },
+      "_id": "68fc9629b2a30d5364fb56cb",
       "name": "Michael Boganowski",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384094925-Michael_Boganowski_68fc9629b2a30d5364fb56cb.png",
-      "followers": 5584
+      "followers": 5584,
+      "marketabilityScore": 60
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56b6"
-      },
+      "_id": "68fc9629b2a30d5364fb56b6",
       "name": "Isabela Emerling",
-      "sport": "Softball",
+      "sport": "SOFTBALL",
       "position": "C",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384081400-Isabela_Emerling_68fc9629b2a30d5364fb56b6.png",
-      "followers": 5579
+      "followers": 5579,
+      "marketabilityScore": 57
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56d0"
-      },
+      "_id": "68fc9629b2a30d5364fb56d0",
       "name": "Nigel Smith II",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384093571-Nigel_Smith II_68fc9629b2a30d5364fb56d0.png",
-      "followers": 5478
+      "followers": 5478,
+      "marketabilityScore": 57
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56c4"
-      },
+      "_id": "68fc9629b2a30d5364fb56c4",
       "name": "Kendel Dolby",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384083240-Kendel_Dolby_68fc9629b2a30d5364fb56c4.png",
-      "followers": 5428
+      "followers": 5428,
+      "marketabilityScore": 61
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb572e"
-      },
+      "_id": "68fc9629b2a30d5364fb572e",
       "name": "Ben Anderson",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "LS",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384094336-Ben_Anderson_68fc9629b2a30d5364fb572e.png",
-      "followers": 5249
+      "followers": 5249,
+      "marketabilityScore": 59
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb571f"
-      },
+      "_id": "68fc9629b2a30d5364fb571f",
       "name": "Marcus James",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "LB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384081371-Marcus_James_68fc9629b2a30d5364fb571f.png",
-      "followers": 5100
+      "followers": 5100,
+      "marketabilityScore": 56
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56dc"
-      },
+      "_id": "68fc9629b2a30d5364fb56dc",
       "name": "CJ Nickson",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384084179-CJ_Nickson_68fc9629b2a30d5364fb56dc.png",
-      "followers": 5092
+      "followers": 5092,
+      "marketabilityScore": 58
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5751"
-      },
+      "_id": "68fc9629b2a30d5364fb5751",
       "name": "Jake Taylor",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "OL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384083869-Jake_Taylor_68fc9629b2a30d5364fb5751.png",
-      "followers": 5038
+      "followers": 5038,
+      "marketabilityScore": 56
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb577f"
-      },
+      "_id": "68fc9629b2a30d5364fb577f",
       "name": "Aspen Lenczner",
-      "sport": "Women's Gymnastics",
+      "sport": "WOMENS_GYMNASTICS",
       "position": "VT/BB/FX",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384094915-Aspen_Lenczner_68fc9629b2a30d5364fb577f.png",
-      "followers": 4947
+      "followers": 4947,
+      "marketabilityScore": 57
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb573c"
-      },
+      "_id": "68fc9629b2a30d5364fb573c",
       "name": "Abigale Dayton",
-      "sport": "Softball",
+      "sport": "SOFTBALL",
       "position": "OF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384094900-Abigale_Dayton_68fc9629b2a30d5364fb573c.png",
-      "followers": 4832
+      "followers": 4832,
+      "marketabilityScore": 58
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5699"
-      },
+      "_id": "68fc9629b2a30d5364fb5699",
       "name": "Kelsey Slade",
-      "sport": "Women's Gymnastics",
+      "sport": "WOMENS_GYMNASTICS",
       "position": "-",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384085612-Kelsey_Slade_68fc9629b2a30d5364fb5699.png",
-      "followers": 4779
+      "followers": 4779,
+      "marketabilityScore": 58
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5748"
-      },
+      "_id": "68fc9629b2a30d5364fb5748",
       "name": "Jake Maikkula",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "OL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384086445-Jake_Maikkula_68fc9629b2a30d5364fb5748.png",
-      "followers": 4757
+      "followers": 4757,
+      "marketabilityScore": 60
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5739"
-      },
+      "_id": "68fc9629b2a30d5364fb5739",
       "name": "Chaney Helton",
-      "sport": "Softball",
+      "sport": "SOFTBALL",
       "position": "OF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384082300-Chaney_Helton_68fc9629b2a30d5364fb5739.png",
-      "followers": 4720
+      "followers": 4720,
+      "marketabilityScore": 58
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb573e"
-      },
+      "_id": "68fc9629b2a30d5364fb573e",
       "name": "Tekoa Barnes",
-      "sport": "Women's Volleyball",
+      "sport": "WOMENS_VOLLEYBALL",
       "position": "OH",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384090284-Tekoa_Barnes_68fc9629b2a30d5364fb573e.png",
-      "followers": 4634
+      "followers": 4634,
+      "marketabilityScore": 54
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5740"
-      },
+      "_id": "68fc9629b2a30d5364fb5740",
       "name": "Troy Everett",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "OL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384080463-Troy_Everett_68fc9629b2a30d5364fb5740.png",
-      "followers": 4616
+      "followers": 4616,
+      "marketabilityScore": 60
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb575b"
-      },
+      "_id": "68fc9629b2a30d5364fb575b",
       "name": "Jett Niu",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "QB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384093368-Jett_Niu_68fc9629b2a30d5364fb575b.png",
-      "followers": 4599
+      "followers": 4599,
+      "marketabilityScore": 59
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56d4"
-      },
+      "_id": "68fc9629b2a30d5364fb56d4",
       "name": "Adepoju Adebawore",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384092104-Adepoju_Adebawore_68fc9629b2a30d5364fb56d4.png",
-      "followers": 4571
+      "followers": 4571,
+      "marketabilityScore": 59
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5733"
-      },
+      "_id": "68fc9629b2a30d5364fb5733",
       "name": "Ada Awagu",
-      "sport": "Women's Volleyball",
+      "sport": "WOMENS_VOLLEYBALL",
       "position": "MB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384083284-Ada_Awagu_68fc9629b2a30d5364fb5733.png",
-      "followers": 4377
+      "followers": 4377,
+      "marketabilityScore": 58
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb578a"
-      },
+      "_id": "68fc9629b2a30d5364fb578a",
       "name": "KJ Daniels",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "WR",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384079533-KJ_Daniels_68fc9629b2a30d5364fb578a.png",
-      "followers": 4360
+      "followers": 4360,
+      "marketabilityScore": 62
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5789"
-      },
+      "_id": "68fc9629b2a30d5364fb5789",
       "name": "Manny Choice",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "WR",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384096190-Manny_Choice_68fc9629b2a30d5364fb5789.png",
-      "followers": 4222
+      "followers": 4222,
+      "marketabilityScore": 61
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56dd"
-      },
+      "_id": "68fc9629b2a30d5364fb56dd",
       "name": "Trent Wilson",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384078571-Trent_Wilson_68fc9629b2a30d5364fb56dd.png",
-      "followers": 4204
+      "followers": 4204,
+      "marketabilityScore": 59
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56d5"
-      },
+      "_id": "68fc9629b2a30d5364fb56d5",
       "name": "Wyatt Gilmore",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384089685-Wyatt_Gilmore_68fc9629b2a30d5364fb56d5.png",
-      "followers": 4173
+      "followers": 4173,
+      "marketabilityScore": 59
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb573b"
-      },
+      "_id": "68fc9629b2a30d5364fb573b",
       "name": "Maya Bland",
-      "sport": "Softball",
+      "sport": "SOFTBALL",
       "position": "OF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384090903-Maya_Bland_68fc9629b2a30d5364fb573b.png",
-      "followers": 4127
+      "followers": 4127,
+      "marketabilityScore": 59
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5772"
-      },
+      "_id": "68fc9629b2a30d5364fb5772",
       "name": "Jackson Kircher",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "RHP/OF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384092117-Jackson_Kircher_68fc9629b2a30d5364fb5772.png",
-      "followers": 4125
+      "followers": 4125,
+      "marketabilityScore": 60
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56a7"
-      },
+      "_id": "68fc9629b2a30d5364fb56a7",
       "name": "Fuzzy Benas",
-      "sport": "Men's Gymnastics",
+      "sport": "MENS_GYMNASTICS",
       "position": "AA",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384089683-Fuzzy_Benas_68fc9629b2a30d5364fb56a7.png",
-      "followers": 4069
+      "followers": 4069,
+      "marketabilityScore": 55
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5718"
-      },
+      "_id": "68fc9629b2a30d5364fb5718",
       "name": "Grayson Miller",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "K/P",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384081354-Grayson_Miller_68fc9629b2a30d5364fb5718.png",
-      "followers": 4035
+      "followers": 4035,
+      "marketabilityScore": 59
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb577c"
-      },
+      "_id": "68fc9629b2a30d5364fb577c",
       "name": "Carson Kent",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "TE",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384083115-Carson_Kent_68fc9629b2a30d5364fb577c.png",
-      "followers": 4031
+      "followers": 4031,
+      "marketabilityScore": 59
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5764"
-      },
+      "_id": "68fc9629b2a30d5364fb5764",
       "name": "Malachi Witherspoon",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "RHP",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384090921-Malachi_Witherspoon_68fc9629b2a30d5364fb5764.png",
-      "followers": 3919
+      "followers": 3919,
+      "marketabilityScore": 56
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56ed"
-      },
+      "_id": "68fc9629b2a30d5364fb56ed",
       "name": "Sahara Williams",
-      "sport": "Women's Basketball",
+      "sport": "WOMENS_BASKETBALL",
       "position": "F",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384090939-Sahara_Williams_68fc9629b2a30d5364fb56ed.png",
-      "followers": 3900
+      "followers": 3900,
+      "marketabilityScore": 55
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56f8"
-      },
+      "_id": "68fc9629b2a30d5364fb56f8",
       "name": "Jeff Nwankwo",
-      "sport": "Men's Basketball",
+      "sport": "MENS_BASKETBALL",
       "position": "G",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384080472-Jeff_Nwankwo_68fc9629b2a30d5364fb56f8.png",
-      "followers": 3848
+      "followers": 3848,
+      "marketabilityScore": 57
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5734"
-      },
+      "_id": "68fc9629b2a30d5364fb5734",
       "name": "Jason Walk",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "OF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384087391-Jason_Walk_68fc9629b2a30d5364fb5734.png",
-      "followers": 3811
+      "followers": 3811,
+      "marketabilityScore": 57
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5790"
-      },
+      "_id": "68fc9629b2a30d5364fb5790",
       "name": "Jacob Jordan",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "WR",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384092828-Jacob_Jordan_68fc9629b2a30d5364fb5790.png",
-      "followers": 3782
+      "followers": 3782,
+      "marketabilityScore": 59
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb571d"
-      },
+      "_id": "68fc9629b2a30d5364fb571d",
       "name": "Taylor Heim",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "LB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384094313-Taylor_Heim_68fc9629b2a30d5364fb571d.png",
-      "followers": 3732
+      "followers": 3732,
+      "marketabilityScore": 56
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56c7"
-      },
+      "_id": "68fc9629b2a30d5364fb56c7",
       "name": "Jeremiah Newcombe",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384090310-Jeremiah_Newcombe_68fc9629b2a30d5364fb56c7.png",
-      "followers": 3721
+      "followers": 3721,
+      "marketabilityScore": 55
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5707"
-      },
+      "_id": "68fc9629b2a30d5364fb5707",
       "name": "Jaxon Willits",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "INF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384094865-Jaxon_Willits_68fc9629b2a30d5364fb5707.png",
-      "followers": 3701
+      "followers": 3701,
+      "marketabilityScore": 56
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56a2"
-      },
+      "_id": "68fc9629b2a30d5364fb56a2",
       "name": "Hannah Scheible",
-      "sport": "Women's Gymnastics",
+      "sport": "WOMENS_GYMNASTICS",
       "position": "AA",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384089138-Hannah_Scheible_68fc9629b2a30d5364fb56a2.png",
-      "followers": 3657
+      "followers": 3657,
+      "marketabilityScore": 53
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb574a"
-      },
+      "_id": "68fc9629b2a30d5364fb574a",
       "name": "Logan Howland",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "OL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384085036-Logan_Howland_68fc9629b2a30d5364fb574a.png",
-      "followers": 3646
+      "followers": 3646,
+      "marketabilityScore": 58
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56a6"
-      },
+      "_id": "68fc9629b2a30d5364fb56a6",
       "name": "Keira Wells",
-      "sport": "Women's Gymnastics",
+      "sport": "WOMENS_GYMNASTICS",
       "position": "AA",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384091538-Keira_Wells_68fc9629b2a30d5364fb56a6.png",
-      "followers": 3587
+      "followers": 3587,
+      "marketabilityScore": 55
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56fc"
-      },
+      "_id": "68fc9629b2a30d5364fb56fc",
       "name": "Reid Lovelace",
-      "sport": "Men's Basketball",
+      "sport": "MENS_BASKETBALL",
       "position": "G",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384081315-Reid_Lovelace_68fc9629b2a30d5364fb56fc.png",
-      "followers": 3560
+      "followers": 3560,
+      "marketabilityScore": 55
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5761"
-      },
+      "_id": "68fc9629b2a30d5364fb5761",
       "name": "Andy Bass",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "RB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384095503-Andy_Bass_68fc9629b2a30d5364fb5761.png",
-      "followers": 3535
+      "followers": 3535,
+      "marketabilityScore": 57
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb577b"
-      },
+      "_id": "68fc9629b2a30d5364fb577b",
       "name": "Will Huggins",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "TE",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384087948-Will_Huggins_68fc9629b2a30d5364fb577b.png",
-      "followers": 3526
+      "followers": 3526,
+      "marketabilityScore": 57
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5783"
-      },
+      "_id": "68fc9629b2a30d5364fb5783",
       "name": "Zion Kearney",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "WR",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384082007-Zion_Kearney_68fc9629b2a30d5364fb5783.png",
-      "followers": 3401
+      "followers": 3401,
+      "marketabilityScore": 58
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5711"
-      },
+      "_id": "68fc9629b2a30d5364fb5711",
       "name": "Sam Christiansen",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "INF/OF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384091489-Sam_Christiansen_68fc9629b2a30d5364fb5711.png",
-      "followers": 3373
+      "followers": 3373,
+      "marketabilityScore": 56
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5727"
-      },
+      "_id": "68fc9629b2a30d5364fb5727",
       "name": "Grant Stevens",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "LHP",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384096173-Grant_Stevens_68fc9629b2a30d5364fb5727.png",
-      "followers": 3369
+      "followers": 3369,
+      "marketabilityScore": 56
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56b3"
-      },
+      "_id": "68fc9629b2a30d5364fb56b3",
       "name": "Easton Carmichael",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "C",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384085572-Easton_Carmichael_68fc9629b2a30d5364fb56b3.png",
-      "followers": 3363
+      "followers": 3363,
+      "marketabilityScore": 55
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56c3"
-      },
+      "_id": "68fc9629b2a30d5364fb56c3",
       "name": "Trystan Haynes",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384086475-Trystan_Haynes_68fc9629b2a30d5364fb56c3.png",
-      "followers": 3305
+      "followers": 3305,
+      "marketabilityScore": 57
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56c6"
-      },
+      "_id": "68fc9629b2a30d5364fb56c6",
       "name": "Casen Calmus",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384080499-Casen_Calmus_68fc9629b2a30d5364fb56c6.png",
-      "followers": 3292
+      "followers": 3292,
+      "marketabilityScore": 55
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb574f"
-      },
+      "_id": "68fc9629b2a30d5364fb574f",
       "name": "Heath Ozaeta",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "OL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384089721-Heath_Ozaeta_68fc9629b2a30d5364fb574f.png",
-      "followers": 3273
+      "followers": 3273,
+      "marketabilityScore": 57
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5791"
-      },
+      "_id": "68fc9629b2a30d5364fb5791",
       "name": "Eli Merck",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "WR",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384092119-Eli_Merck_68fc9629b2a30d5364fb5791.png",
-      "followers": 3175
+      "followers": 3175,
+      "marketabilityScore": 57
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5744"
-      },
+      "_id": "68fc9629b2a30d5364fb5744",
       "name": "Gunnar Allen",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "OL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384088555-Gunnar_Allen_68fc9629b2a30d5364fb5744.png",
-      "followers": 3134
+      "followers": 3134,
+      "marketabilityScore": 55
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56bb"
-      },
+      "_id": "68fc9629b2a30d5364fb56bb",
       "name": "Riley Zache",
-      "sport": "Softball",
+      "sport": "SOFTBALL",
       "position": "C/INF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384094893-Riley_Zache_68fc9629b2a30d5364fb56bb.png",
-      "followers": 3107
+      "followers": 3107,
+      "marketabilityScore": 55
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5706"
-      },
+      "_id": "68fc9629b2a30d5364fb5706",
       "name": "Kyle Branch",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "INF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384089114-Kyle_Branch_68fc9629b2a30d5364fb5706.png",
-      "followers": 3076
+      "followers": 3076,
+      "marketabilityScore": 59
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56a0"
-      },
+      "_id": "68fc9629b2a30d5364fb56a0",
       "name": "Kamila Pawlak",
-      "sport": "Women's Gymnastics",
+      "sport": "WOMENS_GYMNASTICS",
       "position": "AA",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384095639-Kamila_Pawlak_68fc9629b2a30d5364fb56a0.png",
-      "followers": 2965
+      "followers": 2965,
+      "marketabilityScore": 55
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb578f"
-      },
+      "_id": "68fc9629b2a30d5364fb578f",
       "name": "Trey Brown",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "WR",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384094326-Trey_Brown_68fc9629b2a30d5364fb578f.png",
-      "followers": 2957
+      "followers": 2957,
+      "marketabilityScore": 56
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5778"
-      },
+      "_id": "68fc9629b2a30d5364fb5778",
       "name": "Kade McIntyre",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "TE",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384092122-Kade_McIntyre_68fc9629b2a30d5364fb5778.png",
-      "followers": 2907
+      "followers": 2907,
+      "marketabilityScore": 55
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56a4"
-      },
+      "_id": "68fc9629b2a30d5364fb56a4",
       "name": "Caitlin Smith",
-      "sport": "Women's Gymnastics",
+      "sport": "WOMENS_GYMNASTICS",
       "position": "AA",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384084207-Caitlin_Smith_68fc9629b2a30d5364fb56a4.png",
-      "followers": 2856
+      "followers": 2856,
+      "marketabilityScore": 52
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5741"
-      },
+      "_id": "68fc9629b2a30d5364fb5741",
       "name": "Febechi Nwaiwu",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "OL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384092821-Febechi_Nwaiwu_68fc9629b2a30d5364fb5741.png",
-      "followers": 2840
+      "followers": 2840,
+      "marketabilityScore": 57
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5750"
-      },
+      "_id": "68fc9629b2a30d5364fb5750",
       "name": "Luke Baklenko",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "OL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384084738-Luke_Baklenko_68fc9629b2a30d5364fb5750.png",
-      "followers": 2838
+      "followers": 2838,
+      "marketabilityScore": 55
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5749"
-      },
+      "_id": "68fc9629b2a30d5364fb5749",
       "name": "Ryan Fodje",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "OL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384096161-Ryan_Fodje_68fc9629b2a30d5364fb5749.png",
-      "followers": 2815
+      "followers": 2815,
+      "marketabilityScore": 59
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5737"
-      },
+      "_id": "68fc9629b2a30d5364fb5737",
       "name": "Dasan Harris",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "OF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384090901-Dasan_Harris_68fc9629b2a30d5364fb5737.png",
-      "followers": 2791
+      "followers": 2791,
+      "marketabilityScore": 54
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5756"
-      },
+      "_id": "68fc9629b2a30d5364fb5756",
       "name": "Kamille Gibson",
-      "sport": "Women's Volleyball",
+      "sport": "WOMENS_VOLLEYBALL",
       "position": "PIN",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384085610-Kamille_Gibson_68fc9629b2a30d5364fb5756.png",
-      "followers": 2770
+      "followers": 2770,
+      "marketabilityScore": 54
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56ca"
-      },
+      "_id": "68fc9629b2a30d5364fb56ca",
       "name": "Marcus Wimberly",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384090278-Marcus_Wimberly_68fc9629b2a30d5364fb56ca.png",
-      "followers": 2755
+      "followers": 2755,
+      "marketabilityScore": 55
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56e2"
-      },
+      "_id": "68fc9629b2a30d5364fb56e2",
       "name": "Markus Strong",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384082321-Markus_Strong_68fc9629b2a30d5364fb56e2.png",
-      "followers": 2741
+      "followers": 2741,
+      "marketabilityScore": 57
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb572c"
-      },
+      "_id": "68fc9629b2a30d5364fb572c",
       "name": "Audrey Lowry",
-      "sport": "Softball",
+      "sport": "SOFTBALL",
       "position": "LHP",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384087955-Audrey_Lowry_68fc9629b2a30d5364fb572c.png",
-      "followers": 2716
+      "followers": 2716,
+      "marketabilityScore": 55
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5774"
-      },
+      "_id": "68fc9629b2a30d5364fb5774",
       "name": "Avaya Maga",
-      "sport": "Women's Volleyball",
+      "sport": "WOMENS_VOLLEYBALL",
       "position": "S",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384093447-Avaya_Maga_68fc9629b2a30d5364fb5774.png",
-      "followers": 2666
+      "followers": 2666,
+      "marketabilityScore": 58
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb570a"
-      },
+      "_id": "68fc9629b2a30d5364fb570a",
       "name": "Drew Dickerson",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "INF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384082238-Drew_Dickerson_68fc9629b2a30d5364fb570a.png",
-      "followers": 2649
+      "followers": 2649,
+      "marketabilityScore": 56
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb569a"
-      },
+      "_id": "68fc9629b2a30d5364fb569a",
       "name": "Hurley Snow",
-      "sport": "Women's Gymnastics",
+      "sport": "WOMENS_GYMNASTICS",
       "position": "-",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384090937-Hurley_Snow_68fc9629b2a30d5364fb569a.png",
-      "followers": 2647
+      "followers": 2647,
+      "marketabilityScore": 52
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56a1"
-      },
+      "_id": "68fc9629b2a30d5364fb56a1",
       "name": "Blakely Roten",
-      "sport": "Women's Gymnastics",
+      "sport": "WOMENS_GYMNASTICS",
       "position": "AA",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384088013-Blakely_Roten_68fc9629b2a30d5364fb56a1.png",
-      "followers": 2627
+      "followers": 2627,
+      "marketabilityScore": 55
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb578c"
-      },
+      "_id": "68fc9629b2a30d5364fb578c",
       "name": "Ivan Carreon",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "WR",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384091526-Ivan_Carreon_68fc9629b2a30d5364fb578c.png",
-      "followers": 2593
+      "followers": 2593,
+      "marketabilityScore": 58
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb574c"
-      },
+      "_id": "68fc9629b2a30d5364fb574c",
       "name": "Darius Afalava",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "OL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384088541-Darius_Afalava_68fc9629b2a30d5364fb574c.png",
-      "followers": 2575
+      "followers": 2575,
+      "marketabilityScore": 55
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb578e"
-      },
+      "_id": "68fc9629b2a30d5364fb578e",
       "name": "Jer'Michael Carter",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "WR",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384094279-Jer'Michael_Carter_68fc9629b2a30d5364fb578e.png",
-      "followers": 2563
+      "followers": 2563,
+      "marketabilityScore": 57
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56fb"
-      },
+      "_id": "68fc9629b2a30d5364fb56fb",
       "name": "Jadon Jones",
-      "sport": "Men's Basketball",
+      "sport": "MENS_BASKETBALL",
       "position": "G",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384088522-Jadon_Jones_68fc9629b2a30d5364fb56fb.png",
-      "followers": 2546
+      "followers": 2546,
+      "marketabilityScore": 53
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb572d"
-      },
+      "_id": "68fc9629b2a30d5364fb572d",
       "name": "Gavyn Jones",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "LHP/OF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384086458-Gavyn_Jones_68fc9629b2a30d5364fb572d.png",
-      "followers": 2531
+      "followers": 2531,
+      "marketabilityScore": 54
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5705"
-      },
+      "_id": "68fc9629b2a30d5364fb5705",
       "name": "Dawson Willis",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "INF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384093386-Dawson_Willis_68fc9629b2a30d5364fb5705.png",
-      "followers": 2468
+      "followers": 2468,
+      "marketabilityScore": 56
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5753"
-      },
+      "_id": "68fc9629b2a30d5364fb5753",
       "name": "Mac Seyler",
-      "sport": "Men's Gymnastics",
+      "sport": "MENS_GYMNASTICS",
       "position": "PH,SR",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384088557-Mac_Seyler_68fc9629b2a30d5364fb5753.png",
-      "followers": 2410
+      "followers": 2410,
+      "marketabilityScore": 54
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56cd"
-      },
+      "_id": "68fc9629b2a30d5364fb56cd",
       "name": "Reed DeQuasie",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384091481-Reed_DeQuasie_68fc9629b2a30d5364fb56cd.png",
-      "followers": 2386
+      "followers": 2386,
+      "marketabilityScore": 54
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56ef"
-      },
+      "_id": "68fc9629b2a30d5364fb56ef",
       "name": "Brooklyn Stewart",
-      "sport": "Women's Basketball",
+      "sport": "WOMENS_BASKETBALL",
       "position": "F",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384095485-Brooklyn_Stewart_68fc9629b2a30d5364fb56ef.png",
-      "followers": 2377
+      "followers": 2377,
+      "marketabilityScore": 55
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb575c"
-      },
+      "_id": "68fc9629b2a30d5364fb575c",
       "name": "Whitt Newbauer",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "QB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384089151-Whitt_Newbauer_68fc9629b2a30d5364fb575c.png",
-      "followers": 2374
+      "followers": 2374,
+      "marketabilityScore": 59
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb577a"
-      },
+      "_id": "68fc9629b2a30d5364fb577a",
       "name": "John Locke Jr.",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "TE",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384086459-John_Locke Jr._68fc9629b2a30d5364fb577a.png",
-      "followers": 2371
+      "followers": 2371,
+      "marketabilityScore": 55
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56d8"
-      },
+      "_id": "68fc9629b2a30d5364fb56d8",
       "name": "David Rowaiye",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384091491-David_Rowaiye_68fc9629b2a30d5364fb56d8.png",
-      "followers": 2340
+      "followers": 2340,
+      "marketabilityScore": 54
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5762"
-      },
+      "_id": "68fc9629b2a30d5364fb5762",
       "name": "Gabe Sawchuk",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "RB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384084769-Gabe_Sawchuk_68fc9629b2a30d5364fb5762.png",
-      "followers": 2302
+      "followers": 2302,
+      "marketabilityScore": 54
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56e5"
-      },
+      "_id": "68fc9629b2a30d5364fb56e5",
       "name": "Whitney Wallace",
-      "sport": "Women's Volleyball",
+      "sport": "WOMENS_VOLLEYBALL",
       "position": "DS/L",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384083238-Whitney_Wallace_68fc9629b2a30d5364fb56e5.png",
-      "followers": 2273
+      "followers": 2273,
+      "marketabilityScore": 52
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb576d"
-      },
+      "_id": "68fc9629b2a30d5364fb576d",
       "name": "Dylan Crooks",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "RHP",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384082268-Dylan_Crooks_68fc9629b2a30d5364fb576d.png",
-      "followers": 2214
+      "followers": 2214,
+      "marketabilityScore": 54
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56d1"
-      },
+      "_id": "68fc9629b2a30d5364fb56d1",
       "name": "Alex Shieldnight",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384082248-Alex_Shieldnight_68fc9629b2a30d5364fb56d1.png",
-      "followers": 2195
+      "followers": 2195,
+      "marketabilityScore": 50
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5752"
-      },
+      "_id": "68fc9629b2a30d5364fb5752",
       "name": "Jacob Ulrich",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "P",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384081088-Jacob_Ulrich_68fc9629b2a30d5364fb5752.png",
-      "followers": 2175
+      "followers": 2175,
+      "marketabilityScore": 54
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56b7"
-      },
+      "_id": "68fc9629b2a30d5364fb56b7",
       "name": "Beatrice Culliton",
-      "sport": "Women's Basketball",
+      "sport": "WOMENS_BASKETBALL",
       "position": "C",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384083094-Beatrice_Culliton_68fc9629b2a30d5364fb56b7.png",
-      "followers": 2100
+      "followers": 2100,
+      "marketabilityScore": 53
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56f5"
-      },
+      "_id": "68fc9629b2a30d5364fb56f5",
       "name": "Arthur Ballon",
-      "sport": "Men's Gymnastics",
+      "sport": "MENS_GYMNASTICS",
       "position": "FX,VT,PB,HB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384094347-Arthur_Ballon_68fc9629b2a30d5364fb56f5.png",
-      "followers": 2097
+      "followers": 2097,
+      "marketabilityScore": 53
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56b1"
-      },
+      "_id": "68fc9629b2a30d5364fb56b1",
       "name": "Zach Nunez",
-      "sport": "Men's Gymnastics",
+      "sport": "MENS_GYMNASTICS",
       "position": "AA",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384081398-Zach_Nunez_68fc9629b2a30d5364fb56b1.png",
-      "followers": 2081
+      "followers": 2081,
+      "marketabilityScore": 51
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5745"
-      },
+      "_id": "68fc9629b2a30d5364fb5745",
       "name": "Sean Hutton",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "OL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384096181-Sean_Hutton_68fc9629b2a30d5364fb5745.png",
-      "followers": 2073
+      "followers": 2073,
+      "marketabilityScore": 56
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56fe"
-      },
+      "_id": "68fc9629b2a30d5364fb56fe",
       "name": "Zya Vann",
-      "sport": "Women's Basketball",
+      "sport": "WOMENS_BASKETBALL",
       "position": "G",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384087966-Zya_Vann_68fc9629b2a30d5364fb56fe.png",
-      "followers": 2027
+      "followers": 2027,
+      "marketabilityScore": 52
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5763"
-      },
+      "_id": "68fc9629b2a30d5364fb5763",
       "name": "Jacob Gholston",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "RHP",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384085596-Jacob_Gholston_68fc9629b2a30d5364fb5763.png",
-      "followers": 2007
+      "followers": 2007,
+      "marketabilityScore": 55
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56ee"
-      },
+      "_id": "68fc9629b2a30d5364fb56ee",
       "name": "Emma Tolan",
-      "sport": "Women's Basketball",
+      "sport": "WOMENS_BASKETBALL",
       "position": "F",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384087393-Emma_Tolan_68fc9629b2a30d5364fb56ee.png",
-      "followers": 1882
+      "followers": 1882,
+      "marketabilityScore": 54
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56db"
-      },
+      "_id": "68fc9629b2a30d5364fb56db",
       "name": "Bergin Kysar",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384087979-Bergin_Kysar_68fc9629b2a30d5364fb56db.png",
-      "followers": 1874
+      "followers": 1874,
+      "marketabilityScore": 52
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56ad"
-      },
+      "_id": "68fc9629b2a30d5364fb56ad",
       "name": "Brigham Frentheway",
-      "sport": "Men's Gymnastics",
+      "sport": "MENS_GYMNASTICS",
       "position": "AA",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384094906-Brigham_Frentheway_68fc9629b2a30d5364fb56ad.png",
-      "followers": 1858
+      "followers": 1858,
+      "marketabilityScore": 51
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5709"
-      },
+      "_id": "68fc9629b2a30d5364fb5709",
       "name": "Dayton Tockey",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "INF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384089112-Dayton_Tockey_68fc9629b2a30d5364fb5709.png",
-      "followers": 1851
+      "followers": 1851,
+      "marketabilityScore": 54
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5726"
-      },
+      "_id": "68fc9629b2a30d5364fb5726",
       "name": "Beau Sampson",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "LHP",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384088548-Beau_Sampson_68fc9629b2a30d5364fb5726.png",
-      "followers": 1789
+      "followers": 1789,
+      "marketabilityScore": 53
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56b4"
-      },
+      "_id": "68fc9629b2a30d5364fb56b4",
       "name": "Scott Mudler",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "C",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384087395-Scott_Mudler_68fc9629b2a30d5364fb56b4.png",
-      "followers": 1787
+      "followers": 1787,
+      "marketabilityScore": 49
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5721"
-      },
+      "_id": "68fc9629b2a30d5364fb5721",
       "name": "Barrett Travis",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "LB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384087357-Barrett_Travis_68fc9629b2a30d5364fb5721.png",
-      "followers": 1766
+      "followers": 1766,
+      "marketabilityScore": 53
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56e8"
-      },
+      "_id": "68fc9629b2a30d5364fb56e8",
       "name": "Finley Keeffe",
-      "sport": "Men's Basketball",
+      "sport": "MENS_BASKETBALL",
       "position": "F",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384091499-Finley_Keeffe_68fc9629b2a30d5364fb56e8.png",
-      "followers": 1724
+      "followers": 1724,
+      "marketabilityScore": 54
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56ea"
-      },
+      "_id": "68fc9629b2a30d5364fb56ea",
       "name": "Kuol Atak",
-      "sport": "Men's Basketball",
+      "sport": "MENS_BASKETBALL",
       "position": "F",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384094881-Kuol_Atak_68fc9629b2a30d5364fb56ea.png",
-      "followers": 1722
+      "followers": 1722,
+      "marketabilityScore": 54
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5775"
-      },
+      "_id": "68fc9629b2a30d5364fb5775",
       "name": "Harper Hall",
-      "sport": "Women's Volleyball",
+      "sport": "WOMENS_VOLLEYBALL",
       "position": "S",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384088574-Harper_Hall_68fc9629b2a30d5364fb5775.png",
-      "followers": 1690
+      "followers": 1690,
+      "marketabilityScore": 52
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5779"
-      },
+      "_id": "68fc9629b2a30d5364fb5779",
       "name": "Trynae Washington",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "TE",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384094855-Trynae_Washington_68fc9629b2a30d5364fb5779.png",
-      "followers": 1673
+      "followers": 1673,
+      "marketabilityScore": 51
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb576b"
-      },
+      "_id": "68fc9629b2a30d5364fb576b",
       "name": "Mitch Haythorn",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "RHP",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384092815-Mitch_Haythorn_68fc9629b2a30d5364fb576b.png",
-      "followers": 1643
+      "followers": 1643,
+      "marketabilityScore": 51
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5728"
-      },
+      "_id": "68fc9629b2a30d5364fb5728",
       "name": "Jordan Stribling",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "LHP",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384093399-Jordan_Stribling_68fc9629b2a30d5364fb5728.png",
-      "followers": 1620
+      "followers": 1620,
+      "marketabilityScore": 54
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5717"
-      },
+      "_id": "68fc9629b2a30d5364fb5717",
       "name": "Austin Welch",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "K",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384080405-Austin_Welch_68fc9629b2a30d5364fb5717.png",
-      "followers": 1595
+      "followers": 1595,
+      "marketabilityScore": 54
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb570e"
-      },
+      "_id": "68fc9629b2a30d5364fb570e",
       "name": "Kadey Lee McKay",
-      "sport": "Softball",
+      "sport": "SOFTBALL",
       "position": "INF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384087365-Kadey_Lee McKay_68fc9629b2a30d5364fb570e.png",
-      "followers": 1594
+      "followers": 1594,
+      "marketabilityScore": 51
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5724"
-      },
+      "_id": "68fc9629b2a30d5364fb5724",
       "name": "Jaden Barfield",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "LHP",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384089098-Jaden_Barfield_68fc9629b2a30d5364fb5724.png",
-      "followers": 1576
+      "followers": 1576,
+      "marketabilityScore": 54
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb574b"
-      },
+      "_id": "68fc9629b2a30d5364fb574b",
       "name": "Isaiah Dent",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "OL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384091505-Isaiah_Dent_68fc9629b2a30d5364fb574b.png",
-      "followers": 1514
+      "followers": 1514,
+      "marketabilityScore": 52
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56ac"
-      },
+      "_id": "68fc9629b2a30d5364fb56ac",
       "name": "Colin Flores",
-      "sport": "Men's Gymnastics",
+      "sport": "MENS_GYMNASTICS",
       "position": "AA",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384087401-Colin_Flores_68fc9629b2a30d5364fb56ac.png",
-      "followers": 1499
+      "followers": 1499,
+      "marketabilityScore": 48
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5738"
-      },
+      "_id": "68fc9629b2a30d5364fb5738",
       "name": "Trey Gambill",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "OF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384083890-Trey_Gambill_68fc9629b2a30d5364fb5738.png",
-      "followers": 1467
+      "followers": 1467,
+      "marketabilityScore": 53
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5747"
-      },
+      "_id": "68fc9629b2a30d5364fb5747",
       "name": "Owen Hollenbeck",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "OL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384086450-Owen_Hollenbeck_68fc9629b2a30d5364fb5747.png",
-      "followers": 1445
+      "followers": 1445,
+      "marketabilityScore": 51
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5730"
-      },
+      "_id": "68fc9629b2a30d5364fb5730",
       "name": "Carley Butler",
-      "sport": "Women's Volleyball",
+      "sport": "WOMENS_VOLLEYBALL",
       "position": "MB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384094341-Carley_Butler_68fc9629b2a30d5364fb5730.png",
-      "followers": 1422
+      "followers": 1422,
+      "marketabilityScore": 51
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56f4"
-      },
+      "_id": "68fc9629b2a30d5364fb56f4",
       "name": "Francisco Velez Belendez",
-      "sport": "Men's Gymnastics",
+      "sport": "MENS_GYMNASTICS",
       "position": "FX,SR,VT,PB,HB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384087963-Francisco_Velez Belendez_68fc9629b2a30d5364fb56f4.png",
-      "followers": 1406
+      "followers": 1406,
+      "marketabilityScore": 51
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5716"
-      },
+      "_id": "68fc9629b2a30d5364fb5716",
       "name": "Liam Evans",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "K",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384081369-Liam_Evans_68fc9629b2a30d5364fb5716.png",
-      "followers": 1371
+      "followers": 1371,
+      "marketabilityScore": 52
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56f3"
-      },
+      "_id": "68fc9629b2a30d5364fb56f3",
       "name": "Matthew Burgoyne",
-      "sport": "Men's Gymnastics",
+      "sport": "MENS_GYMNASTICS",
       "position": "FX,SR,PB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384096198-Matthew_Burgoyne_68fc9629b2a30d5364fb56f3.png",
-      "followers": 1312
+      "followers": 1312,
+      "marketabilityScore": 48
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb571e"
-      },
+      "_id": "68fc9629b2a30d5364fb571e",
       "name": "Elgee Webster",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "LB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384090931-Elgee_Webster_68fc9629b2a30d5364fb571e.png",
-      "followers": 1302
+      "followers": 1302,
+      "marketabilityScore": 52
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56a8"
-      },
+      "_id": "68fc9629b2a30d5364fb56a8",
       "name": "Max Bereznev",
-      "sport": "Men's Gymnastics",
+      "sport": "MENS_GYMNASTICS",
       "position": "AA",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384083212-Max_Bereznev_68fc9629b2a30d5364fb56a8.png",
-      "followers": 1286
+      "followers": 1286,
+      "marketabilityScore": 51
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5702"
-      },
+      "_id": "68fc9629b2a30d5364fb5702",
       "name": "Kelton Christiansen",
-      "sport": "Men's Gymnastics",
+      "sport": "MENS_GYMNASTICS",
       "position": "HB,PH,FX",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384091516-Kelton_Christiansen_68fc9629b2a30d5364fb5702.png",
-      "followers": 1239
+      "followers": 1239,
+      "marketabilityScore": 49
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5768"
-      },
-      "name": "Dylan Tate",
-      "sport": "Men's Baseball",
-      "position": "RHP",
-      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384093402-Dylan_Tate_68fc9629b2a30d5364fb5768.png",
-      "followers": 1236
-    },
-    {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb576c"
-      },
+      "_id": "68fc9629b2a30d5364fb576c",
       "name": "Reid Hensley",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "RHP",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384086484-Reid_Hensley_68fc9629b2a30d5364fb576c.png",
-      "followers": 1236
+      "followers": 1236,
+      "marketabilityScore": 48
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56b0"
-      },
+      "_id": "68fc9629b2a30d5364fb5768",
+      "name": "Dylan Tate",
+      "sport": "MENS_BASEBALL",
+      "position": "RHP",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384093402-Dylan_Tate_68fc9629b2a30d5364fb5768.png",
+      "followers": 1236,
+      "marketabilityScore": 50
+    },
+    {
+      "_id": "68fc9629b2a30d5364fb56b0",
       "name": "Leo Koike",
-      "sport": "Men's Gymnastics",
+      "sport": "MENS_GYMNASTICS",
       "position": "AA",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384079505-Leo_Koike_68fc9629b2a30d5364fb56b0.png",
-      "followers": 1212
+      "followers": 1212,
+      "marketabilityScore": 48
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5767"
-      },
+      "_id": "68fc9629b2a30d5364fb5767",
       "name": "Michael Catalano",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "RHP",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384093396-Michael_Catalano_68fc9629b2a30d5364fb5767.png",
-      "followers": 1203
+      "followers": 1203,
+      "marketabilityScore": 53
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb572f"
-      },
+      "_id": "68fc9629b2a30d5364fb572f",
       "name": "Seth Freeman",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "LS",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384087373-Seth_Freeman_68fc9629b2a30d5364fb572f.png",
-      "followers": 1197
+      "followers": 1197,
+      "marketabilityScore": 51
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5755"
-      },
+      "_id": "68fc9629b2a30d5364fb5755",
       "name": "Tyler Flores",
-      "sport": "Men's Gymnastics",
+      "sport": "MENS_GYMNASTICS",
       "position": "PH,VT,PB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384089707-Tyler_Flores_68fc9629b2a30d5364fb5755.png",
-      "followers": 1184
+      "followers": 1184,
+      "marketabilityScore": 48
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56e7"
-      },
+      "_id": "68fc9629b2a30d5364fb56e7",
       "name": "Andreas Holst",
-      "sport": "Men's Basketball",
+      "sport": "MENS_BASKETBALL",
       "position": "F",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384089087-Andreas_Holst_68fc9629b2a30d5364fb56e7.png",
-      "followers": 1180
+      "followers": 1180,
+      "marketabilityScore": 49
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56ae"
-      },
+      "_id": "68fc9629b2a30d5364fb56ae",
       "name": "Tas Hajdu",
-      "sport": "Men's Gymnastics",
+      "sport": "MENS_GYMNASTICS",
       "position": "AA",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384093372-Tas_Hajdu_68fc9629b2a30d5364fb56ae.png",
-      "followers": 1130
+      "followers": 1130,
+      "marketabilityScore": 50
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5704"
-      },
+      "_id": "68fc9629b2a30d5364fb5704",
       "name": "Mason Hamlin",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "INF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384080426-Mason_Hamlin_68fc9629b2a30d5364fb5704.png",
-      "followers": 1107
+      "followers": 1107,
+      "marketabilityScore": 52
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5696"
-      },
+      "_id": "68fc9629b2a30d5364fb5696",
       "name": "Elizabeth Blessey",
-      "sport": "Women's Gymnastics",
+      "sport": "WOMENS_GYMNASTICS",
       "position": "-",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384089723-Elizabeth_Blessey_68fc9629b2a30d5364fb5696.png",
-      "followers": 1102
+      "followers": 1102,
+      "marketabilityScore": 52
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5708"
-      },
+      "_id": "68fc9629b2a30d5364fb5708",
       "name": "Ryley Leininger",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "INF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384080410-Ryley_Leininger_68fc9629b2a30d5364fb5708.png",
-      "followers": 1101
+      "followers": 1101,
+      "marketabilityScore": 52
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5723"
-      },
+      "_id": "68fc9629b2a30d5364fb5723",
       "name": "Cade Crossland",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "LHP",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384082175-Cade_Crossland_68fc9629b2a30d5364fb5723.png",
-      "followers": 1063
+      "followers": 1063,
+      "marketabilityScore": 49
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56e3"
-      },
-      "name": "Dionii Fraga",
-      "sport": "Women's Volleyball",
-      "position": "DS/L",
-      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384085622-Dionii_Fraga_68fc9629b2a30d5364fb56e3.png",
-      "followers": 1046
-    },
-    {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5729"
-      },
+      "_id": "68fc9629b2a30d5364fb5729",
       "name": "James Hitt",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "LHP",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384088582-James_Hitt_68fc9629b2a30d5364fb5729.png",
-      "followers": 1046
+      "followers": 1046,
+      "marketabilityScore": 47
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56cc"
-      },
+      "_id": "68fc9629b2a30d5364fb56e3",
+      "name": "Dionii Fraga",
+      "sport": "WOMENS_VOLLEYBALL",
+      "position": "DS/L",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384085622-Dionii_Fraga_68fc9629b2a30d5364fb56e3.png",
+      "followers": 1046,
+      "marketabilityScore": 55
+    },
+    {
+      "_id": "68fc9629b2a30d5364fb56cc",
       "name": "Preston Mickens",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384081330-Preston_Mickens_68fc9629b2a30d5364fb56cc.png",
-      "followers": 1040
+      "followers": 1040,
+      "marketabilityScore": 51
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56af"
-      },
+      "_id": "68fc9629b2a30d5364fb56af",
       "name": "Nico Hamilton",
-      "sport": "Men's Gymnastics",
+      "sport": "MENS_GYMNASTICS",
       "position": "AA",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384095473-Nico_Hamilton_68fc9629b2a30d5364fb56af.png",
-      "followers": 1038
+      "followers": 1038,
+      "marketabilityScore": 48
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5773"
-      },
+      "_id": "68fc9629b2a30d5364fb5773",
       "name": "Piper Justiss",
-      "sport": "Women's Volleyball",
+      "sport": "WOMENS_VOLLEYBALL",
       "position": "S",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384089145-Piper_Justiss_68fc9629b2a30d5364fb5773.png",
-      "followers": 960
+      "followers": 960,
+      "marketabilityScore": 50
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56aa"
-      },
+      "_id": "68fc9629b2a30d5364fb56aa",
       "name": "Alex Deubler",
-      "sport": "Men's Gymnastics",
+      "sport": "MENS_GYMNASTICS",
       "position": "AA",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384084112-Alex_Deubler_68fc9629b2a30d5364fb56aa.png",
-      "followers": 903
+      "followers": 903,
+      "marketabilityScore": 47
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb572a"
-      },
+      "_id": "68fc9629b2a30d5364fb572a",
       "name": "Nate Smithburg",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "LHP",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384080433-Nate_Smithburg_68fc9629b2a30d5364fb572a.png",
-      "followers": 883
+      "followers": 883,
+      "marketabilityScore": 49
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56b2"
-      },
+      "_id": "68fc9629b2a30d5364fb56b2",
       "name": "Ignacio Yockers",
-      "sport": "Men's Gymnastics",
+      "sport": "MENS_GYMNASTICS",
       "position": "AA",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384090300-Ignacio_Yockers_68fc9629b2a30d5364fb56b2.png",
-      "followers": 882
+      "followers": 882,
+      "marketabilityScore": 46
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56e0"
-      },
+      "_id": "68fc9629b2a30d5364fb56e0",
       "name": "Siolaa Lolohea",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384078611-Siolaa_Lolohea_68fc9629b2a30d5364fb56e0.png",
-      "followers": 878
+      "followers": 878,
+      "marketabilityScore": 50
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56a9"
-      },
+      "_id": "68fc9629b2a30d5364fb56a9",
       "name": "Nick Cruz",
-      "sport": "Men's Gymnastics",
+      "sport": "MENS_GYMNASTICS",
       "position": "AA",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384092124-Nick_Cruz_68fc9629b2a30d5364fb56a9.png",
-      "followers": 870
+      "followers": 870,
+      "marketabilityScore": 49
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56e4"
-      },
+      "_id": "68fc9629b2a30d5364fb56e4",
       "name": "Jasmine Ellison",
-      "sport": "Women's Volleyball",
+      "sport": "WOMENS_VOLLEYBALL",
       "position": "DS/L",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384089710-Jasmine_Ellison_68fc9629b2a30d5364fb56e4.png",
-      "followers": 804
+      "followers": 804,
+      "marketabilityScore": 46
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56f2"
-      },
+      "_id": "68fc9629b2a30d5364fb56f2",
       "name": "Brandon Zepeda-Orth",
-      "sport": "Men's Gymnastics",
+      "sport": "MENS_GYMNASTICS",
       "position": "FX,HB,PB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384085895-Brandon_Zepeda-Orth_68fc9629b2a30d5364fb56f2.png",
-      "followers": 762
+      "followers": 762,
+      "marketabilityScore": 46
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5769"
-      },
+      "_id": "68fc9629b2a30d5364fb5769",
       "name": "Berkeley Roddy",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "RHP",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384078545-Berkeley_Roddy_68fc9629b2a30d5364fb5769.png",
-      "followers": 660
+      "followers": 660,
+      "marketabilityScore": 47
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5754"
-      },
+      "_id": "68fc9629b2a30d5364fb5754",
       "name": "Cailen Walker",
-      "sport": "Men's Gymnastics",
+      "sport": "MENS_GYMNASTICS",
       "position": "PH,VT,HB",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384084775-Cailen_Walker_68fc9629b2a30d5364fb5754.png",
-      "followers": 653
+      "followers": 653,
+      "marketabilityScore": 45
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5703"
-      },
+      "_id": "68fc9629b2a30d5364fb5703",
       "name": "Brayden Horton",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "IF/OF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384092802-Brayden_Horton_68fc9629b2a30d5364fb5703.png",
-      "followers": 635
+      "followers": 635,
+      "marketabilityScore": 47
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5735"
-      },
+      "_id": "68fc9629b2a30d5364fb5735",
       "name": "Christian Hoffman",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "OF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384090924-Christian_Hoffman_68fc9629b2a30d5364fb5735.png",
-      "followers": 599
+      "followers": 599,
+      "marketabilityScore": 44
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb569b"
-      },
+      "_id": "68fc9629b2a30d5364fb569b",
       "name": "Nicole Desmond",
-      "sport": "Women's Gymnastics",
+      "sport": "WOMENS_GYMNASTICS",
       "position": "AA",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384079603-Nicole_Desmond_68fc9629b2a30d5364fb569b.png",
-      "followers": 593
+      "followers": 593,
+      "marketabilityScore": 49
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb570b"
-      },
+      "_id": "68fc9629b2a30d5364fb570b",
       "name": "Reid Graham",
-      "sport": "Men's Baseball",
+      "sport": "MENS_BASEBALL",
       "position": "INF",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384078556-Reid_Graham_68fc9629b2a30d5364fb570b.png",
-      "followers": 485
+      "followers": 485,
+      "marketabilityScore": 44
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56df"
-      },
+      "_id": "68fc9629b2a30d5364fb56df",
       "name": "Ace Hodges",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "DL",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384084158-Ace_Hodges_68fc9629b2a30d5364fb56df.png",
-      "followers": 276
+      "followers": 276,
+      "marketabilityScore": 42
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56b5"
-      },
-      "name": "Cole Hansen",
-      "sport": "Men's Baseball",
-      "position": "C",
-      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384083863-Cole_Hansen_68fc9629b2a30d5364fb56b5.png",
-      "followers": 0
-    },
-    {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56ba"
-      },
-      "name": "Corri Hicks",
-      "sport": "Softball",
-      "position": "C/1B",
-      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384095501-Corri_Hicks_68fc9629b2a30d5364fb56ba.png",
-      "followers": 0
-    },
-    {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56d6"
-      },
-      "name": "Taylor Wein",
-      "sport": "Football",
-      "position": "DL",
-      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384090273-Taylor_Wein_68fc9629b2a30d5364fb56d6.png",
-      "followers": 0
-    },
-    {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56ec"
-      },
-      "name": "Caya Smith",
-      "sport": "Women's Basketball",
-      "position": "F",
-      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384087990-Caya_Smith_68fc9629b2a30d5364fb56ec.png",
-      "followers": 0
-    },
-    {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb571a"
-      },
-      "name": "Sammy Omosigho",
-      "sport": "Football",
-      "position": "LB",
-      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384089143-Sammy_Omosigho_68fc9629b2a30d5364fb571a.png",
-      "followers": 0
-    },
-    {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb569e"
-      },
-      "name": "Danae Fletcher",
-      "sport": "Women's Gymnastics",
-      "position": "AA",
-      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384079601-Danae_Fletcher_68fc9629b2a30d5364fb569e.png",
-      "followers": 0
-    },
-    {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56b9"
-      },
-      "name": "Daffa Cissoko",
-      "sport": "Women's Basketball",
-      "position": "C",
-      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384096136-Daffa_Cissoko_68fc9629b2a30d5364fb56b9.png",
-      "followers": 0
-    },
-    {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb56c0"
-      },
-      "name": "Gentry Williams",
-      "sport": "Football",
-      "position": "DB",
-      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384090948-Gentry_Williams_68fc9629b2a30d5364fb56c0.png",
-      "followers": 0
-    },
-    {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5700"
-      },
-      "name": "Keziah Lofton",
-      "sport": "Women's Basketball",
-      "position": "G",
-      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384083891-Keziah_Lofton_68fc9629b2a30d5364fb5700.png",
-      "followers": 0
-    },
-    {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb572b"
-      },
-      "name": "Kierston Deal",
-      "sport": "Softball",
-      "position": "LHP",
-      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384090294-Kierston_Deal_68fc9629b2a30d5364fb572b.png",
-      "followers": 0
-    },
-    {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5746"
-      },
-      "name": "Derek Simmons",
-      "sport": "Football",
-      "position": "OL",
-      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384085539-Derek_Simmons_68fc9629b2a30d5364fb5746.png",
-      "followers": 0
-    },
-    {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb574d"
-      },
-      "name": "Daniel Akinkunmi",
-      "sport": "Football",
-      "position": "OL",
-      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384085584-Daniel_Akinkunmi_68fc9629b2a30d5364fb574d.png",
-      "followers": 0
-    },
-    {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5757"
-      },
-      "name": "Alexis Shelton",
-      "sport": "Women's Volleyball",
-      "position": "PIN",
-      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384088579-Alexis_Shelton_68fc9629b2a30d5364fb5757.png",
-      "followers": 0
-    },
-    {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb576f"
-      },
-      "name": "Paytn Monticelli",
-      "sport": "Softball",
-      "position": "RHP",
-      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384078591-Paytn_Monticelli_68fc9629b2a30d5364fb576f.png",
-      "followers": 0
-    },
-    {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb578d"
-      },
+      "_id": "68fc9629b2a30d5364fb578d",
       "name": "Major Melson",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "WR",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384094274-Major_Melson_68fc9629b2a30d5364fb578d.png",
-      "followers": 0
+      "followers": 0,
+      "marketabilityScore": 23
     },
     {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5715"
-      },
-      "name": "Preston Tarpley",
-      "sport": "Football",
-      "position": "K",
-      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384089692-Preston_Tarpley_68fc9629b2a30d5364fb5715.png",
-      "followers": 0
-    },
-    {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5725"
-      },
-      "name": "Cameron Johnson",
-      "sport": "Men's Baseball",
-      "position": "LHP",
-      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384091513-Cameron_Johnson_68fc9629b2a30d5364fb5725.png",
-      "followers": 0
-    },
-    {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb576a"
-      },
-      "name": "Jason Bodin",
-      "sport": "Men's Baseball",
-      "position": "RHP",
-      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384085556-Jason_Bodin_68fc9629b2a30d5364fb576a.png",
-      "followers": 0
-    },
-    {
-      "_id": {
-        "$oid": "68fc9629b2a30d5364fb5788"
-      },
+      "_id": "68fc9629b2a30d5364fb5788",
       "name": "Josiah Martin",
-      "sport": "Football",
+      "sport": "FOOTBALL",
       "position": "WR",
       "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384092055-Josiah_Martin_68fc9629b2a30d5364fb5788.png",
-      "followers": 0
+      "followers": 0,
+      "marketabilityScore": 23
+    },
+    {
+      "_id": "68fc9629b2a30d5364fb576f",
+      "name": "Paytn Monticelli",
+      "sport": "SOFTBALL",
+      "position": "RHP",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384078591-Paytn_Monticelli_68fc9629b2a30d5364fb576f.png",
+      "followers": 0,
+      "marketabilityScore": 23
+    },
+    {
+      "_id": "68fc9629b2a30d5364fb576a",
+      "name": "Jason Bodin",
+      "sport": "MENS_BASEBALL",
+      "position": "RHP",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384085556-Jason_Bodin_68fc9629b2a30d5364fb576a.png",
+      "followers": 0,
+      "marketabilityScore": 23
+    },
+    {
+      "_id": "68fc9629b2a30d5364fb5757",
+      "name": "Alexis Shelton",
+      "sport": "WOMENS_VOLLEYBALL",
+      "position": "PIN",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384088579-Alexis_Shelton_68fc9629b2a30d5364fb5757.png",
+      "followers": 0,
+      "marketabilityScore": 23
+    },
+    {
+      "_id": "68fc9629b2a30d5364fb574d",
+      "name": "Daniel Akinkunmi",
+      "sport": "FOOTBALL",
+      "position": "OL",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384085584-Daniel_Akinkunmi_68fc9629b2a30d5364fb574d.png",
+      "followers": 0,
+      "marketabilityScore": 23
+    },
+    {
+      "_id": "68fc9629b2a30d5364fb5746",
+      "name": "Derek Simmons",
+      "sport": "FOOTBALL",
+      "position": "OL",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384085539-Derek_Simmons_68fc9629b2a30d5364fb5746.png",
+      "followers": 0,
+      "marketabilityScore": 23
+    },
+    {
+      "_id": "68fc9629b2a30d5364fb572b",
+      "name": "Kierston Deal",
+      "sport": "SOFTBALL",
+      "position": "LHP",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384090294-Kierston_Deal_68fc9629b2a30d5364fb572b.png",
+      "followers": 0,
+      "marketabilityScore": 23
+    },
+    {
+      "_id": "68fc9629b2a30d5364fb5725",
+      "name": "Cameron Johnson",
+      "sport": "MENS_BASEBALL",
+      "position": "LHP",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384091513-Cameron_Johnson_68fc9629b2a30d5364fb5725.png",
+      "followers": 0,
+      "marketabilityScore": 23
+    },
+    {
+      "_id": "68fc9629b2a30d5364fb571a",
+      "name": "Sammy Omosigho",
+      "sport": "FOOTBALL",
+      "position": "LB",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384089143-Sammy_Omosigho_68fc9629b2a30d5364fb571a.png",
+      "followers": 0,
+      "marketabilityScore": 23
+    },
+    {
+      "_id": "68fc9629b2a30d5364fb5715",
+      "name": "Preston Tarpley",
+      "sport": "FOOTBALL",
+      "position": "K",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384089692-Preston_Tarpley_68fc9629b2a30d5364fb5715.png",
+      "followers": 0,
+      "marketabilityScore": 23
+    },
+    {
+      "_id": "68fc9629b2a30d5364fb5700",
+      "name": "Keziah Lofton",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "G",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384083891-Keziah_Lofton_68fc9629b2a30d5364fb5700.png",
+      "followers": 0,
+      "marketabilityScore": 23
+    },
+    {
+      "_id": "68fc9629b2a30d5364fb56ec",
+      "name": "Caya Smith",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "F",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384087990-Caya_Smith_68fc9629b2a30d5364fb56ec.png",
+      "followers": 0,
+      "marketabilityScore": 23
+    },
+    {
+      "_id": "68fc9629b2a30d5364fb56d6",
+      "name": "Taylor Wein",
+      "sport": "FOOTBALL",
+      "position": "DL",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384090273-Taylor_Wein_68fc9629b2a30d5364fb56d6.png",
+      "followers": 0,
+      "marketabilityScore": 23
+    },
+    {
+      "_id": "68fc9629b2a30d5364fb56c0",
+      "name": "Gentry Williams",
+      "sport": "FOOTBALL",
+      "position": "DB",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384090948-Gentry_Williams_68fc9629b2a30d5364fb56c0.png",
+      "followers": 0,
+      "marketabilityScore": 23
+    },
+    {
+      "_id": "68fc9629b2a30d5364fb56ba",
+      "name": "Corri Hicks",
+      "sport": "SOFTBALL",
+      "position": "C/1B",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384095501-Corri_Hicks_68fc9629b2a30d5364fb56ba.png",
+      "followers": 0,
+      "marketabilityScore": 23
+    },
+    {
+      "_id": "68fc9629b2a30d5364fb56b9",
+      "name": "Daffa Cissoko",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "C",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384096136-Daffa_Cissoko_68fc9629b2a30d5364fb56b9.png",
+      "followers": 0,
+      "marketabilityScore": 23
+    },
+    {
+      "_id": "68fc9629b2a30d5364fb56b5",
+      "name": "Cole Hansen",
+      "sport": "MENS_BASEBALL",
+      "position": "C",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384083863-Cole_Hansen_68fc9629b2a30d5364fb56b5.png",
+      "followers": 0,
+      "marketabilityScore": 23
+    },
+    {
+      "_id": "68fc9629b2a30d5364fb569e",
+      "name": "Danae Fletcher",
+      "sport": "WOMENS_GYMNASTICS",
+      "position": "AA",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761384079601-Danae_Fletcher_68fc9629b2a30d5364fb569e.png",
+      "followers": 0,
+      "marketabilityScore": 23
     }
   ]
 }

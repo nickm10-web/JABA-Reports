@@ -68,10 +68,13 @@ interface FallbackRosterRow {
   firstName?: string;
   lastName?: string;
   schoolName?: string;
+  marketability?: number;
+  marketabilityScore?: number;
+  score?: number;
   metrics?: {
     ninetyDays?: { followers?: number; marketability?: number };
-    thirtyDays?: { followers?: number };
-    sevenDays?: { followers?: number };
+    thirtyDays?: { followers?: number; marketability?: number };
+    sevenDays?: { followers?: number; marketability?: number };
   };
 }
 
@@ -214,7 +217,16 @@ const getRosterFollowers = (row?: FallbackRosterRow | null) =>
     0
   );
 const getRosterMarketability = (row?: FallbackRosterRow | null) =>
-  Number(row?.metrics?.ninetyDays?.marketability ?? 0);
+  Number(
+    row?.metrics?.ninetyDays?.marketability ??
+    row?.metrics?.thirtyDays?.marketability ??
+    row?.metrics?.sevenDays?.marketability ??
+    // Some datasets expose marketability at top-level.
+    (row as any)?.marketability ??
+    (row as any)?.marketabilityScore ??
+    (row as any)?.score ??
+    0
+  );
 
 const parsePostDate = (post: RawPost): Date | null => {
   const raw = typeof post?.publishedAt === 'string'
@@ -247,9 +259,23 @@ async function loadAllBenchmarkSchools(): Promise<ConferenceBenchmarkSchool[]> {
   if (allBenchmarkSchoolsPromise) return allBenchmarkSchoolsPromise;
 
   allBenchmarkSchoolsPromise = (async () => {
+    // Use compact precomputed benchmarks in production; fall back to raw dataset if unavailable.
+    let rows: any[] = [];
+    try {
+      const compactRes = await fetch('/data/benchmark-schools-compact.json');
+      if (compactRes.ok) {
+        const compact = await compactRes.json();
+        if (Array.isArray(compact) && compact.length) {
+          return compact as ConferenceBenchmarkSchool[];
+        }
+      }
+    } catch {
+      // Continue to raw fallback.
+    }
+
     const res = await fetch('/data/ncaa_updated_ip_contents_feb_18.json');
     if (!res.ok) return [];
-    const rows = await res.json();
+    rows = await res.json();
     if (!Array.isArray(rows)) return [];
 
     const schoolMap = new Map<string, {
@@ -486,11 +512,26 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
       .then(r => r.ok ? r.json() : null)
       .catch(() => null);
 
-    // Fallback roster includes follower counts by athlete name
-    const fallbackRosterPromise = fetch('/data/ncaa_roster_feb_12.json')
-      .then(r => r.ok ? r.json() : [])
-      .then((rows: FallbackRosterRow[]) => Array.isArray(rows) ? rows : [])
-      .catch(() => []);
+    // Fallback roster includes follower + marketability by athlete name.
+    // Try smaller school-bundle file first (more deployment-friendly), then full NCAA.
+    const fallbackRosterPromise = (async () => {
+      const fallbackPaths = [
+        '/data/Ala_Ark_Okl_Mic_Wis_Roster.json',
+        '/data/ncaa_roster_feb_12.json',
+        '/data/ncaa_roster.json',
+      ];
+      for (const path of fallbackPaths) {
+        try {
+          const r = await fetch(path);
+          if (!r.ok) continue;
+          const rows = await r.json();
+          if (Array.isArray(rows) && rows.length > 0) return rows as FallbackRosterRow[];
+        } catch {
+          // try next path
+        }
+      }
+      return [] as FallbackRosterRow[];
+    })();
 
     const teamRosterPromise = fetch('/data/roster_teams.json')
       .then(r => r.ok ? r.json() : [])
