@@ -76214,7 +76214,7 @@
       "$date": "2025-10-06T22:12:35.000Z"
     },
     "source": "INSTAGRAM",
-    "sponsorPartner": "@travisscott",
+    "sponsorPartner": "",
     "sponsored": false,
     "updatedAt": {
       "$date": "2026-02-01T22:48:18.250Z"
@@ -76222,7 +76222,7 @@
     "url": "https://storage.googleapis.com/scraper-media-images/18079534825828252",
     "likeAndViewCountsDisabled": false,
     "mediaType": "VIDEO",
-    "isSponsored": true,
+    "isSponsored": false,
     "isCollaboration": false,
     "isOrganizationCollaboration": false,
     "hasOrganizationInCaption": false
