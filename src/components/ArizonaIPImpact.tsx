@@ -950,10 +950,22 @@ function WithVsWithoutTab({
   const withoutPosts = currentSignalData?.without?.posts || currentSignal?.data?.baselinePosts || 0;
   const withPosts = currentSignalData?.with?.posts || currentSignal?.data?.posts || 0;
 
-  const baselineAvgLikes = currentSignalData?.without?.avgLikes || currentSignal?.data?.baselineLikes || 0;
-  const baselineAvgComments = currentSignalData?.without?.avgComments || currentSignal?.data?.baselineComments || 0;
-  const withAvgLikes = currentSignalData?.with?.avgLikes || currentSignal?.data?.likes || 0;
-  const withAvgComments = currentSignalData?.with?.avgComments || currentSignal?.data?.comments || 0;
+  const baselineAvgLikes = currentSignalData?.without?.avgLikes
+    ?? ((currentSignal?.data?.baselinePosts || 0) > 0
+      ? (currentSignal?.data?.baselineLikes || 0) / (currentSignal?.data?.baselinePosts || 1)
+      : 0);
+  const baselineAvgComments = currentSignalData?.without?.avgComments
+    ?? ((currentSignal?.data?.baselinePosts || 0) > 0
+      ? (currentSignal?.data?.baselineComments || 0) / (currentSignal?.data?.baselinePosts || 1)
+      : 0);
+  const withAvgLikes = currentSignalData?.with?.avgLikes
+    ?? ((currentSignal?.data?.posts || 0) > 0
+      ? (currentSignal?.data?.likes || 0) / (currentSignal?.data?.posts || 1)
+      : 0);
+  const withAvgComments = currentSignalData?.with?.avgComments
+    ?? ((currentSignal?.data?.posts || 0) > 0
+      ? (currentSignal?.data?.comments || 0) / (currentSignal?.data?.posts || 1)
+      : 0);
 
   const engDelta = withoutEngRate > 0 ? ((withEngRate - withoutEngRate) / withoutEngRate) * 100 : 0;
   const likesDelta = baselineAvgLikes > 0 ? ((withAvgLikes - baselineAvgLikes) / baselineAvgLikes) * 100 : 0;
