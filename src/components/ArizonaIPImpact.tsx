@@ -76,6 +76,7 @@ interface ArizonaRosterMetricWindow {
 }
 
 interface ArizonaRosterTeam {
+  schoolName?: string;
   sport?: string;
   metrics?: {
     thirtyDays?: ArizonaRosterMetricWindow;
@@ -124,6 +125,11 @@ interface SchoolFollowerRosterRow {
 
 function toNumber(value: unknown): number {
   return typeof value === 'number' && Number.isFinite(value) ? value : 0;
+}
+
+function isArizonaSchoolName(value: unknown): boolean {
+  const school = String(value || '').toLowerCase();
+  return school.includes('arizona') && !school.includes('arizona state');
 }
 
 function normalizeSchoolKey(name: string): string {
@@ -2791,8 +2797,10 @@ function TeamPagesTab({ sportData }: { sportData: SportSignalData }) {
           }
         }
         if (!rows) return;
+        const arizonaRows = rows.filter((row) => isArizonaSchoolName(row?.schoolName));
+        const scopedRows = arizonaRows.length > 0 ? arizonaRows : rows;
         const map: Record<string, TeamRosterMetricSnapshot> = {};
-        for (const row of rows) {
+        for (const row of scopedRows) {
           const key = row.sport;
           if (!key) continue;
           const metrics = row.metrics?.ninetyDays ?? row.metrics?.thirtyDays ?? row.metrics?.sevenDays;
@@ -3466,7 +3474,8 @@ export function ArizonaIPImpact({ onBack }: { onBack?: () => void }) {
           }
         }
         if (!rows) return;
-        const dynamicData = buildSportDataFromRoster(rows);
+        const arizonaRows = rows.filter((row) => isArizonaSchoolName(row?.schoolName));
+        const dynamicData = buildSportDataFromRoster(arizonaRows.length > 0 ? arizonaRows : rows);
         if (!isCancelled && dynamicData.ALL_SPORTS) {
           setSportData(dynamicData);
         }
