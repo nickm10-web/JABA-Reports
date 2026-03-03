@@ -1234,6 +1234,7 @@ function PartnershipsTab() {
     return (
       p.includes('travisscott') ||
       p.includes('datboyj0rdyn') ||
+      p.includes('nextoffermedia') ||
       p.startsWith('@arizona') ||
       p.startsWith('@uarizona') ||
       p.includes('wildcat') ||

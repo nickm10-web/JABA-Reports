@@ -143058,15 +143058,15 @@
       "$date": "2025-05-21T01:58:55.000Z"
     },
     "source": "INSTAGRAM",
-    "sponsorPartner": "@nextoffermedia",
-    "sponsored": true,
+    "sponsorPartner": "",
+    "sponsored": false,
     "updatedAt": {
       "$date": "2026-02-02T05:07:36.140Z"
     },
     "url": "https://storage.googleapis.com/scraper-media-images/18057553670241829",
     "likeAndViewCountsDisabled": false,
     "mediaType": "VIDEO",
-    "isSponsored": true,
+    "isSponsored": false,
     "isCollaboration": true,
     "isOrganizationCollaboration": false,
     "hasOrganizationInCaption": false
