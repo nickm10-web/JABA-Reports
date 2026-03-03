@@ -726,9 +726,9 @@ function OverviewTab({ overviewData }: { overviewData?: OverviewData | null }) {
   };
   const totalInteractions = overview.totalLikes + overview.totalComments;
   const ipAdoptionDisplay = Number(overview.ipAdoptionRate || 0).toFixed(2);
-  const collabEMV = overview.collaboration.posts * calculateEMV(overview.collaboration.likes, overview.collaboration.comments);
-  const logoEMV = overview.logo.posts * calculateEMV(overview.logo.likes, overview.logo.comments);
-  const mentionEMV = overview.mention.posts * calculateEMV(overview.mention.likes, overview.mention.comments);
+  const collabEMV = Number(overview.collaboration.emv || calculateEMV(overview.collaboration.likes, overview.collaboration.comments));
+  const logoEMV = Number(overview.logo.emv || calculateEMV(overview.logo.likes, overview.logo.comments));
+  const mentionEMV = Number(overview.mention.emv || calculateEMV(overview.mention.likes, overview.mention.comments));
 
   return (
     <div className="space-y-6">
@@ -3469,108 +3469,80 @@ export function ArizonaIPImpact({ onBack }: { onBack?: () => void }) {
 
     const loadOverviewData = async () => {
       try {
-        const [impactRes, rosterRes] = await Promise.all([
-          fetch('/data/university-of-arizona-ip-impact.json'),
+        const [contentRes, rosterRes] = await Promise.all([
+          fetch('/data/arizona-content-posts.json'),
           fetch('/data/arizona-roster.json'),
         ]);
+        if (!contentRes.ok) return;
+
+        const posts = (await contentRes.json()) as any[];
         const roster = rosterRes.ok ? await rosterRes.json() : null;
         const athletes = Array.isArray(roster?.athletes) ? roster.athletes : [];
-        const totalFollowers = athletes.reduce((sum: number, a: any) => sum + Number(a?.followers || 0), 0);
 
-        if (!impactRes.ok) {
-          const contentRes = await fetch('/data/arizona-content-posts.json');
-          if (!contentRes.ok) return;
-          const posts = (await contentRes.json()) as any[];
-          const hasIP = (post: any) => Boolean(post?.hasOrganizationLogo || post?.hasOrganizationInCaption || post?.isOrganizationCollaboration);
-          const likesOf = (post: any) => Number(post?.metrics?.likes || 0);
-          const commentsOf = (post: any) => Number(post?.metrics?.comments || 0);
-          const erOf = (post: any) => Number(post?.metrics?.engagementRate || 0);
+        const hasIP = (post: any) => Boolean(post?.hasOrganizationLogo || post?.hasOrganizationInCaption || post?.isOrganizationCollaboration);
+        const likesOf = (post: any) => Number(post?.metrics?.likes || 0);
+        const commentsOf = (post: any) => Number(post?.metrics?.comments || 0);
+        const erOf = (post: any) => Number(post?.metrics?.engagementRate || 0);
+        const athleteIdOf = (post: any) => {
+          const direct = post?.athleteId;
+          if (typeof direct === 'string' || typeof direct === 'number') return String(direct);
+          const nested = post?.athlete?.id;
+          if (typeof nested === 'string' || typeof nested === 'number') return String(nested);
+          const nestedMongo = post?.athlete?._id;
+          if (typeof nestedMongo === 'string' || typeof nestedMongo === 'number') return String(nestedMongo);
+          return null;
+        };
+        const avg = (rows: any[], fn: (row: any) => number) => (rows.length ? rows.reduce((s, row) => s + fn(row), 0) / rows.length : 0);
+        const sum = (rows: any[], fn: (row: any) => number) => rows.reduce((s, row) => s + fn(row), 0);
 
-          const yesPosts = posts.filter((post) => hasIP(post));
-          const logoYes = posts.filter((post) => Boolean(post?.hasOrganizationLogo));
-          const logoNo = posts.filter((post) => !Boolean(post?.hasOrganizationLogo));
-          const mentionYes = posts.filter((post) => Boolean(post?.hasOrganizationInCaption));
-          const mentionNo = posts.filter((post) => !Boolean(post?.hasOrganizationInCaption));
-          const collabYes = posts.filter((post) => Boolean(post?.isOrganizationCollaboration));
-          const collabNo = posts.filter((post) => !Boolean(post?.isOrganizationCollaboration));
-          const avg = (rows: any[], fn: (row: any) => number) => rows.length ? rows.reduce((s, row) => s + fn(row), 0) / rows.length : 0;
-          const sum = (rows: any[], fn: (row: any) => number) => rows.reduce((s, row) => s + fn(row), 0);
+        const rosterFollowerById = new Map<string, number>();
+        athletes.forEach((athlete: any) => {
+          const rawId = athlete?.id;
+          if (typeof rawId === 'string' || typeof rawId === 'number') {
+            rosterFollowerById.set(String(rawId), Number(athlete?.followers || 0));
+          }
+          const rawMongoId = athlete?._id;
+          if (typeof rawMongoId === 'string' || typeof rawMongoId === 'number') {
+            rosterFollowerById.set(String(rawMongoId), Number(athlete?.followers || 0));
+          }
+        });
 
-          const totalPosts = posts.length;
-          const totalLikes = sum(posts, likesOf);
-          const totalComments = sum(posts, commentsOf);
-          const postsWithIP = yesPosts.length;
-          const ipAdoptionRate = totalPosts > 0 ? (postsWithIP / totalPosts) * 100 : 0;
+        const postAthleteIds = new Set<string>();
+        posts.forEach((post) => {
+          const athleteId = athleteIdOf(post);
+          if (athleteId) postAthleteIds.add(athleteId);
+        });
 
-          const fallbackData: OverviewData = {
-            sourceFile: '/data/arizona-content-posts.json',
-            generatedAt: new Date().toISOString(),
-            totalFollowers,
-            totalPosts,
-            totalLikes,
-            totalComments,
-            postsWithIP,
-            ipAdoptionRate,
-            avgLift: 0,
-            totalEmv: totalLikes * 0.5 + totalComments * 1.5,
-            collaboration: {
-              posts: collabYes.length,
-              likes: sum(collabYes, likesOf),
-              comments: sum(collabYes, commentsOf),
-              engagementRate: avg(collabYes, erOf),
-              delta: 0,
-              emv: sum(collabYes, (post) => calculateEMV(likesOf(post), commentsOf(post))),
-              baselineEngRate: avg(collabNo, erOf),
-              baselinePosts: collabNo.length,
-              baselineLikes: sum(collabNo, likesOf),
-              baselineComments: sum(collabNo, commentsOf),
-            },
-            logo: {
-              posts: logoYes.length,
-              likes: sum(logoYes, likesOf),
-              comments: sum(logoYes, commentsOf),
-              engagementRate: avg(logoYes, erOf),
-              delta: 0,
-              emv: sum(logoYes, (post) => calculateEMV(likesOf(post), commentsOf(post))),
-              baselineEngRate: avg(logoNo, erOf),
-              baselinePosts: logoNo.length,
-              baselineLikes: sum(logoNo, likesOf),
-              baselineComments: sum(logoNo, commentsOf),
-            },
-            mention: {
-              posts: mentionYes.length,
-              likes: sum(mentionYes, likesOf),
-              comments: sum(mentionYes, commentsOf),
-              engagementRate: avg(mentionYes, erOf),
-              delta: 0,
-              emv: sum(mentionYes, (post) => calculateEMV(likesOf(post), commentsOf(post))),
-              baselineEngRate: avg(mentionNo, erOf),
-              baselinePosts: mentionNo.length,
-              baselineLikes: sum(mentionNo, likesOf),
-              baselineComments: sum(mentionNo, commentsOf),
-            },
-          };
-          if (!isCancelled) setOverviewData(fallbackData);
-          return;
-        }
+        const totalFollowers = Array.from(postAthleteIds).reduce(
+          (total, athleteId) => total + (rosterFollowerById.get(athleteId) || 0),
+          0,
+        );
 
-        const raw = await impactRes.json();
+        const yesPosts = posts.filter((post) => hasIP(post));
+        const logoYes = posts.filter((post) => Boolean(post?.hasOrganizationLogo));
+        const logoNo = posts.filter((post) => !Boolean(post?.hasOrganizationLogo));
+        const mentionYes = posts.filter((post) => Boolean(post?.hasOrganizationInCaption));
+        const mentionNo = posts.filter((post) => !Boolean(post?.hasOrganizationInCaption));
+        const collabYes = posts.filter((post) => Boolean(post?.isOrganizationCollaboration));
+        const collabNo = posts.filter((post) => !Boolean(post?.isOrganizationCollaboration));
+        const liftPct = (withRate: number, withoutRate: number) =>
+          withoutRate > 0 ? ((withRate - withoutRate) / withoutRate) * 100 : 0;
 
-        const totalPosts = Number(raw?.overall?.totalContents || 0);
-        const totalLikes = Number(raw?.overall?.totalLikes || 0);
-        const totalComments = Number(raw?.overall?.totalComments || 0);
-        const postsWithIP = Number(raw?.counts?.withIp || 0);
+        const totalPosts = posts.length;
+        const totalLikes = sum(posts, likesOf);
+        const totalComments = sum(posts, commentsOf);
+        const postsWithIP = yesPosts.length;
         const ipAdoptionRate = totalPosts > 0 ? (postsWithIP / totalPosts) * 100 : 0;
-        const mentionLift = Number(raw?.orgInCaption?.avgLift || 0);
-        const logoLift = Number(raw?.logo?.avgLift || 0);
-        const collabLift = Number(raw?.collaboration?.avgLift || 0);
-        const avgLift = (mentionLift + logoLift + collabLift) / 3;
-        const signalEmv = (signal: any) =>
-          Number(signal?.yes?.contents || 0) *
-          ((Number(signal?.yes?.likes || 0) * 0.5) + (Number(signal?.yes?.comments || 0) * 1.5));
+
+        const collabEng = avg(collabYes, erOf);
+        const collabBaselineEng = avg(collabNo, erOf);
+        const logoEng = avg(logoYes, erOf);
+        const logoBaselineEng = avg(logoNo, erOf);
+        const mentionEng = avg(mentionYes, erOf);
+        const mentionBaselineEng = avg(mentionNo, erOf);
 
         const data: OverviewData = {
-          sourceFile: '/data/university-of-arizona-ip-impact.json',
+          sourceFile: '/data/arizona-content-posts.json',
           generatedAt: new Date().toISOString(),
           totalFollowers,
           totalPosts,
@@ -3578,48 +3550,47 @@ export function ArizonaIPImpact({ onBack }: { onBack?: () => void }) {
           totalComments,
           postsWithIP,
           ipAdoptionRate,
-          avgLift,
-          totalEmv: Number(raw?.overall?.emv || (totalLikes * 0.5 + totalComments * 1.5)),
+          avgLift: 0,
+          totalEmv: totalLikes * 0.5 + totalComments * 1.5,
           collaboration: {
-            posts: Number(raw?.collaboration?.yes?.contents || 0),
-            likes: Number(raw?.collaboration?.yes?.likes || 0),
-            comments: Number(raw?.collaboration?.yes?.comments || 0),
-            engagementRate: Number(raw?.collaboration?.yes?.engagementRate || 0),
-            delta: collabLift,
-            emv: signalEmv(raw?.collaboration),
-            baselineEngRate: Number(raw?.collaboration?.no?.engagementRate || 0),
-            baselinePosts: Number(raw?.collaboration?.no?.contents || 0),
-            baselineLikes: Number(raw?.collaboration?.no?.likes || 0),
-            baselineComments: Number(raw?.collaboration?.no?.comments || 0),
+            posts: collabYes.length,
+            likes: sum(collabYes, likesOf),
+            comments: sum(collabYes, commentsOf),
+            engagementRate: collabEng,
+            delta: liftPct(collabEng, collabBaselineEng),
+            emv: sum(collabYes, (post) => calculateEMV(likesOf(post), commentsOf(post))),
+            baselineEngRate: collabBaselineEng,
+            baselinePosts: collabNo.length,
+            baselineLikes: sum(collabNo, likesOf),
+            baselineComments: sum(collabNo, commentsOf),
           },
           logo: {
-            posts: Number(raw?.logo?.yes?.contents || 0),
-            likes: Number(raw?.logo?.yes?.likes || 0),
-            comments: Number(raw?.logo?.yes?.comments || 0),
-            engagementRate: Number(raw?.logo?.yes?.engagementRate || 0),
-            delta: logoLift,
-            emv: signalEmv(raw?.logo),
-            baselineEngRate: Number(raw?.logo?.no?.engagementRate || 0),
-            baselinePosts: Number(raw?.logo?.no?.contents || 0),
-            baselineLikes: Number(raw?.logo?.no?.likes || 0),
-            baselineComments: Number(raw?.logo?.no?.comments || 0),
+            posts: logoYes.length,
+            likes: sum(logoYes, likesOf),
+            comments: sum(logoYes, commentsOf),
+            engagementRate: logoEng,
+            delta: liftPct(logoEng, logoBaselineEng),
+            emv: sum(logoYes, (post) => calculateEMV(likesOf(post), commentsOf(post))),
+            baselineEngRate: logoBaselineEng,
+            baselinePosts: logoNo.length,
+            baselineLikes: sum(logoNo, likesOf),
+            baselineComments: sum(logoNo, commentsOf),
           },
           mention: {
-            posts: Number(raw?.orgInCaption?.yes?.contents || 0),
-            likes: Number(raw?.orgInCaption?.yes?.likes || 0),
-            comments: Number(raw?.orgInCaption?.yes?.comments || 0),
-            engagementRate: Number(raw?.orgInCaption?.yes?.engagementRate || 0),
-            delta: mentionLift,
-            emv: signalEmv(raw?.orgInCaption),
-            baselineEngRate: Number(raw?.orgInCaption?.no?.engagementRate || 0),
-            baselinePosts: Number(raw?.orgInCaption?.no?.contents || 0),
-            baselineLikes: Number(raw?.orgInCaption?.no?.likes || 0),
-            baselineComments: Number(raw?.orgInCaption?.no?.comments || 0),
+            posts: mentionYes.length,
+            likes: sum(mentionYes, likesOf),
+            comments: sum(mentionYes, commentsOf),
+            engagementRate: mentionEng,
+            delta: liftPct(mentionEng, mentionBaselineEng),
+            emv: sum(mentionYes, (post) => calculateEMV(likesOf(post), commentsOf(post))),
+            baselineEngRate: mentionBaselineEng,
+            baselinePosts: mentionNo.length,
+            baselineLikes: sum(mentionNo, likesOf),
+            baselineComments: sum(mentionNo, commentsOf),
           },
         };
-        if (!isCancelled) {
-          setOverviewData(data);
-        }
+
+        if (!isCancelled) setOverviewData(data);
       } catch {
         // Keep fallback hardcoded overview data.
       }
