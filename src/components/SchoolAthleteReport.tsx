@@ -6,6 +6,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { ArrowLeft, ArrowUpRight, ArrowDownRight, Search, Lightbulb, Users, Heart, MessageCircle, Zap } from 'lucide-react';
 import { DrawerPanel, TabTransition } from './playfly/PlayflyUI';
+import { ArizonaIPImpact } from './ArizonaIPImpact';
 import type { SchoolConfig } from '../config/schoolConfigs';
 import bundledBenchmarkSchools from '../data/benchmark-schools-compact.json';
 
@@ -540,6 +541,10 @@ interface SchoolAthleteReportProps {
 }
 
 export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps) {
+  if (config.id === 'arizona') {
+    return <ArizonaIPImpact onBack={onBack} />;
+  }
+
   const [activeTab, setActiveTab] = useState<TabId>('overview');
   const [loading, setLoading] = useState(true);
   const [rawPosts, setRawPosts] = useState<RawPost[]>([]);
