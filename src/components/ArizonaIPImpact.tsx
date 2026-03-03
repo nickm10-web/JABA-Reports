@@ -1233,6 +1233,7 @@ function PartnershipsTab() {
     // Filter obvious Arizona team/program handles from sponsored brand rows.
     return (
       p.includes('travisscott') ||
+      p.includes('datboyj0rdyn') ||
       p.startsWith('@arizona') ||
       p.startsWith('@uarizona') ||
       p.includes('wildcat') ||

@@ -200873,13 +200873,13 @@
       "$date": "2024-11-18T23:04:39.000Z"
     },
     "source": "INSTAGRAM",
-    "sponsorPartner": "@datboyj0rdyn",
-    "sponsored": true,
+    "sponsorPartner": "",
+    "sponsored": false,
     "updatedAt": {
       "$date": "2026-01-05T07:46:27.892Z"
     },
     "url": "https://storage.googleapis.com/scraper-media-images/18037939541262546",
-    "isSponsored": true,
+    "isSponsored": false,
     "isCollaboration": false,
     "isOrganizationCollaboration": false,
     "hasOrganizationInCaption": false
