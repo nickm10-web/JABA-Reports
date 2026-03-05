@@ -32,6 +32,10 @@ export interface SchoolConfig {
   brandAliases?: Record<string, string>;
   /** Explicit sponsored post IDs to exclude as false positives */
   sponsoredPostExclusions?: string[];
+  /** Explicit post IDs to force-include as sponsored */
+  sponsoredPostInclusions?: string[];
+  /** Team sports to hide from the Teams tab (display name, e.g. "Swimming") */
+  teamSportExclusions?: string[];
 }
 
 // ─── Helper to build PeerSchool entries ──────────────────────
@@ -727,6 +731,8 @@ export const texasConfig: SchoolConfig = {
   },
   peerSchools: SEC_PEERS.filter(p => p.id !== 'texas'),
   benchmark: peer('texas', 'University of Texas', 'Texas', 251, 'SEC', 609, 6849245, 28.26, 'Football', 432, 294, [2,2,2,2,2,2,2,2,2,2,2,2]),
+  teamSportExclusions: ['Swimming'],
+  sponsoredPostInclusions: ['69406191024ac7059367b05c'],
   brandExclusions: [
     'athletesthread',
     'eastonbaseball',
@@ -746,6 +752,78 @@ export const texasConfig: SchoolConfig = {
     'thenilrealestate',
     'usabaseball',
   ],
+};
+
+export const iowaConfig: SchoolConfig = {
+  id: 'iowa',
+  name: 'University of Iowa',
+  shortName: 'Iowa',
+  nickname: 'Hawkeyes',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/2294.png',
+  conference: 'Big Ten',
+  dataFile: '/data/iowa-content-posts.json',
+  colors: {
+    primary: '#000000',
+    secondary: '#FFCD00',
+    primaryDark: '#1a1a1a',
+    primaryDeep: '#0a0a0a',
+  },
+  peerSchools: BIG_TEN_PEERS,
+  benchmark: peer('iowa', 'University of Iowa', 'Iowa', 2294, 'Big Ten', 0, 0, 0, 'Football', 0, 0, [8,8,8,8,8,8,8,8,8,8,8,8]),
+};
+
+export const mississippiStateConfig: SchoolConfig = {
+  id: 'mississippi-state',
+  name: 'Mississippi State University',
+  shortName: 'Mississippi State',
+  nickname: 'Bulldogs',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/344.png',
+  conference: 'SEC',
+  dataFile: '/data/mississippi-state-content-posts.json',
+  colors: {
+    primary: '#660000',
+    secondary: '#FFFFFF',
+    primaryDark: '#4a0000',
+    primaryDeep: '#2e0000',
+  },
+  peerSchools: SEC_PEERS.filter(p => p.id !== 'mississippi-state'),
+  benchmark: peer('mississippi-state', 'Mississippi State University', 'Mississippi State', 344, 'SEC', 0, 0, 0, 'Football', 0, 0, [16,16,16,16,16,16,16,16,16,16,16,16]),
+};
+
+export const minnesotaConfig: SchoolConfig = {
+  id: 'minnesota',
+  name: 'University of Minnesota',
+  shortName: 'Minnesota',
+  nickname: 'Golden Gophers',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/135.png',
+  conference: 'Big Ten',
+  dataFile: '/data/minnesota-content-posts.json',
+  colors: {
+    primary: '#7A0019',
+    secondary: '#FFCC33',
+    primaryDark: '#5a0012',
+    primaryDeep: '#38000b',
+  },
+  peerSchools: BIG_TEN_PEERS,
+  benchmark: peer('minnesota', 'University of Minnesota', 'Minnesota', 135, 'Big Ten', 0, 0, 0, 'Football', 0, 0, [9,9,9,9,9,9,9,9,9,9,9,9]),
+};
+
+export const washingtonStateConfig: SchoolConfig = {
+  id: 'washington-state',
+  name: 'Washington State University',
+  shortName: 'Washington State',
+  nickname: 'Cougars',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/265.png',
+  conference: 'Pac-12',
+  dataFile: '/data/washington-state-content-posts.json',
+  colors: {
+    primary: '#981E32',
+    secondary: '#5E6A71',
+    primaryDark: '#6e1624',
+    primaryDeep: '#440e16',
+  },
+  peerSchools: MID_MAJOR_PEERS,
+  benchmark: peer('washington-state', 'Washington State University', 'Washington State', 265, 'Pac-12', 0, 0, 0, 'Football', 0, 0, [5,5,5,5,5,5,5,5,5,5,5,5]),
 };
 
 export const arizonaConfig: SchoolConfig = {

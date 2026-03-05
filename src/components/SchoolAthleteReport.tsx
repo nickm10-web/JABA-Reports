@@ -176,6 +176,10 @@ const ROSTER_NAME_MATCHERS: Record<string, string[]> = {
   unc: ['university of north carolina (unc)', 'university of north carolina', 'unc'],
   texas: ['university of texas', 'university of texas at austin', 'university of texas austin'],
   arizona: ['the university of arizona', 'university of arizona'],
+  iowa: ['university of iowa', 'iowa'],
+  'mississippi-state': ['mississippi state university', 'mississippi state'],
+  minnesota: ['university of minnesota', 'minnesota'],
+  'washington-state': ['washington state university', 'washington state'],
 };
 
 const SCHOOL_THUMBNAILS: Record<string, string> = {
@@ -405,7 +409,8 @@ function derivePosts(
   raw: RawPost[],
   brandExclusions: Set<string>,
   schoolHandleMatchers: string[],
-  sponsoredPostExclusions: Set<string>
+  sponsoredPostExclusions: Set<string>,
+  sponsoredPostInclusions: Set<string>
 ) {
   const athleteMap = new Map<string, DerivedAthlete & { engSum: number; engCount: number }>();
   const sponsored: RawPost[] = [];
@@ -436,14 +441,18 @@ function derivePosts(
 
     const sponsorHandle = canonicalHandle(p.sponsorPartner);
     const isMarkedSponsored = Boolean(p.isSponsored || p.sponsored);
+    const postId = String(p?._id || '');
+    const isExplicitlyIncluded = postId && sponsoredPostInclusions.has(postId);
     const isSchoolTeamCollab =
       !!p.isCollaboration &&
       sponsorHandle &&
       isLikelySchoolTeamHandle(sponsorHandle, schoolHandleMatchers);
 
-    const postId = String(p?._id || '');
     const isExplicitlyExcluded = postId && sponsoredPostExclusions.has(postId);
-    if (sponsorHandle && isMarkedSponsored && !brandExclusions.has(sponsorHandle) && !isSchoolTeamCollab && !isExplicitlyExcluded) {
+    const isSponsoredPost =
+      (sponsorHandle && isMarkedSponsored && !brandExclusions.has(sponsorHandle) && !isSchoolTeamCollab) ||
+      isExplicitlyIncluded;
+    if (isSponsoredPost && !isExplicitlyExcluded) {
       sponsored.push(p);
     }
   }
@@ -612,8 +621,9 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
       ...(config.brandExclusions || []).map(canonicalHandle).filter(Boolean),
     ]);
     const sponsoredPostExclusions = new Set((config.sponsoredPostExclusions || []).map(String));
+    const sponsoredPostInclusions = new Set((config.sponsoredPostInclusions || []).map(String));
     const schoolHandleMatchers = [config.shortName, config.name, ...(ROSTER_NAME_MATCHERS[config.id] || [])];
-    const derived = derivePosts(rawPosts, exclusions, schoolHandleMatchers, sponsoredPostExclusions);
+    const derived = derivePosts(rawPosts, exclusions, schoolHandleMatchers, sponsoredPostExclusions, sponsoredPostInclusions);
     // Merge follower + marketability data from roster if available.
     // Supports both shapes:
     // 1) { athletes: [...] } and 2) [...] (raw roster array)
@@ -717,10 +727,15 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
     }
 
     return derived;
-  }, [rawPosts, rosterData, fallbackRosterRows, config.id, config.name, config.shortName]);
+  }, [rawPosts, rosterData, fallbackRosterRows, config.id, config.name, config.shortName, config.brandExclusions, config.sponsoredPostExclusions, config.sponsoredPostInclusions]);
   const sports = useMemo(() => deriveSports(athletes), [athletes]);
   const teamPages = useMemo(() => {
     if (!teamRosterRows.length) return [];
+    const excludedTeamSports = new Set(
+      (config.teamSportExclusions || [])
+        .map((sport) => compactToken(fmtSport(sport)))
+        .filter(Boolean)
+    );
     const schoolHandleBase = compactToken(config.id || config.shortName || config.name || 'team');
     const matchers = (ROSTER_NAME_MATCHERS[config.id] || [config.name.toLowerCase()]).map((m) => m.toLowerCase());
     const rows = teamRosterRows.filter((row) => {
@@ -780,7 +795,9 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
         acc.erDenominator += followers * posts;
       }
     }
-    return [...map.entries()].map(([sport, v]) => {
+    return [...map.entries()]
+      .filter(([sport]) => !excludedTeamSports.has(compactToken(fmtSport(sport))))
+      .map(([sport, v]) => {
       const avgEngagementRate = v.erDenominator > 0 ? v.erNumerator / v.erDenominator : 0;
       if (avgEngagementRate > 0.15 && v.followers < 50_000) {
         // Testing guardrail: flag potentially inflated ER for low-follower team accounts.
@@ -799,7 +816,7 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
         avgEngagementRate,
       };
     });
-  }, [teamRosterRows, config.id, config.shortName, config.name]);
+  }, [teamRosterRows, config.id, config.shortName, config.name, config.teamSportExclusions]);
   const ipComparisons = useMemo(() => deriveIPComparisons(rawPosts), [rawPosts]);
 
   const totalLikes = useMemo(() => rawPosts.reduce((s, p) => s + (p.metrics?.likes || 0), 0), [rawPosts]);
@@ -912,6 +929,7 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
                 ...(config.brandExclusions || []).map(canonicalHandle),
               ])}
               sponsoredPostExclusions={new Set((config.sponsoredPostExclusions || []).map(String))}
+              sponsoredPostInclusions={new Set((config.sponsoredPostInclusions || []).map(String))}
               schoolHandleMatchers={[config.shortName, config.name, ...(ROSTER_NAME_MATCHERS[config.id] || [])]}
             />
           )}
@@ -1909,6 +1927,7 @@ function ContentTab({
   shortName,
   brandExclusions,
   sponsoredPostExclusions,
+  sponsoredPostInclusions,
   schoolHandleMatchers,
 }: {
   posts: RawPost[];
@@ -1916,6 +1935,7 @@ function ContentTab({
   shortName: string;
   brandExclusions: Set<string>;
   sponsoredPostExclusions: Set<string>;
+  sponsoredPostInclusions: Set<string>;
   schoolHandleMatchers: string[];
 }) {
   const [sortKey, setSortKey] = useState<'likes' | 'engagement' | 'comments'>('likes');
@@ -1942,14 +1962,18 @@ function ContentTab({
     let list = normalizedPosts;
     if (sponsoredOnly) {
       list = list.filter(
-        (p) => p.isSponsored &&
-          !brandExclusions.has(p.sponsorHandle) &&
-          !p.isSchoolTeamCollab &&
-          !sponsoredPostExclusions.has(String(p.id))
+        (p) => (
+          (
+            p.isSponsored &&
+            !brandExclusions.has(p.sponsorHandle) &&
+            !p.isSchoolTeamCollab
+          ) || sponsoredPostInclusions.has(String(p.id))
+        ) &&
+        !sponsoredPostExclusions.has(String(p.id))
       );
     }
     return list;
-  }, [normalizedPosts, sponsoredOnly, brandExclusions, sponsoredPostExclusions]);
+  }, [normalizedPosts, sponsoredOnly, brandExclusions, sponsoredPostExclusions, sponsoredPostInclusions]);
   const isGiveawayCaption = (caption?: string) => {
     const text = (caption || '').toLowerCase();
     if (!text) return false;
@@ -2038,9 +2062,22 @@ function ContentTab({
               </div>
               <div className="w-full aspect-[4/5] rounded-xl bg-[#F0F4FA] overflow-hidden">
                 {item.post?.url ? (
-                  <img src={item.post.url} alt={item.post.title} className="w-full h-full object-cover object-center" />
+                  <div className="relative w-full h-full">
+                    <img
+                      src={item.post?.url}
+                      alt={item.post?.title}
+                      onError={(e) => {
+                        const img = e.currentTarget;
+                        img.style.display = 'none';
+                        const placeholder = img.nextElementSibling as HTMLElement | null;
+                        if (placeholder) placeholder.style.display = 'flex';
+                      }}
+                      className="w-full h-full object-cover object-center"
+                    />
+                    <div className="w-full h-full items-center justify-center text-xs text-[#9AA7BC] hidden">No preview</div>
+                  </div>
                 ) : (
-                  <div className="w-full h-full flex items-center justify-center text-xs text-[#9AA7BC]">No image</div>
+                  <div className="w-full h-full flex items-center justify-center text-xs text-[#9AA7BC]">No preview</div>
                 )}
               </div>
               <div className="mt-3">
@@ -2103,9 +2140,22 @@ function ContentTab({
               <div className="relative">
                 <div className="w-full aspect-[4/5] rounded-xl bg-[#F0F4FA] overflow-hidden">
                   {post.url ? (
-                    <img src={post.url} alt={post.title} className="w-full h-full object-cover" />
+                    <div className="relative w-full h-full">
+                      <img
+                        src={post.url}
+                        alt={post.title}
+                        onError={(e) => {
+                          const img = e.currentTarget;
+                          img.style.display = 'none';
+                          const placeholder = img.nextElementSibling as HTMLElement | null;
+                          if (placeholder) placeholder.style.display = 'flex';
+                        }}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="w-full h-full items-center justify-center text-xs text-[#9AA7BC] hidden">No preview</div>
+                    </div>
                   ) : (
-                  <div className="w-full h-full flex items-center justify-center text-xs text-[#9AA7BC]">No image</div>
+                    <div className="w-full h-full flex items-center justify-center text-xs text-[#9AA7BC]">No preview</div>
                   )}
                 </div>
                 <span
