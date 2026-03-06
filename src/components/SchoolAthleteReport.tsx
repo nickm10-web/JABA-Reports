@@ -191,6 +191,7 @@ const SCHOOL_THUMBNAILS: Record<string, string> = {
   unc: '/UNC_thumbnail.png',
   texas: '/Texas_thumbnail.png',
   arizona: '/Arizona_thumbnail.png',
+  iowa: '/iowa.png',
   // Keep existing legacy backgrounds
   alabama: '/Alabama_football.png',
   arkansas: '/arkansas_football.png',

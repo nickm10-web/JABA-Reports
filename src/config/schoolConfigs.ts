@@ -762,6 +762,8 @@ export const iowaConfig: SchoolConfig = {
   logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/2294.png',
   conference: 'Big Ten',
   dataFile: '/data/iowa-content-posts.json',
+  teamDataFile: '/data/Iowa_teams.json',
+  teamSportExclusions: ['WOMENS_GOLF'],
   colors: {
     primary: '#000000',
     secondary: '#FFCD00',
@@ -769,7 +771,7 @@ export const iowaConfig: SchoolConfig = {
     primaryDeep: '#0a0a0a',
   },
   peerSchools: BIG_TEN_PEERS,
-  benchmark: peer('iowa', 'University of Iowa', 'Iowa', 2294, 'Big Ten', 0, 0, 0, 'Football', 0, 0, [8,8,8,8,8,8,8,8,8,8,8,8]),
+  benchmark: peer('iowa', 'University of Iowa', 'Iowa', 2294, 'Big Ten', 210, 3173047, 37.82, 'Football', 214, 113, [8,8,8,8,8,8,8,8,8,8,8,8]),
 };
 
 export const mississippiStateConfig: SchoolConfig = {
