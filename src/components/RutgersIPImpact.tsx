@@ -3242,13 +3242,19 @@ function RutgersTeamPageLeaderboard() {
 
   // Get available sports that Rutgers has
   const ukSports = useMemo(() => {
-    const sports = rawRows.filter(r => r.schoolName === 'Rutgers University').map(r => r.sport);
+    const sports = rawRows
+      .filter((r) => normalizeSchoolKey(String(r.schoolName || '')) === 'rutgers')
+      .map((r) => r.sport);
     return [...new Set(sports)].sort((a, b) => formatSportLabel(a).localeCompare(formatSportLabel(b)));
   }, [rawRows]);
 
   const isConference = scope === 'conference';
 
   const filtered = useMemo(() => {
+    const allowedSchoolKeys = new Set(
+      ncaaD1Schools.map((school) => normalizeSchoolKey(String(school.name || ''))),
+    );
+
     let rows = rawRows;
     let supplemental = supplementalRows;
     if (isConference) {
@@ -3304,6 +3310,7 @@ function RutgersTeamPageLeaderboard() {
 
     const MIN_FOLLOWERS_FOR_TEAM_LEADERBOARD = isConference ? 0 : 10000;
     return Object.values(map)
+      .filter((school) => allowedSchoolKeys.has(normalizeSchoolKey(String(school.name || ''))))
       .filter((school) => school.followers >= MIN_FOLLOWERS_FOR_TEAM_LEADERBOARD)
       .sort((a, b) => b[sortMetric] - a[sortMetric]);
   }, [rawRows, supplementalRows, scope, selectedSport, sortMetric, isConference]);
