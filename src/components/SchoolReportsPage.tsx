@@ -21,7 +21,7 @@ import {
   michiganConfig, alabamaConfig, arkansasConfig,
   oklahomaConfig, boiseStateConfig, wisconsinConfig, notredameConfig,
   lsuConfig, oldDominionConfig, michiganStateConfig,
-  uscConfig, ncStateConfig, pennStateConfig, uncConfig, texasConfig,
+  uscConfig, ncStateConfig, pennStateConfig, washingtonStateConfig, uncConfig, texasConfig,
 } from '../config/schoolConfigs';
 
 
@@ -85,6 +85,7 @@ export function SchoolReportsPage() {
     SCHOOLS['usc'],
     SCHOOLS['nc-state'],
     SCHOOLS['penn-state'],
+    SCHOOLS['washington-state'],
     SCHOOLS['unc'],
     SCHOOLS['texas'],
     SCHOOLS['arizona'],
@@ -215,6 +216,11 @@ export function SchoolReportsPage() {
     if (selectedSchool.id === 'penn-state') {
       return (
         <SchoolAthleteReport config={pennStateConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'washington-state') {
+      return (
+        <SchoolAthleteReport config={washingtonStateConfig} onBack={() => setSelectedSchool(null)} />
       );
     }
     if (selectedSchool.id === 'unc') {

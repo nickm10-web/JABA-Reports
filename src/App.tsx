@@ -30,6 +30,7 @@ import {
   uscConfig,
   ncStateConfig,
   pennStateConfig,
+  washingtonStateConfig,
   uncConfig,
   texasConfig,
 } from './config/schoolConfigs';
@@ -154,6 +155,10 @@ function PennStateRoute() {
   return <SchoolAthleteReport config={pennStateConfig} />;
 }
 
+function WashingtonStateRoute() {
+  return <SchoolAthleteReport config={washingtonStateConfig} />;
+}
+
 function UNCRoute() {
   return <SchoolAthleteReport config={uncConfig} />;
 }
@@ -239,6 +244,8 @@ function App() {
         <Route path="/penn-state" element={<PennStateRoute />} />
         <Route path="/pennstate" element={<PennStateRoute />} />
         <Route path="/PennState" element={<PennStateRoute />} />
+        <Route path="/washington-state" element={<WashingtonStateRoute />} />
+        <Route path="/washingtonstate" element={<WashingtonStateRoute />} />
         <Route path="/unc" element={<UNCRoute />} />
         <Route path="/UNC" element={<UNCRoute />} />
         <Route path="/texas" element={<TexasRoute />} />
