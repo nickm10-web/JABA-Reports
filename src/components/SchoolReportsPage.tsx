@@ -9,6 +9,7 @@ import { KentuckyIPImpact } from './KentuckyIPImpact';
 import { OhioStateIPImpact } from './OhioStateIPImpact';
 import { GeorgiaIPImpact } from './GeorgiaIPImpact';
 import { ClemsonIPImpact } from './ClemsonIPImpact';
+import { RutgersIPImpact } from './RutgersIPImpact';
 import { VirginiaIPImpact } from './VirginiaIPImpact';
 import { ArizonaIPImpact } from './ArizonaIPImpact';
 import { UCLABrandDeals } from './UCLABrandDeals';
@@ -46,6 +47,13 @@ const OLD_DOMINION_CARD: SchoolConfig = {
   dataName: 'Old Dominion University', logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/295.png',
 };
 
+const RUTGERS_CARD: SchoolConfig = {
+  id: 'rutgers', name: 'Rutgers University', shortName: 'Rutgers',
+  mascot: 'Scarlet Knights', primaryColor: '#CC0033', secondaryColor: '#000000',
+  accentColor: '#CC0033', conference: 'Big 10', location: 'Piscataway, NJ',
+  dataName: 'Rutgers', logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/164.png',
+};
+
 export function SchoolReportsPage() {
   const [selectedSchool, setSelectedSchool] = useState<SchoolConfig | null>(null);
 
@@ -67,6 +75,7 @@ export function SchoolReportsPage() {
     SCHOOLS['oklahoma'],
     SCHOOLS['wisconsin'],
     SCHOOLS['clemson'],
+    RUTGERS_CARD,
     SCHOOLS['notre-dame'],
     SCHOOLS['boise-state'],
     SCHOOLS['lsu'],
@@ -156,6 +165,11 @@ export function SchoolReportsPage() {
     if (selectedSchool.id === 'clemson') {
       return (
         <ClemsonIPImpact onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'rutgers') {
+      return (
+        <RutgersIPImpact onBack={() => setSelectedSchool(null)} />
       );
     }
     if (selectedSchool.id === 'notre-dame') {

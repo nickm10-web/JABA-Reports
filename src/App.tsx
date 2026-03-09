@@ -7,6 +7,7 @@ import { OhioStateIPImpact } from './components/OhioStateIPImpact';
 import { KentuckyIPImpact } from './components/KentuckyIPImpact';
 import { GeorgiaIPImpact } from './components/GeorgiaIPImpact';
 import { ClemsonIPImpact } from './components/ClemsonIPImpact';
+import { RutgersIPImpact } from './components/RutgersIPImpact';
 import { VirginiaIPImpact } from './components/VirginiaIPImpact';
 import { ArizonaIPImpact } from './components/ArizonaIPImpact';
 import { PlayflyReportHub } from './components/PlayflyReportHub';
@@ -109,6 +110,12 @@ function ClemsonRoute() {
   return <ClemsonIPImpact onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
+function RutgersRoute() {
+  const navigate = useNavigate();
+  const canGoBack = window.history.length > 2;
+  return <RutgersIPImpact onBack={canGoBack ? () => navigate('/') : undefined} />;
+}
+
 function NotreDameRoute() {
   return <SchoolAthleteReport config={notredameConfig} />;
 }
@@ -209,6 +216,8 @@ function App() {
         <Route path="/clemson" element={<ClemsonRoute />} />
         <Route path="/clemson-athlete" element={<Navigate to="/clemson" replace />} />
         <Route path="/clemson-ip" element={<ClemsonRoute />} />
+        <Route path="/rutgers" element={<RutgersRoute />} />
+        <Route path="/rutgers-ip" element={<RutgersRoute />} />
         <Route path="/notre-dame" element={<NotreDameRoute />} />
         <Route path="/notredame" element={<NotreDameRoute />} />
         <Route path="/boise-state" element={<BoiseStateRoute />} />
