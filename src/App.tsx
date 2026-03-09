@@ -112,9 +112,7 @@ function ClemsonRoute() {
 }
 
 function RutgersRoute() {
-  const navigate = useNavigate();
-  const canGoBack = window.history.length > 2;
-  return <RutgersIPImpact onBack={canGoBack ? () => navigate('/') : undefined} />;
+  return <RutgersIPImpact />;
 }
 
 function NotreDameRoute() {
