@@ -126,6 +126,28 @@ function toNumber(value: unknown): number {
   return typeof value === 'number' && Number.isFinite(value) ? value : 0;
 }
 
+const TEAM_ROSTER_DATA_PATHS = [
+  '/data/roster_teams.json',
+  '/data/Teams.json',
+  '/data/ip-roster-teams.json',
+] as const;
+
+async function fetchBestTeamRosterRows(): Promise<SchoolFollowerRosterRow[]> {
+  for (const path of TEAM_ROSTER_DATA_PATHS) {
+    try {
+      const res = await fetch(path);
+      if (!res.ok) continue;
+      const json = await res.json();
+      if (!Array.isArray(json)) continue;
+      return json as SchoolFollowerRosterRow[];
+    } catch {
+      // keep trying next dataset
+    }
+  }
+
+  return [];
+}
+
 function normalizeSchoolKey(name: string): string {
   const cleaned = String(name || '')
     .toLowerCase()
@@ -168,6 +190,32 @@ function normalizeSchoolKey(name: string): string {
     .join('');
 
   return aliases[simplified] ?? simplified;
+}
+
+const ACC_SCHOOL_KEYS = new Set([
+  'bostoncollege',
+  'california',
+  'clemson',
+  'duke',
+  'floridastate',
+  'georgiatech',
+  'louisville',
+  'miami',
+  'ncstate',
+  'northcarolina',
+  'unc',
+  'notredame',
+  'pittsburgh',
+  'smu',
+  'stanford',
+  'syracuse',
+  'virginia',
+  'virginiatech',
+  'wakeforest',
+]);
+
+function isAccSchoolName(name: string): boolean {
+  return ACC_SCHOOL_KEYS.has(normalizeSchoolKey(name));
 }
 
 function formatSportLabel(sportKey: string): string {
@@ -1578,14 +1626,49 @@ function BenchmarkTab() {
   const [rosterRows, setRosterRows] = useState<SchoolFollowerRosterRow[]>([]);
   const [followersBySchool, setFollowersBySchool] = useState<Record<string, number>>({});
   const isConference = benchmarkType === 'conference';
+
+  const dedupeSchools = (rows: BenchmarkSchool[]): BenchmarkSchool[] => {
+    const map = new Map<string, BenchmarkSchool>();
+    for (const row of rows) {
+      const key = normalizeSchoolKey(row.name);
+      if (!key) continue;
+      const existing = map.get(key);
+      if (!existing) {
+        map.set(key, row);
+        continue;
+      }
+
+      // Prefer the row with richer coverage, then higher scale metrics.
+      const currentScore =
+        existing.posts +
+        existing.followers +
+        existing.logoEng +
+        existing.mentionEng +
+        existing.collabEng;
+      const nextScore =
+        row.posts +
+        row.followers +
+        row.logoEng +
+        row.mentionEng +
+        row.collabEng;
+
+      if (nextScore > currentScore) {
+        map.set(key, row);
+      }
+    }
+    return [...map.values()];
+  };
+
   const baseSchools: BenchmarkSchool[] = useMemo(() => {
-    const base = (isConference ? secSchools : ncaaD1Schools) as BenchmarkSchool[];
+    const base = (isConference
+      ? ncaaD1Schools.filter((school) => isAccSchoolName(school.name))
+      : ncaaD1Schools) as BenchmarkSchool[];
     const followerFallbackBySchool: Record<string, number> = {
       Iowa: 1004448,
       TCU: 732360,
       'Iowa State': 1238932,
     };
-    return base.map((school) => {
+    const hydrated = base.map((school) => {
       const normalized = normalizeSchoolKey(school.name);
       const rosterFollowers =
         normalized === 'mississippistate'
@@ -1601,6 +1684,7 @@ function BenchmarkTab() {
               : followerFallbackBySchool[school.name] ?? 0,
       };
     });
+    return dedupeSchools(hydrated);
   }, [isConference, followersBySchool]);
 
   const availableSports = useMemo(() => {
@@ -1615,7 +1699,7 @@ function BenchmarkTab() {
     if (selectedSport === 'ALL') return baseSchools;
 
     const nameByKey: Record<string, string> = {};
-    for (const school of [...secSchools, ...ncaaD1Schools] as BenchmarkSchool[]) {
+    for (const school of [...baseSchools, ...secSchools]) {
       const key = normalizeSchoolKey(school.name);
       if (!nameByKey[key]) nameByKey[key] = school.name;
     }
@@ -1635,7 +1719,7 @@ function BenchmarkTab() {
 
     for (const row of rosterRows) {
       if (row.sport !== selectedSport) continue;
-      if (isConference && row.conferenceName !== 'ACC') continue;
+      if (isConference && String(row.conferenceName || '').trim().toUpperCase() !== 'ACC') continue;
 
       const schoolName = String(row.schoolName || '').trim();
       const key = normalizeSchoolKey(schoolName);
@@ -1674,7 +1758,7 @@ function BenchmarkTab() {
       map[key].collabEngTotal += toNumber(m.avgEngagementRateWithCollaboration) * collabPosts;
     }
 
-    return Object.values(map).map((entry) => {
+    const dynamicSchools = Object.values(map).map((entry) => {
       const ipPosts = Math.max(entry.logoPosts, entry.mentionPosts, entry.collabPosts);
       const adoption = entry.posts > 0 ? (ipPosts / entry.posts) * 100 : 0;
       return {
@@ -1688,6 +1772,7 @@ function BenchmarkTab() {
         followers: entry.followers,
       };
     });
+    return dedupeSchools(dynamicSchools);
   }, [selectedSport, baseSchools, rosterRows, isConference]);
 
   const benchmarkLabel = isConference ? 'ACC' : 'NCAA D1';
@@ -1721,9 +1806,7 @@ function BenchmarkTab() {
     let cancelled = false;
     const loadRosterData = async () => {
       try {
-        const res = await fetch('/data/roster_teams.json');
-        if (!res.ok) return;
-        const rows = (await res.json()) as SchoolFollowerRosterRow[];
+        const rows = await fetchBestTeamRosterRows();
         if (cancelled || !Array.isArray(rows)) return;
         if (!cancelled) setRosterRows(rows);
 
@@ -2033,6 +2116,45 @@ function SegmentedToggle<T extends string>({
 // ═══════════════════════════════════════════════════════════════
 type ContentView = 'athlete' | 'team';
 const MANUAL_WITHOUT_IP_EXCLUDE_IDS = new Set<string>([]);
+const MANUAL_WITH_IP_INCLUDE_IDS = new Set<string>([
+  '68fbbd7a1e4a5fe96ac3699c', // Ian Schieffelin - May 2, 2025
+  '68fbbabd1e4a5fe96ac3683a', // Cade Klubnik - Jul 23, 2025
+  '68fbc1581e4a5fe96ac36ba9', // Tristan Smith - Jul 16, 2025
+  '698a199f9660249963f18786', // Cade Klubnik - Jan 14, 2026
+  '68fbc47a1e4a5fe96ac36dc0', // Jamison Brockenbrough - May 23, 2025
+  '69407475024ac7059367b50a', // Cade Klubnik - Dec 9, 2025
+  '68fbc0e61e4a5fe96ac36b66', // Shelton Lewis - Jan 23, 2025
+  '68fbbfe01e4a5fe96ac36acc', // Peter Woods - Jun 11, 2024
+  '68fbc24a1e4a5fe96ac36c43', // Emma Malewski - Oct 6, 2025
+  '68fbb6831e4a5fe96ac3662d', // Cam Cannarella - Jun 2, 2025
+  '68fbc10d1e4a5fe96ac36b75', // T.J. Moore - Oct 4, 2025
+  '68fbbabd1e4a5fe96ac36834', // Cade Klubnik - Oct 9, 2025
+  '68fbc1ed1e4a5fe96ac36c06', // Will Heldt - Dec 19, 2024
+  '68fbba131e4a5fe96ac367e9', // Avieon Terrell - Oct 5, 2025
+  '68fbbc571e4a5fe96ac36910', // Drew Woodaz - Dec 20, 2023
+  '68fbb9ca1e4a5fe96ac367bb', // Antonio Williams - Jan 3, 2025
+  '68fbb6601e4a5fe96ac36619', // Briggs Sullivan - Apr 27, 2025
+  '68fbc0bc1e4a5fe96ac36b53', // Sammy Brown - Oct 2, 2024
+  '68fbc24a1e4a5fe96ac36c44', // Emma Malewski - Oct 1, 2025
+  '68fbbabd1e4a5fe96ac36835', // Cade Klubnik - Jul 24, 2025
+  '698a14059660249963f0fc90', // T.J. Moore - Dec 4, 2025
+  '68fbbb4e1e4a5fe96ac36888', // Chris Denson - Oct 20, 2025
+  '698a14df9660249963f1115c', // Emma Malewski - Jan 29, 2026
+  '68fbc24a1e4a5fe96ac36c42', // Emma Malewski - Oct 20, 2025
+  '6940750a024ac7059367b521', // Wade Woodaz - Nov 23, 2025
+  '68fbc24a1e4a5fe96ac36c41', // Emma Malewski - Oct 10, 2025
+  '68fbc23b1e4a5fe96ac36c33', // Ella Cesario - Oct 13, 2025
+  '68fbc1781e4a5fe96ac36bc8', // Tyler Brown - Mar 25, 2025
+  '68fbbabd1e4a5fe96ac36832', // Cade Klubnik - Oct 14, 2025
+  '68fbbc0e1e4a5fe96ac368e1', // Dee Crayton - Jul 29, 2024
+  '68fbc10d1e4a5fe96ac36b7b', // T.J. Moore - Jul 17, 2025
+  '68fbc1581e4a5fe96ac36bb3', // Tristan Smith - Sep 7, 2025
+  '68fbc0501e4a5fe96ac36b13', // Robert Gunn III - Aug 4, 2023
+  '68fbc0e61e4a5fe96ac36b61', // Shelton Lewis - Sep 8, 2024
+  '68fbc1581e4a5fe96ac36bac', // Tristan Smith - Sep 24, 2025
+  '68fbbb7f1e4a5fe96ac368a0', // Christopher Vizzina - Jul 25, 2025
+  '68fbc24a1e4a5fe96ac36c48', // Emma Malewski - Oct 17, 2025
+]);
 
 interface AthletePostItem {
   id: string;
@@ -2078,11 +2200,38 @@ function ContentTab() {
     return Number.isNaN(date.getTime()) ? 'Unknown' : date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
   };
 
-  const getSignalTag = (post: { hasOrganizationLogo?: boolean; hasOrganizationInCaption?: boolean; isOrganizationCollaboration?: boolean }): string => {
+  const hasIPSignal = (post: {
+    hasOrganizationLogo?: boolean;
+    hasOrganizationInCaption?: boolean;
+    isOrganizationCollaboration?: boolean;
+    isCollaboration?: boolean;
+    sponsorPartner?: string;
+    _id?: string;
+  }): boolean =>
+    Boolean(
+      MANUAL_WITH_IP_INCLUDE_IDS.has(String(post._id || '')) ||
+      post.hasOrganizationLogo ||
+      post.hasOrganizationInCaption ||
+      post.isOrganizationCollaboration ||
+      post.isCollaboration ||
+      String(post.sponsorPartner || '').trim(),
+    );
+
+  const getSignalTag = (post: {
+    hasOrganizationLogo?: boolean;
+    hasOrganizationInCaption?: boolean;
+    isOrganizationCollaboration?: boolean;
+    isCollaboration?: boolean;
+    sponsorPartner?: string;
+    _id?: string;
+  }): string => {
+    if (MANUAL_WITH_IP_INCLUDE_IDS.has(String(post._id || ''))) return 'With IP';
     if (post.isOrganizationCollaboration) return 'Org Collaboration';
+    if (post.isCollaboration) return 'Collaboration';
     if (post.hasOrganizationLogo && post.hasOrganizationInCaption) return 'Logo + Mention';
     if (post.hasOrganizationLogo) return 'Visual IP';
     if (post.hasOrganizationInCaption) return 'Mention';
+    if (String(post.sponsorPartner || '').trim()) return 'Sponsored';
     return 'No IP';
   };
 
@@ -2145,10 +2294,10 @@ function ContentTab() {
         }
 
         const withIPInteractions = athleteRows
-          .filter((post) => post?.hasOrganizationLogo || post?.hasOrganizationInCaption || post?.isOrganizationCollaboration)
+          .filter((post) => hasIPSignal(post))
           .map((post) => Number(post?.metrics?.likes || 0) + Number(post?.metrics?.comments || 0));
         const withoutIPInteractions = athleteRows
-          .filter((post) => !(post?.hasOrganizationLogo || post?.hasOrganizationInCaption || post?.isOrganizationCollaboration))
+          .filter((post) => !hasIPSignal(post))
           .map((post) => Number(post?.metrics?.likes || 0) + Number(post?.metrics?.comments || 0));
 
         const withIPMedian = calcMedian(withIPInteractions);
@@ -2158,7 +2307,7 @@ function ContentTab() {
           const likes = Number(post?.metrics?.likes || 0);
           const comments = Number(post?.metrics?.comments || 0);
           const interactions = likes + comments;
-          const withIP = Boolean(post?.hasOrganizationLogo || post?.hasOrganizationInCaption || post?.isOrganizationCollaboration);
+          const withIP = hasIPSignal(post);
           const groupMedian = withIP ? withIPMedian : withoutIPMedian;
           const lift = groupMedian > 0 ? ((interactions - groupMedian) / groupMedian) * 100 : 0;
 
@@ -3008,8 +3157,20 @@ interface KYSportSchoolEntry {
   engagementRate: number;
 }
 
+function formatSchoolDisplayName(name: string): string {
+  const raw = String(name || '').trim();
+  if (!raw) return raw;
+
+  const upper = raw.toUpperCase();
+  if (upper === 'DUKE') return 'Duke';
+  if (upper === 'UNC' || raw === 'University of North Carolina (UNC)') return 'UNC';
+
+  return raw;
+}
+
 function ClemsonTeamPageLeaderboard() {
   const [rawRows, setRawRows] = useState<KYTeamRosterRow[]>([]);
+  const [supplementalRows, setSupplementalRows] = useState<KYTeamRosterRow[]>([]);
   const [scope, setScope] = useState<'conference' | 'ncaa'>('conference');
   const [selectedSport, setSelectedSport] = useState<string>('ALL');
   const [sortMetric, setSortMetric] = useState<'followers' | 'posts' | 'likes'>('followers');
@@ -3018,13 +3179,27 @@ function ClemsonTeamPageLeaderboard() {
     let cancelled = false;
     const load = async () => {
       try {
-        const res = await fetch('/data/roster_teams.json');
-        if (!res.ok) return;
-        const rows = (await res.json()) as KYTeamRosterRow[];
+        const rows = (await fetchBestTeamRosterRows()) as KYTeamRosterRow[];
         if (!cancelled) setRawRows(rows);
       } catch { /* ignore */ }
     };
     load();
+    return () => { cancelled = true; };
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    const loadSupplemental = async () => {
+      try {
+        const res = await fetch('/data/ip-roster-teams.json');
+        if (!res.ok) return;
+        const rows = (await res.json()) as KYTeamRosterRow[];
+        if (!cancelled && Array.isArray(rows)) setSupplementalRows(rows);
+      } catch {
+        // supplemental dataset is optional
+      }
+    };
+    loadSupplemental();
     return () => { cancelled = true; };
   }, []);
 
@@ -3038,13 +3213,20 @@ function ClemsonTeamPageLeaderboard() {
 
   const filtered = useMemo(() => {
     let rows = rawRows;
-    if (isConference) rows = rows.filter(r => r.conferenceName === 'ACC');
-    if (selectedSport !== 'ALL') rows = rows.filter(r => r.sport === selectedSport);
+    let supplemental = supplementalRows;
+    if (isConference) {
+      rows = rows.filter((r) => String(r.conferenceName || '').trim().toUpperCase() === 'ACC');
+      supplemental = supplemental.filter((r) => String(r.conferenceName || '').trim().toUpperCase() === 'ACC');
+    }
+    if (selectedSport !== 'ALL') {
+      rows = rows.filter(r => r.sport === selectedSport);
+      supplemental = supplemental.filter(r => r.sport === selectedSport);
+    }
 
     // Aggregate by school
     const map: Record<string, KYSportSchoolEntry> = {};
     for (const row of rows) {
-      const s = row.schoolName;
+      const s = formatSchoolDisplayName(row.schoolName);
       if (!s) continue;
       if (!map[s]) map[s] = { name: s, conf: row.conferenceName || '', followers: 0, posts: 0, likes: 0, engagementRate: 0 };
       const m = row.metrics?.thirtyDays;
@@ -3055,11 +3237,39 @@ function ClemsonTeamPageLeaderboard() {
     for (const s of Object.values(map)) {
       s.engagementRate = s.posts > 0 ? s.likes / s.posts : 0;
     }
-    const MIN_FOLLOWERS_FOR_TEAM_LEADERBOARD = 10000;
+
+    const supplementalMap: Record<string, KYSportSchoolEntry> = {};
+    for (const row of supplemental) {
+      const s = formatSchoolDisplayName(row.schoolName);
+      if (!s) continue;
+      if (!supplementalMap[s]) {
+        supplementalMap[s] = { name: s, conf: row.conferenceName || '', followers: 0, posts: 0, likes: 0, engagementRate: 0 };
+      }
+      const m = row.metrics?.thirtyDays;
+      supplementalMap[s].followers += m?.followers || 0;
+      supplementalMap[s].posts += m?.contentCount || 0;
+      supplementalMap[s].likes += m?.likes || 0;
+    }
+    for (const s of Object.values(supplementalMap)) {
+      s.engagementRate = s.posts > 0 ? s.likes / s.posts : 0;
+    }
+
+    for (const [school, supplementalEntry] of Object.entries(supplementalMap)) {
+      const primary = map[school];
+      if (!primary) {
+        if (supplementalEntry.followers >= 10000) map[school] = supplementalEntry;
+        continue;
+      }
+      if (primary.followers < 10000 && supplementalEntry.followers >= 10000) {
+        map[school] = supplementalEntry;
+      }
+    }
+
+    const MIN_FOLLOWERS_FOR_TEAM_LEADERBOARD = isConference ? 0 : 10000;
     return Object.values(map)
       .filter((school) => school.followers >= MIN_FOLLOWERS_FOR_TEAM_LEADERBOARD)
       .sort((a, b) => b[sortMetric] - a[sortMetric]);
-  }, [rawRows, scope, selectedSport, sortMetric, isConference]);
+  }, [rawRows, supplementalRows, scope, selectedSport, sortMetric, isConference]);
 
   const ukIndex = filtered.findIndex(s => s.name === 'Clemson');
   const ukRank = ukIndex >= 0 ? ukIndex + 1 : null;
