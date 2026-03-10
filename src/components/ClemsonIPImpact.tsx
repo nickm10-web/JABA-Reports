@@ -218,6 +218,10 @@ function isAccSchoolName(name: string): boolean {
   return ACC_SCHOOL_KEYS.has(normalizeSchoolKey(name));
 }
 
+function isAflLadderConference(conferenceName: string | null | undefined): boolean {
+  return String(conferenceName || '').trim().toUpperCase() === 'THE LADDER';
+}
+
 function formatSportLabel(sportKey: string): string {
   if (sportKey === 'ALL_SPORTS') return 'All Sports';
   return sportKey
@@ -1719,6 +1723,7 @@ function BenchmarkTab() {
 
     for (const row of rosterRows) {
       if (row.sport !== selectedSport) continue;
+      if (isAflLadderConference(row.conferenceName)) continue;
       if (isConference && String(row.conferenceName || '').trim().toUpperCase() !== 'ACC') continue;
 
       const schoolName = String(row.schoolName || '').trim();
@@ -3212,8 +3217,8 @@ function ClemsonTeamPageLeaderboard() {
   const isConference = scope === 'conference';
 
   const filtered = useMemo(() => {
-    let rows = rawRows;
-    let supplemental = supplementalRows;
+    let rows = rawRows.filter((r) => !isAflLadderConference(r.conferenceName));
+    let supplemental = supplementalRows.filter((r) => !isAflLadderConference(r.conferenceName));
     if (isConference) {
       rows = rows.filter((r) => String(r.conferenceName || '').trim().toUpperCase() === 'ACC');
       supplemental = supplemental.filter((r) => String(r.conferenceName || '').trim().toUpperCase() === 'ACC');
