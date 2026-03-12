@@ -25,6 +25,7 @@ import {
   notredameConfig,
   boiseStateConfig,
   lsuConfig,
+  missouriConfig,
   iowaConfig,
   mississippiStateConfig,
   minnesotaConfig,
@@ -128,6 +129,10 @@ function BoiseStateRoute() {
 
 function LSURoute() {
   return <SchoolAthleteReport config={lsuConfig} />;
+}
+
+function MizzouRoute() {
+  return <SchoolAthleteReport config={missouriConfig} />;
 }
 
 function IowaRoute() {
@@ -242,6 +247,8 @@ function App() {
         <Route path="/boisest" element={<BoiseStateRoute />} />
         <Route path="/lsu" element={<LSURoute />} />
         <Route path="/LSU" element={<LSURoute />} />
+        <Route path="/mizzou" element={<MizzouRoute />} />
+        <Route path="/Mizzou" element={<MizzouRoute />} />
         <Route path="/iowa" element={<IowaRoute />} />
         <Route path="/Iowa" element={<IowaRoute />} />
         <Route path="/mississippi-state" element={<MississippiStateRoute />} />

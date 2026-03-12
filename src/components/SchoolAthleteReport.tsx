@@ -177,6 +177,7 @@ const ROSTER_NAME_MATCHERS: Record<string, string[]> = {
   texas: ['university of texas', 'university of texas at austin', 'university of texas austin'],
   arizona: ['the university of arizona', 'university of arizona'],
   iowa: ['university of iowa', 'iowa'],
+  mizzou: ['university of missouri', 'missouri', 'mizzou'],
   'mississippi-state': ['mississippi state university', 'mississippi state', 'mississippi'],
   minnesota: ['university of minnesota', 'minnesota'],
   'washington-state': ['washington state university', 'washington state'],
@@ -192,6 +193,7 @@ const SCHOOL_THUMBNAILS: Record<string, string> = {
   texas: '/Texas_thumbnail.png',
   arizona: '/Arizona_thumbnail.png',
   iowa: '/iowa.png',
+  mizzou: '/mizzou-football.png',
   'mississippi-state': '/miss-st-football.png',
   // Keep existing legacy backgrounds
   alabama: '/Alabama_football.png',
@@ -206,6 +208,14 @@ const SCHOOL_THUMBNAILS: Record<string, string> = {
 };
 
 const TEAM_HANDLE_OVERRIDES: Record<string, Record<string, string>> = {
+  mizzou: {
+    GENERAL: 'mizzouathletics',
+    FOOTBALL: 'mizzoufootball',
+    MENS_BASKETBALL: 'mizzouhoops',
+    MENS_WRESTLING: 'mizzouwrestling',
+    SOFTBALL: 'mizzousoftball',
+    TRACK_AND_FIELD: 'mizzoutfxc',
+  },
   'mississippi-state': {
     BASEBALL: 'hailstatebb',
     MENS_BASKETBALL: 'hailstatembk',
@@ -2372,6 +2382,7 @@ function SponsoredTab({
       : `Sponsored posts generate an average ${fmtPct(avgSponsoredERAll * 100)} engagement rate across ${fmtN(totalSponsoredPostsAll)} posts — ${comparison} the ${fmtPct(avgOrganicER * 100)} program-wide average, indicating audiences ${receptivityStatement}.`;
 
   const brandMap = new Map<string, {
+    brandLabel: string;
     posts: RawPost[];
     athletes: Set<string>;
     athleteNames: Set<string>;
@@ -2385,10 +2396,12 @@ function SponsoredTab({
     totalEmv: number;
   }>();
   filtered.forEach(p => {
-    const key = (p.sponsorPartner || '').trim();
+    const rawBrand = (p.sponsorPartner || '').trim();
+    const key = canonicalHandle(rawBrand);
     if (!key) return;
     if (!brandMap.has(key)) {
       brandMap.set(key, {
+        brandLabel: rawBrand.startsWith('@') ? `@${key}` : rawBrand || `@${key}`,
         posts: [],
         athletes: new Set(),
         athleteNames: new Set(),
@@ -2422,13 +2435,13 @@ function SponsoredTab({
   });
 
   const brandCards = [...brandMap.entries()].map(([brand, entry]) => {
-    const normalizedBrand = brand.toLowerCase().replace(/^@/, '');
-    const logoUrl = brandLogos[normalizedBrand] || brandLogos[brand.toLowerCase()] || '';
+    const normalizedBrand = canonicalHandle(brand);
+    const logoUrl = brandLogos[normalizedBrand] || brandLogos[entry.brandLabel.toLowerCase()] || '';
     const avgLikesPerPost = entry.visibleLikesPostCount ? entry.totalLikes / entry.visibleLikesPostCount : 0;
     const estimatedEmvFallback = entry.posts.length * avgLikesPerPost * emvPerLikeConstant;
     const estimatedValue = entry.totalEmv > 0 ? entry.totalEmv : estimatedEmvFallback;
     return {
-      brand,
+      brand: entry.brandLabel,
       logoUrl,
       postCount: entry.posts.length,
       athleteCount: entry.athletes.size,
