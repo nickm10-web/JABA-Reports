@@ -25,6 +25,9 @@ import {
   notredameConfig,
   boiseStateConfig,
   lsuConfig,
+  iowaConfig,
+  mississippiStateConfig,
+  minnesotaConfig,
   oldDominionConfig,
   michiganStateConfig,
   uscConfig,
@@ -127,6 +130,18 @@ function LSURoute() {
   return <SchoolAthleteReport config={lsuConfig} />;
 }
 
+function IowaRoute() {
+  return <SchoolAthleteReport config={iowaConfig} />;
+}
+
+function MississippiStateRoute() {
+  return <SchoolAthleteReport config={mississippiStateConfig} />;
+}
+
+function MinnesotaRoute() {
+  return <SchoolAthleteReport config={minnesotaConfig} />;
+}
+
 function VirginiaRoute() {
   const navigate = useNavigate();
   const canGoBack = window.history.length > 2;
@@ -227,6 +242,15 @@ function App() {
         <Route path="/boisest" element={<BoiseStateRoute />} />
         <Route path="/lsu" element={<LSURoute />} />
         <Route path="/LSU" element={<LSURoute />} />
+        <Route path="/iowa" element={<IowaRoute />} />
+        <Route path="/Iowa" element={<IowaRoute />} />
+        <Route path="/mississippi-state" element={<MississippiStateRoute />} />
+        <Route path="/mississippistate" element={<MississippiStateRoute />} />
+        <Route path="/MississippiState" element={<MississippiStateRoute />} />
+        <Route path="/hailstate" element={<MississippiStateRoute />} />
+        <Route path="/HailState" element={<MississippiStateRoute />} />
+        <Route path="/minnesota" element={<MinnesotaRoute />} />
+        <Route path="/Minnesota" element={<MinnesotaRoute />} />
         <Route path="/virginia" element={<VirginiaRoute />} />
         <Route path="/Virginia" element={<VirginiaRoute />} />
         <Route path="/old-dominion" element={<OldDominionRoute />} />

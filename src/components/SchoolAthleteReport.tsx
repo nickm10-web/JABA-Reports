@@ -177,7 +177,7 @@ const ROSTER_NAME_MATCHERS: Record<string, string[]> = {
   texas: ['university of texas', 'university of texas at austin', 'university of texas austin'],
   arizona: ['the university of arizona', 'university of arizona'],
   iowa: ['university of iowa', 'iowa'],
-  'mississippi-state': ['mississippi state university', 'mississippi state'],
+  'mississippi-state': ['mississippi state university', 'mississippi state', 'mississippi'],
   minnesota: ['university of minnesota', 'minnesota'],
   'washington-state': ['washington state university', 'washington state'],
 };
@@ -192,6 +192,7 @@ const SCHOOL_THUMBNAILS: Record<string, string> = {
   texas: '/Texas_thumbnail.png',
   arizona: '/Arizona_thumbnail.png',
   iowa: '/iowa.png',
+  'mississippi-state': '/miss-st-football.png',
   // Keep existing legacy backgrounds
   alabama: '/Alabama_football.png',
   arkansas: '/arkansas_football.png',
@@ -202,6 +203,21 @@ const SCHOOL_THUMBNAILS: Record<string, string> = {
   virginia: '/Virginia_thumnail.png',
   'boise-state': '/Boise_thumbnail.png',
   'old-dominion': '/OldDominion_thumnail.png',
+};
+
+const TEAM_HANDLE_OVERRIDES: Record<string, Record<string, string>> = {
+  'mississippi-state': {
+    BASEBALL: 'hailstatebb',
+    MENS_BASKETBALL: 'hailstatembk',
+    FOOTBALL: 'hailstatefb',
+    GOLF: 'hailstatemg',
+    CROSS_COUNTRY: 'hailstatetf',
+    TENNIS: 'hailstatemt',
+    SOCCER: 'hailstatesoc',
+    SOFTBALL: 'hailstatesb',
+    VOLLEYBALL: 'hailstatevb',
+    GENERAL: 'hailstate',
+  },
 };
 
 const GLOBAL_BRAND_EXCLUSIONS = new Set(['bleacherreport', 'br_hoops', 'brhoops']);
@@ -737,7 +753,6 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
         .map((sport) => compactToken(fmtSport(sport)))
         .filter(Boolean)
     );
-    const schoolHandleBase = compactToken(config.id || config.shortName || config.name || 'team');
     const matchers = (ROSTER_NAME_MATCHERS[config.id] || [config.name.toLowerCase()]).map((m) => m.toLowerCase());
     const rows = teamRosterRows.filter((row) => {
       const school = (row.schoolName || '').toLowerCase();
@@ -755,14 +770,14 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
     }>();
     for (const row of rows) {
       const sport = row.sport || 'UNKNOWN';
-      const sportHandleToken = compactToken(fmtSport(sport));
+      const overrideHandle = TEAM_HANDLE_OVERRIDES[config.id]?.[sport] || '';
       const rawHandle =
+        overrideHandle ||
         row.handle ||
         row.instagramHandle ||
         row.username ||
         '';
       const normalizedHandle = normalizeHandle(rawHandle);
-      const fallbackHandle = `${schoolHandleBase}${sportHandleToken}`;
       const m = row.metrics?.ninetyDays || {};
       const followers = Number(m.followers || 0);
       const likes = Number(m.likes || 0);
@@ -770,7 +785,7 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
       const posts = Number(m.contentCount || 0);
       if (!map.has(sport)) {
         map.set(sport, {
-          handle: normalizedHandle || fallbackHandle,
+          handle: normalizedHandle || '',
           accountCount: 0,
           followers: 0,
           totalPosts: 0,
@@ -782,7 +797,7 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
       }
       const acc = map.get(sport)!;
       if (!acc.handle) {
-        acc.handle = normalizedHandle || fallbackHandle;
+        acc.handle = normalizedHandle || '';
       }
       acc.accountCount += 1;
       acc.followers += followers;
@@ -808,7 +823,7 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
       }
       return {
         sport,
-        handle: `@${normalizeHandle(v.handle)}`,
+        handle: normalizeHandle(v.handle) ? `@${normalizeHandle(v.handle)}` : '',
         accountCount: v.accountCount,
         followers: v.followers,
         totalPosts: v.totalPosts,
@@ -1008,6 +1023,7 @@ function OverviewTab({ shortName, schoolId, schoolName, conference, primaryColor
   const teamFollowerReach = teamPages.reduce((s, t) => s + (t.followers || 0), 0);
   const teamAccountCount = teamPages.reduce((s, t) => s + (t.accountCount || 0), 0);
   const combinedFollowerReach = totalFollowerReach + teamFollowerReach;
+  const hasFollowerData = combinedFollowerReach > 0;
   const highestFollowersAthlete = [...athletes]
     .filter((a) => a.followers > 0)
     .sort((a, b) => b.followers - a.followers)[0];
@@ -1121,9 +1137,13 @@ function OverviewTab({ shortName, schoolId, schoolName, conference, primaryColor
               <div className="h-full w-full rounded-xl p-4 flex-1 flex flex-col justify-between" style={{ backgroundColor: `${primaryColor}14` }}>
                 <div>
                   <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Combined Followers</p>
-                  <p className="text-3xl font-black mt-2 text-[#0F1D2E]">{fmtN(combinedFollowerReach)}</p>
+                  <p className="text-3xl font-black mt-2 text-[#0F1D2E]">{hasFollowerData ? fmtN(combinedFollowerReach) : 'Unavailable'}</p>
                 </div>
-                <p className="text-xs text-[#5B6B82] mt-2">Across {fmtN(athleteCount)} tracked athlete accounts and {fmtN(teamAccountCount)} official team pages.</p>
+                <p className="text-xs text-[#5B6B82] mt-2">
+                  {hasFollowerData
+                    ? `Across ${fmtN(athleteCount)} tracked athlete accounts and ${fmtN(teamAccountCount)} official team pages.`
+                    : `Follower counts are unavailable in the current ${shortName} roster and team datasets.`}
+                </p>
               </div>
             </GlassPanel>
           </div>
@@ -1169,10 +1189,12 @@ function OverviewTab({ shortName, schoolId, schoolName, conference, primaryColor
               <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Total Reach</p>
             </div>
             <p className="text-lg font-bold mt-2 text-[#0F1D2E]">
-              {fmtN(combinedFollowerReach)} combined followers
+              {hasFollowerData ? `${fmtN(combinedFollowerReach)} combined followers` : 'Follower reach unavailable'}
             </p>
             <p className="text-sm text-[#5B6B82] mt-2">
-              Total audience reach across {fmtN(athleteCount)} athlete accounts and {fmtN(teamAccountCount)} official {shortName} team pages.
+              {hasFollowerData
+                ? `Total audience reach across ${fmtN(athleteCount)} athlete accounts and ${fmtN(teamAccountCount)} official ${shortName} team pages.`
+                : `Audience-size fields are missing from the local ${shortName} athlete and team source files, so reach totals cannot be calculated yet.`}
             </p>
           </div>
 
@@ -1783,7 +1805,7 @@ function TeamsTab({ teamPages, primaryColor }: { teamPages: TeamPageStat[]; prim
             <p className="text-sm text-[#5B6B82]">
               {teamPages.length} team pages active •{' '}
               <span className="font-semibold" style={{ color: primaryColor }}>
-                Based on official team account metrics
+                Based on official team page metrics from roughly the last 12 posts per account
               </span>
             </p>
           </div>
@@ -1800,7 +1822,7 @@ function TeamsTab({ teamPages, primaryColor }: { teamPages: TeamPageStat[]; prim
               #{idx + 1}
             </span>
             <div className="text-sm font-semibold text-[#0F1D2E]">{fmtSport(s.sport)}</div>
-            <div className="text-xs text-[#7A8AA3] mt-1">{s.handle}</div>
+              <div className="text-xs text-[#7A8AA3] mt-1">{s.handle || 'Handle unavailable'}</div>
             <div className="mt-4 text-xs uppercase tracking-[0.16em] text-[#7A8AA3]">Followers</div>
             <div className="text-3xl font-bold text-[#0F1D2E] leading-tight">{fmtN(s.followers)}</div>
             <div className="mt-3 grid grid-cols-3 gap-2 text-xs">
@@ -1891,7 +1913,7 @@ function TeamsTab({ teamPages, primaryColor }: { teamPages: TeamPageStat[]; prim
                 >
                   <span className="inline-flex flex-col items-end leading-tight">
                     <span>Total Likes{sortMarker('likes')}</span>
-                    <span className="text-[10px] normal-case tracking-normal text-[#7A8AA3]">(across all posts)</span>
+                    <span className="text-[10px] normal-case tracking-normal text-[#7A8AA3]">(roughly last 12 posts per page)</span>
                   </span>
                 </th>
                 <th
@@ -2266,7 +2288,10 @@ function SponsoredTab({
   const totalComments = filtered.reduce((s, p) => s + (p.metrics?.comments || 0), 0);
   const uniqueBrands = new Set(filtered.map(p => (p.sponsorPartner || '').toLowerCase().trim()).filter(Boolean));
   const uniqueAthletes = new Set(filtered.map(p => p.athlete?._id).filter(Boolean));
-  const avgLikes = filtered.length ? totalLikes / filtered.length : null;
+  const visibleLikePosts = filtered.filter((p) => !p.likeAndViewCountsDisabled);
+  const avgLikes = visibleLikePosts.length
+    ? visibleLikePosts.reduce((sum, p) => sum + (p.metrics?.likes || 0), 0) / visibleLikePosts.length
+    : null;
   const avgComments = filtered.length ? Math.round(totalComments / filtered.length) : null;
   const normalizeER = (value: number) => (value > 1 ? value / 100 : value);
   const organicPosts = allPosts.filter((p) => !canonicalHandle(p.sponsorPartner));
@@ -2352,8 +2377,11 @@ function SponsoredTab({
     athleteNames: Set<string>;
     sports: Set<string>;
     totalLikes: number;
+    visibleLikesPostCount: number;
+    hiddenLikesPostCount: number;
     totalComments: number;
     engSum: number;
+    engCount: number;
     totalEmv: number;
   }>();
   filtered.forEach(p => {
@@ -2366,8 +2394,11 @@ function SponsoredTab({
         athleteNames: new Set(),
         sports: new Set(),
         totalLikes: 0,
+        visibleLikesPostCount: 0,
+        hiddenLikesPostCount: 0,
         totalComments: 0,
         engSum: 0,
+        engCount: 0,
         totalEmv: 0,
       });
     }
@@ -2376,16 +2407,24 @@ function SponsoredTab({
     if (p.athlete?._id) entry.athletes.add(p.athlete._id);
     if (p.athlete?.name) entry.athleteNames.add(p.athlete.name);
     if (p.athlete?.sport) entry.sports.add(p.athlete.sport);
-    entry.totalLikes += p.metrics?.likes || 0;
+    if (p.likeAndViewCountsDisabled) {
+      entry.hiddenLikesPostCount += 1;
+    } else {
+      entry.totalLikes += p.metrics?.likes || 0;
+      entry.visibleLikesPostCount += 1;
+    }
     entry.totalComments += p.metrics?.comments || 0;
-    entry.engSum += (p.metrics?.engagementRate || 0) / 100;
+    if (!p.likeAndViewCountsDisabled && (p.metrics?.engagementRate || 0) > 0) {
+      entry.engSum += (p.metrics?.engagementRate || 0) / 100;
+      entry.engCount += 1;
+    }
     entry.totalEmv += emv(p.metrics?.likes || 0, p.metrics?.comments || 0);
   });
 
   const brandCards = [...brandMap.entries()].map(([brand, entry]) => {
     const normalizedBrand = brand.toLowerCase().replace(/^@/, '');
     const logoUrl = brandLogos[normalizedBrand] || brandLogos[brand.toLowerCase()] || '';
-    const avgLikesPerPost = entry.posts.length ? entry.totalLikes / entry.posts.length : 0;
+    const avgLikesPerPost = entry.visibleLikesPostCount ? entry.totalLikes / entry.visibleLikesPostCount : 0;
     const estimatedEmvFallback = entry.posts.length * avgLikesPerPost * emvPerLikeConstant;
     const estimatedValue = entry.totalEmv > 0 ? entry.totalEmv : estimatedEmvFallback;
     return {
@@ -2396,17 +2435,24 @@ function SponsoredTab({
       athleteNames: Array.from(entry.athleteNames).sort(),
       sportCount: entry.sports.size,
       totalLikes: entry.totalLikes,
+      hasHiddenLikes: entry.hiddenLikesPostCount > 0,
+      hiddenLikesPostCount: entry.hiddenLikesPostCount,
       totalComments: entry.totalComments,
       totalEmv: entry.totalEmv,
       estimatedValue,
-      avgEngagement: entry.posts.length ? entry.engSum / entry.posts.length : 0,
+      avgEngagement: entry.engCount ? entry.engSum / entry.engCount : null,
       topPosts: [...entry.posts]
-        .sort((a, b) => (b.metrics?.likes || 0) - (a.metrics?.likes || 0))
+        .sort((a, b) => {
+          const aHidden = Boolean(a.likeAndViewCountsDisabled);
+          const bHidden = Boolean(b.likeAndViewCountsDisabled);
+          if (aHidden !== bHidden) return Number(aHidden) - Number(bHidden);
+          return (b.metrics?.likes || 0) - (a.metrics?.likes || 0);
+        })
         .slice(0, 2),
     };
   }).sort((a, b) => {
     if (sortKey === 'likes') return b.totalLikes - a.totalLikes;
-    if (sortKey === 'engagement') return b.avgEngagement - a.avgEngagement;
+    if (sortKey === 'engagement') return (b.avgEngagement || 0) - (a.avgEngagement || 0);
     return b.postCount - a.postCount;
   });
   return (
@@ -2516,9 +2562,11 @@ function SponsoredTab({
               <div>Athletes: {fmtN(brand.athleteCount)}</div>
             </div>
             <div className="grid grid-cols-3 gap-2 text-xs text-[#5B6B82] mt-3">
-              <div>Likes: {fmtN(brand.totalLikes)}</div>
+              <div>
+                Likes: {brand.hasHiddenLikes && brand.totalLikes === 0 ? 'Hidden' : fmtN(brand.totalLikes)}
+              </div>
               <div>Comments: {fmtN(brand.totalComments)}</div>
-              <div>Avg ER: {fmtPct(brand.avgEngagement * 100)}</div>
+              <div>Avg ER: {brand.avgEngagement == null ? 'Hidden' : fmtPct(brand.avgEngagement * 100)}</div>
             </div>
             <div className="mt-2 flex items-center justify-between rounded-md border border-[#E1E7F0] bg-[#F7FAFF] px-2.5 py-1.5">
               <span className="text-[10px] uppercase tracking-[0.18em] text-[#7A8AA3]">Est. Value</span>
@@ -2574,7 +2622,7 @@ function SponsoredTab({
                     )}
                     <div className="min-w-0 flex-1">
                       <div className="truncate">
-                        {(post.athlete?.name || 'Unknown')} • {fmtN(post.metrics?.likes || 0)} likes
+                        {(post.athlete?.name || 'Unknown')} • {post.likeAndViewCountsDisabled ? 'likes hidden' : `${fmtN(post.metrics?.likes || 0)} likes`}
                       </div>
                       <div className="text-[#7A8AA3]">{fmtDate(postDate)}</div>
                     </div>
@@ -2679,7 +2727,13 @@ function BenchmarksTab({ config, athletes, totalEmv, primaryColor }: {
   const scopedDatasetSchools = effectiveScope === 'conference' ? datasetConferenceSchools : (datasetSchools || []);
   const scopedFallbackSchools = (effectiveScope === 'conference'
     ? fallbackSchools.filter((s) => normalizeConference(s.conference) === conferenceKey)
-    : fallbackSchools);
+    : fallbackSchools).filter((school) =>
+      school.totalDeals > 0 ||
+      school.totalEMV > 0 ||
+      school.avgEngagement > 0 ||
+      school.athleteCount > 0 ||
+      school.brandCount > 0
+    );
   const mergedSchoolsMap = new Map<string, ConferenceBenchmarkSchool>();
   for (const school of scopedFallbackSchools) {
     const key = canonicalSchoolKey(school);
@@ -2689,8 +2743,9 @@ function BenchmarksTab({ config, athletes, totalEmv, primaryColor }: {
     const key = canonicalSchoolKey(school);
     if (key) mergedSchoolsMap.set(key, school);
   }
-  // Always pin the current school row to config benchmark values so curated school stats
-  // are not diluted by alternate dataset naming/aggregation.
+  // Prefer the curated current-school benchmark row only when it contains real values.
+  // Some schools still use placeholder zero rows in config, and those should not
+  // overwrite valid dataset entries merged above.
   const selfBenchmarkRow: ConferenceBenchmarkSchool = {
     id: benchmark.id,
     shortName: benchmark.shortName,
@@ -2702,7 +2757,13 @@ function BenchmarksTab({ config, athletes, totalEmv, primaryColor }: {
     brandCount: benchmark.brandCount,
   };
   const selfBenchmarkKey = canonicalSchoolKey(selfBenchmarkRow);
-  if (selfBenchmarkKey) {
+  const hasCuratedBenchmarkValues =
+    selfBenchmarkRow.totalDeals > 0 ||
+    selfBenchmarkRow.totalEMV > 0 ||
+    selfBenchmarkRow.avgEngagement > 0 ||
+    selfBenchmarkRow.athleteCount > 0 ||
+    selfBenchmarkRow.brandCount > 0;
+  if (selfBenchmarkKey && hasCuratedBenchmarkValues) {
     mergedSchoolsMap.set(selfBenchmarkKey, selfBenchmarkRow);
   }
   const allSchools = mergedSchoolsMap.size
