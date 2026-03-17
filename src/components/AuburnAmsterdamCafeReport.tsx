@@ -203,147 +203,83 @@ export function AuburnAmsterdamCafeReport({ onBack }: AuburnAmsterdamCafeReportP
           {' '}
           <span className="text-[#E87722] italic">AND DIVES</span>
         </h1>
-        <p className="text-sm text-gray-500 mt-1">Auburn NIL Max Campaign Report</p>
+        <p className="text-sm text-gray-500 mt-1">Auburn Playfly NIL Max Campaign Report</p>
       </div>
 
       <div className="max-w-7xl mx-auto px-8 py-8 space-y-8">
-        {/* ─── Campaign Selector — 3-way: Auburn x Amsterdam x Rocco's ─── */}
-        <div className="flex items-center justify-center gap-2 sm:gap-4 flex-wrap">
-          {/* Auburn */}
-          <div className="flex items-center gap-2 sm:gap-3 min-w-0">
-            <div className="w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center shrink-0">
+        {/* ─── Campaign Hub — Auburn → Athlete → Brands ─── */}
+        <div className="flex flex-col items-center">
+          {/* Auburn logo */}
+          <div className="flex flex-col items-center">
+            <div className="w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center">
               <img
                 src={campaignData.school.logo}
                 alt={campaignData.school.name}
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="min-w-0">
-              <h2 className="text-sm sm:text-lg font-black uppercase text-gray-900 leading-tight">
-                {campaignData.school.name}
-              </h2>
-              <p className="text-xs text-gray-500 uppercase tracking-wide">
-                {campaignData.school.sport}
-              </p>
-            </div>
+            <h2 className="text-lg sm:text-xl font-black uppercase text-gray-900 leading-tight mt-1">
+              Auburn
+            </h2>
+            <p className="text-xs text-gray-500 uppercase tracking-wide">
+              {campaignData.school.sport}
+            </p>
           </div>
 
-          <span className="text-[#E87722] font-black text-xl sm:text-3xl leading-none select-none shrink-0">&times;</span>
+          {/* Vertical connector */}
+          <div className="w-px h-6 bg-[#E87722]/40" />
 
-          {/* Amsterdam Cafe */}
-          <div className="flex items-center gap-2 sm:gap-3 min-w-0">
-            <div className="w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center shrink-0">
-              <img
-                src={campaignData.brands[0].logo}
-                alt={campaignData.brands[0].name}
-                className="w-full h-full object-contain"
-                onError={(e) => {
-                  e.currentTarget.src = 'https://via.placeholder.com/100?text=AC';
-                }}
-              />
-            </div>
-            <div className="min-w-0">
-              <h2 className="text-sm sm:text-lg font-black uppercase text-gray-900 leading-tight">
-                {campaignData.brands[0].name}
-              </h2>
-              <p className="text-xs text-gray-500 uppercase tracking-wide">Auburn</p>
-            </div>
-          </div>
-
-          <span className="text-[#E87722] font-black text-xl sm:text-3xl leading-none select-none shrink-0">&times;</span>
-
-          {/* Rocco's */}
-          <div className="flex items-center gap-2 sm:gap-3 min-w-0">
-            <div className="w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center shrink-0">
-              <img
-                src={campaignData.brands[1].logo}
-                alt={campaignData.brands[1].name}
-                className="w-full h-full object-contain"
-                onError={(e) => {
-                  e.currentTarget.src = 'https://via.placeholder.com/100?text=RC';
-                }}
-              />
-            </div>
-            <div className="min-w-0">
-              <h2 className="text-sm sm:text-lg font-black uppercase text-gray-900 leading-tight">
-                Rocco&apos;s
-              </h2>
-              <p className="text-xs text-gray-500 uppercase tracking-wide">Auburn</p>
-            </div>
-          </div>
-        </div>
-
-        {/* ─── Featured Athlete & Brand Partners ─── */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Featured Athlete */}
+          {/* Featured Athlete card */}
           {campaignData.featuredAthletes.map((athlete, index) => (
-            <div key={index} className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-              <p className="text-xs font-bold uppercase tracking-wider text-[#E87722] mb-3">
-                Featured Athlete
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 flex-shrink-0 overflow-hidden">
-                  <img
-                    src={athlete.image}
-                    alt={athlete.name}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      e.currentTarget.src = 'https://via.placeholder.com/100';
-                    }}
-                  />
-                </div>
-                <div>
-                  <h3 className="text-xl font-black text-gray-900">{athlete.name}</h3>
-                  <p className="text-sm text-gray-500">{athlete.position}</p>
-                </div>
+            <div key={index} className="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm flex items-center gap-4 max-w-xs w-full">
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 flex-shrink-0 overflow-hidden">
+                <img
+                  src={athlete.image}
+                  alt={athlete.name}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.src = 'https://via.placeholder.com/100';
+                  }}
+                />
+              </div>
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-wider text-[#E87722]">Featured Athlete</p>
+                <h3 className="text-lg font-black text-gray-900 leading-tight">{athlete.name}</h3>
+                <p className="text-xs text-gray-500">{athlete.position}</p>
               </div>
             </div>
           ))}
 
-          {/* Brand Partner 1 — Amsterdam Cafe */}
-          <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-            <p className="text-xs font-bold uppercase tracking-wider text-[#E87722] mb-3">
-              Brand Partner
-            </p>
-            <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-full bg-gray-100 p-2 flex-shrink-0 flex items-center justify-center overflow-hidden">
-                <img
-                  src={campaignData.brands[0].logo}
-                  alt={campaignData.brands[0].name}
-                  className="w-full h-full object-contain"
-                  onError={(e) => {
-                    e.currentTarget.src = 'https://via.placeholder.com/100?text=AC';
-                  }}
-                />
-              </div>
-              <div>
-                <h3 className="text-xl font-black text-gray-900">{campaignData.brands[0].name}</h3>
-                <p className="text-sm text-gray-500">{campaignData.brands[0].handle}</p>
-              </div>
-            </div>
+          {/* Vertical connector + branch */}
+          <div className="w-px h-4 bg-[#E87722]/40" />
+          <div className="flex items-center justify-center w-full max-w-md">
+            <div className="h-px flex-1 bg-[#E87722]/40" />
+            <div className="w-2 h-2 rounded-full bg-[#E87722] mx-1" />
+            <div className="h-px flex-1 bg-[#E87722]/40" />
           </div>
 
-          {/* Brand Partner 2 — Rocco's */}
-          <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
-            <p className="text-xs font-bold uppercase tracking-wider text-[#E87722] mb-3">
-              Brand Partner
-            </p>
-            <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-full bg-gray-100 p-2 flex-shrink-0 flex items-center justify-center overflow-hidden">
-                <img
-                  src={campaignData.brands[1].logo}
-                  alt={campaignData.brands[1].name}
-                  className="w-full h-full object-contain"
-                  onError={(e) => {
-                    e.currentTarget.src = 'https://via.placeholder.com/100?text=RC';
-                  }}
-                />
+          {/* Two brand cards */}
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 w-full max-w-2xl mt-3">
+            {campaignData.brands.map((brand, i) => (
+              <div key={i} className="flex flex-col items-center gap-2 rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center shrink-0">
+                  <img
+                    src={brand.logo}
+                    alt={brand.name}
+                    className="w-full h-full object-contain"
+                    onError={(e) => {
+                      e.currentTarget.src = `https://via.placeholder.com/100?text=${brand.name.charAt(0)}`;
+                    }}
+                  />
+                </div>
+                <div className="text-center">
+                  <h3 className="text-sm sm:text-base font-black uppercase text-gray-900 leading-tight">
+                    {brand.name}
+                  </h3>
+                  <p className="text-xs text-gray-500">{brand.handle}</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-black text-gray-900">{campaignData.brands[1].name}</h3>
-                <p className="text-sm text-gray-500">{campaignData.brands[1].handle}</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
