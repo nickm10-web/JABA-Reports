@@ -2,12 +2,13 @@ import { useState } from 'react';
 import { ArrowLeft, FileText } from 'lucide-react';
 import { AuburnCampaignOverview } from './AuburnCampaignOverview';
 import { AuburnDudewipesReport } from '../auburn/AuburnDudewipesReport';
+import { AuburnAmsterdamCafeReport } from './AuburnAmsterdamCafeReport';
 
 interface AuburnReportHubProps {
   onBack?: () => void;
 }
 
-type AuburnView = 'landing' | 'baumhowers' | 'dudewipes';
+type AuburnView = 'landing' | 'baumhowers' | 'dudewipes' | 'amsterdam';
 
 export function AuburnReportHub({ onBack }: AuburnReportHubProps) {
   const [activeView, setActiveView] = useState<AuburnView>('landing');
@@ -18,6 +19,10 @@ export function AuburnReportHub({ onBack }: AuburnReportHubProps) {
 
   if (activeView === 'dudewipes') {
     return <AuburnDudewipesReport onBack={() => setActiveView('landing')} />;
+  }
+
+  if (activeView === 'amsterdam') {
+    return <AuburnAmsterdamCafeReport onBack={() => setActiveView('landing')} />;
   }
 
   return (
@@ -41,7 +46,7 @@ export function AuburnReportHub({ onBack }: AuburnReportHubProps) {
       </header>
 
       <main className="max-w-[1200px] mx-auto px-6 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <button
             onClick={() => setActiveView('baumhowers')}
             className="text-left rounded-2xl p-8 bg-white/10 border border-[#E87722]/40 hover:bg-[#E87722]/10 hover:border-[#E87722]/70 transition-colors"
@@ -62,6 +67,17 @@ export function AuburnReportHub({ onBack }: AuburnReportHubProps) {
             </div>
             <h2 className="text-2xl font-bold text-white">Dudewipes Report</h2>
             <p className="text-gray-300 mt-2">Open the Auburn x Dude Wipes campaign report.</p>
+          </button>
+
+          <button
+            onClick={() => setActiveView('amsterdam')}
+            className="text-left rounded-2xl p-8 bg-white/10 border border-[#8B4513]/40 hover:bg-[#8B4513]/10 hover:border-[#8B4513]/70 transition-colors"
+          >
+            <div className="w-12 h-12 rounded-xl bg-[#8B4513]/20 flex items-center justify-center mb-4">
+              <FileText className="w-6 h-6 text-[#8B4513]" />
+            </div>
+            <h2 className="text-2xl font-bold text-white">Diners, Drive-Ins &amp; Dives</h2>
+            <p className="text-gray-300 mt-2">Amsterdam Cafe x Rocco&apos;s Chicken Joint campaign report.</p>
           </button>
         </div>
       </main>

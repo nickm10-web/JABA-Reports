@@ -16,6 +16,7 @@ import { SchoolAthleteReport } from './components/SchoolAthleteReport';
 import { QCollarReport } from './components/QCollarReport';
 import { PostgameReport } from './components/PostgameReport';
 import { AuburnDudewipesCampaign } from './components/AuburnDudewipesCampaign';
+import { AuburnAmsterdamCafeReport } from './components/AuburnAmsterdamCafeReport';
 import {
   michiganConfig,
   alabamaConfig,
@@ -49,6 +50,12 @@ function AuburnHeyDudeRoute() {
   const navigate = useNavigate();
   const canGoBack = window.history.length > 2;
   return <AuburnDudewipesCampaign onBack={canGoBack ? () => navigate('/auburn') : undefined} />;
+}
+
+function AuburnDDnDRoute() {
+  const navigate = useNavigate();
+  const canGoBack = window.history.length > 2;
+  return <AuburnAmsterdamCafeReport onBack={canGoBack ? () => navigate('/auburn') : undefined} />;
 }
 
 function BaylorRoute() {
@@ -220,6 +227,7 @@ function App() {
         <Route path="/auburn" element={<AuburnRoute />} />
         <Route path="/auburn/dudewipes" element={<AuburnHeyDudeRoute />} />
         <Route path="/auburn/heydude" element={<Navigate to="/auburn/dudewipes" replace />} />
+        <Route path="/auburn/ddnd" element={<AuburnDDnDRoute />} />
         <Route path="/baylor" element={<BaylorRoute />} />
         <Route path="/baylor/tyce" element={<BaylorEarnedMediaImpactRoute />} />
         <Route path="/baylor-earned-media-impact" element={<BaylorEarnedMediaImpactRoute />} />
