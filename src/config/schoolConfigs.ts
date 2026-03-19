@@ -773,6 +773,7 @@ export const missouriConfig: SchoolConfig = {
   benchmark: peer('missouri', 'University of Missouri', 'Missouri', 142, 'SEC', 328, 2914584, 24.26, 'Football', 400, 169, [6,6,6,6,6,6,6,6,6,6,6,6]),
   brandExclusions: [
     'aeoden_sinclair97',
+    'ballislife',
     'athleteps',
     'everytruetiger',
     'everytruetigerbrands',

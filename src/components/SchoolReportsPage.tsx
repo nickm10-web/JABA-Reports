@@ -21,7 +21,7 @@ import {
   michiganConfig, alabamaConfig, arkansasConfig,
   oklahomaConfig, boiseStateConfig, wisconsinConfig, notredameConfig,
   lsuConfig, oldDominionConfig, michiganStateConfig,
-  uscConfig, ncStateConfig, pennStateConfig, washingtonStateConfig, uncConfig, texasConfig,
+  uscConfig, ncStateConfig, pennStateConfig, washingtonStateConfig, uncConfig, texasConfig, missouriConfig,
 } from '../config/schoolConfigs';
 
 
@@ -72,6 +72,7 @@ export function SchoolReportsPage() {
     POSTGAME_CARD,
     SCHOOLS['alabama'],
     ARKANSAS_CARD,
+    SCHOOLS['mizzou'],
     SCHOOLS['oklahoma'],
     SCHOOLS['wisconsin'],
     SCHOOLS['clemson'],
@@ -156,6 +157,11 @@ export function SchoolReportsPage() {
     if (selectedSchool.id === 'oklahoma') {
       return (
         <SchoolAthleteReport config={oklahomaConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'mizzou') {
+      return (
+        <SchoolAthleteReport config={missouriConfig} onBack={() => setSelectedSchool(null)} />
       );
     }
     if (selectedSchool.id === 'wisconsin') {

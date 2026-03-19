@@ -143,6 +143,7 @@ const fmtDate = (v?: string) => {
 };
 const fmtSport = (s?: string) => {
   if (!s) return 'N/A';
+  if (s === 'GENERAL') return 'General';
   // Normalize casing from raw values like "MENS_BASKETBALL" or "Men'S Basketball".
   return s
     .replace(/_/g, ' ')
@@ -152,6 +153,11 @@ const fmtSport = (s?: string) => {
     .replace(/\b\w/g, c => c.toUpperCase())
     .replace(/Men'S/g, "Men's")
     .replace(/Women'S/g, "Women's");
+};
+const fmtTeamAccountLabel = (team?: Pick<TeamPageStat, 'sport' | 'handle'> | null) => {
+  if (!team) return 'N/A';
+  if (team.sport === 'GENERAL' && team.handle) return team.handle;
+  return fmtSport(team.sport);
 };
 const emv = (likes: number, comments: number) => likes * 0.5 + comments * 1.5;
 
@@ -1169,10 +1175,10 @@ function OverviewTab({ shortName, schoolId, schoolName, conference, primaryColor
               <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Team Accounts</p>
             </div>
             <p className="text-lg font-bold mt-2 text-[#0F1D2E]">
-              {fmtSport(topTeamSportByEngagement?.sport)} leads team accounts in ER at {fmtPct((topTeamSportByEngagement?.avgEngagementRate || 0) * 100)}
+              {fmtTeamAccountLabel(topTeamSportByEngagement)} leads team accounts in ER at {fmtPct((topTeamSportByEngagement?.avgEngagementRate || 0) * 100)}
             </p>
             <p className="text-sm text-[#5B6B82] mt-2">
-              Among {shortName} official team pages, {fmtSport(topTeamSportByLikes?.sport)} drives the most likes while {fmtSport(topTeamSportByEngagement?.sport)} leads in engagement rate.
+              Among {shortName} official team pages, {fmtTeamAccountLabel(topTeamSportByLikes)} drives the most likes while {fmtTeamAccountLabel(topTeamSportByEngagement)} leads in engagement rate.
             </p>
           </div>
 
