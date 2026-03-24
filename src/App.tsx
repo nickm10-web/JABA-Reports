@@ -306,7 +306,9 @@ function App() {
         <Route path="/pennstate" element={<PennStateRoute />} />
         <Route path="/PennState" element={<PennStateRoute />} />
         <Route path="/washington" element={<WashingtonRoute />} />
+        <Route path="/washington/*" element={<WashingtonRoute />} />
         <Route path="/Washington" element={<WashingtonRoute />} />
+        <Route path="/Washington/*" element={<WashingtonRoute />} />
         <Route path="/washington-state" element={<WashingtonStateRoute />} />
         <Route path="/washingtonstate" element={<WashingtonStateRoute />} />
         <Route path="/unc" element={<UNCRoute />} />
