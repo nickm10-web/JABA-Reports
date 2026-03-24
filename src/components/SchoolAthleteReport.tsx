@@ -674,6 +674,21 @@ function deriveIPComparisons(raw: RawPost[]): IPComparison[] {
 
 function buildIPComparisonsFromPrecomputed(ipImpact: PrecomputedIPImpact | null): IPComparison[] {
   if (!ipImpact) return [];
+  const normalizeBucket = (bucket: PrecomputedIPImpactSignalBucket): IPBucket => {
+    const contents = Number(bucket.contents || 0);
+    const avgLikes = Number(bucket.likes || 0);
+    const avgComments = Number(bucket.comments || 0);
+    return {
+      ...bucket,
+      contents,
+      likes: avgLikes,
+      comments: avgComments,
+      engagementRate: Number(bucket.engagementRate || 0),
+      // Precomputed files store average likes/comments per post.
+      // Rebuild total EMV so it matches the derived-IP path used elsewhere.
+      emv: emv(avgLikes * contents, avgComments * contents),
+    };
+  };
   const signals = [
     { label: 'Collaboration', data: ipImpact.collaboration },
     { label: 'Logo', data: ipImpact.logo },
@@ -683,8 +698,8 @@ function buildIPComparisonsFromPrecomputed(ipImpact: PrecomputedIPImpact | null)
     .filter((signal): signal is { label: string; data: NonNullable<typeof signal.data> } => Boolean(signal.data))
     .map((signal) => ({
       label: signal.label,
-      yes: signal.data.yes,
-      no: signal.data.no,
+      yes: normalizeBucket(signal.data.yes),
+      no: normalizeBucket(signal.data.no),
       avgLift: signal.data.avgLift,
     }));
 }
