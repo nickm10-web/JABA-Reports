@@ -1,0 +1,20 @@
+action,player_name,from_school,to_school,notes
+remove,Damon Wilson II,University of Missouri,Miami,Verified college transfer out
+remove,Mose Phillips III,University of Missouri,Oklahoma State,Verified college transfer out
+remove,Beau Pribula,University of Missouri,Virginia,Verified college transfer out
+remove,Mark Manfred III,University of Missouri,Kentucky,Verified college transfer out
+remove,Nate Johnson,University of Missouri,Auburn,Verified college transfer out
+remove,Jayven Richardson,University of Missouri,Colorado,Verified college transfer out
+remove,Marvin Burks Jr.,University of Missouri,Wisconsin,Verified college transfer out
+remove,Joshua Manning,University of Missouri,Kansas State,Verified college transfer out; normalized from Josh Manning
+remove,Marquise Davis,University of Missouri,Louisville,Verified college transfer out
+remove,Keiton Jones,University of Missouri,Kansas State,Verified college transfer out
+remove,Marquis Johnson,University of Missouri,Mississippi State,Verified college transfer out
+add,Kenric Lanier II,Minnesota,University of Missouri,Verified inbound college transfer
+add,Elijah Dotson,Michigan,University of Missouri,Verified inbound college transfer
+add,Naeshaun Montgomery,Florida,University of Missouri,Verified inbound college transfer
+add,Will Kemna,Kansas State,University of Missouri,Verified inbound college transfer
+add,Kensley Louidor-Faustin,Auburn University,University of Missouri,Verified inbound college transfer
+add,JaDon Blair,Notre Dame,University of Missouri,Verified inbound college transfer
+add,Robert Woodyard Jr.,Auburn University,University of Missouri,Verified inbound college transfer
+add,Caleb Goodie,Cincinnati,University of Missouri,Verified inbound college transfer

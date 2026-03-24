@@ -1,0 +1,4097 @@
+[
+  {
+    "_id": "69009f82f74b5ce4b27cc725",
+    "firstName": "Caleb",
+    "lastName": "Lomu",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659491534-Caleb_Lomu_69009f82f74b5ce4b27cc725.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3899,
+        "likes": 20864,
+        "comments": 1486,
+        "engagementRate": 0.24922778415870295,
+        "contentCount": 23,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc730",
+    "firstName": "Spencer",
+    "lastName": "Fano",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659502967-Spencer_Fano_69009f82f74b5ce4b27cc730.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7969,
+        "likes": 57460,
+        "comments": 902,
+        "engagementRate": 0.4195697555341897,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc794",
+    "firstName": "Avery",
+    "lastName": "Hjelmstad",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659491630-Avery_Hjelmstad_69009f82f74b5ce4b27cc794.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2168,
+        "likes": 4450,
+        "comments": 350,
+        "engagementRate": 0.13858321959148961,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc78f",
+    "firstName": "Chyra",
+    "lastName": "Evans",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659490527-Chyra_Evans_69009f82f74b5ce4b27cc78f.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4750,
+        "likes": 5325,
+        "comments": 578,
+        "engagementRate": 0.07769962102305289,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7b9",
+    "firstName": "Ashley",
+    "lastName": "West",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659504363-Ashley_West_69009f82f74b5ce4b27cc7b9.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH/OPP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11449,
+        "likes": 9260,
+        "comments": 590,
+        "engagementRate": 0.05415902407779427,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc78b",
+    "firstName": "Shonty",
+    "lastName": "Passi",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659507083-Shonty_Passi_69009f82f74b5ce4b27cc78b.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "UTIL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1104,
+        "likes": 3888,
+        "comments": 240,
+        "engagementRate": 0.28566750905859817,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc740",
+    "firstName": "Ashton",
+    "lastName": "Olevao",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659507054-Ashton_Olevao_69009f82f74b5ce4b27cc740.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9741,
+        "likes": 2116,
+        "comments": 97,
+        "engagementRate": 0.016124797345119315,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc77a",
+    "firstName": "Kennedy",
+    "lastName": "Proctor",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659489821-Kennedy_Proctor_69009f82f74b5ce4b27cc77a.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "C",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2365,
+        "likes": 8478,
+        "comments": 510,
+        "engagementRate": 0.20482922774943502,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc701",
+    "firstName": "Smith",
+    "lastName": "Snowden",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659502316-Smith_Snowden_69009f82f74b5ce4b27cc701.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9983,
+        "likes": 63183,
+        "comments": 1766,
+        "engagementRate": 0.4130409383701647,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc782",
+    "firstName": "Brooklyn",
+    "lastName": "Carreon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659502365-Brooklyn_Carreon_69009f82f74b5ce4b27cc782.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "P",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2535,
+        "likes": 2887,
+        "comments": 131,
+        "engagementRate": 0.07436602414561636,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc79f",
+    "firstName": "Bailey",
+    "lastName": "Stroud",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659489674-Bailey_Stroud_69009f82f74b5ce4b27cc79f.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3364,
+        "likes": 28667,
+        "comments": 483,
+        "engagementRate": 0.6213500528175046,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc727",
+    "firstName": "Jaren",
+    "lastName": "Kump",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659490553-Jaren_Kump_69009f82f74b5ce4b27cc727.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2503,
+        "likes": 11227,
+        "comments": 358,
+        "engagementRate": 0.287721489423154,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc758",
+    "firstName": "Diezel",
+    "lastName": "Kamoku",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659497827-Diezel_Kamoku_69009f82f74b5ce4b27cc758.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1465,
+        "likes": 2504,
+        "comments": 201,
+        "engagementRate": 0.21482163316007186,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc750",
+    "firstName": "JJ",
+    "lastName": "Buchanan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659504917-JJ_Buchanan_69009f82f74b5ce4b27cc750.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4289,
+        "likes": 51589,
+        "comments": 1430,
+        "engagementRate": 0.7211670375785565,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc76a",
+    "firstName": "James",
+    "lastName": "Okonkwo",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659503699-James_Okonkwo_69009f82f74b5ce4b27cc76a.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "FIFTH YEAR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 32627,
+        "likes": 7468,
+        "comments": 165,
+        "engagementRate": 0.019318726580338952,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc79d",
+    "firstName": "Ashley",
+    "lastName": "Glynn",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659501450-Ashley_Glynn_69009f82f74b5ce4b27cc79d.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 33953,
+        "likes": 42190,
+        "comments": 649,
+        "engagementRate": 0.06013239019540208,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc771",
+    "firstName": "Elijah",
+    "lastName": "\"Choppa\" Moore",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659503716-Elijah__Choppa_ Moore_69009f82f74b5ce4b27cc771.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 147947,
+        "likes": 80028,
+        "comments": 882,
+        "engagementRate": 0.0389549474423694,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc71a",
+    "firstName": "Elijah",
+    "lastName": "Elliss",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659503714-Elijah_Elliss_69009f82f74b5ce4b27cc71a.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1656,
+        "likes": 9238,
+        "comments": 295,
+        "engagementRate": 0.5739734299516909,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc708",
+    "firstName": "Logan",
+    "lastName": "Fano",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659503738-Logan_Fano_69009f82f74b5ce4b27cc708.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7323,
+        "likes": 76590,
+        "comments": 1033,
+        "engagementRate": 0.7078944714022817,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc72c",
+    "firstName": "Reece",
+    "lastName": "Parmenter",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659490265-Reece_Parmenter_69009f82f74b5ce4b27cc72c.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1006,
+        "likes": 6276,
+        "comments": 266,
+        "engagementRate": 0.407242462147077,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc70e",
+    "firstName": "Jonah",
+    "lastName": "Lea'ea",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659488788-Jonah_Lea'ea_69009f82f74b5ce4b27cc70e.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2767,
+        "likes": 244,
+        "comments": 625,
+        "engagementRate": 0.01027988595751516,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc719",
+    "firstName": "Cyrus",
+    "lastName": "Polu",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659489684-Cyrus_Polu_69009f82f74b5ce4b27cc719.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2287,
+        "likes": 11141,
+        "comments": 800,
+        "engagementRate": 0.3078240412834711,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc705",
+    "firstName": "John",
+    "lastName": "Henry Daley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659492532-John_Henry Daley_69009f82f74b5ce4b27cc705.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4456,
+        "likes": 24098,
+        "comments": 904,
+        "engagementRate": 0.4257439601374239,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc79a",
+    "firstName": "Maty",
+    "lastName": "Wilke",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659493051-Maty_Wilke_69009f82f74b5ce4b27cc79a.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3891,
+        "likes": 26910,
+        "comments": 463,
+        "engagementRate": 0.44028649950332976,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc738",
+    "firstName": "Isaac",
+    "lastName": "Wilson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659504909-Isaac_Wilson_69009f82f74b5ce4b27cc738.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 25670,
+        "likes": 83241,
+        "comments": 1299,
+        "engagementRate": 0.2532932009466845,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc72e",
+    "firstName": "Solatoa",
+    "lastName": "Moea'i",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659500839-Solatoa_Moea'i_69009f82f74b5ce4b27cc72e.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2512,
+        "likes": 161,
+        "comments": 284,
+        "engagementRate": 0.005473726114649681,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc71f",
+    "firstName": "Levani",
+    "lastName": "Damuni",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659496281-Levani_Damuni_69009f82f74b5ce4b27cc71f.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4801,
+        "likes": 34069,
+        "comments": 830,
+        "engagementRate": 0.5527197835971406,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc73f",
+    "firstName": "Wayshawn",
+    "lastName": "Parker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659494718-Wayshawn_Parker_69009f82f74b5ce4b27cc73f.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 14625,
+        "likes": 28046,
+        "comments": 545,
+        "engagementRate": 0.13985821552606525,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc798",
+    "firstName": "LA",
+    "lastName": "Sneed",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659495590-LA_Sneed_69009f82f74b5ce4b27cc798.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2376,
+        "likes": 5654,
+        "comments": 374,
+        "engagementRate": 0.17665929716250914,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7a4",
+    "firstName": "Makenna",
+    "lastName": "Smith",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659493241-Makenna_Smith_69009f82f74b5ce4b27cc7a4.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8801,
+        "likes": 10664,
+        "comments": 231,
+        "engagementRate": 0.10316062568647504,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc720",
+    "firstName": "Mateaki",
+    "lastName": "Helu",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659504921-Mateaki_Helu_69009f82f74b5ce4b27cc720.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2353,
+        "likes": 4262,
+        "comments": 221,
+        "engagementRate": 0.18232044198895028,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc74d",
+    "firstName": "Dallen",
+    "lastName": "Bentley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659498409-Dallen_Bentley_69009f82f74b5ce4b27cc74d.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1990,
+        "likes": 21056,
+        "comments": 367,
+        "engagementRate": 0.6080617496255182,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc715",
+    "firstName": "Dillon",
+    "lastName": "Curtis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659503655-Dillon_Curtis_69009f82f74b5ce4b27cc715.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "K",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3189,
+        "likes": 29781,
+        "comments": 398,
+        "engagementRate": 0.8603152883491547,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc700",
+    "firstName": "Rock",
+    "lastName": "Caldwell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659494106-Rock_Caldwell_69009f82f74b5ce4b27cc700.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2842,
+        "likes": 3608,
+        "comments": 604,
+        "engagementRate": 0.1185144904356727,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc732",
+    "firstName": "Zereoue",
+    "lastName": "Williams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659498365-Zereoue_Williams_69009f82f74b5ce4b27cc732.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 905,
+        "likes": 2205,
+        "comments": 207,
+        "engagementRate": 0.2428742615108822,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc73a",
+    "firstName": "Daniel",
+    "lastName": "Bray",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659497590-Daniel_Bray_69009f82f74b5ce4b27cc73a.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7375,
+        "likes": 45729,
+        "comments": 673,
+        "engagementRate": 0.4486031816457638,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc790",
+    "firstName": "Evelina",
+    "lastName": "Otto",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659488842-Evelina_Otto_69009f82f74b5ce4b27cc790.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1130,
+        "likes": 3843,
+        "comments": 175,
+        "engagementRate": 0.2735774387670834,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc75f",
+    "firstName": "Matt",
+    "lastName": "Clark",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659502313-Matt_Clark_69009f82f74b5ce4b27cc75f.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1517,
+        "likes": 2943,
+        "comments": 470,
+        "engagementRate": 0.20081500569305444,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7a3",
+    "firstName": "Ella",
+    "lastName": "Zirbes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659487858-Ella_Zirbes_69009f82f74b5ce4b27cc7a3.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11261,
+        "likes": 52296,
+        "comments": 728,
+        "engagementRate": 0.248851224899652,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7af",
+    "firstName": "McKenna",
+    "lastName": "Payne",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659502989-McKenna_Payne_69009f82f74b5ce4b27cc7af.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "L/DS",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1203,
+        "likes": 4615,
+        "comments": 495,
+        "engagementRate": 0.30340814630091434,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc751",
+    "firstName": "Mitch",
+    "lastName": "Nielsen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659501495-Mitch_Nielsen_69009f82f74b5ce4b27cc751.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1569,
+        "likes": 2425,
+        "comments": 400,
+        "engagementRate": 0.14234119396643297,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc748",
+    "firstName": "Rabbit",
+    "lastName": "Evans",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659489653-Rabbit_Evans_69009f82f74b5ce4b27cc748.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 43045,
+        "likes": 81717,
+        "comments": 2162,
+        "engagementRate": 0.1496263186937614,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7a1",
+    "firstName": "Clara",
+    "lastName": "Raposo",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659507781-Clara_Raposo_69009f82f74b5ce4b27cc7a1.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10712,
+        "likes": 55567,
+        "comments": 507,
+        "engagementRate": 0.3129132337317077,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc73d",
+    "firstName": "NaQuari",
+    "lastName": "Rogers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659502272-NaQuari_Rogers_69009f82f74b5ce4b27cc73d.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2882,
+        "likes": 22703,
+        "comments": 368,
+        "engagementRate": 0.6150524022591388,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc742",
+    "firstName": "Jack",
+    "lastName": "Evans",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659507067-Jack_Evans_69009f82f74b5ce4b27cc742.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1072,
+        "likes": 2358,
+        "comments": 335,
+        "engagementRate": 0.22837516960651294,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc73c",
+    "firstName": "Frankie",
+    "lastName": "Goodson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659493113-Frankie_Goodson_69009f82f74b5ce4b27cc73c.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2285,
+        "likes": 6331,
+        "comments": 864,
+        "engagementRate": 0.23652675631578807,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc778",
+    "firstName": "Brooke",
+    "lastName": "Tacke",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659501509-Brooke_Tacke_69009f82f74b5ce4b27cc778.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "C",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 926,
+        "likes": 2881,
+        "comments": 273,
+        "engagementRate": 0.26200365509220797,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc733",
+    "firstName": "Orion",
+    "lastName": "Phillips",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659495604-Orion_Phillips_69009f82f74b5ce4b27cc733.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "P",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2190,
+        "likes": 9756,
+        "comments": 278,
+        "engagementRate": 0.35246809614203617,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7bc",
+    "firstName": "Isabelle",
+    "lastName": "Marco",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659489718-Isabelle_Marco_69009f82f74b5ce4b27cc7bc.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1489,
+        "likes": 2446,
+        "comments": 437,
+        "engagementRate": 0.1275074528442363,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7b4",
+    "firstName": "Devyn",
+    "lastName": "Wiest",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659502974-Devyn_Wiest_69009f82f74b5ce4b27cc7b4.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2333,
+        "likes": 85,
+        "comments": 520,
+        "engagementRate": 0.006668288954427502,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7bd",
+    "firstName": "Leah",
+    "lastName": "Wilton-LaBoy",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659498423-Leah_Wilton-LaBoy_69009f82f74b5ce4b27cc7bd.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3280,
+        "likes": 5090,
+        "comments": 545,
+        "engagementRate": 0.12202157598499061,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc70b",
+    "firstName": "Aliki",
+    "lastName": "Vimahi",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659487888-Aliki_Vimahi_69009f82f74b5ce4b27cc70b.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2070,
+        "likes": 7081,
+        "comments": 312,
+        "engagementRate": 0.49199447895100074,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7a9",
+    "firstName": "Sarah",
+    "lastName": "Krump",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659495442-Sarah_Krump_69009f82f74b5ce4b27cc7a9.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 25644,
+        "likes": 22873,
+        "comments": 306,
+        "engagementRate": 0.07805442604260486,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc773",
+    "firstName": "Jerry",
+    "lastName": "Huang",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659491607-Jerry_Huang_69009f82f74b5ce4b27cc773.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 16642,
+        "likes": 67625,
+        "comments": 289,
+        "engagementRate": 0.31399761723828845,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc792",
+    "firstName": "Reese",
+    "lastName": "Ross",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659491782-Reese_Ross_69009f82f74b5ce4b27cc792.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2327,
+        "likes": 10522,
+        "comments": 356,
+        "engagementRate": 0.19769617088376856,
+        "contentCount": 24,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc735",
+    "firstName": "Byrd",
+    "lastName": "Ficklin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659504348-Byrd_Ficklin_69009f82f74b5ce4b27cc735.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 16181,
+        "likes": 51460,
+        "comments": 980,
+        "engagementRate": 0.18029241584857825,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc78e",
+    "firstName": "Alyssa",
+    "lastName": "Blanck",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659505901-Alyssa_Blanck_69009f82f74b5ce4b27cc78e.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2660,
+        "likes": 3601,
+        "comments": 287,
+        "engagementRate": 0.11246817007712459,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7b1",
+    "firstName": "Emrie",
+    "lastName": "Moea'i",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659487954-Emrie_Moea'i_69009f82f74b5ce4b27cc7b1.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1368,
+        "likes": 1579,
+        "comments": 240,
+        "engagementRate": 0.08647667827286336,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc769",
+    "firstName": "Jahki",
+    "lastName": "Howard",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659495497-Jahki_Howard_69009f82f74b5ce4b27cc769.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 234591,
+        "likes": 93060,
+        "comments": 634,
+        "engagementRate": 0.044320933277845156,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc76d",
+    "firstName": "Kendyl",
+    "lastName": "Sanders",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659488827-Kendyl_Sanders_69009f82f74b5ce4b27cc76d.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1734,
+        "likes": 5814,
+        "comments": 694,
+        "engagementRate": 0.2661521856271368,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc756",
+    "firstName": "Daidren",
+    "lastName": "Zipperer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659504337-Daidren_Zipperer_69009f82f74b5ce4b27cc756.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5042,
+        "likes": 278,
+        "comments": 432,
+        "engagementRate": 0.005652518841729472,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc721",
+    "firstName": "Moroni",
+    "lastName": "Anae",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659497557-Moroni_Anae_69009f82f74b5ce4b27cc721.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1828,
+        "likes": 4981,
+        "comments": 635,
+        "engagementRate": 0.22226897828648376,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc752",
+    "firstName": "Otto",
+    "lastName": "Tia",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659506462-Otto_Tia_69009f82f74b5ce4b27cc752.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1955,
+        "likes": 7428,
+        "comments": 796,
+        "engagementRate": 0.3173402495182213,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc799",
+    "firstName": "Lani",
+    "lastName": "White",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659507099-Lani_White_69009f82f74b5ce4b27cc799.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4354,
+        "likes": 9086,
+        "comments": 227,
+        "engagementRate": 0.1428852251925077,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc775",
+    "firstName": "Terrence",
+    "lastName": "Brown",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659490396-Terrence_Brown_69009f82f74b5ce4b27cc775.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 26600,
+        "likes": 88755,
+        "comments": 1843,
+        "engagementRate": 0.22736526464558543,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc76e",
+    "firstName": "Seydou",
+    "lastName": "Traore",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659497546-Seydou_Traore_69009f82f74b5ce4b27cc76e.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 19661,
+        "likes": 11958,
+        "comments": 970,
+        "engagementRate": 0.04793123325707597,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6fa",
+    "firstName": "Elijah",
+    "lastName": "Davis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659494737-Elijah_Davis_69009f82f74b5ce4b27cc6fa.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4703,
+        "likes": 20522,
+        "comments": 1220,
+        "engagementRate": 0.3556355915095362,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7ae",
+    "firstName": "Iliana",
+    "lastName": "Linahan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659487983-Iliana_Linahan_69009f82f74b5ce4b27cc7ae.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "L/DS",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4483,
+        "likes": 1871,
+        "comments": 628,
+        "engagementRate": 0.03357152556647465,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc79b",
+    "firstName": "Abbi",
+    "lastName": "Ryssman",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659507312-Abbi_Ryssman_69009f82f74b5ce4b27cc79b.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2711,
+        "likes": 17799,
+        "comments": 518,
+        "engagementRate": 0.6148749255660294,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7a5",
+    "firstName": "Norah",
+    "lastName": "Christian",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659502985-Norah_Christian_69009f82f74b5ce4b27cc7a5.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3371,
+        "likes": 12237,
+        "comments": 702,
+        "engagementRate": 0.2988548917327403,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc781",
+    "firstName": "Anna",
+    "lastName": "Reimers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659491648-Anna_Reimers_69009f82f74b5ce4b27cc781.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "P",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1848,
+        "likes": 4826,
+        "comments": 220,
+        "engagementRate": 0.20993799100307978,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7a7",
+    "firstName": "Poppy-Grace",
+    "lastName": "Stickler",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659487806-Poppy-Grace_Stickler_69009f82f74b5ce4b27cc7a7.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9048,
+        "likes": 18201,
+        "comments": 373,
+        "engagementRate": 0.15806329844658462,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc71b",
+    "firstName": "Grady",
+    "lastName": "Mareko",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659502323-Grady_Mareko_69009f82f74b5ce4b27cc71b.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1314,
+        "likes": 3419,
+        "comments": 304,
+        "engagementRate": 0.21812663273885532,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7a8",
+    "firstName": "Sage",
+    "lastName": "Curtis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659493101-Sage_Curtis_69009f82f74b5ce4b27cc7a8.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3910,
+        "likes": 27725,
+        "comments": 356,
+        "engagementRate": 0.5533466533466533,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc764",
+    "firstName": "Omar",
+    "lastName": "Shah",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659503723-Omar_Shah_69009f82f74b5ce4b27cc764.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 759,
+        "likes": 1416,
+        "comments": 310,
+        "engagementRate": 0.43610013175230566,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7b2",
+    "firstName": "Katelynn",
+    "lastName": "Field",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659502423-Katelynn_Field_69009f82f74b5ce4b27cc7b2.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1006,
+        "likes": 6575,
+        "comments": 708,
+        "engagementRate": 0.5575928413094329,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7ad",
+    "firstName": "Grace",
+    "lastName": "Moss",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659497037-Grace_Moss_69009f82f74b5ce4b27cc7ad.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "L/DS",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2091,
+        "likes": 222,
+        "comments": 214,
+        "engagementRate": 0.007345341420799182,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc75c",
+    "firstName": "Larry",
+    "lastName": "Simmons",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659492329-Larry_Simmons_69009f82f74b5ce4b27cc75c.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2717,
+        "likes": 31109,
+        "comments": 600,
+        "engagementRate": 0.8988649565026672,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc760",
+    "firstName": "Ryan",
+    "lastName": "Davis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659508409-Ryan_Davis_69009f82f74b5ce4b27cc760.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5302,
+        "likes": 29516,
+        "comments": 692,
+        "engagementRate": 0.4365384010871563,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc741",
+    "firstName": "Brock",
+    "lastName": "Fonoimoana",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659491318-Brock_Fonoimoana_69009f82f74b5ce4b27cc741.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1363,
+        "likes": 3742,
+        "comments": 523,
+        "engagementRate": 0.3449906252547485,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc729",
+    "firstName": "Keith",
+    "lastName": "Olson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659497564-Keith_Olson_69009f82f74b5ce4b27cc729.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 766,
+        "likes": 1168,
+        "comments": 69,
+        "engagementRate": 0.32297650130548294,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc739",
+    "firstName": "Bryce",
+    "lastName": "Duke",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659505802-Bryce_Duke_69009f82f74b5ce4b27cc739.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 13290,
+        "likes": 11864,
+        "comments": 917,
+        "engagementRate": 0.07146017314029526,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc755",
+    "firstName": "Creed",
+    "lastName": "Whittemore",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659497561-Creed_Whittemore_69009f82f74b5ce4b27cc755.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9218,
+        "likes": 23078,
+        "comments": 890,
+        "engagementRate": 0.20047903911709009,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc753",
+    "firstName": "Bryan",
+    "lastName": "Spotwood",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659503611-Bryan_Spotwood_69009f82f74b5ce4b27cc753.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4026,
+        "likes": 4097,
+        "comments": 504,
+        "engagementRate": 0.14285270740188774,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6d9",
+    "firstName": "Zakye",
+    "lastName": "Hawkins",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659506529-Zakye_Hawkins_69009f82f74b5ce4b27cc6d9.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1671,
+        "likes": 3585,
+        "comments": 163,
+        "engagementRate": 0.17211243080259664,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc724",
+    "firstName": "Alex",
+    "lastName": "Harrison",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659502957-Alex_Harrison_69009f82f74b5ce4b27cc724.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1664,
+        "likes": 3631,
+        "comments": 224,
+        "engagementRate": 0.16571838984186546,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc72d",
+    "firstName": "Roger",
+    "lastName": "Alderman",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659502945-Roger_Alderman_69009f82f74b5ce4b27cc72d.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1918,
+        "likes": 1657,
+        "comments": 48,
+        "engagementRate": 0.2230906127609961,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc761",
+    "firstName": "Tobias",
+    "lastName": "Merriweather",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659490544-Tobias_Merriweather_69009f82f74b5ce4b27cc761.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6439,
+        "likes": 17266,
+        "comments": 698,
+        "engagementRate": 0.1991754605709616,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7a0",
+    "firstName": "Camie",
+    "lastName": "Winger",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659488687-Camie_Winger_69009f82f74b5ce4b27cc7a0.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8631,
+        "likes": 15641,
+        "comments": 248,
+        "engagementRate": 0.15341018808172094,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc736",
+    "firstName": "Devon",
+    "lastName": "Dampier",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659495577-Devon_Dampier_69009f82f74b5ce4b27cc736.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 30243,
+        "likes": 46035,
+        "comments": 915,
+        "engagementRate": 0.12936877955229306,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc76b",
+    "firstName": "Josh",
+    "lastName": "Hayes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659507820-Josh_Hayes_69009f82f74b5ce4b27cc76b.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2740,
+        "likes": 6048,
+        "comments": 498,
+        "engagementRate": 0.26257096512570965,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc77e",
+    "firstName": "Danika",
+    "lastName": "Wilson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659506497-Danika_Wilson_69009f82f74b5ce4b27cc77e.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 650,
+        "likes": 1881,
+        "comments": 470,
+        "engagementRate": 0.5167032967032966,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6de",
+    "firstName": "Ian",
+    "lastName": "Lenius",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659495607-Ian_Lenius_69009f82f74b5ce4b27cc6de.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1008,
+        "likes": 2335,
+        "comments": 93,
+        "engagementRate": 0.40145502645502634,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc770",
+    "firstName": "Don",
+    "lastName": "McHenry",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659496271-Don_McHenry_69009f82f74b5ce4b27cc770.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "FIFTH YEAR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10687,
+        "likes": 155355,
+        "comments": 1446,
+        "engagementRate": 1.222677084308038,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc73b",
+    "firstName": "Devin",
+    "lastName": "Green",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659506459-Devin_Green_69009f82f74b5ce4b27cc73b.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2512,
+        "likes": 4569,
+        "comments": 229,
+        "engagementRate": 0.47750796178343946,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6f6",
+    "firstName": "Nate",
+    "lastName": "Johnson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659494745-Nate_Johnson_69009f82f74b5ce4b27cc6f6.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "ATH",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6508,
+        "likes": 7426,
+        "comments": 663,
+        "engagementRate": 0.0969960049170252,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc722",
+    "firstName": "Trey",
+    "lastName": "Reynolds",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659500833-Trey_Reynolds_69009f82f74b5ce4b27cc722.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2059,
+        "likes": 3838,
+        "comments": 535,
+        "engagementRate": 0.15945551466474522,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6fb",
+    "firstName": "Isaiah",
+    "lastName": "Brown",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659504334-Isaiah_Brown_69009f82f74b5ce4b27cc6fb.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 852,
+        "likes": 2297,
+        "comments": 338,
+        "engagementRate": 0.257726917057903,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6fc",
+    "firstName": "Jason",
+    "lastName": "Stokes Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659501463-Jason_Stokes Jr._69009f82f74b5ce4b27cc6fc.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2318,
+        "likes": 3105,
+        "comments": 456,
+        "engagementRate": 0.12000287604256543,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc79e",
+    "firstName": "Avery",
+    "lastName": "Neff",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659487829-Avery_Neff_69009f82f74b5ce4b27cc79e.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 162529,
+        "likes": 81492,
+        "comments": 473,
+        "engagementRate": 0.04202583333846063,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6da",
+    "firstName": "Demitri",
+    "lastName": "Diamant",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659506485-Demitri_Diamant_69009f82f74b5ce4b27cc6da.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "INF/RHP",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2113,
+        "likes": 5008,
+        "comments": 413,
+        "engagementRate": 0.21375611295156963,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc731",
+    "firstName": "Tanoa",
+    "lastName": "Togiai",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659498301-Tanoa_Togiai_69009f82f74b5ce4b27cc731.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4392,
+        "likes": 10489,
+        "comments": 206,
+        "engagementRate": 0.2435109289617486,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc791",
+    "firstName": "Kamryn",
+    "lastName": "Mafua",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659496302-Kamryn_Mafua_69009f82f74b5ce4b27cc791.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5587,
+        "likes": 7787,
+        "comments": 789,
+        "engagementRate": 0.12791599546566437,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7b5",
+    "firstName": "Ella",
+    "lastName": "Biggs",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659498644-Ella_Biggs_69009f82f74b5ce4b27cc7b5.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 942,
+        "likes": 5072,
+        "comments": 211,
+        "engagementRate": 0.4545293701344657,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6e8",
+    "firstName": "Colter",
+    "lastName": "McAnelly",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659491585-Colter_McAnelly_69009f82f74b5ce4b27cc6e8.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1544,
+        "likes": 5804,
+        "comments": 110,
+        "engagementRate": 0.3169797063903282,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc747",
+    "firstName": "Nate",
+    "lastName": "Tilmon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659493397-Nate_Tilmon_69009f82f74b5ce4b27cc747.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1617,
+        "likes": 4720,
+        "comments": 272,
+        "engagementRate": 0.2447948876520305,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6f7",
+    "firstName": "Blake",
+    "lastName": "Cotton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659494764-Blake_Cotton_69009f82f74b5ce4b27cc6f7.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1209,
+        "likes": 11757,
+        "comments": 418,
+        "engagementRate": 1.4386151482925678,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7aa",
+    "firstName": "Zoe",
+    "lastName": "Johnson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659496245-Zoe_Johnson_69009f82f74b5ce4b27cc7aa.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3051,
+        "likes": 6732,
+        "comments": 412,
+        "engagementRate": 0.19512728067300333,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc768",
+    "firstName": "Ibi",
+    "lastName": "Traore",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659507814-Ibi_Traore_69009f82f74b5ce4b27cc768.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1246,
+        "likes": 2382,
+        "comments": 307,
+        "engagementRate": 0.30830084842925937,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc79c",
+    "firstName": "Ana",
+    "lastName": "Padurariu",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659505778-Ana_Padurariu_69009f82f74b5ce4b27cc79c.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 17249,
+        "likes": 12901,
+        "comments": 1079,
+        "engagementRate": 0.06754014725491332,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc707",
+    "firstName": "Lance",
+    "lastName": "Holtzclaw",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659494006-Lance_Holtzclaw_69009f82f74b5ce4b27cc707.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5113,
+        "likes": 25936,
+        "comments": 910,
+        "engagementRate": 0.4375448203924637,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc743",
+    "firstName": "Jackson",
+    "lastName": "Bennee",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659488770-Jackson_Bennee_69009f82f74b5ce4b27cc743.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3417,
+        "likes": 4848,
+        "comments": 374,
+        "engagementRate": 0.1698045719116834,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc71c",
+    "firstName": "Johnathan",
+    "lastName": "Hall",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659494012-Johnathan_Hall_69009f82f74b5ce4b27cc71c.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2782,
+        "likes": 5386,
+        "comments": 635,
+        "engagementRate": 0.1690256738381113,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6f9",
+    "firstName": "Don",
+    "lastName": "Saunders",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659504881-Don_Saunders_69009f82f74b5ce4b27cc6f9.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2074,
+        "likes": 2756,
+        "comments": 951,
+        "engagementRate": 0.1489472838315654,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc70c",
+    "firstName": "Dallas",
+    "lastName": "Vakalahi",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659501484-Dallas_Vakalahi_69009f82f74b5ce4b27cc70c.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2224,
+        "likes": 12402,
+        "comments": 517,
+        "engagementRate": 0.48407523980815353,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc75e",
+    "firstName": "Mana",
+    "lastName": "Carvalho",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659500849-Mana_Carvalho_69009f82f74b5ce4b27cc75e.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6062,
+        "likes": 51145,
+        "comments": 764,
+        "engagementRate": 0.7135846255361268,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc745",
+    "firstName": "Manny",
+    "lastName": "Fuller",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659503694-Manny_Fuller_69009f82f74b5ce4b27cc745.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1124,
+        "likes": 1963,
+        "comments": 127,
+        "engagementRate": 0.46485765124555156,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6d4",
+    "firstName": "Cal",
+    "lastName": "Miller",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659494206-Cal_Miller_69009f82f74b5ce4b27cc6d4.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4118,
+        "likes": 1607,
+        "comments": 480,
+        "engagementRate": 0.10135988343856239,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc749",
+    "firstName": "Tao",
+    "lastName": "Johnson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659492321-Tao_Johnson_69009f82f74b5ce4b27cc749.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4704,
+        "likes": 21197,
+        "comments": 385,
+        "engagementRate": 0.4170918367346939,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc72b",
+    "firstName": "Nick",
+    "lastName": "Hallock",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659500796-Nick_Hallock_69009f82f74b5ce4b27cc72b.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 909,
+        "likes": 1735,
+        "comments": 123,
+        "engagementRate": 0.17033370003667034,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6ec",
+    "firstName": "Easton",
+    "lastName": "Jones",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659504329-Easton_Jones_69009f82f74b5ce4b27cc6ec.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 158,
+        "engagementRate": 0,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7b0",
+    "firstName": "DyBorrah",
+    "lastName": "Johnson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659498401-DyBorrah_Johnson_69009f82f74b5ce4b27cc7b0.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1487,
+        "likes": 689,
+        "comments": 195,
+        "engagementRate": 0.04954046177986998,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7b7",
+    "firstName": "Langley",
+    "lastName": "Griffin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659502332-Langley_Griffin_69009f82f74b5ce4b27cc7b7.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1547,
+        "likes": 6315,
+        "comments": 477,
+        "engagementRate": 0.36586942469295414,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6d7",
+    "firstName": "Matt",
+    "lastName": "Flaharty",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659490783-Matt_Flaharty_69009f82f74b5ce4b27cc6d7.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1690,
+        "likes": 6495,
+        "comments": 224,
+        "engagementRate": 0.33131163708086786,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6d2",
+    "firstName": "Ashton",
+    "lastName": "Graff-Rowe",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659507096-Ashton_Graff-Rowe_69009f82f74b5ce4b27cc6d2.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 966,
+        "likes": 2655,
+        "comments": 360,
+        "engagementRate": 0.2600931677018633,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6e3",
+    "firstName": "Jet",
+    "lastName": "Gilliam",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659505931-Jet_Gilliam_69009f82f74b5ce4b27cc6e3.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "OF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2451,
+        "likes": 4257,
+        "comments": 60,
+        "engagementRate": 0.3522643818849449,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6f8",
+    "firstName": "Cole",
+    "lastName": "Standage",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659487924-Cole_Standage_69009f82f74b5ce4b27cc6f8.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2179,
+        "likes": 5750,
+        "comments": 510,
+        "engagementRate": 0.28728774667278567,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc744",
+    "firstName": "Josh",
+    "lastName": "Sovereign",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659492333-Josh_Sovereign_69009f82f74b5ce4b27cc744.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1452,
+        "likes": 4539,
+        "comments": 621,
+        "engagementRate": 0.3589930866277131,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6d6",
+    "firstName": "Daniel",
+    "lastName": "Arambula",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659493469-Daniel_Arambula_69009f82f74b5ce4b27cc6d6.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4277,
+        "likes": 8969,
+        "comments": 253,
+        "engagementRate": 0.19601674920823856,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6f1",
+    "firstName": "Ryan",
+    "lastName": "Kittredge",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659495588-Ryan_Kittredge_69009f82f74b5ce4b27cc6f1.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1019,
+        "likes": 2845,
+        "comments": 343,
+        "engagementRate": 0.2607131174353942,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc737",
+    "firstName": "Drew",
+    "lastName": "Cowart",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659502341-Drew_Cowart_69009f82f74b5ce4b27cc737.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5475,
+        "likes": 10886,
+        "comments": 323,
+        "engagementRate": 0.15743889713592743,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc77f",
+    "firstName": "Payton",
+    "lastName": "Crank",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659498378-Payton_Crank_69009f82f74b5ce4b27cc77f.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 807,
+        "likes": 2817,
+        "comments": 255,
+        "engagementRate": 0.22395948524816306,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6ef",
+    "firstName": "Malik",
+    "lastName": "Harris",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659487958-Malik_Harris_69009f82f74b5ce4b27cc6ef.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1351,
+        "likes": 4947,
+        "comments": 518,
+        "engagementRate": 0.2692019531764591,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc70a",
+    "firstName": "Ryker",
+    "lastName": "Kemp",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659505895-Ryker_Kemp_69009f82f74b5ce4b27cc70a.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3547,
+        "likes": 20807,
+        "comments": 622,
+        "engagementRate": 0.5028662719669205,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7a2",
+    "firstName": "Elizabeth",
+    "lastName": "Gantner",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659494729-Elizabeth_Gantner_69009f82f74b5ce4b27cc7a2.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2887,
+        "likes": 5689,
+        "comments": 410,
+        "engagementRate": 0.1661182311511373,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc76f",
+    "firstName": "Alvin",
+    "lastName": "Jackson III",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659490546-Alvin_Jackson III_69009f82f74b5ce4b27cc76f.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1613,
+        "likes": 6367,
+        "comments": 428,
+        "engagementRate": 0.3510539367637942,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc780",
+    "firstName": "Reese",
+    "lastName": "Lee",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659507859-Reese_Lee_69009f82f74b5ce4b27cc780.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1408,
+        "likes": 4950,
+        "comments": 249,
+        "engagementRate": 0.30770596590909094,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6e5",
+    "firstName": "Braden",
+    "lastName": "Pearson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659492577-Braden_Pearson_69009f82f74b5ce4b27cc6e5.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 980,
+        "likes": 3238,
+        "comments": 147,
+        "engagementRate": 0.3140074211502783,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc723",
+    "firstName": "Charlie",
+    "lastName": "King",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659500842-Charlie_King_69009f82f74b5ce4b27cc723.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LS",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1010,
+        "likes": 16650,
+        "comments": 82,
+        "engagementRate": 8.283168316831683,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc706",
+    "firstName": "Kash",
+    "lastName": "Dillon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659490585-Kash_Dillon_69009f82f74b5ce4b27cc706.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1940,
+        "likes": 8191,
+        "comments": 372,
+        "engagementRate": 0.33958931823941046,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc783",
+    "firstName": "Hailey",
+    "lastName": "Maestretti",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659490694-Hailey_Maestretti_69009f82f74b5ce4b27cc783.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "P",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1011,
+        "likes": 3071,
+        "comments": 335,
+        "engagementRate": 0.3017714234331445,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc74f",
+    "firstName": "Hunter",
+    "lastName": "Andrews",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659489651-Hunter_Andrews_69009f82f74b5ce4b27cc74f.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1521,
+        "likes": 4478,
+        "comments": 161,
+        "engagementRate": 0.6099934253780408,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7b3",
+    "firstName": "Lana",
+    "lastName": "Mijacic",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659504931-Lana_Mijacic_69009f82f74b5ce4b27cc7b3.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1021,
+        "likes": 4860,
+        "comments": 162,
+        "engagementRate": 0.40989226248775706,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7bb",
+    "firstName": "Olga",
+    "lastName": "Musial",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659495574-Olga_Musial_69009f82f74b5ce4b27cc7bb.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH/OPP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1541,
+        "likes": 1702,
+        "comments": 279,
+        "engagementRate": 0.09798831927319922,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc728",
+    "firstName": "Kalolo",
+    "lastName": "Ta'aga",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659493994-Kalolo_Ta'aga_69009f82f74b5ce4b27cc728.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1404,
+        "likes": 4065,
+        "comments": 413,
+        "engagementRate": 0.3543842988287433,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc73e",
+    "firstName": "Raycine",
+    "lastName": "Guillory",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659491653-Raycine_Guillory_69009f82f74b5ce4b27cc73e.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8437,
+        "likes": 15,
+        "comments": 232,
+        "engagementRate": 0.005855161787365178,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc796",
+    "firstName": "Ella",
+    "lastName": "Todd",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659497596-Ella_Todd_69009f82f74b5ce4b27cc796.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1347,
+        "likes": 5476,
+        "comments": 545,
+        "engagementRate": 0.4063575622595667,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc767",
+    "firstName": "Babacar",
+    "lastName": "Faye",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659493964-Babacar_Faye_69009f82f74b5ce4b27cc767.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "FIFTH YEAR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6694,
+        "likes": 6081,
+        "comments": 220,
+        "engagementRate": 0.133920662969878,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6fe",
+    "firstName": "JC",
+    "lastName": "Hart",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659496305-JC_Hart_69009f82f74b5ce4b27cc6fe.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10032,
+        "likes": 3216,
+        "comments": 216,
+        "engagementRate": 0.08344041877493619,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7ba",
+    "firstName": "Neea-Maria",
+    "lastName": "Joki",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659504928-Neea-Maria_Joki_69009f82f74b5ce4b27cc7ba.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH/OPP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1791,
+        "likes": 7307,
+        "comments": 304,
+        "engagementRate": 0.35413176996091567,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc7b8",
+    "firstName": "Levani",
+    "lastName": "Key-Powell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659503182-Levani_Key-Powell_69009f82f74b5ce4b27cc7b8.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH/L/DS",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1032,
+        "likes": 12422,
+        "comments": 648,
+        "engagementRate": 1.055394056847545,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6ea",
+    "firstName": "Dillon",
+    "lastName": "Fine",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659507870-Dillon_Fine_69009f82f74b5ce4b27cc6ea.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 676,
+        "likes": 721,
+        "comments": 34,
+        "engagementRate": 0.27921597633136097,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc718",
+    "firstName": "Christian",
+    "lastName": "Thatcher",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659504302-Christian_Thatcher_69009f82f74b5ce4b27cc718.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8967,
+        "likes": 17903,
+        "comments": 388,
+        "engagementRate": 0.16998438719750195,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc784",
+    "firstName": "Kaelyn",
+    "lastName": "O'Rourke",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659505885-Kaelyn_O'Rourke_69009f82f74b5ce4b27cc784.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "P",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 636,
+        "likes": 2409,
+        "comments": 311,
+        "engagementRate": 0.35639412997903563,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc726",
+    "firstName": "Isaiah",
+    "lastName": "Garcia",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659488783-Isaiah_Garcia_69009f82f74b5ce4b27cc726.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3621,
+        "likes": 6,
+        "comments": 69,
+        "engagementRate": 0.010356255178127589,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc75b",
+    "firstName": "Justin",
+    "lastName": "Stevenson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659494033-Justin_Stevenson_69009f82f74b5ce4b27cc75b.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 42,
+        "likes": 24,
+        "comments": 0,
+        "engagementRate": 0.14285714285714285,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc74c",
+    "firstName": "Broderick",
+    "lastName": "Redden",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659506437-Broderick_Redden_69009f82f74b5ce4b27cc74c.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1896,
+        "likes": 1897,
+        "comments": 254,
+        "engagementRate": 0.1418117088607595,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc712",
+    "firstName": "Semi",
+    "lastName": "Taulanga",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659488839-Semi_Taulanga_69009f82f74b5ce4b27cc712.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3268,
+        "likes": 1736,
+        "comments": 0,
+        "engagementRate": 0.17733490524713838,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc74e",
+    "firstName": "Drew",
+    "lastName": "Clemens",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659505810-Drew_Clemens_69009f82f74b5ce4b27cc74e.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 801,
+        "likes": 2764,
+        "comments": 136,
+        "engagementRate": 0.9051186017478152,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc704",
+    "firstName": "John",
+    "lastName": "Frank Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659507086-John_Frank Jr._69009f82f74b5ce4b27cc704.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2322,
+        "likes": 3433,
+        "comments": 258,
+        "engagementRate": 0.13224949755957507,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc757",
+    "firstName": "Daylin",
+    "lastName": "Caamano",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659489739-Daylin_Caamano_69009f82f74b5ce4b27cc757.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 51,
+        "engagementRate": 0,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc717",
+    "firstName": "Robert",
+    "lastName": "Petrich",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659494749-Robert_Petrich_69009f82f74b5ce4b27cc717.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "K",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2167,
+        "likes": 1199,
+        "comments": 176,
+        "engagementRate": 0.21150592216582065,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc77c",
+    "firstName": "Izzy",
+    "lastName": "Cruz",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659494021-Izzy_Cruz_69009f82f74b5ce4b27cc77c.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 616,
+        "likes": 8514,
+        "comments": 250,
+        "engagementRate": 2.0324675324675328,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6dd",
+    "firstName": "Chance",
+    "lastName": "Covert II",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659502376-Chance_Covert II_69009f82f74b5ce4b27cc6dd.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1897,
+        "likes": 27,
+        "comments": 380,
+        "engagementRate": 0.023838809816669596,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc789",
+    "firstName": "Kate",
+    "lastName": "Blunt",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659488818-Kate_Blunt_69009f82f74b5ce4b27cc789.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "UTIL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1041,
+        "likes": 2963,
+        "comments": 150,
+        "engagementRate": 0.37379923150816524,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc71e",
+    "firstName": "Lander",
+    "lastName": "Barton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659504278-Lander_Barton_69009f82f74b5ce4b27cc71e.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5702,
+        "likes": 44135,
+        "comments": 571,
+        "engagementRate": 0.7840406874780779,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc72a",
+    "firstName": "Michael",
+    "lastName": "Mokofisi",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659500871-Michael_Mokofisi_69009f82f74b5ce4b27cc72a.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1328,
+        "likes": 1771,
+        "comments": 340,
+        "engagementRate": 0.14450985761226723,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc709",
+    "firstName": "Paul",
+    "lastName": "Fitzgerald",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659506465-Paul_Fitzgerald_69009f82f74b5ce4b27cc709.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1723,
+        "likes": 2661,
+        "comments": 146,
+        "engagementRate": 0.271522538208551,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc777",
+    "firstName": "Mia",
+    "lastName": "Gomez",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659504902-Mia_Gomez_69009f82f74b5ce4b27cc777.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "1B",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 563,
+        "likes": 1357,
+        "comments": 164,
+        "engagementRate": 0.22513321492007102,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc71d",
+    "firstName": "Kana'i",
+    "lastName": "Lopes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659492540-Kana'i_Lopes_69009f82f74b5ce4b27cc71d.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 110,
+        "engagementRate": 0,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc788",
+    "firstName": "Cian",
+    "lastName": "Noli",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659491593-Cian_Noli_69009f82f74b5ce4b27cc788.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "UTIL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 418,
+        "likes": 2061,
+        "comments": 338,
+        "engagementRate": 0.4782695374800637,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6e1",
+    "firstName": "Bradley",
+    "lastName": "Navarro",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659494184-Bradley_Navarro_69009f82f74b5ce4b27cc6e1.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "OF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 975,
+        "likes": 2553,
+        "comments": 331,
+        "engagementRate": 0.7394871794871796,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6e0",
+    "firstName": "Sammy",
+    "lastName": "Cova",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659502329-Sammy_Cova_69009f82f74b5ce4b27cc6e0.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2027,
+        "likes": 4691,
+        "comments": 800,
+        "engagementRate": 0.3009921613769665,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6e4",
+    "firstName": "Luke",
+    "lastName": "Jacobs",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659501532-Luke_Jacobs_69009f82f74b5ce4b27cc6e4.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "OF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 712,
+        "likes": 744,
+        "comments": 221,
+        "engagementRate": 0.6776685393258427,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6d1",
+    "firstName": "Jack",
+    "lastName": "Kleveno",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659500898-Jack_Kleveno_69009f82f74b5ce4b27cc6d1.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "C",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 773,
+        "likes": 1614,
+        "comments": 250,
+        "engagementRate": 0.3925010386957018,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6cd",
+    "firstName": "Blake",
+    "lastName": "Eckerle",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659489744-Blake_Eckerle_69009f82f74b5ce4b27cc6cd.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "C",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 998,
+        "likes": 1268,
+        "comments": 195,
+        "engagementRate": 0.4886439545758183,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6f0",
+    "firstName": "Payton",
+    "lastName": "Riske",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659493359-Payton_Riske_69009f82f74b5ce4b27cc6f0.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1230,
+        "likes": 1430,
+        "comments": 295,
+        "engagementRate": 0.09952574525745257,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc70f",
+    "firstName": "Karson",
+    "lastName": "Kaufusi",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659497584-Karson_Kaufusi_69009f82f74b5ce4b27cc70f.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1575,
+        "likes": 2258,
+        "comments": 52,
+        "engagementRate": 0.7333333333333334,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6ed",
+    "firstName": "Ian",
+    "lastName": "Culver",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659494793-Ian_Culver_69009f82f74b5ce4b27cc6ed.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1117,
+        "likes": 3295,
+        "comments": 345,
+        "engagementRate": 0.36208097085447133,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc74b",
+    "firstName": "Logan",
+    "lastName": "Castor",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659497549-Logan_Castor_69009f82f74b5ce4b27cc74b.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "SN",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1423,
+        "likes": 1719,
+        "comments": 148,
+        "engagementRate": 0.2624033731553057,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc70d",
+    "firstName": "Dilan",
+    "lastName": "Battle",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659496293-Dilan_Battle_69009f82f74b5ce4b27cc70d.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2105,
+        "likes": 3,
+        "comments": 90,
+        "engagementRate": 0.044180522565320665,
+        "contentCount": 1,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc710",
+    "firstName": "Mike",
+    "lastName": "Tauteoli",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659505851-Mike_Tauteoli_69009f82f74b5ce4b27cc710.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 784,
+        "likes": 1031,
+        "comments": 133,
+        "engagementRate": 0.21209912536443148,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc734",
+    "firstName": "Brendan",
+    "lastName": "Zurbrugg",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659507848-Brendan_Zurbrugg_69009f82f74b5ce4b27cc734.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2930,
+        "likes": 14789,
+        "comments": 309,
+        "engagementRate": 0.4291240045506257,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc74a",
+    "firstName": "Tommy",
+    "lastName": "Nelson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659491538-Tommy_Nelson_69009f82f74b5ce4b27cc74a.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 993,
+        "likes": 862,
+        "comments": 109,
+        "engagementRate": 0.2444612286002014,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6d0",
+    "firstName": "Derek",
+    "lastName": "Smith",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659504353-Derek_Smith_69009f82f74b5ce4b27cc6d0.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "C",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2753,
+        "likes": 9680,
+        "comments": 643,
+        "engagementRate": 0.3124772974936433,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc77d",
+    "firstName": "Rio",
+    "lastName": "Mendez",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659507809-Rio_Mendez_69009f82f74b5ce4b27cc77d.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1221,
+        "likes": 962,
+        "comments": 121,
+        "engagementRate": 0.22174447174447176,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc72f",
+    "firstName": "Soren",
+    "lastName": "Shinofield",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659493325-Soren_Shinofield_69009f82f74b5ce4b27cc72f.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1031,
+        "likes": 1020,
+        "comments": 112,
+        "engagementRate": 0.3659877141933398,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc75d",
+    "firstName": "Luca",
+    "lastName": "Caldarella",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659501472-Luca_Caldarella_69009f82f74b5ce4b27cc75d.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1532,
+        "likes": 5450,
+        "comments": 351,
+        "engagementRate": 0.31554612706701485,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc78a",
+    "firstName": "Kayla",
+    "lastName": "Lyon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659507057-Kayla_Lyon_69009f82f74b5ce4b27cc78a.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "UTIL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 180,
+        "likes": 823,
+        "comments": 19,
+        "engagementRate": 0.3898148148148148,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc787",
+    "firstName": "Taylor",
+    "lastName": "Mediano",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659505200-Taylor_Mediano_69009f82f74b5ce4b27cc787.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "P",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 397,
+        "likes": 1401,
+        "comments": 91,
+        "engagementRate": 0.31318219983207396,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6ee",
+    "firstName": "Kaden",
+    "lastName": "Soder",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659496290-Kaden_Soder_69009f82f74b5ce4b27cc6ee.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1051,
+        "likes": 1572,
+        "comments": 285,
+        "engagementRate": 0.4423247851918566,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc76c",
+    "firstName": "Keanu",
+    "lastName": "Dawes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659504314-Keanu_Dawes_69009f82f74b5ce4b27cc76c.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3591,
+        "likes": 8041,
+        "comments": 680,
+        "engagementRate": 0.4047619047619047,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc772",
+    "firstName": "Jacob",
+    "lastName": "Patrick",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659492460-Jacob_Patrick_69009f82f74b5ce4b27cc772.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1718,
+        "likes": 5720,
+        "comments": 146,
+        "engagementRate": 0.310403217271669,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6d3",
+    "firstName": "Brian",
+    "lastName": "Trujillo",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659501557-Brian_Trujillo_69009f82f74b5ce4b27cc6d3.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1689,
+        "likes": 4440,
+        "comments": 601,
+        "engagementRate": 0.29846062759029013,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009f82f74b5ce4b27cc6d5",
+    "firstName": "Cameron",
+    "lastName": "Gurney",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659503689-Cameron_Gurney_69009f82f74b5ce4b27cc6d5.png",
+    "schoolName": "Utah",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1106,
+        "likes": 4553,
+        "comments": 372,
+        "engagementRate": 0.37108197709463536,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  }
+]

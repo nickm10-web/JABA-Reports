@@ -8,7 +8,7 @@ import { BaylorReportHub } from './BaylorReportHub';
 import { KentuckyIPImpact } from './KentuckyIPImpact';
 import { OhioStateIPImpact } from './OhioStateIPImpact';
 import { GeorgiaIPImpact } from './GeorgiaIPImpact';
-import { ClemsonIPImpact } from './ClemsonIPImpact';
+import { ClemsonReportHub } from './ClemsonReportHub';
 import { RutgersIPImpact } from './RutgersIPImpact';
 import { VirginiaIPImpact } from './VirginiaIPImpact';
 import { ArizonaIPImpact } from './ArizonaIPImpact';
@@ -17,11 +17,17 @@ import { SchoolAthleteReport } from './SchoolAthleteReport';
 import { StJudeAthleteEventImpactReport } from './StJudeAthleteEventImpactReport';
 import { QCollarReport } from './QCollarReport';
 import { PostgameReport } from './PostgameReport';
+import { ReligionOfSportReport } from './ReligionOfSportReport';
 import {
   michiganConfig, alabamaConfig, arkansasConfig,
   oklahomaConfig, boiseStateConfig, wisconsinConfig, notredameConfig,
   lsuConfig, oldDominionConfig, michiganStateConfig,
   uscConfig, ncStateConfig, pennStateConfig, washingtonStateConfig, uncConfig, texasConfig,
+  tennesseeConfig, washingtonConfig, kStateConfig, utahConfig, iowaStateConfig,
+  coloradoConfig, oleMissConfig, byuConfig, indianaConfig, smuConfig,
+  oregonConfig, georgiaTechConfig, vanderbiltConfig, tcuConfig, kansasConfig, texasTechConfig,
+  iowaConfig, wakeForestConfig, calConfig, northwesternConfig, stanfordConfig,
+  mississippiStateConfig, missouriConfig,
 } from '../config/schoolConfigs';
 
 
@@ -40,6 +46,13 @@ const POSTGAME_CARD: SchoolConfig = {
   dataName: 'Postgame', logoUrl: '/JABA-face.png',
 };
 
+const RELIGION_OF_SPORT_CARD: SchoolConfig = {
+  id: 'religion-of-sport', name: 'Religion of Sports', shortName: 'Religion of Sport',
+  mascot: 'Talent Analytics', primaryColor: '#0A0A0A', secondaryColor: '#E2F500',
+  accentColor: '#E2F500', conference: 'Brand', location: 'United States',
+  dataName: 'Religion of Sports', logoUrl: '/religion_of_sports_logo.png',
+};
+
 const OLD_DOMINION_CARD: SchoolConfig = {
   id: 'old-dominion', name: 'Old Dominion University', shortName: 'Old Dominion',
   mascot: 'Monarchs', primaryColor: '#003057', secondaryColor: '#7C878E',
@@ -52,6 +65,13 @@ const RUTGERS_CARD: SchoolConfig = {
   mascot: 'Scarlet Knights', primaryColor: '#CC0033', secondaryColor: '#000000',
   accentColor: '#CC0033', conference: 'Big 10', location: 'Piscataway, NJ',
   dataName: 'Rutgers', logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/164.png',
+};
+
+const MISSISSIPPI_STATE_CARD: SchoolConfig = {
+  id: 'mississippi-state', name: 'Mississippi State University', shortName: 'Mississippi State',
+  mascot: 'Bulldogs', primaryColor: '#660000', secondaryColor: '#FFFFFF',
+  accentColor: '#660000', conference: 'SEC', location: 'Starkville, MS',
+  dataName: 'Mississippi State University', logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/344.png',
 };
 
 export function SchoolReportsPage() {
@@ -70,8 +90,10 @@ export function SchoolReportsPage() {
     SCHOOLS['saint-jude'],
     SCHOOLS['q-collar'],
     POSTGAME_CARD,
+    RELIGION_OF_SPORT_CARD,
     SCHOOLS['alabama'],
     ARKANSAS_CARD,
+    SCHOOLS['mizzou'],
     SCHOOLS['oklahoma'],
     SCHOOLS['wisconsin'],
     SCHOOLS['clemson'],
@@ -89,6 +111,28 @@ export function SchoolReportsPage() {
     SCHOOLS['unc'],
     SCHOOLS['texas'],
     SCHOOLS['arizona'],
+    SCHOOLS['tennessee'],
+    SCHOOLS['iowa'],
+    SCHOOLS['washington'],
+    SCHOOLS['k-state'],
+    SCHOOLS['utah'],
+    SCHOOLS['iowa-state'],
+    SCHOOLS['colorado'],
+    SCHOOLS['ole-miss'],
+    SCHOOLS['byu'],
+    SCHOOLS['indiana'],
+    SCHOOLS['smu'],
+    SCHOOLS['oregon'],
+    SCHOOLS['georgia-tech'],
+    SCHOOLS['vanderbilt'],
+    SCHOOLS['tcu'],
+    SCHOOLS['kansas'],
+    SCHOOLS['texas-tech'],
+    SCHOOLS['wake-forest'],
+    SCHOOLS['cal'],
+    SCHOOLS['northwestern'],
+    SCHOOLS['stanford'],
+    MISSISSIPPI_STATE_CARD,
   ].filter(Boolean);
 
   // If a school is selected, show the appropriate view
@@ -158,6 +202,11 @@ export function SchoolReportsPage() {
         <SchoolAthleteReport config={oklahomaConfig} onBack={() => setSelectedSchool(null)} />
       );
     }
+    if (selectedSchool.id === 'mizzou') {
+      return (
+        <SchoolAthleteReport config={missouriConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
     if (selectedSchool.id === 'wisconsin') {
       return (
         <SchoolAthleteReport config={wisconsinConfig} onBack={() => setSelectedSchool(null)} />
@@ -165,7 +214,7 @@ export function SchoolReportsPage() {
     }
     if (selectedSchool.id === 'clemson') {
       return (
-        <ClemsonIPImpact onBack={() => setSelectedSchool(null)} />
+        <ClemsonReportHub onBack={() => setSelectedSchool(null)} />
       );
     }
     if (selectedSchool.id === 'rutgers') {
@@ -238,6 +287,116 @@ export function SchoolReportsPage() {
         <ArizonaIPImpact onBack={() => setSelectedSchool(null)} />
       );
     }
+    if (selectedSchool.id === 'tennessee') {
+      return (
+        <SchoolAthleteReport config={tennesseeConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'iowa') {
+      return (
+        <SchoolAthleteReport config={iowaConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'washington') {
+      return (
+        <SchoolAthleteReport config={washingtonConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'k-state') {
+      return (
+        <SchoolAthleteReport config={kStateConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'utah') {
+      return (
+        <SchoolAthleteReport config={utahConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'iowa-state') {
+      return (
+        <SchoolAthleteReport config={iowaStateConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'colorado') {
+      return (
+        <SchoolAthleteReport config={coloradoConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'ole-miss') {
+      return (
+        <SchoolAthleteReport config={oleMissConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'byu') {
+      return (
+        <SchoolAthleteReport config={byuConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'indiana') {
+      return (
+        <SchoolAthleteReport config={indianaConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'smu') {
+      return (
+        <SchoolAthleteReport config={smuConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'oregon') {
+      return (
+        <SchoolAthleteReport config={oregonConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'georgia-tech') {
+      return (
+        <SchoolAthleteReport config={georgiaTechConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'vanderbilt') {
+      return (
+        <SchoolAthleteReport config={vanderbiltConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'tcu') {
+      return (
+        <SchoolAthleteReport config={tcuConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'kansas') {
+      return (
+        <SchoolAthleteReport config={kansasConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'texas-tech') {
+      return (
+        <SchoolAthleteReport config={texasTechConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'wake-forest') {
+      return (
+        <SchoolAthleteReport config={wakeForestConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'cal') {
+      return (
+        <SchoolAthleteReport config={calConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'northwestern') {
+      return (
+        <SchoolAthleteReport config={northwesternConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'stanford') {
+      return (
+        <SchoolAthleteReport config={stanfordConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'mississippi-state') {
+      return (
+        <SchoolAthleteReport config={mississippiStateConfig} onBack={() => setSelectedSchool(null)} />
+      );
+    }
     // If St. Jude is selected, show the brand impact report
     if (selectedSchool.id === 'saint-jude') {
       return (
@@ -252,6 +411,11 @@ export function SchoolReportsPage() {
     if (selectedSchool.id === 'postgame') {
       return (
         <PostgameReport onBack={() => setSelectedSchool(null)} />
+      );
+    }
+    if (selectedSchool.id === 'religion-of-sport') {
+      return (
+        <ReligionOfSportReport onBack={() => setSelectedSchool(null)} />
       );
     }
     // Otherwise show regular school report view

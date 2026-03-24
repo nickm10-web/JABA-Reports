@@ -1,0 +1,684 @@
+{
+  "schemaVersion": 1,
+  "decisions": [
+    {
+      "schoolId": "iowa",
+      "handle": "_volleyusa_",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "47",
+      "action": "allow",
+      "reason": "explicit user approval",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "addie.deal",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-05T19:31:11.276Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "apollo_payne",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-05T19:31:11.276Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "athletesthread",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-05T19:31:11.276Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "bnkonfox",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-06T21:43:53.436Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "brolan_frost",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "capt.lrock",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "cbssports",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: recruiting/media/podcast/publisher",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "chard.ee",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-05T19:31:11.276Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "chit_chat1",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "cntower",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-06T21:49:45.233Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "courtsidewbb",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: recruiting/media/podcast/publisher",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "ctbaseball",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: team/school page",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "diamondridge_construction",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-05T19:31:11.276Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "doughboyz",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-06T21:43:53.436Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "estelasfreshmex",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-06T21:43:53.436Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "goat_coats",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "guardianbaseball",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-05T19:31:11.276Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "hawkeyefootball",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: team/school page",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "homern_auburn",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-05T19:31:11.276Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "iowa_corn",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "iowa.nil.store",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: nil store/threads/collective/platform",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "iowa.threads",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: nil store/threads/collective/platform",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "iowagymnastics",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: team/school page",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "iowaonecall",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-06T21:43:53.436Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "iowaswarm",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-06T21:43:53.436Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "iowawbb",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: team/school page",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "maxburt_3",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "mgronowski11",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-05T19:31:11.276Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "myplayerathlete",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-05T19:31:11.276Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "myplayersports",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: nil store/threads/collective/platform",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "nil.store___",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: nil store/threads/collective/platform",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "only1thingpodcast",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: recruiting/media/podcast/publisher",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "opill_otc",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "path2_peak",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "pro16league",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-05T19:31:11.276Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "radiantchurch.live",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-05T19:31:11.276Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "reecebeuter_outdoors",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "roy_returnonyou",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "sasn.tv",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-05T19:31:11.276Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "stanley_brand",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-05T19:31:11.276Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "the_overflow_podcast_",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-05T19:31:11.276Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "trevinjirak27",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-05T19:31:11.276Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "ugavolleyball",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: team/school page",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "ventsessionpodcast",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-05T19:31:11.276Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "vintage2298auburn",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-05T19:31:11.276Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "von_maur",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "wareagleplus",
+      "action": "exclude",
+      "reason": "cross-school noise removed by user request",
+      "updatedAt": "2026-03-06T21:38:14.719Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "whatsup_pod",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-05T19:31:11.276Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "will_lockhart25",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-05T19:31:11.276Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "xaviernwankpa",
+      "action": "exclude",
+      "reason": "explicit user removal list (variant)",
+      "updatedAt": "2026-03-06T21:43:53.436Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "xaviernwankpa_",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-06T21:43:53.436Z"
+    },
+    {
+      "schoolId": "iowa",
+      "handle": "young.esthetics",
+      "action": "exclude",
+      "reason": "explicit user removal list",
+      "updatedAt": "2026-03-05T19:31:11.276Z"
+    },
+    {
+      "schoolId": "minnesota",
+      "handle": "affinity_plus",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "minnesota",
+      "handle": "carpediem_studios_",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "minnesota",
+      "handle": "gopherfootball",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: team/school page",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "minnesota",
+      "handle": "gophersports",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: team/school page",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "minnesota",
+      "handle": "launchpad.themeadows",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "minnesota",
+      "handle": "minnesota.threads",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: nil store/threads/collective/platform",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "minnesota",
+      "handle": "myplayerathlete",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: nil store/threads/collective/platform",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "minnesota",
+      "handle": "nilelite.ladies",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: nil store/threads/collective/platform",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "minnesota",
+      "handle": "uofmnbookstores",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: team/school page",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "_d1.tre",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "1k.fluff",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "a.reese.iv",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "athletesthread",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: nil store/threads/collective/platform",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "bendavis_00",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "bshape8",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "dynastybaseball.us",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "hailstatefb",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: team/school page",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "hailstatevb",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: team/school page",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "influxerhailstate",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: nil store/threads/collective/platform",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "influxermerch",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: nil store/threads/collective/platform",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "kingsmith_21",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "mississippistate.nil.store",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: nil store/threads/collective/platform",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "missstatethreads",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: nil store/threads/collective/platform",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "nick_front_",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "no.rivals.brand",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: recruiting/media/podcast/publisher",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "pey10fowler",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "pom_bells",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "pout_basketball",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "purdue.threads",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: nil store/threads/collective/platform",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "thebaseballhype_",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: recruiting/media/podcast/publisher",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "thumbpro_baseball",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: team/school page",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "tray4c",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "uanextvolleyball",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: team/school page",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "mississippi-state",
+      "handle": "upnextportal",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: recruiting/media/podcast/publisher",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "washington-state",
+      "handle": "aceglass21",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "washington-state",
+      "handle": "bluejayfootball",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: team/school page",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "washington-state",
+      "handle": "dalton_anderson7",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "washington-state",
+      "handle": "hudson_cedarland",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "washington-state",
+      "handle": "myplayerathlete",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: nil store/threads/collective/platform",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "washington-state",
+      "handle": "nil_threads",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: nil store/threads/collective/platform",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "washington-state",
+      "handle": "rutgerson3",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: recruiting/media/podcast/publisher",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "washington-state",
+      "handle": "tucker_large",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: likely individual non-brand",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    },
+    {
+      "schoolId": "washington-state",
+      "handle": "washingtonstatethreads",
+      "action": "exclude",
+      "reason": "reviewed flagged handle: nil store/threads/collective/platform",
+      "updatedAt": "2026-03-05T16:43:56.168Z"
+    }
+  ]
+}

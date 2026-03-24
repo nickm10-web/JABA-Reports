@@ -7,6 +7,8 @@ import { OhioStateIPImpact } from './components/OhioStateIPImpact';
 import { KentuckyIPImpact } from './components/KentuckyIPImpact';
 import { GeorgiaIPImpact } from './components/GeorgiaIPImpact';
 import { ClemsonIPImpact } from './components/ClemsonIPImpact';
+import { ClemsonReportHub } from './components/ClemsonReportHub';
+import { ClemsonHardeesCampaignReport } from './components/ClemsonHardeesCampaignReport';
 import { RutgersIPImpact } from './components/RutgersIPImpact';
 import { VirginiaIPImpact } from './components/VirginiaIPImpact';
 import { ArizonaIPImpact } from './components/ArizonaIPImpact';
@@ -17,6 +19,7 @@ import { QCollarReport } from './components/QCollarReport';
 import { PostgameReport } from './components/PostgameReport';
 import { AuburnDudewipesCampaign } from './components/AuburnDudewipesCampaign';
 import { AuburnAmsterdamCafeReport } from './components/AuburnAmsterdamCafeReport';
+import { ReligionOfSportReport } from './components/ReligionOfSportReport';
 import {
   michiganConfig,
   alabamaConfig,
@@ -117,9 +120,17 @@ function WisconsinRoute() {
 }
 
 function ClemsonRoute() {
+  return <ClemsonReportHub />;
+}
+
+function ClemsonIPRoute() {
   const navigate = useNavigate();
-  const canGoBack = window.history.length > 2;
-  return <ClemsonIPImpact onBack={canGoBack ? () => navigate('/') : undefined} />;
+  return <ClemsonIPImpact onBack={() => navigate('/clemson')} />;
+}
+
+function ClemsonHardeesRoute() {
+  const navigate = useNavigate();
+  return <ClemsonHardeesCampaignReport onBack={() => navigate('/clemson')} />;
 }
 
 function RutgersRoute() {
@@ -210,6 +221,12 @@ function PostgameRoute() {
   return <PostgameReport onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
+function ReligionOfSportRoute() {
+  const navigate = useNavigate();
+  const canGoBack = window.history.length > 2;
+  return <ReligionOfSportReport onBack={canGoBack ? () => navigate('/') : undefined} />;
+}
+
 // Handle ?playfly query param - show Playfly hub without back button
 function HomeRoute() {
   const [searchParams] = useSearchParams();
@@ -245,8 +262,10 @@ function App() {
         <Route path="/oklahoma" element={<OklahomaRoute />} />
         <Route path="/wisconsin" element={<WisconsinRoute />} />
         <Route path="/clemson" element={<ClemsonRoute />} />
-        <Route path="/clemson-athlete" element={<Navigate to="/clemson" replace />} />
-        <Route path="/clemson-ip" element={<ClemsonRoute />} />
+        <Route path="/clemson/hardees" element={<ClemsonHardeesRoute />} />
+        <Route path="/clemson/ip" element={<ClemsonIPRoute />} />
+        <Route path="/clemson-athlete" element={<Navigate to="/clemson/ip" replace />} />
+        <Route path="/clemson-ip" element={<Navigate to="/clemson/ip" replace />} />
         <Route path="/rutgers" element={<RutgersRoute />} />
         <Route path="/rutgers-ip" element={<RutgersRoute />} />
         <Route path="/notre-dame" element={<NotreDameRoute />} />
@@ -292,6 +311,8 @@ function App() {
         <Route path="/q-collar" element={<QCollarRoute />} />
         <Route path="/qcollar" element={<QCollarRoute />} />
         <Route path="/postgame" element={<PostgameRoute />} />
+        <Route path="/religion-of-sport" element={<ReligionOfSportRoute />} />
+        <Route path="/religion-of-sports" element={<ReligionOfSportRoute />} />
         {/* Redirect any unknown routes to home */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

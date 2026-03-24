@@ -1,0 +1,4034 @@
+[
+  {
+    "_id": "68fc9189e31b2db809d53763",
+    "firstName": "PJ",
+    "lastName": "Wilkins",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383064607-PJ_Wilkins_68fc9189e31b2db809d53763.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11,
+        "likes": 46,
+        "comments": 1,
+        "engagementRate": 0.18656126482213437,
+        "contentCount": 23,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53701",
+    "firstName": "Cotie",
+    "lastName": "McMahon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383069247-Cotie_McMahon_68fc9189e31b2db809d53701.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 24834,
+        "likes": 27199,
+        "comments": 648,
+        "engagementRate": 0.03974210408304639,
+        "contentCount": 28,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5374d",
+    "firstName": "Sydney",
+    "lastName": "Shiller",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383063085-Sydney_Shiller_68fc9189e31b2db809d5374d.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3196,
+        "likes": 20163,
+        "comments": 557,
+        "engagementRate": 0.40506859592278244,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53790",
+    "firstName": "Wydett",
+    "lastName": "Williams Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383071186-Wydett_Williams Jr._68fc9189e31b2db809d53790.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5249,
+        "likes": 25343,
+        "comments": 1589,
+        "engagementRate": 0.28997582144982165,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536da",
+    "firstName": "Desrae",
+    "lastName": "Kyles",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383072949-Desrae_Kyles_68fc9189e31b2db809d536da.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "C",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2556,
+        "likes": 674,
+        "comments": 502,
+        "engagementRate": 0.019142633579253297,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536fc",
+    "firstName": "Corey",
+    "lastName": "Chest",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383073472-Corey_Chest_68fc9189e31b2db809d536fc.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10721,
+        "likes": 6071,
+        "comments": 891,
+        "engagementRate": 0.03626497644472268,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53736",
+    "firstName": "Suntarine",
+    "lastName": "Perkins",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383066157-Suntarine_Perkins_68fc9189e31b2db809d53736.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 23648,
+        "likes": 39344,
+        "comments": 1226,
+        "engagementRate": 0.08429488582189022,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5372b",
+    "firstName": "Princewill",
+    "lastName": "Umanmielen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383067427-Princewill_Umanmielen_68fc9189e31b2db809d5372b.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8442,
+        "likes": 128876,
+        "comments": 3632,
+        "engagementRate": 0.8252719940718887,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53770",
+    "firstName": "Kewan",
+    "lastName": "Lacy",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383060379-Kewan_Lacy_68fc9189e31b2db809d53770.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 75639,
+        "likes": 747714,
+        "comments": 19721,
+        "engagementRate": 0.2607825890788601,
+        "contentCount": 30,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536dd",
+    "firstName": "Makenna",
+    "lastName": "Bellaire",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383071213-Makenna_Bellaire_68fc9189e31b2db809d536dd.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "SOFTBALL",
+    "position": "C/UT",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1676,
+        "likes": 12372,
+        "comments": 410,
+        "engagementRate": 0.5866953716480239,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53795",
+    "firstName": "Nick",
+    "lastName": "Cull",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383066791-Nick_Cull_68fc9189e31b2db809d53795.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11049,
+        "likes": 6,
+        "comments": 437,
+        "engagementRate": 0.0003680574410957251,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d537a8",
+    "firstName": "De'Zhaun",
+    "lastName": "Stribling",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383066137-De'Zhaun_Stribling_68fc9189e31b2db809d537a8.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10026,
+        "likes": 18235,
+        "comments": 837,
+        "engagementRate": 0.11784424711831999,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536e6",
+    "firstName": "Chris",
+    "lastName": "Graves Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383069829-Chris_Graves Jr._68fc9189e31b2db809d536e6.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12896,
+        "likes": 18932,
+        "comments": 1893,
+        "engagementRate": 0.08945318201722377,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536f5",
+    "firstName": "Jon",
+    "lastName": "Seaton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383061570-Jon_Seaton_68fc9189e31b2db809d536f5.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 576620,
+        "likes": 1001514,
+        "comments": 2984,
+        "engagementRate": 0.06711533944732774,
+        "contentCount": 32,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53789",
+    "firstName": "Hope",
+    "lastName": "Jenkins",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383060371-Hope_Jenkins_68fc9189e31b2db809d53789.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "SOFTBALL",
+    "position": "RHP/UT",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5284,
+        "likes": 13142,
+        "comments": 352,
+        "engagementRate": 0.17371378738025653,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536ec",
+    "firstName": "Corey",
+    "lastName": "Amos",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383062504-Corey_Amos_68fc9189e31b2db809d536ec.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8513,
+        "likes": 13727,
+        "comments": 1461,
+        "engagementRate": 0.14726707667326022,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53765",
+    "firstName": "Patrick",
+    "lastName": "Kutas",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383059785-Patrick_Kutas_68fc9189e31b2db809d53765.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6139,
+        "likes": 31654,
+        "comments": 971,
+        "engagementRate": 0.33724000461051984,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5379b",
+    "firstName": "Caleb",
+    "lastName": "Odom",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383058792-Caleb_Odom_68fc9189e31b2db809d5379b.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 20157,
+        "likes": 43577,
+        "comments": 712,
+        "engagementRate": 0.14514999826874636,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53700",
+    "firstName": "Christeen",
+    "lastName": "Iwuala",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383068658-Christeen_Iwuala_68fc9189e31b2db809d53700.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 13073,
+        "likes": 3393,
+        "comments": 348,
+        "engagementRate": 0.013805921008500305,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5379a",
+    "firstName": "Hayden",
+    "lastName": "Bradley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383063015-Hayden_Bradley_68fc9189e31b2db809d5379a.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 14451,
+        "likes": 24683,
+        "comments": 877,
+        "engagementRate": 0.11800722128474231,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53798",
+    "firstName": "Mokihana",
+    "lastName": "Tufono",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383059776-Mokihana_Tufono_68fc9189e31b2db809d53798.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3324,
+        "likes": 10153,
+        "comments": 560,
+        "engagementRate": 0.17212636502958112,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53708",
+    "firstName": "Ilias",
+    "lastName": "Kamardine",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383069776-Ilias_Kamardine_68fc9189e31b2db809d53708.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7970,
+        "likes": 15301,
+        "comments": 226,
+        "engagementRate": 0.14950294373130005,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5376a",
+    "firstName": "Trinidad",
+    "lastName": "Chambliss",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383063962-Trinidad_Chambliss_68fc9189e31b2db809d5376a.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 147590,
+        "likes": 635485,
+        "comments": 6780,
+        "engagementRate": 0.2409119511945772,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53772",
+    "firstName": "Logan",
+    "lastName": "Diggs",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383066128-Logan_Diggs_68fc9189e31b2db809d53772.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 16056,
+        "likes": 33310,
+        "comments": 929,
+        "engagementRate": 0.14214957639033513,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5370b",
+    "firstName": "Patton",
+    "lastName": "Pinkins",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383060643-Patton_Pinkins_68fc9189e31b2db809d5370b.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3128,
+        "likes": 10067,
+        "comments": 236,
+        "engagementRate": 0.33334935779332375,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536fb",
+    "firstName": "Augusto",
+    "lastName": "Cassiá",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383063345-Augusto_CassiÃ¡_68fc9189e31b2db809d536fb.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7299,
+        "likes": 3959,
+        "comments": 211,
+        "engagementRate": 0.04245691126614919,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536e3",
+    "firstName": "Ricky",
+    "lastName": "Fletcher",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383071792-Ricky_Fletcher_68fc9189e31b2db809d536e3.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3668,
+        "likes": 1286,
+        "comments": 855,
+        "engagementRate": 0.055512899452765475,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5374e",
+    "firstName": "Liesl",
+    "lastName": "Osteen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383072927-Liesl_Osteen_68fc9189e31b2db809d5374e.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 49388,
+        "likes": 236928,
+        "comments": 1996,
+        "engagementRate": 0.3218841540566444,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536ed",
+    "firstName": "Da'Shawn",
+    "lastName": "Womack",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383064595-Da'Shawn_Womack_68fc9189e31b2db809d536ed.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12077,
+        "likes": 21729,
+        "comments": 1333,
+        "engagementRate": 0.13599846280241626,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d537a5",
+    "firstName": "Cayden",
+    "lastName": "Lee",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383072389-Cayden_Lee_68fc9189e31b2db809d537a5.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 17047,
+        "likes": 114566,
+        "comments": 2522,
+        "engagementRate": 0.4622845738077829,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53714",
+    "firstName": "Judd",
+    "lastName": "Utermark",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383071162-Judd_Utermark_68fc9189e31b2db809d53714.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "IF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10172,
+        "likes": 21296,
+        "comments": 631,
+        "engagementRate": 0.15538357479129314,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53759",
+    "firstName": "Ethan",
+    "lastName": "Fields",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383062520-Ethan_Fields_68fc9189e31b2db809d53759.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2096,
+        "likes": 19540,
+        "comments": 854,
+        "engagementRate": 0.6048318992296897,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53766",
+    "firstName": "TJ",
+    "lastName": "Hedrick",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383058807-TJ_Hedrick_68fc9189e31b2db809d53766.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1273,
+        "likes": 7439,
+        "comments": 338,
+        "engagementRate": 0.3968826645017803,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53703",
+    "firstName": "Latasha",
+    "lastName": "Lattimore",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383067964-Latasha_Lattimore_68fc9189e31b2db809d53703.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11588,
+        "likes": 2765,
+        "comments": 442,
+        "engagementRate": 0.017351693870506436,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5375d",
+    "firstName": "Delano",
+    "lastName": "Townsend",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383072968-Delano_Townsend_68fc9189e31b2db809d5375d.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2758,
+        "likes": 23907,
+        "comments": 738,
+        "engagementRate": 0.5707966434252362,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53758",
+    "firstName": "Devin",
+    "lastName": "Harper",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383071811-Devin_Harper_68fc9189e31b2db809d53758.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5086,
+        "likes": 108065,
+        "comments": 1025,
+        "engagementRate": 2.1408012039799216,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53761",
+    "firstName": "Diego",
+    "lastName": "Pounds",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383070434-Diego_Pounds_68fc9189e31b2db809d53761.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12284,
+        "likes": 52445,
+        "comments": 2586,
+        "engagementRate": 0.24004601744873896,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d537a1",
+    "firstName": "Wyatt",
+    "lastName": "Smalley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383064027-Wyatt_Smalley_68fc9189e31b2db809d537a1.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3093,
+        "likes": 8287,
+        "comments": 455,
+        "engagementRate": 0.2176611866585481,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5371e",
+    "firstName": "Cassie",
+    "lastName": "Reasner",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383062523-Cassie_Reasner_68fc9189e31b2db809d5371e.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1398,
+        "likes": 8037,
+        "comments": 166,
+        "engagementRate": 0.3813734640522583,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53755",
+    "firstName": "Shayla",
+    "lastName": "Meyer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383067351-Shayla_Meyer_68fc9189e31b2db809d53755.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2266,
+        "likes": 2148,
+        "comments": 186,
+        "engagementRate": 0.06846593331437653,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536e2",
+    "firstName": "Antonio",
+    "lastName": "Kite",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383073506-Antonio_Kite_68fc9189e31b2db809d536e2.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 22158,
+        "likes": 25685,
+        "comments": 1195,
+        "engagementRate": 0.0704050368717374,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d537a9",
+    "firstName": "Harrison",
+    "lastName": "Wallace III",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383064609-Harrison_Wallace III_68fc9189e31b2db809d537a9.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 15219,
+        "likes": 139080,
+        "comments": 2300,
+        "engagementRate": 0.6414723338901905,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5379e",
+    "firstName": "Jack",
+    "lastName": "Harper",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383071200-Jack_Harper_68fc9189e31b2db809d5379e.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3527,
+        "likes": 11549,
+        "comments": 686,
+        "engagementRate": 0.24974207103086196,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53769",
+    "firstName": "Austin",
+    "lastName": "Simmons",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383059797-Austin_Simmons_68fc9189e31b2db809d53769.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 51652,
+        "likes": 213290,
+        "comments": 3455,
+        "engagementRate": 0.21462206331201622,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536e7",
+    "firstName": "Micah",
+    "lastName": "Stallworth",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383066807-Micah_Stallworth_68fc9189e31b2db809d536e7.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 205,
+        "engagementRate": 0,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53767",
+    "firstName": "Oscar",
+    "lastName": "Bird",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383068014-Oscar_Bird_68fc9189e31b2db809d53767.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "P",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7316,
+        "likes": 53532,
+        "comments": 876,
+        "engagementRate": 0.4868579920036069,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5378d",
+    "firstName": "Cortez",
+    "lastName": "Thomas",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383072960-Cortez_Thomas_68fc9189e31b2db809d5378d.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5529,
+        "likes": 4777,
+        "comments": 152,
+        "engagementRate": 0.21812262615301137,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5374f",
+    "firstName": "Taylor",
+    "lastName": "Malvin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383071205-Taylor_Malvin_68fc9189e31b2db809d5374f.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4205,
+        "likes": 12235,
+        "comments": 313,
+        "engagementRate": 0.1855951940127704,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536e5",
+    "firstName": "Tavoy",
+    "lastName": "Feagin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383064603-Tavoy_Feagin_68fc9189e31b2db809d536e5.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 16677,
+        "likes": 3,
+        "comments": 131,
+        "engagementRate": 0.0006995662689132737,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53727",
+    "firstName": "Cammy",
+    "lastName": "Niesen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383068596-Cammy_Niesen_68fc9189e31b2db809d53727.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "L/DS",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2107,
+        "likes": 8137,
+        "comments": 342,
+        "engagementRate": 0.2622253209542102,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53722",
+    "firstName": "Ryan",
+    "lastName": "Starr",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383071837-Ryan_Starr_68fc9189e31b2db809d53722.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3305,
+        "likes": 8908,
+        "comments": 372,
+        "engagementRate": 0.19558268858551145,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5379f",
+    "firstName": "Sean",
+    "lastName": "Judge",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383059770-Sean_Judge_68fc9189e31b2db809d5379f.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3190,
+        "likes": 8259,
+        "comments": 540,
+        "engagementRate": 0.21029713298567326,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53756",
+    "firstName": "Brycen",
+    "lastName": "Sanders",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383061316-Brycen_Sanders_68fc9189e31b2db809d53756.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6002,
+        "likes": 5804,
+        "comments": 478,
+        "engagementRate": 0.061000586610018885,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536f3",
+    "firstName": "Jeffery",
+    "lastName": "Rush",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383063063-Jeffery_Rush_68fc9189e31b2db809d536f3.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1856,
+        "likes": 2221,
+        "comments": 102,
+        "engagementRate": 0.25032327586206893,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5375a",
+    "firstName": "Jayden",
+    "lastName": "Williams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383070437-Jayden_Williams_68fc9189e31b2db809d5375a.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2858,
+        "likes": 6017,
+        "comments": 474,
+        "engagementRate": 0.172875214744233,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536f2",
+    "firstName": "Jamarious",
+    "lastName": "Brown",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383062272-Jamarious_Brown_68fc9189e31b2db809d536f2.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10512,
+        "likes": 8893,
+        "comments": 297,
+        "engagementRate": 0.07146038458900461,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5372e",
+    "firstName": "Tahj",
+    "lastName": "Chambers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383064593-Tahj_Chambers_68fc9189e31b2db809d5372e.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1302,
+        "likes": 548,
+        "comments": 391,
+        "engagementRate": 0.08115719406041987,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d537b4",
+    "firstName": "Winston",
+    "lastName": "Watkins",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383063947-Winston_Watkins_68fc9189e31b2db809d537b4.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 127975,
+        "likes": 322112,
+        "comments": 3816,
+        "engagementRate": 0.15050304906494272,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5371c",
+    "firstName": "Kaidance",
+    "lastName": "Till",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383066144-Kaidance_Till_68fc9189e31b2db809d5371c.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2547,
+        "likes": 5058,
+        "comments": 545,
+        "engagementRate": 0.15101483721071002,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536ee",
+    "firstName": "Kam",
+    "lastName": "Franklin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383065224-Kam_Franklin_68fc9189e31b2db809d536ee.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 19500,
+        "likes": 55798,
+        "comments": 565,
+        "engagementRate": 0.1936258360672601,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53702",
+    "firstName": "Jayla",
+    "lastName": "Murray",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383071840-Jayla_Murray_68fc9189e31b2db809d53702.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2795,
+        "likes": 8238,
+        "comments": 647,
+        "engagementRate": 0.22759149854124486,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53792",
+    "firstName": "Ladarian",
+    "lastName": "Clardy",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383070459-Ladarian_Clardy_68fc9189e31b2db809d53792.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 13568,
+        "likes": 60177,
+        "comments": 811,
+        "engagementRate": 0.4994431341719078,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5379c",
+    "firstName": "Dae'Quan",
+    "lastName": "Wright",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383068640-Dae'Quan_Wright_68fc9189e31b2db809d5379c.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6791,
+        "likes": 57229,
+        "comments": 1999,
+        "engagementRate": 0.5914654651506999,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536fd",
+    "firstName": "Malik",
+    "lastName": "Dia",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383058538-Malik_Dia_68fc9189e31b2db809d536fd.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8676,
+        "likes": 10397,
+        "comments": 319,
+        "engagementRate": 0.15444555424172202,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5372c",
+    "firstName": "TJ",
+    "lastName": "Dottery",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383070649-TJ_Dottery_68fc9189e31b2db809d5372c.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 23857,
+        "likes": 52268,
+        "comments": 117,
+        "engagementRate": 0.1711616828014416,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536ea",
+    "firstName": "Isreal",
+    "lastName": "Solomon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383058771-Isreal_Solomon_68fc9189e31b2db809d536ea.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3777,
+        "likes": 1709,
+        "comments": 121,
+        "engagementRate": 0.08068282394375963,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53746",
+    "firstName": "Tessa",
+    "lastName": "Jones",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383072411-Tessa_Jones_68fc9189e31b2db809d53746.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1945,
+        "likes": 485,
+        "comments": 280,
+        "engagementRate": 0.018922125802302896,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536d9",
+    "firstName": "Madi",
+    "lastName": "Heine",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383067950-Madi_Heine_68fc9189e31b2db809d536d9.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "SOFTBALL",
+    "position": "C",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 770,
+        "likes": 2536,
+        "comments": 679,
+        "engagementRate": 0.29823147674606565,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d537a6",
+    "firstName": "Dillon",
+    "lastName": "Alfred",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383062239-Dillon_Alfred_68fc9189e31b2db809d537a6.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 80,
+        "engagementRate": 0,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53707",
+    "firstName": "Koren",
+    "lastName": "Johnson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383057899-Koren_Johnson_68fc9189e31b2db809d53707.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 23221,
+        "likes": 8289,
+        "comments": 708,
+        "engagementRate": 0.025982957418555185,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53709",
+    "firstName": "Eduardo",
+    "lastName": "Klafke",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383060578-Eduardo_Klafke_68fc9189e31b2db809d53709.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 16212,
+        "likes": 45155,
+        "comments": 916,
+        "engagementRate": 0.18939916397383202,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53752",
+    "firstName": "Caroline",
+    "lastName": "Ellis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383072387-Caroline_Ellis_68fc9189e31b2db809d53752.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2752,
+        "likes": 2704,
+        "comments": 907,
+        "engagementRate": 0.07382688303487535,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53715",
+    "firstName": "Will",
+    "lastName": "Furniss",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383068591-Will_Furniss_68fc9189e31b2db809d53715.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "IF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3957,
+        "likes": 19060,
+        "comments": 170,
+        "engagementRate": 0.3472360680081814,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53793",
+    "firstName": "Kegan",
+    "lastName": "Sherwood",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383069253-Kegan_Sherwood_68fc9189e31b2db809d53793.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1462,
+        "likes": 229,
+        "comments": 115,
+        "engagementRate": 0.03146374829001368,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5379d",
+    "firstName": "Luke",
+    "lastName": "Hasz",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383070450-Luke_Hasz_68fc9189e31b2db809d5379d.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 13646,
+        "likes": 53470,
+        "comments": 1285,
+        "engagementRate": 0.2870358063018606,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d537ab",
+    "firstName": "Deuce",
+    "lastName": "Alexander",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383057911-Deuce_Alexander_68fc9189e31b2db809d537ab.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 25282,
+        "likes": 66557,
+        "comments": 1722,
+        "engagementRate": 0.20618063293296263,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53786",
+    "firstName": "Kyra",
+    "lastName": "Aycock",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383068613-Kyra_Aycock_68fc9189e31b2db809d53786.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "SOFTBALL",
+    "position": "RHP",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1249,
+        "likes": 11245,
+        "comments": 304,
+        "engagementRate": 0.6604073658927143,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5377b",
+    "firstName": "Landon",
+    "lastName": "Koenig",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383058920-Landon_Koenig_68fc9189e31b2db809d5377b.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1153,
+        "likes": 5752,
+        "comments": 336,
+        "engagementRate": 0.4061387940989191,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5376e",
+    "firstName": "Austin",
+    "lastName": "Acton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383068004-Austin_Acton_68fc9189e31b2db809d5376e.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1363,
+        "likes": 4395,
+        "comments": 255,
+        "engagementRate": 0.26422385992103653,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536e1",
+    "firstName": "Jaylon",
+    "lastName": "Braxton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383059800-Jaylon_Braxton_68fc9189e31b2db809d536e1.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 14354,
+        "likes": 9452,
+        "comments": 860,
+        "engagementRate": 0.05184430072232519,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53743",
+    "firstName": "Carly",
+    "lastName": "Paugh",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383057869-Carly_Paugh_68fc9189e31b2db809d53743.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2534,
+        "likes": 6167,
+        "comments": 254,
+        "engagementRate": 0.19493926683453466,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53762",
+    "firstName": "Joe",
+    "lastName": "Koury",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383061602-Joe_Koury_68fc9189e31b2db809d53762.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5224,
+        "likes": 9,
+        "comments": 1239,
+        "engagementRate": 0.004862174578866768,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536f7",
+    "firstName": "Caleb",
+    "lastName": "James",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383059726-Caleb_James_68fc9189e31b2db809d536f7.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1163,
+        "likes": 2736,
+        "comments": 372,
+        "engagementRate": 0.29693321868730294,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53731",
+    "firstName": "Andrew",
+    "lastName": "Jones",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383066760-Andrew_Jones_68fc9189e31b2db809d53731.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 13327,
+        "likes": 43656,
+        "comments": 1365,
+        "engagementRate": 0.1713988570127907,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536e4",
+    "firstName": "John",
+    "lastName": "Ross Ashley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383064584-John_Ross Ashley_68fc9189e31b2db809d536e4.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1982,
+        "likes": 5072,
+        "comments": 281,
+        "engagementRate": 0.20847633519403874,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53787",
+    "firstName": "Graycen",
+    "lastName": "Jordan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383066814-Graycen_Jordan_68fc9189e31b2db809d53787.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "SOFTBALL",
+    "position": "RHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4109,
+        "likes": 8664,
+        "comments": 988,
+        "engagementRate": 0.168784000042487,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536f8",
+    "firstName": "Will",
+    "lastName": "Echoles",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383061665-Will_Echoles_68fc9189e31b2db809d536f8.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 14457,
+        "likes": 18557,
+        "comments": 727,
+        "engagementRate": 0.11978469065001542,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5377f",
+    "firstName": "Blake",
+    "lastName": "Ilitch",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383061327-Blake_Ilitch_68fc9189e31b2db809d5377f.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4673,
+        "likes": 21165,
+        "comments": 254,
+        "engagementRate": 0.3573330495387103,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53737",
+    "firstName": "Tyler",
+    "lastName": "Banks",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383057880-Tyler_Banks_68fc9189e31b2db809d53737.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7457,
+        "likes": 43158,
+        "comments": 725,
+        "engagementRate": 0.3921163122175386,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53757",
+    "firstName": "Connor",
+    "lastName": "Howes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383063921-Connor_Howes_68fc9189e31b2db809d53757.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1363,
+        "likes": 7830,
+        "comments": 200,
+        "engagementRate": 0.3934290808460611,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53721",
+    "firstName": "Grace",
+    "lastName": "Thompson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383070453-Grace_Thompson_68fc9189e31b2db809d53721.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1547,
+        "likes": 9382,
+        "comments": 256,
+        "engagementRate": 0.4792123071790274,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53754",
+    "firstName": "Gabi",
+    "lastName": "Placide",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383062530-Gabi_Placide_68fc9189e31b2db809d53754.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1881,
+        "likes": 7267,
+        "comments": 200,
+        "engagementRate": 0.22327195946764838,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53751",
+    "firstName": "Aniya",
+    "lastName": "Lewis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383069820-Aniya_Lewis_68fc9189e31b2db809d53751.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1093,
+        "likes": 4079,
+        "comments": 619,
+        "engagementRate": 0.28961464952858307,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53776",
+    "firstName": "Cade",
+    "lastName": "Townsend",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383071762-Cade_Townsend_68fc9189e31b2db809d53776.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7419,
+        "likes": 7992,
+        "comments": 390,
+        "engagementRate": 0.08530073511876989,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53788",
+    "firstName": "Emilee",
+    "lastName": "Boyer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383066175-Emilee_Boyer_68fc9189e31b2db809d53788.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "SOFTBALL",
+    "position": "RHP/UT",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1624,
+        "likes": 3523,
+        "comments": 290,
+        "engagementRate": 0.23018872592221515,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53750",
+    "firstName": "Annabelle",
+    "lastName": "De Jager",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383059763-Annabelle_De Jager_68fc9189e31b2db809d53750.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1528,
+        "likes": 3,
+        "comments": 711,
+        "engagementRate": 0.0020403449337850323,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53749",
+    "firstName": "Daniel",
+    "lastName": "Pacella",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383065191-Daniel_Pacella_68fc9189e31b2db809d53749.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "OF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2462,
+        "likes": 8422,
+        "comments": 252,
+        "engagementRate": 0.2708309470646286,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536ef",
+    "firstName": "Talib",
+    "lastName": "Graham",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383069244-Talib_Graham_68fc9189e31b2db809d536ef.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1603,
+        "likes": 3,
+        "comments": 99,
+        "engagementRate": 0.010605115408608859,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5370f",
+    "firstName": "Kaitlin",
+    "lastName": "Peterson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383069222-Kaitlin_Peterson_68fc9189e31b2db809d5370f.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6474,
+        "likes": 17852,
+        "comments": 1023,
+        "engagementRate": 0.22408515406342822,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d537b3",
+    "firstName": "Devin",
+    "lastName": "Price",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383070439-Devin_Price_68fc9189e31b2db809d537b3.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 464,
+        "engagementRate": 0,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53706",
+    "firstName": "Hobert",
+    "lastName": "Grayson IV",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383071778-Hobert_Grayson IV_68fc9189e31b2db809d53706.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1229,
+        "likes": 2157,
+        "comments": 405,
+        "engagementRate": 0.18283157038242476,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5378a",
+    "firstName": "Payton",
+    "lastName": "Kennedy",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383069831-Payton_Kennedy_68fc9189e31b2db809d5378a.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "SOFTBALL",
+    "position": "RHP/UT",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5157,
+        "likes": 10431,
+        "comments": 1066,
+        "engagementRate": 0.18241681195270928,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53785",
+    "firstName": "Lilly",
+    "lastName": "Whitten",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383063792-Lilly_Whitten_68fc9189e31b2db809d53785.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "SOFTBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1645,
+        "likes": 3746,
+        "comments": 330,
+        "engagementRate": 0.1829023458810693,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53717",
+    "firstName": "Owen",
+    "lastName": "Paino",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383058790-Owen_Paino_68fc9189e31b2db809d53717.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "IF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12624,
+        "likes": 48794,
+        "comments": 256,
+        "engagementRate": 0.2987574241996407,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536e8",
+    "firstName": "Maison",
+    "lastName": "Dunn",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383058418-Maison_Dunn_68fc9189e31b2db809d536e8.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2032,
+        "likes": 4270,
+        "comments": 69,
+        "engagementRate": 0.3558891076115486,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53712",
+    "firstName": "Tianna",
+    "lastName": "Thompson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383059746-Tianna_Thompson_68fc9189e31b2db809d53712.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11424,
+        "likes": 21805,
+        "comments": 640,
+        "engagementRate": 0.1619762488328665,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5374c",
+    "firstName": "Cassidy",
+    "lastName": "Patterson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383063077-Cassidy_Patterson_68fc9189e31b2db809d5374c.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 13706,
+        "likes": 16991,
+        "comments": 341,
+        "engagementRate": 0.09689390686708993,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5376f",
+    "firstName": "Domonique",
+    "lastName": "Thomas",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383068602-Domonique_Thomas_68fc9189e31b2db809d5376f.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9010,
+        "likes": 160074,
+        "comments": 407,
+        "engagementRate": 1.3691430235753286,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53760",
+    "firstName": "Mason",
+    "lastName": "Waddle",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383072367-Mason_Waddle_68fc9189e31b2db809d53760.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1887,
+        "likes": 10972,
+        "comments": 350,
+        "engagementRate": 0.4635258502131568,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53797",
+    "firstName": "Carson",
+    "lastName": "Eickenloff",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383067414-Carson_Eickenloff_68fc9189e31b2db809d53797.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2212,
+        "likes": 3425,
+        "comments": 1234,
+        "engagementRate": 0.1274603251523601,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d537b1",
+    "firstName": "Samari",
+    "lastName": "Reed",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383067436-Samari_Reed_68fc9189e31b2db809d537b1.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3246,
+        "likes": 6914,
+        "comments": 1460,
+        "engagementRate": 0.2571106413481125,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53711",
+    "firstName": "Sira",
+    "lastName": "Thienou",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383065183-Sira_Thienou_68fc9189e31b2db809d53711.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5346,
+        "likes": 4788,
+        "comments": 390,
+        "engagementRate": 0.06655340255716251,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53753",
+    "firstName": "Melia",
+    "lastName": "Johnson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383064580-Melia_Johnson_68fc9189e31b2db809d53753.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1895,
+        "likes": 2097,
+        "comments": 188,
+        "engagementRate": 0.09331574318381707,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d537a0",
+    "firstName": "Trace",
+    "lastName": "Bruckler",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383067970-Trace_Bruckler_68fc9189e31b2db809d537a0.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3325,
+        "likes": 6702,
+        "comments": 504,
+        "engagementRate": 0.15738504000995676,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53779",
+    "firstName": "Hudson",
+    "lastName": "Calhoun",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383057862-Hudson_Calhoun_68fc9189e31b2db809d53779.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5133,
+        "likes": 15439,
+        "comments": 544,
+        "engagementRate": 0.2594811351386454,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d537ad",
+    "firstName": "Joshua",
+    "lastName": "Pfeifer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383070445-Joshua_Pfeifer_68fc9189e31b2db809d537ad.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1859,
+        "likes": 5564,
+        "comments": 327,
+        "engagementRate": 0.26407566792182174,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536df",
+    "firstName": "Cedrick",
+    "lastName": "Beavers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383066804-Cedrick_Beavers_68fc9189e31b2db809d536df.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2636,
+        "likes": 2859,
+        "comments": 249,
+        "engagementRate": 0.19650986342943855,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5375b",
+    "firstName": "John",
+    "lastName": "Wayne Oliver",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383073537-John_Wayne Oliver_68fc9189e31b2db809d5375b.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2483,
+        "likes": 7114,
+        "comments": 553,
+        "engagementRate": 0.23864686247447897,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d537ac",
+    "firstName": "Izaiah",
+    "lastName": "Hartrup",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383065205-Izaiah_Hartrup_68fc9189e31b2db809d537ac.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2635,
+        "likes": 6985,
+        "comments": 170,
+        "engagementRate": 0.33662239089184065,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53778",
+    "firstName": "Owen",
+    "lastName": "Kelly",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383066812-Owen_Kelly_68fc9189e31b2db809d53778.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1624,
+        "likes": 757,
+        "comments": 355,
+        "engagementRate": 0.07916959887403238,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5373b",
+    "firstName": "Patrick",
+    "lastName": "Collopy",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383072335-Patrick_Collopy_68fc9189e31b2db809d5373b.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1469,
+        "likes": 239,
+        "comments": 357,
+        "engagementRate": 0.03380984796914,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5373a",
+    "firstName": "Walker",
+    "lastName": "Hooks",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383066018-Walker_Hooks_68fc9189e31b2db809d5373a.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3838,
+        "likes": 13486,
+        "comments": 300,
+        "engagementRate": 0.294532742747959,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5370a",
+    "firstName": "Travis",
+    "lastName": "Perry",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383067986-Travis_Perry_68fc9189e31b2db809d5370a.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 32591,
+        "likes": 64677,
+        "comments": 852,
+        "engagementRate": 0.1675539259304716,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53799",
+    "firstName": "Vivianna",
+    "lastName": "Samaniego",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383064587-Vivianna_Samaniego_68fc9189e31b2db809d53799.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 982,
+        "likes": 334,
+        "comments": 271,
+        "engagementRate": 0.04404276985743381,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5370e",
+    "firstName": "Denim",
+    "lastName": "DeShields",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383071747-Denim_DeShields_68fc9189e31b2db809d5370e.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12061,
+        "likes": 7812,
+        "comments": 563,
+        "engagementRate": 0.057865572230052786,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536d4",
+    "firstName": "Luke",
+    "lastName": "Romine",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383069839-Luke_Romine_68fc9189e31b2db809d536d4.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "1B/LHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1935,
+        "likes": 9947,
+        "comments": 294,
+        "engagementRate": 0.4809020436927414,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53784",
+    "firstName": "Leo",
+    "lastName": "Odom",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383063334-Leo_Odom_68fc9189e31b2db809d53784.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1987,
+        "likes": 5919,
+        "comments": 365,
+        "engagementRate": 0.2635463848347593,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53719",
+    "firstName": "Hayden",
+    "lastName": "Federico",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383058763-Hayden_Federico_68fc9189e31b2db809d53719.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "IF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5905,
+        "likes": 19239,
+        "comments": 286,
+        "engagementRate": 0.25434401864473555,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53734",
+    "firstName": "Ford",
+    "lastName": "Beeker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383063954-Ford_Beeker_68fc9189e31b2db809d53734.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2717,
+        "likes": 6436,
+        "comments": 589,
+        "engagementRate": 0.18523787873633074,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53729",
+    "firstName": "Cameron",
+    "lastName": "Bradley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383067424-Cameron_Bradley_68fc9189e31b2db809d53729.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "L/DS",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1034,
+        "likes": 4745,
+        "comments": 546,
+        "engagementRate": 0.3868471953578337,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53724",
+    "firstName": "Lucas",
+    "lastName": "Carneiro",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383063375-Lucas_Carneiro_68fc9189e31b2db809d53724.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "K",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3231,
+        "likes": 13987,
+        "comments": 633,
+        "engagementRate": 0.4113558988210799,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d537aa",
+    "firstName": "Traylon",
+    "lastName": "Ray",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383063945-Traylon_Ray_68fc9189e31b2db809d537aa.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4539,
+        "likes": 10598,
+        "comments": 1175,
+        "engagementRate": 0.19229926374741607,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53745",
+    "firstName": "Keirstyn",
+    "lastName": "Carlton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383066873-Keirstyn_Carlton_68fc9189e31b2db809d53745.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 959,
+        "likes": 3645,
+        "comments": 208,
+        "engagementRate": 0.33481056656239133,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53741",
+    "firstName": "Kortlen",
+    "lastName": "Wilfawn",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383066202-Kortlen_Wilfawn_68fc9189e31b2db809d53741.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LS",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1459,
+        "likes": 3828,
+        "comments": 231,
+        "engagementRate": 0.23183687457162439,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5371f",
+    "firstName": "Laylonna",
+    "lastName": "Applin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383064571-Laylonna_Applin_68fc9189e31b2db809d5371f.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 256,
+        "engagementRate": 0,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53742",
+    "firstName": "Caleb",
+    "lastName": "Blankenship",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383062241-Caleb_Blankenship_68fc9189e31b2db809d53742.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LS",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1622,
+        "likes": 30,
+        "comments": 211,
+        "engagementRate": 0.01485819975339088,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5372d",
+    "firstName": "Jarcoby",
+    "lastName": "Hopson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383065515-Jarcoby_Hopson_68fc9189e31b2db809d5372d.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5184,
+        "likes": 3179,
+        "comments": 251,
+        "engagementRate": 0.0478620826269088,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53794",
+    "firstName": "MJ",
+    "lastName": "Preston",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383057876-MJ_Preston_68fc9189e31b2db809d53794.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 401,
+        "engagementRate": 0,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5373f",
+    "firstName": "Addi",
+    "lastName": "Linton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383071203-Addi_Linton_68fc9189e31b2db809d5373f.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "SOFTBALL",
+    "position": "LHP/UT",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2727,
+        "likes": 1827,
+        "comments": 491,
+        "engagementRate": 0.044884488448844885,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53716",
+    "firstName": "Brayden",
+    "lastName": "Randle",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383067379-Brayden_Randle_68fc9189e31b2db809d53716.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "IF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3548,
+        "likes": 21017,
+        "comments": 506,
+        "engagementRate": 0.5055195415257422,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5371a",
+    "firstName": "Dom",
+    "lastName": "Decker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383069745-Dom_Decker_68fc9189e31b2db809d5371a.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "IF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1704,
+        "likes": 2769,
+        "comments": 96,
+        "engagementRate": 0.33626760563380287,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53705",
+    "firstName": "Kezza",
+    "lastName": "Giffa",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383068609-Kezza_Giffa_68fc9189e31b2db809d53705.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8602,
+        "likes": 7940,
+        "comments": 452,
+        "engagementRate": 0.06692433738469543,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536d5",
+    "firstName": "Bryden",
+    "lastName": "Bull",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383060348-Bryden_Bull_68fc9189e31b2db809d536d5.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "1B/OF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2168,
+        "likes": 27820,
+        "comments": 307,
+        "engagementRate": 1.0808348708487086,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536d7",
+    "firstName": "Austin",
+    "lastName": "Fawley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383062421-Austin_Fawley_68fc9189e31b2db809d536d7.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "C",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2406,
+        "likes": 19176,
+        "comments": 211,
+        "engagementRate": 0.6714810196730397,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53723",
+    "firstName": "Tenly",
+    "lastName": "Grisham",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383072999-Tenly_Grisham_68fc9189e31b2db809d53723.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1305,
+        "likes": 3916,
+        "comments": 270,
+        "engagementRate": 0.2291464350354767,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53747",
+    "firstName": "Brett",
+    "lastName": "Moseley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383071171-Brett_Moseley_68fc9189e31b2db809d53747.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "OF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2494,
+        "likes": 7393,
+        "comments": 267,
+        "engagementRate": 0.3414720883440176,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5371d",
+    "firstName": "Izzy",
+    "lastName": "Rettiger",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383068570-Izzy_Rettiger_68fc9189e31b2db809d5371d.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1574,
+        "likes": 5230,
+        "comments": 591,
+        "engagementRate": 0.3081850910631089,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d537a2",
+    "firstName": "Tate",
+    "lastName": "Sirmans",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383072372-Tate_Sirmans_68fc9189e31b2db809d537a2.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "UT",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3375,
+        "likes": 3675,
+        "comments": 447,
+        "engagementRate": 0.08820529081171175,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5370d",
+    "firstName": "AJ",
+    "lastName": "Storr",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383062231-AJ_Storr_68fc9189e31b2db809d5370d.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 17627,
+        "likes": 58820,
+        "comments": 1226,
+        "engagementRate": 0.3093704389443879,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d537a3",
+    "firstName": "Taylor",
+    "lastName": "Roman",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383068038-Taylor_Roman_68fc9189e31b2db809d537a3.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "SOFTBALL",
+    "position": "UT",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 677,
+        "likes": 2986,
+        "comments": 190,
+        "engagementRate": 0.38232397833579523,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5373c",
+    "firstName": "Grayson",
+    "lastName": "Gibson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383067871-Grayson_Gibson_68fc9189e31b2db809d5373c.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1937,
+        "likes": 2409,
+        "comments": 666,
+        "engagementRate": 0.12756840474961278,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53738",
+    "firstName": "Hunter",
+    "lastName": "Elliott",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383057943-Hunter_Elliott_68fc9189e31b2db809d53738.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6283,
+        "likes": 24522,
+        "comments": 375,
+        "engagementRate": 0.3602361350252484,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5378b",
+    "firstName": "Andy",
+    "lastName": "Jaffe",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383068574-Andy_Jaffe_68fc9189e31b2db809d5378b.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3311,
+        "likes": 8973,
+        "comments": 414,
+        "engagementRate": 0.3104131011107756,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53720",
+    "firstName": "Madi",
+    "lastName": "George",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383071784-Madi_George_68fc9189e31b2db809d53720.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 723,
+        "likes": 2636,
+        "comments": 324,
+        "engagementRate": 0.3411710465652375,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53710",
+    "firstName": "Lauren",
+    "lastName": "Jacobs",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383071189-Lauren_Jacobs_68fc9189e31b2db809d53710.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4635,
+        "likes": 9724,
+        "comments": 766,
+        "engagementRate": 0.18860122258180512,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536eb",
+    "firstName": "Cam",
+    "lastName": "Clark",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383072972-Cam_Clark_68fc9189e31b2db809d536eb.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 965,
+        "likes": 2623,
+        "comments": 41,
+        "engagementRate": 1.3803108808290157,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53748",
+    "firstName": "Cannon",
+    "lastName": "Goldin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383073452-Cannon_Goldin_68fc9189e31b2db809d53748.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "OF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5395,
+        "likes": 10548,
+        "comments": 420,
+        "engagementRate": 0.16348470806302132,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5371b",
+    "firstName": "Mackenzie",
+    "lastName": "Pickens",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383063964-Mackenzie_Pickens_68fc9189e31b2db809d5371b.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1865,
+        "likes": 30362,
+        "comments": 233,
+        "engagementRate": 1.3620643431635386,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53775",
+    "firstName": "Shekai",
+    "lastName": "Mills-Knight",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383063936-Shekai_Mills-Knight_68fc9189e31b2db809d53775.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5546,
+        "likes": 23608,
+        "comments": 811,
+        "engagementRate": 0.36691609568457745,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5378e",
+    "firstName": "Sage",
+    "lastName": "Ryan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383061580-Sage_Ryan_68fc9189e31b2db809d5378e.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12091,
+        "likes": 66390,
+        "comments": 1604,
+        "engagementRate": 0.46651779560554685,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5372f",
+    "firstName": "Jaden",
+    "lastName": "Yates",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383071829-Jaden_Yates_68fc9189e31b2db809d5372f.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 13771,
+        "likes": 31023,
+        "comments": 686,
+        "engagementRate": 0.25305997305125905,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53735",
+    "firstName": "Raymond",
+    "lastName": "Collins",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383065188-Raymond_Collins_68fc9189e31b2db809d53735.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2868,
+        "likes": 4850,
+        "comments": 282,
+        "engagementRate": 0.25562861127714687,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536fe",
+    "firstName": "Tylis",
+    "lastName": "Jordan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383072348-Tylis_Jordan_68fc9189e31b2db809d536fe.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4209,
+        "likes": 13866,
+        "comments": 474,
+        "engagementRate": 0.48671214743916097,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53713",
+    "firstName": "Debreasha",
+    "lastName": "Powe",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383060706-Debreasha_Powe_68fc9189e31b2db809d53713.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G/F",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6697,
+        "likes": 9729,
+        "comments": 711,
+        "engagementRate": 0.1272584739435568,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53771",
+    "firstName": "Damien",
+    "lastName": "Taylor",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383070519-Damien_Taylor_68fc9189e31b2db809d53771.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4982,
+        "likes": 9531,
+        "comments": 282,
+        "engagementRate": 0.16414090726615815,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53780",
+    "firstName": "JP",
+    "lastName": "Robertson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383069790-JP_Robertson_68fc9189e31b2db809d53780.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1359,
+        "likes": 5619,
+        "comments": 489,
+        "engagementRate": 0.3745401030169242,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53744",
+    "firstName": "Jordyn",
+    "lastName": "Towns",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383066190-Jordyn_Towns_68fc9189e31b2db809d53744.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1989,
+        "likes": 5281,
+        "comments": 464,
+        "engagementRate": 0.24069884364002012,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d537b2",
+    "firstName": "Levi",
+    "lastName": "Blount",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383069233-Levi_Blount_68fc9189e31b2db809d537b2.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1996,
+        "likes": 5804,
+        "comments": 316,
+        "engagementRate": 0.2555110220440882,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5378c",
+    "firstName": "Anthony",
+    "lastName": "Robinson III",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383063241-Anthony_Robinson III_68fc9189e31b2db809d5378c.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2874,
+        "likes": 893,
+        "comments": 485,
+        "engagementRate": 0.05178612850846671,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5370c",
+    "firstName": "Max",
+    "lastName": "Smith",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383064573-Max_Smith_68fc9189e31b2db809d5370c.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4802,
+        "likes": 1405,
+        "comments": 236,
+        "engagementRate": 0.08038317367763431,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5378f",
+    "firstName": "Kapena",
+    "lastName": "Gushiken",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383058865-Kapena_Gushiken_68fc9189e31b2db809d5378f.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2552,
+        "likes": 21463,
+        "comments": 330,
+        "engagementRate": 0.6492963012882664,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53704",
+    "firstName": "Zach",
+    "lastName": "Day",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383065195-Zach_Day_68fc9189e31b2db809d53704.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1667,
+        "likes": 1970,
+        "comments": 94,
+        "engagementRate": 0.41271745650869823,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53791",
+    "firstName": "Keon",
+    "lastName": "Young",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383069263-Keon_Young_68fc9189e31b2db809d53791.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8705,
+        "likes": 2495,
+        "comments": 190,
+        "engagementRate": 0.07716199192387392,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53782",
+    "firstName": "Jake",
+    "lastName": "Reigert",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383066758-Jake_Reigert_68fc9189e31b2db809d53782.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1746,
+        "likes": 4446,
+        "comments": 326,
+        "engagementRate": 0.2722794959908362,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536de",
+    "firstName": "Rachel",
+    "lastName": "Connors",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383067996-Rachel_Connors_68fc9189e31b2db809d536de.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "SOFTBALL",
+    "position": "C/UT",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1021,
+        "likes": 1751,
+        "comments": 145,
+        "engagementRate": 0.4338883447600392,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53730",
+    "firstName": "Bryson",
+    "lastName": "Walters",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383059749-Bryson_Walters_68fc9189e31b2db809d53730.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1056,
+        "likes": 5451,
+        "comments": 88,
+        "engagementRate": 1.3113162878787878,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536fa",
+    "firstName": "Niko",
+    "lastName": "Bundalo",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383065122-Niko_Bundalo_68fc9189e31b2db809d536fa.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 35615,
+        "likes": 51714,
+        "comments": 1102,
+        "engagementRate": 0.12311760026206187,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536d6",
+    "firstName": "Kelven",
+    "lastName": "Perera",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383061685-Kelven_Perera_68fc9189e31b2db809d536d6.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "C",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2271,
+        "likes": 2135,
+        "comments": 387,
+        "engagementRate": 0.14694596464741777,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d537b0",
+    "firstName": "Mac",
+    "lastName": "Owen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383063083-Mac_Owen_68fc9189e31b2db809d537b0.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2166,
+        "likes": 1975,
+        "comments": 146,
+        "engagementRate": 0.32640812557710064,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536f6",
+    "firstName": "Tavion",
+    "lastName": "Prather",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383069822-Tavion_Prather_68fc9189e31b2db809d536f6.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 82,
+        "engagementRate": 0,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536ff",
+    "firstName": "James",
+    "lastName": "Scott",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383073526-James_Scott_68fc9189e31b2db809d536ff.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5512,
+        "likes": 1382,
+        "comments": 195,
+        "engagementRate": 0.28610304789550073,
+        "contentCount": 1,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53781",
+    "firstName": "Evan",
+    "lastName": "Farrow",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383069230-Evan_Farrow_68fc9189e31b2db809d53781.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1312,
+        "likes": 5074,
+        "comments": 457,
+        "engagementRate": 0.4086890243902439,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536dc",
+    "firstName": "Collin",
+    "lastName": "Reuter",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383072974-Collin_Reuter_68fc9189e31b2db809d536dc.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "C/IF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2803,
+        "likes": 10813,
+        "comments": 217,
+        "engagementRate": 0.32792246402663816,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d536f1",
+    "firstName": "Andrew",
+    "lastName": "Maddox",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383065171-Andrew_Maddox_68fc9189e31b2db809d536f1.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6119,
+        "likes": 13714,
+        "comments": 485,
+        "engagementRate": 0.252746454576819,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5377c",
+    "firstName": "Landon",
+    "lastName": "Waters",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383061528-Landon_Waters_68fc9189e31b2db809d5377c.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1963,
+        "likes": 4103,
+        "comments": 195,
+        "engagementRate": 0.36491764306333846,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5377e",
+    "firstName": "Terry",
+    "lastName": "Hayes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383068631-Terry_Hayes_68fc9189e31b2db809d5377e.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1617,
+        "likes": 659,
+        "comments": 136,
+        "engagementRate": 0.49165120593692024,
+        "contentCount": 1,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53783",
+    "firstName": "Taylor",
+    "lastName": "Rabe",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383069175-Taylor_Rabe_68fc9189e31b2db809d53783.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2026,
+        "likes": 3624,
+        "comments": 310,
+        "engagementRate": 0.6472523856531754,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5377d",
+    "firstName": "Owen",
+    "lastName": "Hancock",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383067428-Owen_Hancock_68fc9189e31b2db809d5377d.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1680,
+        "likes": 12075,
+        "comments": 135,
+        "engagementRate": 1.2113095238095237,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d537a4",
+    "firstName": "Caleb",
+    "lastName": "Cunningham",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383067392-Caleb_Cunningham_68fc9189e31b2db809d537a4.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 16612,
+        "likes": 94762,
+        "comments": 2326,
+        "engagementRate": 0.6493833105920753,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5376b",
+    "firstName": "Maealiuaki",
+    "lastName": "Smith",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383072945-Maealiuaki_Smith_68fc9189e31b2db809d5376b.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4074,
+        "likes": 1979,
+        "comments": 127,
+        "engagementRate": 0.24656357388316152,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d5372a",
+    "firstName": "DeeJay",
+    "lastName": "Holmes Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383060665-DeeJay_Holmes Jr._68fc9189e31b2db809d5372a.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 153,
+        "engagementRate": 0,
+        "contentCount": 1,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc9189e31b2db809d53728",
+    "firstName": "Bella",
+    "lastName": "Bonanno",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761383072948-Bella_Bonanno_68fc9189e31b2db809d53728.png",
+    "schoolName": "Ole Miss",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "L/DS",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 694,
+        "likes": 1743,
+        "comments": 279,
+        "engagementRate": 0.24279538904899134,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  }
+]

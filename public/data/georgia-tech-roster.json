@@ -1,0 +1,3866 @@
+[
+  {
+    "_id": "6903bedd28bbe62117fa82ab",
+    "firstName": "Brianna",
+    "lastName": "Turnage",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853285820-Brianna_Turnage_6903bedd28bbe62117fa82ab.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6591,
+        "likes": 17035,
+        "comments": 512,
+        "engagementRate": 0.1560408315144781,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa821c",
+    "firstName": "Ryan",
+    "lastName": "Zuckerman",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853297712-Ryan_Zuckerman_6903bedd28bbe62117fa821c.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2086,
+        "likes": 12631,
+        "comments": 364,
+        "engagementRate": 0.5194451920030565,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82c3",
+    "firstName": "Paige",
+    "lastName": "Carroll",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853295749-Paige_Carroll_6903bedd28bbe62117fa82c3.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_SOFTBALL",
+    "position": "INF",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1450,
+        "likes": 3,
+        "comments": 676,
+        "engagementRate": 0.0019827586206896553,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82cb",
+    "firstName": "Sydnie",
+    "lastName": "Watts",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853287756-Sydnie_Watts_6903bedd28bbe62117fa82cb.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_SOFTBALL",
+    "position": "P",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1548,
+        "likes": 3979,
+        "comments": 506,
+        "engagementRate": 0.36216085271317827,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82d6",
+    "firstName": "Liv",
+    "lastName": "Mogridge",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853300260-Liv_Mogridge_6903bedd28bbe62117fa82d6.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MIDDLE BLOCKER",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1512,
+        "likes": 10014,
+        "comments": 310,
+        "engagementRate": 0.40700790006373955,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82c4",
+    "firstName": "Madi",
+    "lastName": "Duffel",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853292309-Madi_Duffel_6903bedd28bbe62117fa82c4.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_SOFTBALL",
+    "position": "INF/UTL",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2019,
+        "likes": 3909,
+        "comments": 460,
+        "engagementRate": 0.1803285454845633,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8242",
+    "firstName": "Ahmari",
+    "lastName": "Harvey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853283644-Ahmari_Harvey_6903bedd28bbe62117fa8242.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9191,
+        "likes": 24268,
+        "comments": 1515,
+        "engagementRate": 0.1629739162744466,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82b8",
+    "firstName": "Payton",
+    "lastName": "Miller",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853285840-Payton_Miller_6903bedd28bbe62117fa82b8.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_SOFTBALL",
+    "position": "C",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1198,
+        "likes": 644,
+        "comments": 655,
+        "engagementRate": 0.04917779181410325,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82cd",
+    "firstName": "Victoria",
+    "lastName": "Bryant",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853290682-Victoria_Bryant_6903bedd28bbe62117fa82cd.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_SOFTBALL",
+    "position": "P",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 947,
+        "likes": 2918,
+        "comments": 476,
+        "engagementRate": 0.2756884087401511,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8224",
+    "firstName": "Drew",
+    "lastName": "Burress",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853291390-Drew_Burress_6903bedd28bbe62117fa8224.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "OF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 58566,
+        "likes": 49944,
+        "comments": 319,
+        "engagementRate": 0.05734104467217849,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8217",
+    "firstName": "Brett",
+    "lastName": "Barfield",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853299572-Brett_Barfield_6903bedd28bbe62117fa8217.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1182,
+        "likes": 3338,
+        "comments": 210,
+        "engagementRate": 0.3001692047377327,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82c1",
+    "firstName": "Jayden",
+    "lastName": "Gailey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853296354-Jayden_Gailey_6903bedd28bbe62117fa82c1.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_SOFTBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2129,
+        "likes": 566,
+        "comments": 491,
+        "engagementRate": 0.01912366637589747,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82c2",
+    "firstName": "Landri",
+    "lastName": "Pick",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853296939-Landri_Pick_6903bedd28bbe62117fa82c2.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_SOFTBALL",
+    "position": "INF",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 390,
+        "likes": 342,
+        "comments": 1,
+        "engagementRate": 0.43974358974358974,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8294",
+    "firstName": "Trelain",
+    "lastName": "Maddox",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853299532-Trelain_Maddox_6903bedd28bbe62117fa8294.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2187,
+        "likes": 9961,
+        "comments": 745,
+        "engagementRate": 0.2903067378175989,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82d4",
+    "firstName": "Bianca",
+    "lastName": "Garibaldi",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853295723-Bianca_Garibaldi_6903bedd28bbe62117fa82d4.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MIDDLE BLOCKER",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4882,
+        "likes": 13105,
+        "comments": 459,
+        "engagementRate": 0.13165490204600408,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa827b",
+    "firstName": "Peyton",
+    "lastName": "Joseph",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853285885-Peyton_Joseph_6903bedd28bbe62117fa827b.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 20514,
+        "likes": 37241,
+        "comments": 1485,
+        "engagementRate": 0.1562499880833123,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8238",
+    "firstName": "Akai",
+    "lastName": "Fleming",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853294869-Akai_Fleming_6903bedd28bbe62117fa8238.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7603,
+        "likes": 15580,
+        "comments": 527,
+        "engagementRate": 0.1410782822561046,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa829b",
+    "firstName": "J.T.",
+    "lastName": "Byrne",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853287380-J.T._Byrne_6903bedd28bbe62117fa829b.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "TE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2877,
+        "likes": 9059,
+        "comments": 297,
+        "engagementRate": 0.361333178851427,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8218",
+    "firstName": "Kent",
+    "lastName": "Schmidt",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853287389-Kent_Schmidt_6903bedd28bbe62117fa8218.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2364,
+        "likes": 18104,
+        "comments": 187,
+        "engagementRate": 0.5184144662233912,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8280",
+    "firstName": "Chad",
+    "lastName": "Alexander",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853296324-Chad_Alexander_6903bedd28bbe62117fa8280.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "RB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5789,
+        "likes": 2902,
+        "comments": 557,
+        "engagementRate": 0.05930788276616572,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8245",
+    "firstName": "Clayton",
+    "lastName": "Powell-Lee",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853299557-Clayton_Powell-Lee_6903bedd28bbe62117fa8245.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8436,
+        "likes": 19705,
+        "comments": 1049,
+        "engagementRate": 0.20083570412517782,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82df",
+    "firstName": "Larissa",
+    "lastName": "Mendes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853287661-Larissa_Mendes_6903bedd28bbe62117fa82df.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "RIGHT SIDE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5594,
+        "likes": 17543,
+        "comments": 843,
+        "engagementRate": 0.27389464902872124,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8237",
+    "firstName": "Kowacie",
+    "lastName": "Reeves, Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853296894-Kowacie_Reeves, Jr._6903bedd28bbe62117fa8237.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASKETBALL",
+    "position": "FORWARD",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 216540,
+        "likes": 30765,
+        "comments": 0,
+        "engagementRate": 0.010357659198321082,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82b3",
+    "firstName": "La'Nya",
+    "lastName": "Foster",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853281859-La'Nya_Foster_6903bedd28bbe62117fa82b3.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1622,
+        "likes": 1844,
+        "comments": 278,
+        "engagementRate": 0.0895380821398084,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82d7",
+    "firstName": "Anika",
+    "lastName": "Groom",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853290499-Anika_Groom_6903bedd28bbe62117fa82d7.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OUTSIDE HITTER",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 1125,
+        "engagementRate": 0,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82c5",
+    "firstName": "Abby",
+    "lastName": "McKinnis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853288620-Abby_McKinnis_6903bedd28bbe62117fa82c5.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_SOFTBALL",
+    "position": "OF",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 991,
+        "likes": 4831,
+        "comments": 839,
+        "engagementRate": 0.3387984092702197,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82b2",
+    "firstName": "Talayah",
+    "lastName": "Walker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853284824-Talayah_Walker_6903bedd28bbe62117fa82b2.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1856,
+        "likes": 574,
+        "comments": 363,
+        "engagementRate": 0.02860501567398119,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa823e",
+    "firstName": "Lamar",
+    "lastName": "Washington",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853289531-Lamar_Washington_6903bedd28bbe62117fa823e.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8352,
+        "likes": 14856,
+        "comments": 624,
+        "engagementRate": 0.09056583308787733,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa829f",
+    "firstName": "Luke",
+    "lastName": "Harpring",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853293968-Luke_Harpring_6903bedd28bbe62117fa829f.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2493,
+        "likes": 26997,
+        "comments": 1329,
+        "engagementRate": 0.7282245190069173,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82e1",
+    "firstName": "Heloise",
+    "lastName": "Soares",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853283968-Heloise_Soares_6903bedd28bbe62117fa82e1.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "SETTER",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8808,
+        "likes": 10361,
+        "comments": 442,
+        "engagementRate": 0.0934698544907328,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8222",
+    "firstName": "Kayden",
+    "lastName": "Campbell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853294861-Kayden_Campbell_6903bedd28bbe62117fa8222.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1885,
+        "likes": 7138,
+        "comments": 238,
+        "engagementRate": 0.29394092439563607,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82a8",
+    "firstName": "Jordan",
+    "lastName": "Allen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853294858-Jordan_Allen_6903bedd28bbe62117fa82a8.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8681,
+        "likes": 44550,
+        "comments": 1606,
+        "engagementRate": 0.383490512671196,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82a6",
+    "firstName": "Isiah",
+    "lastName": "Canion",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853294840-Isiah_Canion_6903bedd28bbe62117fa82a6.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6006,
+        "likes": 65211,
+        "comments": 1772,
+        "engagementRate": 0.7524412192707853,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8244",
+    "firstName": "Christian",
+    "lastName": "Pritchett",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853295761-Christian_Pritchett_6903bedd28bbe62117fa8244.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2754,
+        "likes": 4393,
+        "comments": 1111,
+        "engagementRate": 0.11083214789904756,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa823c",
+    "firstName": "Eric",
+    "lastName": "Chatfield, Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853282913-Eric_Chatfield, Jr._6903bedd28bbe62117fa823c.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2439,
+        "likes": 3535,
+        "comments": 437,
+        "engagementRate": 0.08169381353306275,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82a2",
+    "firstName": "Dean",
+    "lastName": "Patterson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853282836-Dean_Patterson_6903bedd28bbe62117fa82a2.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2674,
+        "likes": 31123,
+        "comments": 568,
+        "engagementRate": 0.9801447439026156,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8221",
+    "firstName": "Dylan",
+    "lastName": "Loy",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853287538-Dylan_Loy_6903bedd28bbe62117fa8221.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3521,
+        "likes": 25942,
+        "comments": 388,
+        "engagementRate": 0.5745969822380921,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82a4",
+    "firstName": "Eric",
+    "lastName": "Rivers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853293996-Eric_Rivers_6903bedd28bbe62117fa82a4.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7320,
+        "likes": 31481,
+        "comments": 934,
+        "engagementRate": 0.24673876840771541,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8284",
+    "firstName": "Aaron",
+    "lastName": "Philo",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853287401-Aaron_Philo_6903bedd28bbe62117fa8284.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9975,
+        "likes": 81801,
+        "comments": 1803,
+        "engagementRate": 0.5443452568294223,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82dc",
+    "firstName": "Laura",
+    "lastName": "Bieleski",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853281983-Laura_Bieleski_6903bedd28bbe62117fa82dc.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OUTSIDE HITTER",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4605,
+        "likes": 8823,
+        "comments": 834,
+        "engagementRate": 0.14907943166856216,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82a0",
+    "firstName": "Bailey",
+    "lastName": "Stockton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853295664-Bailey_Stockton_6903bedd28bbe62117fa82a0.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9138,
+        "likes": 48217,
+        "comments": 1855,
+        "engagementRate": 0.4227824330552648,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82dd",
+    "firstName": "Noemi",
+    "lastName": "Despaigne",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853290773-Noemi_Despaigne_6903bedd28bbe62117fa82dd.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OUTSIDE HITTER",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2584,
+        "likes": 1177,
+        "comments": 445,
+        "engagementRate": 0.032185957546508194,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8229",
+    "firstName": "Charlie",
+    "lastName": "Willcox",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853299521-Charlie_Willcox_6903bedd28bbe62117fa8229.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2933,
+        "likes": 9485,
+        "comments": 347,
+        "engagementRate": 0.2394075375182571,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82c0",
+    "firstName": "Gracyn",
+    "lastName": "Tucker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853299605-Gracyn_Tucker_6903bedd28bbe62117fa82c0.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_SOFTBALL",
+    "position": "INF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2497,
+        "likes": 220,
+        "comments": 157,
+        "engagementRate": 0.007709251101321586,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa828a",
+    "firstName": "Joshua",
+    "lastName": "Taylor",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853296883-Joshua_Taylor_6903bedd28bbe62117fa828a.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "P",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 982,
+        "likes": 3373,
+        "comments": 522,
+        "engagementRate": 0.2846052725718217,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8254",
+    "firstName": "Zachary",
+    "lastName": "Tobe",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853292299-Zachary_Tobe_6903bedd28bbe62117fa8254.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3095,
+        "likes": 2043,
+        "comments": 474,
+        "engagementRate": 0.058535271943995694,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82a7",
+    "firstName": "Jamauri",
+    "lastName": "Brice",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853296320-Jamauri_Brice_6903bedd28bbe62117fa82a7.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9843,
+        "likes": 1374,
+        "comments": 299,
+        "engagementRate": 0.014289193594227792,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8233",
+    "firstName": "Cole",
+    "lastName": "Kirouac",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853299564-Cole_Kirouac_6903bedd28bbe62117fa8233.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASKETBALL",
+    "position": "CENTER",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3221,
+        "likes": 23433,
+        "comments": 689,
+        "engagementRate": 0.5323218305096022,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa828d",
+    "firstName": "Daylon",
+    "lastName": "Gordon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853290469-Daylon_Gordon_6903bedd28bbe62117fa828d.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "RB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2867,
+        "likes": 7000,
+        "comments": 296,
+        "engagementRate": 0.36386035580954695,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82db",
+    "firstName": "Lameen",
+    "lastName": "Mambu",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853282860-Lameen_Mambu_6903bedd28bbe62117fa82db.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OUTSIDE HITTER",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2350,
+        "likes": 6818,
+        "comments": 1223,
+        "engagementRate": 0.16517408034958733,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82d5",
+    "firstName": "DeAndra",
+    "lastName": "Pierce",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853299010-DeAndra_Pierce_6903bedd28bbe62117fa82d5.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MIDDLE BLOCKER",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4227,
+        "likes": 3230,
+        "comments": 746,
+        "engagementRate": 0.057476994392248584,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8243",
+    "firstName": "Ben",
+    "lastName": "Hollerbach",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853286466-Ben_Hollerbach_6903bedd28bbe62117fa8243.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6778,
+        "likes": 19354,
+        "comments": 773,
+        "engagementRate": 0.22492529084772064,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82d9",
+    "firstName": "Gabi",
+    "lastName": "Robinska",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853286825-Gabi_Robinska_6903bedd28bbe62117fa82d9.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OUTSIDE HITTER",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 593,
+        "likes": 893,
+        "comments": 71,
+        "engagementRate": 0.15481211402655554,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82ad",
+    "firstName": "Erica",
+    "lastName": "Moon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853291400-Erica_Moon_6903bedd28bbe62117fa82ad.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3345,
+        "likes": 3421,
+        "comments": 137,
+        "engagementRate": 0.17149975087194816,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82bf",
+    "firstName": "Addison",
+    "lastName": "Leschber",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853293155-Addison_Leschber_6903bedd28bbe62117fa82bf.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_SOFTBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1484,
+        "likes": 3794,
+        "comments": 231,
+        "engagementRate": 0.20882254265251302,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8290",
+    "firstName": "Jamal",
+    "lastName": "Haynes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853293989-Jamal_Haynes_6903bedd28bbe62117fa8290.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "RB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 37598,
+        "likes": 54517,
+        "comments": 2053,
+        "engagementRate": 0.10691655784826484,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8250",
+    "firstName": "Rodney",
+    "lastName": "Shelley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853288280-Rodney_Shelley_6903bedd28bbe62117fa8250.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5641,
+        "likes": 16293,
+        "comments": 2085,
+        "engagementRate": 0.19246696320898687,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82d2",
+    "firstName": "Sofia",
+    "lastName": "Velez",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853289546-Sofia_Velez_6903bedd28bbe62117fa82d2.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "DEFENSIVE SPECIALIST/LIBERO",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2583,
+        "likes": 6141,
+        "comments": 244,
+        "engagementRate": 0.1899988239489972,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82cf",
+    "firstName": "Gracie",
+    "lastName": "King",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853294282-Gracie_King_6903bedd28bbe62117fa82cf.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_SOFTBALL",
+    "position": "UTL",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 780,
+        "likes": 3,
+        "comments": 278,
+        "engagementRate": 0.007692307692307693,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8246",
+    "firstName": "D.J.",
+    "lastName": "Moore",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853297730-D.J._Moore_6903bedd28bbe62117fa8246.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11392,
+        "likes": 33159,
+        "comments": 991,
+        "engagementRate": 0.22995878480609738,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8258",
+    "firstName": "Andre",
+    "lastName": "Fuller, Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853281739-Andre_Fuller, Jr._6903bedd28bbe62117fa8258.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1588,
+        "likes": 4283,
+        "comments": 294,
+        "engagementRate": 0.4117488305145736,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8227",
+    "firstName": "Caleb",
+    "lastName": "Daniel",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853285831-Caleb_Daniel_6903bedd28bbe62117fa8227.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "OF/UTL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2073,
+        "likes": 13738,
+        "comments": 300,
+        "engagementRate": 0.5210672652609563,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82c6",
+    "firstName": "Alyssa",
+    "lastName": "Willer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853286530-Alyssa_Willer_6903bedd28bbe62117fa82c6.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_SOFTBALL",
+    "position": "OF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1426,
+        "likes": 15981,
+        "comments": 188,
+        "engagementRate": 0.8743186180296381,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82bb",
+    "firstName": "Holly",
+    "lastName": "Medina",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853298971-Holly_Medina_6903bedd28bbe62117fa82bb.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_SOFTBALL",
+    "position": "UTL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1657,
+        "likes": 5950,
+        "comments": 718,
+        "engagementRate": 0.25156929245887494,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82a5",
+    "firstName": "Evan",
+    "lastName": "Haynes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853281835-Evan_Haynes_6903bedd28bbe62117fa82a5.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8265,
+        "likes": 10578,
+        "comments": 623,
+        "engagementRate": 0.10155893713062498,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82b1",
+    "firstName": "Déborah",
+    "lastName": "Mukeba",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853281976-DÃ©borah_Mukeba_6903bedd28bbe62117fa82b1.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "CENTER",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 30,
+        "engagementRate": 0,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8260",
+    "firstName": "Jordan",
+    "lastName": "van den Berg",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853296307-Jordan_van den Berg_6903bedd28bbe62117fa8260.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7281,
+        "likes": 104069,
+        "comments": 709,
+        "engagementRate": 0.9572817822835508,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa826c",
+    "firstName": "Ronnie",
+    "lastName": "Thomas",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853289556-Ronnie_Thomas_6903bedd28bbe62117fa826c.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "LS",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1730,
+        "likes": 1299,
+        "comments": 726,
+        "engagementRate": 0.055718845902609164,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8287",
+    "firstName": "Joseph",
+    "lastName": "Moseley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853293109-Joseph_Moseley_6903bedd28bbe62117fa8287.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1758,
+        "likes": 6078,
+        "comments": 574,
+        "engagementRate": 0.29131569321952105,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8279",
+    "firstName": "Keylan",
+    "lastName": "Rutledge",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853287557-Keylan_Rutledge_6903bedd28bbe62117fa8279.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2824,
+        "likes": 18227,
+        "comments": 576,
+        "engagementRate": 0.3953533422906711,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8270",
+    "firstName": "Benjamin",
+    "lastName": "Galloway",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853283566-Benjamin_Galloway_6903bedd28bbe62117fa8270.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 955,
+        "likes": 1687,
+        "comments": 164,
+        "engagementRate": 0.2768885564697083,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8212",
+    "firstName": "Nathanael",
+    "lastName": "Coupet",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853291412-Nathanael_Coupet_6903bedd28bbe62117fa8212.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "C/OF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1239,
+        "likes": 1259,
+        "comments": 315,
+        "engagementRate": 0.0772101409329454,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82ca",
+    "firstName": "Makayla",
+    "lastName": "Coffield",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853296986-Makayla_Coffield_6903bedd28bbe62117fa82ca.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_SOFTBALL",
+    "position": "P",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2804,
+        "likes": 1637,
+        "comments": 366,
+        "engagementRate": 0.04272090675318533,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa829a",
+    "firstName": "Connor",
+    "lastName": "Roush",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853285811-Connor_Roush_6903bedd28bbe62117fa829a.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4154,
+        "likes": 8221,
+        "comments": 525,
+        "engagementRate": 0.1914036853853898,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82e0",
+    "firstName": "Abi",
+    "lastName": "Li",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853282826-Abi_Li_6903bedd28bbe62117fa82e0.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "SETTER",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3259,
+        "likes": 22,
+        "comments": 411,
+        "engagementRate": 0.0008524138016798243,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8291",
+    "firstName": "Malachi",
+    "lastName": "Hosley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853291419-Malachi_Hosley_6903bedd28bbe62117fa8291.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "RB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3360,
+        "likes": 23466,
+        "comments": 545,
+        "engagementRate": 0.5501847290640394,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82ba",
+    "firstName": "Caroline",
+    "lastName": "Patterson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853294025-Caroline_Patterson_6903bedd28bbe62117fa82ba.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_SOFTBALL",
+    "position": "C/OF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1444,
+        "likes": 322,
+        "comments": 332,
+        "engagementRate": 0.018755771006463525,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82d3",
+    "firstName": "Anna",
+    "lastName": "Boezi",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853291402-Anna_Boezi_6903bedd28bbe62117fa82d3.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MIDDLE BLOCKER",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2263,
+        "likes": 756,
+        "comments": 984,
+        "engagementRate": 0.030632195609287437,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa824a",
+    "firstName": "Fenix",
+    "lastName": "Felton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853296924-Fenix_Felton_6903bedd28bbe62117fa824a.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2026,
+        "likes": 4468,
+        "comments": 287,
+        "engagementRate": 0.1811509562120047,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82b6",
+    "firstName": "D’Asia",
+    "lastName": "Thomas-Harris",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853297663-DâAsia_Thomas-Harris_6903bedd28bbe62117fa82b6.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G/F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1700,
+        "likes": 22,
+        "comments": 41,
+        "engagementRate": 0.006470588235294118,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8282",
+    "firstName": "Aidan",
+    "lastName": "Birr",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853296921-Aidan_Birr_6903bedd28bbe62117fa8282.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "PK",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3671,
+        "likes": 55877,
+        "comments": 663,
+        "engagementRate": 0.9102745588582962,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa829e",
+    "firstName": "Chris",
+    "lastName": "Elko",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853297692-Chris_Elko_6903bedd28bbe62117fa829e.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2234,
+        "likes": 3503,
+        "comments": 216,
+        "engagementRate": 0.32515666965085044,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8299",
+    "firstName": "Brett",
+    "lastName": "Seither",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853297704-Brett_Seither_6903bedd28bbe62117fa8299.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "TE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8937,
+        "likes": 25164,
+        "comments": 813,
+        "engagementRate": 0.22360132141454378,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8257",
+    "firstName": "Amontrae",
+    "lastName": "Bradford",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853281912-Amontrae_Bradford_6903bedd28bbe62117fa8257.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7819,
+        "likes": 35578,
+        "comments": 424,
+        "engagementRate": 0.41858410166377935,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8283",
+    "firstName": "Landon",
+    "lastName": "Shaffer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853288612-Landon_Shaffer_6903bedd28bbe62117fa8283.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "PK",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 826,
+        "likes": 2289,
+        "comments": 236,
+        "engagementRate": 0.38211259079903154,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8289",
+    "firstName": "Will",
+    "lastName": "Kiker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853300243-Will_Kiker_6903bedd28bbe62117fa8289.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5053,
+        "likes": 149178,
+        "comments": 1158,
+        "engagementRate": 2.2900514977247073,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa826b",
+    "firstName": "Tah'j",
+    "lastName": "Butler",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853293111-Tah'j_Butler_6903bedd28bbe62117fa826b.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2364,
+        "likes": 9322,
+        "comments": 923,
+        "engagementRate": 0.6191080493110949,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8278",
+    "firstName": "Kevin",
+    "lastName": "Peay, Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853282834-Kevin_Peay, Jr._6903bedd28bbe62117fa8278.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10257,
+        "likes": 9685,
+        "comments": 277,
+        "engagementRate": 0.24280978843716486,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8281",
+    "firstName": "Marshall",
+    "lastName": "Nichols",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853298959-Marshall_Nichols_6903bedd28bbe62117fa8281.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "P",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2075,
+        "likes": 5854,
+        "comments": 277,
+        "engagementRate": 0.2686089813800657,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8295",
+    "firstName": "Jacob",
+    "lastName": "Benjamin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853289521-Jacob_Benjamin_6903bedd28bbe62117fa8295.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1046,
+        "likes": 3,
+        "comments": 125,
+        "engagementRate": 0.0010295631710545668,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa825e",
+    "firstName": "Jason",
+    "lastName": "Moore",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853293952-Jason_Moore_6903bedd28bbe62117fa825e.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2179,
+        "likes": 4187,
+        "comments": 796,
+        "engagementRate": 0.1858206440136337,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82c8",
+    "firstName": "Raegan",
+    "lastName": "Wall",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853296935-Raegan_Wall_6903bedd28bbe62117fa82c8.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_SOFTBALL",
+    "position": "OF",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1312,
+        "likes": 3580,
+        "comments": 475,
+        "engagementRate": 0.23205549346758586,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8248",
+    "firstName": "Dalen",
+    "lastName": "Penson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853286772-Dalen_Penson_6903bedd28bbe62117fa8248.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2869,
+        "likes": 4457,
+        "comments": 1102,
+        "engagementRate": 0.12147014505188083,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa824f",
+    "firstName": "Omar",
+    "lastName": "Daniels",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853293141-Omar_Daniels_6903bedd28bbe62117fa824f.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6812,
+        "likes": 17346,
+        "comments": 658,
+        "engagementRate": 0.22024858093560382,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8263",
+    "firstName": "Ronald",
+    "lastName": "Triplette",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853288271-Ronald_Triplette_6903bedd28bbe62117fa8263.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1731,
+        "likes": 472,
+        "comments": 428,
+        "engagementRate": 0.04726642508271624,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa826f",
+    "firstName": "Brayden",
+    "lastName": "Manley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853289587-Brayden_Manley_6903bedd28bbe62117fa826f.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2355,
+        "likes": 8919,
+        "comments": 814,
+        "engagementRate": 0.3444090587402689,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8265",
+    "firstName": "Cayman",
+    "lastName": "Spaulding",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853294814-Cayman_Spaulding_6903bedd28bbe62117fa8265.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3237,
+        "likes": 372,
+        "comments": 881,
+        "engagementRate": 0.03225723406446298,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa828b",
+    "firstName": "Graham",
+    "lastName": "Knowles",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853292320-Graham_Knowles_6903bedd28bbe62117fa828b.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9299,
+        "likes": 7082,
+        "comments": 372,
+        "engagementRate": 0.0651145284439187,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82da",
+    "firstName": "Ital",
+    "lastName": "Lopuyo",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853296906-Ital_Lopuyo_6903bedd28bbe62117fa82da.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OUTSIDE HITTER",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 45,
+        "engagementRate": 0,
+        "contentCount": 1,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82be",
+    "firstName": "Katie",
+    "lastName": "Cunane",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853295164-Katie_Cunane_6903bedd28bbe62117fa82be.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_SOFTBALL",
+    "position": "PITCHER",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 439,
+        "engagementRate": 0,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82b5",
+    "firstName": "Ariadna",
+    "lastName": "Termis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853281953-Ariadna_Termis_6903bedd28bbe62117fa82b5.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "CENTER",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2229,
+        "likes": 717,
+        "comments": 214,
+        "engagementRate": 0.025644775043874652,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82d8",
+    "firstName": "Anna",
+    "lastName": "Fiedorowicz",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853291695-Anna_Fiedorowicz_6903bedd28bbe62117fa82d8.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OUTSIDE HITTER",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2579,
+        "likes": 6630,
+        "comments": 215,
+        "engagementRate": 0.20414303919373508,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82b0",
+    "firstName": "Jada",
+    "lastName": "Crawshaw",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853285911-Jada_Crawshaw_6903bedd28bbe62117fa82b0.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "FORWARD",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3113,
+        "likes": 376,
+        "comments": 364,
+        "engagementRate": 0.011430560017132455,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82cc",
+    "firstName": "Tymber",
+    "lastName": "Harris",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853296365-Tymber_Harris_6903bedd28bbe62117fa82cc.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_SOFTBALL",
+    "position": "P",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1258,
+        "likes": 1332,
+        "comments": 345,
+        "engagementRate": 0.08929517753047166,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82ce",
+    "firstName": "Emma",
+    "lastName": "Simon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853283926-Emma_Simon_6903bedd28bbe62117fa82ce.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_SOFTBALL",
+    "position": "SS",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1763,
+        "likes": 941,
+        "comments": 407,
+        "engagementRate": 0.044951786727169596,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8261",
+    "firstName": "Landen",
+    "lastName": "Marshall",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853296886-Landen_Marshall_6903bedd28bbe62117fa8261.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 21612,
+        "likes": 15,
+        "comments": 242,
+        "engagementRate": 0.0023783083472145106,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82b4",
+    "firstName": "Savannah",
+    "lastName": "Samuel",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853292457-Savannah_Samuel_6903bedd28bbe62117fa82b4.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "FIFTH YEAR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3245,
+        "likes": 944,
+        "comments": 486,
+        "engagementRate": 0.02408486142529308,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa824d",
+    "firstName": "Jy",
+    "lastName": "Gilmore",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853297683-Jy_Gilmore_6903bedd28bbe62117fa824d.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6848,
+        "likes": 10938,
+        "comments": 1435,
+        "engagementRate": 0.15056707554517132,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa827e",
+    "firstName": "Will",
+    "lastName": "Reed",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853285823-Will_Reed_6903bedd28bbe62117fa827e.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1688,
+        "likes": 6648,
+        "comments": 449,
+        "engagementRate": 0.3176145937477106,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa822b",
+    "firstName": "Jackson",
+    "lastName": "Blakely",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853283863-Jackson_Blakely_6903bedd28bbe62117fa822b.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1999,
+        "likes": 370,
+        "comments": 180,
+        "engagementRate": 0.015276869203832687,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8215",
+    "firstName": "Jarren",
+    "lastName": "Advincula",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853292577-Jarren_Advincula_6903bedd28bbe62117fa8215.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2370,
+        "likes": 8001,
+        "comments": 596,
+        "engagementRate": 0.30228551336146275,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8241",
+    "firstName": "Kam",
+    "lastName": "Craft",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853284842-Kam_Craft_6903bedd28bbe62117fa8241.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASKETBALL",
+    "position": "GUARD/FORWARD",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5468,
+        "likes": 11389,
+        "comments": 393,
+        "engagementRate": 0.1795598634479395,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8214",
+    "firstName": "Carson",
+    "lastName": "Kerce",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853299730-Carson_Kerce_6903bedd28bbe62117fa8214.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2254,
+        "likes": 6922,
+        "comments": 484,
+        "engagementRate": 0.23215159375658076,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa820f",
+    "firstName": "Vahn",
+    "lastName": "Lackey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853298969-Vahn_Lackey_6903bedd28bbe62117fa820f.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "C",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2373,
+        "likes": 11584,
+        "comments": 494,
+        "engagementRate": 0.4241466498103667,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa823b",
+    "firstName": "Davi",
+    "lastName": "Remagen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853294871-Davi_Remagen_6903bedd28bbe62117fa823b.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2065,
+        "likes": 7721,
+        "comments": 356,
+        "engagementRate": 0.3773365617433414,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa822f",
+    "firstName": "Mason",
+    "lastName": "Patel",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853293132-Mason_Patel_6903bedd28bbe62117fa822f.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2295,
+        "likes": 8615,
+        "comments": 183,
+        "engagementRate": 0.31579520697167757,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82d0",
+    "firstName": "Julia",
+    "lastName": "Morici",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853295739-Julia_Morici_6903bedd28bbe62117fa82d0.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_SOFTBALL",
+    "position": "UTL",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2248,
+        "likes": 7707,
+        "comments": 716,
+        "engagementRate": 0.3406260109996765,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82bd",
+    "firstName": "Madalyn",
+    "lastName": "Johnson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853288304-Madalyn_Johnson_6903bedd28bbe62117fa82bd.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_SOFTBALL",
+    "position": "PITCHER",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1113,
+        "likes": 1936,
+        "comments": 596,
+        "engagementRate": 0.14601383821284306,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82bc",
+    "firstName": "Charlotte",
+    "lastName": "Smith",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853296334-Charlotte_Smith_6903bedd28bbe62117fa82bc.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_SOFTBALL",
+    "position": "PITCHER",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 383,
+        "likes": 1355,
+        "comments": 535,
+        "engagementRate": 0.41122715404699733,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8256",
+    "firstName": "Akelo",
+    "lastName": "Stone",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853289572-Akelo_Stone_6903bedd28bbe62117fa8256.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5649,
+        "likes": 21071,
+        "comments": 863,
+        "engagementRate": 0.3138608603292618,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8249",
+    "firstName": "Elgin",
+    "lastName": "Sessions",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853286795-Elgin_Sessions_6903bedd28bbe62117fa8249.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4018,
+        "likes": 2625,
+        "comments": 220,
+        "engagementRate": 0.23602123776339803,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa821a",
+    "firstName": "Carson",
+    "lastName": "Ballard",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853284979-Carson_Ballard_6903bedd28bbe62117fa821a.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1442,
+        "likes": 4477,
+        "comments": 272,
+        "engagementRate": 0.2728848821081831,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa822c",
+    "firstName": "Jake",
+    "lastName": "Lankie",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853288333-Jake_Lankie_6903bedd28bbe62117fa822c.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2580,
+        "likes": 6188,
+        "comments": 480,
+        "engagementRate": 0.21537467700258398,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa821f",
+    "firstName": "Adam",
+    "lastName": "McKelvey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853288330-Adam_McKelvey_6903bedd28bbe62117fa821f.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 865,
+        "likes": 1507,
+        "comments": 298,
+        "engagementRate": 0.5216763005780347,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8219",
+    "firstName": "Michael",
+    "lastName": "Dee",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853287386-Michael_Dee_6903bedd28bbe62117fa8219.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3912,
+        "likes": 27729,
+        "comments": 546,
+        "engagementRate": 0.5988837764144513,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8220",
+    "firstName": "Cooper",
+    "lastName": "Underwood",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853293105-Cooper_Underwood_6903bedd28bbe62117fa8220.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2193,
+        "likes": 7103,
+        "comments": 335,
+        "engagementRate": 0.27606779145766835,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8275",
+    "firstName": "Joe",
+    "lastName": "Fusile",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853287323-Joe_Fusile_6903bedd28bbe62117fa8275.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1812,
+        "likes": 10116,
+        "comments": 429,
+        "engagementRate": 0.5290487658037327,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8269",
+    "firstName": "Melvin",
+    "lastName": "Jordan IV",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853298924-Melvin_Jordan IV_6903bedd28bbe62117fa8269.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8424,
+        "likes": 15,
+        "comments": 465,
+        "engagementRate": 0.011396011396011397,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8223",
+    "firstName": "Coleman",
+    "lastName": "Lewis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853298922-Coleman_Lewis_6903bedd28bbe62117fa8223.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "OF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1973,
+        "likes": 24187,
+        "comments": 334,
+        "engagementRate": 1.0356901503632368,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa822d",
+    "firstName": "Jamie",
+    "lastName": "Vicens",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853284490-Jamie_Vicens_6903bedd28bbe62117fa822d.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2079,
+        "likes": 4763,
+        "comments": 290,
+        "engagementRate": 0.20246111912778578,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8211",
+    "firstName": "Dominic",
+    "lastName": "Stephenson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853286774-Dominic_Stephenson_6903bedd28bbe62117fa8211.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "C/OF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1199,
+        "likes": 5687,
+        "comments": 309,
+        "engagementRate": 0.402210175145955,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa821e",
+    "firstName": "Will",
+    "lastName": "Baker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853285868-Will_Baker_6903bedd28bbe62117fa821e.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "INF/UTL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3956,
+        "likes": 2581,
+        "comments": 113,
+        "engagementRate": 0.17024772497472193,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82af",
+    "firstName": "Catherine",
+    "lastName": "Alben",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853288570-Catherine_Alben_6903bedd28bbe62117fa82af.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 15280,
+        "likes": 5781,
+        "comments": 724,
+        "engagementRate": 0.05413529742754814,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8230",
+    "firstName": "Riley",
+    "lastName": "Hasenstab",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853299589-Riley_Hasenstab_6903bedd28bbe62117fa8230.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1488,
+        "likes": 5956,
+        "comments": 352,
+        "engagementRate": 0.3532706093189964,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8239",
+    "firstName": "Brandon",
+    "lastName": "Stores, Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853294033-Brandon_Stores, Jr._6903bedd28bbe62117fa8239.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9787,
+        "likes": 22712,
+        "comments": 1299,
+        "engagementRate": 0.13598243191877069,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82b7",
+    "firstName": "Inés",
+    "lastName": "Noguero",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853289549-InÃ©s_Noguero_6903bedd28bbe62117fa82b7.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1878,
+        "likes": 3371,
+        "comments": 129,
+        "engagementRate": 0.16942588827572855,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa826e",
+    "firstName": "Will",
+    "lastName": "Benton IV",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853292277-Will_Benton IV_6903bedd28bbe62117fa826e.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "LS",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1893,
+        "likes": 18389,
+        "comments": 259,
+        "engagementRate": 0.819202324352879,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa828e",
+    "firstName": "J.P.",
+    "lastName": "Powell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853286623-J.P._Powell_6903bedd28bbe62117fa828e.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3480,
+        "likes": 4220,
+        "comments": 231,
+        "engagementRate": 0.18271756978653533,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8247",
+    "firstName": "Daiquan",
+    "lastName": "White",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853295711-Daiquan_White_6903bedd28bbe62117fa8247.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11679,
+        "likes": 24747,
+        "comments": 902,
+        "engagementRate": 0.18301367126180892,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8252",
+    "firstName": "Tae",
+    "lastName": "Harris",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853295755-Tae_Harris_6903bedd28bbe62117fa8252.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10611,
+        "likes": 38132,
+        "comments": 986,
+        "engagementRate": 0.40410894354914706,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa825d",
+    "firstName": "Drew",
+    "lastName": "Cohen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853281827-Drew_Cohen_6903bedd28bbe62117fa825d.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4132,
+        "likes": 500,
+        "comments": 256,
+        "engagementRate": 0.015246853823814133,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8251",
+    "firstName": "Savion",
+    "lastName": "Riley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853297657-Savion_Riley_6903bedd28bbe62117fa8251.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10502,
+        "likes": 11503,
+        "comments": 360,
+        "engagementRate": 0.10269039663440731,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa829d",
+    "firstName": "Kevin",
+    "lastName": "Roche, Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853290466-Kevin_Roche, Jr._6903bedd28bbe62117fa829d.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2688,
+        "likes": 9405,
+        "comments": 520,
+        "engagementRate": 0.3076946924603175,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8255",
+    "firstName": "A.J.",
+    "lastName": "Hoffler",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853294852-A.J._Hoffler_6903bedd28bbe62117fa8255.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5492,
+        "likes": 26862,
+        "comments": 1090,
+        "engagementRate": 0.424132070890993,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8267",
+    "firstName": "Kyle",
+    "lastName": "Efford",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853296310-Kyle_Efford_6903bedd28bbe62117fa8267.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6730,
+        "likes": 16821,
+        "comments": 547,
+        "engagementRate": 0.21505695889053988,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa823a",
+    "firstName": "Chas",
+    "lastName": "Kelley III",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853283022-Chas_Kelley III_6903bedd28bbe62117fa823a.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4619,
+        "likes": 15076,
+        "comments": 961,
+        "engagementRate": 0.2867684202929927,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8216",
+    "firstName": "Porter",
+    "lastName": "Buursema",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853283911-Porter_Buursema_6903bedd28bbe62117fa8216.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3181,
+        "likes": 11461,
+        "comments": 587,
+        "engagementRate": 0.31562401760452685,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82ac",
+    "firstName": "McKayla",
+    "lastName": "Taylor",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853282849-McKayla_Taylor_6903bedd28bbe62117fa82ac.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "CENTER",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2843,
+        "likes": 2273,
+        "comments": 504,
+        "engagementRate": 0.076679563841013,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8240",
+    "firstName": "Dyllan",
+    "lastName": "Thompson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853299585-Dyllan_Thompson_6903bedd28bbe62117fa8240.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASKETBALL",
+    "position": "GUARD/FORWARD",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4405,
+        "likes": 3068,
+        "comments": 199,
+        "engagementRate": 0.23496027241770714,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa823d",
+    "firstName": "Jaeden",
+    "lastName": "Mustaf",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853290448-Jaeden_Mustaf_6903bedd28bbe62117fa823d.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 13058,
+        "likes": 66777,
+        "comments": 1300,
+        "engagementRate": 0.400982683245745,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8235",
+    "firstName": "Peyton",
+    "lastName": "Marshall",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853287370-Peyton_Marshall_6903bedd28bbe62117fa8235.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASKETBALL",
+    "position": "CENTER",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 31304,
+        "likes": 4052,
+        "comments": 169,
+        "engagementRate": 0.06877047137133373,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8236",
+    "firstName": "Baye",
+    "lastName": "Ndongo",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853290451-Baye_Ndongo_6903bedd28bbe62117fa8236.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASKETBALL",
+    "position": "FORWARD",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5935,
+        "likes": 4638,
+        "comments": 206,
+        "engagementRate": 0.2720584105588318,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa826d",
+    "firstName": "E.J.",
+    "lastName": "Lightsey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853288296-E.J._Lightsey_6903bedd28bbe62117fa826d.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4270,
+        "likes": 32324,
+        "comments": 508,
+        "engagementRate": 0.7688992974238874,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa829c",
+    "firstName": "Josh",
+    "lastName": "Beetham",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853284707-Josh_Beetham_6903bedd28bbe62117fa829c.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "TE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 175,
+        "engagementRate": 0,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa825c",
+    "firstName": "Derry",
+    "lastName": "Norris, Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853296342-Derry_Norris, Jr._6903bedd28bbe62117fa825c.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2099,
+        "likes": 1144,
+        "comments": 0,
+        "engagementRate": 0.06812767984754645,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8262",
+    "firstName": "Matthew",
+    "lastName": "Alexander",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853285550-Matthew_Alexander_6903bedd28bbe62117fa8262.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5822,
+        "likes": 262,
+        "comments": 227,
+        "engagementRate": 0.005152868430092752,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa825a",
+    "firstName": "Carrington",
+    "lastName": "Coombs",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853296350-Carrington_Coombs_6903bedd28bbe62117fa825a.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1809,
+        "likes": 1225,
+        "comments": 361,
+        "engagementRate": 0.11663902708678829,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82d1",
+    "firstName": "Danielle",
+    "lastName": "Tansey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853289567-Danielle_Tansey_6903bedd28bbe62117fa82d1.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "DEFENSIVE SPECIALIST/ LIBERO",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 439,
+        "likes": 1858,
+        "comments": 213,
+        "engagementRate": 0.5241710959250824,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82de",
+    "firstName": "Bjanka",
+    "lastName": "Stojanovic",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853293143-Bjanka_Stojanovic_6903bedd28bbe62117fa82de.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "RIGHT SIDE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1123,
+        "likes": 1421,
+        "comments": 47,
+        "engagementRate": 0.4357376075986939,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82a3",
+    "firstName": "Debron",
+    "lastName": "Gatling",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853295744-Debron_Gatling_6903bedd28bbe62117fa82a3.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 20577,
+        "likes": 9560,
+        "comments": 1512,
+        "engagementRate": 0.037633504173816175,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8297",
+    "firstName": "Andrew",
+    "lastName": "Rosinski",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853286765-Andrew_Rosinski_6903bedd28bbe62117fa8297.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1437,
+        "likes": 4333,
+        "comments": 198,
+        "engagementRate": 0.26270006958942244,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8259",
+    "firstName": "Blake",
+    "lastName": "Belin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853285799-Blake_Belin_6903bedd28bbe62117fa8259.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1454,
+        "likes": 764,
+        "comments": 48,
+        "engagementRate": 0.2792297111416781,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8285",
+    "firstName": "Ben",
+    "lastName": "Guthrie",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853297136-Ben_Guthrie_6903bedd28bbe62117fa8285.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "QB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1892,
+        "likes": 7047,
+        "comments": 728,
+        "engagementRate": 0.31648653245623587,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82a1",
+    "firstName": "Cal",
+    "lastName": "Faulkner",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853283879-Cal_Faulkner_6903bedd28bbe62117fa82a1.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2901,
+        "likes": 9336,
+        "comments": 417,
+        "engagementRate": 0.3361944157187177,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa825f",
+    "firstName": "Jordan",
+    "lastName": "Boyd",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853283875-Jordan_Boyd_6903bedd28bbe62117fa825f.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1623,
+        "likes": 4088,
+        "comments": 218,
+        "engagementRate": 0.2947901690970083,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8274",
+    "firstName": "Jimmy",
+    "lastName": "Bryson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853299554-Jimmy_Bryson_6903bedd28bbe62117fa8274.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1728,
+        "likes": 3509,
+        "comments": 305,
+        "engagementRate": 0.2758969907407407,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8286",
+    "firstName": "Grady",
+    "lastName": "Adamson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853281940-Grady_Adamson_6903bedd28bbe62117fa8286.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2526,
+        "likes": 6405,
+        "comments": 190,
+        "engagementRate": 0.2175705991026656,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8293",
+    "firstName": "Shane",
+    "lastName": "Marshall",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853284857-Shane_Marshall_6903bedd28bbe62117fa8293.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1487,
+        "likes": 1397,
+        "comments": 74,
+        "engagementRate": 0.1899125756556826,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82e2",
+    "firstName": "Sara",
+    "lastName": "Toth",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853290484-Sara_Toth_6903bedd28bbe62117fa82e2.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "SETTER",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1326,
+        "likes": 3257,
+        "comments": 114,
+        "engagementRate": 0.3177790346907994,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa824e",
+    "firstName": "Kelvin",
+    "lastName": "Hill",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853291663-Kelvin_Hill_6903bedd28bbe62117fa824e.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1704,
+        "likes": 108,
+        "comments": 306,
+        "engagementRate": 0.013145539906103287,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa823f",
+    "firstName": "Marcos",
+    "lastName": "San Miguel",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853295727-Marcos_San Miguel_6903bedd28bbe62117fa823f.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1878,
+        "likes": 5209,
+        "comments": 399,
+        "engagementRate": 0.4265936406511486,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8226",
+    "firstName": "Cade",
+    "lastName": "Brown",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853290406-Cade_Brown_6903bedd28bbe62117fa8226.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "OF/INF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2202,
+        "likes": 13138,
+        "comments": 309,
+        "engagementRate": 0.6106721162579474,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8213",
+    "firstName": "Caden",
+    "lastName": "Gaudette",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853298961-Caden_Gaudette_6903bedd28bbe62117fa8213.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 855,
+        "likes": 2103,
+        "comments": 170,
+        "engagementRate": 0.3797827903091061,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8288",
+    "firstName": "A.J.",
+    "lastName": "Cheeks",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853298367-A.J._Cheeks_6903bedd28bbe62117fa8288.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4345,
+        "likes": 3151,
+        "comments": 864,
+        "engagementRate": 0.06285001917913309,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8277",
+    "firstName": "Josh",
+    "lastName": "Petty",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853282900-Josh_Petty_6903bedd28bbe62117fa8277.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5045,
+        "likes": 42426,
+        "comments": 1390,
+        "engagementRate": 0.7237528906508094,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa824c",
+    "firstName": "Jon",
+    "lastName": "Mitchell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853293158-Jon_Mitchell_6903bedd28bbe62117fa824c.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1772,
+        "likes": 31873,
+        "comments": 135,
+        "engagementRate": 18.063205417607225,
+        "contentCount": 1,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa821d",
+    "firstName": "Tyler",
+    "lastName": "Neises",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853290823-Tyler_Neises_6903bedd28bbe62117fa821d.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 749,
+        "likes": 2496,
+        "comments": 122,
+        "engagementRate": 0.5825545171339565,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82b9",
+    "firstName": "Reese",
+    "lastName": "Hunter",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853294132-Reese_Hunter_6903bedd28bbe62117fa82b9.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "WOMENS_SOFTBALL",
+    "position": "C",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 591,
+        "likes": 341,
+        "comments": 165,
+        "engagementRate": 0.11641285956006768,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8266",
+    "firstName": "Jackson",
+    "lastName": "Hamilton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853283938-Jackson_Hamilton_6903bedd28bbe62117fa8266.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "LB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 69,
+        "engagementRate": 0,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8268",
+    "firstName": "Lawson",
+    "lastName": "Pritchett",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853298930-Lawson_Pritchett_6903bedd28bbe62117fa8268.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5206,
+        "likes": 10136,
+        "comments": 695,
+        "engagementRate": 0.15966424368299428,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa8225",
+    "firstName": "Parker",
+    "lastName": "Brosius",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853282824-Parker_Brosius_6903bedd28bbe62117fa8225.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_BASEBALL",
+    "position": "OF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1370,
+        "likes": 6304,
+        "comments": 176,
+        "engagementRate": 0.67570385818561,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa82a9",
+    "firstName": "Malik",
+    "lastName": "Rutherford",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853292331-Malik_Rutherford_6903bedd28bbe62117fa82a9.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 14,
+        "likes": 12,
+        "comments": 0,
+        "engagementRate": 0.8571428571428571,
+        "contentCount": 1,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa826a",
+    "firstName": "Myles",
+    "lastName": "Forristall",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853281811-Myles_Forristall_6903bedd28bbe62117fa826a.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 581,
+        "likes": 241,
+        "comments": 27,
+        "engagementRate": 0.2306368330464716,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6903bedd28bbe62117fa825b",
+    "firstName": "Christian",
+    "lastName": "Garrett",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761853282853-Christian_Garrett_6903bedd28bbe62117fa825b.png",
+    "schoolName": "Georgia Tech",
+    "conferenceName": "ACC",
+    "sport": "MENS_FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  }
+]

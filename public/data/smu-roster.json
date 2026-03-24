@@ -1,0 +1,3068 @@
+[
+  {
+    "_id": "68fc8bd377927c1df356ce0a",
+    "firstName": "Jazzy",
+    "lastName": "Gipson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381848956-Jazzy_Gipson_68fc8bd377927c1df356ce0a.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1898,
+        "likes": 4877,
+        "comments": 579,
+        "engagementRate": 0.1694879239767697,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce1a",
+    "firstName": "Amelia",
+    "lastName": "Hansen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381853808-Amelia_Hansen_68fc8bd377927c1df356ce1a.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OUTSIDE HITTER",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1280,
+        "likes": 3491,
+        "comments": 571,
+        "engagementRate": 0.13685239492696097,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce07",
+    "firstName": "Zahra",
+    "lastName": "King",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381854579-Zahra_King_68fc8bd377927c1df356ce07.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3782,
+        "likes": 3802,
+        "comments": 534,
+        "engagementRate": 0.042749902933315716,
+        "contentCount": 25,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cd8f",
+    "firstName": "Jordan",
+    "lastName": "Hudson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381844904-Jordan_Hudson_68fc8bd377927c1df356cd8f.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 18102,
+        "likes": 31746,
+        "comments": 2494,
+        "engagementRate": 0.07538625182513439,
+        "contentCount": 25,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce11",
+    "firstName": "Elizaveta",
+    "lastName": "Filchagina",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381850786-Elizaveta_Filchagina_68fc8bd377927c1df356ce11.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 950,
+        "likes": 3089,
+        "comments": 178,
+        "engagementRate": 0.2167951127819549,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdee",
+    "firstName": "Matthew",
+    "lastName": "Hibner",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381856138-Matthew_Hibner_68fc8bd377927c1df356cdee.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4744,
+        "likes": 16244,
+        "comments": 610,
+        "engagementRate": 0.2540660256905593,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce06",
+    "firstName": "Ayanna",
+    "lastName": "Thompson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381843796-Ayanna_Thompson_68fc8bd377927c1df356ce06.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3178,
+        "likes": 4568,
+        "comments": 415,
+        "engagementRate": 0.10406651744041744,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdfc",
+    "firstName": "Jaron",
+    "lastName": "Pierre Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381853105-Jaron_Pierre Jr._68fc8bd377927c1df356cdfc.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 17455,
+        "likes": 52080,
+        "comments": 2432,
+        "engagementRate": 0.12531439622143736,
+        "contentCount": 25,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdb3",
+    "firstName": "T",
+    "lastName": "JHarden",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381844753-T_JHarden_68fc8bd377927c1df356cdb3.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5279,
+        "likes": 17721,
+        "comments": 719,
+        "engagementRate": 0.21840451826540574,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdbe",
+    "firstName": "Damarjhe",
+    "lastName": "Lewis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381849007-Damarjhe_Lewis_68fc8bd377927c1df356cdbe.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11506,
+        "likes": 3647,
+        "comments": 730,
+        "engagementRate": 0.016229337623517144,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cd98",
+    "firstName": "Deuce",
+    "lastName": "Harmon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381845992-Deuce_Harmon_68fc8bd377927c1df356cd98.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8443,
+        "likes": 9860,
+        "comments": 534,
+        "engagementRate": 0.0672454459628746,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdd8",
+    "firstName": "Abel",
+    "lastName": "Hoopii",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381850621-Abel_Hoopii_68fc8bd377927c1df356cdd8.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5873,
+        "likes": 777,
+        "comments": 932,
+        "engagementRate": 0.01390452901066414,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdf9",
+    "firstName": "Boopie",
+    "lastName": "Miller",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381848882-Boopie_Miller_68fc8bd377927c1df356cdf9.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 221043,
+        "likes": 191313,
+        "comments": 2617,
+        "engagementRate": 0.04384483235555661,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdf7",
+    "firstName": "B.J.",
+    "lastName": "Edwards",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381848600-B.J._Edwards_68fc8bd377927c1df356cdf7.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 17930,
+        "likes": 33507,
+        "comments": 874,
+        "engagementRate": 0.09592609099044837,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce22",
+    "firstName": "Madison",
+    "lastName": "Scheer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381853140-Madison_Scheer_68fc8bd377927c1df356ce22.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OUTSIDE HITTER",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5165,
+        "likes": 10372,
+        "comments": 479,
+        "engagementRate": 0.11613169938007238,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdae",
+    "firstName": "Isaiah",
+    "lastName": "Nwokobia",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381856063-Isaiah_Nwokobia_68fc8bd377927c1df356cdae.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10364,
+        "likes": 7044,
+        "comments": 487,
+        "engagementRate": 0.12200431007562605,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdca",
+    "firstName": "Stone",
+    "lastName": "Eby",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381853299-Stone_Eby_68fc8bd377927c1df356cdca.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1930,
+        "likes": 37087,
+        "comments": 786,
+        "engagementRate": 1.2265982355880773,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cda1",
+    "firstName": "Jaden",
+    "lastName": "Milline Jones",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381844948-Jaden_Milline Jones_68fc8bd377927c1df356cda1.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7587,
+        "likes": 23852,
+        "comments": 903,
+        "engagementRate": 0.2174273752052719,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdc9",
+    "firstName": "Michael",
+    "lastName": "De Hoyos",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381851585-Michael_De Hoyos_68fc8bd377927c1df356cdc9.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1217,
+        "likes": 3249,
+        "comments": 325,
+        "engagementRate": 0.2447274719254999,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce09",
+    "firstName": "Anaya",
+    "lastName": "Brown",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381843750-Anaya_Brown_68fc8bd377927c1df356ce09.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1051,
+        "likes": 255,
+        "comments": 264,
+        "engagementRate": 0.019468637927248775,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce05",
+    "firstName": "Niccolo",
+    "lastName": "Kalische Stork",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381847807-Niccolo_Kalische Stork_68fc8bd377927c1df356ce05.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5686,
+        "likes": 3899,
+        "comments": 1178,
+        "engagementRate": 0.0536601047103087,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce21",
+    "firstName": "Jordyn",
+    "lastName": "Schilling",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381849777-Jordyn_Schilling_68fc8bd377927c1df356ce21.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "DS/LIBERO",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2090,
+        "likes": 15368,
+        "comments": 144,
+        "engagementRate": 0.40256286856332985,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce1c",
+    "firstName": "Averi",
+    "lastName": "Carlson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381845920-Averi_Carlson_68fc8bd377927c1df356ce1c.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "SETTER",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 18933,
+        "likes": 64909,
+        "comments": 487,
+        "engagementRate": 0.19307133767869036,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdb7",
+    "firstName": "Brandon",
+    "lastName": "Miyazono",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381855506-Brandon_Miyazono_68fc8bd377927c1df356cdb7.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2213,
+        "likes": 4422,
+        "comments": 602,
+        "engagementRate": 0.1404171437147221,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cda2",
+    "firstName": "Kyron",
+    "lastName": "Chambers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381854610-Kyron_Chambers_68fc8bd377927c1df356cda2.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8472,
+        "likes": 865,
+        "comments": 721,
+        "engagementRate": 0.010515924113657826,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce00",
+    "firstName": "Jaden",
+    "lastName": "Toombs",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381846921-Jaden_Toombs_68fc8bd377927c1df356ce00.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "MENS_BASKETBALL",
+    "position": "C",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5272,
+        "likes": 10298,
+        "comments": 322,
+        "engagementRate": 0.1669195751138088,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cd96",
+    "firstName": "Chris",
+    "lastName": "Johnson Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381844940-Chris_Johnson Jr._68fc8bd377927c1df356cd96.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 20089,
+        "likes": 214748,
+        "comments": 4302,
+        "engagementRate": 0.6125385071172247,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdbd",
+    "firstName": "Lance",
+    "lastName": "Beeghley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381851786-Lance_Beeghley_68fc8bd377927c1df356cdbd.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3164,
+        "likes": 49105,
+        "comments": 819,
+        "engagementRate": 1.1309682587563354,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdd2",
+    "firstName": "Savion",
+    "lastName": "Byrd",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381854614-Savion_Byrd_68fc8bd377927c1df356cdd2.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10203,
+        "likes": 7057,
+        "comments": 487,
+        "engagementRate": 0.04780083085042775,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdab",
+    "firstName": "Justin",
+    "lastName": "Medlock",
+    "profilePicture": "",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3701,
+        "likes": 1759,
+        "comments": 214,
+        "engagementRate": 0.055016293041461245,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdbb",
+    "firstName": "Zakye",
+    "lastName": "Barker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381848026-Zakye_Barker_68fc8bd377927c1df356cdbb.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2734,
+        "likes": 10445,
+        "comments": 1014,
+        "engagementRate": 0.24681970456276037,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdfa",
+    "firstName": "Corey",
+    "lastName": "Washington",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381850635-Corey_Washington_68fc8bd377927c1df356cdfa.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9672,
+        "likes": 29265,
+        "comments": 849,
+        "engagementRate": 0.1549946040968596,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce16",
+    "firstName": "Sarah",
+    "lastName": "Frazee",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381846990-Sarah_Frazee_68fc8bd377927c1df356ce16.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "DS/LIBERO",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2038,
+        "likes": 7520,
+        "comments": 599,
+        "engagementRate": 0.2507715804958464,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cda4",
+    "firstName": "Daylon",
+    "lastName": "Singleton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381843915-Daylon_Singleton_68fc8bd377927c1df356cda4.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 14992,
+        "likes": 12184,
+        "comments": 426,
+        "engagementRate": 0.09351343181287658,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdcd",
+    "firstName": "Alex",
+    "lastName": "Ditsch",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381846023-Alex_Ditsch_68fc8bd377927c1df356cdcd.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1905,
+        "likes": 4223,
+        "comments": 449,
+        "engagementRate": 0.2724992709244678,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cd92",
+    "firstName": "Link",
+    "lastName": "Rhodes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381851536-Link_Rhodes_68fc8bd377927c1df356cd92.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FIFTH YEAR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1632,
+        "likes": 5979,
+        "comments": 498,
+        "engagementRate": 0.28389069382399806,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cda6",
+    "firstName": "Trey",
+    "lastName": "Wilson",
+    "profilePicture": "",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2868,
+        "likes": 4113,
+        "comments": 349,
+        "engagementRate": 0.25924776353178164,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cd93",
+    "firstName": "Terry",
+    "lastName": "Webb",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381846946-Terry_Webb_68fc8bd377927c1df356cd93.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2630,
+        "likes": 2739,
+        "comments": 1147,
+        "engagementRate": 0.09486790117992552,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cddf",
+    "firstName": "King",
+    "lastName": "Large",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381848947-King_Large_68fc8bd377927c1df356cddf.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 360,
+        "likes": 72,
+        "comments": 27,
+        "engagementRate": 0.015696225071225072,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cd97",
+    "firstName": "Jeffrey",
+    "lastName": "M'ba",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381851687-Jeffrey_M'ba_68fc8bd377927c1df356cd97.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 31645,
+        "likes": 13924,
+        "comments": 544,
+        "engagementRate": 0.024848974773239035,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce1b",
+    "firstName": "Mia",
+    "lastName": "Silva",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381854622-Mia_Silva_68fc8bd377927c1df356ce1b.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "DS/LIBERO",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2118,
+        "likes": 5490,
+        "comments": 446,
+        "engagementRate": 0.17618694259919226,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cd9a",
+    "firstName": "Marcellus",
+    "lastName": "Barnes Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381851569-Marcellus_Barnes Jr._68fc8bd377927c1df356cd9a.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6319,
+        "likes": 33474,
+        "comments": 864,
+        "engagementRate": 0.41242888627798524,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cda0",
+    "firstName": "Carterrious",
+    "lastName": "Brown",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381852578-Carterrious_Brown_68fc8bd377927c1df356cda0.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7445,
+        "likes": 16095,
+        "comments": 718,
+        "engagementRate": 0.37638235952540855,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdad",
+    "firstName": "Sael",
+    "lastName": "Reyes",
+    "profilePicture": "",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10105,
+        "likes": 4152,
+        "comments": 857,
+        "engagementRate": 0.03402024557566751,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce23",
+    "firstName": "Maggie",
+    "lastName": "Croft",
+    "profilePicture": "",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MIDDLE BLOCKER",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4110,
+        "likes": 23634,
+        "comments": 737,
+        "engagementRate": 0.3302994527051506,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdbf",
+    "firstName": "Henry",
+    "lastName": "Stickler",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381847044-Henry_Stickler_68fc8bd377927c1df356cdbf.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1985,
+        "likes": 7038,
+        "comments": 395,
+        "engagementRate": 0.26781021457810866,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cd9b",
+    "firstName": "Yamir",
+    "lastName": "Knight",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381850919-Yamir_Knight_68fc8bd377927c1df356cd9b.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4566,
+        "likes": 16946,
+        "comments": 807,
+        "engagementRate": 0.23234965775181346,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cd9e",
+    "firstName": "Jalen",
+    "lastName": "Cooper",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381848040-Jalen_Cooper_68fc8bd377927c1df356cd9e.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3706,
+        "likes": 77441,
+        "comments": 416,
+        "engagementRate": 1.6161456501183262,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdcf",
+    "firstName": "Nolan",
+    "lastName": "Akins",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381849625-Nolan_Akins_68fc8bd377927c1df356cdcf.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "LS",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4240,
+        "likes": 569,
+        "comments": 580,
+        "engagementRate": 0.010768864077595206,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cd8a",
+    "firstName": "Derrick",
+    "lastName": "McFall",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381855508-Derrick_McFall_68fc8bd377927c1df356cd8a.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9000,
+        "likes": 19217,
+        "comments": 637,
+        "engagementRate": 0.14667247199570213,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdba",
+    "firstName": "Billy",
+    "lastName": "Walton III",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381846028-Billy_Walton III_68fc8bd377927c1df356cdba.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9010,
+        "likes": 13143,
+        "comments": 1129,
+        "engagementRate": 0.10579113755680856,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdfd",
+    "firstName": "Jermaine",
+    "lastName": "O'Neal Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381853854-Jermaine_O'Neal Jr._68fc8bd377927c1df356cdfd.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 20350,
+        "likes": 38211,
+        "comments": 701,
+        "engagementRate": 0.09603759747127581,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdc6",
+    "firstName": "Collin",
+    "lastName": "Rogers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381844808-Collin_Rogers_68fc8bd377927c1df356cdc6.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "K",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2936,
+        "likes": 19400,
+        "comments": 718,
+        "engagementRate": 0.526805106594231,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cd9c",
+    "firstName": "Cameron",
+    "lastName": "Robertson",
+    "profilePicture": "",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7475,
+        "likes": 10342,
+        "comments": 412,
+        "engagementRate": 0.10981083756778981,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cd95",
+    "firstName": "DJ",
+    "lastName": "Warner",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381844841-DJ_Warner_68fc8bd377927c1df356cd95.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4104,
+        "likes": 16526,
+        "comments": 1399,
+        "engagementRate": 0.29303211334429247,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdac",
+    "firstName": "Dramekco",
+    "lastName": "Green",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381849009-Dramekco_Green_68fc8bd377927c1df356cdac.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8764,
+        "likes": 1836,
+        "comments": 211,
+        "engagementRate": 0.05314354176175262,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cd8c",
+    "firstName": "Ty",
+    "lastName": "Hawkins",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381853836-Ty_Hawkins_68fc8bd377927c1df356cd8c.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 15057,
+        "likes": 42026,
+        "comments": 905,
+        "engagementRate": 0.2194014110941388,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdd4",
+    "firstName": "Woo",
+    "lastName": "Spencer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381851697-Woo_Spencer_68fc8bd377927c1df356cdd4.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3047,
+        "likes": 1226,
+        "comments": 687,
+        "engagementRate": 0.038577438314884985,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdff",
+    "firstName": "B.J.",
+    "lastName": "Davis-Ray",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381844818-B.J._Davis-Ray_68fc8bd377927c1df356cdff.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5938,
+        "likes": 6013,
+        "comments": 618,
+        "engagementRate": 0.07405969176061161,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdb8",
+    "firstName": "Kyle",
+    "lastName": "Ferm",
+    "profilePicture": "",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1524,
+        "likes": 390,
+        "comments": 222,
+        "engagementRate": 0.04451006124234471,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce19",
+    "firstName": "Casey",
+    "lastName": "Batenhorst",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381849974-Casey_Batenhorst_68fc8bd377927c1df356ce19.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "SETTER",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4026,
+        "likes": 7525,
+        "comments": 564,
+        "engagementRate": 0.10392429241980931,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdcc",
+    "firstName": "Xavier",
+    "lastName": "Wright",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381853150-Xavier_Wright_68fc8bd377927c1df356cdcc.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 166,
+        "engagementRate": 0,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdec",
+    "firstName": "James",
+    "lastName": "Larson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381855489-James_Larson_68fc8bd377927c1df356cdec.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1289,
+        "likes": 1599,
+        "comments": 447,
+        "engagementRate": 0.10563093918739067,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdc7",
+    "firstName": "Will",
+    "lastName": "Locke",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381847974-Will_Locke_68fc8bd377927c1df356cdc7.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 805,
+        "likes": 439,
+        "comments": 267,
+        "engagementRate": 0.04335632292961561,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cddc",
+    "firstName": "Addison",
+    "lastName": "Nichols",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381851548-Addison_Nichols_68fc8bd377927c1df356cddc.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7912,
+        "likes": 5636,
+        "comments": 238,
+        "engagementRate": 0.043601757754906406,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce17",
+    "firstName": "Kennedi",
+    "lastName": "Rogers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381844930-Kennedi_Rogers_68fc8bd377927c1df356ce17.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OUTSIDE HITTER",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2643,
+        "likes": 15202,
+        "comments": 430,
+        "engagementRate": 0.2639497803554999,
+        "contentCount": 23,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce24",
+    "firstName": "Favor",
+    "lastName": "Anyanwu",
+    "profilePicture": "",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MIDDLE BLOCKER",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5568,
+        "likes": 18694,
+        "comments": 523,
+        "engagementRate": 0.21502640283087826,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cddd",
+    "firstName": "Joshua",
+    "lastName": "Bates",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381852334-Joshua_Bates_68fc8bd377927c1df356cddd.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3690,
+        "likes": 7559,
+        "comments": 250,
+        "engagementRate": 0.1763442061820776,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdf4",
+    "firstName": "Sam",
+    "lastName": "Keltner",
+    "profilePicture": "",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "K",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 396,
+        "engagementRate": 0,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cd91",
+    "firstName": "Ahmaad",
+    "lastName": "Moses",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381847006-Ahmaad_Moses_68fc8bd377927c1df356cd91.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3588,
+        "likes": 51065,
+        "comments": 1759,
+        "engagementRate": 0.7434885058889167,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdfe",
+    "firstName": "Billy",
+    "lastName": "White III",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381846839-Billy_White III_68fc8bd377927c1df356cdfe.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4569,
+        "likes": 32071,
+        "comments": 706,
+        "engagementRate": 0.4787117872481855,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce1e",
+    "firstName": "Hannah",
+    "lastName": "Beauford",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381848912-Hannah_Beauford_68fc8bd377927c1df356ce1e.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "SETTER",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1884,
+        "likes": 6188,
+        "comments": 353,
+        "engagementRate": 0.2670259676629103,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce15",
+    "firstName": "Malaya",
+    "lastName": "Jones",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381844892-Malaya_Jones_68fc8bd377927c1df356ce15.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OPPOSITE HITTER",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7478,
+        "likes": 27423,
+        "comments": 567,
+        "engagementRate": 0.26475581070551923,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cd94",
+    "firstName": "Adam",
+    "lastName": "Moore",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381849649-Adam_Moore_68fc8bd377927c1df356cd94.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8314,
+        "likes": 3272,
+        "comments": 963,
+        "engagementRate": 0.02989215151152585,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cd90",
+    "firstName": "Romello",
+    "lastName": "Brinson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381854624-Romello_Brinson_68fc8bd377927c1df356cd90.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 786,
+        "likes": 171,
+        "comments": 29,
+        "engagementRate": 0.016979533796945043,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce0c",
+    "firstName": "Sahnya",
+    "lastName": "Jah",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381847965-Sahnya_Jah_68fc8bd377927c1df356ce0c.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7201,
+        "likes": 10108,
+        "comments": 890,
+        "engagementRate": 0.08416631362046359,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cde2",
+    "firstName": "Logan",
+    "lastName": "Parr",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381853169-Logan_Parr_68fc8bd377927c1df356cde2.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3901,
+        "likes": 4262,
+        "comments": 631,
+        "engagementRate": 0.07038260350864961,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cded",
+    "firstName": "Devon",
+    "lastName": "Martin",
+    "profilePicture": "",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2252,
+        "likes": 1091,
+        "comments": 163,
+        "engagementRate": 0.12844138543516875,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdf1",
+    "firstName": "Blake",
+    "lastName": "Burris",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381855477-Blake_Burris_68fc8bd377927c1df356cdf1.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2333,
+        "likes": 5979,
+        "comments": 624,
+        "engagementRate": 0.21825609363536605,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cd8b",
+    "firstName": "William",
+    "lastName": "Nettles",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381853840-William_Nettles_68fc8bd377927c1df356cd8b.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2635,
+        "likes": 8286,
+        "comments": 406,
+        "engagementRate": 0.25401959391453405,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce12",
+    "firstName": "Paulina",
+    "lastName": "Paris",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381843833-Paulina_Paris_68fc8bd377927c1df356ce12.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 78047,
+        "likes": 36348,
+        "comments": 782,
+        "engagementRate": 0.03122069886674708,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce10",
+    "firstName": "Jzaniya",
+    "lastName": "Harriel",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381847996-Jzaniya_Harriel_68fc8bd377927c1df356ce10.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8645,
+        "likes": 12973,
+        "comments": 640,
+        "engagementRate": 0.10876242723725997,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cd9f",
+    "firstName": "Tyren",
+    "lastName": "Polley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381849634-Tyren_Polley_68fc8bd377927c1df356cd9f.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3013,
+        "likes": 2560,
+        "comments": 717,
+        "engagementRate": 0.11375705277132425,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdb1",
+    "firstName": "Javion",
+    "lastName": "Holiday",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381855511-Javion_Holiday_68fc8bd377927c1df356cdb1.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5766,
+        "likes": 4980,
+        "comments": 562,
+        "engagementRate": 0.12015999170329919,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdf3",
+    "firstName": "Jonathan",
+    "lastName": "Jefferson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381846982-Jonathan_Jefferson_68fc8bd377927c1df356cdf3.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3038,
+        "likes": 2852,
+        "comments": 340,
+        "engagementRate": 0.079645212162691,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce0d",
+    "firstName": "Kyla",
+    "lastName": "Deck",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381852324-Kyla_Deck_68fc8bd377927c1df356ce0d.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3643,
+        "likes": 7901,
+        "comments": 969,
+        "engagementRate": 0.15527958791010296,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce13",
+    "firstName": "Miriam",
+    "lastName": "Ibezim",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381849944-Miriam_Ibezim_68fc8bd377927c1df356ce13.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2291,
+        "likes": 1609,
+        "comments": 906,
+        "engagementRate": 0.06064336153694403,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdf6",
+    "firstName": "Christian",
+    "lastName": "de Moor",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381854638-Christian_de Moor_68fc8bd377927c1df356cdf6.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1483,
+        "likes": 2377,
+        "comments": 250,
+        "engagementRate": 0.29523488424365024,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce1f",
+    "firstName": "Natalia",
+    "lastName": "Newsome",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381847888-Natalia_Newsome_68fc8bd377927c1df356ce1f.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MIDDLE BLOCKER",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8261,
+        "likes": 56964,
+        "comments": 932,
+        "engagementRate": 0.5013472317627363,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cda5",
+    "firstName": "Charlie",
+    "lastName": "Fiser",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381853175-Charlie_Fiser_68fc8bd377927c1df356cda5.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3636,
+        "likes": 12757,
+        "comments": 425,
+        "engagementRate": 0.2789853264239894,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce18",
+    "firstName": "Christa",
+    "lastName": "Wilburn",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381851538-Christa_Wilburn_68fc8bd377927c1df356ce18.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OUTSIDE HITTER",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2605,
+        "likes": 9464,
+        "comments": 253,
+        "engagementRate": 0.28763400419461016,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cda7",
+    "firstName": "Jaxson",
+    "lastName": "Lavender",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381843886-Jaxson_Lavender_68fc8bd377927c1df356cda7.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3173,
+        "likes": 5993,
+        "comments": 436,
+        "engagementRate": 0.13520469279944852,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdd1",
+    "firstName": "Jahkai",
+    "lastName": "Lang",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381853822-Jahkai_Lang_68fc8bd377927c1df356cdd1.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3979,
+        "likes": 52435,
+        "comments": 1367,
+        "engagementRate": 1.0399519010913447,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce25",
+    "firstName": "Jadyn",
+    "lastName": "Livings",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381846696-Jadyn_Livings_68fc8bd377927c1df356ce25.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OUTSIDE/OPPOSITE HITTER",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7005,
+        "likes": 16366,
+        "comments": 154,
+        "engagementRate": 0.12459927484585838,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce20",
+    "firstName": "Jentry",
+    "lastName": "Lamirand",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381847034-Jentry_Lamirand_68fc8bd377927c1df356ce20.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OUTSIDE HITTER",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3447,
+        "likes": 3266,
+        "comments": 609,
+        "engagementRate": 0.07268749273676903,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce01",
+    "firstName": "Mitchell",
+    "lastName": "Holmes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381845927-Mitchell_Holmes_68fc8bd377927c1df356ce01.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2710,
+        "likes": 2925,
+        "comments": 526,
+        "engagementRate": 0.08856088560885608,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cde9",
+    "firstName": "RJ",
+    "lastName": "Maryland",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381852339-RJ_Maryland_68fc8bd377927c1df356cde9.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2991,
+        "likes": 34599,
+        "comments": 604,
+        "engagementRate": 0.9060214160687997,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdb9",
+    "firstName": "Elijah",
+    "lastName": "Pratt",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381850783-Elijah_Pratt_68fc8bd377927c1df356cdb9.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3453,
+        "likes": 698,
+        "comments": 469,
+        "engagementRate": 0.038517231392991604,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdcb",
+    "firstName": "Isaiah",
+    "lastName": "Robertson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381855485-Isaiah_Robertson_68fc8bd377927c1df356cdcb.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1370,
+        "likes": 5082,
+        "comments": 213,
+        "engagementRate": 0.5521376433785193,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cde7",
+    "firstName": "Paris",
+    "lastName": "Patterson Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381855487-Paris_Patterson Jr._68fc8bd377927c1df356cde7.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10370,
+        "likes": 287,
+        "comments": 59,
+        "engagementRate": 0.0019263557138803915,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdd6",
+    "firstName": "Tyron",
+    "lastName": "Winslow",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381854897-Tyron_Winslow_68fc8bd377927c1df356cdd6.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 98,
+        "engagementRate": 0,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdd0",
+    "firstName": "Graham",
+    "lastName": "Uter",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381853137-Graham_Uter_68fc8bd377927c1df356cdd0.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1269,
+        "likes": 5330,
+        "comments": 375,
+        "engagementRate": 0.3217219681775429,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cd99",
+    "firstName": "Kevin",
+    "lastName": "Jennings",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381846010-Kevin_Jennings_68fc8bd377927c1df356cd99.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 15101,
+        "likes": 50669,
+        "comments": 892,
+        "engagementRate": 0.22884157954260678,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce08",
+    "firstName": "Tyi",
+    "lastName": "Skinner",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381845997-Tyi_Skinner_68fc8bd377927c1df356ce08.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4520,
+        "likes": 6896,
+        "comments": 300,
+        "engagementRate": 0.11393032179534439,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdda",
+    "firstName": "PJ",
+    "lastName": "Williams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381852376-PJ_Williams_68fc8bd377927c1df356cdda.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9104,
+        "likes": 7963,
+        "comments": 542,
+        "engagementRate": 0.06671736638397051,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdc4",
+    "firstName": "Cameron",
+    "lastName": "McCulloch",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381850666-Cameron_McCulloch_68fc8bd377927c1df356cdc4.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "LS",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 663,
+        "likes": 1746,
+        "comments": 206,
+        "engagementRate": 0.24534942182001007,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cde0",
+    "firstName": "Nate",
+    "lastName": "Anderson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381843629-Nate_Anderson_68fc8bd377927c1df356cde0.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2824,
+        "likes": 2179,
+        "comments": 130,
+        "engagementRate": 0.06063088761416601,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdc8",
+    "firstName": "Wade",
+    "lastName": "McSparron",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381847651-Wade_McSparron_68fc8bd377927c1df356cdc8.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "P",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1083,
+        "likes": 220,
+        "comments": 167,
+        "engagementRate": 0.0170052323791936,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdef",
+    "firstName": "Miles",
+    "lastName": "Uter",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381853900-Miles_Uter_68fc8bd377927c1df356cdef.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1348,
+        "likes": 1960,
+        "comments": 302,
+        "engagementRate": 0.11502737178118094,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cd9d",
+    "firstName": "Tyler",
+    "lastName": "Van Dyke",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381856048-Tyler_Van Dyke_68fc8bd377927c1df356cd9d.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1017,
+        "likes": 732,
+        "comments": 32,
+        "engagementRate": 0.06260242543428385,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cde5",
+    "firstName": "Drew",
+    "lastName": "Hill",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381848612-Drew_Hill_68fc8bd377927c1df356cde5.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 436,
+        "likes": 600,
+        "comments": 67,
+        "engagementRate": 0.47324159021406725,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce0b",
+    "firstName": "Grace",
+    "lastName": "Hall",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381853863-Grace_Hall_68fc8bd377927c1df356ce0b.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1316,
+        "likes": 2943,
+        "comments": 176,
+        "engagementRate": 0.381838905775076,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce14",
+    "firstName": "Roxy",
+    "lastName": "White",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381849059-Roxy_White_68fc8bd377927c1df356ce14.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1536,
+        "likes": 3153,
+        "comments": 315,
+        "engagementRate": 0.1797417534722222,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cde3",
+    "firstName": "Andrew",
+    "lastName": "Chamblee",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381846654-Andrew_Chamblee_68fc8bd377927c1df356cde3.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2990,
+        "likes": 2491,
+        "comments": 139,
+        "engagementRate": 0.07329988851727982,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdb6",
+    "firstName": "Zach",
+    "lastName": "Hernandez",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381850627-Zach_Hernandez_68fc8bd377927c1df356cdb6.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1726,
+        "likes": 3090,
+        "comments": 345,
+        "engagementRate": 0.13251893526025865,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cde4",
+    "firstName": "Dramodd",
+    "lastName": "Odoms",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381849643-Dramodd_Odoms_68fc8bd377927c1df356cde4.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1704,
+        "likes": 9032,
+        "comments": 462,
+        "engagementRate": 0.46429968701095464,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdfb",
+    "firstName": "Sam",
+    "lastName": "Walters",
+    "profilePicture": "",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11149,
+        "likes": 29869,
+        "comments": 702,
+        "engagementRate": 0.2284659311746943,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cd8d",
+    "firstName": "Isaiah",
+    "lastName": "Smith",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381850674-Isaiah_Smith_68fc8bd377927c1df356cd8d.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1486,
+        "likes": 7786,
+        "comments": 355,
+        "engagementRate": 0.49804233451608954,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdaf",
+    "firstName": "Mark",
+    "lastName": "Iheanachor",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381855521-Mark_Iheanachor_68fc8bd377927c1df356cdaf.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10255,
+        "likes": 17694,
+        "comments": 674,
+        "engagementRate": 0.19709626740343467,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce04",
+    "firstName": "Trey",
+    "lastName": "Utter",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381854545-Trey_Utter_68fc8bd377927c1df356ce04.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1370,
+        "likes": 953,
+        "comments": 293,
+        "engagementRate": 0.06027980535279806,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cddb",
+    "firstName": "Zion",
+    "lastName": "Nelson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381855499-Zion_Nelson_68fc8bd377927c1df356cddb.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3875,
+        "likes": 1589,
+        "comments": 132,
+        "engagementRate": 0.035956989247311825,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce0f",
+    "firstName": "Elise",
+    "lastName": "Hill",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381843718-Elise_Hill_68fc8bd377927c1df356ce0f.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 684,
+        "likes": 3042,
+        "comments": 230,
+        "engagementRate": 0.4348085154270326,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cda8",
+    "firstName": "La'Modrick",
+    "lastName": "Spencer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381851556-La'Modrick_Spencer_68fc8bd377927c1df356cda8.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1079,
+        "likes": 1292,
+        "comments": 153,
+        "engagementRate": 0.266055750927842,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdaa",
+    "firstName": "Dylan",
+    "lastName": "Goffney",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381854596-Dylan_Goffney_68fc8bd377927c1df356cdaa.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3846,
+        "likes": 3,
+        "comments": 0,
+        "engagementRate": 0.00026001040041601667,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cd8e",
+    "firstName": "Zadian",
+    "lastName": "Gentry",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381843929-Zadian_Gentry_68fc8bd377927c1df356cd8e.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8353,
+        "likes": 19671,
+        "comments": 802,
+        "engagementRate": 0.343418104701476,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce03",
+    "firstName": "Samet",
+    "lastName": "Yigitoglu",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381852295-Samet_Yigitoglu_68fc8bd377927c1df356ce03.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "MENS_BASKETBALL",
+    "position": "C",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3979,
+        "likes": 3483,
+        "comments": 195,
+        "engagementRate": 0.07518639524168552,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cda9",
+    "firstName": "Ka'Davion",
+    "lastName": "Dotson-Walker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381845935-Ka'Davion_Dotson-Walker_68fc8bd377927c1df356cda9.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FIFTH YEAR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 407,
+        "engagementRate": 0,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdf2",
+    "firstName": "Kevin",
+    "lastName": "Allen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381852348-Kevin_Allen_68fc8bd377927c1df356cdf2.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 124,
+        "engagementRate": 0,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cda3",
+    "firstName": "Jaelyn",
+    "lastName": "Davis-Robinson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381850049-Jaelyn_Davis-Robinson_68fc8bd377927c1df356cda3.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9000,
+        "likes": 907,
+        "comments": 626,
+        "engagementRate": 0.008537037037037037,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdce",
+    "firstName": "Morgan",
+    "lastName": "Tribbett",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381852345-Morgan_Tribbett_68fc8bd377927c1df356cdce.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "LS",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1423,
+        "likes": 5642,
+        "comments": 394,
+        "engagementRate": 0.35347856640899505,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdd3",
+    "firstName": "Alexander",
+    "lastName": "Kilgore",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381849640-Alexander_Kilgore_68fc8bd377927c1df356cdd3.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1691,
+        "likes": 8593,
+        "comments": 378,
+        "engagementRate": 0.5305144884683619,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cde6",
+    "firstName": "Alex",
+    "lastName": "Woods",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381844863-Alex_Woods_68fc8bd377927c1df356cde6.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1221,
+        "likes": 679,
+        "comments": 133,
+        "engagementRate": 0.09514059514059514,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdf8",
+    "firstName": "Chance",
+    "lastName": "Puryear",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381851509-Chance_Puryear_68fc8bd377927c1df356cdf8.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3059,
+        "likes": 2732,
+        "comments": 0,
+        "engagementRate": 0.8931023210199411,
+        "contentCount": 1,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdd9",
+    "firstName": "Aakil",
+    "lastName": "Washington",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381853296-Aakil_Washington_68fc8bd377927c1df356cdd9.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2488,
+        "likes": 1758,
+        "comments": 611,
+        "engagementRate": 0.06846195069667738,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce1d",
+    "firstName": "Brooke",
+    "lastName": "Gilmour",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381850978-Brooke_Gilmour_68fc8bd377927c1df356ce1d.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MIDDLE BLOCKER",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1685,
+        "likes": 5186,
+        "comments": 730,
+        "engagementRate": 0.3510979228486647,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce02",
+    "firstName": "Nigel",
+    "lastName": "Walls",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381856013-Nigel_Walls_68fc8bd377927c1df356ce02.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3449,
+        "likes": 11132,
+        "comments": 193,
+        "engagementRate": 0.3648400502561129,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdc1",
+    "firstName": "Cooper",
+    "lastName": "Reed",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381845947-Cooper_Reed_68fc8bd377927c1df356cdc1.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2077,
+        "likes": 2235,
+        "comments": 337,
+        "engagementRate": 0.1348856035043414,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdd5",
+    "firstName": "Brock",
+    "lastName": "O'Quinn",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381855451-Brock_O'Quinn_68fc8bd377927c1df356cdd5.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "LS",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 752,
+        "likes": 3,
+        "comments": 184,
+        "engagementRate": 0.004284869976359338,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdeb",
+    "firstName": "Tripp",
+    "lastName": "Riordan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381850664-Tripp_Riordan_68fc8bd377927c1df356cdeb.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1974,
+        "likes": 8804,
+        "comments": 359,
+        "engagementRate": 0.374451198919284,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdb4",
+    "firstName": "Abdul",
+    "lastName": "Muhammad",
+    "profilePicture": "",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4253,
+        "likes": 945,
+        "comments": 345,
+        "engagementRate": 0.0837839956109413,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356ce0e",
+    "firstName": "Mailien",
+    "lastName": "Rolf",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381853185-Mailien_Rolf_68fc8bd377927c1df356ce0e.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1172,
+        "likes": 13918,
+        "comments": 313,
+        "engagementRate": 0.9342257340908883,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdea",
+    "firstName": "Case",
+    "lastName": "Holleron",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381854606-Case_Holleron_68fc8bd377927c1df356cdea.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2150,
+        "likes": 2688,
+        "comments": 505,
+        "engagementRate": 0.16959302325581394,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdb0",
+    "firstName": "William",
+    "lastName": "Fierro",
+    "profilePicture": "",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1595,
+        "likes": 3,
+        "comments": 478,
+        "engagementRate": 0.001652892561983471,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdf0",
+    "firstName": "Jalen",
+    "lastName": "Shivers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381846032-Jalen_Shivers_68fc8bd377927c1df356cdf0.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1143,
+        "likes": 611,
+        "comments": 58,
+        "engagementRate": 0.19510061242344703,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdf5",
+    "firstName": "Ryan",
+    "lastName": "Collins",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381853885-Ryan_Collins_68fc8bd377927c1df356cdf5.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "P",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 64,
+        "engagementRate": 0,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fc8bd377927c1df356cdde",
+    "firstName": "Hunter",
+    "lastName": "Ryan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761381850076-Hunter_Ryan_68fc8bd377927c1df356cdde.png",
+    "schoolName": "Southern Methodist University (SMU)",
+    "conferenceName": "AAC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2020,
+        "likes": 2049,
+        "comments": 177,
+        "engagementRate": 0.12244224422442243,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  }
+]

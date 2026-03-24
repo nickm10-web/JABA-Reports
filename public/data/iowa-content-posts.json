@@ -846,14 +846,14 @@
       "$date": "2024-01-17T17:00:00.000Z"
     },
     "source": "INSTAGRAM",
-    "sponsorPartner": "xaviernwankpa_",
-    "sponsored": true,
+    "sponsorPartner": "",
+    "sponsored": false,
     "updatedAt": {
       "$date": "2026-02-22T10:46:51.585Z"
     },
     "url": "https://storage.googleapis.com/scraper-media-images/18010680455504365",
     "likeAndViewCountsDisabled": true,
-    "isSponsored": true,
+    "isSponsored": false,
     "isCollaboration": false,
     "isOrganizationCollaboration": false,
     "hasOrganizationInCaption": false,
@@ -6465,15 +6465,15 @@
       "$date": "2025-11-08T17:59:07.000Z"
     },
     "source": "INSTAGRAM",
-    "sponsorPartner": "@bnkonfox",
-    "sponsored": true,
+    "sponsorPartner": "",
+    "sponsored": false,
     "updatedAt": {
       "$date": "2026-02-22T10:52:07.059Z"
     },
     "url": "https://storage.googleapis.com/scraper-media-images/18183727282352748",
     "likeAndViewCountsDisabled": false,
     "mediaType": "PHOTO",
-    "isSponsored": true,
+    "isSponsored": false,
     "isCollaboration": true,
     "isOrganizationCollaboration": true,
     "hasOrganizationInCaption": false
@@ -10953,14 +10953,14 @@
       "$date": "2025-10-06T18:48:03.000Z"
     },
     "source": "INSTAGRAM",
-    "sponsorPartner": "@iowaonecall",
-    "sponsored": true,
+    "sponsorPartner": "",
+    "sponsored": false,
     "updatedAt": {
       "$date": "2026-02-22T10:54:49.361Z"
     },
     "url": "https://storage.googleapis.com/scraper-media-images/18081022162975899",
     "likeAndViewCountsDisabled": false,
-    "isSponsored": true,
+    "isSponsored": false,
     "isCollaboration": false,
     "isOrganizationCollaboration": false,
     "hasOrganizationInCaption": false,
@@ -14711,15 +14711,15 @@
       "$date": "2025-10-19T02:38:31.000Z"
     },
     "source": "INSTAGRAM",
-    "sponsorPartner": "@doughboyz",
-    "sponsored": true,
+    "sponsorPartner": "",
+    "sponsored": false,
     "updatedAt": {
       "$date": "2026-02-22T10:47:16.450Z"
     },
     "url": "https://storage.googleapis.com/scraper-media-images/17982559493873146",
     "likeAndViewCountsDisabled": false,
     "mediaType": "VIDEO",
-    "isSponsored": true,
+    "isSponsored": false,
     "isCollaboration": true,
     "isOrganizationCollaboration": true,
     "hasOrganizationInCaption": false
@@ -46767,14 +46767,14 @@
       "$date": "2024-07-17T23:36:49.000Z"
     },
     "source": "INSTAGRAM",
-    "sponsorPartner": "@cntower",
-    "sponsored": true,
+    "sponsorPartner": "",
+    "sponsored": false,
     "updatedAt": {
       "$date": "2026-02-22T10:57:08.286Z"
     },
     "url": "https://storage.googleapis.com/scraper-media-images/18406655854074320",
     "likeAndViewCountsDisabled": false,
-    "isSponsored": true,
+    "isSponsored": false,
     "isCollaboration": false,
     "isOrganizationCollaboration": false,
     "hasOrganizationInCaption": false,
@@ -146875,7 +146875,7 @@
     ],
     "isCollaboration": false,
     "isOrganizationCollaboration": false,
-    "isSponsored": true,
+    "isSponsored": false,
     "likeAndViewCountsDisabled": true,
     "mediaType": "VIDEO",
     "metrics": {
@@ -146898,7 +146898,7 @@
       "$date": "2025-01-30T16:40:34.000Z"
     },
     "source": "INSTAGRAM",
-    "sponsorPartner": "@iowaswarm",
+    "sponsorPartner": "",
     "updatedAt": {
       "$date": "2026-02-22T10:48:26.701Z"
     },
@@ -166712,7 +166712,7 @@
     "hasOrganizationLogo": false,
     "isCollaboration": true,
     "isOrganizationCollaboration": false,
-    "isSponsored": true,
+    "isSponsored": false,
     "likeAndViewCountsDisabled": false,
     "mediaType": "VIDEO",
     "metrics": {
@@ -166735,7 +166735,7 @@
       "$date": "2025-10-19T17:09:26.000Z"
     },
     "source": "INSTAGRAM",
-    "sponsorPartner": "@estelasfreshmex",
+    "sponsorPartner": "",
     "updatedAt": {
       "$date": "2026-02-22T10:54:16.272Z"
     },
@@ -166772,7 +166772,7 @@
     "hasOrganizationLogo": true,
     "isCollaboration": true,
     "isOrganizationCollaboration": false,
-    "isSponsored": true,
+    "isSponsored": false,
     "likeAndViewCountsDisabled": false,
     "mediaType": "VIDEO",
     "metrics": {
@@ -166795,7 +166795,7 @@
       "$date": "2025-09-24T03:11:26.000Z"
     },
     "source": "INSTAGRAM",
-    "sponsorPartner": "@estelasfreshmex",
+    "sponsorPartner": "",
     "updatedAt": {
       "$date": "2026-02-22T10:54:16.271Z"
     },
@@ -166832,7 +166832,7 @@
     "hasOrganizationLogo": false,
     "isCollaboration": true,
     "isOrganizationCollaboration": false,
-    "isSponsored": true,
+    "isSponsored": false,
     "likeAndViewCountsDisabled": false,
     "mediaType": "VIDEO",
     "metrics": {
@@ -166855,7 +166855,7 @@
       "$date": "2025-08-19T10:34:01.000Z"
     },
     "source": "INSTAGRAM",
-    "sponsorPartner": "@estelasfreshmex",
+    "sponsorPartner": "",
     "updatedAt": {
       "$date": "2026-02-22T10:54:16.418Z"
     },
@@ -167082,7 +167082,7 @@
     "hasOrganizationLogo": true,
     "isCollaboration": true,
     "isOrganizationCollaboration": false,
-    "isSponsored": true,
+    "isSponsored": false,
     "likeAndViewCountsDisabled": false,
     "mediaType": "VIDEO",
     "metrics": {
@@ -167105,7 +167105,7 @@
       "$date": "2024-06-28T19:46:36.000Z"
     },
     "source": "INSTAGRAM",
-    "sponsorPartner": "@estelasfreshmex",
+    "sponsorPartner": "",
     "updatedAt": {
       "$date": "2026-02-22T10:54:16.562Z"
     },
@@ -167142,7 +167142,7 @@
     "hasOrganizationLogo": false,
     "isCollaboration": true,
     "isOrganizationCollaboration": false,
-    "isSponsored": true,
+    "isSponsored": false,
     "likeAndViewCountsDisabled": false,
     "mediaType": "VIDEO",
     "metrics": {
@@ -167165,7 +167165,7 @@
       "$date": "2024-06-20T19:47:45.000Z"
     },
     "source": "INSTAGRAM",
-    "sponsorPartner": "@estelasfreshmex",
+    "sponsorPartner": "",
     "updatedAt": {
       "$date": "2026-02-22T10:54:16.566Z"
     },
@@ -169918,7 +169918,7 @@
     ],
     "isCollaboration": true,
     "isOrganizationCollaboration": false,
-    "isSponsored": true,
+    "isSponsored": false,
     "likeAndViewCountsDisabled": false,
     "mediaType": "VIDEO",
     "metrics": {
@@ -169941,7 +169941,7 @@
       "$date": "2026-01-25T20:51:58.000Z"
     },
     "source": "INSTAGRAM",
-    "sponsorPartner": "@iowaswarm",
+    "sponsorPartner": "",
     "updatedAt": {
       "$date": "2026-02-22T10:55:19.485Z"
     },
@@ -192477,7 +192477,7 @@
     "hasOrganizationLogo": false,
     "isCollaboration": true,
     "isOrganizationCollaboration": true,
-    "isSponsored": true,
+    "isSponsored": false,
     "likeAndViewCountsDisabled": false,
     "mediaType": "PHOTO",
     "metrics": {
@@ -192500,7 +192500,7 @@
       "$date": "2024-09-20T00:07:17.000Z"
     },
     "source": "INSTAGRAM",
-    "sponsorPartner": "@wareagleplus",
+    "sponsorPartner": "",
     "updatedAt": {
       "$date": "2026-02-23T23:48:08.379Z"
     },
@@ -192537,7 +192537,7 @@
     "hasOrganizationLogo": false,
     "isCollaboration": true,
     "isOrganizationCollaboration": true,
-    "isSponsored": true,
+    "isSponsored": false,
     "likeAndViewCountsDisabled": false,
     "mediaType": "VIDEO",
     "metrics": {
@@ -192560,7 +192560,7 @@
       "$date": "2024-09-19T16:56:52.000Z"
     },
     "source": "INSTAGRAM",
-    "sponsorPartner": "@wareagleplus",
+    "sponsorPartner": "",
     "updatedAt": {
       "$date": "2026-02-23T23:45:06.601Z"
     },
@@ -194473,7 +194473,7 @@
     ],
     "isCollaboration": false,
     "isOrganizationCollaboration": false,
-    "isSponsored": true,
+    "isSponsored": false,
     "likeAndViewCountsDisabled": false,
     "mediaType": "PHOTO",
     "metrics": {
@@ -194496,7 +194496,7 @@
       "$date": "2025-01-27T21:38:50.000Z"
     },
     "source": "INSTAGRAM",
-    "sponsorPartner": "@iowaswarm",
+    "sponsorPartner": "",
     "updatedAt": {
       "$date": "2026-02-23T23:43:12.452Z"
     },
@@ -207324,7 +207324,7 @@
     "hasOrganizationLogo": false,
     "isCollaboration": true,
     "isOrganizationCollaboration": false,
-    "isSponsored": true,
+    "isSponsored": false,
     "likeAndViewCountsDisabled": false,
     "mediaType": "VIDEO",
     "metrics": {
@@ -207347,7 +207347,7 @@
       "$date": "2025-10-17T19:59:20.000Z"
     },
     "source": "INSTAGRAM",
-    "sponsorPartner": "@estelasfreshmex",
+    "sponsorPartner": "",
     "updatedAt": {
       "$date": "2026-02-23T23:39:04.256Z"
     },

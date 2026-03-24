@@ -1,0 +1,4181 @@
+[
+  {
+    "_id": "69007d3d19d5cdb1049300c9",
+    "firstName": "Franck",
+    "lastName": "Kepnang",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640365432-Franck_Kepnang_69007d3d19d5cdb1049300c9.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "C",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4295,
+        "likes": 11017,
+        "comments": 228,
+        "engagementRate": 0.1306477134166749,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930076",
+    "firstName": "Deshawn",
+    "lastName": "Lynch",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640367887-Deshawn_Lynch_69007d3d19d5cdb104930076.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "EDGE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2758,
+        "likes": 4936,
+        "comments": 523,
+        "engagementRate": 0.11475964068529018,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493007d",
+    "firstName": "Zach",
+    "lastName": "Durfee",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640363328-Zach_Durfee_69007d3d19d5cdb10493007d.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "EDGE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4351,
+        "likes": 19027,
+        "comments": 580,
+        "engagementRate": 0.40966548964710314,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300be",
+    "firstName": "Denzel",
+    "lastName": "Boston",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640362501-Denzel_Boston_69007d3d19d5cdb1049300be.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9227,
+        "likes": 74404,
+        "comments": 1540,
+        "engagementRate": 0.28532777965802486,
+        "contentCount": 29,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493010e",
+    "firstName": "Zoe",
+    "lastName": "Pabarcus",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640354118-Zoe_Pabarcus_69007d3d19d5cdb10493010e.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BEACH_VOLLEYBALL",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2008,
+        "likes": 4155,
+        "comments": 889,
+        "engagementRate": 0.17942537037649572,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930111",
+    "firstName": "Chelsea",
+    "lastName": "Hallinan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640361143-Chelsea_Hallinan_69007d3d19d5cdb104930111.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2502,
+        "likes": 8409,
+        "comments": 609,
+        "engagementRate": 0.18208801927078183,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300e7",
+    "firstName": "Ava",
+    "lastName": "Carroll",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640366655-Ava_Carroll_69007d3d19d5cdb1049300e7.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2150,
+        "likes": 11309,
+        "comments": 511,
+        "engagementRate": 0.1958704731893309,
+        "contentCount": 28,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300e5",
+    "firstName": "Sophi",
+    "lastName": "Mazzola",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640361705-Sophi_Mazzola_69007d3d19d5cdb1049300e5.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "INF/OF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3549,
+        "likes": 20300,
+        "comments": 584,
+        "engagementRate": 0.21112257808343707,
+        "contentCount": 28,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930101",
+    "firstName": "Ellis",
+    "lastName": "Hay",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640367808-Ellis_Hay_69007d3d19d5cdb104930101.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BEACH_VOLLEYBALL",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1272,
+        "likes": 3973,
+        "comments": 775,
+        "engagementRate": 0.2492760839483267,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300e3",
+    "firstName": "Riley",
+    "lastName": "Peschek",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640367249-Riley_Peschek_69007d3d19d5cdb1049300e3.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1743,
+        "likes": 5137,
+        "comments": 167,
+        "engagementRate": 0.17939208800521728,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930124",
+    "firstName": "Brooke",
+    "lastName": "Huard",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640366669-Brooke_Huard_69007d3d19d5cdb104930124.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "L",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3101,
+        "likes": 9651,
+        "comments": 572,
+        "engagementRate": 0.16445618177899274,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300f9",
+    "firstName": "Hannah",
+    "lastName": "Stines",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640356490-Hannah_Stines_69007d3d19d5cdb1049300f9.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4232,
+        "likes": 11637,
+        "comments": 392,
+        "engagementRate": 0.15590506767855553,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930112",
+    "firstName": "Deiah",
+    "lastName": "Moody",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640368518-Deiah_Moody_69007d3d19d5cdb104930112.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2035,
+        "likes": 4866,
+        "comments": 444,
+        "engagementRate": 0.10300187875485346,
+        "contentCount": 24,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300db",
+    "firstName": "Ally",
+    "lastName": "Heztal",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640365410-Ally_Heztal_69007d3d19d5cdb1049300db.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "C/UTILITY",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2206,
+        "likes": 13096,
+        "comments": 327,
+        "engagementRate": 0.21345211278806528,
+        "contentCount": 29,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493007b",
+    "firstName": "Milton",
+    "lastName": "Hopkins Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640369119-Milton_Hopkins Jr._69007d3d19d5cdb10493007b.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "EDGE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 20258,
+        "likes": 4470197,
+        "comments": 20175,
+        "engagementRate": 9.234851663540331,
+        "contentCount": 24,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300bb",
+    "firstName": "Audric",
+    "lastName": "Harris",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640360405-Audric_Harris_69007d3d19d5cdb1049300bb.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3026,
+        "likes": 9732,
+        "comments": 1221,
+        "engagementRate": 0.18625848856370486,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930119",
+    "firstName": "Kira",
+    "lastName": "Bolden",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640354578-Kira_Bolden_69007d3d19d5cdb104930119.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1593,
+        "likes": 1756,
+        "comments": 646,
+        "engagementRate": 0.059349538414114805,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493012c",
+    "firstName": "Maija",
+    "lastName": "Howse",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640367156-Maija_Howse_69007d3d19d5cdb10493012c.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 931,
+        "likes": 32,
+        "comments": 173,
+        "engagementRate": 0.004699248120300752,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930086",
+    "firstName": "Zaydrius",
+    "lastName": "Rainey-Sale",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640368569-Zaydrius_Rainey-Sale_69007d3d19d5cdb104930086.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2946,
+        "likes": 15078,
+        "comments": 572,
+        "engagementRate": 0.4340631364562118,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493011d",
+    "firstName": "Lilly",
+    "lastName": "Tubbs",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640358133-Lilly_Tubbs_69007d3d19d5cdb10493011d.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3795,
+        "likes": 10934,
+        "comments": 497,
+        "engagementRate": 0.11029653305647502,
+        "contentCount": 27,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493010f",
+    "firstName": "Caitlin",
+    "lastName": "McWilliams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640369311-Caitlin_McWilliams_69007d3d19d5cdb10493010f.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3144,
+        "likes": 9031,
+        "comments": 396,
+        "engagementRate": 0.14298790247621063,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300ad",
+    "firstName": "Kayden",
+    "lastName": "Greene",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640353199-Kayden_Greene_69007d3d19d5cdb1049300ad.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1520,
+        "likes": 786,
+        "comments": 162,
+        "engagementRate": 0.11039473684210525,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300eb",
+    "firstName": "Ryan",
+    "lastName": "Maddox",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640360967-Ryan_Maddox_69007d3d19d5cdb1049300eb.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "P",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2219,
+        "likes": 9488,
+        "comments": 753,
+        "engagementRate": 0.287769834820405,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493010c",
+    "firstName": "Sarah",
+    "lastName": "Wilcock",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640368558-Sarah_Wilcock_69007d3d19d5cdb10493010c.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BEACH_VOLLEYBALL",
+    "position": "-",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1918,
+        "likes": 417,
+        "comments": 416,
+        "engagementRate": 0.016779239686719672,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300a5",
+    "firstName": "Jonah",
+    "lastName": "Coleman",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640361676-Jonah_Coleman_69007d3d19d5cdb1049300a5.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 218224,
+        "likes": 172267,
+        "comments": 3900,
+        "engagementRate": 0.03505068292381333,
+        "contentCount": 23,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300ba",
+    "firstName": "Quentin",
+    "lastName": "Moore",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640355667-Quentin_Moore_69007d3d19d5cdb1049300ba.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8685,
+        "likes": 21729,
+        "comments": 932,
+        "engagementRate": 0.09161755511843114,
+        "contentCount": 28,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300ed",
+    "firstName": "Sophia",
+    "lastName": "Ramuno",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640367901-Sophia_Ramuno_69007d3d19d5cdb1049300ed.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "P",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 866,
+        "likes": 4945,
+        "comments": 122,
+        "engagementRate": 0.2652076457007655,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930120",
+    "firstName": "Olivia",
+    "lastName": "Oppegard",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640357540-Olivia_Oppegard_69007d3d19d5cdb104930120.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4135,
+        "likes": 14368,
+        "comments": 398,
+        "engagementRate": 0.23612385263026148,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300f5",
+    "firstName": "Avery",
+    "lastName": "Howell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640355727-Avery_Howell_69007d3d19d5cdb1049300f5.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 20205,
+        "likes": 47852,
+        "comments": 757,
+        "engagementRate": 0.07075265929580318,
+        "contentCount": 34,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930113",
+    "firstName": "Elena",
+    "lastName": "Brian",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640365474-Elena_Brian_69007d3d19d5cdb104930113.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2713,
+        "likes": 509365,
+        "comments": 2051,
+        "engagementRate": 9.92135332803073,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300bf",
+    "firstName": "Dezmen",
+    "lastName": "Roebuck",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640354799-Dezmen_Roebuck_69007d3d19d5cdb1049300bf.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6592,
+        "likes": 58222,
+        "comments": 1038,
+        "engagementRate": 0.3761116015225554,
+        "contentCount": 24,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300f0",
+    "firstName": "Yulia",
+    "lastName": "Grabovskaia",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640367847-Yulia_Grabovskaia_69007d3d19d5cdb1049300f0.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "C",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 742,
+        "likes": 4287,
+        "comments": 118,
+        "engagementRate": 0.34947496225725727,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493008c",
+    "firstName": "Davit",
+    "lastName": "Boyajyan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640366707-Davit_Boyajyan_69007d3d19d5cdb10493008c.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 790,
+        "likes": 4066,
+        "comments": 146,
+        "engagementRate": 0.31152971073849794,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300dd",
+    "firstName": "Gabi",
+    "lastName": "Toney",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640365520-Gabi_Toney_69007d3d19d5cdb1049300dd.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1785,
+        "likes": 5613,
+        "comments": 381,
+        "engagementRate": 0.22429204767195945,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493011a",
+    "firstName": "Kristin",
+    "lastName": "Lin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640367864-Kristin_Lin_69007d3d19d5cdb10493011a.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1786,
+        "likes": 6279,
+        "comments": 254,
+        "engagementRate": 0.12267816813398173,
+        "contentCount": 30,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930106",
+    "firstName": "Mariana",
+    "lastName": "Tomasová",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640363312-Mariana_TomasovÃ¡_69007d3d19d5cdb104930106.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BEACH_VOLLEYBALL",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1376,
+        "likes": 4233,
+        "comments": 80,
+        "engagementRate": 0.14247489429175475,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300dc",
+    "firstName": "Alexis",
+    "lastName": "DeBoer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640369183-Alexis_DeBoer_69007d3d19d5cdb1049300dc.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4887,
+        "likes": 21787,
+        "comments": 412,
+        "engagementRate": 0.2065785477660843,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300d5",
+    "firstName": "Quimari",
+    "lastName": "Peterson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640369127-Quimari_Peterson_69007d3d19d5cdb1049300d5.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4059,
+        "likes": 28711,
+        "comments": 1487,
+        "engagementRate": 0.2878374737417558,
+        "contentCount": 26,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300ec",
+    "firstName": "Rylee",
+    "lastName": "Rehbein",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640357537-Rylee_Rehbein_69007d3d19d5cdb1049300ec.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "P",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2106,
+        "likes": 3522,
+        "comments": 167,
+        "engagementRate": 0.1460458707120605,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300de",
+    "firstName": "Giselle",
+    "lastName": "Alvarez",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640366111-Giselle_Alvarez_69007d3d19d5cdb1049300de.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1837,
+        "likes": 4629,
+        "comments": 585,
+        "engagementRate": 0.13246730451920294,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930083",
+    "firstName": "Jonathan",
+    "lastName": "Epperson Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640357450-Jonathan_Epperson Jr._69007d3d19d5cdb104930083.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1850,
+        "likes": 1576,
+        "comments": 59,
+        "engagementRate": 0.17675675675675678,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300d6",
+    "firstName": "Wesley",
+    "lastName": "Yates III",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640357405-Wesley_Yates III_69007d3d19d5cdb1049300d6.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 19739,
+        "likes": 25939,
+        "comments": 626,
+        "engagementRate": 0.06396912505460632,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930125",
+    "firstName": "Zoria",
+    "lastName": "Heard",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640355630-Zoria_Heard_69007d3d19d5cdb104930125.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "L",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2241,
+        "likes": 14877,
+        "comments": 640,
+        "engagementRate": 0.24523333777493309,
+        "contentCount": 28,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300f3",
+    "firstName": "Olivia",
+    "lastName": "Anderson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640358429-Olivia_Anderson_69007d3d19d5cdb1049300f3.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1703,
+        "likes": 4838,
+        "comments": 291,
+        "engagementRate": 0.21518708057304073,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300f4",
+    "firstName": "Shayla",
+    "lastName": "Gillmer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640366647-Shayla_Gillmer_69007d3d19d5cdb1049300f4.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4670,
+        "likes": 5089,
+        "comments": 338,
+        "engagementRate": 0.06971812497152491,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300fa",
+    "firstName": "Sayvia",
+    "lastName": "Sellers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640353210-Sayvia_Sellers_69007d3d19d5cdb1049300fa.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3685,
+        "likes": 8822,
+        "comments": 499,
+        "engagementRate": 0.13911727658457926,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930084",
+    "firstName": "Taariq",
+    "lastName": "\"Buddah\" Al-Uqdah",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640365388-Taariq__Buddah_ Al-Uqdah_69007d3d19d5cdb104930084.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5725,
+        "likes": 28448,
+        "comments": 1141,
+        "engagementRate": 0.2028223523793534,
+        "contentCount": 25,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930065",
+    "firstName": "Ephesians",
+    "lastName": "Prysock",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640357159-Ephesians_Prysock_69007d3d19d5cdb104930065.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 15224,
+        "likes": 4876,
+        "comments": 996,
+        "engagementRate": 0.019635753231910913,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493011f",
+    "firstName": "Mary",
+    "lastName": "McDonough",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640360382-Mary_McDonough_69007d3d19d5cdb10493011f.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2978,
+        "likes": 12953,
+        "comments": 484,
+        "engagementRate": 0.20351451911308124,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493012a",
+    "firstName": "Alexa",
+    "lastName": "Markley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640359126-Alexa_Markley_69007d3d19d5cdb10493012a.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6221,
+        "likes": 38376,
+        "comments": 864,
+        "engagementRate": 0.31413759845683975,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300cd",
+    "firstName": "Hannes",
+    "lastName": "Steinbach",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640361658-Hannes_Steinbach_69007d3d19d5cdb1049300cd.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8228,
+        "likes": 51800,
+        "comments": 452,
+        "engagementRate": 0.4241698232323232,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930068",
+    "firstName": "Tacario",
+    "lastName": "Davis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640364637-Tacario_Davis_69007d3d19d5cdb104930068.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10610,
+        "likes": 42393,
+        "comments": 1714,
+        "engagementRate": 0.22676854544987327,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930129",
+    "firstName": "Addy",
+    "lastName": "Benefield",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640357049-Addy_Benefield_69007d3d19d5cdb104930129.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5213,
+        "likes": 923,
+        "comments": 933,
+        "engagementRate": 0.008015079358460037,
+        "contentCount": 23,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300d7",
+    "firstName": "Zoom",
+    "lastName": "Diallo",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640356579-Zoom_Diallo_69007d3d19d5cdb1049300d7.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11898,
+        "likes": 52684,
+        "comments": 1280,
+        "engagementRate": 0.1811872385865336,
+        "contentCount": 25,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493008a",
+    "firstName": "Carver",
+    "lastName": "Willis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640367822-Carver_Willis_69007d3d19d5cdb10493008a.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2247,
+        "likes": 25441,
+        "comments": 506,
+        "engagementRate": 0.8849013737682719,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300e9",
+    "firstName": "Kaycie",
+    "lastName": "Burdick",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640360044-Kaycie_Burdick_69007d3d19d5cdb1049300e9.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2822,
+        "likes": 11882,
+        "comments": 603,
+        "engagementRate": 0.311834870458749,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300d9",
+    "firstName": "Jadyn",
+    "lastName": "Glab",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640368439-Jadyn_Glab_69007d3d19d5cdb1049300d9.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "C",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2059,
+        "likes": 11413,
+        "comments": 324,
+        "engagementRate": 0.27423893619529693,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493006b",
+    "firstName": "Armon",
+    "lastName": "Parker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640358115-Armon_Parker_69007d3d19d5cdb10493006b.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1558,
+        "likes": 0,
+        "comments": 417,
+        "engagementRate": 0,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300e0",
+    "firstName": "Marley",
+    "lastName": "Teasley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640357022-Marley_Teasley_69007d3d19d5cdb1049300e0.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1804,
+        "likes": 5513,
+        "comments": 379,
+        "engagementRate": 0.28805081420796497,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300af",
+    "firstName": "Paul",
+    "lastName": "Mencke Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640359138-Paul_Mencke Jr._69007d3d19d5cdb1049300af.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1935,
+        "likes": 6445,
+        "comments": 370,
+        "engagementRate": 0.17438223302133643,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930085",
+    "firstName": "Xe'ree",
+    "lastName": "Alexander",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640353545-Xe'ree_Alexander_69007d3d19d5cdb104930085.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2065,
+        "likes": 15888,
+        "comments": 505,
+        "engagementRate": 0.531513657391575,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930074",
+    "firstName": "Simote",
+    "lastName": "Pepa",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640364653-Simote_Pepa_69007d3d19d5cdb104930074.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1237,
+        "likes": 6898,
+        "comments": 640,
+        "engagementRate": 0.33943296240513754,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300a7",
+    "firstName": "Julian",
+    "lastName": "McMahan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640366081-Julian_McMahan_69007d3d19d5cdb1049300a7.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1385,
+        "likes": 2501,
+        "comments": 167,
+        "engagementRate": 0.23605346423474097,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493006a",
+    "firstName": "Anterio",
+    "lastName": "Thompson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640363314-Anterio_Thompson_69007d3d19d5cdb10493006a.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2221,
+        "likes": 417,
+        "comments": 135,
+        "engagementRate": 0.010915455525186739,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300f2",
+    "firstName": "Nina",
+    "lastName": "Cain",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640362504-Nina_Cain_69007d3d19d5cdb1049300f2.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 909,
+        "likes": 4574,
+        "comments": 149,
+        "engagementRate": 0.2597359735973598,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300ef",
+    "firstName": "Amira",
+    "lastName": "Rodriguez",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640363265-Amira_Rodriguez_69007d3d19d5cdb1049300ef.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "P/UTILITY",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4574,
+        "likes": 68939,
+        "comments": 1099,
+        "engagementRate": 0.7654810627128878,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930066",
+    "firstName": "Leroy",
+    "lastName": "Bryant",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640368579-Leroy_Bryant_69007d3d19d5cdb104930066.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2629,
+        "likes": 4316,
+        "comments": 948,
+        "engagementRate": 0.10446826124896517,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493006e",
+    "firstName": "Dominic",
+    "lastName": "Macon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640361686-Dominic_Macon_69007d3d19d5cdb10493006e.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1200,
+        "likes": 1922,
+        "comments": 216,
+        "engagementRate": 0.2426190476190476,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493010b",
+    "firstName": "Sammy",
+    "lastName": "Hsu",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640362347-Sammy_Hsu_69007d3d19d5cdb10493010b.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BEACH_VOLLEYBALL",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1416,
+        "likes": 101,
+        "comments": 659,
+        "engagementRate": 0.005054953646972865,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930126",
+    "firstName": "Elise",
+    "lastName": "Hani",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640353557-Elise_Hani_69007d3d19d5cdb104930126.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2516,
+        "likes": 74501,
+        "comments": 743,
+        "engagementRate": 1.4378363380028198,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300f8",
+    "firstName": "Elle",
+    "lastName": "Ladine",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640367302-Elle_Ladine_69007d3d19d5cdb1049300f8.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8797,
+        "likes": 16800,
+        "comments": 414,
+        "engagementRate": 0.0978401727861771,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300f1",
+    "firstName": "Brynn",
+    "lastName": "McGaughy",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640358098-Brynn_McGaughy_69007d3d19d5cdb1049300f1.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3783,
+        "likes": 20995,
+        "comments": 650,
+        "engagementRate": 0.33650387173485724,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300fc",
+    "firstName": "Teagan",
+    "lastName": "Brown",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640362488-Teagan_Brown_69007d3d19d5cdb1049300fc.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2863,
+        "likes": 6757,
+        "comments": 428,
+        "engagementRate": 0.13202933985330073,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300d4",
+    "firstName": "JJ",
+    "lastName": "Mandaquit",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640353595-JJ_Mandaquit_69007d3d19d5cdb1049300d4.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 18359,
+        "likes": 43962,
+        "comments": 959,
+        "engagementRate": 0.17474961315568913,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300fd",
+    "firstName": "Alina",
+    "lastName": "Urzua",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640359489-Alina_Urzua_69007d3d19d5cdb1049300fd.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BEACH_VOLLEYBALL",
+    "position": "-",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1781,
+        "likes": 4334,
+        "comments": 348,
+        "engagementRate": 0.18796619662940883,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930087",
+    "firstName": "Hunter",
+    "lastName": "Solwold",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640367278-Hunter_Solwold_69007d3d19d5cdb104930087.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "LS",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4799,
+        "likes": 10323,
+        "comments": 1093,
+        "engagementRate": 0.18180069565774917,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300d3",
+    "firstName": "Desmond",
+    "lastName": "Claude",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640358078-Desmond_Claude_69007d3d19d5cdb1049300d3.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5814,
+        "likes": 33690,
+        "comments": 651,
+        "engagementRate": 0.26739327874659335,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930092",
+    "firstName": "John",
+    "lastName": "Mills",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640354625-John_Mills_69007d3d19d5cdb104930092.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4193,
+        "likes": 13335,
+        "comments": 791,
+        "engagementRate": 0.3368948247078464,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300e2",
+    "firstName": "Mila",
+    "lastName": "Reddy",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640366682-Mila_Reddy_69007d3d19d5cdb1049300e2.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 888,
+        "likes": 3076,
+        "comments": 621,
+        "engagementRate": 0.3446035836279739,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493007f",
+    "firstName": "Deven",
+    "lastName": "Bryant",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640365466-Deven_Bryant_69007d3d19d5cdb10493007f.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3921,
+        "likes": 14859,
+        "comments": 288,
+        "engagementRate": 0.38630884380417857,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300fb",
+    "firstName": "Sienna",
+    "lastName": "Harvey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640358994-Sienna_Harvey_69007d3d19d5cdb1049300fb.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4718,
+        "likes": 67157,
+        "comments": 365,
+        "engagementRate": 0.8924332344213651,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930127",
+    "firstName": "Julia",
+    "lastName": "Hunt",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640364873-Julia_Hunt_69007d3d19d5cdb104930127.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2047,
+        "likes": 21473,
+        "comments": 319,
+        "engagementRate": 0.5130163771996172,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300a0",
+    "firstName": "Demond",
+    "lastName": "Williams Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640367308-Demond_Williams Jr._69007d3d19d5cdb1049300a0.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 27540,
+        "likes": 121117,
+        "comments": 1154,
+        "engagementRate": 0.26168733161310354,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493012b",
+    "firstName": "Kierstyn",
+    "lastName": "Barton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640362437-Kierstyn_Barton_69007d3d19d5cdb10493012b.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12175,
+        "likes": 13888,
+        "comments": 338,
+        "engagementRate": 0.048135741255484726,
+        "contentCount": 24,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300b4",
+    "firstName": "Vincent",
+    "lastName": "Holmes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640356149-Vincent_Holmes_69007d3d19d5cdb1049300b4.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 233,
+        "engagementRate": 0,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300c7",
+    "firstName": "Raiden",
+    "lastName": "Vines-Bright",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640365418-Raiden_Vines-Bright_69007d3d19d5cdb1049300c7.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4050,
+        "likes": 77652,
+        "comments": 739,
+        "engagementRate": 0.9687311213429279,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300e1",
+    "firstName": "Melody",
+    "lastName": "Acevedo",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640354482-Melody_Acevedo_69007d3d19d5cdb1049300e1.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1530,
+        "likes": 4958,
+        "comments": 363,
+        "engagementRate": 0.17403068940342095,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930063",
+    "firstName": "Dylan",
+    "lastName": "Robinson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640368459-Dylan_Robinson_69007d3d19d5cdb104930063.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2066,
+        "likes": 11559,
+        "comments": 306,
+        "engagementRate": 0.2823814133591481,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300b8",
+    "firstName": "Decker",
+    "lastName": "DeGraaf",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640366661-Decker_DeGraaf_69007d3d19d5cdb1049300b8.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2818,
+        "likes": 26318,
+        "comments": 408,
+        "engagementRate": 0.6303034626036779,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930079",
+    "firstName": "Isaiah",
+    "lastName": "Ward",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640367885-Isaiah_Ward_69007d3d19d5cdb104930079.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "EDGE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1457,
+        "likes": 7994,
+        "comments": 336,
+        "engagementRate": 0.4659542406046258,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300ee",
+    "firstName": "Allie",
+    "lastName": "Thomsen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640359390-Allie_Thomsen_69007d3d19d5cdb1049300ee.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "P/OF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1855,
+        "likes": 5980,
+        "comments": 297,
+        "engagementRate": 0.2386467071070715,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930109",
+    "firstName": "Piper",
+    "lastName": "Stephenson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640366032-Piper_Stephenson_69007d3d19d5cdb104930109.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BEACH_VOLLEYBALL",
+    "position": "-",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 155,
+        "engagementRate": 0,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300b3",
+    "firstName": "Tristan",
+    "lastName": "Warner",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640364033-Tristan_Warner_69007d3d19d5cdb1049300b3.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 594,
+        "likes": 3437,
+        "comments": 154,
+        "engagementRate": 0.4316535656268545,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493007a",
+    "firstName": "Jacob",
+    "lastName": "Lane",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640363269-Jacob_Lane_69007d3d19d5cdb10493007a.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "EDGE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1957,
+        "likes": 8815,
+        "comments": 428,
+        "engagementRate": 0.36314588271041326,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493008d",
+    "firstName": "Drew",
+    "lastName": "Azzopardi",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640359066-Drew_Azzopardi_69007d3d19d5cdb10493008d.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2431,
+        "likes": 14772,
+        "comments": 603,
+        "engagementRate": 0.5866854240366766,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930094",
+    "firstName": "Landen",
+    "lastName": "Hatchett",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640361846-Landen_Hatchett_69007d3d19d5cdb104930094.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7765,
+        "likes": 55198,
+        "comments": 646,
+        "engagementRate": 0.41579564246605366,
+        "contentCount": 23,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493006f",
+    "firstName": "Elinneus",
+    "lastName": "Davis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640364043-Elinneus_Davis_69007d3d19d5cdb10493006f.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2249,
+        "likes": 7128,
+        "comments": 284,
+        "engagementRate": 0.5372758262931673,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300ab",
+    "firstName": "CJ",
+    "lastName": "Christian",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640364683-CJ_Christian_69007d3d19d5cdb1049300ab.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2855,
+        "likes": 12758,
+        "comments": 1564,
+        "engagementRate": 0.24444415712063963,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300c1",
+    "firstName": "Justice",
+    "lastName": "Williams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640356581-Justice_Williams_69007d3d19d5cdb1049300c1.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3648,
+        "likes": 13462,
+        "comments": 337,
+        "engagementRate": 0.24998172514619882,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300a8",
+    "firstName": "Quaid",
+    "lastName": "Carr",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640356602-Quaid_Carr_69007d3d19d5cdb1049300a8.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1523,
+        "likes": 15209,
+        "comments": 444,
+        "engagementRate": 0.604591554880191,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300e4",
+    "firstName": "Zuri",
+    "lastName": "Patterson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640361702-Zuri_Patterson_69007d3d19d5cdb1049300e4.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 783,
+        "likes": 2717,
+        "comments": 731,
+        "engagementRate": 0.31587909748829285,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930104",
+    "firstName": "Karolína",
+    "lastName": "Majerníková",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640361554-KarolÃ­na_MajernÃ­kovÃ¡_69007d3d19d5cdb104930104.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BEACH_VOLLEYBALL",
+    "position": "-",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1000,
+        "likes": 4804,
+        "comments": 188,
+        "engagementRate": 0.23792391675196173,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930121",
+    "firstName": "Thu",
+    "lastName": "Nguyen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640354426-Thu_Nguyen_69007d3d19d5cdb104930121.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1873,
+        "likes": 1708,
+        "comments": 218,
+        "engagementRate": 0.051770962603308796,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300f6",
+    "firstName": "Chloe",
+    "lastName": "Briggs",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640355650-Chloe_Briggs_69007d3d19d5cdb1049300f6.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 17629,
+        "likes": 48940,
+        "comments": 1140,
+        "engagementRate": 0.13527228575690362,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300c6",
+    "firstName": "Omari",
+    "lastName": "Evans",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640360075-Omari_Evans_69007d3d19d5cdb1049300c6.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10452,
+        "likes": 130798,
+        "comments": 1993,
+        "engagementRate": 0.7055690588935215,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493008b",
+    "firstName": "Champ",
+    "lastName": "Taulealea",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640366089-Champ_Taulealea_69007d3d19d5cdb10493008b.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 178,
+        "engagementRate": 0,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930122",
+    "firstName": "Addy",
+    "lastName": "Azavedo",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640358371-Addy_Azavedo_69007d3d19d5cdb104930122.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "L",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1329,
+        "likes": 2646,
+        "comments": 692,
+        "engagementRate": 0.10879134720882515,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930114",
+    "firstName": "Emma",
+    "lastName": "Schrady",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640364580-Emma_Schrady_69007d3d19d5cdb104930114.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1715,
+        "likes": 2987,
+        "comments": 265,
+        "engagementRate": 0.12020522048104958,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930128",
+    "firstName": "Katy",
+    "lastName": "Wessels",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640366659-Katy_Wessels_69007d3d19d5cdb104930128.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3053,
+        "likes": 18662,
+        "comments": 241,
+        "engagementRate": 0.28397575175038753,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930077",
+    "firstName": "Devin",
+    "lastName": "Hyde",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640364075-Devin_Hyde_69007d3d19d5cdb104930077.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "EDGE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3343,
+        "likes": 3946,
+        "comments": 338,
+        "engagementRate": 0.16154926117334345,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300a9",
+    "firstName": "Ryken",
+    "lastName": "Moon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640361000-Ryken_Moon_69007d3d19d5cdb1049300a9.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2382,
+        "likes": 21867,
+        "comments": 558,
+        "engagementRate": 0.7241813602015112,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300a6",
+    "firstName": "Jordan",
+    "lastName": "Washington",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640354504-Jordan_Washington_69007d3d19d5cdb1049300a6.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2746,
+        "likes": 6365,
+        "comments": 123,
+        "engagementRate": 0.3937848992473902,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300ff",
+    "firstName": "Ella",
+    "lastName": "Tyus",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640360030-Ella_Tyus_69007d3d19d5cdb1049300ff.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BEACH_VOLLEYBALL",
+    "position": "-",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2634,
+        "likes": 700,
+        "comments": 706,
+        "engagementRate": 0.024021380520616413,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493011b",
+    "firstName": "Lana",
+    "lastName": "Navarro",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640368013-Lana_Navarro_69007d3d19d5cdb10493011b.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2634,
+        "likes": 3227,
+        "comments": 381,
+        "engagementRate": 0.07802901715336354,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493012e",
+    "firstName": "Alexis",
+    "lastName": "Haury",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640360981-Alexis_Haury_69007d3d19d5cdb10493012e.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 610,
+        "likes": 5107,
+        "comments": 164,
+        "engagementRate": 1.071516393442623,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930098",
+    "firstName": "Parker",
+    "lastName": "Cross",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640364068-Parker_Cross_69007d3d19d5cdb104930098.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1469,
+        "likes": 6320,
+        "comments": 254,
+        "engagementRate": 0.34416139548052177,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300ca",
+    "firstName": "Lathan",
+    "lastName": "Sommerville",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640367260-Lathan_Sommerville_69007d3d19d5cdb1049300ca.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "C",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 13055,
+        "likes": 24152,
+        "comments": 612,
+        "engagementRate": 0.08956077070947124,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300b5",
+    "firstName": "Austin",
+    "lastName": "Simmons",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640353565-Austin_Simmons_69007d3d19d5cdb1049300b5.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1210,
+        "likes": 5204,
+        "comments": 144,
+        "engagementRate": 0.31568600187437346,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930069",
+    "firstName": "Annas",
+    "lastName": "Davis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640363363-Annas_Davis_69007d3d19d5cdb104930069.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 939,
+        "likes": 4356,
+        "comments": 227,
+        "engagementRate": 0.3791131376092783,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930108",
+    "firstName": "Niki",
+    "lastName": "Egan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640369154-Niki_Egan_69007d3d19d5cdb104930108.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BEACH_VOLLEYBALL",
+    "position": "-",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2265,
+        "likes": 3435,
+        "comments": 862,
+        "engagementRate": 0.11445447379929245,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300f7",
+    "firstName": "Devin",
+    "lastName": "Coppinger",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640364001-Devin_Coppinger_69007d3d19d5cdb1049300f7.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3451,
+        "likes": 16702,
+        "comments": 739,
+        "engagementRate": 0.252694871051869,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493007c",
+    "firstName": "Victor",
+    "lastName": "Sanchez Hernandez",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640353665-Victor_Sanchez Hernandez_69007d3d19d5cdb10493007c.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "EDGE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1447,
+        "likes": 13560,
+        "comments": 116,
+        "engagementRate": 3.150426169085464,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493010d",
+    "firstName": "Teila",
+    "lastName": "Allen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640364690-Teila_Allen_69007d3d19d5cdb10493010d.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BEACH_VOLLEYBALL",
+    "position": "-",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 371,
+        "engagementRate": 0,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930062",
+    "firstName": "D’Aryhian",
+    "lastName": "Clemons",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640369135-DâAryhian_Clemons_69007d3d19d5cdb104930062.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1940,
+        "likes": 1621,
+        "comments": 79,
+        "engagementRate": 0.29277881807055445,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300aa",
+    "firstName": "Alex",
+    "lastName": "McLaughlin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640358566-Alex_McLaughlin_69007d3d19d5cdb1049300aa.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2871,
+        "likes": 22728,
+        "comments": 462,
+        "engagementRate": 0.7360472739290227,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300b1",
+    "firstName": "Rahshawn",
+    "lastName": "Clark",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640362771-Rahshawn_Clark_69007d3d19d5cdb1049300b1.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5086,
+        "likes": 40354,
+        "comments": 1033,
+        "engagementRate": 0.4526288573377825,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930095",
+    "firstName": "Lowen",
+    "lastName": "Colman-Brusa",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640367282-Lowen_Colman-Brusa_69007d3d19d5cdb104930095.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2138,
+        "likes": 7530,
+        "comments": 472,
+        "engagementRate": 0.31189585282195204,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300b2",
+    "firstName": "Rylon",
+    "lastName": "Dillard-Allen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640363484-Rylon_Dillard-Allen_69007d3d19d5cdb1049300b2.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2764,
+        "likes": 1334,
+        "comments": 283,
+        "engagementRate": 0.05459174475093434,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493008f",
+    "firstName": "Geirean",
+    "lastName": "Hatchett",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640356591-Geirean_Hatchett_69007d3d19d5cdb10493008f.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2814,
+        "likes": 7630,
+        "comments": 248,
+        "engagementRate": 0.2273750296138356,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930088",
+    "firstName": "Ryan",
+    "lastName": "Kean",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640366680-Ryan_Kean_69007d3d19d5cdb104930088.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "LS",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1316,
+        "likes": 4475,
+        "comments": 400,
+        "engagementRate": 0.2851910936853654,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493012f",
+    "firstName": "Taylor",
+    "lastName": "Simpson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640353575-Taylor_Simpson_69007d3d19d5cdb10493012f.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5531,
+        "likes": 6979,
+        "comments": 817,
+        "engagementRate": 0.10120579113527947,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493012d",
+    "firstName": "Simona",
+    "lastName": "Mateska",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640360926-Simona_Mateska_69007d3d19d5cdb10493012d.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1689,
+        "likes": 4877,
+        "comments": 100,
+        "engagementRate": 0.7366785079928951,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930082",
+    "firstName": "Jacob",
+    "lastName": "Manu",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640357460-Jacob_Manu_69007d3d19d5cdb104930082.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7563,
+        "likes": 51848,
+        "comments": 955,
+        "engagementRate": 0.36746069855320573,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930103",
+    "firstName": "Jade",
+    "lastName": "Sadeiko",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640359123-Jade_Sadeiko_69007d3d19d5cdb104930103.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BEACH_VOLLEYBALL",
+    "position": "-",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5233,
+        "likes": 305630,
+        "comments": 1553,
+        "engagementRate": 6.517612586788967,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300cf",
+    "firstName": "Jasir",
+    "lastName": "Rencher",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640360019-Jasir_Rencher_69007d3d19d5cdb1049300cf.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 31007,
+        "likes": 91577,
+        "comments": 1505,
+        "engagementRate": 0.12000191975076842,
+        "contentCount": 25,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930093",
+    "firstName": "Justin",
+    "lastName": "Hylkema",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640368575-Justin_Hylkema_69007d3d19d5cdb104930093.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4224,
+        "likes": 5067,
+        "comments": 157,
+        "engagementRate": 0.15459280303030304,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300c8",
+    "firstName": "Rashid",
+    "lastName": "Williams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640363317-Rashid_Williams_69007d3d19d5cdb1049300c8.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11019,
+        "likes": 12110,
+        "comments": 0,
+        "engagementRate": 0.09158423329400732,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300b0",
+    "firstName": "Rahim",
+    "lastName": "Wright II",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640361126-Rahim_Wright II_69007d3d19d5cdb1049300b0.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8891,
+        "likes": 893,
+        "comments": 657,
+        "engagementRate": 0.006973343830840176,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300fe",
+    "firstName": "Avery",
+    "lastName": "Towne",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640358401-Avery_Towne_69007d3d19d5cdb1049300fe.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BEACH_VOLLEYBALL",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3228,
+        "likes": 833,
+        "comments": 685,
+        "engagementRate": 0.028939487814952498,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300df",
+    "firstName": "Jade",
+    "lastName": "Bubke",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640355705-Jade_Bubke_69007d3d19d5cdb1049300df.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1388,
+        "likes": 1785,
+        "comments": 66,
+        "engagementRate": 0.107768972142171,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300c2",
+    "firstName": "Kevin",
+    "lastName": "Green Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640362466-Kevin_Green Jr._69007d3d19d5cdb1049300c2.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3763,
+        "likes": 4002,
+        "comments": 521,
+        "engagementRate": 0.07835693405717323,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930110",
+    "firstName": "Charlotte",
+    "lastName": "Gray",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640362522-Charlotte_Gray_69007d3d19d5cdb104930110.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2289,
+        "likes": 3912,
+        "comments": 487,
+        "engagementRate": 0.27591237129336865,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300c0",
+    "firstName": "Jace",
+    "lastName": "Burton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640364701-Jace_Burton_69007d3d19d5cdb1049300c0.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2276,
+        "likes": 6585,
+        "comments": 454,
+        "engagementRate": 0.3092706502636204,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930116",
+    "firstName": "Haley",
+    "lastName": "Fichiera",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640355647-Haley_Fichiera_69007d3d19d5cdb104930116.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1497,
+        "likes": 823,
+        "comments": 619,
+        "engagementRate": 0.04620351814740592,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493009f",
+    "firstName": "Dash",
+    "lastName": "Beierly",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640364063-Dash_Beierly_69007d3d19d5cdb10493009f.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2769,
+        "likes": 8158,
+        "comments": 504,
+        "engagementRate": 0.2606837606837607,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930072",
+    "firstName": "Omar",
+    "lastName": "Khan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640365984-Omar_Khan_69007d3d19d5cdb104930072.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2036,
+        "likes": 978,
+        "comments": 279,
+        "engagementRate": 0.07395453269716531,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493010a",
+    "firstName": "Reagan",
+    "lastName": "Peterson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640360839-Reagan_Peterson_69007d3d19d5cdb10493010a.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BEACH_VOLLEYBALL",
+    "position": "-",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1530,
+        "likes": 197,
+        "comments": 268,
+        "engagementRate": 0.019753086419753086,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300bc",
+    "firstName": "Chris",
+    "lastName": "Lawson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640359142-Chris_Lawson_69007d3d19d5cdb1049300bc.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3106,
+        "likes": 2870,
+        "comments": 224,
+        "engagementRate": 0.14189127035231347,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300cb",
+    "firstName": "Bryson",
+    "lastName": "Tucker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640366035-Bryson_Tucker_69007d3d19d5cdb1049300cb.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 23978,
+        "likes": 75436,
+        "comments": 1262,
+        "engagementRate": 0.24757223218150845,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493011c",
+    "firstName": "Lex",
+    "lastName": "Mouyenga",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640366121-Lex_Mouyenga_69007d3d19d5cdb10493011c.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 156,
+        "engagementRate": 0,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300d2",
+    "firstName": "Courtland",
+    "lastName": "Muldrew",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640367176-Courtland_Muldrew_69007d3d19d5cdb1049300d2.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12545,
+        "likes": 22801,
+        "comments": 481,
+        "engagementRate": 0.10309552278464197,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930100",
+    "firstName": "Ella",
+    "lastName": "Wimmer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640364027-Ella_Wimmer_69007d3d19d5cdb104930100.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BEACH_VOLLEYBALL",
+    "position": "-",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1555,
+        "likes": 2071,
+        "comments": 196,
+        "engagementRate": 0.11361200428724545,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300ea",
+    "firstName": "Morgan",
+    "lastName": "Reimer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640358131-Morgan_Reimer_69007d3d19d5cdb1049300ea.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "P",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1658,
+        "likes": 7783,
+        "comments": 251,
+        "engagementRate": 0.30313390830867726,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300ae",
+    "firstName": "Makell",
+    "lastName": "Esteen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640362486-Makell_Esteen_69007d3d19d5cdb1049300ae.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3736,
+        "likes": 7842,
+        "comments": 355,
+        "engagementRate": 0.13696132226980726,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300d1",
+    "firstName": "BJ",
+    "lastName": "Roy",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640360976-BJ_Roy_69007d3d19d5cdb1049300d1.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3097,
+        "likes": 46699,
+        "comments": 1046,
+        "engagementRate": 1.100433010631478,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493011e",
+    "firstName": "Lydia",
+    "lastName": "Rak",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640368561-Lydia_Rak_69007d3d19d5cdb10493011e.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 573,
+        "likes": 1966,
+        "comments": 535,
+        "engagementRate": 0.29098312972658513,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930067",
+    "firstName": "Ramonz",
+    "lastName": "Adams Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640364576-Ramonz_Adams Jr._69007d3d19d5cdb104930067.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2881,
+        "likes": 1762,
+        "comments": 103,
+        "engagementRate": 0.21578155732963092,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300d0",
+    "firstName": "Mady",
+    "lastName": "Traore",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640361899-Mady_Traore_69007d3d19d5cdb1049300d0.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4164,
+        "likes": 20119,
+        "comments": 575,
+        "engagementRate": 0.38276158315365627,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300c3",
+    "firstName": "Luke",
+    "lastName": "Gayton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640355665-Luke_Gayton_69007d3d19d5cdb1049300c3.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1502,
+        "likes": 5443,
+        "comments": 441,
+        "engagementRate": 0.3277298797966077,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300cc",
+    "firstName": "Christian",
+    "lastName": "Nitu",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640360032-Christian_Nitu_69007d3d19d5cdb1049300cc.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3228,
+        "likes": 12905,
+        "comments": 446,
+        "engagementRate": 0.2474806700731892,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930107",
+    "firstName": "Mayamay",
+    "lastName": "Brown",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640364881-Mayamay_Brown_69007d3d19d5cdb104930107.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BEACH_VOLLEYBALL",
+    "position": "-",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1696,
+        "likes": 353,
+        "comments": 252,
+        "engagementRate": 0.01911360062893082,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300da",
+    "firstName": "Tia",
+    "lastName": "Durst",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640361584-Tia_Durst_69007d3d19d5cdb1049300da.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "C/INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 849,
+        "likes": 5668,
+        "comments": 61,
+        "engagementRate": 1.349587750294464,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300c4",
+    "firstName": "Luke",
+    "lastName": "Luchini",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640364024-Luke_Luchini_69007d3d19d5cdb1049300c4.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3106,
+        "likes": 10112,
+        "comments": 408,
+        "engagementRate": 0.2822494097445804,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930123",
+    "firstName": "Ava",
+    "lastName": "Jo Berry",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640356181-Ava_Jo Berry_69007d3d19d5cdb104930123.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "L",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 542,
+        "likes": 3094,
+        "comments": 95,
+        "engagementRate": 0.4202688455455982,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930118",
+    "firstName": "Jessica",
+    "lastName": "Schaffer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640357151-Jessica_Schaffer_69007d3d19d5cdb104930118.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 472,
+        "likes": 1468,
+        "comments": 47,
+        "engagementRate": 0.2292675544794189,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930091",
+    "firstName": "Jake",
+    "lastName": "Flores",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640356550-Jake_Flores_69007d3d19d5cdb104930091.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1309,
+        "likes": 340,
+        "comments": 40,
+        "engagementRate": 0.2902979373567609,
+        "contentCount": 1,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300bd",
+    "firstName": "Deji",
+    "lastName": "Ajose",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640367878-Deji_Ajose_69007d3d19d5cdb1049300bd.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1647,
+        "likes": 15741,
+        "comments": 942,
+        "engagementRate": 0.4400886988199891,
+        "contentCount": 23,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300b6",
+    "firstName": "Baron",
+    "lastName": "Naone",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640358093-Baron_Naone_69007d3d19d5cdb1049300b6.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2103,
+        "likes": 6764,
+        "comments": 281,
+        "engagementRate": 0.2569625206825844,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930115",
+    "firstName": "Evelyn",
+    "lastName": "DeYoung",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640355596-Evelyn_DeYoung_69007d3d19d5cdb104930115.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1768,
+        "likes": 8587,
+        "comments": 389,
+        "engagementRate": 0.23076923076923075,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300a4",
+    "firstName": "Beck",
+    "lastName": "Walker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640368528-Beck_Walker_69007d3d19d5cdb1049300a4.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 55,
+        "engagementRate": 0,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493007e",
+    "firstName": "Anthony",
+    "lastName": "Ward",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640363330-Anthony_Ward_69007d3d19d5cdb10493007e.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1816,
+        "likes": 340,
+        "comments": 259,
+        "engagementRate": 0.01987885462555066,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930089",
+    "firstName": "Aidan",
+    "lastName": "Anderson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640361656-Aidan_Anderson_69007d3d19d5cdb104930089.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 597,
+        "likes": 2207,
+        "comments": 121,
+        "engagementRate": 0.5506101938262742,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493008e",
+    "firstName": "Elishah",
+    "lastName": "Jackett",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640365997-Elishah_Jackett_69007d3d19d5cdb10493008e.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 321,
+        "engagementRate": 0,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300e8",
+    "firstName": "Jing",
+    "lastName": "Gardner",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640367294-Jing_Gardner_69007d3d19d5cdb1049300e8.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 222,
+        "engagementRate": 0,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930080",
+    "firstName": "Donovan",
+    "lastName": "Robinson Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640363341-Donovan_Robinson Jr._69007d3d19d5cdb104930080.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4182,
+        "likes": 22283,
+        "comments": 816,
+        "engagementRate": 0.39442345425162906,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930073",
+    "firstName": "Russell",
+    "lastName": "Davis II",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640357148-Russell_Davis II_69007d3d19d5cdb104930073.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1619,
+        "likes": 4621,
+        "comments": 81,
+        "engagementRate": 0.23985999588223184,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300a1",
+    "firstName": "Kai",
+    "lastName": "Horton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640359106-Kai_Horton_69007d3d19d5cdb1049300a1.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6777,
+        "likes": 18794,
+        "comments": 580,
+        "engagementRate": 0.4059107485402306,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930090",
+    "firstName": "Jack",
+    "lastName": "Shaffer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640360058-Jack_Shaffer_69007d3d19d5cdb104930090.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1235,
+        "likes": 5483,
+        "comments": 231,
+        "engagementRate": 0.38556005398110654,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300a2",
+    "firstName": "Treston",
+    "lastName": "\"Kini\" McMillan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640365425-Treston__Kini_ McMillan_69007d3d19d5cdb1049300a2.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2660,
+        "likes": 40854,
+        "comments": 711,
+        "engagementRate": 0.9191729323308271,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930071",
+    "firstName": "Logan",
+    "lastName": "Sagapolu",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640360970-Logan_Sagapolu_69007d3d19d5cdb104930071.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3143,
+        "likes": 5809,
+        "comments": 115,
+        "engagementRate": 0.30931169795312335,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb1049300b7",
+    "firstName": "Charlie",
+    "lastName": "Crowell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640362496-Charlie_Crowell_69007d3d19d5cdb1049300b7.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1439,
+        "likes": 1300,
+        "comments": 125,
+        "engagementRate": 0.495135510771369,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb10493009e",
+    "firstName": "Grady",
+    "lastName": "Gross",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640368577-Grady_Gross_69007d3d19d5cdb10493009e.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "PK",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4637,
+        "likes": 17105,
+        "comments": 683,
+        "engagementRate": 0.31967507727697503,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930081",
+    "firstName": "Griffin",
+    "lastName": "Miller",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640356598-Griffin_Miller_69007d3d19d5cdb104930081.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1361,
+        "likes": 4524,
+        "comments": 539,
+        "engagementRate": 0.41333986447873294,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930117",
+    "firstName": "Jessica",
+    "lastName": "Reith",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640366711-Jessica_Reith_69007d3d19d5cdb104930117.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 524,
+        "likes": 1328,
+        "comments": 75,
+        "engagementRate": 0.1912486368593239,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930078",
+    "firstName": "Hayden",
+    "lastName": "Moore",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640355658-Hayden_Moore_69007d3d19d5cdb104930078.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "EDGE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 19,
+        "likes": 30,
+        "comments": 7,
+        "engagementRate": 0.16228070175438597,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "washington-transfer-trey-cooley",
+    "firstName": "Trey",
+    "lastName": "Cooley",
+    "profilePicture": "",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "contentCount": 0,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69007d3d19d5cdb104930070",
+    "firstName": "Jayvon",
+    "lastName": "Parker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761640354572-Jayvon_Parker_69007d3d19d5cdb104930070.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "contentCount": 0,
+        "marketability": 23
+      }
+    }
+  },
+  {
+    "_id": "68fca493b06066e3308741cf",
+    "firstName": "Bodpegn",
+    "lastName": "Miller",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761388501356-Bodpegn_Miller_68fca493b06066e3308741cf.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6316,
+        "likes": 1458,
+        "comments": 30,
+        "engagementRate": 0.23275421298708654,
+        "contentCount": 1,
+        "marketability": 59
+      }
+    }
+  },
+  {
+    "_id": "69023ec6dfcf78a95d250eac",
+    "firstName": "Elijah",
+    "lastName": "Brown",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754955436-Elijah_Brown_69023ec6dfcf78a95d250eac.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 13900,
+        "likes": 5233,
+        "comments": 40,
+        "engagementRate": 0.04285127358438017,
+        "contentCount": 4,
+        "marketability": 76
+      }
+    }
+  },
+  {
+    "_id": "washington-transfer-christian-moss",
+    "firstName": "Christian",
+    "lastName": "Moss",
+    "profilePicture": "",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "contentCount": 0,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "washington-transfer-hunter-mckee",
+    "firstName": "Hunter",
+    "lastName": "McKee",
+    "profilePicture": "",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "contentCount": 0,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01dab",
+    "firstName": "Jayden",
+    "lastName": "Limar",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637350113-Jayden_Limar_690070e41b5a6fb80ca01dab.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8847,
+        "likes": 2369,
+        "comments": 70,
+        "engagementRate": 0.2716488954196652,
+        "contentCount": 7,
+        "marketability": 63
+      }
+    }
+  },
+  {
+    "_id": "68fca493b06066e3308741f5",
+    "firstName": "Logan",
+    "lastName": "George",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761388500798-Logan_George_68fca493b06066e3308741f5.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1999,
+        "likes": 65,
+        "comments": 35,
+        "engagementRate": 0.034628425323773,
+        "contentCount": 1,
+        "marketability": 53
+      }
+    }
+  },
+  {
+    "_id": "68f0d5fd1d9d29320a5dc3f1",
+    "firstName": "Emmanuel",
+    "lastName": "Karnley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1764774648721-Emmanuel_Karnley_68f0d5fd1d9d29320a5dc3f1_ProfilePicture.jpg",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2388,
+        "likes": 13418,
+        "comments": 105,
+        "engagementRate": 5.894472361809045,
+        "contentCount": 1,
+        "marketability": 66
+      }
+    }
+  },
+  {
+    "_id": "washington-transfer-tyler-robles",
+    "firstName": "Tyler",
+    "lastName": "Robles",
+    "profilePicture": "",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "contentCount": 0,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "washington-transfer-darin-conley",
+    "firstName": "Darin",
+    "lastName": "Conley",
+    "profilePicture": "",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "contentCount": 0,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "washington-transfer-desean-watts",
+    "firstName": "DeSean",
+    "lastName": "Watts",
+    "profilePicture": "",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "contentCount": 0,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "68fca18144c22e8cff1625c9",
+    "firstName": "Hunter",
+    "lastName": "Green",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761387142029-Hunter_Green_68fca18144c22e8cff1625c9.png",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "PUNTER",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1476,
+        "likes": 400,
+        "comments": 20,
+        "engagementRate": 0.2841011743450768,
+        "contentCount": 3,
+        "marketability": 51
+      }
+    }
+  },
+  {
+    "_id": "washington-transfer-kolt-dieterich",
+    "firstName": "Kolt",
+    "lastName": "Dieterich",
+    "profilePicture": "",
+    "schoolName": "Washington",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "contentCount": 0,
+        "marketability": 0
+      }
+    }
+  }
+]

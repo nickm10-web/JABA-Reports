@@ -1,0 +1,467 @@
+[
+  {
+    "_id": {
+      "$oid": "69bdad0e3da216b9fd812c55"
+    },
+    "profileId": "697a49d7a36a7c442ec10965",
+    "source": "INSTAGRAM",
+    "url": "https://storage.googleapis.com/scraper-media-images/18083212667579922",
+    "permalink": "https://www.instagram.com/p/DWCB-ojDvwI",
+    "externalContentId": "18083212667579922",
+    "uploadedAt": {
+      "$date": "2026-03-18T16:03:38.000Z"
+    },
+    "metrics": {
+      "comments": 6,
+      "likes": 126,
+      "engagementRate": 0.005956947515682116,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 3133,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "isHidden": false,
+    "isDeliverable": false,
+    "hasBeenAnalyzed": true,
+    "caption": "Work now….. \nDance later \n\n@hardee’s #HardeesPartner",
+    "hashtags": [
+      "#HardeesPartner"
+    ],
+    "hasOrganizationLogo": false,
+    "isSponsored": true,
+    "sponsorPartner": "@hardee’s",
+    "originalAuthor": "thehollandharris",
+    "isCollaboration": true,
+    "collaborationPartners": [
+      "clemsonwbb"
+    ],
+    "isOrganizationCollaboration": true,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "organizationId": "68f9cc6d7804265f86eb3963",
+    "team": "WOMENS_BASKETBALL",
+    "hasOrganizationInCaption": false,
+    "createdAt": {
+      "$date": "2026-03-20T20:24:46.652Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-20T20:24:49.387Z"
+    },
+    "__v": 0,
+    "comments": [
+      {
+        "id": "18081844877584273",
+        "text": "🍔🔥",
+        "created_at": "2026-03-18T19:03:27.000Z",
+        "user": {
+          "is_verified": false,
+          "id": "145264063",
+          "pk": "145264063",
+          "is_unpublished": null,
+          "profile_pic_url": "https://scontent-lga3-3.cdninstagram.com/v/t51.82787-19/572142425_18546674185048064_3681806157531337623_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-lga3-3.cdninstagram.com&_nc_cat=108&_nc_oc=Q6cZ2gGtFwWfH9fC1vr0XGOnfo1GruutPENswVoQ9EdEVW1OZwIy5xYbFVIrPxn4xGy8XX4&_nc_ohc=sRGewqZIW8gQ7kNvwHYJI9B&_nc_gid=HTmM3KrMRVlV7pImu_lCPg&edm=AKp6CbIBAAAA&ccb=7-5&oh=00_AfxlbDm9vWcMFLtRAWW9xsdaH-4AakFgu9Ct6u2gPZk50Q&oe=69C37EEC&_nc_sid=d62176",
+          "username": "itsyabrutha",
+          "fbid_v2": "17841401441892269"
+        }
+      },
+      {
+        "id": "18094912811022908",
+        "text": "👏🔥",
+        "created_at": "2026-03-18T16:09:49.000Z",
+        "user": {
+          "is_verified": false,
+          "id": "55243483",
+          "pk": "55243483",
+          "is_unpublished": null,
+          "profile_pic_url": "https://scontent-lga3-3.cdninstagram.com/v/t51.82787-19/614889197_18552045748011484_3937705216222746099_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-lga3-3.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gGtFwWfH9fC1vr0XGOnfo1GruutPENswVoQ9EdEVW1OZwIy5xYbFVIrPxn4xGy8XX4&_nc_ohc=tTctjSyrrvgQ7kNvwFavcjo&_nc_gid=HTmM3KrMRVlV7pImu_lCPg&edm=AKp6CbIBAAAA&ccb=7-5&oh=00_AfzgMuUBfh7UgkBOf0nZDOSnp0hRYZu4Lt-Elvkd_e8ORA&oe=69C377D7&_nc_sid=d62176",
+          "username": "nataliefedel",
+          "fbid_v2": "17841400344490863"
+        }
+      },
+      {
+        "id": "17867263053502638",
+        "text": "She can do it all",
+        "created_at": "2026-03-18T18:02:47.000Z",
+        "user": {
+          "is_verified": true,
+          "id": "25813634",
+          "pk": "25813634",
+          "is_unpublished": null,
+          "profile_pic_url": "https://scontent-lga3-1.cdninstagram.com/v/t51.2885-19/477617229_2021678854975252_5948423637434316263_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_cat=1&_nc_oc=Q6cZ2gGtFwWfH9fC1vr0XGOnfo1GruutPENswVoQ9EdEVW1OZwIy5xYbFVIrPxn4xGy8XX4&_nc_ohc=uY2im_S6eKsQ7kNvwFmTGwe&_nc_gid=HTmM3KrMRVlV7pImu_lCPg&edm=AKp6CbIBAAAA&ccb=7-5&oh=00_AfzuCTjYKsVkVHe2AMPjwfUCMEFTzKJlKEsz445z4-8ADg&oe=69C384BF&_nc_sid=d62176",
+          "username": "carebearr__",
+          "fbid_v2": "17841400649020403"
+        }
+      },
+      {
+        "id": "17968148163000998",
+        "text": "This is so cool… Love it!❤️",
+        "created_at": "2026-03-19T13:15:51.000Z",
+        "user": {
+          "is_verified": false,
+          "id": "1464433258",
+          "pk": "1464433258",
+          "is_unpublished": null,
+          "profile_pic_url": "https://scontent-lga3-1.cdninstagram.com/v/t51.82787-19/652099531_18567770833049259_8632002810152482545_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby45NTguYzIifQ&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_cat=103&_nc_oc=Q6cZ2gGtFwWfH9fC1vr0XGOnfo1GruutPENswVoQ9EdEVW1OZwIy5xYbFVIrPxn4xGy8XX4&_nc_ohc=IQHBE88KB_gQ7kNvwGVjgBJ&_nc_gid=HTmM3KrMRVlV7pImu_lCPg&edm=AKp6CbIBAAAA&ccb=7-5&oh=00_AfzS3NEVVSRIcJ8wbRxF5QQLs5-1IvTDsvabFzQ_cLWXpQ&oe=69C38FE8&_nc_sid=d62176",
+          "username": "jbfrench",
+          "fbid_v2": "17841401477762881"
+        }
+      },
+      {
+        "id": "18309286051287307",
+        "text": "Just put the fries in the bag bro 🫩 @itsyabrutha",
+        "created_at": "2026-03-18T19:53:39.000Z",
+        "user": {
+          "is_verified": false,
+          "id": "1220717546",
+          "pk": "1220717546",
+          "is_unpublished": null,
+          "profile_pic_url": "https://scontent-lga3-1.cdninstagram.com/v/t51.82787-19/621241447_18553150342045547_6810708121063821792_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_cat=111&_nc_oc=Q6cZ2gGtFwWfH9fC1vr0XGOnfo1GruutPENswVoQ9EdEVW1OZwIy5xYbFVIrPxn4xGy8XX4&_nc_ohc=frT4CQ8S1_IQ7kNvwGOhJTJ&_nc_gid=HTmM3KrMRVlV7pImu_lCPg&edm=AKp6CbIBAAAA&ccb=7-5&oh=00_AfxvHWA32QXl3bwANTMrijQJmZqPJAcC9fRT95hEonVSrw&oe=69C385D1&_nc_sid=d62176",
+          "username": "giovanni.lamonte",
+          "fbid_v2": "17841401366399073"
+        }
+      },
+      {
+        "id": "18094111960843002",
+        "text": "@acebuckner_ you really can be an actor fr 😂",
+        "created_at": "2026-03-18T17:31:06.000Z",
+        "user": {
+          "is_verified": true,
+          "id": "23701479",
+          "pk": "23701479",
+          "is_unpublished": null,
+          "profile_pic_url": "https://scontent-lga3-1.cdninstagram.com/v/t51.2885-19/442286725_966878691330779_1872731868318578985_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_cat=111&_nc_oc=Q6cZ2gGtFwWfH9fC1vr0XGOnfo1GruutPENswVoQ9EdEVW1OZwIy5xYbFVIrPxn4xGy8XX4&_nc_ohc=GW4JTiRcY70Q7kNvwErhR2S&_nc_gid=HTmM3KrMRVlV7pImu_lCPg&edm=AKp6CbIBAAAA&ccb=7-5&oh=00_AfzdB78Vmp1GB3AyguVhrv9pTvo7Y3JLzlHeymVhQYtfcw&oe=69C38A16&_nc_sid=d62176",
+          "username": "edtheshooter_",
+          "fbid_v2": "17841400644370370"
+        }
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "69bdac8a3da216b9fd8127a1"
+    },
+    "profileId": "69bdac38ee0117c7289b4218",
+    "source": "INSTAGRAM",
+    "url": "https://storage.googleapis.com/scraper-media-images/18213786049320429",
+    "permalink": "https://www.instagram.com/p/DWE3Lj0jhpw",
+    "externalContentId": "18213786049320429",
+    "uploadedAt": {
+      "$date": "2026-03-19T18:25:32.000Z"
+    },
+    "metrics": {
+      "comments": 13,
+      "likes": 205,
+      "engagementRate": 0.002146408703785753,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 6843,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "isHidden": false,
+    "isDeliverable": false,
+    "hasBeenAnalyzed": true,
+    "caption": "Big swing and even bigger flavor 🔥",
+    "hashtags": [],
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "sponsorPartner": null,
+    "originalAuthor": "hardees",
+    "isCollaboration": true,
+    "collaborationPartners": [
+      "jamison.b9"
+    ],
+    "isOrganizationCollaboration": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "organizationId": "69bdac18ee0117c7289b4217",
+    "team": "BRAND",
+    "hasOrganizationInCaption": false,
+    "createdAt": {
+      "$date": "2026-03-20T20:22:34.162Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-20T20:22:45.668Z"
+    },
+    "__v": 0,
+    "comments": [
+      {
+        "id": "17958835578073030",
+        "text": "JAM powered by Hardee’s 😮‍💨😮‍💨",
+        "created_at": "2026-03-20T15:44:34.000Z",
+        "user": {
+          "is_verified": false,
+          "id": "50845066",
+          "pk": "50845066",
+          "is_unpublished": null,
+          "profile_pic_url": "https://scontent-den2-1.cdninstagram.com/v/t51.2885-19/435015194_935158001443103_639579549046724918_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmV4cGVyaW1lbnRhbCJ9&_nc_ht=scontent-den2-1.cdninstagram.com&_nc_cat=111&_nc_oc=Q6cZ2gH0qOGzknMWCgTe69dedEqdBNI6_jcScIqayyxmckIJdzjhrYsbOMBXE12PWKTSgqQ&_nc_ohc=q337O9pu5-wQ7kNvwH4w2yX&_nc_gid=6W-m2V0yWaPvIPG-3e1v2A&edm=AKp6CbIBAAAA&ccb=7-5&oh=00_AfxdRnMqx4tZ5Bov4y970YxFvIspoek4JdXK6HTQMXigig&oe=69C370B4&_nc_sid=d62176",
+          "username": "bridgetperine",
+          "fbid_v2": "17841400871980794"
+        }
+      },
+      {
+        "id": "18110828869689831",
+        "text": "🙌",
+        "created_at": "2026-03-19T18:52:55.000Z",
+        "user": {
+          "is_verified": false,
+          "id": "8302150212",
+          "pk": "8302150212",
+          "is_unpublished": null,
+          "profile_pic_url": "https://scontent-den2-1.cdninstagram.com/v/t51.2885-19/68872750_2833107083366718_4266334286635859968_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmV4cGVyaW1lbnRhbCJ9&_nc_ht=scontent-den2-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gH0qOGzknMWCgTe69dedEqdBNI6_jcScIqayyxmckIJdzjhrYsbOMBXE12PWKTSgqQ&_nc_ohc=0Wk3B9KvlDoQ7kNvwFXvC7v&_nc_gid=6W-m2V0yWaPvIPG-3e1v2A&edm=AKp6CbIBAAAA&ccb=7-5&oh=00_AfxVocbWeREV3aZJbKkCNWUyf09TMQATFplg5uATajvH-g&oe=69C37416&_nc_sid=d62176",
+          "username": "whaley_andrew",
+          "fbid_v2": "17841408346377768"
+        }
+      },
+      {
+        "id": "18099680474310946",
+        "text": "JAMMMMMM",
+        "created_at": "2026-03-20T01:13:08.000Z",
+        "user": {
+          "is_verified": false,
+          "id": "15943117",
+          "pk": "15943117",
+          "is_unpublished": null,
+          "profile_pic_url": "https://scontent-den2-1.cdninstagram.com/v/t51.2885-19/375096418_616588033996542_3366104616928641738_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmV4cGVyaW1lbnRhbCJ9&_nc_ht=scontent-den2-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gH0qOGzknMWCgTe69dedEqdBNI6_jcScIqayyxmckIJdzjhrYsbOMBXE12PWKTSgqQ&_nc_ohc=Wcz3zMBg3eEQ7kNvwHFTi_H&_nc_gid=6W-m2V0yWaPvIPG-3e1v2A&edm=AKp6CbIBAAAA&ccb=7-5&oh=00_Afwl0AER2cKl0fsWI-wwGORW6NjnBe-ILgE83IOEQU_T1Q&oe=69C38644&_nc_sid=d62176",
+          "username": "malloryhopealford",
+          "fbid_v2": "17841400213510249"
+        }
+      },
+      {
+        "id": "18386635639081601",
+        "text": "But I LOVE YOU MORE ;)",
+        "created_at": "2026-03-19T20:23:28.000Z",
+        "user": {
+          "is_verified": false,
+          "id": "1099502177",
+          "pk": "1099502177",
+          "is_unpublished": null,
+          "profile_pic_url": "https://scontent-den2-1.cdninstagram.com/v/t51.82787-19/643542562_18567828502046178_7532882327399674249_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmV4cGVyaW1lbnRhbCJ9&_nc_ht=scontent-den2-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gH0qOGzknMWCgTe69dedEqdBNI6_jcScIqayyxmckIJdzjhrYsbOMBXE12PWKTSgqQ&_nc_ohc=BmVZ5WXoJuMQ7kNvwFEJhJg&_nc_gid=6W-m2V0yWaPvIPG-3e1v2A&edm=AKp6CbIBAAAA&ccb=7-5&oh=00_Afz4lZcXMHV2Z_TSOOb9L7pYl9uX6wLQF-dvAtOc_aE2EA&oe=69C385D0&_nc_sid=d62176",
+          "username": "katieltaylor_",
+          "fbid_v2": "17841401385327179"
+        }
+      },
+      {
+        "id": "17943029652137834",
+        "text": "Movie star !! Let me know when you're ready for an agent 🙌",
+        "created_at": "2026-03-19T19:21:49.000Z",
+        "user": {
+          "is_verified": false,
+          "id": "449722523",
+          "pk": "449722523",
+          "is_unpublished": null,
+          "profile_pic_url": "https://scontent-den2-1.cdninstagram.com/v/t51.2885-19/425439453_1566908467475970_8343140044528443897_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby43NzIuZXhwZXJpbWVudGFsIn0&_nc_ht=scontent-den2-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gH0qOGzknMWCgTe69dedEqdBNI6_jcScIqayyxmckIJdzjhrYsbOMBXE12PWKTSgqQ&_nc_ohc=Sh-E_6u7dyMQ7kNvwEvNXgP&_nc_gid=6W-m2V0yWaPvIPG-3e1v2A&edm=AKp6CbIBAAAA&ccb=7-5&oh=00_Afx60hfPA-VGJ9-TgnLBxMMKac1ZZnSR-9E2YNR8iGj-OA&oe=69C37794&_nc_sid=d62176",
+          "username": "tedmaier",
+          "fbid_v2": "17841401755697026"
+        }
+      },
+      {
+        "id": "18205253059328144",
+        "text": "😍😍😍😍😍😍 lemme get a biscuit @jamison.b9",
+        "created_at": "2026-03-19T23:44:59.000Z",
+        "user": {
+          "is_verified": false,
+          "id": "48154370",
+          "pk": "48154370",
+          "is_unpublished": null,
+          "profile_pic_url": "https://scontent-den2-1.cdninstagram.com/v/t51.82787-19/583653157_18541619839026371_2591661281715047659_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmV4cGVyaW1lbnRhbCJ9&_nc_ht=scontent-den2-1.cdninstagram.com&_nc_cat=111&_nc_oc=Q6cZ2gH0qOGzknMWCgTe69dedEqdBNI6_jcScIqayyxmckIJdzjhrYsbOMBXE12PWKTSgqQ&_nc_ohc=ECInbTufAjAQ7kNvwGX7fl_&_nc_gid=6W-m2V0yWaPvIPG-3e1v2A&edm=AKp6CbIBAAAA&ccb=7-5&oh=00_AfwcihLBLI-hsvd7NKp4-Gk_z_GFU6vhLy1wX-_MY164iQ&oe=69C391DF&_nc_sid=d62176",
+          "username": "anna.kateee",
+          "fbid_v2": "17841400791100752"
+        }
+      },
+      {
+        "id": "18086601542221829",
+        "text": "Oh my gosh I love Hardee’s",
+        "created_at": "2026-03-19T20:23:20.000Z",
+        "user": {
+          "is_verified": false,
+          "id": "1099502177",
+          "pk": "1099502177",
+          "is_unpublished": null,
+          "profile_pic_url": "https://scontent-den2-1.cdninstagram.com/v/t51.82787-19/643542562_18567828502046178_7532882327399674249_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmV4cGVyaW1lbnRhbCJ9&_nc_ht=scontent-den2-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gH0qOGzknMWCgTe69dedEqdBNI6_jcScIqayyxmckIJdzjhrYsbOMBXE12PWKTSgqQ&_nc_ohc=BmVZ5WXoJuMQ7kNvwFEJhJg&_nc_gid=6W-m2V0yWaPvIPG-3e1v2A&edm=AKp6CbIBAAAA&ccb=7-5&oh=00_Afz4lZcXMHV2Z_TSOOb9L7pYl9uX6wLQF-dvAtOc_aE2EA&oe=69C385D0&_nc_sid=d62176",
+          "username": "katieltaylor_",
+          "fbid_v2": "17841401385327179"
+        }
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "69bdaea5fb75eed9af65e11c"
+    },
+    "profileId": "68f9cda1c66d3c748cb9599f",
+    "userId": "68f9ccc3e3da270d8f26023c",
+    "source": "INSTAGRAM",
+    "url": "https://storage.googleapis.com/scraper-media-images/18327152473216745",
+    "permalink": "https://www.instagram.com/p/DWCIWbnDmqN",
+    "externalContentId": "18327152473216745",
+    "uploadedAt": {
+      "$date": "2026-03-18T16:58:26.000Z"
+    },
+    "metrics": {
+      "comments": 8,
+      "likes": 290,
+      "engagementRate": 0.07656731757451182,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 9569,
+      "reach": 0,
+      "profileLinksTaps": 0
+    },
+    "isHidden": false,
+    "isDeliverable": false,
+    "hasBeenAnalyzed": true,
+    "caption": "Work now….. \nDance later \n\n@hardees #hardeespartner",
+    "hashtags": [
+      "#hardeespartner"
+    ],
+    "hasOrganizationLogo": false,
+    "isSponsored": true,
+    "sponsorPartner": "@hardees",
+    "originalAuthor": "acebuckner_",
+    "isCollaboration": true,
+    "collaborationPartners": [
+      "zac2shifty",
+      "clemsonmbb",
+      "chase_thomps0n"
+    ],
+    "isOrganizationCollaboration": true,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "hasOrganizationInCaption": false,
+    "createdAt": {
+      "$date": "2026-03-20T20:31:33.450Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-20T20:31:37.382Z"
+    },
+    "__v": 0,
+    "organizationId": null,
+    "comments": [
+      {
+        "id": "18017503358820427",
+        "text": "🍔😏",
+        "created_at": "2026-03-19T01:50:59.000Z",
+        "user": {
+          "is_verified": false,
+          "id": "145264063",
+          "pk": "145264063",
+          "is_unpublished": null,
+          "profile_pic_url": "https://scontent-atl3-3.cdninstagram.com/v/t51.82787-19/572142425_18546674185048064_3681806157531337623_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_cat=108&_nc_oc=Q6cZ2gFzBOsta6C9cDfea81IxrB3iyLi6Hzw3Ec0F4F3fT2i-R9bd_vpslXDA61COw12s3A&_nc_ohc=sRGewqZIW8gQ7kNvwFnVdAn&_nc_gid=g1DZ9TXiCWuBRoYOzCaJ3A&edm=AKp6CbIBAAAA&ccb=7-5&oh=00_AfyUsne4cJ1fHhH-qIOiTiKx6SROjp11oeZPvGI_TIIpFg&oe=69C37EEC&_nc_sid=d62176",
+          "username": "itsyabrutha",
+          "fbid_v2": "17841401441892269"
+        }
+      },
+      {
+        "id": "18101151080480932",
+        "text": "Go Tigers 😮‍💨💪",
+        "created_at": "2026-03-18T18:43:51.000Z",
+        "user": {
+          "is_verified": true,
+          "id": "5426217",
+          "pk": "5426217",
+          "is_unpublished": null,
+          "profile_pic_url": "https://scontent-atl3-3.cdninstagram.com/v/t51.82787-19/612119588_18555631630050218_2922276027367085330_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_cat=1&_nc_oc=Q6cZ2gFzBOsta6C9cDfea81IxrB3iyLi6Hzw3Ec0F4F3fT2i-R9bd_vpslXDA61COw12s3A&_nc_ohc=M2nfYvxpTBgQ7kNvwGHgn75&_nc_gid=g1DZ9TXiCWuBRoYOzCaJ3A&edm=AKp6CbIBAAAA&ccb=7-5&oh=00_AfxE8JoAnUhwlCaPLvpgYw5lByeQWjcDBTEdbd8li9TUpg&oe=69C37EC9&_nc_sid=d62176",
+          "username": "hardees",
+          "fbid_v2": "17841401506510084"
+        }
+      },
+      {
+        "id": "18151009576455295",
+        "text": "👏🔥",
+        "created_at": "2026-03-18T17:18:55.000Z",
+        "user": {
+          "is_verified": false,
+          "id": "55243483",
+          "pk": "55243483",
+          "is_unpublished": null,
+          "profile_pic_url": "https://scontent-atl3-2.cdninstagram.com/v/t51.82787-19/614889197_18552045748011484_3937705216222746099_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gFzBOsta6C9cDfea81IxrB3iyLi6Hzw3Ec0F4F3fT2i-R9bd_vpslXDA61COw12s3A&_nc_ohc=tTctjSyrrvgQ7kNvwH7u470&_nc_gid=g1DZ9TXiCWuBRoYOzCaJ3A&edm=AKp6CbIBAAAA&ccb=7-5&oh=00_Afyv3Rb5XYqoHlK7kvjTMNArVxSX1jEkfa9ZuIWrDJfojw&oe=69C377D7&_nc_sid=d62176",
+          "username": "nataliefedel",
+          "fbid_v2": "17841400344490863"
+        }
+      },
+      {
+        "id": "18115210318641506",
+        "text": "Impeccable service 🔥",
+        "created_at": "2026-03-18T17:14:24.000Z",
+        "user": {
+          "is_verified": false,
+          "id": "36729803",
+          "pk": "36729803",
+          "is_unpublished": null,
+          "profile_pic_url": "https://scontent-atl3-2.cdninstagram.com/v/t51.2885-19/504476500_18510607750057804_5225512732666581509_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gFzBOsta6C9cDfea81IxrB3iyLi6Hzw3Ec0F4F3fT2i-R9bd_vpslXDA61COw12s3A&_nc_ohc=mU_0Nex5PBYQ7kNvwEbEF6f&_nc_gid=g1DZ9TXiCWuBRoYOzCaJ3A&edm=AKp6CbIBAAAA&ccb=7-5&oh=00_AfzzMY5j7BB-1GtuIUSOs8mI7dNHmCj3jLBQACs7nSCrZw&oe=69C39323&_nc_sid=d62176",
+          "username": "bobbysherard",
+          "fbid_v2": "17841401734090573"
+        }
+      },
+      {
+        "id": "18113613766656681",
+        "text": "Let's Go Tigers!",
+        "created_at": "2026-03-18T18:39:11.000Z",
+        "user": {
+          "is_verified": false,
+          "id": "53567021018",
+          "pk": "53567021018",
+          "is_unpublished": null,
+          "profile_pic_url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-19/600992960_18022992920789019_3141776915065445653_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby40ODAuYzIifQ&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_cat=103&_nc_oc=Q6cZ2gFzBOsta6C9cDfea81IxrB3iyLi6Hzw3Ec0F4F3fT2i-R9bd_vpslXDA61COw12s3A&_nc_ohc=EJDzisbIzUEQ7kNvwG0pu0O&_nc_gid=g1DZ9TXiCWuBRoYOzCaJ3A&edm=AKp6CbIBAAAA&ccb=7-5&oh=00_AfwrdWMKV6WuQ8r16KDnWWzdesRiZzatLR5S9mqtEZVtLw&oe=69C39D90&_nc_sid=d62176",
+          "username": "nrshipman",
+          "fbid_v2": "17841453670545877"
+        }
+      },
+      {
+        "id": "18097682602825290",
+        "text": "Don’t forget to have a Hardee’s biscuit on game day!",
+        "created_at": "2026-03-19T11:57:49.000Z",
+        "user": {
+          "is_verified": false,
+          "id": "27057234678",
+          "pk": "27057234678",
+          "is_unpublished": null,
+          "profile_pic_url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-19/553602922_18085618576898679_7229844659210115464_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby45NTguYzIifQ&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_cat=103&_nc_oc=Q6cZ2gFzBOsta6C9cDfea81IxrB3iyLi6Hzw3Ec0F4F3fT2i-R9bd_vpslXDA61COw12s3A&_nc_ohc=SyvYHIiphXcQ7kNvwF5SI93&_nc_gid=g1DZ9TXiCWuBRoYOzCaJ3A&edm=AKp6CbIBAAAA&ccb=7-5&oh=00_Afwvfj-6AetJZ_NqxyuNQkNKa1frMnSrNRENBoAIUO7Dkg&oe=69C398EA&_nc_sid=d62176",
+          "username": "mdbrjb2020",
+          "fbid_v2": "17841426960362154"
+        }
+      },
+      {
+        "id": "18116150515570743",
+        "text": "finna go to hardee’s 🏃🏽‍♀️",
+        "created_at": "2026-03-18T17:30:21.000Z",
+        "user": {
+          "is_verified": false,
+          "id": "72022591831",
+          "pk": "72022591831",
+          "is_unpublished": null,
+          "profile_pic_url": "https://scontent-atl3-2.cdninstagram.com/v/t51.2885-19/474235286_1588273368715901_5762050505702171895_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_cat=105&_nc_oc=Q6cZ2gFzBOsta6C9cDfea81IxrB3iyLi6Hzw3Ec0F4F3fT2i-R9bd_vpslXDA61COw12s3A&_nc_ohc=oNRT4_dTSFoQ7kNvwEbsn86&_nc_gid=g1DZ9TXiCWuBRoYOzCaJ3A&edm=AKp6CbIBAAAA&ccb=7-5&oh=00_AfzIm4oPqBi-B93CMqtLG3lJ1tKDATPa3DWkNRMhVB4CvQ&oe=69C39CE7&_nc_sid=d62176",
+          "username": "theunparker",
+          "fbid_v2": "17841472234932823"
+        }
+      },
+      {
+        "id": "17862028446664348",
+        "text": "Ace is the boss 😂",
+        "created_at": "2026-03-18T17:00:20.000Z",
+        "user": {
+          "is_verified": false,
+          "id": "12798991341",
+          "pk": "12798991341",
+          "is_unpublished": null,
+          "profile_pic_url": "https://scontent-atl3-1.cdninstagram.com/v/t51.82787-19/642215988_18154991662431342_6490110167062778921_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gFzBOsta6C9cDfea81IxrB3iyLi6Hzw3Ec0F4F3fT2i-R9bd_vpslXDA61COw12s3A&_nc_ohc=yeLfE0CV_bEQ7kNvwEeyG4G&_nc_gid=g1DZ9TXiCWuBRoYOzCaJ3A&edm=AKp6CbIBAAAA&ccb=7-5&oh=00_AfzaKiVxJ2ENzblc7LW-NFdhZ3y5LzKvXEdXLFSb4p--oQ&oe=69C3741C&_nc_sid=d62176",
+          "username": "bendystrawtiger",
+          "fbid_v2": "17841412940239873"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,173 @@
+{
+  "input": "/Users/jaba/REPORTS/tmp/mizzou-football-transfers-cleaned.csv",
+  "startingFootballCount": 110,
+  "removals": [
+    {
+      "row": 2,
+      "playerName": "Damon Wilson II",
+      "fromSchool": "University of Missouri",
+      "toSchool": "Miami",
+      "matchedSchool": "University of Missouri",
+      "position": "DE",
+      "year": "JUNIOR"
+    },
+    {
+      "row": 3,
+      "playerName": "Mose Phillips III",
+      "fromSchool": "University of Missouri",
+      "toSchool": "Oklahoma State",
+      "matchedSchool": "University of Missouri",
+      "position": "S",
+      "year": "JUNIOR"
+    },
+    {
+      "row": 4,
+      "playerName": "Beau Pribula",
+      "fromSchool": "University of Missouri",
+      "toSchool": "Virginia",
+      "matchedSchool": "University of Missouri",
+      "position": "QB",
+      "year": "GRADUATE"
+    },
+    {
+      "row": 5,
+      "playerName": "Mark Manfred III",
+      "fromSchool": "University of Missouri",
+      "toSchool": "Kentucky",
+      "matchedSchool": "University of Missouri",
+      "position": "CB",
+      "year": "FRESHMAN"
+    },
+    {
+      "row": 6,
+      "playerName": "Nate Johnson",
+      "fromSchool": "University of Missouri",
+      "toSchool": "Auburn",
+      "matchedSchool": "University of Missouri",
+      "position": "DE",
+      "year": "JUNIOR"
+    },
+    {
+      "row": 7,
+      "playerName": "Jayven Richardson",
+      "fromSchool": "University of Missouri",
+      "toSchool": "Colorado",
+      "matchedSchool": "University of Missouri",
+      "position": "OL",
+      "year": "JUNIOR"
+    },
+    {
+      "row": 8,
+      "playerName": "Marvin Burks Jr.",
+      "fromSchool": "University of Missouri",
+      "toSchool": "Wisconsin",
+      "matchedSchool": "University of Missouri",
+      "position": "S",
+      "year": "JUNIOR"
+    },
+    {
+      "row": 9,
+      "playerName": "Joshua Manning",
+      "fromSchool": "University of Missouri",
+      "toSchool": "Kansas State",
+      "matchedSchool": "University of Missouri",
+      "position": "WR",
+      "year": "JUNIOR"
+    },
+    {
+      "row": 10,
+      "playerName": "Marquise Davis",
+      "fromSchool": "University of Missouri",
+      "toSchool": "Louisville",
+      "matchedSchool": "University of Missouri",
+      "position": "RB",
+      "year": "FRESHMAN"
+    },
+    {
+      "row": 11,
+      "playerName": "Keiton Jones",
+      "fromSchool": "University of Missouri",
+      "toSchool": "Kansas State",
+      "matchedSchool": "University of Missouri",
+      "position": "OL",
+      "year": "FRESHMAN"
+    },
+    {
+      "row": 12,
+      "playerName": "Marquis Johnson",
+      "fromSchool": "University of Missouri",
+      "toSchool": "Mississippi State",
+      "matchedSchool": "University of Missouri",
+      "position": "WR",
+      "year": "JUNIOR"
+    }
+  ],
+  "additions": [
+    {
+      "row": 13,
+      "playerName": "Kenric Lanier II",
+      "fromSchool": "Minnesota",
+      "toSchool": "University of Missouri",
+      "position": "WR",
+      "year": "SOPHOMORE"
+    },
+    {
+      "row": 14,
+      "playerName": "Elijah Dotson",
+      "fromSchool": "Michigan",
+      "toSchool": "University of Missouri",
+      "position": "DB",
+      "year": null
+    },
+    {
+      "row": 15,
+      "playerName": "Naeshaun Montgomery",
+      "fromSchool": "Florida",
+      "toSchool": "University of Missouri",
+      "position": "WR",
+      "year": "FRESHMAN"
+    },
+    {
+      "row": 16,
+      "playerName": "Will Kemna",
+      "fromSchool": "Kansas State",
+      "toSchool": "University of Missouri",
+      "position": "OL",
+      "year": "FRESHMAN"
+    },
+    {
+      "row": 17,
+      "playerName": "Kensley Louidor-Faustin",
+      "fromSchool": "Auburn University",
+      "toSchool": "University of Missouri",
+      "position": "S",
+      "year": "SOPHOMORE"
+    },
+    {
+      "row": 18,
+      "playerName": "JaDon Blair",
+      "fromSchool": "Notre Dame",
+      "toSchool": "University of Missouri",
+      "position": "S",
+      "year": "FRESHMAN"
+    },
+    {
+      "row": 19,
+      "playerName": "Robert Woodyard Jr.",
+      "fromSchool": "Auburn University",
+      "toSchool": "University of Missouri",
+      "position": "LB",
+      "year": "JUNIOR"
+    },
+    {
+      "row": 20,
+      "playerName": "Caleb Goodie",
+      "fromSchool": "Cincinnati",
+      "toSchool": "University of Missouri",
+      "position": "WR",
+      "year": "JUNIOR"
+    }
+  ],
+  "warnings": [],
+  "endingFootballCount": 107
+}

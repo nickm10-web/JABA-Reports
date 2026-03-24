@@ -1,0 +1,3467 @@
+[
+  {
+    "_id": "690070e41b5a6fb80ca01d99",
+    "firstName": "Alanah",
+    "lastName": "Clemente",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637346800-Alanah_Clemente_690070e41b5a6fb80ca01d99.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OPP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8305,
+        "likes": 149629,
+        "comments": 2738,
+        "engagementRate": 1.0193498961075869,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01dc0",
+    "firstName": "Kyler",
+    "lastName": "Kasper",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637349363-Kyler_Kasper_690070e41b5a6fb80ca01dc0.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 23858,
+        "likes": 156229,
+        "comments": 2068,
+        "engagementRate": 0.30161561979474777,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d48",
+    "firstName": "Sean",
+    "lastName": "Stewart",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637351274-Sean_Stewart_690070e41b5a6fb80ca01d48.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 31392,
+        "likes": 37849,
+        "comments": 514,
+        "engagementRate": 0.06101853557470325,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d8d",
+    "firstName": "Isaiah",
+    "lastName": "World",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637347669-Isaiah_World_690070e41b5a6fb80ca01d8d.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2401,
+        "likes": 28431,
+        "comments": 895,
+        "engagementRate": 0.5789640486058265,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d66",
+    "firstName": "Remmington",
+    "lastName": "Hewitt",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637346142-Remmington_Hewitt_690070e41b5a6fb80ca01d66.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5416,
+        "likes": 18065,
+        "comments": 380,
+        "engagementRate": 0.11037758245829868,
+        "contentCount": 31,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d6e",
+    "firstName": "Orian",
+    "lastName": "Drore",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637353712-Orian_Drore_690070e41b5a6fb80ca01d6e.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "L/DS",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3553,
+        "likes": 29663,
+        "comments": 1238,
+        "engagementRate": 0.408168002099564,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d64",
+    "firstName": "Katie",
+    "lastName": "Flannery",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637352209-Katie_Flannery_690070e41b5a6fb80ca01d64.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2588,
+        "likes": 14692,
+        "comments": 256,
+        "engagementRate": 0.2586764085991289,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01dc5",
+    "firstName": "Justius",
+    "lastName": "Lowe",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637345397-Justius_Lowe_690070e41b5a6fb80ca01dc5.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5665,
+        "likes": 22013,
+        "comments": 834,
+        "engagementRate": 0.24594903827262213,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01dbd",
+    "firstName": "Amari",
+    "lastName": "Harper",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637349408-Amari_Harper_690070e41b5a6fb80ca01dbd.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "UTIL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2399,
+        "likes": 10427,
+        "comments": 728,
+        "engagementRate": 0.15396653824403408,
+        "contentCount": 28,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d21",
+    "firstName": "Kingston",
+    "lastName": "Lopa",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637346887-Kingston_Lopa_690070e41b5a6fb80ca01d21.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 19897,
+        "likes": 82485,
+        "comments": 1541,
+        "engagementRate": 0.46846982499989803,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d30",
+    "firstName": "Kilohana",
+    "lastName": "Haasenritter",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637349350-Kilohana_Haasenritter_690070e41b5a6fb80ca01d30.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3301,
+        "likes": 6996,
+        "comments": 426,
+        "engagementRate": 0.0825803067021143,
+        "contentCount": 27,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01dc4",
+    "firstName": "Jurrion",
+    "lastName": "Dickey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637345364-Jurrion_Dickey_690070e41b5a6fb80ca01dc4.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 13899,
+        "likes": 46785,
+        "comments": 569,
+        "engagementRate": 0.08059628395002769,
+        "contentCount": 42,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d7c",
+    "firstName": "Sophia",
+    "lastName": "Meyers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637351376-Sophia_Meyers_690070e41b5a6fb80ca01d7c.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2691,
+        "likes": 9062,
+        "comments": 353,
+        "engagementRate": 0.1720577938692916,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01daa",
+    "firstName": "Dierre",
+    "lastName": "Hill Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637354385-Dierre_Hill Jr._690070e41b5a6fb80ca01daa.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11649,
+        "likes": 103761,
+        "comments": 1024,
+        "engagementRate": 0.4536206873454721,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01dc2",
+    "firstName": "Evan",
+    "lastName": "Stewart",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637353726-Evan_Stewart_690070e41b5a6fb80ca01dc2.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 270333,
+        "likes": 941440,
+        "comments": 9398,
+        "engagementRate": 0.14695626804980647,
+        "contentCount": 24,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d89",
+    "firstName": "Iapani",
+    "lastName": "Laloulu",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637343314-Iapani_Laloulu_690070e41b5a6fb80ca01d89.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11581,
+        "likes": 63360,
+        "comments": 1004,
+        "engagementRate": 0.22486431503416862,
+        "contentCount": 25,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d2e",
+    "firstName": "Jadon",
+    "lastName": "Canady",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637346818-Jadon_Canady_690070e41b5a6fb80ca01d2e.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4691,
+        "likes": 54802,
+        "comments": 2027,
+        "engagementRate": 0.5607921022399505,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01dc8",
+    "firstName": "Nathan",
+    "lastName": "McCoy II",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637350134-Nathan_McCoy II_690070e41b5a6fb80ca01dc8.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3089,
+        "likes": 17287,
+        "comments": 247,
+        "engagementRate": 0.7049204769759135,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d8e",
+    "firstName": "Matthew",
+    "lastName": "Bedford",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637340636-Matthew_Bedford_690070e41b5a6fb80ca01d8e.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3052,
+        "likes": 15340,
+        "comments": 343,
+        "engagementRate": 0.23421764337413223,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d32",
+    "firstName": "Dillon",
+    "lastName": "Thieneman",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637350311-Dillon_Thieneman_690070e41b5a6fb80ca01d32.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 20407,
+        "likes": 190782,
+        "comments": 1856,
+        "engagementRate": 0.45116364726731434,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d88",
+    "firstName": "Alex",
+    "lastName": "Harkey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637354346-Alex_Harkey_690070e41b5a6fb80ca01d88.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 14040,
+        "likes": 3399,
+        "comments": 578,
+        "engagementRate": 0.0154583460976266,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01da8",
+    "firstName": "Da'Jaun",
+    "lastName": "Riggs",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637354991-Da'Jaun_Riggs_690070e41b5a6fb80ca01da8.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 143,
+        "engagementRate": 0,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d3d",
+    "firstName": "Mia",
+    "lastName": "Jacobs",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637350151-Mia_Jacobs_690070e41b5a6fb80ca01d3d.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5014,
+        "likes": 12334,
+        "comments": 364,
+        "engagementRate": 0.11707287189592158,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d62",
+    "firstName": "Kaylynn",
+    "lastName": "Jones",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637351384-Kaylynn_Jones_690070e41b5a6fb80ca01d62.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 729,
+        "likes": 45541,
+        "comments": 169,
+        "engagementRate": 3.974422004853394,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d4d",
+    "firstName": "Elisa",
+    "lastName": "Mevius",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637354396-Elisa_Mevius_690070e41b5a6fb80ca01d4d.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12320,
+        "likes": 253863,
+        "comments": 1294,
+        "engagementRate": 0.7394073828519321,
+        "contentCount": 28,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01db5",
+    "firstName": "Jamari",
+    "lastName": "Johnson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637348724-Jamari_Johnson_690070e41b5a6fb80ca01db5.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7795,
+        "likes": 42190,
+        "comments": 1263,
+        "engagementRate": 0.42427427039900517,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d4a",
+    "firstName": "Astera",
+    "lastName": "Tuhina",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637344429-Astera_Tuhina_690070e41b5a6fb80ca01d4a.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3311,
+        "likes": 14337,
+        "comments": 1071,
+        "engagementRate": 0.22319290317025903,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01dc1",
+    "firstName": "Malik",
+    "lastName": "Benson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637354988-Malik_Benson_690070e41b5a6fb80ca01dc1.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 31668,
+        "likes": 160886,
+        "comments": 2087,
+        "engagementRate": 0.1880035814645476,
+        "contentCount": 28,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d27",
+    "firstName": "Trey",
+    "lastName": "McNutt",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637354352-Trey_McNutt_690070e41b5a6fb80ca01d27.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 22092,
+        "likes": 63640,
+        "comments": 819,
+        "engagementRate": 0.22395158706945778,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d7b",
+    "firstName": "Maria",
+    "lastName": "Tabacuks",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637352311-Maria_Tabacuks_690070e41b5a6fb80ca01d7b.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3660,
+        "likes": 27039,
+        "comments": 458,
+        "engagementRate": 0.5779400621667662,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d94",
+    "firstName": "Ashton",
+    "lastName": "Porter",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637354998-Ashton_Porter_690070e41b5a6fb80ca01d94.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OLB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12862,
+        "likes": 43110,
+        "comments": 2133,
+        "engagementRate": 0.183856959601118,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d51",
+    "firstName": "Avary",
+    "lastName": "Cain",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637340726-Avary_Cain_690070e41b5a6fb80ca01d51.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3803,
+        "likes": 7772,
+        "comments": 770,
+        "engagementRate": 0.1149146639228416,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d4b",
+    "firstName": "Katie",
+    "lastName": "Fiso",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637341746-Katie_Fiso_690070e41b5a6fb80ca01d4b.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 20402,
+        "likes": 70991,
+        "comments": 382,
+        "engagementRate": 0.15126671013957024,
+        "contentCount": 24,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d2d",
+    "firstName": "Aaron",
+    "lastName": "Flowers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637348488-Aaron_Flowers_690070e41b5a6fb80ca01d2d.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10180,
+        "likes": 37566,
+        "comments": 1359,
+        "engagementRate": 0.2255839725400597,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01db1",
+    "firstName": "Lyndsey",
+    "lastName": "Grein",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637350284-Lyndsey_Grein_690070e41b5a6fb80ca01db1.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "RHP",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9631,
+        "likes": 65522,
+        "comments": 618,
+        "engagementRate": 0.3200164339613431,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d1e",
+    "firstName": "Trinity",
+    "lastName": "Holden",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637344557-Trinity_Holden_690070e41b5a6fb80ca01d1e.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "C",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2451,
+        "likes": 11818,
+        "comments": 306,
+        "engagementRate": 0.29162776154922276,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d8c",
+    "firstName": "Emmanuel",
+    "lastName": "Pregnon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637351266-Emmanuel_Pregnon_690070e41b5a6fb80ca01d8c.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3033,
+        "likes": 54848,
+        "comments": 893,
+        "engagementRate": 0.7906744235036786,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d3a",
+    "firstName": "Jericho",
+    "lastName": "Johnson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637352591-Jericho_Johnson_690070e41b5a6fb80ca01d3a.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2364,
+        "likes": 6881,
+        "comments": 453,
+        "engagementRate": 0.6185279187817259,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d6b",
+    "firstName": "Atticus",
+    "lastName": "Sappington",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637340625-Atticus_Sappington_690070e41b5a6fb80ca01d6b.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "K",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6611,
+        "likes": 62388,
+        "comments": 880,
+        "engagementRate": 0.43962841078676596,
+        "contentCount": 23,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d4c",
+    "firstName": "Sofia",
+    "lastName": "Bell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637344568-Sofia_Bell_690070e41b5a6fb80ca01d4c.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2533,
+        "likes": 6095,
+        "comments": 681,
+        "engagementRate": 0.10588713454450936,
+        "contentCount": 23,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d6f",
+    "firstName": "Reese",
+    "lastName": "Sheppard",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637350110-Reese_Sheppard_690070e41b5a6fb80ca01d6f.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "L/DS",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1389,
+        "likes": 2166,
+        "comments": 222,
+        "engagementRate": 0.15800316346439497,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d50",
+    "firstName": "Sara",
+    "lastName": "Barhoum",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637347142-Sara_Barhoum_690070e41b5a6fb80ca01d50.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6525,
+        "likes": 21650,
+        "comments": 1451,
+        "engagementRate": 0.14503502150038647,
+        "contentCount": 24,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d98",
+    "firstName": "Elijah",
+    "lastName": "Rushing",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637342665-Elijah_Rushing_690070e41b5a6fb80ca01d98.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OLB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6008,
+        "likes": 4866,
+        "comments": 187,
+        "engagementRate": 0.06468602645410458,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d82",
+    "firstName": "Ziyare",
+    "lastName": "Addison",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637341684-Ziyare_Addison_690070e41b5a6fb80ca01d82.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10374,
+        "likes": 28851,
+        "comments": 1700,
+        "engagementRate": 0.10432657105623404,
+        "contentCount": 28,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01dcb",
+    "firstName": "Jack",
+    "lastName": "Ressler",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637348491-Jack_Ressler_690070e41b5a6fb80ca01dcb.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12003,
+        "likes": 21012,
+        "comments": 985,
+        "engagementRate": 0.10006757569866793,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d2c",
+    "firstName": "Dorian",
+    "lastName": "Brew",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637353728-Dorian_Brew_690070e41b5a6fb80ca01d2c.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7787,
+        "likes": 20222,
+        "comments": 427,
+        "engagementRate": 0.29405133912646436,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d40",
+    "firstName": "Sarah",
+    "lastName": "Rambus",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637353147-Sarah_Rambus_690070e41b5a6fb80ca01d40.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10633,
+        "likes": 3164,
+        "comments": 1000,
+        "engagementRate": 0.019817497190887594,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d83",
+    "firstName": "Fox",
+    "lastName": "Crader",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637346796-Fox_Crader_690070e41b5a6fb80ca01d83.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6071,
+        "likes": 8107,
+        "comments": 494,
+        "engagementRate": 0.08986747110473603,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d9f",
+    "firstName": "Luke",
+    "lastName": "Moga",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637348462-Luke_Moga_690070e41b5a6fb80ca01d9f.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 14966,
+        "likes": 70373,
+        "comments": 1219,
+        "engagementRate": 0.3203471261016588,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d9c",
+    "firstName": "James",
+    "lastName": "Ferguson-Reynolds",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637345409-James_Ferguson-Reynolds_690070e41b5a6fb80ca01d9c.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "P",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6088,
+        "likes": 63251,
+        "comments": 1173,
+        "engagementRate": 0.5057578683430544,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d72",
+    "firstName": "Luke",
+    "lastName": "Basso",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637347899-Luke_Basso_690070e41b5a6fb80ca01d72.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "LS",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4320,
+        "likes": 35245,
+        "comments": 1223,
+        "engagementRate": 0.4876073851915804,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d1c",
+    "firstName": "Braiesey",
+    "lastName": "Rosa",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637346861-Braiesey_Rosa_690070e41b5a6fb80ca01d1c.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "C",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2618,
+        "likes": 16726,
+        "comments": 532,
+        "engagementRate": 0.2910160286443867,
+        "contentCount": 23,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d8b",
+    "firstName": "Dave",
+    "lastName": "Iuli",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637343305-Dave_Iuli_690070e41b5a6fb80ca01d8b.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9672,
+        "likes": 40811,
+        "comments": 564,
+        "engagementRate": 0.3558812379376896,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01dae",
+    "firstName": "Elise",
+    "lastName": "Sokolsky",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637351398-Elise_Sokolsky_690070e41b5a6fb80ca01dae.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "RHP",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2297,
+        "likes": 16535,
+        "comments": 348,
+        "engagementRate": 0.26743417339847464,
+        "contentCount": 27,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d63",
+    "firstName": "Addison",
+    "lastName": "Amaral",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637347751-Addison_Amaral_690070e41b5a6fb80ca01d63.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4571,
+        "likes": 24262,
+        "comments": 667,
+        "engagementRate": 0.34068703704433756,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d5b",
+    "firstName": "Devon",
+    "lastName": "Jackson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637350349-Devon_Jackson_690070e41b5a6fb80ca01d5b.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "ILB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5667,
+        "likes": 8912,
+        "comments": 858,
+        "engagementRate": 0.07953956085526362,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01dad",
+    "firstName": "Rowan",
+    "lastName": "Thompson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637341806-Rowan_Thompson_690070e41b5a6fb80ca01dad.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1576,
+        "likes": 5280,
+        "comments": 541,
+        "engagementRate": 0.3077939932318105,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d5d",
+    "firstName": "Kamar",
+    "lastName": "Mothudi",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637341710-Kamar_Mothudi_690070e41b5a6fb80ca01d5d.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "ILB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4263,
+        "likes": 3062,
+        "comments": 1212,
+        "engagementRate": 0.0349830380962738,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01db8",
+    "firstName": "Vander",
+    "lastName": "Ploog",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637345973-Vander_Ploog_690070e41b5a6fb80ca01db8.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6108,
+        "likes": 356820,
+        "comments": 2349,
+        "engagementRate": 3.266090009459361,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01da9",
+    "firstName": "Jay",
+    "lastName": "Harris",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637340664-Jay_Harris_690070e41b5a6fb80ca01da9.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9428,
+        "likes": 23641,
+        "comments": 284,
+        "engagementRate": 0.18082924072354345,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d58",
+    "firstName": "Gavin",
+    "lastName": "Nix",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637351291-Gavin_Nix_690070e41b5a6fb80ca01d58.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "ILB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8423,
+        "likes": 54641,
+        "comments": 1740,
+        "engagementRate": 0.3054822955435174,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d68",
+    "firstName": "Amanda",
+    "lastName": "Urbina",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637350166-Amanda_Urbina_690070e41b5a6fb80ca01d68.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 829,
+        "likes": 2629,
+        "comments": 459,
+        "engagementRate": 0.6208283071974267,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d73",
+    "firstName": "Nick",
+    "lastName": "Duzansky",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637349334-Nick_Duzansky_690070e41b5a6fb80ca01d73.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "LS",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1931,
+        "likes": 5268,
+        "comments": 218,
+        "engagementRate": 0.20469996518229264,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d67",
+    "firstName": "Rylee",
+    "lastName": "McCoy",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637344499-Rylee_McCoy_690070e41b5a6fb80ca01d67.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4486,
+        "likes": 25232,
+        "comments": 430,
+        "engagementRate": 0.20236412806555512,
+        "contentCount": 28,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d59",
+    "firstName": "Dylan",
+    "lastName": "Williams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637347711-Dylan_Williams_690070e41b5a6fb80ca01d59.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "ILB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 14941,
+        "likes": 14033,
+        "comments": 1276,
+        "engagementRate": 0.03175295960417017,
+        "contentCount": 30,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01dbc",
+    "firstName": "Elon",
+    "lastName": "Butler",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637353093-Elon_Butler_690070e41b5a6fb80ca01dbc.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "UTIL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1921,
+        "likes": 25436,
+        "comments": 775,
+        "engagementRate": 0.6645613630385332,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d69",
+    "firstName": "Stefini",
+    "lastName": "Ma'ake",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637341669-Stefini_Ma'ake_690070e41b5a6fb80ca01d69.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "INF/OF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4205,
+        "likes": 167109,
+        "comments": 701,
+        "engagementRate": 1.7374730739165243,
+        "contentCount": 23,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d1d",
+    "firstName": "Emma",
+    "lastName": "Cox",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637355025-Emma_Cox_690070e41b5a6fb80ca01d1d.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "C",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1613,
+        "likes": 13786,
+        "comments": 561,
+        "engagementRate": 0.6361638418124408,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d79",
+    "firstName": "Regan",
+    "lastName": "Legg",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637348791-Regan_Legg_690070e41b5a6fb80ca01d79.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1614,
+        "likes": 3705,
+        "comments": 799,
+        "engagementRate": 0.19943117585665132,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01dbe",
+    "firstName": "Dakorien",
+    "lastName": "Moore",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637342648-Dakorien_Moore_690070e41b5a6fb80ca01dbe.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 201692,
+        "likes": 701833,
+        "comments": 3476,
+        "engagementRate": 0.14583545208688695,
+        "contentCount": 24,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d93",
+    "firstName": "Tobi",
+    "lastName": "Haastrup",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637347705-Tobi_Haastrup_690070e41b5a6fb80ca01d93.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OLB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12431,
+        "likes": 189549,
+        "comments": 1592,
+        "engagementRate": 0.7321798737187102,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01dbf",
+    "firstName": "Gary",
+    "lastName": "Bryant Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637353709-Gary_Bryant Jr._690070e41b5a6fb80ca01dbf.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 23402,
+        "likes": 87194,
+        "comments": 1152,
+        "engagementRate": 0.2684935035253717,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01da3",
+    "firstName": "Austin",
+    "lastName": "Novosad",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637352351-Austin_Novosad_690070e41b5a6fb80ca01da3.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 13104,
+        "likes": 37761,
+        "comments": 618,
+        "engagementRate": 0.1464037082098894,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d3c",
+    "firstName": "Terrance",
+    "lastName": "Green",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637344393-Terrance_Green_690070e41b5a6fb80ca01d3c.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3548,
+        "likes": 35937,
+        "comments": 1065,
+        "engagementRate": 0.5795588770950951,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d3b",
+    "firstName": "Xadavien",
+    "lastName": "Sims",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637353759-Xadavien_Sims_690070e41b5a6fb80ca01d3b.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3625,
+        "likes": 20473,
+        "comments": 685,
+        "engagementRate": 0.5354582243063292,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01db7",
+    "firstName": "Zach",
+    "lastName": "Grace",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637348482-Zach_Grace_690070e41b5a6fb80ca01db7.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3084,
+        "likes": 46718,
+        "comments": 499,
+        "engagementRate": 0.8062825029231415,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01db9",
+    "firstName": "Roger",
+    "lastName": "Saleapaga",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637355016-Roger_Saleapaga_690070e41b5a6fb80ca01db9.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5617,
+        "likes": 15233,
+        "comments": 527,
+        "engagementRate": 0.7023994414154606,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d39",
+    "firstName": "A'Mauri",
+    "lastName": "Washington",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637342626-A'Mauri_Washington_690070e41b5a6fb80ca01d39.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9479,
+        "likes": 59138,
+        "comments": 1223,
+        "engagementRate": 0.31120408833551,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d91",
+    "firstName": "Blake",
+    "lastName": "Purchase",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637346247-Blake_Purchase_690070e41b5a6fb80ca01d91.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OLB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5275,
+        "likes": 30717,
+        "comments": 736,
+        "engagementRate": 0.390006721156949,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d5c",
+    "firstName": "Bryce",
+    "lastName": "Boettcher",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637353125-Bryce_Boettcher_690070e41b5a6fb80ca01d5c.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "ILB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 29148,
+        "likes": 104500,
+        "comments": 1442,
+        "engagementRate": 0.15681903057002297,
+        "contentCount": 23,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d7e",
+    "firstName": "Devin",
+    "lastName": "Brooks",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637340654-Devin_Brooks_690070e41b5a6fb80ca01d7e.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2370,
+        "likes": 4820,
+        "comments": 244,
+        "engagementRate": 0.1935174530111239,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d20",
+    "firstName": "Daylen",
+    "lastName": "Austin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637348469-Daylen_Austin_690070e41b5a6fb80ca01d20.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 13412,
+        "likes": 76365,
+        "comments": 903,
+        "engagementRate": 0.3030036407486849,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d38",
+    "firstName": "Tionne",
+    "lastName": "Gray",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637353155-Tionne_Gray_690070e41b5a6fb80ca01d38.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5063,
+        "likes": 36068,
+        "comments": 1094,
+        "engagementRate": 0.43203911314870175,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d22",
+    "firstName": "Sione",
+    "lastName": "Laulea",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637347677-Sione_Laulea_690070e41b5a6fb80ca01d22.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 18572,
+        "likes": 174708,
+        "comments": 1947,
+        "engagementRate": 0.5922770563592964,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01dba",
+    "firstName": "Kade",
+    "lastName": "Caton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637351392-Kade_Caton_690070e41b5a6fb80ca01dba.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1859,
+        "likes": 10126,
+        "comments": 443,
+        "engagementRate": 0.30193146728170284,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d97",
+    "firstName": "Torrence",
+    "lastName": "Williams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637344425-Torrence_Williams_690070e41b5a6fb80ca01d97.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OLB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 269,
+        "likes": 30,
+        "comments": 85,
+        "engagementRate": 0.01982651796778191,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01dc6",
+    "firstName": "Cooper",
+    "lastName": "Perry",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637349359-Cooper_Perry_690070e41b5a6fb80ca01dc6.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6864,
+        "likes": 69676,
+        "comments": 1026,
+        "engagementRate": 1.1595180826107967,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d24",
+    "firstName": "Theran",
+    "lastName": "Johnson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637354380-Theran_Johnson_690070e41b5a6fb80ca01d24.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1856,
+        "likes": 5412,
+        "comments": 574,
+        "engagementRate": 0.4052113918772902,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d60",
+    "firstName": "Jerry",
+    "lastName": "Mixon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637343508-Jerry_Mixon_690070e41b5a6fb80ca01d60.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "ILB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11009,
+        "likes": 81741,
+        "comments": 2232,
+        "engagementRate": 0.31966939083920587,
+        "contentCount": 24,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d9e",
+    "firstName": "Dante",
+    "lastName": "Moore",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637342691-Dante_Moore_690070e41b5a6fb80ca01d9e.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 133055,
+        "likes": 449977,
+        "comments": 5294,
+        "engagementRate": 0.15679296546617125,
+        "contentCount": 23,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d90",
+    "firstName": "Lipe",
+    "lastName": "Moala",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637342643-Lipe_Moala_690070e41b5a6fb80ca01d90.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1934,
+        "likes": 16401,
+        "comments": 645,
+        "engagementRate": 1.0930713547052742,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d9b",
+    "firstName": "Valentina",
+    "lastName": "Vaulet",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637348479-Valentina_Vaulet_690070e41b5a6fb80ca01d9b.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OPP/OH",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1108,
+        "likes": 10269,
+        "comments": 204,
+        "engagementRate": 0.5571794126993331,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01db6",
+    "firstName": "Kenyon",
+    "lastName": "Sadiq",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637354309-Kenyon_Sadiq_690070e41b5a6fb80ca01db6.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 47211,
+        "likes": 456707,
+        "comments": 2743,
+        "engagementRate": 0.5162819024238674,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01dab",
+    "firstName": "Jayden",
+    "lastName": "Limar",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637350113-Jayden_Limar_690070e41b5a6fb80ca01dab.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8847,
+        "likes": 42634,
+        "comments": 1254,
+        "engagementRate": 0.2716488954196652,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01db0",
+    "firstName": "Maddie",
+    "lastName": "Milhorn",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637342759-Maddie_Milhorn_690070e41b5a6fb80ca01db0.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "RHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1521,
+        "likes": 5172,
+        "comments": 256,
+        "engagementRate": 0.8950725943686677,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d95",
+    "firstName": "Nasir",
+    "lastName": "Wyatt",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637343522-Nasir_Wyatt_690070e41b5a6fb80ca01d95.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OLB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7685,
+        "likes": 32076,
+        "comments": 903,
+        "engagementRate": 0.3904875107759732,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d36",
+    "firstName": "Bear",
+    "lastName": "Alexander",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637353749-Bear_Alexander_690070e41b5a6fb80ca01d36.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 31761,
+        "likes": 106225,
+        "comments": 1444,
+        "engagementRate": 0.1713502902142633,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d92",
+    "firstName": "Matayo",
+    "lastName": "Uiagalelei",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637352343-Matayo_Uiagalelei_690070e41b5a6fb80ca01d92.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OLB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 37849,
+        "likes": 147055,
+        "comments": 2034,
+        "engagementRate": 0.1971417861863619,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d96",
+    "firstName": "Teitum",
+    "lastName": "Tuioti",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637345866-Teitum_Tuioti_690070e41b5a6fb80ca01d96.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OLB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12883,
+        "likes": 145953,
+        "comments": 1588,
+        "engagementRate": 0.6819027842109632,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d76",
+    "firstName": "Luana",
+    "lastName": "Kuskowski",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637349571-Luana_Kuskowski_690070e41b5a6fb80ca01d76.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5184,
+        "likes": 8145,
+        "comments": 759,
+        "engagementRate": 0.09304647785039943,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d8f",
+    "firstName": "Gernorris",
+    "lastName": "Wilson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637344182-Gernorris_Wilson_690070e41b5a6fb80ca01d8f.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3276,
+        "likes": 15251,
+        "comments": 656,
+        "engagementRate": 0.2853682039515542,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d1b",
+    "firstName": "Nate",
+    "lastName": "Bittle",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637341642-Nate_Bittle_690070e41b5a6fb80ca01d1b.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "C",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8957,
+        "likes": 35147,
+        "comments": 591,
+        "engagementRate": 0.2100558756090463,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d4e",
+    "firstName": "Ari",
+    "lastName": "Long",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637353767-Ari_Long_690070e41b5a6fb80ca01d4e.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3687,
+        "likes": 24924,
+        "comments": 801,
+        "engagementRate": 0.2490042210990932,
+        "contentCount": 28,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d25",
+    "firstName": "Jahlil",
+    "lastName": "Florence",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637345136-Jahlil_Florence_690070e41b5a6fb80ca01d25.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 21352,
+        "likes": 27345,
+        "comments": 420,
+        "engagementRate": 0.21829692031487,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d46",
+    "firstName": "Kwame",
+    "lastName": "Evans Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637345970-Kwame_Evans Jr._690070e41b5a6fb80ca01d46.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 14696,
+        "likes": 14802,
+        "comments": 457,
+        "engagementRate": 0.046915799041260246,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d28",
+    "firstName": "Dakoda",
+    "lastName": "Fields",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637344481-Dakoda_Fields_690070e41b5a6fb80ca01d28.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10375,
+        "likes": 27061,
+        "comments": 870,
+        "engagementRate": 0.543222404411771,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d5e",
+    "firstName": "Will",
+    "lastName": "Straton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637353128-Will_Straton_690070e41b5a6fb80ca01d5e.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "ILB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1813,
+        "likes": 346,
+        "comments": 252,
+        "engagementRate": 0.01552555520809489,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d9d",
+    "firstName": "Ross",
+    "lastName": "James",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637346821-Ross_James_690070e41b5a6fb80ca01d9d.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "P",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2390,
+        "likes": 2325,
+        "comments": 274,
+        "engagementRate": 0.07499195365304152,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d6d",
+    "firstName": "Andrew",
+    "lastName": "Boyle",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637353101-Andrew_Boyle_690070e41b5a6fb80ca01d6d.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "K",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1564,
+        "likes": 18953,
+        "comments": 317,
+        "engagementRate": 0.9477909015515978,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d74",
+    "firstName": "Holley",
+    "lastName": "McFadden",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637341625-Holley_McFadden_690070e41b5a6fb80ca01d74.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2264,
+        "likes": 7401,
+        "comments": 337,
+        "engagementRate": 0.21405418741034657,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d80",
+    "firstName": "Trent",
+    "lastName": "Ferguson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637340620-Trent_Ferguson_690070e41b5a6fb80ca01d80.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4064,
+        "likes": 12279,
+        "comments": 254,
+        "engagementRate": 0.2141936251865458,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01da7",
+    "firstName": "Makhi",
+    "lastName": "Hughes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637347688-Makhi_Hughes_690070e41b5a6fb80ca01da7.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4841,
+        "likes": 43495,
+        "comments": 1042,
+        "engagementRate": 0.7666632238518214,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d23",
+    "firstName": "Brandon",
+    "lastName": "Finney Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637353111-Brandon_Finney Jr._690070e41b5a6fb80ca01d23.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 14026,
+        "likes": 56294,
+        "comments": 1686,
+        "engagementRate": 0.22282989086704436,
+        "contentCount": 25,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d35",
+    "firstName": "Matthew",
+    "lastName": "Johnson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637355022-Matthew_Johnson_690070e41b5a6fb80ca01d35.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2399,
+        "likes": 19089,
+        "comments": 618,
+        "engagementRate": 0.7437201020212799,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d75",
+    "firstName": "Iva",
+    "lastName": "Sucurovic",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637354972-Iva_Sucurovic_690070e41b5a6fb80ca01d75.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2890,
+        "likes": 11718,
+        "comments": 202,
+        "engagementRate": 0.29550335855939275,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01dc3",
+    "firstName": "Jeremiah",
+    "lastName": "McClellan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637353734-Jeremiah_McClellan_690070e41b5a6fb80ca01dc3.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 20356,
+        "likes": 83813,
+        "comments": 1364,
+        "engagementRate": 0.17536149451400243,
+        "contentCount": 26,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01da5",
+    "firstName": "Jordon",
+    "lastName": "Davison",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637343544-Jordon_Davison_690070e41b5a6fb80ca01da5.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 52789,
+        "likes": 228664,
+        "comments": 1446,
+        "engagementRate": 0.2564148279554676,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d70",
+    "firstName": "Maya",
+    "lastName": "De Los Reyes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637346791-Maya_De Los Reyes_690070e41b5a6fb80ca01d70.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "L/DS",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3608,
+        "likes": 61668,
+        "comments": 849,
+        "engagementRate": 1.018938234859488,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d53",
+    "firstName": "Takai",
+    "lastName": "Simpkins",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637354365-Takai_Simpkins_690070e41b5a6fb80ca01d53.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4995,
+        "likes": 187803,
+        "comments": 1509,
+        "engagementRate": 1.722984961727355,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d3f",
+    "firstName": "Filippa",
+    "lastName": "Tilliander",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637347747-Filippa_Tilliander_690070e41b5a6fb80ca01d3f.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1329,
+        "likes": 2800,
+        "comments": 252,
+        "engagementRate": 0.17139862485214094,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d42",
+    "firstName": "Efe",
+    "lastName": "Vatan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637353737-Efe_Vatan_690070e41b5a6fb80ca01d42.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2435,
+        "likes": 20803,
+        "comments": 141,
+        "engagementRate": 1.0662597189388516,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d4f",
+    "firstName": "Janiyah",
+    "lastName": "Williams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637340698-Janiyah_Williams_690070e41b5a6fb80ca01d4f.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2403,
+        "likes": 13886,
+        "comments": 542,
+        "engagementRate": 0.260961807462519,
+        "contentCount": 23,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d7a",
+    "firstName": "Ksenija",
+    "lastName": "Tomic",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637340678-Ksenija_Tomic_690070e41b5a6fb80ca01d7a.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2862,
+        "likes": 4035,
+        "comments": 173,
+        "engagementRate": 0.2035539582709394,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d52",
+    "firstName": "Jackson",
+    "lastName": "Shelstad",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637340646-Jackson_Shelstad_690070e41b5a6fb80ca01d52.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 26638,
+        "likes": 82665,
+        "comments": 859,
+        "engagementRate": 0.1958051917199216,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d29",
+    "firstName": "Peyton",
+    "lastName": "Woodyard",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637354372-Peyton_Woodyard_690070e41b5a6fb80ca01d29.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 22465,
+        "likes": 5465,
+        "comments": 192,
+        "engagementRate": 0.027776541286445584,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d3e",
+    "firstName": "Amina",
+    "lastName": "Muhammad",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637350751-Amina_Muhammad_690070e41b5a6fb80ca01d3e.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8296,
+        "likes": 19921,
+        "comments": 1329,
+        "engagementRate": 0.14030188578163505,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d61",
+    "firstName": "Taryn",
+    "lastName": "Ho",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637347155-Taryn_Ho_690070e41b5a6fb80ca01d61.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1306,
+        "likes": 989,
+        "comments": 39,
+        "engagementRate": 0.06384712844748142,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01db4",
+    "firstName": "Cora",
+    "lastName": "Taylor",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637352327-Cora_Taylor_690070e41b5a6fb80ca01db4.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5414,
+        "likes": 28445,
+        "comments": 557,
+        "engagementRate": 0.3762679685936464,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01dcc",
+    "firstName": "Brady",
+    "lastName": "Bidwell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637342661-Brady_Bidwell_690070e41b5a6fb80ca01dcc.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2446,
+        "likes": 30380,
+        "comments": 614,
+        "engagementRate": 0.6335650040883076,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01da2",
+    "firstName": "Akili",
+    "lastName": "Smith Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637353138-Akili_Smith Jr._690070e41b5a6fb80ca01da2.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 16907,
+        "likes": 47920,
+        "comments": 1108,
+        "engagementRate": 0.12607310736136662,
+        "contentCount": 23,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d81",
+    "firstName": "Zac",
+    "lastName": "Stascausky",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637345146-Zac_Stascausky_690070e41b5a6fb80ca01d81.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1839,
+        "likes": 30568,
+        "comments": 499,
+        "engagementRate": 1.3658348532914364,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d7d",
+    "firstName": "Demetri",
+    "lastName": "Manning",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637346201-Demetri_Manning_690070e41b5a6fb80ca01d7d.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2063,
+        "likes": 7688,
+        "comments": 340,
+        "engagementRate": 0.24260785264178378,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d47",
+    "firstName": "Devon",
+    "lastName": "Pryor",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637345119-Devon_Pryor_690070e41b5a6fb80ca01d47.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3424,
+        "likes": 54,
+        "comments": 309,
+        "engagementRate": 0.001971378504672897,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01dbb",
+    "firstName": "A.J.",
+    "lastName": "Pugliano",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637353090-A.J._Pugliano_690070e41b5a6fb80ca01dbb.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1826,
+        "likes": 5421,
+        "comments": 338,
+        "engagementRate": 0.2626871120847024,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d54",
+    "firstName": "JJ",
+    "lastName": "Frakes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637340672-JJ_Frakes_690070e41b5a6fb80ca01d54.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4902,
+        "likes": 38289,
+        "comments": 749,
+        "engagementRate": 0.3616196374443148,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d84",
+    "firstName": "Bryce",
+    "lastName": "Boulton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637345983-Bryce_Boulton_690070e41b5a6fb80ca01d84.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2214,
+        "likes": 5847,
+        "comments": 446,
+        "engagementRate": 0.17420971300943455,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01da0",
+    "firstName": "Brock",
+    "lastName": "Thomas",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637343533-Brock_Thomas_690070e41b5a6fb80ca01da0.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4704,
+        "likes": 24102,
+        "comments": 500,
+        "engagementRate": 0.4358347505668934,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01da6",
+    "firstName": "Noah",
+    "lastName": "Whittington",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637346770-Noah_Whittington_690070e41b5a6fb80ca01da6.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9345,
+        "likes": 43888,
+        "comments": 335,
+        "engagementRate": 0.3138383976334092,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01da4",
+    "firstName": "Mark",
+    "lastName": "Wiepert",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637352298-Mark_Wiepert_690070e41b5a6fb80ca01da4.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2317,
+        "likes": 9775,
+        "comments": 657,
+        "engagementRate": 0.2652832230325191,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01dc7",
+    "firstName": "Dillon",
+    "lastName": "Gresham",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637349344-Dillon_Gresham_690070e41b5a6fb80ca01dc7.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8054,
+        "likes": 30988,
+        "comments": 672,
+        "engagementRate": 0.19652967469580332,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d2a",
+    "firstName": "Na'eem",
+    "lastName": "Offord",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637345343-Na'eem_Offord_690070e41b5a6fb80ca01d2a.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 27285,
+        "likes": 269777,
+        "comments": 4925,
+        "engagementRate": 0.6706058468389766,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01dac",
+    "firstName": "Zander",
+    "lastName": "Quinn",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637347725-Zander_Quinn_690070e41b5a6fb80ca01dac.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1878,
+        "likes": 1846,
+        "comments": 103,
+        "engagementRate": 0.20756123535676255,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d33",
+    "firstName": "Cruz",
+    "lastName": "Rushing",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637345991-Cruz_Rushing_690070e41b5a6fb80ca01d33.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7968,
+        "likes": 385,
+        "comments": 213,
+        "engagementRate": 0.003833972676135749,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d6c",
+    "firstName": "Gage",
+    "lastName": "Hurych",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637342632-Gage_Hurych_690070e41b5a6fb80ca01d6c.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "K",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1542,
+        "likes": 4340,
+        "comments": 9,
+        "engagementRate": 0.1880511619811231,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d26",
+    "firstName": "Ify",
+    "lastName": "Obidegwu",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637341597-Ify_Obidegwu_690070e41b5a6fb80ca01d26.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6038,
+        "likes": 7126,
+        "comments": 222,
+        "engagementRate": 0.613871094329899,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d55",
+    "firstName": "Drew",
+    "lastName": "Carter",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637345139-Drew_Carter_690070e41b5a6fb80ca01d55.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3405,
+        "likes": 12263,
+        "comments": 401,
+        "engagementRate": 0.37192364170337733,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d2f",
+    "firstName": "Zach",
+    "lastName": "Grisham",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637351323-Zach_Grisham_690070e41b5a6fb80ca01d2f.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 74,
+        "engagementRate": 0,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d9a",
+    "firstName": "Marlee",
+    "lastName": "Arrington",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637349369-Marlee_Arrington_690070e41b5a6fb80ca01d9a.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OPP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1966,
+        "likes": 2757,
+        "comments": 917,
+        "engagementRate": 0.0809031310048604,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d37",
+    "firstName": "Aydin",
+    "lastName": "Breland",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637354977-Aydin_Breland_690070e41b5a6fb80ca01d37.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4506,
+        "likes": 3663,
+        "comments": 162,
+        "engagementRate": 0.1414780292942743,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d31",
+    "firstName": "Xavier",
+    "lastName": "Barksdale",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637352353-Xavier_Barksdale_690070e41b5a6fb80ca01d31.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1154,
+        "likes": 3299,
+        "comments": 351,
+        "engagementRate": 0.28753741925319043,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d57",
+    "firstName": "Sammie",
+    "lastName": "Wagner",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637341749-Sammie_Wagner_690070e41b5a6fb80ca01d57.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G/F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4641,
+        "likes": 4216,
+        "comments": 408,
+        "engagementRate": 0.06038569273863392,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d45",
+    "firstName": "Luke",
+    "lastName": "Johnson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637351305-Luke_Johnson_690070e41b5a6fb80ca01d45.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3405,
+        "likes": 5200,
+        "comments": 53,
+        "engagementRate": 0.42840568299968146,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d56",
+    "firstName": "Jamari",
+    "lastName": "Phillips",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637353747-Jamari_Phillips_690070e41b5a6fb80ca01d56.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 23399,
+        "likes": 3260,
+        "comments": 306,
+        "engagementRate": 0.050799891733264955,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d44",
+    "firstName": "Oleksandr",
+    "lastName": "Kobzystyi",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637345108-Oleksandr_Kobzystyi_690070e41b5a6fb80ca01d44.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1503,
+        "likes": 2059,
+        "comments": 91,
+        "engagementRate": 0.3583142233306693,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d6a",
+    "firstName": "Rocco",
+    "lastName": "Graziano",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637351298-Rocco_Graziano_690070e41b5a6fb80ca01d6a.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "K",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1503,
+        "likes": 3,
+        "comments": 0,
+        "engagementRate": 0.000665335994677312,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d87",
+    "firstName": "Charlie",
+    "lastName": "Pickard",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637343582-Charlie_Pickard_690070e41b5a6fb80ca01d87.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1298,
+        "likes": 2303,
+        "comments": 109,
+        "engagementRate": 0.2652432313449262,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d49",
+    "firstName": "Miles",
+    "lastName": "Stewart",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637347928-Miles_Stewart_690070e41b5a6fb80ca01d49.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2254,
+        "likes": 5662,
+        "comments": 695,
+        "engagementRate": 0.3527814924515373,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d86",
+    "firstName": "Auston",
+    "lastName": "Mims",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637342616-Auston_Mims_690070e41b5a6fb80ca01d86.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12007,
+        "likes": 2332,
+        "comments": 240,
+        "engagementRate": 0.026054789979825316,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d77",
+    "firstName": "Elyse",
+    "lastName": "Kresho",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637354389-Elyse_Kresho_690070e41b5a6fb80ca01d77.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 567,
+        "likes": 2706,
+        "comments": 250,
+        "engagementRate": 0.5342014208791434,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01db2",
+    "firstName": "Jillian",
+    "lastName": "McCarty",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637344444-Jillian_McCarty_690070e41b5a6fb80ca01db2.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1616,
+        "likes": 25087,
+        "comments": 191,
+        "engagementRate": 0.7809789739219823,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01db3",
+    "firstName": "Kamden",
+    "lastName": "Mitchell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637342673-Kamden_Mitchell_690070e41b5a6fb80ca01db3.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1671,
+        "likes": 10926,
+        "comments": 178,
+        "engagementRate": 0.36917348227940683,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d5a",
+    "firstName": "Brayden",
+    "lastName": "Platt",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637348452-Brayden_Platt_690070e41b5a6fb80ca01d5a.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "ILB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4440,
+        "likes": 3207,
+        "comments": 127,
+        "engagementRate": 0.25027362072816617,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d71",
+    "firstName": "Natalie",
+    "lastName": "Fukumoto",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637354360-Natalie_Fukumoto_690070e41b5a6fb80ca01d71.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "L/DS",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 614,
+        "likes": 15051,
+        "comments": 99,
+        "engagementRate": 1.1734915464557159,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d85",
+    "firstName": "Beau",
+    "lastName": "CressAllen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637349355-Beau_CressAllen_690070e41b5a6fb80ca01d85.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 588,
+        "likes": 290,
+        "comments": 10,
+        "engagementRate": 0.17006802721088432,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690070e41b5a6fb80ca01d1f",
+    "firstName": "Presley",
+    "lastName": "Lawton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761637343643-Presley_Lawton_690070e41b5a6fb80ca01d1f.png",
+    "schoolName": "Oregon",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "C/UTL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 68,
+        "likes": 332,
+        "comments": 17,
+        "engagementRate": 0.4276960784313726,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  }
+]

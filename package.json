@@ -4,6 +4,11 @@
   "type": "module",
   "scripts": {
     "generate:ohio-overview": "node scripts/generateOhioAthleteOverview.mjs",
+    "generate:ip-report": "node scripts/generate-ip-impact-report.mjs",
+    "scrape:instagram:datasets": "node scripts/scrape-instagram-datasets.mjs",
+    "qcollar:curate:links": "node scripts/build-qcollar-curated-datasets.mjs",
+    "sponsors:clean": "node scripts/clean-sponsored-handles.mjs --schools iowa,minnesota,washington-state,mississippi-state --write",
+    "sponsors:audit": "node scripts/clean-sponsored-handles.mjs --schools iowa,minnesota,washington-state,mississippi-state --dry-run --audit-report docs/sponsored-handle-audit-4-schools.md",
     "dev": "npm run generate:ohio-overview && vite",
     "build": "npm run generate:ohio-overview && tsc && vite build",
     "preview": "vite preview"

@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import { Share2, Mail, Link2, FileJson, FileSpreadsheet, Image, Check, FileText } from 'lucide-react';
+import { Share2, Mail, Link2, FileJson, FileSpreadsheet, Image, Check, FileText, Sparkles } from 'lucide-react';
 import { format } from 'date-fns';
 import { getNetworkMetrics, PLAYFLY_MAX_PARTNERS } from '../data/playflyNetworkData';
 import { getIPPerformanceMetrics } from '../data/playflyIPAnalytics';
 import { CURRENT_BRAND_PARTNERS } from '../data/playflyBrandData';
 import { generateExecutiveReportPDF } from '../utils/pdfExport';
+import { buildScrapeCreatorsAIPrompt } from '../services/scrapeCreatorsClient';
 
 interface ShareMenuProps {
   onClose: () => void;
@@ -24,6 +25,15 @@ export function ShareMenu({ onClose }: ShareMenuProps) {
       showSuccessMessage('Link copied to clipboard!');
     } catch (err) {
       alert('Failed to copy link');
+    }
+  };
+
+  const handleCopyForAI = async () => {
+    try {
+      await navigator.clipboard.writeText(buildScrapeCreatorsAIPrompt());
+      showSuccessMessage('ScrapeCreators AI prompt copied!');
+    } catch (err) {
+      alert('Failed to copy AI prompt');
     }
   };
 
@@ -143,6 +153,13 @@ export function ShareMenu({ onClose }: ShareMenuProps) {
 
   const shareOptions = [
     {
+      icon: Sparkles,
+      label: 'Copy for AI',
+      description: 'Copy ScrapeCreators API prompt for AI tools',
+      action: handleCopyForAI,
+      color: 'teal',
+    },
+    {
       icon: Link2,
       label: 'Copy Link',
       description: 'Copy report URL to clipboard',
@@ -194,6 +211,7 @@ export function ShareMenu({ onClose }: ShareMenuProps) {
       green: { bg: 'bg-green-50', hover: 'hover:bg-green-100', icon: 'text-green-600' },
       indigo: { bg: 'bg-indigo-50', hover: 'hover:bg-indigo-100', icon: 'text-indigo-600' },
       orange: { bg: 'bg-orange-50', hover: 'hover:bg-orange-100', icon: 'text-orange-600' },
+      teal: { bg: 'bg-teal-50', hover: 'hover:bg-teal-100', icon: 'text-teal-600' },
     };
     return colors[color] || colors.blue;
   };

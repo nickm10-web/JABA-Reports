@@ -1,0 +1,68 @@
+{
+  "followers": 1005257,
+  "school": {
+    "_id": "690067baf719b77ba3f09233",
+    "name": "Washington"
+  },
+  "overall": {
+    "totalContents": 3884,
+    "totalLikes": 13954619,
+    "totalComments": 162342,
+    "engagementRate": 14.043136232824043,
+    "emv": 295326.58
+  },
+  "counts": {
+    "hasOrganizationInCaption": 322,
+    "isOrganizationCollaboration": 295,
+    "hasOrganizationLogo": 1706,
+    "withIp": 1873
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 322,
+      "likes": 1834.7701863354037,
+      "comments": 25.39751552795031,
+      "engagementRate": 0.001850439939103487,
+      "emv": 39.24
+    },
+    "no": {
+      "contents": 3562,
+      "likes": 3751.7751263335203,
+      "comments": 43.28017967434026,
+      "engagementRate": 0.003775209032125974
+    },
+    "avgLift": -50.98443759387202
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 295,
+      "likes": 2995.5457627118644,
+      "comments": 38.13898305084746,
+      "engagementRate": 0.0030178200656774453,
+      "emv": 63.72
+    },
+    "no": {
+      "contents": 3589,
+      "likes": 3641.9428810253553,
+      "comments": 42.098356088046806,
+      "engagementRate": 0.003664775512245527
+    },
+    "avgLift": -17.653344506541718
+  },
+  "logo": {
+    "yes": {
+      "contents": 1706,
+      "likes": 1768.719226260258,
+      "comments": 38.4073856975381,
+      "engagementRate": 0.0017976762280270577,
+      "emv": 39.22
+    },
+    "no": {
+      "contents": 2178,
+      "likes": 5021.66391184573,
+      "comments": 44.45316804407714,
+      "engagementRate": 0.0050396237776904875
+    },
+    "avgLift": -64.32915814102932
+  }
+}

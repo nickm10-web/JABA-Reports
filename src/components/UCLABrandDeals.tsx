@@ -1085,7 +1085,15 @@ function ContentTab({ teamContent, athletePosts }: { teamContent: UCLATeamConten
   );
 }
 
-function SponsoredTab({ posts }: { posts: UCLASponsoredPost[] }) {
+function SponsoredTab({
+  posts,
+  title = 'Sponsored Posts',
+  subtitle = 'Sponsored posts across UCLA athletes',
+}: {
+  posts: UCLASponsoredPost[];
+  title?: string;
+  subtitle?: string;
+}) {
   const [search, setSearch] = useState('');
   const [sportFilter, setSportFilter] = useState('All');
   const [sortKey, setSortKey] = useState<'posts' | 'likes' | 'engagement'>('posts');
@@ -1247,8 +1255,8 @@ function SponsoredTab({ posts }: { posts: UCLASponsoredPost[] }) {
       <GlassPanel className="p-6">
         <div className="flex items-center justify-between">
           <div>
-            <h2 style={headerStyle} className="text-lg font-bold uppercase tracking-tight text-[#0F1D2E]">Sponsored Posts</h2>
-            <p className="text-sm text-[#5B6B82]">Sponsored posts across UCLA athletes</p>
+            <h2 style={headerStyle} className="text-lg font-bold uppercase tracking-tight text-[#0F1D2E]">{title}</h2>
+            <p className="text-sm text-[#5B6B82]">{subtitle}</p>
           </div>
           <div className="text-sm text-[#5B6B82]">{uniqueBrands.size} total brands</div>
         </div>

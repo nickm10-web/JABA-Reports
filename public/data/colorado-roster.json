@@ -1,0 +1,2585 @@
+[
+  {
+    "_id": "6900ca8706f275b5de215966",
+    "firstName": "Alexander",
+    "lastName": "McPherson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659643890-Alexander_McPherson_6900ca8706f275b5de215966.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4247,
+        "likes": 123761,
+        "comments": 2217,
+        "engagementRate": 1.8891845553976638,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159d2",
+    "firstName": "Desiree",
+    "lastName": "Wooten",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659646903-Desiree_Wooten_6900ca8706f275b5de2159d2.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1903,
+        "likes": 5315,
+        "comments": 378,
+        "engagementRate": 0.1768175001231597,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215959",
+    "firstName": "Makari",
+    "lastName": "Vickers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659650879-Makari_Vickers_6900ca8706f275b5de215959.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12056,
+        "likes": 47877,
+        "comments": 1003,
+        "engagementRate": 0.2676488778333511,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215993",
+    "firstName": "Dallan",
+    "lastName": "Hayden",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659654201-Dallan_Hayden_6900ca8706f275b5de215993.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 21117,
+        "likes": 33065,
+        "comments": 1468,
+        "engagementRate": 0.10781153515005512,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215988",
+    "firstName": "Jordan",
+    "lastName": "Seaton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659642144-Jordan_Seaton_6900ca8706f275b5de215988.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OT",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 70667,
+        "likes": 91222,
+        "comments": 4406,
+        "engagementRate": 0.07558687891483352,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159a2",
+    "firstName": "Camden",
+    "lastName": "Dempsey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659644658-Camden_Dempsey_6900ca8706f275b5de2159a2.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "SN",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4353,
+        "likes": 21907,
+        "comments": 718,
+        "engagementRate": 0.3715779051301967,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21596d",
+    "firstName": "Christian",
+    "lastName": "Hudson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659649521-Christian_Hudson_6900ca8706f275b5de21596d.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8575,
+        "likes": 7835,
+        "comments": 611,
+        "engagementRate": 0.1231195335276968,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215999",
+    "firstName": "Terrance",
+    "lastName": "Love",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659654174-Terrance_Love_6900ca8706f275b5de215999.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 14829,
+        "likes": 8965,
+        "comments": 343,
+        "engagementRate": 0.208218131139434,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215954",
+    "firstName": "Teon",
+    "lastName": "Parks",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659646834-Teon_Parks_6900ca8706f275b5de215954.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3032,
+        "likes": 15958,
+        "comments": 766,
+        "engagementRate": 0.6756827560783296,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159a6",
+    "firstName": "Zach",
+    "lastName": "Atkins",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659642981-Zach_Atkins_6900ca8706f275b5de2159a6.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3488,
+        "likes": 20454,
+        "comments": 910,
+        "engagementRate": 0.47145056546841413,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159b2",
+    "firstName": "Kam",
+    "lastName": "Mikell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659647707-Kam_Mikell_6900ca8706f275b5de2159b2.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 25931,
+        "likes": 32124,
+        "comments": 1120,
+        "engagementRate": 0.09146913899912243,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159d1",
+    "firstName": "Zyanna",
+    "lastName": "Walker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659647606-Zyanna_Walker_6900ca8706f275b5de2159d1.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3507,
+        "likes": 9144,
+        "comments": 352,
+        "engagementRate": 0.19204982673759405,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159ce",
+    "firstName": "Sophie",
+    "lastName": "Zadel",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659654205-Sophie_Zadel_6900ca8706f275b5de2159ce.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1849,
+        "likes": 1827,
+        "comments": 1516,
+        "engagementRate": 0.0742787547963905,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159bf",
+    "firstName": "Bangot",
+    "lastName": "Dak",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659645786-Bangot_Dak_6900ca8706f275b5de2159bf.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 14763,
+        "likes": 115943,
+        "comments": 3009,
+        "engagementRate": 0.8021066178960915,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215969",
+    "firstName": "Jehiem",
+    "lastName": "Oatis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659642094-Jehiem_Oatis_6900ca8706f275b5de215969.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 15185,
+        "likes": 16105,
+        "comments": 612,
+        "engagementRate": 0.08404506602386136,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21599a",
+    "firstName": "Tawfiq",
+    "lastName": "Byard",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659646857-Tawfiq_Byard_6900ca8706f275b5de21599a.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5585,
+        "likes": 97183,
+        "comments": 2342,
+        "engagementRate": 1.138940836814703,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159d8",
+    "firstName": "Sarah",
+    "lastName": "Morton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659643057-Sarah_Morton_6900ca8706f275b5de2159d8.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "DS/L",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3511,
+        "likes": 5234,
+        "comments": 290,
+        "engagementRate": 0.11730166728742633,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21598f",
+    "firstName": "Julian",
+    "lastName": "Lewis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659650125-Julian_Lewis_6900ca8706f275b5de21598f.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 202029,
+        "likes": 42815,
+        "comments": 2016,
+        "engagementRate": 0.018181186489949312,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159e0",
+    "firstName": "Gwen",
+    "lastName": "Schiff",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659652873-Gwen_Schiff_6900ca8706f275b5de2159e0.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "PIN",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1946,
+        "likes": 781,
+        "comments": 437,
+        "engagementRate": 0.03236101822855196,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215985",
+    "firstName": "Aki",
+    "lastName": "Ogunbiyi",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659652735-Aki_Ogunbiyi_6900ca8706f275b5de215985.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11213,
+        "likes": 19945,
+        "comments": 320,
+        "engagementRate": 0.10658825295648325,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21598e",
+    "firstName": "Kaidon",
+    "lastName": "Salter",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659642186-Kaidon_Salter_6900ca8706f275b5de21598e.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 55877,
+        "likes": 54536,
+        "comments": 1732,
+        "engagementRate": 0.07620300188594212,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159d6",
+    "firstName": "Nikki",
+    "lastName": "Ott",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659643789-Nikki_Ott_6900ca8706f275b5de2159d6.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "DS/L",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2026,
+        "likes": 7609,
+        "comments": 1227,
+        "engagementRate": 0.33487253392187877,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21597d",
+    "firstName": "Larry",
+    "lastName": "Johnson III",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659652195-Larry_Johnson III_6900ca8706f275b5de21597d.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4786,
+        "likes": 1674,
+        "comments": 15,
+        "engagementRate": 0.05041490060294908,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215962",
+    "firstName": "Nikhil",
+    "lastName": "Webb Walker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659647646-Nikhil_Webb Walker_6900ca8706f275b5de215962.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5045,
+        "likes": 63293,
+        "comments": 1435,
+        "engagementRate": 0.9120024921679116,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21595f",
+    "firstName": "London",
+    "lastName": "Merritt",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659642179-London_Merritt_6900ca8706f275b5de21595f.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 16314,
+        "likes": 70059,
+        "comments": 2038,
+        "engagementRate": 0.28929272631433534,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215983",
+    "firstName": "Zylon",
+    "lastName": "Crisler",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659653409-Zylon_Crisler_6900ca8706f275b5de215983.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8414,
+        "likes": 10756,
+        "comments": 1019,
+        "engagementRate": 0.1310197290230568,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159bd",
+    "firstName": "Alon",
+    "lastName": "Michaeli",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659653432-Alon_Michaeli_6900ca8706f275b5de2159bd.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2450,
+        "likes": 10985,
+        "comments": 817,
+        "engagementRate": 0.4899504592604728,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21596f",
+    "firstName": "Jeremiah",
+    "lastName": "Brown",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659647766-Jeremiah_Brown_6900ca8706f275b5de21596f.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "ILB",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 32532,
+        "likes": 27407,
+        "comments": 1141,
+        "engagementRate": 0.06233317676327755,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159d4",
+    "firstName": "Isa",
+    "lastName": "Hämäläinen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659646831-Isa_HÃ¤mÃ¤lÃ¤inen_6900ca8706f275b5de2159d4.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1820,
+        "likes": 6380,
+        "comments": 214,
+        "engagementRate": 0.2768752257569608,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215974",
+    "firstName": "Gage",
+    "lastName": "Goldberg",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659649488-Gage_Goldberg_6900ca8706f275b5de215974.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "ILB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 98780,
+        "likes": 635916,
+        "comments": 5173,
+        "engagementRate": 0.49937433066507225,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215967",
+    "firstName": "Amari",
+    "lastName": "McNeill",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659652777-Amari_McNeill_6900ca8706f275b5de215967.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12171,
+        "likes": 1736,
+        "comments": 1140,
+        "engagementRate": 0.01133210721576509,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215961",
+    "firstName": "Arden",
+    "lastName": "Walker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659650070-Arden_Walker_6900ca8706f275b5de215961.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11947,
+        "likes": 26839,
+        "comments": 1313,
+        "engagementRate": 0.15713627230629026,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159c2",
+    "firstName": "Isaiah",
+    "lastName": "Johnson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659652760-Isaiah_Johnson_6900ca8706f275b5de2159c2.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 13412,
+        "likes": 153178,
+        "comments": 1656,
+        "engagementRate": 0.8882140027147568,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159a0",
+    "firstName": "Kameron",
+    "lastName": "Hawkins",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659653414-Kameron_Hawkins_6900ca8706f275b5de2159a0.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "SN",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1975,
+        "likes": 172,
+        "comments": 403,
+        "engagementRate": 0.00685491723466407,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21596b",
+    "firstName": "Tavian",
+    "lastName": "Coleman",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659648883-Tavian_Coleman_6900ca8706f275b5de21596b.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3599,
+        "likes": 6305,
+        "comments": 499,
+        "engagementRate": 0.13779400628221528,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215965",
+    "firstName": "Samuel",
+    "lastName": "Okunlola",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659649414-Samuel_Okunlola_6900ca8706f275b5de215965.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9330,
+        "likes": 92223,
+        "comments": 2201,
+        "engagementRate": 0.7693273228572705,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159ad",
+    "firstName": "Joseph",
+    "lastName": "Williams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659653446-Joseph_Williams_6900ca8706f275b5de2159ad.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11491,
+        "likes": 58067,
+        "comments": 918,
+        "engagementRate": 0.3696209791542304,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159a9",
+    "firstName": "Corbin",
+    "lastName": "Laisure",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659649451-Corbin_Laisure_6900ca8706f275b5de2159a9.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2249,
+        "likes": 1098,
+        "comments": 295,
+        "engagementRate": 0.0358259550708828,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159cb",
+    "firstName": "Jade",
+    "lastName": "Masogayo",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659653551-Jade_Masogayo_6900ca8706f275b5de2159cb.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1756,
+        "likes": 2136,
+        "comments": 349,
+        "engagementRate": 0.09682676252267672,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215977",
+    "firstName": "Reginald",
+    "lastName": "Hughes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659654166-Reginald_Hughes_6900ca8706f275b5de215977.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 22472,
+        "likes": 33328,
+        "comments": 813,
+        "engagementRate": 0.10795724003929681,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21599d",
+    "firstName": "Ben",
+    "lastName": "Finneseth",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659643814-Ben_Finneseth_6900ca8706f275b5de21599d.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 17970,
+        "likes": 74515,
+        "comments": 1026,
+        "engagementRate": 0.26297941978889605,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215982",
+    "firstName": "Xavier",
+    "lastName": "Hill",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659646976-Xavier_Hill_6900ca8706f275b5de215982.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4718,
+        "likes": 19304,
+        "comments": 607,
+        "engagementRate": 0.32463080002039557,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21598c",
+    "firstName": "Alexander",
+    "lastName": "Stoyanovich",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659643845-Alexander_Stoyanovich_6900ca8706f275b5de21598c.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "PK",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2007,
+        "likes": 5586,
+        "comments": 671,
+        "engagementRate": 0.19456549354487018,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215971",
+    "firstName": "Mantrez",
+    "lastName": "Walker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659644677-Mantrez_Walker_6900ca8706f275b5de215971.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "ILB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 24926,
+        "likes": 5797,
+        "comments": 1010,
+        "engagementRate": 0.018954567056950113,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21597f",
+    "firstName": "Zarian",
+    "lastName": "McGill",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659653417-Zarian_McGill_6900ca8706f275b5de21597f.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6448,
+        "likes": 3311,
+        "comments": 219,
+        "engagementRate": 0.07807515065579582,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159c8",
+    "firstName": "Ian",
+    "lastName": "Inman",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659644717-Ian_Inman_6900ca8706f275b5de2159c8.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G/F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1991,
+        "likes": 4596,
+        "comments": 616,
+        "engagementRate": 0.17990331219100802,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159e2",
+    "firstName": "Sydney",
+    "lastName": "Jordan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659642211-Sydney_Jordan_6900ca8706f275b5de2159e2.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "PIN",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4690,
+        "likes": 3390,
+        "comments": 494,
+        "engagementRate": 0.05792849385519857,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159a1",
+    "firstName": "Luke",
+    "lastName": "Whiting",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659651435-Luke_Whiting_6900ca8706f275b5de2159a1.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "SN",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1534,
+        "likes": 3035,
+        "comments": 278,
+        "engagementRate": 0.19633756074434042,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215989",
+    "firstName": "Damon",
+    "lastName": "Greaves",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659642990-Damon_Greaves_6900ca8706f275b5de215989.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "P",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4199,
+        "likes": 22190,
+        "comments": 606,
+        "engagementRate": 0.28475565043306594,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215987",
+    "firstName": "Phillip",
+    "lastName": "Houston",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659642162-Phillip_Houston_6900ca8706f275b5de215987.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OT",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2105,
+        "likes": 18959,
+        "comments": 765,
+        "engagementRate": 0.7182167001644438,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21595c",
+    "firstName": "Ivan",
+    "lastName": "Yates",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659653401-Ivan_Yates_6900ca8706f275b5de21595c.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2518,
+        "likes": 8087,
+        "comments": 751,
+        "engagementRate": 0.29249404289118347,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21597b",
+    "firstName": "Chauncey",
+    "lastName": "Gooden",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659652149-Chauncey_Gooden_6900ca8706f275b5de21597b.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 382,
+        "engagementRate": 0,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215991",
+    "firstName": "Dominiq",
+    "lastName": "Ponder",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659650862-Dominiq_Ponder_6900ca8706f275b5de215991.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5766,
+        "likes": 2746,
+        "comments": 358,
+        "engagementRate": 0.07148772516580719,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21598b",
+    "firstName": "Alejandro",
+    "lastName": "Mata",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659645701-Alejandro_Mata_6900ca8706f275b5de21598b.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "PK",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 42258,
+        "likes": 27170,
+        "comments": 725,
+        "engagementRate": 0.05070115751207783,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159b3",
+    "firstName": "Tagert",
+    "lastName": "Bardin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659643792-Tagert_Bardin_6900ca8706f275b5de2159b3.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2654,
+        "likes": 9594,
+        "comments": 290,
+        "engagementRate": 0.36929163526752073,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159da",
+    "firstName": "Katie",
+    "lastName": "Salonga",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659643817-Katie_Salonga_6900ca8706f275b5de2159da.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "DS/L/S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1645,
+        "likes": 5563,
+        "comments": 400,
+        "engagementRate": 0.3020770010131712,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159de",
+    "firstName": "Inés",
+    "lastName": "Losada",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659646645-InÃ©s_Losada_6900ca8706f275b5de2159de.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "PIN",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3843,
+        "likes": 12222,
+        "comments": 467,
+        "engagementRate": 0.2548693376844875,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159db",
+    "firstName": "Olivia",
+    "lastName": "Grenadier",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659651445-Olivia_Grenadier_6900ca8706f275b5de2159db.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3022,
+        "likes": 2316,
+        "comments": 1182,
+        "engagementRate": 0.08902472291784005,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21595d",
+    "firstName": "Kole",
+    "lastName": "Mathis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659647602-Kole_Mathis_6900ca8706f275b5de21595d.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8421,
+        "likes": 57885,
+        "comments": 603,
+        "engagementRate": 0.5787911174444841,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21596c",
+    "firstName": "Tawfiq",
+    "lastName": "Thomas",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659642911-Tawfiq_Thomas_6900ca8706f275b5de21596c.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 24730,
+        "likes": 48635,
+        "comments": 869,
+        "engagementRate": 0.16681493462730826,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159c6",
+    "firstName": "Barrington",
+    "lastName": "Hargress",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659652181-Barrington_Hargress_6900ca8706f275b5de2159c6.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4793,
+        "likes": 6719,
+        "comments": 382,
+        "engagementRate": 0.11396174393552455,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21599e",
+    "firstName": "Nathanial",
+    "lastName": "Watson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659646641-Nathanial_Watson_6900ca8706f275b5de21599e.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1407,
+        "likes": 1021,
+        "comments": 179,
+        "engagementRate": 0.0710732054015636,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215979",
+    "firstName": "Kareem",
+    "lastName": "Harden",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659652766-Kareem_Harden_6900ca8706f275b5de215979.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OG",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3028,
+        "likes": 6174,
+        "comments": 478,
+        "engagementRate": 0.18306913254073096,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159d5",
+    "firstName": "Maeve",
+    "lastName": "McErlane",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659653653-Maeve_McErlane_6900ca8706f275b5de2159d5.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2465,
+        "likes": 3810,
+        "comments": 901,
+        "engagementRate": 0.15926301555104802,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159a8",
+    "firstName": "Charlie",
+    "lastName": "Williams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659645731-Charlie_Williams_6900ca8706f275b5de2159a8.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2265,
+        "likes": 1425,
+        "comments": 584,
+        "engagementRate": 0.07391464311994114,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215968",
+    "firstName": "Taurean",
+    "lastName": "Carter II",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659651403-Taurean_Carter II_6900ca8706f275b5de215968.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6895,
+        "likes": 46401,
+        "comments": 1106,
+        "engagementRate": 0.5741721053903796,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159cc",
+    "firstName": "Logyn",
+    "lastName": "Greer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659652165-Logyn_Greer_6900ca8706f275b5de2159cc.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1778,
+        "likes": 2098,
+        "comments": 124,
+        "engagementRate": 0.10414323209598801,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159b1",
+    "firstName": "Isaiah",
+    "lastName": "Hardge",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659642974-Isaiah_Hardge_6900ca8706f275b5de2159b1.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 20925,
+        "likes": 111193,
+        "comments": 1303,
+        "engagementRate": 0.48874117519278815,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215973",
+    "firstName": "Bo",
+    "lastName": "LaPenna",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659649549-Bo_LaPenna_6900ca8706f275b5de215973.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "ILB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3121,
+        "likes": 12876,
+        "comments": 215,
+        "engagementRate": 0.34954074548755737,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159c5",
+    "firstName": "Felix",
+    "lastName": "Kossaras",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659650067-Felix_Kossaras_6900ca8706f275b5de2159c5.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1160,
+        "likes": 6513,
+        "comments": 262,
+        "engagementRate": 0.480316091954023,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159cf",
+    "firstName": "Kennedy",
+    "lastName": "Sanders",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659645789-Kennedy_Sanders_6900ca8706f275b5de2159cf.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3065,
+        "likes": 2802,
+        "comments": 635,
+        "engagementRate": 0.09344752582925502,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215955",
+    "firstName": "Preston",
+    "lastName": "Hodge",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659650185-Preston_Hodge_6900ca8706f275b5de215955.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10154,
+        "likes": 27840,
+        "comments": 1497,
+        "engagementRate": 0.24076718534567665,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159ae",
+    "firstName": "Sincere",
+    "lastName": "Brown",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659642128-Sincere_Brown_6900ca8706f275b5de2159ae.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6958,
+        "likes": 53532,
+        "comments": 887,
+        "engagementRate": 0.7110062975254122,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215981",
+    "firstName": "Cooper",
+    "lastName": "Lovelace",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659651413-Cooper_Lovelace_6900ca8706f275b5de215981.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4745,
+        "likes": 11139,
+        "comments": 785,
+        "engagementRate": 0.20911485774499472,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159aa",
+    "firstName": "Omarion",
+    "lastName": "Miller",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659646893-Omarion_Miller_6900ca8706f275b5de2159aa.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 58196,
+        "likes": 104722,
+        "comments": 1885,
+        "engagementRate": 0.15265510802575208,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215976",
+    "firstName": "Kylan",
+    "lastName": "Salter",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659642135-Kylan_Salter_6900ca8706f275b5de215976.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7380,
+        "likes": 21,
+        "comments": 575,
+        "engagementRate": 0.01153697251258227,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159bc",
+    "firstName": "Elijah",
+    "lastName": "Malone",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659643781-Elijah_Malone_6900ca8706f275b5de2159bc.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "C",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2867,
+        "likes": 12376,
+        "comments": 192,
+        "engagementRate": 0.36530635972561326,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215956",
+    "firstName": "RJ",
+    "lastName": "Johnson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659644666-RJ_Johnson_6900ca8706f275b5de215956.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 18291,
+        "likes": 71072,
+        "comments": 1407,
+        "engagementRate": 0.3286361234122428,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21597e",
+    "firstName": "Mana",
+    "lastName": "Taimani",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659649472-Mana_Taimani_6900ca8706f275b5de21597e.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 926,
+        "likes": 2043,
+        "comments": 280,
+        "engagementRate": 0.20905327573794094,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215970",
+    "firstName": "Martavius",
+    "lastName": "French",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659643839-Martavius_French_6900ca8706f275b5de215970.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "ILB",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6468,
+        "likes": 14696,
+        "comments": 665,
+        "engagementRate": 0.21590206330466072,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215978",
+    "firstName": "Tyler",
+    "lastName": "Brown",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659649447-Tyler_Brown_6900ca8706f275b5de215978.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OG",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12214,
+        "likes": 9264,
+        "comments": 445,
+        "engagementRate": 0.07226431665599832,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159c0",
+    "firstName": "Nick",
+    "lastName": "Randall",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659652118-Nick_Randall_6900ca8706f275b5de2159c0.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1408,
+        "likes": 766,
+        "comments": 126,
+        "engagementRate": 0.09050324675324675,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215963",
+    "firstName": "Tristan",
+    "lastName": "Marois",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659642804-Tristan_Marois_6900ca8706f275b5de215963.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1985,
+        "likes": 3612,
+        "comments": 54,
+        "engagementRate": 0.16730020609113808,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159dd",
+    "firstName": "Cayla",
+    "lastName": "Payne",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659644714-Cayla_Payne_6900ca8706f275b5de2159dd.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2629,
+        "likes": 5839,
+        "comments": 432,
+        "engagementRate": 0.19877646760491943,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159b5",
+    "firstName": "Ronald",
+    "lastName": "Coleman",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659646654-Ronald_Coleman_6900ca8706f275b5de2159b5.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2580,
+        "likes": 3,
+        "comments": 89,
+        "engagementRate": 0.03565891472868217,
+        "contentCount": 1,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215975",
+    "firstName": "Elliot",
+    "lastName": "Arnold",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659645981-Elliot_Arnold_6900ca8706f275b5de215975.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "K",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2330,
+        "likes": 6568,
+        "comments": 742,
+        "engagementRate": 0.3485932284215546,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159d3",
+    "firstName": "Claire",
+    "lastName": "O'Connor",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659644691-Claire_O'Connor_6900ca8706f275b5de2159d3.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 13146,
+        "likes": 152293,
+        "comments": 1168,
+        "engagementRate": 1.459198615548456,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159c4",
+    "firstName": "Jalin",
+    "lastName": "Holland",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659643015-Jalin_Holland_6900ca8706f275b5de2159c4.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4113,
+        "likes": 11541,
+        "comments": 246,
+        "engagementRate": 0.2388159494286409,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159bb",
+    "firstName": "Leonardo",
+    "lastName": "Van Elswyk",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659651425-Leonardo_Van Elswyk_6900ca8706f275b5de2159bb.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "C",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1861,
+        "likes": 3922,
+        "comments": 263,
+        "engagementRate": 0.2747178936055884,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159ca",
+    "firstName": "Jade",
+    "lastName": "Crook",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659645509-Jade_Crook_6900ca8706f275b5de2159ca.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "C",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1261,
+        "likes": 4575,
+        "comments": 305,
+        "engagementRate": 0.32249537404176576,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159e3",
+    "firstName": "Audrey",
+    "lastName": "Asleson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659642158-Audrey_Asleson_6900ca8706f275b5de2159e3.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3129,
+        "likes": 934,
+        "comments": 1207,
+        "engagementRate": 0.02465415696479934,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21596e",
+    "firstName": "Gavriel",
+    "lastName": "Lightfoot",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659651423-Gavriel_Lightfoot_6900ca8706f275b5de21596e.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3412,
+        "likes": 18526,
+        "comments": 455,
+        "engagementRate": 0.4635844079718639,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159c7",
+    "firstName": "Andrew",
+    "lastName": "Crawford",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659650833-Andrew_Crawford_6900ca8706f275b5de2159c7.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3307,
+        "likes": 6320,
+        "comments": 453,
+        "engagementRate": 0.2788889368871225,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159ba",
+    "firstName": "Fawaz",
+    "lastName": "\"Tacko\" Ifaola",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659645735-Fawaz__Tacko_ Ifaola_6900ca8706f275b5de2159ba.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "C",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7111,
+        "likes": 3422,
+        "comments": 361,
+        "engagementRate": 0.04433272394881171,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215995",
+    "firstName": "Simeon",
+    "lastName": "Price",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659650056-Simeon_Price_6900ca8706f275b5de215995.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3779,
+        "likes": 52961,
+        "comments": 1149,
+        "engagementRate": 1.1932169004145716,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159b0",
+    "firstName": "Quentin",
+    "lastName": "Gibson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659650865-Quentin_Gibson_6900ca8706f275b5de2159b0.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 58697,
+        "likes": 306976,
+        "comments": 2960,
+        "engagementRate": 0.4800245327699883,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159c1",
+    "firstName": "Jon",
+    "lastName": "Mani",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659642922-Jon_Mani_6900ca8706f275b5de2159c1.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4985,
+        "likes": 10196,
+        "comments": 700,
+        "engagementRate": 0.24143541736320076,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159b4",
+    "firstName": "Carson",
+    "lastName": "Westbrook",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659652763-Carson_Westbrook_6900ca8706f275b5de2159b4.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 18306,
+        "likes": 129444,
+        "comments": 1020,
+        "engagementRate": 0.5939036381514259,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21595e",
+    "firstName": "Keaten",
+    "lastName": "Wade",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659643029-Keaten_Wade_6900ca8706f275b5de21595e.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11443,
+        "likes": 15120,
+        "comments": 849,
+        "engagementRate": 0.1268659680789367,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159b8",
+    "firstName": "Terrell",
+    "lastName": "Timmons Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659651624-Terrell_Timmons Jr._6900ca8706f275b5de2159b8.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7930,
+        "likes": 24406,
+        "comments": 799,
+        "engagementRate": 0.26486969314838166,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21598d",
+    "firstName": "Buck",
+    "lastName": "Buchanan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659650876-Buck_Buchanan_6900ca8706f275b5de21598d.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "PK",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2396,
+        "likes": 21977,
+        "comments": 623,
+        "engagementRate": 0.7860322760155816,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159af",
+    "firstName": "Quanell",
+    "lastName": "Farrakhan Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659651438-Quanell_Farrakhan Jr._6900ca8706f275b5de2159af.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 60059,
+        "likes": 207794,
+        "comments": 2803,
+        "engagementRate": 0.2695111773818342,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159a3",
+    "firstName": "Aiden",
+    "lastName": "DeCorte",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659645715-Aiden_DeCorte_6900ca8706f275b5de2159a3.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "SN",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1707,
+        "likes": 797,
+        "comments": 175,
+        "engagementRate": 0.04125170865065417,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215994",
+    "firstName": "DeKalon",
+    "lastName": "Taylor",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659653443-DeKalon_Taylor_6900ca8706f275b5de215994.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5329,
+        "likes": 60494,
+        "comments": 758,
+        "engagementRate": 1.1494088947269656,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215986",
+    "firstName": "Hudson",
+    "lastName": "Steber",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659643821-Hudson_Steber_6900ca8706f275b5de215986.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 993,
+        "likes": 3055,
+        "comments": 199,
+        "engagementRate": 0.4096173212487412,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159a5",
+    "firstName": "Zayne",
+    "lastName": "DeSouza",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659652848-Zayne_DeSouza_6900ca8706f275b5de2159a5.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1558,
+        "likes": 15461,
+        "comments": 354,
+        "engagementRate": 0.8377787022173765,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159c3",
+    "firstName": "Josiah",
+    "lastName": "Sanders",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659651485-Josiah_Sanders_6900ca8706f275b5de2159c3.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8528,
+        "likes": 27363,
+        "comments": 741,
+        "engagementRate": 0.2995906532491899,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21599f",
+    "firstName": "Carter",
+    "lastName": "Stoutmire",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659651451-Carter_Stoutmire_6900ca8706f275b5de21599f.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 126,
+        "engagementRate": 0,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21596a",
+    "firstName": "Anquin",
+    "lastName": "Barnes Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659652129-Anquin_Barnes Jr._6900ca8706f275b5de21596a.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4411,
+        "likes": 17199,
+        "comments": 902,
+        "engagementRate": 0.3419670520668027,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215953",
+    "firstName": "Braden",
+    "lastName": "Keith",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659643809-Braden_Keith_6900ca8706f275b5de215953.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1712,
+        "likes": 4522,
+        "comments": 328,
+        "engagementRate": 0.31477154724818274,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215992",
+    "firstName": "Ryan",
+    "lastName": "Staub",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659652743-Ryan_Staub_6900ca8706f275b5de215992.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12163,
+        "likes": 82933,
+        "comments": 1443,
+        "engagementRate": 0.5780920277343857,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159d7",
+    "firstName": "Peyton",
+    "lastName": "Neal",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659652746-Peyton_Neal_6900ca8706f275b5de2159d7.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "DS/L",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 561,
+        "likes": 3372,
+        "comments": 173,
+        "engagementRate": 0.5310681014134873,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215998",
+    "firstName": "Titus",
+    "lastName": "Bautista",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659647520-Titus_Bautista_6900ca8706f275b5de215998.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2294,
+        "likes": 2218,
+        "comments": 201,
+        "engagementRate": 0.2601716835781239,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159a4",
+    "firstName": "Sav’ell",
+    "lastName": "Smalls",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659650303-Savâell_Smalls_6900ca8706f275b5de2159a4.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10301,
+        "likes": 13128,
+        "comments": 522,
+        "engagementRate": 0.12046491514504329,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215958",
+    "firstName": "Tyrecus",
+    "lastName": "Davis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659647527-Tyrecus_Davis_6900ca8706f275b5de215958.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3583,
+        "likes": 17874,
+        "comments": 688,
+        "engagementRate": 0.8634291562005768,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21599c",
+    "firstName": "TJ",
+    "lastName": "Branch",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659649535-TJ_Branch_6900ca8706f275b5de21599c.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 16813,
+        "likes": 7475,
+        "comments": 913,
+        "engagementRate": 0.12472491524415631,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159ab",
+    "firstName": "Hykeem",
+    "lastName": "Williams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659642196-Hykeem_Williams_6900ca8706f275b5de2159ab.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 42659,
+        "likes": 32087,
+        "comments": 1052,
+        "engagementRate": 0.15495275278913123,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de21595a",
+    "firstName": "Noah",
+    "lastName": "King",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659646929-Noah_King_6900ca8706f275b5de21595a.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12031,
+        "likes": 25724,
+        "comments": 49,
+        "engagementRate": 0.42844318842988943,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159e1",
+    "firstName": "Lily",
+    "lastName": "Dwinell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659644734-Lily_Dwinell_6900ca8706f275b5de2159e1.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "PIN",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 217,
+        "engagementRate": 0,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159b6",
+    "firstName": "Gavin",
+    "lastName": "Marsh",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659644971-Gavin_Marsh_6900ca8706f275b5de2159b6.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1491,
+        "likes": 1726,
+        "comments": 129,
+        "engagementRate": 0.41471048513302033,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de2159d0",
+    "firstName": "Erianna",
+    "lastName": "Gooden",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659650888-Erianna_Gooden_6900ca8706f275b5de2159d0.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1161,
+        "likes": 3487,
+        "comments": 209,
+        "engagementRate": 0.45478036175710596,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215996",
+    "firstName": "Charlie",
+    "lastName": "Offerdahl",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659652144-Charlie_Offerdahl_6900ca8706f275b5de215996.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 15818,
+        "likes": 154234,
+        "comments": 3356,
+        "engagementRate": 0.8281335609221564,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "6900ca8706f275b5de215964",
+    "firstName": "Brandon",
+    "lastName": "Davis-Swain",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761659649419-Brandon_Davis-Swain_6900ca8706f275b5de215964.png",
+    "schoolName": "Colorado",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9860,
+        "likes": 27937,
+        "comments": 1081,
+        "engagementRate": 0.2452501690331305,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  }
+]

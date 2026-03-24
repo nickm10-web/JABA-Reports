@@ -1,0 +1,5282 @@
+[
+  {
+    "school": "LSU",
+    "id": "lsu",
+    "sponsoredHandleCount": 210,
+    "sponsoredPostCount": 353,
+    "flaggedHandleCount": 45,
+    "flaggedPostCount": 76,
+    "topFlagged": [
+      {
+        "handle": "lsuthreads",
+        "postCount": 14,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "athletesthread",
+        "postCount": 4,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "myplayerathlete",
+        "postCount": 4,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "golfrsa",
+        "postCount": 3,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "myplayersports",
+        "postCount": 3,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "postgame.official",
+        "postCount": 3,
+        "flags": [
+          "likely_personal_or_creator",
+          "known_non_brand_account"
+        ]
+      },
+      {
+        "handle": "anwagolf",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "influxer",
+        "postCount": 2,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "influxerlsu",
+        "postCount": 2,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "lsu.nil.store",
+        "postCount": 2,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "lsufootball",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "pearsonbaseballacad",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "bayouwildtv",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "bleachertalkbaseball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "callawaygolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "callawaygolfeu",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "ciella_pickett",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "coach",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "coachny",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "d1baseball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "dillardscampuscollective",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "his_huddle",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "identitysports_official",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "jolyn_europe",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "lsubeachvb",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "lsusoccer",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "lsusoftball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "lsuwbkb",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "mdstennisproshop",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "myplayersoftball",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "on3recruits",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page",
+          "known_non_brand_account"
+        ]
+      },
+      {
+        "handle": "ourmomsrestaurant",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "pearl_valley",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "perceptioncollective",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "powerade_us",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "prepbaseball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "rapsodobaseball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "thebootstore_br",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "thebrandlsu",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "themodestsportsshow",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page",
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "unrivaledbasketball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "vine_spirit",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "voyager_brands",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "wearenilsu",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "yurview_louisiana",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      }
+    ],
+    "allFlagged": [
+      {
+        "handle": "lsuthreads",
+        "postCount": 14,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "athletesthread",
+        "postCount": 4,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "myplayerathlete",
+        "postCount": 4,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "golfrsa",
+        "postCount": 3,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "myplayersports",
+        "postCount": 3,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "postgame.official",
+        "postCount": 3,
+        "flags": [
+          "likely_personal_or_creator",
+          "known_non_brand_account"
+        ]
+      },
+      {
+        "handle": "anwagolf",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "influxer",
+        "postCount": 2,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "influxerlsu",
+        "postCount": 2,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "lsu.nil.store",
+        "postCount": 2,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "lsufootball",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "pearsonbaseballacad",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "bayouwildtv",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "bleachertalkbaseball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "callawaygolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "callawaygolfeu",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "ciella_pickett",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "coach",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "coachny",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "d1baseball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "dillardscampuscollective",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "his_huddle",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "identitysports_official",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "jolyn_europe",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "lsubeachvb",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "lsusoccer",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "lsusoftball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "lsuwbkb",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "mdstennisproshop",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "myplayersoftball",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "on3recruits",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page",
+          "known_non_brand_account"
+        ]
+      },
+      {
+        "handle": "ourmomsrestaurant",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "pearl_valley",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "perceptioncollective",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "powerade_us",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "prepbaseball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "rapsodobaseball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "thebootstore_br",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "thebrandlsu",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "themodestsportsshow",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page",
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "unrivaledbasketball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "vine_spirit",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "voyager_brands",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "wearenilsu",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "yurview_louisiana",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      }
+    ]
+  },
+  {
+    "school": "Virginia",
+    "id": "virginia",
+    "sponsoredHandleCount": 185,
+    "sponsoredPostCount": 321,
+    "flaggedHandleCount": 35,
+    "flaggedPostCount": 78,
+    "topFlagged": [
+      {
+        "handle": "influxeruva",
+        "postCount": 12,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "uvathreads",
+        "postCount": 11,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "cornermediaco",
+        "postCount": 9,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "influxer",
+        "postCount": 7,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "mizunoswimusa",
+        "postCount": 4,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "myplayerathlete",
+        "postCount": 3,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "hemofarm_bih",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "maurten_official",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "onlyelitethreads",
+        "postCount": 2,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "accnetwork",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page",
+          "known_non_brand_account"
+        ]
+      },
+      {
+        "handle": "adidastennis",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "ajgagolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "babygrandegolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "copperfit",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "core_reformerpilates",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "freemanswimming",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "golflounge18",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "influxermerch",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "isedmedia",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "mapgajrgolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "mcdlacrosse",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "oneathlete_app",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "powerade_us",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "prep.lacrosse",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "ptxofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "pumagolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "rbcwealth_us",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "ritualhockey_usa",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "src_girls",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "the_rudis",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "uncutatuva",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "usafspecwarrecruiting",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "usaswimming",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "uvawomenshoops",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "wickbaseball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      }
+    ],
+    "allFlagged": [
+      {
+        "handle": "influxeruva",
+        "postCount": 12,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "uvathreads",
+        "postCount": 11,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "cornermediaco",
+        "postCount": 9,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "influxer",
+        "postCount": 7,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "mizunoswimusa",
+        "postCount": 4,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "myplayerathlete",
+        "postCount": 3,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "hemofarm_bih",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "maurten_official",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "onlyelitethreads",
+        "postCount": 2,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "accnetwork",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page",
+          "known_non_brand_account"
+        ]
+      },
+      {
+        "handle": "adidastennis",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "ajgagolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "babygrandegolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "copperfit",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "core_reformerpilates",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "freemanswimming",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "golflounge18",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "influxermerch",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "isedmedia",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "mapgajrgolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "mcdlacrosse",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "oneathlete_app",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "powerade_us",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "prep.lacrosse",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "ptxofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "pumagolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "rbcwealth_us",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "ritualhockey_usa",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "src_girls",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "the_rudis",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "uncutatuva",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "usafspecwarrecruiting",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "usaswimming",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "uvawomenshoops",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "wickbaseball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      }
+    ]
+  },
+  {
+    "school": "Boise State",
+    "id": "boise-state",
+    "sponsoredHandleCount": 133,
+    "sponsoredPostCount": 288,
+    "flaggedHandleCount": 43,
+    "flaggedPostCount": 103,
+    "topFlagged": [
+      {
+        "handle": "boisestatethreads",
+        "postCount": 13,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "lithiafordboise",
+        "postCount": 7,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "broncosports",
+        "postCount": 6,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "myplayersports",
+        "postCount": 6,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "no.rivals.brand",
+        "postCount": 5,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "myplayerathlete",
+        "postCount": 4,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "plunj_boise",
+        "postCount": 4,
+        "flags": [
+          "likely_personal_or_creator",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "postgame.official",
+        "postCount": 4,
+        "flags": [
+          "likely_personal_or_creator",
+          "known_non_brand_account"
+        ]
+      },
+      {
+        "handle": "boisesportstalk",
+        "postCount": 3,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "boisestatebroncos",
+        "postCount": 3,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "hotworxboise",
+        "postCount": 3,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "stretchlabboise",
+        "postCount": 3,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "balllauncherofficial",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "blazepod",
+        "postCount": 2,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "committedsoftball",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "drybarshops_hotelrenegade",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "g4_collective",
+        "postCount": 2,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "gat_sport",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "influxer",
+        "postCount": 2,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "influxerboisestate",
+        "postCount": 2,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "twentyfou_urbanwear",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "verlo.boise",
+        "postCount": 2,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "yogasix_idaho",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "allthatnutritionofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "arthrex_inc",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "baconboise",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "dactive_nsg",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "deckiez_pouches",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "drink_uphill",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "facefoundrieboise",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "guidingcrossofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "hallee_heath",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "hiveandcoboise",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "kage_casey",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "lithiaboise",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "mesaballofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "petersonbmwboise",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "plunjboise",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "serve_clothing",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "thejamesboise",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "tiy_products",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "verveboise",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "villasportfitness_idaho",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      }
+    ],
+    "allFlagged": [
+      {
+        "handle": "boisestatethreads",
+        "postCount": 13,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "lithiafordboise",
+        "postCount": 7,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "broncosports",
+        "postCount": 6,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "myplayersports",
+        "postCount": 6,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "no.rivals.brand",
+        "postCount": 5,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "myplayerathlete",
+        "postCount": 4,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "plunj_boise",
+        "postCount": 4,
+        "flags": [
+          "likely_personal_or_creator",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "postgame.official",
+        "postCount": 4,
+        "flags": [
+          "likely_personal_or_creator",
+          "known_non_brand_account"
+        ]
+      },
+      {
+        "handle": "boisesportstalk",
+        "postCount": 3,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "boisestatebroncos",
+        "postCount": 3,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "hotworxboise",
+        "postCount": 3,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "stretchlabboise",
+        "postCount": 3,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "balllauncherofficial",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "blazepod",
+        "postCount": 2,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "committedsoftball",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "drybarshops_hotelrenegade",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "g4_collective",
+        "postCount": 2,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "gat_sport",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "influxer",
+        "postCount": 2,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "influxerboisestate",
+        "postCount": 2,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "twentyfou_urbanwear",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "verlo.boise",
+        "postCount": 2,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "yogasix_idaho",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "allthatnutritionofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "arthrex_inc",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "baconboise",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "dactive_nsg",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "deckiez_pouches",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "drink_uphill",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "facefoundrieboise",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "guidingcrossofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "hallee_heath",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "hiveandcoboise",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "kage_casey",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "lithiaboise",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "mesaballofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "petersonbmwboise",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "plunjboise",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "serve_clothing",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "thejamesboise",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "tiy_products",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "verveboise",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "villasportfitness_idaho",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      }
+    ]
+  },
+  {
+    "school": "Old Dominion",
+    "id": "old-dominion",
+    "sponsoredHandleCount": 28,
+    "sponsoredPostCount": 83,
+    "flaggedHandleCount": 7,
+    "flaggedPostCount": 35,
+    "topFlagged": [
+      {
+        "handle": "olddominionthreads",
+        "postCount": 23,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "prideofodunil",
+        "postCount": 5,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "odu_nilhub",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "odufootball",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "influxermerch",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "odu_wbb",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "theprideofodu",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      }
+    ],
+    "allFlagged": [
+      {
+        "handle": "olddominionthreads",
+        "postCount": 23,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "prideofodunil",
+        "postCount": 5,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "odu_nilhub",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "odufootball",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "influxermerch",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "odu_wbb",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "theprideofodu",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      }
+    ]
+  },
+  {
+    "school": "Michigan State",
+    "id": "michigan-state",
+    "sponsoredHandleCount": 82,
+    "sponsoredPostCount": 242,
+    "flaggedHandleCount": 18,
+    "flaggedPostCount": 107,
+    "topFlagged": [
+      {
+        "handle": "msufcu",
+        "postCount": 54,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "postgame.official",
+        "postCount": 14,
+        "flags": [
+          "likely_personal_or_creator",
+          "known_non_brand_account"
+        ]
+      },
+      {
+        "handle": "msuthread",
+        "postCount": 12,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "myplayersports",
+        "postCount": 6,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "msu.nil.store",
+        "postCount": 4,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "myplayerathlete",
+        "postCount": 4,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "msu_football",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page",
+          "likely_personal_or_creator",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "allthingsgympod",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "alumnihallmsu",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "athletesthread",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "coach",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "gat_sport",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "goat_coats",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "jerseyupofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "nil.store___",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "on3recruits",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page",
+          "known_non_brand_account"
+        ]
+      },
+      {
+        "handle": "recruitgfx",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "scottre_humphrey",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      }
+    ],
+    "allFlagged": [
+      {
+        "handle": "msufcu",
+        "postCount": 54,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "postgame.official",
+        "postCount": 14,
+        "flags": [
+          "likely_personal_or_creator",
+          "known_non_brand_account"
+        ]
+      },
+      {
+        "handle": "msuthread",
+        "postCount": 12,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "myplayersports",
+        "postCount": 6,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "msu.nil.store",
+        "postCount": 4,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "myplayerathlete",
+        "postCount": 4,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "msu_football",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page",
+          "likely_personal_or_creator",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "allthingsgympod",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "alumnihallmsu",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "athletesthread",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "coach",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "gat_sport",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "goat_coats",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "jerseyupofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "nil.store___",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "on3recruits",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page",
+          "known_non_brand_account"
+        ]
+      },
+      {
+        "handle": "recruitgfx",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "scottre_humphrey",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      }
+    ]
+  },
+  {
+    "school": "USC",
+    "id": "usc",
+    "sponsoredHandleCount": 207,
+    "sponsoredPostCount": 356,
+    "flaggedHandleCount": 43,
+    "flaggedPostCount": 78,
+    "topFlagged": [
+      {
+        "handle": "uscthreads",
+        "postCount": 12,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "grupa_pge",
+        "postCount": 9,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "getlytofficial",
+        "postCount": 5,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "influxerusc",
+        "postCount": 4,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "myplayersports",
+        "postCount": 3,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "travis_trackstar",
+        "postCount": 3,
+        "flags": [
+          "team_or_school_page",
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "ampm_tmgs",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "athletesthread",
+        "postCount": 2,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "blackgirlsunscreen",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "lightenup_inc",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "uscmensvolley",
+        "postCount": 2,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "adidastennis",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "anwagolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "athena_newportbeach",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "celsiusofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "d1baseball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "dresserie_brand",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "golfrsa",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "guygenis",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "joyce_dtla",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "maveriklacrosse",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "murine_australia",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "myplayerathlete",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "on3recruits",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page",
+          "known_non_brand_account"
+        ]
+      },
+      {
+        "handle": "onlyelitethreads",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "powerade_us",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "propareofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "royaltiz_off",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "shein_us",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "tdsynnex_na",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "thatsamore_miami",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "therandagolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "topdrawersoccer",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "triswim",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "uanextvolleyball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "ucberkeleythreads",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "unrivaledbasketball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "usc_athletics",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "likely_personal_or_creator",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "usc.nil.store",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "uscannenberg",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "uscshoahfoundation",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "uscwbb",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "velocity_ls",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      }
+    ],
+    "allFlagged": [
+      {
+        "handle": "uscthreads",
+        "postCount": 12,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "grupa_pge",
+        "postCount": 9,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "getlytofficial",
+        "postCount": 5,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "influxerusc",
+        "postCount": 4,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "myplayersports",
+        "postCount": 3,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "travis_trackstar",
+        "postCount": 3,
+        "flags": [
+          "team_or_school_page",
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "ampm_tmgs",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "athletesthread",
+        "postCount": 2,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "blackgirlsunscreen",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "lightenup_inc",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "uscmensvolley",
+        "postCount": 2,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "adidastennis",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "anwagolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "athena_newportbeach",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "celsiusofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "d1baseball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "dresserie_brand",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "golfrsa",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "guygenis",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "joyce_dtla",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "maveriklacrosse",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "murine_australia",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "myplayerathlete",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "on3recruits",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page",
+          "known_non_brand_account"
+        ]
+      },
+      {
+        "handle": "onlyelitethreads",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "powerade_us",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "propareofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "royaltiz_off",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "shein_us",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "tdsynnex_na",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "thatsamore_miami",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "therandagolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "topdrawersoccer",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "triswim",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "uanextvolleyball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "ucberkeleythreads",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "unrivaledbasketball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "usc_athletics",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "likely_personal_or_creator",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "usc.nil.store",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "uscannenberg",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "uscshoahfoundation",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "uscwbb",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "velocity_ls",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      }
+    ]
+  },
+  {
+    "school": "NC State",
+    "id": "nc-state",
+    "sponsoredHandleCount": 41,
+    "sponsoredPostCount": 64,
+    "flaggedHandleCount": 11,
+    "flaggedPostCount": 18,
+    "topFlagged": [
+      {
+        "handle": "ncsu.threads",
+        "postCount": 4,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "influxer",
+        "postCount": 3,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "duke_energy",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "powerade_us",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "athletesthread",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "bp_zones",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "gen_carync",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "influxermerch",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "myplayersports",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "noracafe_nc",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "postgame.official",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator",
+          "known_non_brand_account"
+        ]
+      }
+    ],
+    "allFlagged": [
+      {
+        "handle": "ncsu.threads",
+        "postCount": 4,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "influxer",
+        "postCount": 3,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "duke_energy",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "powerade_us",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "athletesthread",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "bp_zones",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "gen_carync",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "influxermerch",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "myplayersports",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "noracafe_nc",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "postgame.official",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator",
+          "known_non_brand_account"
+        ]
+      }
+    ]
+  },
+  {
+    "school": "Penn State",
+    "id": "penn-state",
+    "sponsoredHandleCount": 270,
+    "sponsoredPostCount": 443,
+    "flaggedHandleCount": 42,
+    "flaggedPostCount": 75,
+    "topFlagged": [
+      {
+        "handle": "nittanylionthreads",
+        "postCount": 15,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "myplayerathlete",
+        "postCount": 8,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "myplayersports",
+        "postCount": 4,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "arenastore_cl",
+        "postCount": 3,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "hedi_gear",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "nil.store.pennstate",
+        "postCount": 2,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "penn_steaks",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "pennstatefball",
+        "postCount": 2,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "statemediapsu",
+        "postCount": 2,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "wuerffel_trophy",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "xx_xyathletics",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page",
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "aof_football",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "babygrandegolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "bigtennetwork",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page",
+          "known_non_brand_account"
+        ]
+      },
+      {
+        "handle": "burloakindoorgolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "carozzi_meencanta",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "cjiofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "dawson_bundy",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "esbjerg_fb",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "evo_gymnastics",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "fanatic_wrestling",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "fcalacrosse",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "foundationlacrosse",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "nathanpayneofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "on3recruits",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page",
+          "known_non_brand_account"
+        ]
+      },
+      {
+        "handle": "pennstatebase",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "pennstatemlax",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "pennstatemsoc",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "pennstatesb",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "pennstatetfxc",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "pennstatewgolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "pennstatewhky",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "pennstatewlax",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "pennstatewrest",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "representbaseball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "thecovernetwork",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "trayvo_official",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "turngymnastics",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "underdog_brand",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "usafspecwarrecruiting",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "whatsup_pod",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page",
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "wvubaseball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      }
+    ],
+    "allFlagged": [
+      {
+        "handle": "nittanylionthreads",
+        "postCount": 15,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "myplayerathlete",
+        "postCount": 8,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "myplayersports",
+        "postCount": 4,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "arenastore_cl",
+        "postCount": 3,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "hedi_gear",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "nil.store.pennstate",
+        "postCount": 2,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "penn_steaks",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "pennstatefball",
+        "postCount": 2,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "statemediapsu",
+        "postCount": 2,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "wuerffel_trophy",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "xx_xyathletics",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page",
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "aof_football",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "babygrandegolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "bigtennetwork",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page",
+          "known_non_brand_account"
+        ]
+      },
+      {
+        "handle": "burloakindoorgolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "carozzi_meencanta",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "cjiofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "dawson_bundy",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "esbjerg_fb",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "evo_gymnastics",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "fanatic_wrestling",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "fcalacrosse",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "foundationlacrosse",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "nathanpayneofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "on3recruits",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page",
+          "known_non_brand_account"
+        ]
+      },
+      {
+        "handle": "pennstatebase",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "pennstatemlax",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "pennstatemsoc",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "pennstatesb",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "pennstatetfxc",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "pennstatewgolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "pennstatewhky",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "pennstatewlax",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "pennstatewrest",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "representbaseball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "thecovernetwork",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "trayvo_official",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "turngymnastics",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "underdog_brand",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "usafspecwarrecruiting",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "whatsup_pod",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page",
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "wvubaseball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      }
+    ]
+  },
+  {
+    "school": "UNC",
+    "id": "unc",
+    "sponsoredHandleCount": 109,
+    "sponsoredPostCount": 198,
+    "flaggedHandleCount": 23,
+    "flaggedPostCount": 64,
+    "topFlagged": [
+      {
+        "handle": "uncthreads",
+        "postCount": 19,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "uncnilstore",
+        "postCount": 10,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "zebrapen_usa",
+        "postCount": 5,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "baseball_savings",
+        "postCount": 3,
+        "flags": [
+          "team_or_school_page",
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "carolinabaseball",
+        "postCount": 3,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "allthingsgympod",
+        "postCount": 2,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "goglow_chapelhill",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "mcdonalds.northcarolina",
+        "postCount": 2,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "myplayersports",
+        "postCount": 2,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "pcrf_kids",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "uncfootball",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "athletesthread",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "cofcthreads",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "concret_creatine",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "monopolygameofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "postgame.official",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator",
+          "known_non_brand_account"
+        ]
+      },
+      {
+        "handle": "rakebaseballcompany",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "takeonebasketball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "thetwinstakepodcast",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "tns_apparel",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "unc_fbnutrition",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "uncstudentstores",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "uncvolleyball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      }
+    ],
+    "allFlagged": [
+      {
+        "handle": "uncthreads",
+        "postCount": 19,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "uncnilstore",
+        "postCount": 10,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "zebrapen_usa",
+        "postCount": 5,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "baseball_savings",
+        "postCount": 3,
+        "flags": [
+          "team_or_school_page",
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "carolinabaseball",
+        "postCount": 3,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "allthingsgympod",
+        "postCount": 2,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "goglow_chapelhill",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "mcdonalds.northcarolina",
+        "postCount": 2,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "myplayersports",
+        "postCount": 2,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "pcrf_kids",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "uncfootball",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "athletesthread",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "cofcthreads",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "concret_creatine",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "monopolygameofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "postgame.official",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator",
+          "known_non_brand_account"
+        ]
+      },
+      {
+        "handle": "rakebaseballcompany",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "takeonebasketball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "thetwinstakepodcast",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "tns_apparel",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "unc_fbnutrition",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "uncstudentstores",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "uncvolleyball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      }
+    ]
+  },
+  {
+    "school": "Texas",
+    "id": "texas",
+    "sponsoredHandleCount": 279,
+    "sponsoredPostCount": 609,
+    "flaggedHandleCount": 61,
+    "flaggedPostCount": 151,
+    "topFlagged": [
+      {
+        "handle": "longhornthreads",
+        "postCount": 28,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "hornlegendofficial",
+        "postCount": 11,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "myplayerathlete",
+        "postCount": 11,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "texasonefan",
+        "postCount": 9,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "texaslonghorns",
+        "postCount": 7,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "texasonefund",
+        "postCount": 6,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "longhornnetwork",
+        "postCount": 5,
+        "flags": [
+          "recruiting_or_media_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "anwagolf",
+        "postCount": 4,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "directv",
+        "postCount": 3,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "grenadeofficial",
+        "postCount": 3,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "neighborhoodlonghorns",
+        "postCount": 3,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "athletesthread",
+        "postCount": 2,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "axeescape_atx",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "czech_beachvolleyball",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page",
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "headtennis_official",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page",
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "longhornfoundation",
+        "postCount": 2,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "on3recruits",
+        "postCount": 2,
+        "flags": [
+          "recruiting_or_media_page",
+          "known_non_brand_account"
+        ]
+      },
+      {
+        "handle": "ppirecruit",
+        "postCount": 2,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "rally_house",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "texasbeachvb",
+        "postCount": 2,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "texasfootball",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "yoga_democracy",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "3rdandlonghorn",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "463network",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "adam_villanueva_golf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "american_tall",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "antonestexas",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "babygrandegolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "be4evertexas",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "bealonghorn",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "boohoomanofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "cortsofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "ctga_official",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "deseretnews",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "dubaidcgolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "eastonbaseball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "ggotennis",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "goatmovieofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "hargroveroofing_austin",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "magicmemories_brautmoden",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "myplayersports",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "newbalancebasketball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "ogxsoftball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "osawese_a",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "randomgolfclub",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "srixongolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "srixongolfsa",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "texasbaseball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "texasmgolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "texasmtn",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "texassoftball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "texasteamshop",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "texaswsd",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "thegoat_hill",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "trustgolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "unrivaledbasketball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "usabaseball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "usaswimming",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "victorymedia.oficial",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "ymca_northsuburban",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      }
+    ],
+    "allFlagged": [
+      {
+        "handle": "longhornthreads",
+        "postCount": 28,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "hornlegendofficial",
+        "postCount": 11,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "myplayerathlete",
+        "postCount": 11,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "texasonefan",
+        "postCount": 9,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "texaslonghorns",
+        "postCount": 7,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "texasonefund",
+        "postCount": 6,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "longhornnetwork",
+        "postCount": 5,
+        "flags": [
+          "recruiting_or_media_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "anwagolf",
+        "postCount": 4,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "directv",
+        "postCount": 3,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "grenadeofficial",
+        "postCount": 3,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "neighborhoodlonghorns",
+        "postCount": 3,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "athletesthread",
+        "postCount": 2,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "axeescape_atx",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "czech_beachvolleyball",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page",
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "headtennis_official",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page",
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "longhornfoundation",
+        "postCount": 2,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "on3recruits",
+        "postCount": 2,
+        "flags": [
+          "recruiting_or_media_page",
+          "known_non_brand_account"
+        ]
+      },
+      {
+        "handle": "ppirecruit",
+        "postCount": 2,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "rally_house",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "texasbeachvb",
+        "postCount": 2,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "texasfootball",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "yoga_democracy",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "3rdandlonghorn",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "463network",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "adam_villanueva_golf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "american_tall",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "antonestexas",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "babygrandegolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "be4evertexas",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "bealonghorn",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "boohoomanofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "cortsofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "ctga_official",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "deseretnews",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "dubaidcgolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "eastonbaseball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "ggotennis",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "goatmovieofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "hargroveroofing_austin",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "magicmemories_brautmoden",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "myplayersports",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "newbalancebasketball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "ogxsoftball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "osawese_a",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "randomgolfclub",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "srixongolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "srixongolfsa",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "texasbaseball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "texasmgolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "texasmtn",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "texassoftball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "texasteamshop",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "texaswsd",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "thegoat_hill",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "trustgolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "unrivaledbasketball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "usabaseball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "usaswimming",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "victorymedia.oficial",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "ymca_northsuburban",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "yonex_tennis",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "likely_personal_or_creator"
+        ]
+      }
+    ]
+  },
+  {
+    "school": "Arizona",
+    "id": "arizona",
+    "sponsoredHandleCount": 124,
+    "sponsoredPostCount": 240,
+    "flaggedHandleCount": 30,
+    "flaggedPostCount": 80,
+    "topFlagged": [
+      {
+        "handle": "arizona.threads",
+        "postCount": 35,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "postgame.official",
+        "postCount": 4,
+        "flags": [
+          "likely_personal_or_creator",
+          "known_non_brand_account"
+        ]
+      },
+      {
+        "handle": "arizonamgolf",
+        "postCount": 3,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "arizonatrack",
+        "postCount": 3,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "powerade_us",
+        "postCount": 3,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "arizonabeachvolleyball",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "arizonasoccer",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "arizonatriathlon",
+        "postCount": 2,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "arizonawildcats",
+        "postCount": 2,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "athletesthread",
+        "postCount": 2,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "callawaygolf",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "gat_sport",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "acceptlifeofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "adidasbasketball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "arizonagymcats",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "arizonambb",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "arizonavolleyball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "arizonawgolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "drink_phx",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "golfaag",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "golfbc",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "ignis_clothing",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "myplayerathlete",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "nextoffermedia",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "optic_ink",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "platinumrollas_official",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "team_mzansi",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "texasstatethreads",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "thegolfcanada",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "uarizona",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      }
+    ],
+    "allFlagged": [
+      {
+        "handle": "arizona.threads",
+        "postCount": 35,
+        "flags": [
+          "nil_collective_or_nil_store",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "postgame.official",
+        "postCount": 4,
+        "flags": [
+          "likely_personal_or_creator",
+          "known_non_brand_account"
+        ]
+      },
+      {
+        "handle": "arizonamgolf",
+        "postCount": 3,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "arizonatrack",
+        "postCount": 3,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "powerade_us",
+        "postCount": 3,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "arizonabeachvolleyball",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "arizonasoccer",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "arizonatriathlon",
+        "postCount": 2,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "arizonawildcats",
+        "postCount": 2,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "athletesthread",
+        "postCount": 2,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "callawaygolf",
+        "postCount": 2,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "gat_sport",
+        "postCount": 2,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "acceptlifeofficial",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "adidasbasketball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "arizonagymcats",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "arizonambb",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "arizonavolleyball",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "arizonawgolf",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page",
+          "school_affiliated_keyword_match"
+        ]
+      },
+      {
+        "handle": "drink_phx",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "golfaag",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "golfbc",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "ignis_clothing",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "myplayerathlete",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "nextoffermedia",
+        "postCount": 1,
+        "flags": [
+          "recruiting_or_media_page"
+        ]
+      },
+      {
+        "handle": "optic_ink",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "platinumrollas_official",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "team_mzansi",
+        "postCount": 1,
+        "flags": [
+          "likely_personal_or_creator"
+        ]
+      },
+      {
+        "handle": "texasstatethreads",
+        "postCount": 1,
+        "flags": [
+          "nil_collective_or_nil_store"
+        ]
+      },
+      {
+        "handle": "thegolfcanada",
+        "postCount": 1,
+        "flags": [
+          "team_or_school_page"
+        ]
+      },
+      {
+        "handle": "uarizona",
+        "postCount": 1,
+        "flags": [
+          "school_affiliated_keyword_match"
+        ]
+      }
+    ]
+  }
+]

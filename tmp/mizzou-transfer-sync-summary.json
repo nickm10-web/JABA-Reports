@@ -1,0 +1,33 @@
+{
+  "outboundRequested": 24,
+  "inboundRequested": 40,
+  "footballRosterBefore": 107,
+  "footballRosterAfter": 96,
+  "removedFromRoster": 11,
+  "addedToRoster": 0,
+  "postsBefore": 5726,
+  "postsAfter": 5757,
+  "removedFromContent": 264,
+  "addedToContent": 295,
+  "rosterAddsByName": [],
+  "contentAddsByName": [
+    "Austin Simmons",
+    "Caleb Goodie",
+    "Cavan Tuley",
+    "Cayden Lee",
+    "Chris Graves Jr.",
+    "Donta Simpson",
+    "Elijah Dotson",
+    "JaDon Blair",
+    "Jaden Jones",
+    "Jahlil Florence",
+    "Kenric Lanier II",
+    "Kensley Louidor-Faustin",
+    "Luke Work",
+    "Naeshaun Montgomery",
+    "Robert Woodyard Jr.",
+    "Sione Laulea",
+    "Will Kemna",
+    "Zack Owens"
+  ]
+}

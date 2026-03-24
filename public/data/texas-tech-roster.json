@@ -1,0 +1,4076 @@
+[
+  {
+    "_id": "69006e508a29b994cc779ee1",
+    "firstName": "Brice",
+    "lastName": "Pollock",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636397396-Brice_Pollock_69006e508a29b994cc779ee1.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6492,
+        "likes": 38249,
+        "comments": 1379,
+        "engagementRate": 0.3792437672035857,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779fa2",
+    "firstName": "Haydon",
+    "lastName": "Wiginton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636404729-Haydon_Wiginton_69006e508a29b994cc779fa2.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12480,
+        "likes": 28470,
+        "comments": 531,
+        "engagementRate": 0.10831377364038511,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f23",
+    "firstName": "Zach",
+    "lastName": "Crotchfelt",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636412409-Zach_Crotchfelt_69006e508a29b994cc779f23.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2490,
+        "likes": 4309,
+        "comments": 268,
+        "engagementRate": 0.14121521883420962,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779eea",
+    "firstName": "Skyler",
+    "lastName": "Gill-Howard",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636403551-Skyler_Gill-Howard_69006e508a29b994cc779eea.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7144,
+        "likes": 44524,
+        "comments": 892,
+        "engagementRate": 0.3566772959470872,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f5f",
+    "firstName": "Behren",
+    "lastName": "Morton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636401103-Behren_Morton_69006e508a29b994cc779f5f.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 33062,
+        "likes": 88708,
+        "comments": 1427,
+        "engagementRate": 0.18528898165422594,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ed1",
+    "firstName": "Allyson",
+    "lastName": "Dobbs",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636411323-Allyson_Dobbs_69006e508a29b994cc779ed1.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 251,
+        "likes": 742,
+        "comments": 80,
+        "engagementRate": 0.21911215369221454,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f53",
+    "firstName": "Eddy",
+    "lastName": "Smith",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636400213-Eddy_Smith_69006e508a29b994cc779f53.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OLB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2422,
+        "likes": 10160,
+        "comments": 643,
+        "engagementRate": 0.23234190400755006,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f3b",
+    "firstName": "Cash",
+    "lastName": "Cleveland",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636409511-Cash_Cleveland_69006e508a29b994cc779f3b.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 24903,
+        "likes": 179640,
+        "comments": 2737,
+        "engagementRate": 0.5230091251554599,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f7c",
+    "firstName": "A.J.",
+    "lastName": "McCarty",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636408064-A.J._McCarty_69006e508a29b994cc779f7c.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1553,
+        "likes": 9065,
+        "comments": 377,
+        "engagementRate": 0.3254234644480456,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f94",
+    "firstName": "Trey",
+    "lastName": "Jackson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636408938-Trey_Jackson_69006e508a29b994cc779f94.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2075,
+        "likes": 7939,
+        "comments": 291,
+        "engagementRate": 0.35925080495058803,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f8a",
+    "firstName": "Peyton",
+    "lastName": "Dunn",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636401980-Peyton_Dunn_69006e508a29b994cc779f8a.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3347,
+        "likes": 6852,
+        "comments": 248,
+        "engagementRate": 0.1413881414558519,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779fa1",
+    "firstName": "Roy",
+    "lastName": "Alexander",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636409413-Roy_Alexander_69006e508a29b994cc779fa1.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 138,
+        "engagementRate": 0,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f70",
+    "firstName": "Jackson",
+    "lastName": "Burns",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636404102-Jackson_Burns_69006e508a29b994cc779f70.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1813,
+        "likes": 4965,
+        "comments": 558,
+        "engagementRate": 0.2538610038610039,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f6c",
+    "firstName": "Will",
+    "lastName": "Jordan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636405723-Will_Jordan_69006e508a29b994cc779f6c.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1163,
+        "likes": 4742,
+        "comments": 166,
+        "engagementRate": 0.3246246444870693,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ee7",
+    "firstName": "Kyeler",
+    "lastName": "Thompson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636398260-Kyeler_Thompson_69006e508a29b994cc779ee7.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "CF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1484,
+        "likes": 6503,
+        "comments": 241,
+        "engagementRate": 0.3247245400645026,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ed8",
+    "firstName": "Davis",
+    "lastName": "Rivers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636410682-Davis_Rivers_69006e508a29b994cc779ed8.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "C",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1364,
+        "likes": 4603,
+        "comments": 128,
+        "engagementRate": 0.26678224245881166,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ed4",
+    "firstName": "Garet",
+    "lastName": "Boehm",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636404854-Garet_Boehm_69006e508a29b994cc779ed4.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "3B",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5625,
+        "likes": 7197,
+        "comments": 272,
+        "engagementRate": 0.0929453586016186,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779eed",
+    "firstName": "A.J.",
+    "lastName": "Holmes Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636405751-A.J._Holmes Jr._69006e508a29b994cc779eed.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 15082,
+        "likes": 16216,
+        "comments": 547,
+        "engagementRate": 0.1439189072466364,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779efc",
+    "firstName": "JT",
+    "lastName": "Toppin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636411864-JT_Toppin_69006e508a29b994cc779efc.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 17825,
+        "likes": 70110,
+        "comments": 1390,
+        "engagementRate": 0.25740053160365867,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779edd",
+    "firstName": "Lagi",
+    "lastName": "Quiroga",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636402079-Lagi_Quiroga_69006e508a29b994cc779edd.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "C/UTL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 876,
+        "likes": 1496,
+        "comments": 91,
+        "engagementRate": 0.13929477863118359,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ef8",
+    "firstName": "LeJuan",
+    "lastName": "Watts",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636409451-LeJuan_Watts_69006e508a29b994cc779ef8.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9937,
+        "likes": 27091,
+        "comments": 780,
+        "engagementRate": 0.17679235932701495,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f9b",
+    "firstName": "Caleb",
+    "lastName": "Douglas",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636404865-Caleb_Douglas_69006e508a29b994cc779f9b.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 13533,
+        "likes": 32202,
+        "comments": 1197,
+        "engagementRate": 0.17463575870770429,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f28",
+    "firstName": "Chloe",
+    "lastName": "Riassetto",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636402672-Chloe_Riassetto_69006e508a29b994cc779f28.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "LHP",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2108,
+        "likes": 55,
+        "comments": 344,
+        "engagementRate": 0.0017394054395951928,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f5d",
+    "firstName": "Timber",
+    "lastName": "Hensley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636404004-Timber_Hensley_69006e508a29b994cc779f5d.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "P/UTL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3176,
+        "likes": 10961,
+        "comments": 560,
+        "engagementRate": 0.24194249183112035,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f97",
+    "firstName": "Desirae",
+    "lastName": "Spearman",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636407322-Desirae_Spearman_69006e508a29b994cc779f97.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "UTL/P",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2424,
+        "likes": 11512,
+        "comments": 421,
+        "engagementRate": 0.34908675278234214,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f5c",
+    "firstName": "NiJaree",
+    "lastName": "Canady",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636409491-NiJaree_Canady_69006e508a29b994cc779f5c.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "P/UTL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 81177,
+        "likes": 141099,
+        "comments": 1259,
+        "engagementRate": 0.0887123687292514,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ede",
+    "firstName": "Jasmyn",
+    "lastName": "Burns",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636406370-Jasmyn_Burns_69006e508a29b994cc779ede.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "C/UTL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4059,
+        "likes": 19140,
+        "comments": 1183,
+        "engagementRate": 0.3263454555092257,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f5b",
+    "firstName": "Kaitlyn",
+    "lastName": "Terry",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636405854-Kaitlyn_Terry_69006e508a29b994cc779f5b.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "P/OF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8729,
+        "likes": 65955,
+        "comments": 551,
+        "engagementRate": 0.508553849969156,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f8c",
+    "firstName": "Brytn",
+    "lastName": "Lyon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636402689-Brytn_Lyon_69006e508a29b994cc779f8c.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1724,
+        "likes": 4285,
+        "comments": 604,
+        "engagementRate": 0.14550515520531584,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779eff",
+    "firstName": "Snudda",
+    "lastName": "Collins",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636405623-Snudda_Collins_69006e508a29b994cc779eff.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5764,
+        "likes": 13702,
+        "comments": 255,
+        "engagementRate": 0.07126930455453721,
+        "contentCount": 34,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ef7",
+    "firstName": "Jada",
+    "lastName": "Malone",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636411296-Jada_Malone_69006e508a29b994cc779ef7.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2345,
+        "likes": 4890,
+        "comments": 178,
+        "engagementRate": 0.12480902358144796,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f3d",
+    "firstName": "Davion",
+    "lastName": "Carter",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636411291-Davion_Carter_69006e508a29b994cc779f3d.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3616,
+        "likes": 6605,
+        "comments": 290,
+        "engagementRate": 0.14817523725908022,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ee6",
+    "firstName": "Amier",
+    "lastName": "Boyd",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636398323-Amier_Boyd_69006e508a29b994cc779ee6.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1647,
+        "likes": 8074,
+        "comments": 771,
+        "engagementRate": 0.3384502784181927,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f98",
+    "firstName": "Reggie",
+    "lastName": "Virgil",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636398334-Reggie_Virgil_69006e508a29b994cc779f98.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 17091,
+        "likes": 33318,
+        "comments": 1385,
+        "engagementRate": 0.11625281617304362,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f85",
+    "firstName": "Chapman",
+    "lastName": "Lewis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636410699-Chapman_Lewis_69006e508a29b994cc779f85.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2035,
+        "likes": 2593,
+        "comments": 108,
+        "engagementRate": 0.3282555282555283,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f8b",
+    "firstName": "Katelyn",
+    "lastName": "Cochran",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636406627-Katelyn_Cochran_69006e508a29b994cc779f8b.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2161,
+        "likes": 5832,
+        "comments": 707,
+        "engagementRate": 0.19525521268530605,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f57",
+    "firstName": "Charles",
+    "lastName": "Anderson Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636411304-Charles_Anderson Jr._69006e508a29b994cc779f57.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OLB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1286,
+        "likes": 4975,
+        "comments": 160,
+        "engagementRate": 0.2499313833362044,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779efd",
+    "firstName": "Sarengbe",
+    "lastName": "Sanogo",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636399908-Sarengbe_Sanogo_69006e508a29b994cc779efd.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F/C",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 852,
+        "likes": 4534,
+        "comments": 66,
+        "engagementRate": 0.321366837869809,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f4b",
+    "firstName": "Elias",
+    "lastName": "Gillen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636407513-Elias_Gillen_69006e508a29b994cc779f4b.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 641,
+        "likes": 2938,
+        "comments": 74,
+        "engagementRate": 0.6712725651883219,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ed6",
+    "firstName": "Ryan",
+    "lastName": "Jones",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636411869-Ryan_Jones_69006e508a29b994cc779ed6.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "3B/OF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1653,
+        "likes": 1827,
+        "comments": 189,
+        "engagementRate": 0.30490018148820325,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f46",
+    "firstName": "Sheridan",
+    "lastName": "Wilson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636400181-Sheridan_Wilson_69006e508a29b994cc779f46.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3068,
+        "likes": 8521,
+        "comments": 550,
+        "engagementRate": 0.19351059724370911,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f00",
+    "firstName": "Denae",
+    "lastName": "Fritz",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636398381-Denae_Fritz_69006e508a29b994cc779f00.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3006,
+        "likes": 7006,
+        "comments": 168,
+        "engagementRate": 0.173294035581413,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779eeb",
+    "firstName": "Lee",
+    "lastName": "Hunter",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636407294-Lee_Hunter_69006e508a29b994cc779eeb.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 19795,
+        "likes": 36257,
+        "comments": 1133,
+        "engagementRate": 0.11752462595090263,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f18",
+    "firstName": "Bryce",
+    "lastName": "Ramirez",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636413029-Bryce_Ramirez_69006e508a29b994cc779f18.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3070,
+        "likes": 41032,
+        "comments": 673,
+        "engagementRate": 0.502767102583879,
+        "contentCount": 24,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f44",
+    "firstName": "Jacob",
+    "lastName": "Ponton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636411876-Jacob_Ponton_69006e508a29b994cc779f44.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1204,
+        "likes": 4129,
+        "comments": 339,
+        "engagementRate": 0.2671224124712497,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f03",
+    "firstName": "Sidney",
+    "lastName": "Love",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636409497-Sidney_Love_69006e508a29b994cc779f03.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2183,
+        "likes": 2329,
+        "comments": 157,
+        "engagementRate": 0.22781518573463838,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f90",
+    "firstName": "Terrance",
+    "lastName": "Carter Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636400202-Terrance_Carter Jr._69006e508a29b994cc779f90.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 16060,
+        "likes": 58796,
+        "comments": 2470,
+        "engagementRate": 0.17440064882506554,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f91",
+    "firstName": "Johncarlos",
+    "lastName": "Miller II",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636406390-Johncarlos_Miller II_69006e508a29b994cc779f91.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2504,
+        "likes": 1079,
+        "comments": 201,
+        "engagementRate": 0.12784111941070078,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f61",
+    "firstName": "Mitch",
+    "lastName": "Griffis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636402934-Mitch_Griffis_69006e508a29b994cc779f61.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6071,
+        "likes": 28356,
+        "comments": 828,
+        "engagementRate": 0.29050598249668913,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f67",
+    "firstName": "Adam",
+    "lastName": "Hill",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636397403-Adam_Hill_69006e508a29b994cc779f67.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2656,
+        "likes": 10618,
+        "comments": 421,
+        "engagementRate": 0.297609830789597,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ecf",
+    "firstName": "Brianna",
+    "lastName": "Hinson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636406420-Brianna_Hinson_69006e508a29b994cc779ecf.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 839,
+        "likes": 2773,
+        "comments": 823,
+        "engagementRate": 0.3578594727521521,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ed0",
+    "firstName": "Angelyna",
+    "lastName": "Conde",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636410725-Angelyna_Conde_69006e508a29b994cc779ed0.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1052,
+        "likes": 3119,
+        "comments": 465,
+        "engagementRate": 0.30971310058762536,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f0c",
+    "firstName": "Donovan",
+    "lastName": "Atwell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636412425-Donovan_Atwell_69006e508a29b994cc779f0c.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3864,
+        "likes": 24687,
+        "comments": 575,
+        "engagementRate": 0.36305480379190724,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ee3",
+    "firstName": "Dontae",
+    "lastName": "Balfour",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636409466-Dontae_Balfour_69006e508a29b994cc779ee3.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5129,
+        "likes": 17432,
+        "comments": 1059,
+        "engagementRate": 0.25176047438471383,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ef3",
+    "firstName": "Keyshawn",
+    "lastName": "Williams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636410716-Keyshawn_Williams_69006e508a29b994cc779ef3.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10033,
+        "likes": 96706,
+        "comments": 2086,
+        "engagementRate": 0.5888472195169882,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f7d",
+    "firstName": "Cole",
+    "lastName": "Wisniewski",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636412412-Cole_Wisniewski_69006e508a29b994cc779f7d.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4342,
+        "likes": 46403,
+        "comments": 450,
+        "engagementRate": 0.6439954681395025,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f58",
+    "firstName": "Jack",
+    "lastName": "Burgess",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636410094-Jack_Burgess_69006e508a29b994cc779f58.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "P",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3070,
+        "likes": 11363,
+        "comments": 610,
+        "engagementRate": 0.2788342926934003,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f7e",
+    "firstName": "Brenden",
+    "lastName": "Jordan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636411281-Brenden_Jordan_69006e508a29b994cc779f7e.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6171,
+        "likes": 19241,
+        "comments": 886,
+        "engagementRate": 0.2510630250690316,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ee5",
+    "firstName": "Deante",
+    "lastName": "Lindsay",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636402001-Deante_Lindsay_69006e508a29b994cc779ee5.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1570,
+        "likes": 7210,
+        "comments": 242,
+        "engagementRate": 0.36537963305199866,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f9d",
+    "firstName": "Tyson",
+    "lastName": "Turner",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636405766-Tyson_Turner_69006e508a29b994cc779f9d.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1798,
+        "likes": 11830,
+        "comments": 409,
+        "engagementRate": 0.4923818634586719,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ef0",
+    "firstName": "Amier",
+    "lastName": "Washington",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636403427-Amier_Washington_69006e508a29b994cc779ef0.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1006,
+        "likes": 1903,
+        "comments": 120,
+        "engagementRate": 0.17359479486716067,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f15",
+    "firstName": "Upton",
+    "lastName": "Bellenfant",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636408657-Upton_Bellenfant_69006e508a29b994cc779f15.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "K",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3151,
+        "likes": 14041,
+        "comments": 360,
+        "engagementRate": 0.5102228536589757,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f14",
+    "firstName": "Hailey",
+    "lastName": "Toney",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636410675-Hailey_Toney_69006e508a29b994cc779f14.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1471,
+        "likes": 2911,
+        "comments": 405,
+        "engagementRate": 0.17286047955096248,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f1c",
+    "firstName": "Trent",
+    "lastName": "Low",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636404106-Trent_Low_69006e508a29b994cc779f1c.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 303,
+        "engagementRate": 0,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f56",
+    "firstName": "Braylon",
+    "lastName": "Rigsby",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636403545-Braylon_Rigsby_69006e508a29b994cc779f56.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OLB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 168,
+        "engagementRate": 0,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f87",
+    "firstName": "Chief",
+    "lastName": "Collins",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636412995-Chief_Collins_69006e508a29b994cc779f87.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2549,
+        "likes": 6,
+        "comments": 631,
+        "engagementRate": 0.0012890209045564088,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f89",
+    "firstName": "Luke",
+    "lastName": "Dillingham",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636411852-Luke_Dillingham_69006e508a29b994cc779f89.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1829,
+        "likes": 6427,
+        "comments": 477,
+        "engagementRate": 0.290839906145876,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f55",
+    "firstName": "Ansel",
+    "lastName": "Nedore",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636412429-Ansel_Nedore_69006e508a29b994cc779f55.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OLB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1358,
+        "likes": 1838,
+        "comments": 325,
+        "engagementRate": 0.08932179091954168,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ef1",
+    "firstName": "Kasen",
+    "lastName": "Long",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636399819-Kasen_Long_69006e508a29b994cc779ef1.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2093,
+        "likes": 2891,
+        "comments": 282,
+        "engagementRate": 0.10431714917882283,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f65",
+    "firstName": "Cameron",
+    "lastName": "Dickey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636401137-Cameron_Dickey_69006e508a29b994cc779f65.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8136,
+        "likes": 43533,
+        "comments": 463,
+        "engagementRate": 0.3726235467883396,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779fa3",
+    "firstName": "Tristian",
+    "lastName": "Gentry",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636404129-Tristian_Gentry_69006e508a29b994cc779fa3.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5110,
+        "likes": 6145,
+        "comments": 236,
+        "engagementRate": 0.1546477495107632,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f4e",
+    "firstName": "Romello",
+    "lastName": "Height",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636408892-Romello_Height_69006e508a29b994cc779f4e.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OLB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 15286,
+        "likes": 33118,
+        "comments": 969,
+        "engagementRate": 0.09727428562338078,
+        "contentCount": 23,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779edf",
+    "firstName": "Maurion",
+    "lastName": "Horn",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636402960-Maurion_Horn_69006e508a29b994cc779edf.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6271,
+        "likes": 9152,
+        "comments": 469,
+        "engagementRate": 0.1280012632982139,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f19",
+    "firstName": "John",
+    "lastName": "Curry",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636409425-John_Curry_69006e508a29b994cc779f19.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8774,
+        "likes": 61967,
+        "comments": 606,
+        "engagementRate": 0.4215705265179212,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f32",
+    "firstName": "Mihyia",
+    "lastName": "Davis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636400286-Mihyia_Davis_69006e508a29b994cc779f32.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4353,
+        "likes": 34850,
+        "comments": 509,
+        "engagementRate": 0.6786000509613479,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f84",
+    "firstName": "Malik",
+    "lastName": "Esquerra",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636411821-Malik_Esquerra_69006e508a29b994cc779f84.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2353,
+        "likes": 21804,
+        "comments": 398,
+        "engagementRate": 1.0496140009880877,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f40",
+    "firstName": "Jurrien",
+    "lastName": "Loftin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636398277-Jurrien_Loftin_69006e508a29b994cc779f40.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2818,
+        "likes": 6055,
+        "comments": 439,
+        "engagementRate": 0.1648734637546791,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f96",
+    "firstName": "Alana",
+    "lastName": "Johnson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636410089-Alana_Johnson_69006e508a29b994cc779f96.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "UTL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7135,
+        "likes": 12705,
+        "comments": 787,
+        "engagementRate": 0.1284172780566977,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f45",
+    "firstName": "Vinny",
+    "lastName": "Sciury",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636401957-Vinny_Sciury_69006e508a29b994cc779f45.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1797,
+        "likes": 6754,
+        "comments": 373,
+        "engagementRate": 0.26451926637143097,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f21",
+    "firstName": "Brock",
+    "lastName": "Golwas",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636410060-Brock_Golwas_69006e508a29b994cc779f21.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2060,
+        "likes": 15017,
+        "comments": 885,
+        "engagementRate": 0.5240279118008101,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f4d",
+    "firstName": "Howard",
+    "lastName": "Sampson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636406411-Howard_Sampson_69006e508a29b994cc779f4d.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 17168,
+        "likes": 69383,
+        "comments": 645,
+        "engagementRate": 0.5613766693778542,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f80",
+    "firstName": "Peyton",
+    "lastName": "Morgan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636408550-Peyton_Morgan_69006e508a29b994cc779f80.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6274,
+        "likes": 13881,
+        "comments": 244,
+        "engagementRate": 0.28142379734038986,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ee9",
+    "firstName": "Jace",
+    "lastName": "Souza",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636403507-Jace_Souza_69006e508a29b994cc779ee9.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "CF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2419,
+        "likes": 3027,
+        "comments": 201,
+        "engagementRate": 0.09781328239835625,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f0b",
+    "firstName": "Jaylen",
+    "lastName": "Petty",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636400174-Jaylen_Petty_69006e508a29b994cc779f0b.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7635,
+        "likes": 47368,
+        "comments": 873,
+        "engagementRate": 0.37359634299333555,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f07",
+    "firstName": "Christian",
+    "lastName": "Anderson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636411817-Christian_Anderson_69006e508a29b994cc779f07.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 25860,
+        "likes": 135983,
+        "comments": 905,
+        "engagementRate": 0.17177430446347602,
+        "contentCount": 31,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f9a",
+    "firstName": "T.J.",
+    "lastName": "West",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636408081-T.J._West_69006e508a29b994cc779f9a.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3620,
+        "likes": 4690,
+        "comments": 324,
+        "engagementRate": 0.23218711962517855,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f79",
+    "firstName": "Jack",
+    "lastName": "Cebert",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636403516-Jack_Cebert_69006e508a29b994cc779f79.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2541,
+        "likes": 4909,
+        "comments": 343,
+        "engagementRate": 0.18641253961570578,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ed2",
+    "firstName": "Robin",
+    "lastName": "Villeneuve",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636397389-Robin_Villeneuve_69006e508a29b994cc779ed2.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "1B/OF",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2870,
+        "likes": 8423,
+        "comments": 194,
+        "engagementRate": 0.2301441166628402,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f74",
+    "firstName": "Connor",
+    "lastName": "Mohan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636408642-Connor_Mohan_69006e508a29b994cc779f74.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8148,
+        "likes": 1260,
+        "comments": 245,
+        "engagementRate": 0.015513009327442318,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f8e",
+    "firstName": "TJ",
+    "lastName": "Pompey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636407281-TJ_Pompey_69006e508a29b994cc779f8e.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "SS",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3525,
+        "likes": 6415,
+        "comments": 346,
+        "engagementRate": 0.2519578331811758,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f31",
+    "firstName": "Logan",
+    "lastName": "Halleman",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636403554-Logan_Halleman_69006e508a29b994cc779f31.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2640,
+        "likes": 2069,
+        "comments": 704,
+        "engagementRate": 0.06104655221638059,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f66",
+    "firstName": "J'Koby",
+    "lastName": "Williams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636410106-J'Koby_Williams_69006e508a29b994cc779f66.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6921,
+        "likes": 33164,
+        "comments": 778,
+        "engagementRate": 0.33171972551364987,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f0f",
+    "firstName": "Mia",
+    "lastName": "Williams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636411301-Mia_Williams_69006e508a29b994cc779f0f.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7158,
+        "likes": 32929,
+        "comments": 470,
+        "engagementRate": 0.3582004114222847,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f13",
+    "firstName": "Mia",
+    "lastName": "Richards",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636399352-Mia_Richards_69006e508a29b994cc779f13.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1752,
+        "likes": 4219,
+        "comments": 338,
+        "engagementRate": 0.1857396151782302,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f08",
+    "firstName": "Leon",
+    "lastName": "Horner",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636408048-Leon_Horner_69006e508a29b994cc779f08.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 18086,
+        "likes": 11886,
+        "comments": 415,
+        "engagementRate": 0.052040707651306764,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f8f",
+    "firstName": "Tracer",
+    "lastName": "Lopez",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636402662-Tracer_Lopez_69006e508a29b994cc779f8f.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "SS/2B",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3508,
+        "likes": 7309,
+        "comments": 155,
+        "engagementRate": 0.16370565174500065,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ef4",
+    "firstName": "Sierra",
+    "lastName": "Grizzle",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636407305-Sierra_Grizzle_69006e508a29b994cc779ef4.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "DS/L",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9792,
+        "likes": 50801,
+        "comments": 499,
+        "engagementRate": 0.3077509868781473,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f1a",
+    "firstName": "Jacob",
+    "lastName": "Rodriguez",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636406401-Jacob_Rodriguez_69006e508a29b994cc779f1a.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 72337,
+        "likes": 359508,
+        "comments": 1906,
+        "engagementRate": 0.23629185824920748,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f3f",
+    "firstName": "Connor",
+    "lastName": "Carty",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636407269-Connor_Carty_69006e508a29b994cc779f3f.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1244,
+        "likes": 2809,
+        "comments": 213,
+        "engagementRate": 0.2699178277956413,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779fa7",
+    "firstName": "Preztynn",
+    "lastName": "Harrison",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636404851-Preztynn_Harrison_69006e508a29b994cc779fa7.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1565,
+        "likes": 9331,
+        "comments": 121,
+        "engagementRate": 0.4646512820934005,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f47",
+    "firstName": "Danilo",
+    "lastName": "Guberinich",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636405718-Danilo_Guberinich_69006e508a29b994cc779f47.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1304,
+        "likes": 9827,
+        "comments": 482,
+        "engagementRate": 0.7186977133296151,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f39",
+    "firstName": "Kenna",
+    "lastName": "McKenzie",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636404018-Kenna_McKenzie_69006e508a29b994cc779f39.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH/RS",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1349,
+        "likes": 1705,
+        "comments": 349,
+        "engagementRate": 0.1308171020852771,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f02",
+    "firstName": "Adlee",
+    "lastName": "Blacklock",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636399158-Adlee_Blacklock_69006e508a29b994cc779f02.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3822,
+        "likes": 3,
+        "comments": 779,
+        "engagementRate": 0.004729702531900334,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f99",
+    "firstName": "Coy",
+    "lastName": "Eakin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636413008-Coy_Eakin_69006e508a29b994cc779f99.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12634,
+        "likes": 71319,
+        "comments": 849,
+        "engagementRate": 0.3905094101557228,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f2b",
+    "firstName": "Tatum",
+    "lastName": "Johnson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636402705-Tatum_Johnson_69006e508a29b994cc779f2b.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2316,
+        "likes": 907,
+        "comments": 227,
+        "engagementRate": 0.03342688543465746,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f38",
+    "firstName": "Addie",
+    "lastName": "Kanouff",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636412446-Addie_Kanouff_69006e508a29b994cc779f38.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH/RS",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3838,
+        "likes": 7510,
+        "comments": 687,
+        "engagementRate": 0.1346226508435115,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f37",
+    "firstName": "Taylor",
+    "lastName": "Bahnub",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636405733-Taylor_Bahnub_69006e508a29b994cc779f37.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH/RS",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1193,
+        "likes": 4875,
+        "comments": 268,
+        "engagementRate": 0.4310980720871752,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f5e",
+    "firstName": "Gemma",
+    "lastName": "Núñez",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636401734-Gemma_NÃºÃ±ez_69006e508a29b994cc779f5e.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "PG",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2779,
+        "likes": 7046,
+        "comments": 230,
+        "engagementRate": 0.2018265001658835,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f62",
+    "firstName": "Will",
+    "lastName": "Hammond",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636410656-Will_Hammond_69006e508a29b994cc779f62.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12386,
+        "likes": 60494,
+        "comments": 514,
+        "engagementRate": 0.32909508880541927,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f88",
+    "firstName": "Mikal",
+    "lastName": "Harrison-Pilot",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636413032-Mikal_Harrison-Pilot_69006e508a29b994cc779f88.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10580,
+        "likes": 2317,
+        "comments": 59,
+        "engagementRate": 0.016962385749219953,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f2d",
+    "firstName": "Jasmine",
+    "lastName": "Martin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636407997-Jasmine_Martin_69006e508a29b994cc779f2d.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3057,
+        "likes": 9070,
+        "comments": 477,
+        "engagementRate": 0.24023517084908746,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779edb",
+    "firstName": "Victoria",
+    "lastName": "Valdez",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636410608-Victoria_Valdez_69006e508a29b994cc779edb.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "C",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1817,
+        "likes": 28076,
+        "comments": 376,
+        "engagementRate": 1.2003450155176634,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f63",
+    "firstName": "Holden",
+    "lastName": "Phillips",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636406398-Holden_Phillips_69006e508a29b994cc779f63.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2442,
+        "likes": 7205,
+        "comments": 354,
+        "engagementRate": 0.25750750750750756,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f1f",
+    "firstName": "Wesley",
+    "lastName": "Smith",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636397047-Wesley_Smith_69006e508a29b994cc779f1f.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2591,
+        "likes": 15241,
+        "comments": 98,
+        "engagementRate": 0.45429645465788426,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779efe",
+    "firstName": "Mariam",
+    "lastName": "Sanogo",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636400270-Mariam_Sanogo_69006e508a29b994cc779efe.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F/G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 953,
+        "likes": 3101,
+        "comments": 272,
+        "engagementRate": 0.27237893934364377,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ee2",
+    "firstName": "Ashton",
+    "lastName": "Hampton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636408692-Ashton_Hampton_69006e508a29b994cc779ee2.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1942,
+        "likes": 702,
+        "comments": 416,
+        "engagementRate": 0.02991495362650156,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f83",
+    "firstName": "Marcus",
+    "lastName": "Ramon-Edwards",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636408675-Marcus_Ramon-Edwards_69006e508a29b994cc779f83.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2334,
+        "likes": 594,
+        "comments": 30,
+        "engagementRate": 0.03819316929856775,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f95",
+    "firstName": "Jason",
+    "lastName": "Llewellyn",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636408652-Jason_Llewellyn_69006e508a29b994cc779f95.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4015,
+        "likes": 4172,
+        "comments": 228,
+        "engagementRate": 0.08435536721831206,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f35",
+    "firstName": "Surima",
+    "lastName": "Akat",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636409959-Surima_Akat_69006e508a29b994cc779f35.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1790,
+        "likes": 3744,
+        "comments": 226,
+        "engagementRate": 0.2772346368715084,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f33",
+    "firstName": "Lauren",
+    "lastName": "Buchanan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636401969-Lauren_Buchanan_69006e508a29b994cc779f33.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1787,
+        "likes": 795,
+        "comments": 1040,
+        "engagementRate": 0.03904748159002743,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f1e",
+    "firstName": "Justin",
+    "lastName": "Horne",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636408057-Justin_Horne_69006e508a29b994cc779f1e.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2655,
+        "likes": 11737,
+        "comments": 395,
+        "engagementRate": 0.4569491525423729,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f11",
+    "firstName": "Taylor",
+    "lastName": "Pannell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636409508-Taylor_Pannell_69006e508a29b994cc779f11.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7767,
+        "likes": 29290,
+        "comments": 612,
+        "engagementRate": 0.29520376410175847,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f43",
+    "firstName": "Ren",
+    "lastName": "Brown",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636404113-Ren_Brown_69006e508a29b994cc779f43.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1038,
+        "likes": 3582,
+        "comments": 58,
+        "engagementRate": 0.2922286448298009,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779fa0",
+    "firstName": "Leyton",
+    "lastName": "Stone",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636411879-Leyton_Stone_69006e508a29b994cc779fa0.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3905,
+        "likes": 18030,
+        "comments": 313,
+        "engagementRate": 0.3104908237302603,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f2e",
+    "firstName": "Reagan",
+    "lastName": "Engler",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636412449-Reagan_Engler_69006e508a29b994cc779f2e.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB/RS",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2841,
+        "likes": 3533,
+        "comments": 130,
+        "engagementRate": 0.09018335722093729,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f71",
+    "firstName": "Zachary",
+    "lastName": "Fetchel",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636397408-Zachary_Fetchel_69006e508a29b994cc779f71.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 549,
+        "engagementRate": 0,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f1b",
+    "firstName": "Ben",
+    "lastName": "Roberts",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636403564-Ben_Roberts_69006e508a29b994cc779f1b.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9031,
+        "likes": 28788,
+        "comments": 316,
+        "engagementRate": 0.2686721612776649,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f17",
+    "firstName": "Emily",
+    "lastName": "Contreras",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636407284-Emily_Contreras_69006e508a29b994cc779f17.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "L",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1375,
+        "likes": 4093,
+        "comments": 439,
+        "engagementRate": 0.2746666666666666,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ef6",
+    "firstName": "Julie",
+    "lastName": "Nekolná",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636404883-Julie_NekolnÃ¡_69006e508a29b994cc779ef6.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1158,
+        "likes": 3606,
+        "comments": 137,
+        "engagementRate": 0.24896860349514988,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f5a",
+    "firstName": "Ian",
+    "lastName": "Hershey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636408639-Ian_Hershey_69006e508a29b994cc779f5a.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "P/K",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9107,
+        "likes": 5255,
+        "comments": 284,
+        "engagementRate": 0.05068445518099631,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f0d",
+    "firstName": "Jalynn",
+    "lastName": "Bristow",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636405159-Jalynn_Bristow_69006e508a29b994cc779f0d.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G/F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3817,
+        "likes": 7172,
+        "comments": 142,
+        "engagementRate": 0.160534453173239,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f42",
+    "firstName": "Jackson",
+    "lastName": "Hildebrand",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636397362-Jackson_Hildebrand_69006e508a29b994cc779f42.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2397,
+        "likes": 8513,
+        "comments": 399,
+        "engagementRate": 0.24823569881962343,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f50",
+    "firstName": "Terrell",
+    "lastName": "Tilmon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636408033-Terrell_Tilmon_69006e508a29b994cc779f50.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OLB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 61,
+        "engagementRate": 0,
+        "contentCount": 1,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f34",
+    "firstName": "Kalli",
+    "lastName": "Jioshvili Ravva",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636398458-Kalli_Jioshvili Ravva_69006e508a29b994cc779f34.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1493,
+        "likes": 3722,
+        "comments": 188,
+        "engagementRate": 0.21824067872292927,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f04",
+    "firstName": "Bailey",
+    "lastName": "Maupin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636412457-Bailey_Maupin_69006e508a29b994cc779f04.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4174,
+        "likes": 11745,
+        "comments": 217,
+        "engagementRate": 0.2605305571285447,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f6d",
+    "firstName": "Parker",
+    "lastName": "Hutyra",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636398948-Parker_Hutyra_69006e508a29b994cc779f6d.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1047,
+        "likes": 2032,
+        "comments": 188,
+        "engagementRate": 0.16475644699140402,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f92",
+    "firstName": "Jack",
+    "lastName": "Esparza",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636398268-Jack_Esparza_69006e508a29b994cc779f92.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1921,
+        "likes": 7406,
+        "comments": 740,
+        "engagementRate": 0.2817124283935823,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f16",
+    "firstName": "Stone",
+    "lastName": "Harrington",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636401695-Stone_Harrington_69006e508a29b994cc779f16.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "K",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2051,
+        "likes": 19544,
+        "comments": 418,
+        "engagementRate": 0.8110677718186249,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f6f",
+    "firstName": "Jonny",
+    "lastName": "Lowe",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636402681-Jonny_Lowe_69006e508a29b994cc779f6f.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2554,
+        "likes": 3721,
+        "comments": 316,
+        "engagementRate": 0.13162359697206996,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f3c",
+    "firstName": "Holton",
+    "lastName": "Hendrix",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636406378-Holton_Hendrix_69006e508a29b994cc779f3c.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2416,
+        "likes": 392,
+        "comments": 69,
+        "engagementRate": 0.06112030905077263,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779fa4",
+    "firstName": "Kai",
+    "lastName": "Powell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636410073-Kai_Powell_69006e508a29b994cc779fa4.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 954,
+        "likes": 503,
+        "comments": 256,
+        "engagementRate": 0.039907157831686135,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779efb",
+    "firstName": "Marial",
+    "lastName": "Akuentok",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636397340-Marial_Akuentok_69006e508a29b994cc779efb.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2452,
+        "likes": 14240,
+        "comments": 549,
+        "engagementRate": 0.5026169113648722,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f29",
+    "firstName": "Rylan",
+    "lastName": "Vagana",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636410078-Rylan_Vagana_69006e508a29b994cc779f29.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LS",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1527,
+        "likes": 4036,
+        "comments": 233,
+        "engagementRate": 0.23297314996725607,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f36",
+    "firstName": "Ashlyn",
+    "lastName": "Bellamy",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636409974-Ashlyn_Bellamy_69006e508a29b994cc779f36.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2159,
+        "likes": 2348,
+        "comments": 388,
+        "engagementRate": 0.10560444650301065,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f8d",
+    "firstName": "Coleman",
+    "lastName": "Ryan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636400786-Coleman_Ryan_69006e508a29b994cc779f8d.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "SS",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1397,
+        "likes": 7281,
+        "comments": 437,
+        "engagementRate": 0.4603913147220233,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f75",
+    "firstName": "Jacob",
+    "lastName": "Rogers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636399207-Jacob_Rogers_69006e508a29b994cc779f75.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1407,
+        "likes": 5205,
+        "comments": 296,
+        "engagementRate": 0.32515991471215355,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779eec",
+    "firstName": "E'Maurion",
+    "lastName": "Banks",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636404862-E'Maurion_Banks_69006e508a29b994cc779eec.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9617,
+        "likes": 3816,
+        "comments": 424,
+        "engagementRate": 0.03339572285189422,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f09",
+    "firstName": "Nolan",
+    "lastName": "Groves",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636400170-Nolan_Groves_69006e508a29b994cc779f09.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5847,
+        "likes": 33410,
+        "comments": 443,
+        "engagementRate": 0.4824838948748646,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f48",
+    "firstName": "Daniel",
+    "lastName": "Sill",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636398312-Daniel_Sill_69006e508a29b994cc779f48.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 695,
+        "likes": 600,
+        "comments": 113,
+        "engagementRate": 0.20630428218929922,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f2c",
+    "firstName": "Shelby",
+    "lastName": "Ignash",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636399366-Shelby_Ignash_69006e508a29b994cc779f2c.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1953,
+        "likes": 9020,
+        "comments": 609,
+        "engagementRate": 0.4108636286055642,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f69",
+    "firstName": "Michael",
+    "lastName": "Henderson III",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636411314-Michael_Henderson III_69006e508a29b994cc779f69.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3865,
+        "likes": 231,
+        "comments": 58,
+        "engagementRate": 0.03738680465717982,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f06",
+    "firstName": "Jazz",
+    "lastName": "Henderson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636404122-Jazz_Henderson_69006e508a29b994cc779f06.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2922,
+        "likes": 12857,
+        "comments": 514,
+        "engagementRate": 0.381331279945243,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779fa6",
+    "firstName": "Bryson",
+    "lastName": "Jones",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636397350-Bryson_Jones_69006e508a29b994cc779fa6.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1865,
+        "likes": 11098,
+        "comments": 191,
+        "engagementRate": 0.8653368914806258,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f73",
+    "firstName": "Zane",
+    "lastName": "Petty",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636398257-Zane_Petty_69006e508a29b994cc779f73.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1804,
+        "likes": 4829,
+        "comments": 387,
+        "engagementRate": 0.2409460458240946,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ed5",
+    "firstName": "Peyton",
+    "lastName": "Schulze",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636399240-Peyton_Schulze_69006e508a29b994cc779ed5.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "3B/1B",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1162,
+        "likes": 3424,
+        "comments": 284,
+        "engagementRate": 0.3412698412698412,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f2f",
+    "firstName": "Logan",
+    "lastName": "Hughes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636404810-Logan_Hughes_69006e508a29b994cc779f2f.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "OF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1486,
+        "likes": 5599,
+        "comments": 239,
+        "engagementRate": 0.35715159672091035,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779eef",
+    "firstName": "Tanner",
+    "lastName": "Allen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636413016-Tanner_Allen_69006e508a29b994cc779eef.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1561,
+        "likes": 4190,
+        "comments": 250,
+        "engagementRate": 0.31519446332155493,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f9e",
+    "firstName": "Price",
+    "lastName": "Morgan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636405739-Price_Morgan_69006e508a29b994cc779f9e.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2465,
+        "likes": 4369,
+        "comments": 405,
+        "engagementRate": 0.21498801501019676,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779efa",
+    "firstName": "Luke",
+    "lastName": "Bamgboye",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636405743-Luke_Bamgboye_69006e508a29b994cc779efa.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3077,
+        "likes": 5330,
+        "comments": 117,
+        "engagementRate": 0.3503412414689633,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ee4",
+    "firstName": "Tarrion",
+    "lastName": "Grant",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636407291-Tarrion_Grant_69006e508a29b994cc779ee4.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2708,
+        "likes": 24240,
+        "comments": 453,
+        "engagementRate": 1.1320624076809453,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f93",
+    "firstName": "Sean",
+    "lastName": "Robinson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636405755-Sean_Robinson_69006e508a29b994cc779f93.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2525,
+        "likes": 4873,
+        "comments": 218,
+        "engagementRate": 0.16801980198019803,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f78",
+    "firstName": "Logan",
+    "lastName": "Bevis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636411844-Logan_Bevis_69006e508a29b994cc779f78.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1155,
+        "likes": 2302,
+        "comments": 413,
+        "engagementRate": 0.22472342472342474,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f81",
+    "firstName": "Quintaelyn",
+    "lastName": "Joyner",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636401718-Quintaelyn_Joyner_69006e508a29b994cc779f81.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1855,
+        "likes": 3367,
+        "comments": 0,
+        "engagementRate": 0.22353350581383907,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f3e",
+    "firstName": "Hunter",
+    "lastName": "Zambrano",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636400873-Hunter_Zambrano_69006e508a29b994cc779f3e.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2198,
+        "likes": 9525,
+        "comments": 479,
+        "engagementRate": 0.3792841977555353,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f86",
+    "firstName": "Braylan",
+    "lastName": "McDonald",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636400217-Braylan_McDonald_69006e508a29b994cc779f86.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2375,
+        "likes": 2520,
+        "comments": 308,
+        "engagementRate": 0.29802846515357373,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f6a",
+    "firstName": "Tyler",
+    "lastName": "Boudreau",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636404832-Tyler_Boudreau_69006e508a29b994cc779f6a.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1450,
+        "likes": 7950,
+        "comments": 244,
+        "engagementRate": 0.47091954022988497,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f7f",
+    "firstName": "Oliver",
+    "lastName": "Miles III",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636411886-Oliver_Miles III_69006e508a29b994cc779f7f.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5430,
+        "likes": 2328,
+        "comments": 224,
+        "engagementRate": 0.08659300184162064,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ed3",
+    "firstName": "Antonelli",
+    "lastName": "Savattere",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636410053-Antonelli_Savattere_69006e508a29b994cc779ed3.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "2B",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 844,
+        "likes": 4769,
+        "comments": 353,
+        "engagementRate": 0.5175570874623007,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f64",
+    "firstName": "Quinten",
+    "lastName": "Joyner",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636412980-Quinten_Joyner_69006e508a29b994cc779f64.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 14441,
+        "likes": 37431,
+        "comments": 549,
+        "engagementRate": 0.21925696544114617,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f76",
+    "firstName": "Brady",
+    "lastName": "Trombello",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636403531-Brady_Trombello_69006e508a29b994cc779f76.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 869,
+        "likes": 9355,
+        "comments": 104,
+        "engagementRate": 0.9051591868047565,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f20",
+    "firstName": "Chris",
+    "lastName": "Lemons",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636399309-Chris_Lemons_69006e508a29b994cc779f20.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1283,
+        "likes": 4099,
+        "comments": 336,
+        "engagementRate": 0.3142492737192659,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f0e",
+    "firstName": "Jackie",
+    "lastName": "Lis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636403539-Jackie_Lis_69006e508a29b994cc779f0e.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1684,
+        "likes": 7211,
+        "comments": 193,
+        "engagementRate": 0.33821417109951313,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f4c",
+    "firstName": "Ellis",
+    "lastName": "Davis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636401133-Ellis_Davis_69006e508a29b994cc779f4c.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 236,
+        "engagementRate": 0,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f9c",
+    "firstName": "Kelby",
+    "lastName": "Valsin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636401107-Kelby_Valsin_69006e508a29b994cc779f9c.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7485,
+        "likes": 22959,
+        "comments": 632,
+        "engagementRate": 0.4476953907815631,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ed7",
+    "firstName": "Hudson",
+    "lastName": "Parker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636402879-Hudson_Parker_69006e508a29b994cc779ed7.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "C",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2179,
+        "likes": 5389,
+        "comments": 664,
+        "engagementRate": 0.23148998011320177,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ee8",
+    "firstName": "Kendyl",
+    "lastName": "Johnson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636397930-Kendyl_Johnson_69006e508a29b994cc779ee8.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "CF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1403,
+        "likes": 7774,
+        "comments": 292,
+        "engagementRate": 0.5226462774573967,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f30",
+    "firstName": "Damian",
+    "lastName": "Bravo",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636412420-Damian_Bravo_69006e508a29b994cc779f30.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "OF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2307,
+        "likes": 4162,
+        "comments": 171,
+        "engagementRate": 0.18568009993710433,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f4a",
+    "firstName": "Will",
+    "lastName": "Jados",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636397435-Will_Jados_69006e508a29b994cc779f4a.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 241,
+        "likes": 89,
+        "comments": 9,
+        "engagementRate": 0.2033195020746888,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f12",
+    "firstName": "Lauren",
+    "lastName": "Allred",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636404160-Lauren_Allred_69006e508a29b994cc779f12.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5378,
+        "likes": 103345,
+        "comments": 415,
+        "engagementRate": 1.607412916821619,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f4f",
+    "firstName": "Charles",
+    "lastName": "Esters III",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636405150-Charles_Esters III_69006e508a29b994cc779f4f.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OLB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1591,
+        "likes": 1036,
+        "comments": 515,
+        "engagementRate": 0.06588194960287984,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f05",
+    "firstName": "Tyeree",
+    "lastName": "Bryan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636411253-Tyeree_Bryan_69006e508a29b994cc779f05.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3239,
+        "likes": 3318,
+        "comments": 152,
+        "engagementRate": 0.1331831430220346,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f1d",
+    "firstName": "Gage",
+    "lastName": "Elder",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636411858-Gage_Elder_69006e508a29b994cc779f1d.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2234,
+        "likes": 2953,
+        "comments": 223,
+        "engagementRate": 0.17770814682184422,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f60",
+    "firstName": "Lloyd",
+    "lastName": "Jones III",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636408078-Lloyd_Jones III_69006e508a29b994cc779f60.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1208,
+        "likes": 4796,
+        "comments": 92,
+        "engagementRate": 0.8092715231788079,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779ef9",
+    "firstName": "Josiah",
+    "lastName": "Moseley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636402888-Josiah_Moseley_69006e508a29b994cc779ef9.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5113,
+        "likes": 34013,
+        "comments": 445,
+        "engagementRate": 0.56160766673186,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f3a",
+    "firstName": "Patrick",
+    "lastName": "McMath",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636404297-Patrick_McMath_69006e508a29b994cc779f3a.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4182,
+        "likes": 3,
+        "comments": 31,
+        "engagementRate": 0.008130081300813009,
+        "contentCount": 1,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f52",
+    "firstName": "Cheta",
+    "lastName": "Ofili",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636408664-Cheta_Ofili_69006e508a29b994cc779f52.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OLB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1344,
+        "likes": 974,
+        "comments": 128,
+        "engagementRate": 0.26512896825396826,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f77",
+    "firstName": "Daniel",
+    "lastName": "Bass",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636411271-Daniel_Bass_69006e508a29b994cc779f77.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 358,
+        "likes": 928,
+        "comments": 187,
+        "engagementRate": 0.3473229356199054,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779eda",
+    "firstName": "Dominic",
+    "lastName": "Archila",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636407276-Dominic_Archila_69006e508a29b994cc779eda.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "C",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 259,
+        "likes": 98,
+        "comments": 7,
+        "engagementRate": 0.40540540540540543,
+        "contentCount": 1,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f6b",
+    "firstName": "JT",
+    "lastName": "Drake",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636406381-JT_Drake_69006e508a29b994cc779f6b.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 907,
+        "likes": 509,
+        "comments": 65,
+        "engagementRate": 0.3164277839029769,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f25",
+    "firstName": "Carson",
+    "lastName": "Baugh",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636409440-Carson_Baugh_69006e508a29b994cc779f25.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1320,
+        "likes": 2860,
+        "comments": 297,
+        "engagementRate": 0.23916666666666667,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779edc",
+    "firstName": "Cimone",
+    "lastName": "Edge",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636411320-Cimone_Edge_69006e508a29b994cc779edc.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "C/1B",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1306,
+        "likes": 760,
+        "comments": 2,
+        "engagementRate": 0.5834609494640123,
+        "contentCount": 1,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f9f",
+    "firstName": "Micah",
+    "lastName": "Hudson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636401092-Micah_Hudson_69006e508a29b994cc779f9f.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 23311,
+        "likes": 51193,
+        "comments": 1138,
+        "engagementRate": 0.37415097307422823,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779fa5",
+    "firstName": "Michael",
+    "lastName": "Dever",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636404061-Michael_Dever_69006e508a29b994cc779fa5.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1534,
+        "likes": 493,
+        "comments": 30,
+        "engagementRate": 0.3409387222946545,
+        "contentCount": 1,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69006e508a29b994cc779f59",
+    "firstName": "Mallie",
+    "lastName": "West",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761636410672-Mallie_West_69006e508a29b994cc779f59.png",
+    "schoolName": "Texas Tech",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "P",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 970,
+        "likes": 352,
+        "comments": 40,
+        "engagementRate": 0.4041237113402062,
+        "contentCount": 1,
+        "marketability": 0
+      }
+    }
+  }
+]

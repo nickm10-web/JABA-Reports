@@ -1,0 +1,4415 @@
+[
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "arizona.threads",
+    "sponsoredPosts": 35,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible",
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "school_affiliated_non_brand_possible",
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "postgame.official",
+    "sponsoredPosts": 4,
+    "highConfidenceFlags": [
+      "known_non_brand"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "known_non_brand"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "arizonamgolf",
+    "sponsoredPosts": 3,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "arizonatrack",
+    "sponsoredPosts": 3,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "arizonabeachvolleyball",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "arizonasoccer",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "arizonatriathlon",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "arizonawildcats",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "athletesthread",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "gat_sport",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "adidasbasketball",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "arizonagymcats",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "arizonambb",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "arizonavolleyball",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "arizonawgolf",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "dmnd.mgmt",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "drink_phx",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "ignis_clothing",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "jlin.brand",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "myplayerathlete",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "nextoffermedia",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "recruiting_or_media_page"
+    ],
+    "allFlags": [
+      "recruiting_or_media_page"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "nicks.us",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "optic_ink",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "team_mzansi",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "texasstatethreads",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "that.triathlonlife",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "uarizona",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Arizona",
+    "schoolId": "arizona",
+    "handle": "varlo.apparel",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "boisestatethreads",
+    "sponsoredPosts": 13,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "lithiafordboise",
+    "sponsoredPosts": 7,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "broncosports",
+    "sponsoredPosts": 6,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "myplayersports",
+    "sponsoredPosts": 6,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "no.rivals.brand",
+    "sponsoredPosts": 5,
+    "highConfidenceFlags": [
+      "recruiting_or_media_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "recruiting_or_media_page"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "myplayerathlete",
+    "sponsoredPosts": 4,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "plunj_boise",
+    "sponsoredPosts": 4,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible",
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible",
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "postgame.official",
+    "sponsoredPosts": 4,
+    "highConfidenceFlags": [
+      "known_non_brand"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "known_non_brand"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "boisesportstalk",
+    "sponsoredPosts": 3,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "boisestatebroncos",
+    "sponsoredPosts": 3,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "hotworxboise",
+    "sponsoredPosts": 3,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "stretchlabboise",
+    "sponsoredPosts": 3,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "wellah.nutrition",
+    "sponsoredPosts": 3,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "blazepod",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "recruiting_or_media_page"
+    ],
+    "allFlags": [
+      "recruiting_or_media_page"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "g4_collective",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "gat_sport",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "influxer",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "influxerboisestate",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "lookout.cu",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "twentyfou_urbanwear",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "verlo.boise",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible",
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible",
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "yogasix_idaho",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "baconboise",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "braven.bar",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "dactive_nsg",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "deckiez_pouches",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "drink_uphill",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "facefoundrieboise",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "hallee_heath",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "hiveandcoboise",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "kage_casey",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "lithiaboise",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "petersonbmwboise",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "plunjboise",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "serve_clothing",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "skylar.stroh",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "thejamesboise",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "tiy_products",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "verveboise",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "villasportfitness_idaho",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Boise State",
+    "schoolId": "boise-state",
+    "handle": "westernstates.cat",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "lsuthreads",
+    "sponsoredPosts": 14,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "athletesthread",
+    "sponsoredPosts": 4,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "myplayerathlete",
+    "sponsoredPosts": 4,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "nilelite.ladies",
+    "sponsoredPosts": 4,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "geauxchiro",
+    "sponsoredPosts": 3,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "myplayersports",
+    "sponsoredPosts": 3,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "postgame.official",
+    "sponsoredPosts": 3,
+    "highConfidenceFlags": [
+      "known_non_brand"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "known_non_brand"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "influxer",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "influxerlsu",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "lsu.nil.store",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "lsufootball",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "puma.usa",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "alixmarie.franklin",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "baller.bites",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "bayouwildtv",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "ciella_pickett",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "darkhorse.nyc",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "dillardscampuscollective",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "geeked.studio",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "his_huddle",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "holy.athletes",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "jolyn_europe",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "lah.stamps",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "lsubeachvb",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "lsusoccer",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "lsusoftball",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "lsuwbkb",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "myplayersoftball",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "on3recruits",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "known_non_brand",
+      "recruiting_or_media_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "known_non_brand",
+      "recruiting_or_media_page"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "pearl_valley",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "perceptioncollective",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "prepbaseball",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "rumur.rouille",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "thebrandlsu",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "themodestsportsshow",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "recruiting_or_media_page"
+    ],
+    "allFlags": [
+      "recruiting_or_media_page"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "thriveh.ts",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "trent.caraway",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "vine_spirit",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "voyager_brands",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "wearenilsu",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "LSU",
+    "schoolId": "lsu",
+    "handle": "yurview_louisiana",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Michigan State",
+    "schoolId": "michigan-state",
+    "handle": "msufcu",
+    "sponsoredPosts": 54,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Michigan State",
+    "schoolId": "michigan-state",
+    "handle": "postgame.official",
+    "sponsoredPosts": 14,
+    "highConfidenceFlags": [
+      "known_non_brand"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "known_non_brand"
+    ]
+  },
+  {
+    "school": "Michigan State",
+    "schoolId": "michigan-state",
+    "handle": "msuthread",
+    "sponsoredPosts": 12,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Michigan State",
+    "schoolId": "michigan-state",
+    "handle": "myplayersports",
+    "sponsoredPosts": 6,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Michigan State",
+    "schoolId": "michigan-state",
+    "handle": "msu.nil.store",
+    "sponsoredPosts": 4,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Michigan State",
+    "schoolId": "michigan-state",
+    "handle": "myplayerathlete",
+    "sponsoredPosts": 4,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Michigan State",
+    "schoolId": "michigan-state",
+    "handle": "msu_football",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "team_or_school_page",
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Michigan State",
+    "schoolId": "michigan-state",
+    "handle": "allthingsgympod",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "recruiting_or_media_page"
+    ],
+    "allFlags": [
+      "recruiting_or_media_page"
+    ]
+  },
+  {
+    "school": "Michigan State",
+    "schoolId": "michigan-state",
+    "handle": "alumnihallmsu",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Michigan State",
+    "schoolId": "michigan-state",
+    "handle": "athletesthread",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Michigan State",
+    "schoolId": "michigan-state",
+    "handle": "gat_sport",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Michigan State",
+    "schoolId": "michigan-state",
+    "handle": "josh.klug4",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Michigan State",
+    "schoolId": "michigan-state",
+    "handle": "nil.store___",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Michigan State",
+    "schoolId": "michigan-state",
+    "handle": "on3recruits",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "known_non_brand",
+      "recruiting_or_media_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "known_non_brand",
+      "recruiting_or_media_page"
+    ]
+  },
+  {
+    "school": "Michigan State",
+    "schoolId": "michigan-state",
+    "handle": "recruitgfx",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "recruiting_or_media_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "recruiting_or_media_page"
+    ]
+  },
+  {
+    "school": "Michigan State",
+    "schoolId": "michigan-state",
+    "handle": "riot.energy",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "NC State",
+    "schoolId": "nc-state",
+    "handle": "ncsu.threads",
+    "sponsoredPosts": 4,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible",
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "school_affiliated_non_brand_possible",
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "NC State",
+    "schoolId": "nc-state",
+    "handle": "influxer",
+    "sponsoredPosts": 3,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "NC State",
+    "schoolId": "nc-state",
+    "handle": "duke_energy",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "NC State",
+    "schoolId": "nc-state",
+    "handle": "athletesthread",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "NC State",
+    "schoolId": "nc-state",
+    "handle": "bp_zones",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "NC State",
+    "schoolId": "nc-state",
+    "handle": "gen_carync",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "NC State",
+    "schoolId": "nc-state",
+    "handle": "influxermerch",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "NC State",
+    "schoolId": "nc-state",
+    "handle": "myplayersports",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "NC State",
+    "schoolId": "nc-state",
+    "handle": "noracafe_nc",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "NC State",
+    "schoolId": "nc-state",
+    "handle": "postgame.official",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "known_non_brand"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "known_non_brand"
+    ]
+  },
+  {
+    "school": "Old Dominion",
+    "schoolId": "old-dominion",
+    "handle": "olddominionthreads",
+    "sponsoredPosts": 23,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Old Dominion",
+    "schoolId": "old-dominion",
+    "handle": "prideofodunil",
+    "sponsoredPosts": 5,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Old Dominion",
+    "schoolId": "old-dominion",
+    "handle": "odu_nilhub",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible",
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "school_affiliated_non_brand_possible",
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Old Dominion",
+    "schoolId": "old-dominion",
+    "handle": "odufootball",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "Old Dominion",
+    "schoolId": "old-dominion",
+    "handle": "thenilrealestate",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Old Dominion",
+    "schoolId": "old-dominion",
+    "handle": "influxermerch",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Old Dominion",
+    "schoolId": "old-dominion",
+    "handle": "odu_wbb",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "team_or_school_page",
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Old Dominion",
+    "schoolId": "old-dominion",
+    "handle": "theprideofodu",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "nittanylionthreads",
+    "sponsoredPosts": 15,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "myplayerathlete",
+    "sponsoredPosts": 8,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "myplayersports",
+    "sponsoredPosts": 4,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "beau.bartlett",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "hedi_gear",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "nil.store.pennstate",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "penn_steaks",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "pennstatefball",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "roarpluspsu",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "statemediapsu",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "recruiting_or_media_page",
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "recruiting_or_media_page",
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "wuerffel_trophy",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "xx_xyathletics",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "addie.lyon",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "adidas.turkiye",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "aof_football",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "team_or_school_page",
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "auraskypool.dubai",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "bigtennetwork",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "known_non_brand"
+    ],
+    "mediumConfidenceFlags": [
+      "recruiting_or_media_page"
+    ],
+    "allFlags": [
+      "known_non_brand",
+      "recruiting_or_media_page"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "carozzi_meencanta",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "carter.schade2",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "dawson_bundy",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "delicato.se",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "esbjerg_fb",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "evo_gymnastics",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "fanatic_wrestling",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "k.artis58",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "keaton.peters9",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "levi_haines77",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "matthew.beachley",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "morgan_marshall1434",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "nb.bespoke",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "octobersky.pec",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "on3recruits",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "known_non_brand",
+      "recruiting_or_media_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "known_non_brand",
+      "recruiting_or_media_page"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "pennstatebase",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "pennstatemlax",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "pennstatemsoc",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "pennstatesb",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "pennstatetfxc",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "pennstatewgolf",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "pennstatewhky",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "pennstatewlax",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "pennstatewrest",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "thecovernetwork",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "recruiting_or_media_page"
+    ],
+    "allFlags": [
+      "recruiting_or_media_page"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "underdog_brand",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "usafspecwarrecruiting",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "recruiting_or_media_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "recruiting_or_media_page"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "whatsup_pod",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "recruiting_or_media_page",
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "recruiting_or_media_page",
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Penn State",
+    "schoolId": "penn-state",
+    "handle": "wvubaseball",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "longhornthreads",
+    "sponsoredPosts": 28,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "myplayerathlete",
+    "sponsoredPosts": 11,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "texasonefan",
+    "sponsoredPosts": 9,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "texaslonghorns",
+    "sponsoredPosts": 7,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "texasonefund",
+    "sponsoredPosts": 6,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "longhornnetwork",
+    "sponsoredPosts": 5,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "recruiting_or_media_page",
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "recruiting_or_media_page",
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "lafavre.us",
+    "sponsoredPosts": 4,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "neighborhoodlonghorns",
+    "sponsoredPosts": 3,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "athletesthread",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "axeescape_atx",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "czech_beachvolleyball",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "longhornfoundation",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "on3recruits",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "known_non_brand",
+      "recruiting_or_media_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "known_non_brand",
+      "recruiting_or_media_page"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "ppirecruit",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "recruiting_or_media_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "recruiting_or_media_page"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "rally_house",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "texasbeachvb",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "texasfootball",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "thenilrealestate",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "yoga_democracy",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "3rdandlonghorn",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "463network",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "recruiting_or_media_page"
+    ],
+    "allFlags": [
+      "recruiting_or_media_page"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "american_tall",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "antonestexas",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "be4evertexas",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "bealonghorn",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "brucebolt.us",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "byd.jpauto",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "deseretnews",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "recruiting_or_media_page"
+    ],
+    "allFlags": [
+      "recruiting_or_media_page"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "eastonbaseball",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "empowerkidz.dropin",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "hargroveroofing_austin",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "kinetickids.austin",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "magicmemories_brautmoden",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "manana.surf",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "myplayersports",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "nilelite.ladies",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "ogxsoftball",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "osawese_a",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "rockstar.deuce",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "rollthequadnil",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "texasbaseball",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "texasmgolf",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "texasmtn",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "texassoftball",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "texasteamshop",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "texaswsd",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "thegoat_hill",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "usabaseball",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "victorymedia.oficial",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "recruiting_or_media_page",
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "recruiting_or_media_page",
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "ymca_northsuburban",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Texas",
+    "schoolId": "texas",
+    "handle": "yonex_tennis",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "UNC",
+    "schoolId": "unc",
+    "handle": "uncthreads",
+    "sponsoredPosts": 19,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "UNC",
+    "schoolId": "unc",
+    "handle": "uncnilstore",
+    "sponsoredPosts": 10,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "UNC",
+    "schoolId": "unc",
+    "handle": "baseball_savings",
+    "sponsoredPosts": 3,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "UNC",
+    "schoolId": "unc",
+    "handle": "carolinabaseball",
+    "sponsoredPosts": 3,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "UNC",
+    "schoolId": "unc",
+    "handle": "allthingsgympod",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "recruiting_or_media_page"
+    ],
+    "allFlags": [
+      "recruiting_or_media_page"
+    ]
+  },
+  {
+    "school": "UNC",
+    "schoolId": "unc",
+    "handle": "goglow_chapelhill",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "UNC",
+    "schoolId": "unc",
+    "handle": "myplayersports",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "UNC",
+    "schoolId": "unc",
+    "handle": "nothing.finer",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "UNC",
+    "schoolId": "unc",
+    "handle": "pcrf_kids",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "UNC",
+    "schoolId": "unc",
+    "handle": "uncfootball",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "UNC",
+    "schoolId": "unc",
+    "handle": "athletesthread",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "UNC",
+    "schoolId": "unc",
+    "handle": "ava.swain",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "UNC",
+    "schoolId": "unc",
+    "handle": "bmw.dallas",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "UNC",
+    "schoolId": "unc",
+    "handle": "cofcthreads",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "UNC",
+    "schoolId": "unc",
+    "handle": "craig.thecreative",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "UNC",
+    "schoolId": "unc",
+    "handle": "postgame.official",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "known_non_brand"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "known_non_brand"
+    ]
+  },
+  {
+    "school": "UNC",
+    "schoolId": "unc",
+    "handle": "slumz.us",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "UNC",
+    "schoolId": "unc",
+    "handle": "thetwinstakepodcast",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "recruiting_or_media_page"
+    ],
+    "allFlags": [
+      "recruiting_or_media_page"
+    ]
+  },
+  {
+    "school": "UNC",
+    "schoolId": "unc",
+    "handle": "tns_apparel",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "UNC",
+    "schoolId": "unc",
+    "handle": "unc_fbnutrition",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible",
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible",
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "UNC",
+    "schoolId": "unc",
+    "handle": "uncstudentstores",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "UNC",
+    "schoolId": "unc",
+    "handle": "uncvolleyball",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "houseofvictorynil",
+    "sponsoredPosts": 14,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "uscthreads",
+    "sponsoredPosts": 12,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "grupa_pge",
+    "sponsoredPosts": 9,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "influxerusc",
+    "sponsoredPosts": 4,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "myplayersports",
+    "sponsoredPosts": 3,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "travis_trackstar",
+    "sponsoredPosts": 3,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "ampm_tmgs",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "athletesthread",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "immersive.gamebox",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "uscmensvolley",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "athena_newportbeach",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "beach.bakyard",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "bernardo.herzer",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "drahouse.studio",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "dresserie_brand",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "emmasleep.au",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "grip.foundation",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "joyce_dtla",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "legendary.aura",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "murine_australia",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "myplayerathlete",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "on3recruits",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "known_non_brand",
+      "recruiting_or_media_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "known_non_brand",
+      "recruiting_or_media_page"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "onlyelitethreads",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "rna.sports",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "royaltiz_off",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "shein_us",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "tdsynnex_na",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "thatsamore_miami",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "uanextvolleyball",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "ucberkeleythreads",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "udigg.apparel",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "united.rentals",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "usc_athletics",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "team_or_school_page",
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "usc.nil.store",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "uscannenberg",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "uscshoahfoundation",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "uscwbb",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "USC",
+    "schoolId": "usc",
+    "handle": "velocity_ls",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "influxeruva",
+    "sponsoredPosts": 12,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "uvathreads",
+    "sponsoredPosts": 11,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "cornermediaco",
+    "sponsoredPosts": 9,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "recruiting_or_media_page"
+    ],
+    "allFlags": [
+      "recruiting_or_media_page"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "influxer",
+    "sponsoredPosts": 7,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "myplayerathlete",
+    "sponsoredPosts": 3,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "hemofarm_bih",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "onlyelitethreads",
+    "sponsoredPosts": 2,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "accnetwork",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "known_non_brand"
+    ],
+    "mediumConfidenceFlags": [
+      "recruiting_or_media_page"
+    ],
+    "allFlags": [
+      "known_non_brand",
+      "recruiting_or_media_page"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "aisle.five",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "brendan.millon",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "influxermerch",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "isedmedia",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "recruiting_or_media_page"
+    ],
+    "allFlags": [
+      "recruiting_or_media_page"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "nextgen.scholarships",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "nilelite.ladies",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "nil_collective_or_store",
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "oneathlete_app",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "prep.lacrosse",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "rbcwealth_us",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "risingspearnil",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "ritualhockey_usa",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "sophiegallagher.pt",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "src_girls",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "the_rudis",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "likely_personal_account"
+    ],
+    "allFlags": [
+      "likely_personal_account"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "the15club_nil",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "tribenilsports",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "nil_collective_or_store"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "nil_collective_or_store"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "uncutatuva",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "usafspecwarrecruiting",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "recruiting_or_media_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "recruiting_or_media_page"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "usfwbb",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "uvawomenshoops",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [],
+    "mediumConfidenceFlags": [
+      "school_affiliated_non_brand_possible"
+    ],
+    "allFlags": [
+      "school_affiliated_non_brand_possible"
+    ]
+  },
+  {
+    "school": "Virginia",
+    "schoolId": "virginia",
+    "handle": "wickbaseball",
+    "sponsoredPosts": 1,
+    "highConfidenceFlags": [
+      "team_or_school_page"
+    ],
+    "mediumConfidenceFlags": [],
+    "allFlags": [
+      "team_or_school_page"
+    ]
+  }
+]

@@ -65,6 +65,25 @@ interface IPComparison {
   avgLift: number; // percentage points
 }
 
+interface PrecomputedIPImpact {
+  overall?: {
+    totalContents?: number;
+    totalLikes?: number;
+    totalComments?: number;
+    engagementRate?: number;
+    emv?: number;
+  };
+  counts?: {
+    hasOrganizationInCaption?: number;
+    isOrganizationCollaboration?: number;
+    hasOrganizationLogo?: number;
+    withIp?: number;
+  };
+  orgInCaption?: { yes: IPBucket; no: IPBucket; avgLift: number };
+  collaboration?: { yes: IPBucket; no: IPBucket; avgLift: number };
+  logo?: { yes: IPBucket; no: IPBucket; avgLift: number };
+}
+
 interface FallbackRosterRow {
   _id?: string;
   firstName?: string;
@@ -143,6 +162,7 @@ const fmtDate = (v?: string) => {
 };
 const fmtSport = (s?: string) => {
   if (!s) return 'N/A';
+  if (s === 'GENERAL') return 'General';
   // Normalize casing from raw values like "MENS_BASKETBALL" or "Men'S Basketball".
   return s
     .replace(/_/g, ' ')
@@ -152,6 +172,11 @@ const fmtSport = (s?: string) => {
     .replace(/\b\w/g, c => c.toUpperCase())
     .replace(/Men'S/g, "Men's")
     .replace(/Women'S/g, "Women's");
+};
+const fmtTeamAccountLabel = (team?: Pick<TeamPageStat, 'sport' | 'handle'> | null) => {
+  if (!team) return 'N/A';
+  if (team.sport === 'GENERAL' && team.handle) return team.handle;
+  return fmtSport(team.sport);
 };
 const emv = (likes: number, comments: number) => likes * 0.5 + comments * 1.5;
 
@@ -181,6 +206,26 @@ const ROSTER_NAME_MATCHERS: Record<string, string[]> = {
   'mississippi-state': ['mississippi state university', 'mississippi state', 'mississippi'],
   minnesota: ['university of minnesota', 'minnesota'],
   'washington-state': ['washington state university', 'washington state'],
+  tennessee: ['university of tennessee', 'tennessee'],
+  washington: ['university of washington', 'washington'],
+  'k-state': ['kansas state university', 'kansas state', 'k-state'],
+  utah: ['university of utah', 'utah'],
+  'iowa-state': ['iowa state university', 'iowa state'],
+  colorado: ['university of colorado', 'colorado'],
+  'ole-miss': ['university of mississippi', 'ole miss'],
+  byu: ['brigham young university', 'byu'],
+  indiana: ['indiana university', 'indiana'],
+  smu: ['southern methodist university', 'smu'],
+  oregon: ['university of oregon', 'oregon'],
+  'georgia-tech': ['georgia institute of technology', 'georgia tech'],
+  vanderbilt: ['vanderbilt university', 'vanderbilt'],
+  tcu: ['texas christian university', 'tcu'],
+  kansas: ['university of kansas', 'kansas jayhawks'],
+  'texas-tech': ['texas tech university', 'texas tech'],
+  'wake-forest': ['wake forest university', 'wake forest'],
+  'cal': ['university of california, berkeley', 'university of california berkeley', 'cal', 'cal bears', 'uc berkeley'],
+  'northwestern': ['northwestern university', 'northwestern'],
+  'stanford': ['stanford university', 'stanford'],
 };
 
 const SCHOOL_THUMBNAILS: Record<string, string> = {
@@ -205,6 +250,8 @@ const SCHOOL_THUMBNAILS: Record<string, string> = {
   virginia: '/Virginia_thumnail.png',
   'boise-state': '/Boise_thumbnail.png',
   'old-dominion': '/OldDominion_thumnail.png',
+  washington: '/was_football.png',
+  'k-state': '/kstatefootball.png',
 };
 
 const TEAM_HANDLE_OVERRIDES: Record<string, Record<string, string>> = {
@@ -228,6 +275,58 @@ const TEAM_HANDLE_OVERRIDES: Record<string, Record<string, string>> = {
     VOLLEYBALL: 'hailstatevb',
     GENERAL: 'hailstate',
   },
+  washington: {
+    FOOTBALL: 'uw_football',
+    SOFTBALL: 'uwsoftball',
+    WOMENS_VOLLEYBALL: 'uwvolleyball',
+    WOMENS_SOCCER: 'uw_wsoccer',
+    BASEBALL: 'uw_baseball',
+    TRACK_AND_FIELD: 'uwtrack',
+  },
+};
+
+const TEAM_RECENT_POST_CAPS: Record<string, Record<string, number>> = {
+  washington: {
+    FOOTBALL: 12,
+    WOMENS_VOLLEYBALL: 12,
+    BASEBALL: 12,
+  },
+};
+
+const SCHOOL_ATHLETE_EXCLUSIONS: Record<string, string[]> = {
+  washington: [
+    'Maximus McCree',
+    'Ethan Moczulski',
+    'Dyson McCutcheon',
+    'Caleb Smith',
+    'Paki Finau',
+    'Marcus Harris',
+    'Zachary Henning',
+    'Adam Mohammed',
+    'Bryce Butler',
+  ],
+};
+
+const SCHOOL_FORCE_INCLUDE_ROSTER_ATHLETES: Record<string, string[]> = {
+  washington: [
+    'Trey Cooley',
+    'Armon Parker',
+    'Jayvon Parker',
+    'Bodpegn Miller',
+    'Elijah Brown',
+    'Dominic Macon',
+    'Christian Moss',
+    'Hunter McKee',
+    'Jayden Limar',
+    'Logan George',
+    'Emmanuel Karnley',
+    'Leroy Bryant',
+    'Tyler Robles',
+    'Darin Conley',
+    'DeSean Watts',
+    'Hunter Green',
+    'Kolt Dieterich',
+  ],
 };
 
 const GLOBAL_BRAND_EXCLUSIONS = new Set(['bleacherreport', 'br_hoops', 'brhoops']);
@@ -242,6 +341,13 @@ const normalizeName = (v?: string) =>
     .replace(/\s+/g, ' ');
 const normalizeHandle = (v?: string) => (v || '').trim().toLowerCase().replace(/^@/, '');
 const canonicalHandle = (v?: string) => normalizeHandle(v).replace(/[^a-z0-9]/g, '');
+const isRosterOnlyAthletePending = (schoolId: string, athlete: DerivedAthlete) => {
+  const forcedNames = SCHOOL_FORCE_INCLUDE_ROSTER_ATHLETES[schoolId] || [];
+  const normalizedAthleteName = normalizeName(athlete.name);
+  const isForcedRosterAthlete = forcedNames.some((name) => normalizeName(name) === normalizedAthleteName);
+  if (!isForcedRosterAthlete) return false;
+  return athlete.totalPosts === 0;
+};
 
 const getRosterFollowers = (row?: FallbackRosterRow | null) =>
   Number(
@@ -436,6 +542,7 @@ function derivePosts(
   raw: RawPost[],
   brandExclusions: Set<string>,
   schoolHandleMatchers: string[],
+  athleteExclusions: Set<string>,
   sponsoredPostExclusions: Set<string>,
   sponsoredPostInclusions: Set<string>
 ) {
@@ -443,6 +550,10 @@ function derivePosts(
   const sponsored: RawPost[] = [];
 
   for (const p of raw) {
+    const athleteName = normalizeName(p.athlete?.name || '');
+    if (athleteName && athleteExclusions.has(athleteName)) {
+      continue;
+    }
     const aid = p.athlete?._id || 'unknown';
     if (!athleteMap.has(aid)) {
       athleteMap.set(aid, {
@@ -561,6 +672,23 @@ function deriveIPComparisons(raw: RawPost[]): IPComparison[] {
   });
 }
 
+function buildIPComparisonsFromPrecomputed(ipImpact: PrecomputedIPImpact | null): IPComparison[] {
+  if (!ipImpact) return [];
+  const signals = [
+    { label: 'Collaboration', data: ipImpact.collaboration },
+    { label: 'Logo', data: ipImpact.logo },
+    { label: 'Caption', data: ipImpact.orgInCaption },
+  ];
+  return signals
+    .filter((signal): signal is { label: string; data: NonNullable<typeof signal.data> } => Boolean(signal.data))
+    .map((signal) => ({
+      label: signal.label,
+      yes: signal.data.yes,
+      no: signal.data.no,
+      avgLift: signal.data.avgLift,
+    }));
+}
+
 // ─── Glass Panel ─────────────────────────────────────────────
 function GlassPanel({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
@@ -584,6 +712,7 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
   const [activeTab, setActiveTab] = useState<TabId>('overview');
   const [loading, setLoading] = useState(true);
   const [rawPosts, setRawPosts] = useState<RawPost[]>([]);
+  const [precomputedIpImpact, setPrecomputedIpImpact] = useState<PrecomputedIPImpact | null>(null);
   const [rosterData, setRosterData] = useState<any>(null);
   const [fallbackRosterRows, setFallbackRosterRows] = useState<FallbackRosterRow[]>([]);
   const [teamRosterRows, setTeamRosterRows] = useState<TeamRosterRow[]>([]);
@@ -599,6 +728,12 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
       .then((data: RawPost[]) => Array.isArray(data) ? data : [])
       .catch(() => []);
 
+    const ipImpactPromise = config.ipImpactDataFile
+      ? fetch(config.ipImpactDataFile)
+          .then(r => r.ok ? r.json() : null)
+          .catch(() => null)
+      : Promise.resolve(null);
+
     // Try to fetch roster file (optional)
     const rosterFile = config.rosterDataFile || `/data/${config.id}-roster.json`;
     const rosterPromise = fetch(rosterFile)
@@ -606,24 +741,33 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
       .catch(() => null);
 
     // Fallback roster includes follower + marketability by athlete name.
-    // Try smaller school-bundle file first (more deployment-friendly), then full NCAA.
+    // Merge all available roster sources to maximise athlete coverage.
     const fallbackRosterPromise = (async () => {
       const fallbackPaths = [
         '/data/Ala_Ark_Okl_Mic_Wis_Roster.json',
         '/data/ncaa_roster_feb_12.json',
         '/data/ncaa_roster.json',
+        '/data/Big10roster.json',
       ];
-      for (const path of fallbackPaths) {
+      const merged: FallbackRosterRow[] = [];
+      const seenIds = new Set<string>();
+      await Promise.all(fallbackPaths.map(async (p) => {
         try {
-          const r = await fetch(path);
-          if (!r.ok) continue;
+          const r = await fetch(p);
+          if (!r.ok) return;
           const rows = await r.json();
-          if (Array.isArray(rows) && rows.length > 0) return rows as FallbackRosterRow[];
+          if (!Array.isArray(rows)) return;
+          for (const row of rows as FallbackRosterRow[]) {
+            const id = String((row as any)?._id?.$oid || (row as any)?._id || '');
+            if (id && seenIds.has(id)) continue;
+            if (id) seenIds.add(id);
+            merged.push(row);
+          }
         } catch {
-          // try next path
+          // skip unavailable file
         }
-      }
-      return [] as FallbackRosterRow[];
+      }));
+      return merged;
     })();
 
     const teamRosterFile = config.teamDataFile || '/data/roster_teams.json';
@@ -632,25 +776,29 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
       .then((rows: TeamRosterRow[]) => Array.isArray(rows) ? rows : [])
       .catch(() => []);
 
-    Promise.all([postsPromise, rosterPromise, fallbackRosterPromise, teamRosterPromise])
-      .then(([posts, roster, fallbackRows, teamRows]) => {
+    Promise.all([postsPromise, ipImpactPromise, rosterPromise, fallbackRosterPromise, teamRosterPromise])
+      .then(([posts, ipImpact, roster, fallbackRows, teamRows]) => {
         setRawPosts(posts);
+        setPrecomputedIpImpact(ipImpact);
         setRosterData(roster);
         setFallbackRosterRows(fallbackRows);
         setTeamRosterRows(teamRows);
       })
       .finally(() => setLoading(false));
-  }, [config.dataFile, config.id, config.rosterDataFile, config.teamDataFile]);
+  }, [config.dataFile, config.id, config.ipImpactDataFile, config.rosterDataFile, config.teamDataFile]);
 
   const { athletes, sponsored } = useMemo(() => {
     const exclusions = new Set([
       ...GLOBAL_BRAND_EXCLUSIONS,
       ...(config.brandExclusions || []).map(canonicalHandle).filter(Boolean),
     ]);
+    const athleteExclusions = new Set(
+      (SCHOOL_ATHLETE_EXCLUSIONS[config.id] || []).map((name) => normalizeName(name))
+    );
     const sponsoredPostExclusions = new Set((config.sponsoredPostExclusions || []).map(String));
     const sponsoredPostInclusions = new Set((config.sponsoredPostInclusions || []).map(String));
     const schoolHandleMatchers = [config.shortName, config.name, ...(ROSTER_NAME_MATCHERS[config.id] || [])];
-    const derived = derivePosts(rawPosts, exclusions, schoolHandleMatchers, sponsoredPostExclusions, sponsoredPostInclusions);
+    const derived = derivePosts(rawPosts, exclusions, schoolHandleMatchers, athleteExclusions, sponsoredPostExclusions, sponsoredPostInclusions);
     // Merge follower + marketability data from roster if available.
     // Supports both shapes:
     // 1) { athletes: [...] } and 2) [...] (raw roster array)
@@ -714,6 +862,31 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
           }
         }
       });
+
+      const forcedRosterAthletes = new Set(
+        (SCHOOL_FORCE_INCLUDE_ROSTER_ATHLETES[config.id] || []).map((name) => normalizeName(name))
+      );
+      const derivedAthleteNames = new Set(derived.athletes.map((athlete) => normalizeName(athlete.name)));
+      rosterAthletes.forEach((athlete: any) => {
+        const normalizedRosterName = normalizeName(rosterName(athlete));
+        if (!normalizedRosterName || !forcedRosterAthletes.has(normalizedRosterName) || derivedAthleteNames.has(normalizedRosterName)) {
+          return;
+        }
+        derived.athletes.push({
+          id: String(athlete?._id?.$oid || athlete?._id || normalizedRosterName),
+          name: rosterName(athlete),
+          sport: athlete?.sport || 'Unknown',
+          image: athlete?.profilePicture || athlete?.image,
+          position: athlete?.position,
+          totalPosts: 0,
+          totalLikes: 0,
+          totalComments: 0,
+          followers: rosterFollowers(athlete),
+          marketabilityScore: rosterMarketability(athlete),
+          avgEngagementRate: 0,
+        });
+        derivedAthleteNames.add(normalizedRosterName);
+      });
     }
 
     // Fallback: map followers from global roster by school + athlete name.
@@ -753,6 +926,7 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
       });
     }
 
+    derived.athletes.sort((a, b) => b.totalLikes - a.totalLikes || b.followers - a.followers);
     return derived;
   }, [rawPosts, rosterData, fallbackRosterRows, config.id, config.name, config.shortName, config.brandExclusions, config.sponsoredPostExclusions, config.sponsoredPostInclusions]);
   const sports = useMemo(() => deriveSports(athletes), [athletes]);
@@ -824,11 +998,23 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
     return [...map.entries()]
       .filter(([sport]) => !excludedTeamSports.has(compactToken(fmtSport(sport))))
       .map(([sport, v]) => {
-      const avgEngagementRate = v.erDenominator > 0 ? v.erNumerator / v.erDenominator : 0;
+      const recentPostCap = TEAM_RECENT_POST_CAPS[config.id]?.[sport];
+      const shouldCapPosts =
+        typeof recentPostCap === 'number' &&
+        recentPostCap > 0 &&
+        v.totalPosts > recentPostCap;
+      const scaledPosts = shouldCapPosts ? recentPostCap : v.totalPosts;
+      const scaleFactor = shouldCapPosts && v.totalPosts > 0 ? recentPostCap / v.totalPosts : 1;
+      const scaledLikes = Math.round(v.totalLikes * scaleFactor);
+      const scaledComments = Math.round(v.totalComments * scaleFactor);
+      const avgEngagementRate =
+        v.followers > 0 && scaledPosts > 0
+          ? (scaledLikes + scaledComments) / (v.followers * scaledPosts)
+          : 0;
       if (avgEngagementRate > 0.15 && v.followers < 50_000) {
         // Testing guardrail: flag potentially inflated ER for low-follower team accounts.
         console.warn(
-          `[TeamsTab ER anomaly] ${config.shortName} ${fmtSport(sport)}: ER=${(avgEngagementRate * 100).toFixed(2)}%, followers=${v.followers}, likes=${v.totalLikes}, comments=${v.totalComments}, posts=${v.totalPosts}`
+          `[TeamsTab ER anomaly] ${config.shortName} ${fmtSport(sport)}: ER=${(avgEngagementRate * 100).toFixed(2)}%, followers=${v.followers}, likes=${scaledLikes}, comments=${scaledComments}, posts=${scaledPosts}`
         );
       }
       return {
@@ -836,14 +1022,17 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
         handle: normalizeHandle(v.handle) ? `@${normalizeHandle(v.handle)}` : '',
         accountCount: v.accountCount,
         followers: v.followers,
-        totalPosts: v.totalPosts,
-        totalLikes: v.totalLikes,
-        totalComments: v.totalComments,
+        totalPosts: scaledPosts,
+        totalLikes: scaledLikes,
+        totalComments: scaledComments,
         avgEngagementRate,
       };
     });
   }, [teamRosterRows, config.id, config.shortName, config.name, config.teamSportExclusions]);
-  const ipComparisons = useMemo(() => deriveIPComparisons(rawPosts), [rawPosts]);
+  const ipComparisons = useMemo(() => {
+    const precomputedComparisons = buildIPComparisonsFromPrecomputed(precomputedIpImpact);
+    return precomputedComparisons.length ? precomputedComparisons : deriveIPComparisons(rawPosts);
+  }, [precomputedIpImpact, rawPosts]);
 
   const totalLikes = useMemo(() => rawPosts.reduce((s, p) => s + (p.metrics?.likes || 0), 0), [rawPosts]);
   const totalComments = useMemo(() => rawPosts.reduce((s, p) => s + (p.metrics?.comments || 0), 0), [rawPosts]);
@@ -938,6 +1127,7 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
               primaryColor={primaryColor}
               primaryDeepColor={config.colors.primaryDeep}
               shortName={config.shortName}
+              schoolId={config.id}
               dateRange={dateRange}
               onSelectAthlete={setSelectedAthlete}
             />
@@ -993,7 +1183,7 @@ export function SchoolAthleteReport({ config, onBack }: SchoolAthleteReportProps
         title={selectedAthlete?.name}
         side="right"
       >
-        {selectedAthlete && <AthleteDrawer athlete={selectedAthlete} />}
+        {selectedAthlete && <AthleteDrawer athlete={selectedAthlete} schoolId={config.id} />}
       </DrawerPanel>
     </div>
   );
@@ -1125,7 +1315,9 @@ function OverviewTab({ shortName, schoolId, schoolName, conference, primaryColor
                 <p className="text-xs uppercase tracking-[0.2em] font-semibold" style={{ color: primaryColor }}>AI Insight</p>
               </div>
               <p className="text-sm text-[#2E3E55] mt-1 font-medium">
-                {fmtSport(topSportByFollowers?.sport)} is the dominant content engine by volume, while {fmtSport(topSportByEngagement?.sport)} generates the strongest engagement efficiency — signaling a program with both scale and depth.
+                {topSportByFollowers?.sport === topSportByEngagement?.sport
+                  ? `${fmtSport(topSportByFollowers?.sport)} leads the program in both content volume and engagement efficiency — a dominant force driving scale and depth across the athletic department.`
+                  : `${fmtSport(topSportByFollowers?.sport)} is the dominant content engine by volume, while ${fmtSport(topSportByEngagement?.sport)} generates the strongest engagement efficiency — signaling a program with both scale and depth.`}
               </p>
             </div>
           </div>
@@ -1169,10 +1361,10 @@ function OverviewTab({ shortName, schoolId, schoolName, conference, primaryColor
               <p className="text-xs uppercase tracking-[0.2em] text-[#4B5B73]">Team Accounts</p>
             </div>
             <p className="text-lg font-bold mt-2 text-[#0F1D2E]">
-              {fmtSport(topTeamSportByEngagement?.sport)} leads team accounts in ER at {fmtPct((topTeamSportByEngagement?.avgEngagementRate || 0) * 100)}
+              {fmtTeamAccountLabel(topTeamSportByEngagement)} leads team accounts in ER at {fmtPct((topTeamSportByEngagement?.avgEngagementRate || 0) * 100)}
             </p>
             <p className="text-sm text-[#5B6B82] mt-2">
-              Among {shortName} official team pages, {fmtSport(topTeamSportByLikes?.sport)} drives the most likes while {fmtSport(topTeamSportByEngagement?.sport)} leads in engagement rate.
+              Among {shortName} official team pages, {fmtTeamAccountLabel(topTeamSportByLikes)} drives the most likes while {fmtTeamAccountLabel(topTeamSportByEngagement)} leads in engagement rate.
             </p>
           </div>
 
@@ -1325,11 +1517,12 @@ function OverviewTab({ shortName, schoolId, schoolName, conference, primaryColor
 }
 
 // ─── Athletes Tab ────────────────────────────────────────────
-function AthletesTab({ athletes, primaryColor, primaryDeepColor, shortName, dateRange, onSelectAthlete }: {
+function AthletesTab({ athletes, primaryColor, primaryDeepColor, shortName, schoolId, dateRange, onSelectAthlete }: {
   athletes: DerivedAthlete[];
   primaryColor: string;
   primaryDeepColor: string;
   shortName: string;
+  schoolId: string;
   dateRange: string | null;
   onSelectAthlete: (a: DerivedAthlete) => void;
 }) {
@@ -1620,16 +1813,17 @@ function AthletesTab({ athletes, primaryColor, primaryDeepColor, shortName, date
                     : 0;
                   return visibleRows.map(a => {
                   const marketabilityScore = marketabilityBadgeByAthleteId.get(a.id) || 0;
+                  const isPendingData = isRosterOnlyAthletePending(schoolId, a);
                   return (
                   <tr key={a.id} onClick={() => onSelectAthlete(a)}
                     className="border-t border-[#E1E7F0] hover:bg-[#F3F6FB] cursor-pointer">
                     <td className="px-4 py-3 text-sm font-semibold text-[#0F1D2E]">{a.name}</td>
                     <td className="px-4 py-3 text-sm text-[#5B6B82]">{fmtSport(a.sport)}</td>
-                    <td className="px-4 py-3 text-sm text-right">{fmtN(a.totalPosts)}</td>
-                    <td className="px-4 py-3 text-sm text-right">{fmtN(a.followers)}</td>
-                    <td className="px-4 py-3 text-sm text-right">{fmtN(a.totalLikes)}</td>
-                    <td className="px-4 py-3 text-sm text-right">{fmtN(a.totalComments)}</td>
-                    <td className="px-4 py-3 text-sm text-right">{fmtPct(a.avgEngagementRate * 100)}</td>
+                    <td className="px-4 py-3 text-sm text-right">{isPendingData ? 'Pending' : fmtN(a.totalPosts)}</td>
+                    <td className="px-4 py-3 text-sm text-right">{isPendingData ? 'Pending' : fmtN(a.followers)}</td>
+                    <td className="px-4 py-3 text-sm text-right">{isPendingData ? 'Pending' : fmtN(a.totalLikes)}</td>
+                    <td className="px-4 py-3 text-sm text-right">{isPendingData ? 'Pending' : fmtN(a.totalComments)}</td>
+                    <td className="px-4 py-3 text-sm text-right">{isPendingData ? 'Pending' : fmtPct(a.avgEngagementRate * 100)}</td>
                     <td
                       className="px-4 py-3 text-sm text-right font-semibold"
                       style={marketabilityScore === topVisibleScore && topVisibleScore > 0 ? { color: primaryColor } : { color: '#0F1D2E' }}
@@ -1655,6 +1849,7 @@ function AthletesTab({ athletes, primaryColor, primaryDeepColor, shortName, date
               const marketabilityRank = marketabilityRankByAthleteId.get(a.id) || 0;
               const score = marketabilityBadgeByAthleteId.get(a.id) || 0;
               const avgComments = Math.round(a.totalComments / Math.max(a.totalPosts, 1));
+              const isPendingData = isRosterOnlyAthletePending(schoolId, a);
               const firstName = (a.name || '').trim().split(/\s+/)[0] || a.name;
               const categoryLeads: string[] = [];
               if (followersRank === 1) categoryLeads.push('followers');
@@ -1674,6 +1869,8 @@ function AthletesTab({ athletes, primaryColor, primaryDeepColor, shortName, date
               } else if (marketabilityRank <= topDecileThreshold && athletes.length > 0) {
                 const percentile = Math.max(1, Math.round((marketabilityRank / athletes.length) * 100));
                 insight = `Top ${percentile}% marketability score among all ${shortName} athletes.`;
+              } else if (isPendingData) {
+                insight = `${firstName} is a newly added transfer; Washington performance data is still pending.`;
               } else {
                 const fallbackRankLabel = likesRank > 10 ? '#10+' : `#${Math.max(1, likesRank)}`;
                 insight = `${firstName} ranks ${fallbackRankLabel} by total likes among ${fmtN(athletes.length)} tracked athletes.`;
@@ -1700,7 +1897,9 @@ function AthletesTab({ athletes, primaryColor, primaryDeepColor, shortName, date
                         style={{ objectPosition: 'top center' }}
                       />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center text-xs text-[#9AA7BC]">No image</div>
+                      <div className="w-full h-full flex items-center justify-center text-xs text-[#9AA7BC]">
+                        {isPendingData ? 'Data pending' : 'No image'}
+                      </div>
                     )}
                     <span
                       className="absolute top-3 right-3 px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-[0.12em] text-white"
@@ -1736,15 +1935,15 @@ function AthletesTab({ athletes, primaryColor, primaryDeepColor, shortName, date
                     <div className="mt-3 space-y-2">
                       <div className="flex items-center justify-between rounded-[4px] border border-[#333333] bg-[#111111] px-[10px] py-[6px]">
                         <span className="text-[10px] uppercase tracking-[0.2em] text-[#9CA3AF]">Followers</span>
-                        <span className="text-xl font-black text-white">{fmtN(a.followers)}</span>
+                        <span className="text-xl font-black text-white">{isPendingData ? 'Pending' : fmtN(a.followers)}</span>
                       </div>
                       <div className="flex items-center justify-between rounded-[4px] border border-[#333333] bg-[#111111] px-[10px] py-[6px]">
                         <span className="text-[10px] uppercase tracking-[0.2em] text-[#9CA3AF]">Avg Engagement Rate</span>
-                        <span className="text-xl font-black text-white">{fmtPct(a.avgEngagementRate * 100)}</span>
+                        <span className="text-xl font-black text-white">{isPendingData ? 'Pending' : fmtPct(a.avgEngagementRate * 100)}</span>
                       </div>
                       <div className="flex items-center justify-between rounded-[4px] border border-[#333333] bg-[#111111] px-[10px] py-[6px]">
                         <span className="text-[10px] uppercase tracking-[0.2em] text-[#9CA3AF]">Avg Comments</span>
-                        <span className="text-xl font-black text-white">{fmtN(avgComments)}</span>
+                        <span className="text-xl font-black text-white">{isPendingData ? 'Pending' : fmtN(avgComments)}</span>
                       </div>
                     </div>
 
@@ -3370,9 +3569,10 @@ function IPTab({
 }
 
 // ─── Athlete Drawer ──────────────────────────────────────────
-function AthleteDrawer({ athlete }: { athlete: DerivedAthlete }) {
+function AthleteDrawer({ athlete, schoolId }: { athlete: DerivedAthlete; schoolId: string }) {
   const likesPerPost = athlete.totalPosts ? athlete.totalLikes / athlete.totalPosts : 0;
   const commentsPerPost = athlete.totalPosts ? athlete.totalComments / athlete.totalPosts : 0;
+  const isPendingData = isRosterOnlyAthletePending(schoolId, athlete);
 
   return (
     <div className="space-y-4 text-sm text-[#1E2A3B]">
@@ -3388,12 +3588,18 @@ function AthleteDrawer({ athlete }: { athlete: DerivedAthlete }) {
         </div>
       </div>
       <div className="grid grid-cols-2 gap-3">
-        <div>Likes: {fmtN(athlete.totalLikes)}</div>
-        <div>Comments: {fmtN(athlete.totalComments)}</div>
-        <div>Avg ER: {fmtPct(athlete.avgEngagementRate * 100)}</div>
-        <div>Posts: {fmtN(athlete.totalPosts)}</div>
-        <div>Likes/post: {fmtN(likesPerPost)}</div>
-        <div>Comments/post: {fmtN(commentsPerPost)}</div>
+        {isPendingData ? (
+          <div className="col-span-2 text-[#5B6B82]">New transfer. Social performance data is pending.</div>
+        ) : (
+          <>
+            <div>Likes: {fmtN(athlete.totalLikes)}</div>
+            <div>Comments: {fmtN(athlete.totalComments)}</div>
+            <div>Avg ER: {fmtPct(athlete.avgEngagementRate * 100)}</div>
+            <div>Posts: {fmtN(athlete.totalPosts)}</div>
+            <div>Likes/post: {fmtN(likesPerPost)}</div>
+            <div>Comments/post: {fmtN(commentsPerPost)}</div>
+          </>
+        )}
       </div>
     </div>
   );

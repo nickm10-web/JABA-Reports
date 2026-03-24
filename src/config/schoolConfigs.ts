@@ -19,6 +19,8 @@ export interface SchoolConfig {
   logoUrl: string;
   conference: string;
   dataFile: string;
+  /** Optional override for precomputed IP impact data */
+  ipImpactDataFile?: string;
   /** Optional override for athlete roster metrics data */
   rosterDataFile?: string;
   /** Optional override for official team-account metrics data */
@@ -61,6 +63,11 @@ const BIG_TEN_PEERS: PeerSchool[] = [
   peer('michigan-state', 'Michigan State University', 'Michigan State', 127, 'Big Ten', 242, 1659476, 21.05, 'Football', 185, 87, [6,6,6,6,6,6,6,6,6,6,6,6]),
   peer('nebraska', 'University of Nebraska', 'Nebraska', 158, 'Big Ten', 313, 7122549, 27.68, 'Football', 255, 155, [6,6,6,6,6,6,6,6,6,6,6,6]),
   peer('maryland', 'University of Maryland', 'Maryland', 309, 'Big Ten', 135, 1149150, 19.58, 'Football', 205, 90, [7,7,7,7,7,7,7,7,7,7,7,7]),
+  peer('washington', 'University of Washington', 'Washington', 264, 'Big Ten', 198, 4369015, 22.26, 'Football', 194, 95, [10,10,10,10,10,10,10,10,10,10,10,10]),
+  peer('indiana', 'Indiana University', 'Indiana', 84, 'Big Ten', 273, 2425120, 21.69, 'Football', 171, 114, [11,11,11,11,11,11,11,11,11,11,11,11]),
+  peer('oregon', 'University of Oregon', 'Oregon', 2483, 'Big Ten', 324, 4717045, 20.63, 'Football', 165, 108, [12,12,12,12,12,12,12,12,12,12,12,12]),
+  peer('cal', 'University of California, Berkeley', 'Cal', 25, 'Big Ten', 0, 0, 0, 'Football', 0, 0, [13,13,13,13,13,13,13,13,13,13,13,13]),
+  peer('northwestern', 'Northwestern University', 'Northwestern', 77, 'Big Ten', 0, 0, 0, 'Football', 0, 0, [14,14,14,14,14,14,14,14,14,14,14,14]),
 ];
 
 // SEC (for Alabama + Arkansas + Oklahoma)
@@ -102,6 +109,10 @@ const ACC_PEERS: PeerSchool[] = [
   peer('unc', 'University of North Carolina', 'UNC', 153, 'ACC', 198, 3044521, 29.9, 'Football', 226, 115, [3,3,3,3,3,3,3,3,3,3,3,3]),
   peer('nc-state', 'North Carolina State University', 'NC State', 152, 'ACC', 64, 1491590, 22.24, 'Football', 211, 41, [4,4,4,4,4,4,4,4,4,4,4,4]),
   peer('notre-dame', 'University of Notre Dame', 'Notre Dame', 87, 'ACC', 197, 4107244, 30.6, 'Football', 200, 102, [5,5,5,5,5,5,5,5,5,5,5,5]),
+  peer('smu', 'Southern Methodist University', 'SMU', 2567, 'ACC', 111, 1126238, 19.49, 'Football', 146, 64, [6,6,6,6,6,6,6,6,6,6,6,6]),
+  peer('georgia-tech', 'Georgia Institute of Technology', 'Georgia Tech', 59, 'ACC', 52, 1239349, 24.2, 'Football', 184, 31, [7,7,7,7,7,7,7,7,7,7,7,7]),
+  peer('wake-forest', 'Wake Forest University', 'Wake Forest', 154, 'ACC', 0, 0, 0, 'Football', 0, 0, [8,8,8,8,8,8,8,8,8,8,8,8]),
+  peer('stanford', 'Stanford University', 'Stanford', 24, 'ACC', 0, 0, 0, 'Football', 0, 0, [9,9,9,9,9,9,9,9,9,9,9,9]),
 ];
 
 // Mountain West (for Boise State)
@@ -123,6 +134,14 @@ const BIG_12_PEERS: PeerSchool[] = [
   peer('ucf', 'University of Central Florida', 'UCF', 2116, 'Big 12', 290, 3067220, 26.21, 'Football', 370, 163, [4,4,4,4,4,4,4,4,4,4,4,4]),
   peer('cincinnati', 'University of Cincinnati', 'Cincinnati', 2132, 'Big 12', 193, 2217627, 21.57, 'Football', 241, 106, [5,5,5,5,5,5,5,5,5,5,5,5]),
   peer('arizona-state', 'Arizona State University', 'Arizona State', 9, 'Big 12', 188, 2519403, 22.01, 'Football', 256, 109, [6,6,6,6,6,6,6,6,6,6,6,6]),
+  peer('k-state', 'Kansas State University', 'K-State', 2306, 'Big 12', 127, 1214777, 28.44, 'Football', 158, 68, [7,7,7,7,7,7,7,7,7,7,7,7]),
+  peer('utah', 'University of Utah', 'Utah', 254, 'Big 12', 168, 1428774, 23.55, 'Football', 195, 87, [8,8,8,8,8,8,8,8,8,8,8,8]),
+  peer('iowa-state', 'Iowa State University', 'Iowa State', 66, 'Big 12', 43, 1287008, 26.2, 'Football', 193, 32, [9,9,9,9,9,9,9,9,9,9,9,9]),
+  peer('colorado', 'University of Colorado', 'Colorado', 38, 'Big 12', 89, 2316175, 18.95, 'Football', 123, 60, [10,10,10,10,10,10,10,10,10,10,10,10]),
+  peer('byu', 'Brigham Young University', 'BYU', 252, 'Big 12', 282, 5479408, 24.13, 'Football', 636, 173, [11,11,11,11,11,11,11,11,11,11,11,11]),
+  peer('tcu', 'Texas Christian University', 'TCU', 2628, 'Big 12', 96, 910704, 22.23, 'Football', 156, 55, [12,12,12,12,12,12,12,12,12,12,12,12]),
+  peer('kansas', 'University of Kansas', 'Kansas', 2305, 'Big 12', 179, 1330470, 24.11, 'Football', 210, 75, [13,13,13,13,13,13,13,13,13,13,13,13]),
+  peer('texas-tech', 'Texas Tech University', 'Texas Tech', 2641, 'Big 12', 94, 1818723, 23.03, 'Football', 194, 40, [14,14,14,14,14,14,14,14,14,14,14,14]),
 ];
 
 const MID_MAJOR_PEERS: PeerSchool[] = [
@@ -774,6 +793,7 @@ export const missouriConfig: SchoolConfig = {
   brandExclusions: [
     'aeoden_sinclair97',
     'athleteps',
+    'ballislife',
     'everytruetiger',
     'everytruetigerbrands',
     'influxermizzou',
@@ -969,4 +989,416 @@ export const arizonaConfig: SchoolConfig = {
     'postgame.official',
     'texasstatethreads',
   ],
+};
+
+export const tennesseeConfig: SchoolConfig = {
+  id: 'tennessee',
+  name: 'University of Tennessee',
+  shortName: 'Tennessee',
+  nickname: 'Volunteers',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/2633.png',
+  conference: 'SEC',
+  dataFile: '/data/tennessee-content-posts.json',
+  colors: {
+    primary: '#FF8200',
+    secondary: '#FFFFFF',
+    primaryDark: '#cc6800',
+    primaryDeep: '#994e00',
+  },
+  peerSchools: SEC_PEERS.filter(p => p.id !== 'tennessee'),
+  benchmark: peer('tennessee', 'University of Tennessee', 'Tennessee', 2633, 'SEC', 165, 3021359, 23.06, 'Football', 199, 117, [13,13,13,13,13,13,13,13,13,13,13,13]),
+};
+
+export const washingtonConfig: SchoolConfig = {
+  id: 'washington',
+  name: 'University of Washington',
+  shortName: 'Washington',
+  nickname: 'Huskies',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/264.png',
+  conference: 'Big Ten',
+  dataFile: '/data/washington-content-posts.json',
+  ipImpactDataFile: '/data/washington-ip-impact.json',
+  colors: {
+    primary: '#4B2E83',
+    secondary: '#E8D3A2',
+    primaryDark: '#3a2366',
+    primaryDeep: '#291849',
+  },
+  peerSchools: BIG_TEN_PEERS.filter(p => p.id !== 'washington'),
+  benchmark: peer('washington', 'University of Washington', 'Washington', 264, 'Big Ten', 198, 4369015, 22.26, 'Football', 194, 95, [10,10,10,10,10,10,10,10,10,10,10,10]),
+  brandExclusions: [
+    'uw_football',
+    'uwsoftball',
+    'uwvolleyball',
+    'uw_wsoccer',
+    'uw_baseball',
+    'uwtrack',
+    'uw.threads',
+    'myplayersports',
+    'myplayerathlete',
+    'postgame.official',
+    'overtimewbb',
+    'sportscenter',
+    'espn',
+    'espnw',
+    'bigtennetwork',
+    'on3',
+    'on3recruits',
+    'transferportal',
+    'cfbalerts',
+    'inthecircle',
+    'westcoastpreps_',
+    'houseofvictorynil',
+    'montlakefutures',
+    'freeformsports',
+    'goteamsmg',
+    'amdgsports',
+    'psuviksfb',
+    'arkansas_basketball_rankings',
+    'tituswillford',
+    'goodieczech',
+    'lexis.leos',
+    'jasir.rencher',
+    'elise.hani',
+    'katywesssels',
+    'brooke_huard',
+    'fredhutch',
+    'americanheartwa',
+    'bloodworksnw',
+    'foodlifeline',
+    'washingtontrails',
+    'seattleallstarclassic',
+    'demarinifp',
+    'niketournamentofchampions',
+    'whoopitupvictoria',
+    'eliteisearned',
+  ],
+  sponsoredPostExclusions: [
+    '6994cc8deaeca21fcfde2bc0',
+    '6994cca0eaeca21fcfde3981',
+  ],
+};
+
+export const kStateConfig: SchoolConfig = {
+  id: 'k-state',
+  name: 'Kansas State University',
+  shortName: 'K-State',
+  nickname: 'Wildcats',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/2306.png',
+  conference: 'Big 12',
+  dataFile: '/data/k-state-content-posts.json',
+  colors: {
+    primary: '#512888',
+    secondary: '#FFFFFF',
+    primaryDark: '#3d1e66',
+    primaryDeep: '#291444',
+  },
+  peerSchools: BIG_12_PEERS.filter(p => p.id !== 'k-state'),
+  benchmark: peer('k-state', 'Kansas State University', 'K-State', 2306, 'Big 12', 127, 1214777, 28.44, 'Football', 158, 68, [7,7,7,7,7,7,7,7,7,7,7,7]),
+};
+
+export const utahConfig: SchoolConfig = {
+  id: 'utah',
+  name: 'University of Utah',
+  shortName: 'Utah',
+  nickname: 'Utes',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/254.png',
+  conference: 'Big 12',
+  dataFile: '/data/utah-content-posts.json',
+  colors: {
+    primary: '#CC0000',
+    secondary: '#FFFFFF',
+    primaryDark: '#990000',
+    primaryDeep: '#660000',
+  },
+  peerSchools: BIG_12_PEERS.filter(p => p.id !== 'utah'),
+  benchmark: peer('utah', 'University of Utah', 'Utah', 254, 'Big 12', 168, 1428774, 23.55, 'Football', 195, 87, [8,8,8,8,8,8,8,8,8,8,8,8]),
+};
+
+export const iowaStateConfig: SchoolConfig = {
+  id: 'iowa-state',
+  name: 'Iowa State University',
+  shortName: 'Iowa State',
+  nickname: 'Cyclones',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/66.png',
+  conference: 'Big 12',
+  dataFile: '/data/iowa-state-content-posts.json',
+  colors: {
+    primary: '#C8102E',
+    secondary: '#F1BE48',
+    primaryDark: '#960c22',
+    primaryDeep: '#640816',
+  },
+  peerSchools: BIG_12_PEERS.filter(p => p.id !== 'iowa-state'),
+  benchmark: peer('iowa-state', 'Iowa State University', 'Iowa State', 66, 'Big 12', 43, 1287008, 26.2, 'Football', 193, 32, [9,9,9,9,9,9,9,9,9,9,9,9]),
+};
+
+export const coloradoConfig: SchoolConfig = {
+  id: 'colorado',
+  name: 'University of Colorado',
+  shortName: 'Colorado',
+  nickname: 'Buffaloes',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/38.png',
+  conference: 'Big 12',
+  dataFile: '/data/colorado-content-posts.json',
+  colors: {
+    primary: '#CFB87C',
+    secondary: '#000000',
+    primaryDark: '#a8944f',
+    primaryDeep: '#7a6b39',
+  },
+  peerSchools: BIG_12_PEERS.filter(p => p.id !== 'colorado'),
+  benchmark: peer('colorado', 'University of Colorado', 'Colorado', 38, 'Big 12', 89, 2316175, 18.95, 'Football', 123, 60, [10,10,10,10,10,10,10,10,10,10,10,10]),
+};
+
+export const oleMissConfig: SchoolConfig = {
+  id: 'ole-miss',
+  name: 'University of Mississippi',
+  shortName: 'Ole Miss',
+  nickname: 'Rebels',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/145.png',
+  conference: 'SEC',
+  dataFile: '/data/ole-miss-content-posts.json',
+  colors: {
+    primary: '#CE1126',
+    secondary: '#14213D',
+    primaryDark: '#a00d1e',
+    primaryDeep: '#720916',
+  },
+  peerSchools: SEC_PEERS.filter(p => p.id !== 'ole-miss'),
+  benchmark: peer('ole-miss', 'University of Mississippi (Ole Miss)', 'Ole Miss', 145, 'SEC', 104, 3329460, 22.67, 'Football', 192, 76, [14,14,14,14,14,14,14,14,14,14,14,14]),
+};
+
+export const byuConfig: SchoolConfig = {
+  id: 'byu',
+  name: 'Brigham Young University',
+  shortName: 'BYU',
+  nickname: 'Cougars',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/252.png',
+  conference: 'Big 12',
+  dataFile: '/data/byu-content-posts.json',
+  colors: {
+    primary: '#002E5D',
+    secondary: '#FFFFFF',
+    primaryDark: '#001f3f',
+    primaryDeep: '#001020',
+  },
+  peerSchools: BIG_12_PEERS.filter(p => p.id !== 'byu'),
+  benchmark: peer('byu', 'Brigham Young University', 'BYU', 252, 'Big 12', 282, 5479408, 24.13, 'Football', 636, 173, [11,11,11,11,11,11,11,11,11,11,11,11]),
+};
+
+export const indianaConfig: SchoolConfig = {
+  id: 'indiana',
+  name: 'Indiana University',
+  shortName: 'Indiana',
+  nickname: 'Hoosiers',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/84.png',
+  conference: 'Big Ten',
+  dataFile: '/data/indiana-content-posts.json',
+  colors: {
+    primary: '#990000',
+    secondary: '#FFFFFF',
+    primaryDark: '#730000',
+    primaryDeep: '#4d0000',
+  },
+  peerSchools: BIG_TEN_PEERS.filter(p => p.id !== 'indiana'),
+  benchmark: peer('indiana', 'Indiana University', 'Indiana', 84, 'Big Ten', 273, 2425120, 21.69, 'Football', 171, 114, [11,11,11,11,11,11,11,11,11,11,11,11]),
+};
+
+export const smuConfig: SchoolConfig = {
+  id: 'smu',
+  name: 'Southern Methodist University',
+  shortName: 'SMU',
+  nickname: 'Mustangs',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/2567.png',
+  conference: 'ACC',
+  dataFile: '/data/smu-content-posts.json',
+  colors: {
+    primary: '#CC0035',
+    secondary: '#354CA1',
+    primaryDark: '#990028',
+    primaryDeep: '#66001a',
+  },
+  peerSchools: ACC_PEERS.filter(p => p.id !== 'smu'),
+  benchmark: peer('smu', 'Southern Methodist University', 'SMU', 2567, 'ACC', 111, 1126238, 19.49, 'Football', 146, 64, [6,6,6,6,6,6,6,6,6,6,6,6]),
+};
+
+export const oregonConfig: SchoolConfig = {
+  id: 'oregon',
+  name: 'University of Oregon',
+  shortName: 'Oregon',
+  nickname: 'Ducks',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/2483.png',
+  conference: 'Big Ten',
+  dataFile: '/data/oregon-content-posts.json',
+  colors: {
+    primary: '#154733',
+    secondary: '#FEE123',
+    primaryDark: '#0e3323',
+    primaryDeep: '#071f14',
+  },
+  peerSchools: BIG_TEN_PEERS.filter(p => p.id !== 'oregon'),
+  benchmark: peer('oregon', 'University of Oregon', 'Oregon', 2483, 'Big Ten', 324, 4717045, 20.63, 'Football', 165, 108, [12,12,12,12,12,12,12,12,12,12,12,12]),
+};
+
+export const georgiaTechConfig: SchoolConfig = {
+  id: 'georgia-tech',
+  name: 'Georgia Institute of Technology',
+  shortName: 'Georgia Tech',
+  nickname: 'Yellow Jackets',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/59.png',
+  conference: 'ACC',
+  dataFile: '/data/georgia-tech-content-posts.json',
+  colors: {
+    primary: '#B3A369',
+    secondary: '#003057',
+    primaryDark: '#8f8254',
+    primaryDeep: '#6b613f',
+  },
+  peerSchools: ACC_PEERS.filter(p => p.id !== 'georgia-tech'),
+  benchmark: peer('georgia-tech', 'Georgia Institute of Technology', 'Georgia Tech', 59, 'ACC', 52, 1239349, 24.2, 'Football', 184, 31, [7,7,7,7,7,7,7,7,7,7,7,7]),
+};
+
+export const vanderbiltConfig: SchoolConfig = {
+  id: 'vanderbilt',
+  name: 'Vanderbilt University',
+  shortName: 'Vanderbilt',
+  nickname: 'Commodores',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/238.png',
+  conference: 'SEC',
+  dataFile: '/data/vanderbilt-content-posts.json',
+  colors: {
+    primary: '#866D4B',
+    secondary: '#000000',
+    primaryDark: '#6b5639',
+    primaryDeep: '#503f2a',
+  },
+  peerSchools: SEC_PEERS.filter(p => p.id !== 'vanderbilt'),
+  benchmark: peer('vanderbilt', 'Vanderbilt University', 'Vanderbilt', 238, 'SEC', 197, 1630532, 23.15, 'Football', 186, 94, [12,12,12,12,12,12,12,12,12,12,12,12]),
+};
+
+export const tcuConfig: SchoolConfig = {
+  id: 'tcu',
+  name: 'Texas Christian University',
+  shortName: 'TCU',
+  nickname: 'Horned Frogs',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png',
+  conference: 'Big 12',
+  dataFile: '/data/tcu-content-posts.json',
+  colors: {
+    primary: '#4D1979',
+    secondary: '#FFFFFF',
+    primaryDark: '#3a1259',
+    primaryDeep: '#270c3a',
+  },
+  peerSchools: BIG_12_PEERS.filter(p => p.id !== 'tcu'),
+  benchmark: peer('tcu', 'Texas Christian University', 'TCU', 2628, 'Big 12', 96, 910704, 22.23, 'Football', 156, 55, [12,12,12,12,12,12,12,12,12,12,12,12]),
+};
+
+export const kansasConfig: SchoolConfig = {
+  id: 'kansas',
+  name: 'University of Kansas',
+  shortName: 'Kansas',
+  nickname: 'Jayhawks',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/2305.png',
+  conference: 'Big 12',
+  dataFile: '/data/kansas-content-posts.json',
+  colors: {
+    primary: '#0051BA',
+    secondary: '#E8000D',
+    primaryDark: '#003d8c',
+    primaryDeep: '#00295e',
+  },
+  peerSchools: BIG_12_PEERS.filter(p => p.id !== 'kansas'),
+  benchmark: peer('kansas', 'University of Kansas', 'Kansas', 2305, 'Big 12', 179, 1330470, 24.11, 'Football', 210, 75, [13,13,13,13,13,13,13,13,13,13,13,13]),
+};
+
+export const texasTechConfig: SchoolConfig = {
+  id: 'texas-tech',
+  name: 'Texas Tech University',
+  shortName: 'Texas Tech',
+  nickname: 'Red Raiders',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/2641.png',
+  conference: 'Big 12',
+  dataFile: '/data/texas-tech-content-posts.json',
+  colors: {
+    primary: '#CC0000',
+    secondary: '#000000',
+    primaryDark: '#990000',
+    primaryDeep: '#660000',
+  },
+  peerSchools: BIG_12_PEERS.filter(p => p.id !== 'texas-tech'),
+  benchmark: peer('texas-tech', 'Texas Tech University', 'Texas Tech', 2641, 'Big 12', 94, 1818723, 23.03, 'Football', 194, 40, [14,14,14,14,14,14,14,14,14,14,14,14]),
+};
+
+export const wakeForestConfig: SchoolConfig = {
+  id: 'wake-forest',
+  name: 'Wake Forest University',
+  shortName: 'Wake Forest',
+  nickname: 'Demon Deacons',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/154.png',
+  conference: 'ACC',
+  dataFile: '/data/wake-forest-content-posts.json',
+  colors: {
+    primary: '#9E7E38',
+    secondary: '#000000',
+    primaryDark: '#7e6529',
+    primaryDeep: '#5e4c1e',
+  },
+  peerSchools: ACC_PEERS.filter(p => p.id !== 'wake-forest'),
+  benchmark: peer('wake-forest', 'Wake Forest University', 'Wake Forest', 154, 'ACC', 0, 0, 0, 'Football', 0, 0, [8,8,8,8,8,8,8,8,8,8,8,8]),
+};
+
+export const calConfig: SchoolConfig = {
+  id: 'cal',
+  name: 'University of California, Berkeley',
+  shortName: 'Cal',
+  nickname: 'Golden Bears',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/25.png',
+  conference: 'Big Ten',
+  dataFile: '/data/cal-content-posts.json',
+  colors: {
+    primary: '#003262',
+    secondary: '#FDB515',
+    primaryDark: '#002249',
+    primaryDeep: '#001630',
+  },
+  peerSchools: BIG_TEN_PEERS.filter(p => p.id !== 'cal'),
+  benchmark: peer('cal', 'University of California, Berkeley', 'Cal', 25, 'Big Ten', 0, 0, 0, 'Football', 0, 0, [13,13,13,13,13,13,13,13,13,13,13,13]),
+};
+
+export const northwesternConfig: SchoolConfig = {
+  id: 'northwestern',
+  name: 'Northwestern University',
+  shortName: 'Northwestern',
+  nickname: 'Wildcats',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/77.png',
+  conference: 'Big Ten',
+  dataFile: '/data/northwestern-content-posts.json',
+  colors: {
+    primary: '#4E2A84',
+    secondary: '#FFFFFF',
+    primaryDark: '#3b1f63',
+    primaryDeep: '#281542',
+  },
+  peerSchools: BIG_TEN_PEERS.filter(p => p.id !== 'northwestern'),
+  benchmark: peer('northwestern', 'Northwestern University', 'Northwestern', 77, 'Big Ten', 0, 0, 0, 'Football', 0, 0, [14,14,14,14,14,14,14,14,14,14,14,14]),
+};
+
+export const stanfordConfig: SchoolConfig = {
+  id: 'stanford',
+  name: 'Stanford University',
+  shortName: 'Stanford',
+  nickname: 'Cardinal',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/24.png',
+  conference: 'ACC',
+  dataFile: '/data/stanford-content-posts.json',
+  colors: {
+    primary: '#8C1515',
+    secondary: '#FFFFFF',
+    primaryDark: '#6a1010',
+    primaryDeep: '#480b0b',
+  },
+  peerSchools: ACC_PEERS.filter(p => p.id !== 'stanford'),
+  benchmark: peer('stanford', 'Stanford University', 'Stanford', 24, 'ACC', 0, 0, 0, 'Football', 0, 0, [9,9,9,9,9,9,9,9,9,9,9,9]),
 };

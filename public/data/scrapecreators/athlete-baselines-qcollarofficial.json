@@ -1,0 +1,203 @@
+{
+  "generatedAt": "2026-02-23T03:15:03.028Z",
+  "brandHandle": "qcollarofficial",
+  "total": 25,
+  "rows": [
+    {
+      "athlete": "alexaust_",
+      "followers": 0,
+      "sampleSize": 20,
+      "avgLikes": 1286.05,
+      "avgComments": 60.55,
+      "engagementRate": null
+    },
+    {
+      "athlete": "kingjebo",
+      "followers": 0,
+      "sampleSize": 20,
+      "avgLikes": 24.25,
+      "avgComments": 8.05,
+      "engagementRate": null
+    },
+    {
+      "athlete": "marcusholman1",
+      "followers": 0,
+      "sampleSize": 20,
+      "avgLikes": 211,
+      "avgComments": 7.25,
+      "engagementRate": null
+    },
+    {
+      "athlete": "meghankling",
+      "followers": 0,
+      "sampleSize": 20,
+      "avgLikes": 2229.3,
+      "avgComments": 20.35,
+      "engagementRate": null
+    },
+    {
+      "athlete": "dhanesmith92",
+      "followers": 0,
+      "sampleSize": 20,
+      "avgLikes": 280.2,
+      "avgComments": 28,
+      "engagementRate": null
+    },
+    {
+      "athlete": "jackrowlett99",
+      "error": "Error: /v1/instagram/user/reels failed 404: {\"success\":true,\"credits_remaining\":407360,\"handle\":\"jackrowlett99\",\"userId\":null,\"message\":\"Account is private\",\"error\":\"not_found\",\"errorStatus\":404}"
+    },
+    {
+      "athlete": "jaelen_gill21",
+      "followers": 0,
+      "sampleSize": 20,
+      "avgLikes": 931.4,
+      "avgComments": 47.25,
+      "engagementRate": null
+    },
+    {
+      "athlete": "michaelsowers22",
+      "followers": 0,
+      "sampleSize": 20,
+      "avgLikes": 1946.15,
+      "avgComments": 11.6,
+      "engagementRate": null
+    },
+    {
+      "athlete": "deeofficial31",
+      "followers": 0,
+      "sampleSize": 20,
+      "avgLikes": 10535.9,
+      "avgComments": 74.6,
+      "engagementRate": null
+    },
+    {
+      "athlete": "colbyparkinson",
+      "followers": 0,
+      "sampleSize": 20,
+      "avgLikes": 5898.75,
+      "avgComments": 106.45,
+      "engagementRate": null
+    },
+    {
+      "athlete": "wbowen24",
+      "followers": 0,
+      "sampleSize": 12,
+      "avgLikes": 1342.6666666666667,
+      "avgComments": 34.833333333333336,
+      "engagementRate": null
+    },
+    {
+      "athlete": "georgiahoey_",
+      "followers": 0,
+      "sampleSize": 12,
+      "avgLikes": 299.0833333333333,
+      "avgComments": 39.083333333333336,
+      "engagementRate": null
+    },
+    {
+      "athlete": "elliott.mcdermott",
+      "followers": 0,
+      "sampleSize": 16,
+      "avgLikes": 481.9375,
+      "avgComments": 14.25,
+      "engagementRate": null
+    },
+    {
+      "athlete": "em.sterling",
+      "followers": 0,
+      "sampleSize": 14,
+      "avgLikes": 477.5,
+      "avgComments": 28.071428571428573,
+      "engagementRate": null
+    },
+    {
+      "athlete": "audywarn_",
+      "followers": 0,
+      "sampleSize": 17,
+      "avgLikes": 434.88235294117646,
+      "avgComments": 10.941176470588236,
+      "engagementRate": null
+    },
+    {
+      "athlete": "playmaker_tp",
+      "followers": 0,
+      "sampleSize": 18,
+      "avgLikes": 5711.111111111111,
+      "avgComments": 119.83333333333333,
+      "engagementRate": null
+    },
+    {
+      "athlete": "saucegardner",
+      "followers": 0,
+      "sampleSize": 18,
+      "avgLikes": 101303.44444444444,
+      "avgComments": 399.8333333333333,
+      "engagementRate": null
+    },
+    {
+      "athlete": "uniswag",
+      "followers": 0,
+      "sampleSize": 20,
+      "avgLikes": 295.1,
+      "avgComments": 5.7,
+      "engagementRate": null
+    },
+    {
+      "athlete": "brady_russell",
+      "followers": 0,
+      "sampleSize": 20,
+      "avgLikes": 2654,
+      "avgComments": 27.3,
+      "engagementRate": null
+    },
+    {
+      "athlete": "jaylinnhawkins",
+      "followers": 0,
+      "sampleSize": 20,
+      "avgLikes": 4555.5,
+      "avgComments": 131.4,
+      "engagementRate": null
+    },
+    {
+      "athlete": "bubzp11",
+      "followers": 0,
+      "sampleSize": 20,
+      "avgLikes": 369.65,
+      "avgComments": 6.05,
+      "engagementRate": null
+    },
+    {
+      "athlete": "bryan_costabile",
+      "followers": 0,
+      "sampleSize": 20,
+      "avgLikes": 1026.85,
+      "avgComments": 19,
+      "engagementRate": null
+    },
+    {
+      "athlete": "brennan.oneill",
+      "followers": 0,
+      "sampleSize": 15,
+      "avgLikes": 5901,
+      "avgComments": 21.666666666666668,
+      "engagementRate": null
+    },
+    {
+      "athlete": "kieranmcardle6",
+      "followers": 0,
+      "sampleSize": 20,
+      "avgLikes": 208.5,
+      "avgComments": 8.75,
+      "engagementRate": null
+    },
+    {
+      "athlete": "daltonkincaid",
+      "followers": 0,
+      "sampleSize": 16,
+      "avgLikes": 22462.5,
+      "avgComments": 166.6875,
+      "engagementRate": null
+    }
+  ]
+}

@@ -1,0 +1,3278 @@
+[
+  {
+    "_id": "69009ca1be2140c1e254b576",
+    "firstName": "Jace",
+    "lastName": "Posey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647925893-Jace_Posey_69009ca1be2140c1e254b576.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6894,
+        "likes": 54982,
+        "comments": 700,
+        "engagementRate": 0.5045204905177519,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b556",
+    "firstName": "Rohon",
+    "lastName": "Kazadi",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647913920-Rohon_Kazadi_69009ca1be2140c1e254b556.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1903,
+        "likes": 12,
+        "comments": 141,
+        "engagementRate": 0.0012611665790856542,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b587",
+    "firstName": "Taylor",
+    "lastName": "Bigby",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647915986-Taylor_Bigby_69009ca1be2140c1e254b587.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7206,
+        "likes": 1117,
+        "comments": 706,
+        "engagementRate": 0.010934832410419934,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b4f0",
+    "firstName": "Chase",
+    "lastName": "Brunson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647925295-Chase_Brunson_69009ca1be2140c1e254b4f0.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "OF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3535,
+        "likes": 12087,
+        "comments": 200,
+        "engagementRate": 0.24992130074555155,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b584",
+    "firstName": "Marta",
+    "lastName": "Suarez",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647918580-Marta_Suarez_69009ca1be2140c1e254b584.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5935,
+        "likes": 12669,
+        "comments": 478,
+        "engagementRate": 0.1481706221954401,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b4ee",
+    "firstName": "Noah",
+    "lastName": "Franco",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647925277-Noah_Franco_69009ca1be2140c1e254b4ee.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP/UT",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 23003,
+        "likes": 42669,
+        "comments": 233,
+        "engagementRate": 0.11663329504657088,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b504",
+    "firstName": "Cam",
+    "lastName": "Jamerson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647920729-Cam_Jamerson_69009ca1be2140c1e254b504.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2512,
+        "likes": 1736,
+        "comments": 468,
+        "engagementRate": 0.05184738773995777,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b58d",
+    "firstName": "Maddie",
+    "lastName": "Scherr",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647917701-Maddie_Scherr_69009ca1be2140c1e254b58d.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 54692,
+        "likes": 87210,
+        "comments": 726,
+        "engagementRate": 0.10012127427531399,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b529",
+    "firstName": "Coltin",
+    "lastName": "Deery",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647916808-Coltin_Deery_69009ca1be2140c1e254b529.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4297,
+        "likes": 14341,
+        "comments": 808,
+        "engagementRate": 0.2713990248265955,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b51c",
+    "firstName": "Keylan",
+    "lastName": "Abrams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647912925-Keylan_Abrams_69009ca1be2140c1e254b51c.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 17288,
+        "likes": 311,
+        "comments": 455,
+        "engagementRate": 0.001423523825604733,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b582",
+    "firstName": "Clara",
+    "lastName": "Silva",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647925339-Clara_Silva_69009ca1be2140c1e254b582.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "C",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7888,
+        "likes": 30408,
+        "comments": 448,
+        "engagementRate": 0.3005271480925211,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b552",
+    "firstName": "Kaden",
+    "lastName": "McFadden",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647921407-Kaden_McFadden_69009ca1be2140c1e254b552.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 148,
+        "engagementRate": 0,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b54f",
+    "firstName": "Jamel",
+    "lastName": "Johnson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647920099-Jamel_Johnson_69009ca1be2140c1e254b54f.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2891,
+        "likes": 18252,
+        "comments": 1346,
+        "engagementRate": 0.4265021650761338,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b573",
+    "firstName": "Micah",
+    "lastName": "Robinson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647923283-Micah_Robinson_69009ca1be2140c1e254b573.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7742,
+        "likes": 3143,
+        "comments": 471,
+        "engagementRate": 0.02361059327500344,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b579",
+    "firstName": "Liutauras",
+    "lastName": "Lelevicius",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647925942-Liutauras_Lelevicius_69009ca1be2140c1e254b579.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2477,
+        "likes": 4850,
+        "comments": 127,
+        "engagementRate": 0.15378404397378964,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b528",
+    "firstName": "Witten",
+    "lastName": "Van Hoy",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647920721-Witten_Van Hoy_69009ca1be2140c1e254b528.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1768,
+        "likes": 5388,
+        "comments": 324,
+        "engagementRate": 0.2937062937062937,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b4fe",
+    "firstName": "Jevon",
+    "lastName": "McIver Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647921413-Jevon_McIver Jr._69009ca1be2140c1e254b4fe.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 1636,
+        "engagementRate": 0,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b564",
+    "firstName": "Joseph",
+    "lastName": "Manjack IV",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647922672-Joseph_Manjack IV_69009ca1be2140c1e254b564.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3309,
+        "likes": 16786,
+        "comments": 447,
+        "engagementRate": 0.34950316718233887,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b519",
+    "firstName": "Paul",
+    "lastName": "Oyewale",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647925917-Paul_Oyewale_69009ca1be2140c1e254b519.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "E",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1643,
+        "likes": 1212,
+        "comments": 242,
+        "engagementRate": 0.07717906108850947,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b55a",
+    "firstName": "Cal",
+    "lastName": "Keeler",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647924745-Cal_Keeler_69009ca1be2140c1e254b55a.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "SN",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 346,
+        "likes": 506,
+        "comments": 104,
+        "engagementRate": 0.5876685934489403,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b53a",
+    "firstName": "Cooper",
+    "lastName": "Powers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647921424-Cooper_Powers_69009ca1be2140c1e254b53a.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2265,
+        "likes": 10519,
+        "comments": 656,
+        "engagementRate": 0.37957799449244145,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b526",
+    "firstName": "Luke",
+    "lastName": "Lingard",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647924737-Luke_Lingard_69009ca1be2140c1e254b526.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1753,
+        "likes": 657,
+        "comments": 464,
+        "engagementRate": 0.030504007928726647,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b546",
+    "firstName": "Kevorian",
+    "lastName": "Barnes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647912967-Kevorian_Barnes_69009ca1be2140c1e254b546.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2359,
+        "likes": 17350,
+        "comments": 366,
+        "engagementRate": 0.5776140805707927,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b524",
+    "firstName": "Sam",
+    "lastName": "Haley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647921398-Sam_Haley_69009ca1be2140c1e254b524.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2123,
+        "likes": 7915,
+        "comments": 1001,
+        "engagementRate": 0.3233403053528861,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b542",
+    "firstName": "Josh",
+    "lastName": "Hoover",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647914608-Josh_Hoover_69009ca1be2140c1e254b542.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 19306,
+        "likes": 88786,
+        "comments": 1670,
+        "engagementRate": 0.2805200986169866,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b510",
+    "firstName": "Zach",
+    "lastName": "Chapman",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647917752-Zach_Chapman_69009ca1be2140c1e254b510.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "E",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4135,
+        "likes": 846,
+        "comments": 498,
+        "engagementRate": 0.015316076800318512,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b514",
+    "firstName": "Devean",
+    "lastName": "Deal",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647922682-Devean_Deal_69009ca1be2140c1e254b514.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "E",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2159,
+        "likes": 4727,
+        "comments": 315,
+        "engagementRate": 0.20754558086656277,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b54d",
+    "firstName": "Franklin",
+    "lastName": "Estrada II",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647913879-Franklin_Estrada II_69009ca1be2140c1e254b54d.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2594,
+        "likes": 1151,
+        "comments": 707,
+        "engagementRate": 0.03394126742509695,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b565",
+    "firstName": "Terry",
+    "lastName": "Shelton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647922009-Terry_Shelton_69009ca1be2140c1e254b565.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3140,
+        "likes": 20205,
+        "comments": 362,
+        "engagementRate": 1.0916666666666668,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b55d",
+    "firstName": "Chase",
+    "lastName": "Curtis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647912912-Chase_Curtis_69009ca1be2140c1e254b55d.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3366,
+        "likes": 8347,
+        "comments": 506,
+        "engagementRate": 0.2085274606995647,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b561",
+    "firstName": "Major",
+    "lastName": "Everhart",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647923272-Major_Everhart_69009ca1be2140c1e254b561.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7908,
+        "likes": 11422,
+        "comments": 397,
+        "engagementRate": 0.1056390973835322,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b563",
+    "firstName": "Jordan",
+    "lastName": "Dwyer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647920095-Jordan_Dwyer_69009ca1be2140c1e254b563.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5591,
+        "likes": 11760,
+        "comments": 550,
+        "engagementRate": 0.18349128477220775,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b500",
+    "firstName": "Elijah",
+    "lastName": "Jackson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647912995-Elijah_Jackson_69009ca1be2140c1e254b500.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4393,
+        "likes": 11846,
+        "comments": 441,
+        "engagementRate": 0.20926112502173164,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b559",
+    "firstName": "Sebastian",
+    "lastName": "Peterson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647917712-Sebastian_Peterson_69009ca1be2140c1e254b559.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1962,
+        "likes": 3,
+        "comments": 279,
+        "engagementRate": 0.0015290519877675841,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b596",
+    "firstName": "Anna",
+    "lastName": "Rice",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647920709-Anna_Rice_69009ca1be2140c1e254b596.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1309,
+        "likes": 5363,
+        "comments": 1004,
+        "engagementRate": 0.33058763785234374,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b58a",
+    "firstName": "Olivia",
+    "lastName": "Miles",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647913908-Olivia_Miles_69009ca1be2140c1e254b58a.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 77500,
+        "likes": 55412,
+        "comments": 1008,
+        "engagementRate": 0.04056218242423105,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b53e",
+    "firstName": "Sam",
+    "lastName": "Bisesi",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647921434-Sam_Bisesi_69009ca1be2140c1e254b53e.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "PK",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7247,
+        "likes": 10059,
+        "comments": 938,
+        "engagementRate": 0.1146859530587639,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b53f",
+    "firstName": "Caleb",
+    "lastName": "Sempebwa",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647912961-Caleb_Sempebwa_69009ca1be2140c1e254b53f.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "PK",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 863,
+        "likes": 2139,
+        "comments": 216,
+        "engagementRate": 0.16436892095930333,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b51a",
+    "firstName": "Kaleb",
+    "lastName": "Elarms-Orr",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647919475-Kaleb_Elarms-Orr_69009ca1be2140c1e254b51a.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4528,
+        "likes": 13216,
+        "comments": 201,
+        "engagementRate": 0.19937311202455066,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b593",
+    "firstName": "Emily",
+    "lastName": "Van Groningen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647914828-Emily_Van Groningen_69009ca1be2140c1e254b593.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1684,
+        "likes": 7530,
+        "comments": 850,
+        "engagementRate": 0.38310375462597285,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b521",
+    "firstName": "Hudson",
+    "lastName": "Hooper",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647925287-Hudson_Hooper_69009ca1be2140c1e254b521.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2742,
+        "likes": 4024,
+        "comments": 196,
+        "engagementRate": 0.11800469047036273,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b574",
+    "firstName": "David",
+    "lastName": "Punch",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647920070-David_Punch_69009ca1be2140c1e254b574.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3603,
+        "likes": 10566,
+        "comments": 376,
+        "engagementRate": 0.17088828848352366,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b592",
+    "firstName": "Sarah",
+    "lastName": "Sylvester",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647925336-Sarah_Sylvester_69009ca1be2140c1e254b592.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5744,
+        "likes": 15811,
+        "comments": 351,
+        "engagementRate": 0.16566351076038788,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b57c",
+    "firstName": "RJ",
+    "lastName": "Jones",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647925357-RJ_Jones_69009ca1be2140c1e254b57c.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12078,
+        "likes": 7941,
+        "comments": 306,
+        "engagementRate": 0.04531795332852015,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b578",
+    "firstName": "Brock",
+    "lastName": "Harding",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647918307-Brock_Harding_69009ca1be2140c1e254b578.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 13805,
+        "likes": 21314,
+        "comments": 450,
+        "engagementRate": 0.12123786226037507,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b580",
+    "firstName": "Kennedy",
+    "lastName": "Basham",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647923934-Kennedy_Basham_69009ca1be2140c1e254b580.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "C",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 26031,
+        "likes": 26901,
+        "comments": 1008,
+        "engagementRate": 0.06526027931057893,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b590",
+    "firstName": "Riley",
+    "lastName": "Weigelt",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647918310-Riley_Weigelt_69009ca1be2140c1e254b590.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "DS/L",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3233,
+        "likes": 6396,
+        "comments": 693,
+        "engagementRate": 0.14630416227972443,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b558",
+    "firstName": "Joseph",
+    "lastName": "Albright",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647917420-Joseph_Albright_69009ca1be2140c1e254b558.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5006,
+        "likes": 2538,
+        "comments": 303,
+        "engagementRate": 0.1891729924091091,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b589",
+    "firstName": "Donovyn",
+    "lastName": "Hunter",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647922707-Donovyn_Hunter_69009ca1be2140c1e254b589.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7767,
+        "likes": 13639,
+        "comments": 684,
+        "engagementRate": 0.13197733480135418,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b59e",
+    "firstName": "Rosemary",
+    "lastName": "Archer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647919512-Rosemary_Archer_69009ca1be2140c1e254b59e.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3425,
+        "likes": 9746,
+        "comments": 1042,
+        "engagementRate": 0.22516443433186253,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b57f",
+    "firstName": "Tanner",
+    "lastName": "Toolson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647923898-Tanner_Toolson_69009ca1be2140c1e254b57f.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4785,
+        "likes": 9503,
+        "comments": 548,
+        "engagementRate": 0.14986562063250802,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b58c",
+    "firstName": "Taliyah",
+    "lastName": "Parker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647923289-Taliyah_Parker_69009ca1be2140c1e254b58c.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6748,
+        "likes": 13248,
+        "comments": 1301,
+        "engagementRate": 0.11538146228108137,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b594",
+    "firstName": "Evan",
+    "lastName": "Hendrix",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647920073-Evan_Hendrix_69009ca1be2140c1e254b594.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3410,
+        "likes": 14072,
+        "comments": 242,
+        "engagementRate": 0.22203371209641923,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b59c",
+    "firstName": "McKenzie",
+    "lastName": "Berg",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647922011-McKenzie_Berg_69009ca1be2140c1e254b59c.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 931,
+        "likes": 5572,
+        "comments": 293,
+        "engagementRate": 0.45024930447704475,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b598",
+    "firstName": "Mikala",
+    "lastName": "Young",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647925324-Mikala_Young_69009ca1be2140c1e254b598.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2283,
+        "likes": 5411,
+        "comments": 742,
+        "engagementRate": 0.17150863654334841,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b599",
+    "firstName": "Becca",
+    "lastName": "Kelley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647922043-Becca_Kelley_69009ca1be2140c1e254b599.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5675,
+        "likes": 14316,
+        "comments": 288,
+        "engagementRate": 0.1976855191613143,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b59a",
+    "firstName": "Samara",
+    "lastName": "Coleman",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647915070-Samara_Coleman_69009ca1be2140c1e254b59a.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2371,
+        "likes": 12630,
+        "comments": 1393,
+        "engagementRate": 0.38635150711084426,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b562",
+    "firstName": "Jordyn",
+    "lastName": "Bailey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647923927-Jordyn_Bailey_69009ca1be2140c1e254b562.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1230,
+        "likes": 32149,
+        "comments": 310,
+        "engagementRate": 2.030464199438374,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b595",
+    "firstName": "Jalyn",
+    "lastName": "Gibson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647914845-Jalyn_Gibson_69009ca1be2140c1e254b595.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3893,
+        "likes": 15325,
+        "comments": 572,
+        "engagementRate": 0.3113225242144214,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b59b",
+    "firstName": "Melanie",
+    "lastName": "McGann",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647917744-Melanie_McGann_69009ca1be2140c1e254b59b.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2772,
+        "likes": 4417,
+        "comments": 602,
+        "engagementRate": 0.15091714444538487,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b4f2",
+    "firstName": "Cole",
+    "lastName": "Eaton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647926433-Cole_Eaton_69009ca1be2140c1e254b4f2.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "OF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2946,
+        "likes": 3634,
+        "comments": 109,
+        "engagementRate": 0.2541072640868975,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b4fc",
+    "firstName": "Jonah",
+    "lastName": "Martinez",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647923887-Jonah_Martinez_69009ca1be2140c1e254b4fc.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1362,
+        "likes": 2455,
+        "comments": 418,
+        "engagementRate": 0.2501547322295679,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b58e",
+    "firstName": "Alice",
+    "lastName": "Volpe",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647913917-Alice_Volpe_69009ca1be2140c1e254b58e.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "DS/L",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2362,
+        "likes": 132765,
+        "comments": 515,
+        "engagementRate": 4.339876097278642,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b555",
+    "firstName": "Jordan",
+    "lastName": "Lester",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647924747-Jordan_Lester_69009ca1be2140c1e254b555.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1552,
+        "likes": 6456,
+        "comments": 462,
+        "engagementRate": 0.32982544975752337,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b54b",
+    "firstName": "Joe",
+    "lastName": "Pitchford",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647922704-Joe_Pitchford_69009ca1be2140c1e254b54b.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1355,
+        "likes": 3965,
+        "comments": 202,
+        "engagementRate": 0.3416974169741698,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b4f4",
+    "firstName": "Zack",
+    "lastName": "James",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647918479-Zack_James_69009ca1be2140c1e254b4f4.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 995,
+        "likes": 319,
+        "comments": 102,
+        "engagementRate": 0.06472361809045227,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b55b",
+    "firstName": "DJ",
+    "lastName": "Rogers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647915567-DJ_Rogers_69009ca1be2140c1e254b55b.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4167,
+        "likes": 2399,
+        "comments": 384,
+        "engagementRate": 0.04966839405399829,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b557",
+    "firstName": "Julius",
+    "lastName": "Simms",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647923303-Julius_Simms_69009ca1be2140c1e254b557.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1279,
+        "likes": 4244,
+        "comments": 172,
+        "engagementRate": 0.3870512814320269,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b57e",
+    "firstName": "Trey",
+    "lastName": "Stuart",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647916791-Trey_Stuart_69009ca1be2140c1e254b57e.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1872,
+        "likes": 2565,
+        "comments": 259,
+        "engagementRate": 0.18442841880341881,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b4fa",
+    "firstName": "Trever",
+    "lastName": "Baumler",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647914772-Trever_Baumler_69009ca1be2140c1e254b4fa.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP/OF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2363,
+        "likes": 12040,
+        "comments": 221,
+        "engagementRate": 0.3991089492057322,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b534",
+    "firstName": "Gannon",
+    "lastName": "Gaubert",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647920085-Gannon_Gaubert_69009ca1be2140c1e254b534.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2343,
+        "likes": 5753,
+        "comments": 480,
+        "engagementRate": 0.20492167511492765,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b503",
+    "firstName": "Gil",
+    "lastName": "Jackson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647919226-Gil_Jackson_69009ca1be2140c1e254b503.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2039,
+        "likes": 3115,
+        "comments": 151,
+        "engagementRate": 0.40044139283962726,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b585",
+    "firstName": "Natalie",
+    "lastName": "Mazurek",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647921396-Natalie_Mazurek_69009ca1be2140c1e254b585.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5569,
+        "likes": 10406,
+        "comments": 504,
+        "engagementRate": 0.16024720177171248,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b591",
+    "firstName": "Alexis",
+    "lastName": "Roberson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647918658-Alexis_Roberson_69009ca1be2140c1e254b591.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1438,
+        "likes": 4690,
+        "comments": 440,
+        "engagementRate": 0.3242825508211461,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b4fb",
+    "firstName": "Channing",
+    "lastName": "Canada",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647921443-Channing_Canada_69009ca1be2140c1e254b4fb.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12089,
+        "likes": 36,
+        "comments": 0,
+        "engagementRate": 0.0002481594838282737,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b54c",
+    "firstName": "Jeremy",
+    "lastName": "Payne",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647923162-Jeremy_Payne_69009ca1be2140c1e254b54c.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2402,
+        "likes": 7274,
+        "comments": 284,
+        "engagementRate": 0.26221204551762417,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b52f",
+    "firstName": "Cade",
+    "lastName": "Bennett",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647912948-Cade_Bennett_69009ca1be2140c1e254b52f.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10069,
+        "likes": 3733,
+        "comments": 316,
+        "engagementRate": 0.03351044459893402,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b531",
+    "firstName": "Carson",
+    "lastName": "Bruno",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647922689-Carson_Bruno_69009ca1be2140c1e254b531.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2491,
+        "likes": 6378,
+        "comments": 439,
+        "engagementRate": 0.22805432891743607,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b560",
+    "firstName": "Eric",
+    "lastName": "McAlister",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647917444-Eric_McAlister_69009ca1be2140c1e254b560.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5042,
+        "likes": 7854,
+        "comments": 120,
+        "engagementRate": 0.14377411561068837,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b54e",
+    "firstName": "Austin",
+    "lastName": "Jordan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647914906-Austin_Jordan_69009ca1be2140c1e254b54e.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 13201,
+        "likes": 12016,
+        "comments": 538,
+        "engagementRate": 0.07924904678938464,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b575",
+    "firstName": "Xavier",
+    "lastName": "Edmonds",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647924126-Xavier_Edmonds_69009ca1be2140c1e254b575.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3040,
+        "likes": 5492,
+        "comments": 536,
+        "engagementRate": 0.17807239817147735,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b4e8",
+    "firstName": "Nolan",
+    "lastName": "Traeger",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647919199-Nolan_Traeger_69009ca1be2140c1e254b4e8.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "C",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3113,
+        "likes": 9240,
+        "comments": 159,
+        "engagementRate": 0.2516061676839062,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b57d",
+    "firstName": "Drew",
+    "lastName": "McElroy",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647914809-Drew_McElroy_69009ca1be2140c1e254b57d.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3598,
+        "likes": 10018,
+        "comments": 706,
+        "engagementRate": 0.248378728923476,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b4ed",
+    "firstName": "Mason",
+    "lastName": "Brassfield",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647925899-Mason_Brassfield_69009ca1be2140c1e254b4ed.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2131,
+        "likes": 17404,
+        "comments": 167,
+        "engagementRate": 0.82454246832473,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b57b",
+    "firstName": "Kayden",
+    "lastName": "Edwards",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647921978-Kayden_Edwards_69009ca1be2140c1e254b57b.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9989,
+        "likes": 6696,
+        "comments": 296,
+        "engagementRate": 0.058330830580305006,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b540",
+    "firstName": "Nate",
+    "lastName": "McCashland",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647923920-Nate_McCashland_69009ca1be2140c1e254b540.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "PK",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2234,
+        "likes": 5721,
+        "comments": 283,
+        "engagementRate": 0.26875559534467325,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b4f8",
+    "firstName": "Nate",
+    "lastName": "Stern",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647922637-Nate_Stern_69009ca1be2140c1e254b4f8.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1621,
+        "likes": 2509,
+        "comments": 115,
+        "engagementRate": 0.13489040748448522,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b577",
+    "firstName": "Jayden",
+    "lastName": "Pierre",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647922694-Jayden_Pierre_69009ca1be2140c1e254b577.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 16260,
+        "likes": 12242,
+        "comments": 499,
+        "engagementRate": 0.06529827798277983,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b507",
+    "firstName": "Tristan",
+    "lastName": "Johnson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647913934-Tristan_Johnson_69009ca1be2140c1e254b507.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1150,
+        "likes": 7912,
+        "comments": 565,
+        "engagementRate": 0.6130223843557674,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b586",
+    "firstName": "Aaliyah",
+    "lastName": "Roberson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647924706-Aaliyah_Roberson_69009ca1be2140c1e254b586.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2858,
+        "likes": 9499,
+        "comments": 401,
+        "engagementRate": 0.2833275017494752,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b59f",
+    "firstName": "Ella",
+    "lastName": "Foti",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647925961-Ella_Foti_69009ca1be2140c1e254b59f.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S/OPP",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1858,
+        "likes": 20775,
+        "comments": 491,
+        "engagementRate": 0.9538033728022963,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b597",
+    "firstName": "Lauren",
+    "lastName": "Murphy",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647913866-Lauren_Murphy_69009ca1be2140c1e254b597.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1561,
+        "likes": 3620,
+        "comments": 444,
+        "engagementRate": 0.23667812008619185,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b4f3",
+    "firstName": "Kade",
+    "lastName": "Eudy",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647916728-Kade_Eudy_69009ca1be2140c1e254b4f3.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5737,
+        "likes": 8879,
+        "comments": 162,
+        "engagementRate": 0.13132589622915578,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b554",
+    "firstName": "Bud",
+    "lastName": "Clark",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647925924-Bud_Clark_69009ca1be2140c1e254b554.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9894,
+        "likes": 16296,
+        "comments": 856,
+        "engagementRate": 0.14446465871571998,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b4ef",
+    "firstName": "Sawyer",
+    "lastName": "Strosnider",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647923247-Sawyer_Strosnider_69009ca1be2140c1e254b4ef.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "OF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4036,
+        "likes": 11042,
+        "comments": 63,
+        "engagementRate": 0.27514866204162536,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b541",
+    "firstName": "Ken",
+    "lastName": "Seals",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647912940-Ken_Seals_69009ca1be2140c1e254b541.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6568,
+        "likes": 17959,
+        "comments": 774,
+        "engagementRate": 0.2376801664636622,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b4ea",
+    "firstName": "Preston",
+    "lastName": "Gamster",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647922647-Preston_Gamster_69009ca1be2140c1e254b4ea.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1992,
+        "likes": 10190,
+        "comments": 521,
+        "engagementRate": 0.44712182061579653,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b572",
+    "firstName": "Malick",
+    "lastName": "Diallo",
+    "profilePicture": "",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "C",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4361,
+        "likes": 8977,
+        "comments": 494,
+        "engagementRate": 0.18029121761063974,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b547",
+    "firstName": "Trent",
+    "lastName": "Battle",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647925929-Trent_Battle_69009ca1be2140c1e254b547.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2642,
+        "likes": 9987,
+        "comments": 425,
+        "engagementRate": 0.32406005551349987,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b53b",
+    "firstName": "Ethan",
+    "lastName": "Craw",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647920684-Ethan_Craw_69009ca1be2140c1e254b53b.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "P",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1596,
+        "likes": 9986,
+        "comments": 319,
+        "engagementRate": 0.5380639097744361,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b51e",
+    "firstName": "Anthony",
+    "lastName": "Williams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647913062-Anthony_Williams_69009ca1be2140c1e254b51e.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2000,
+        "likes": 1327,
+        "comments": 200,
+        "engagementRate": 0.184875,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b52b",
+    "firstName": "Quinton",
+    "lastName": "Harris",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647914849-Quinton_Harris_69009ca1be2140c1e254b52b.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1715,
+        "likes": 21,
+        "comments": 476,
+        "engagementRate": 0.041399416909621,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b51d",
+    "firstName": "Michael",
+    "lastName": "Teason",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647921430-Michael_Teason_69009ca1be2140c1e254b51d.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2220,
+        "likes": 2440,
+        "comments": 324,
+        "engagementRate": 0.2075075075075075,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b56d",
+    "firstName": "Gekyle",
+    "lastName": "Baker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647920087-Gekyle_Baker_69009ca1be2140c1e254b56d.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1347,
+        "likes": 2209,
+        "comments": 183,
+        "engagementRate": 0.16143618816224603,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b4fd",
+    "firstName": "Devondre",
+    "lastName": "McGee",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647925932-Devondre_McGee_69009ca1be2140c1e254b4fd.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10584,
+        "likes": 9294,
+        "comments": 285,
+        "engagementRate": 0.07542044595616024,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b50b",
+    "firstName": "Ansel",
+    "lastName": "Din-Mbuh",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647920695-Ansel_Din-Mbuh_69009ca1be2140c1e254b50b.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3332,
+        "likes": 1036,
+        "comments": 0,
+        "engagementRate": 0.15546218487394958,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b55e",
+    "firstName": "Mason",
+    "lastName": "Peterson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647918641-Mason_Peterson_69009ca1be2140c1e254b55e.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2547,
+        "likes": 12,
+        "comments": 331,
+        "engagementRate": 0.03366705928543384,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b4f5",
+    "firstName": "Tyler",
+    "lastName": "Phenow",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647923872-Tyler_Phenow_69009ca1be2140c1e254b4f5.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1134,
+        "likes": 5124,
+        "comments": 400,
+        "engagementRate": 0.5412502449539487,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b55f",
+    "firstName": "Ka'Morreun",
+    "lastName": "Pimpton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647924660-Ka'Morreun_Pimpton_69009ca1be2140c1e254b55f.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4415,
+        "likes": 33721,
+        "comments": 686,
+        "engagementRate": 0.86185982131622,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b537",
+    "firstName": "Jackson",
+    "lastName": "Jones",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647919247-Jackson_Jones_69009ca1be2140c1e254b537.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 954,
+        "likes": 2181,
+        "comments": 124,
+        "engagementRate": 0.20134521313766596,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b502",
+    "firstName": "Micah",
+    "lastName": "Strickland",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647924665-Micah_Strickland_69009ca1be2140c1e254b502.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1336,
+        "likes": 3447,
+        "comments": 122,
+        "engagementRate": 0.28967065868263475,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b50f",
+    "firstName": "Connor",
+    "lastName": "Lingren",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647913904-Connor_Lingren_69009ca1be2140c1e254b50f.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1460,
+        "likes": 3637,
+        "comments": 274,
+        "engagementRate": 0.2923776226676454,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b522",
+    "firstName": "Caleb",
+    "lastName": "Cortez",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647920677-Caleb_Cortez_69009ca1be2140c1e254b522.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1420,
+        "likes": 6449,
+        "comments": 181,
+        "engagementRate": 0.38908450704225356,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b53c",
+    "firstName": "Easton",
+    "lastName": "Black",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647918572-Easton_Black_69009ca1be2140c1e254b53c.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "P",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1781,
+        "likes": 10850,
+        "comments": 404,
+        "engagementRate": 0.5265300393037619,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b517",
+    "firstName": "Thomas",
+    "lastName": "Coppinger",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647915620-Thomas_Coppinger_69009ca1be2140c1e254b517.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "E",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1823,
+        "likes": 36,
+        "comments": 420,
+        "engagementRate": 0.020844761382336804,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b58b",
+    "firstName": "Clara",
+    "lastName": "Bielefeld",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647913874-Clara_Bielefeld_69009ca1be2140c1e254b58b.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2546,
+        "likes": 12249,
+        "comments": 273,
+        "engagementRate": 0.4098586017282011,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b581",
+    "firstName": "Sarah",
+    "lastName": "Portlock",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647923256-Sarah_Portlock_69009ca1be2140c1e254b581.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "C",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 822,
+        "likes": 2261,
+        "comments": 121,
+        "engagementRate": 0.36222627737226276,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b525",
+    "firstName": "Rhett",
+    "lastName": "Steppe",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647923264-Rhett_Steppe_69009ca1be2140c1e254b525.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1628,
+        "likes": 5638,
+        "comments": 671,
+        "engagementRate": 0.32294226044226043,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b55c",
+    "firstName": "Lafayette",
+    "lastName": "Kaiuway",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647925903-Lafayette_Kaiuway_69009ca1be2140c1e254b55c.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3586,
+        "likes": 3467,
+        "comments": 383,
+        "engagementRate": 0.17893660531697342,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b588",
+    "firstName": "Veronica",
+    "lastName": "Sheffey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647913964-Veronica_Sheffey_69009ca1be2140c1e254b588.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 188,
+        "engagementRate": 0,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b571",
+    "firstName": "Vianney",
+    "lastName": "Salatchoum",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647918268-Vianney_Salatchoum_69009ca1be2140c1e254b571.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "C",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1465,
+        "likes": 337,
+        "comments": 173,
+        "engagementRate": 0.027303754266211604,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b58f",
+    "firstName": "Jaylen",
+    "lastName": "Clark",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647918296-Jaylen_Clark_69009ca1be2140c1e254b58f.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "DS/L",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2255,
+        "likes": 4887,
+        "comments": 1052,
+        "engagementRate": 0.21733185513673317,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b506",
+    "firstName": "Perry",
+    "lastName": "Cole Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647913954-Perry_Cole Jr._69009ca1be2140c1e254b506.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1971,
+        "likes": 492,
+        "comments": 82,
+        "engagementRate": 0.06861998985286656,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b515",
+    "firstName": "Travis",
+    "lastName": "Jackson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647926501-Travis_Jackson_69009ca1be2140c1e254b515.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "E",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 882,
+        "likes": 4171,
+        "comments": 170,
+        "engagementRate": 0.7031098153547133,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b535",
+    "firstName": "Ryan",
+    "lastName": "Hughes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647923937-Ryan_Hughes_69009ca1be2140c1e254b535.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1802,
+        "likes": 11546,
+        "comments": 317,
+        "engagementRate": 0.5984341210726903,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b523",
+    "firstName": "Blake",
+    "lastName": "Baldwin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647917705-Blake_Baldwin_69009ca1be2140c1e254b523.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2883,
+        "likes": 1091,
+        "comments": 259,
+        "engagementRate": 0.03902185223725286,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b570",
+    "firstName": "Adam",
+    "lastName": "Stewart",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647914796-Adam_Stewart_69009ca1be2140c1e254b570.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "C",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2183,
+        "likes": 2783,
+        "comments": 315,
+        "engagementRate": 0.11177278973889143,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b512",
+    "firstName": "Chad",
+    "lastName": "Woodfork",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647924726-Chad_Woodfork_69009ca1be2140c1e254b512.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "E",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b548",
+    "firstName": "Jon",
+    "lastName": "Denman",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647919257-Jon_Denman_69009ca1be2140c1e254b548.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1022,
+        "likes": 6,
+        "comments": 30,
+        "engagementRate": 0.01761252446183953,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b509",
+    "firstName": "Kelten",
+    "lastName": "Mickell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647924679-Kelten_Mickell_69009ca1be2140c1e254b509.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1617,
+        "likes": 15,
+        "comments": 170,
+        "engagementRate": 0.022888772733973974,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b51f",
+    "firstName": "Dillon",
+    "lastName": "Arkansas",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647919260-Dillon_Arkansas_69009ca1be2140c1e254b51f.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1311,
+        "likes": 1770,
+        "comments": 71,
+        "engagementRate": 0.35106788710907705,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b50c",
+    "firstName": "Brody",
+    "lastName": "Whatley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647923914-Brody_Whatley_69009ca1be2140c1e254b50c.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6117,
+        "likes": 5222,
+        "comments": 48,
+        "engagementRate": 0.4335263468857961,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b50a",
+    "firstName": "Floyd",
+    "lastName": "Guidry",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647915976-Floyd_Guidry_69009ca1be2140c1e254b50a.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1567,
+        "likes": 3834,
+        "comments": 212,
+        "engagementRate": 0.21494308340470056,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b567",
+    "firstName": "Dane",
+    "lastName": "Jones",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647920834-Dane_Jones_69009ca1be2140c1e254b567.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3000,
+        "likes": 21167,
+        "comments": 417,
+        "engagementRate": 0.47929371243131613,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b545",
+    "firstName": "Jacob",
+    "lastName": "Porter",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647919249-Jacob_Porter_69009ca1be2140c1e254b545.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1866,
+        "likes": 5930,
+        "comments": 556,
+        "engagementRate": 0.2896570203644159,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b533",
+    "firstName": "Wesley",
+    "lastName": "Harvey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647921419-Wesley_Harvey_69009ca1be2140c1e254b533.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 958,
+        "likes": 1001,
+        "comments": 81,
+        "engagementRate": 0.3764787752261656,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b543",
+    "firstName": "Adam",
+    "lastName": "Schobel",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647916564-Adam_Schobel_69009ca1be2140c1e254b543.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3205,
+        "likes": 16694,
+        "comments": 282,
+        "engagementRate": 0.44139365574622985,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b530",
+    "firstName": "Dylan",
+    "lastName": "Kinney",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647922680-Dylan_Kinney_69009ca1be2140c1e254b530.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 811,
+        "likes": 1234,
+        "comments": 59,
+        "engagementRate": 0.39858199753390877,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b551",
+    "firstName": "Devyn",
+    "lastName": "Hidrogo",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647920699-Devyn_Hidrogo_69009ca1be2140c1e254b551.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 981,
+        "likes": 4165,
+        "comments": 106,
+        "engagementRate": 0.6219600990243191,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b583",
+    "firstName": "Emily",
+    "lastName": "Hunter",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647922052-Emily_Hunter_69009ca1be2140c1e254b583.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "C",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 249,
+        "likes": 448,
+        "comments": 15,
+        "engagementRate": 1.859437751004016,
+        "contentCount": 1,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b4f6",
+    "firstName": "Louis",
+    "lastName": "Rodriguez",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647916742-Louis_Rodriguez_69009ca1be2140c1e254b4f6.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2374,
+        "likes": 13964,
+        "comments": 135,
+        "engagementRate": 0.4949101376017972,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b56f",
+    "firstName": "Sutton",
+    "lastName": "Lee",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647916827-Sutton_Lee_69009ca1be2140c1e254b56f.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1004,
+        "likes": 1538,
+        "comments": 137,
+        "engagementRate": 0.15166606302064467,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b4e9",
+    "firstName": "Jack",
+    "lastName": "Bell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647917663-Jack_Bell_69009ca1be2140c1e254b4e9.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3750,
+        "likes": 13484,
+        "comments": 261,
+        "engagementRate": 0.30544444444444446,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b4f9",
+    "firstName": "Tommy",
+    "lastName": "LaPour",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647918174-Tommy_LaPour_69009ca1be2140c1e254b4f9.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2738,
+        "likes": 10281,
+        "comments": 151,
+        "engagementRate": 0.3463709409655356,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b527",
+    "firstName": "Aaron",
+    "lastName": "Bowers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647922664-Aaron_Bowers_69009ca1be2140c1e254b527.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LS",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 870,
+        "likes": 1154,
+        "comments": 24,
+        "engagementRate": 0.2708045977011494,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b4ec",
+    "firstName": "Colton",
+    "lastName": "Griffin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647920032-Colton_Griffin_69009ca1be2140c1e254b4ec.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1290,
+        "likes": 4107,
+        "comments": 148,
+        "engagementRate": 0.5497416020671836,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b550",
+    "firstName": "Ryan",
+    "lastName": "Yaites",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647926483-Ryan_Yaites_69009ca1be2140c1e254b550.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3715,
+        "likes": 44969,
+        "comments": 788,
+        "engagementRate": 1.026401973979363,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b566",
+    "firstName": "Braylon",
+    "lastName": "James",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647921996-Braylon_James_69009ca1be2140c1e254b566.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8229,
+        "likes": 44639,
+        "comments": 1438,
+        "engagementRate": 0.5599343784177907,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b511",
+    "firstName": "Micheal",
+    "lastName": "Ibukun-Okeyode",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647922060-Micheal_Ibukun-Okeyode_69009ca1be2140c1e254b511.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "E",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4333,
+        "likes": 1968,
+        "comments": 877,
+        "engagementRate": 0.05968990621656211,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b518",
+    "firstName": "Jared",
+    "lastName": "Martin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647923292-Jared_Martin_69009ca1be2140c1e254b518.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "E",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1356,
+        "likes": 4851,
+        "comments": 285,
+        "engagementRate": 0.5398230088495576,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b539",
+    "firstName": "Rasheed",
+    "lastName": "Jackson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647922004-Rasheed_Jackson_69009ca1be2140c1e254b539.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 389,
+        "likes": 235,
+        "comments": 31,
+        "engagementRate": 0.6838046272493573,
+        "contentCount": 1,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b53d",
+    "firstName": "Kyle",
+    "lastName": "Lemmermann",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647921392-Kyle_Lemmermann_69009ca1be2140c1e254b53d.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "PK",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6008,
+        "likes": 8195,
+        "comments": 335,
+        "engagementRate": 0.11831446959609411,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b4f7",
+    "firstName": "Kade",
+    "lastName": "Durnin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647925285-Kade_Durnin_69009ca1be2140c1e254b4f7.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1240,
+        "likes": 1858,
+        "comments": 56,
+        "engagementRate": 0.3858870967741936,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b56b",
+    "firstName": "Dozie",
+    "lastName": "Ezukanma",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647915873-Dozie_Ezukanma_69009ca1be2140c1e254b56b.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2612,
+        "likes": 3082,
+        "comments": 196,
+        "engagementRate": 0.20507912200102094,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b59d",
+    "firstName": "Reese",
+    "lastName": "Wilburn",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647924731-Reese_Wilburn_69009ca1be2140c1e254b59d.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 605,
+        "likes": 2652,
+        "comments": 148,
+        "engagementRate": 0.38567493112947654,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009ca1be2140c1e254b553",
+    "firstName": "Kylin",
+    "lastName": "Jackson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647924697-Kylin_Jackson_69009ca1be2140c1e254b553.png",
+    "schoolName": "Texas Christian University",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 619,
+        "likes": 536,
+        "comments": 37,
+        "engagementRate": 0.925686591276252,
+        "contentCount": 1,
+        "marketability": 0
+      }
+    }
+  }
+]

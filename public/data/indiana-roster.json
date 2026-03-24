@@ -1,0 +1,3593 @@
+[
+  {
+    "_id": "69023e096c94a2dace30538a",
+    "firstName": "Evan",
+    "lastName": "Lawrence",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754767268-Evan_Lawrence_69023e096c94a2dace30538a.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 975,
+        "likes": 2166,
+        "comments": 191,
+        "engagementRate": 0.2131468531468532,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305349",
+    "firstName": "Byron",
+    "lastName": "Baldwin Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754776428-Byron_Baldwin Jr._69023e096c94a2dace305349.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9929,
+        "likes": 74950,
+        "comments": 2003,
+        "engagementRate": 0.34738005787299214,
+        "contentCount": 23,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305355",
+    "firstName": "Bryson",
+    "lastName": "Bonds",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754768082-Bryson_Bonds_69023e096c94a2dace305355.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2379,
+        "likes": 8351,
+        "comments": 412,
+        "engagementRate": 0.2651256632228943,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305358",
+    "firstName": "Garrett",
+    "lastName": "Reese",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754781748-Garrett_Reese_69023e096c94a2dace305358.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5073,
+        "likes": 31883,
+        "comments": 1079,
+        "engagementRate": 0.36509903424727663,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053d8",
+    "firstName": "Maya",
+    "lastName": "Makalusky",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754773774-Maya_Makalusky_69023e096c94a2dace3053d8.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "FORWARD",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4920,
+        "likes": 22926,
+        "comments": 756,
+        "engagementRate": 0.20282509869029888,
+        "contentCount": 24,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053f3",
+    "firstName": "Luca",
+    "lastName": "Fickell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754769214-Luca_Fickell_69023e096c94a2dace3053f3.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5150,
+        "likes": 14127,
+        "comments": 601,
+        "engagementRate": 0.09240777958064673,
+        "contentCount": 31,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053a5",
+    "firstName": "Davion",
+    "lastName": "Chandler",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754774358-Davion_Chandler_69023e096c94a2dace3053a5.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 14721,
+        "likes": 24960,
+        "comments": 764,
+        "engagementRate": 0.19415951512955795,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30539a",
+    "firstName": "Khobie",
+    "lastName": "Martin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754771931-Khobie_Martin_69023e096c94a2dace30539a.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5631,
+        "likes": 29617,
+        "comments": 897,
+        "engagementRate": 0.27904794929212934,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30534b",
+    "firstName": "D'Angelo",
+    "lastName": "Ponds",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754779586-D'Angelo_Ponds_69023e096c94a2dace30534b.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12117,
+        "likes": 67784,
+        "comments": 5617,
+        "engagementRate": 0.08081088144315146,
+        "contentCount": 24,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053ea",
+    "firstName": "Victoria",
+    "lastName": "Gray",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754778830-Victoria_Gray_69023e096c94a2dace3053ea.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3651,
+        "likes": 22962,
+        "comments": 1406,
+        "engagementRate": 0.24495833192894095,
+        "contentCount": 28,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305362",
+    "firstName": "Quentin",
+    "lastName": "Clark",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754769053-Quentin_Clark_69023e096c94a2dace305362.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1670,
+        "likes": 7733,
+        "comments": 588,
+        "engagementRate": 0.19766435268305507,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053ed",
+    "firstName": "Charlotte",
+    "lastName": "Vinson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754772754-Charlotte_Vinson_69023e096c94a2dace3053ed.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3540,
+        "likes": 14865,
+        "comments": 595,
+        "engagementRate": 0.2212075962403814,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053e6",
+    "firstName": "Hannah",
+    "lastName": "Leftridge",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754778010-Hannah_Leftridge_69023e096c94a2dace3053e6.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "DS",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4186,
+        "likes": 20713,
+        "comments": 1439,
+        "engagementRate": 0.3422490877312893,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053e9",
+    "firstName": "Ava",
+    "lastName": "Vickers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754772049-Ava_Vickers_69023e096c94a2dace3053e9.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6644,
+        "likes": 13395,
+        "comments": 589,
+        "engagementRate": 0.07132989143972829,
+        "contentCount": 30,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30534c",
+    "firstName": "Louis",
+    "lastName": "Moore",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754779635-Louis_Moore_69023e096c94a2dace30534c.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3276,
+        "likes": 10781,
+        "comments": 1089,
+        "engagementRate": 0.3704390137225958,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053d3",
+    "firstName": "Aly",
+    "lastName": "VanBrandt",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754780286-Aly_VanBrandt_69023e096c94a2dace3053d3.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "UT",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1168,
+        "likes": 8066,
+        "comments": 253,
+        "engagementRate": 0.44664126130713944,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305372",
+    "firstName": "Bryce",
+    "lastName": "Taylor",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754781695-Bryce_Taylor_69023e096c94a2dace305372.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "K",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 13278,
+        "likes": 9115,
+        "comments": 485,
+        "engagementRate": 0.04016326191129308,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305388",
+    "firstName": "Kahlil",
+    "lastName": "Benson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754774283-Kahlil_Benson_69023e096c94a2dace305388.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7788,
+        "likes": 133516,
+        "comments": 2198,
+        "engagementRate": 0.9184815400216341,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053a2",
+    "firstName": "Jonathan",
+    "lastName": "Brady",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754780946-Jonathan_Brady_69023e096c94a2dace3053a2.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7810,
+        "likes": 22583,
+        "comments": 811,
+        "engagementRate": 0.2611822515756,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053bb",
+    "firstName": "Conor",
+    "lastName": "Enright",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754770098-Conor_Enright_69023e096c94a2dace3053bb.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7978,
+        "likes": 21778,
+        "comments": 650,
+        "engagementRate": 0.18423463701376142,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053cf",
+    "firstName": "Megan",
+    "lastName": "Gregory",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754772931-Megan_Gregory_69023e096c94a2dace3053cf.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "P",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2304,
+        "likes": 10360,
+        "comments": 643,
+        "engagementRate": 0.16286737949119826,
+        "contentCount": 30,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053d2",
+    "firstName": "Aubree",
+    "lastName": "Hooks",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754773530-Aubree_Hooks_69023e096c94a2dace3053d2.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "P/1B",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2570,
+        "likes": 8261,
+        "comments": 729,
+        "engagementRate": 0.21198361170697796,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30535d",
+    "firstName": "Mikail",
+    "lastName": "Kamara",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754769988-Mikail_Kamara_69023e096c94a2dace30535d.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8804,
+        "likes": 53875,
+        "comments": 1067,
+        "engagementRate": 0.2115803293245966,
+        "contentCount": 32,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053bd",
+    "firstName": "Nick",
+    "lastName": "Dorn",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754777301-Nick_Dorn_69023e096c94a2dace3053bd.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8558,
+        "likes": 372180,
+        "comments": 1682,
+        "engagementRate": 1.6900802853403714,
+        "contentCount": 29,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305386",
+    "firstName": "Carter",
+    "lastName": "Smith",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754769888-Carter_Smith_69023e096c94a2dace305386.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11991,
+        "likes": 88199,
+        "comments": 1103,
+        "engagementRate": 0.259893925794915,
+        "contentCount": 29,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053a7",
+    "firstName": "E.J.",
+    "lastName": "Williams Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754776480-E.J._Williams Jr._69023e096c94a2dace3053a7.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 18194,
+        "likes": 49589,
+        "comments": 1775,
+        "engagementRate": 0.1142062910136654,
+        "contentCount": 25,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053b5",
+    "firstName": "Josh",
+    "lastName": "Harris",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754768216-Josh_Harris_69023e096c94a2dace3053b5.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "FORWARD",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6582,
+        "likes": 23575,
+        "comments": 688,
+        "engagementRate": 0.24550993623147627,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053b2",
+    "firstName": "Andrej",
+    "lastName": "Acimovic",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754777249-Andrej_Acimovic_69023e096c94a2dace3053b2.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "CENTER",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 82,
+        "engagementRate": 0,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053e2",
+    "firstName": "Shay",
+    "lastName": "Ciezki",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754772914-Shay_Ciezki_69023e096c94a2dace3053e2.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8488,
+        "likes": 25075,
+        "comments": 838,
+        "engagementRate": 0.15624406683178957,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053d9",
+    "firstName": "Edessa",
+    "lastName": "Noyan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754771084-Edessa_Noyan_69023e096c94a2dace3053d9.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "FORWARD",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1869,
+        "likes": 13033,
+        "comments": 764,
+        "engagementRate": 0.41313287098999085,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305376",
+    "firstName": "Aiden",
+    "lastName": "Fisher",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754780311-Aiden_Fisher_69023e096c94a2dace305376.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 26735,
+        "likes": 108604,
+        "comments": 1485,
+        "engagementRate": 0.19926732162542712,
+        "contentCount": 27,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305368",
+    "firstName": "J'mari",
+    "lastName": "Monette",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754775111-J'mari_Monette_69023e096c94a2dace305368.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2968,
+        "likes": 2775,
+        "comments": 394,
+        "engagementRate": 0.22679764439363587,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053ba",
+    "firstName": "Lamar",
+    "lastName": "Wilkerson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754778185-Lamar_Wilkerson_69023e096c94a2dace3053ba.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9535,
+        "likes": 44156,
+        "comments": 731,
+        "engagementRate": 0.20434692860958292,
+        "contentCount": 24,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053ec",
+    "firstName": "Candela",
+    "lastName": "Alonso-Corcelles",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754775113-Candela_Alonso-Corcelles_69023e096c94a2dace3053ec.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2871,
+        "likes": 16709,
+        "comments": 422,
+        "engagementRate": 0.21037924457685142,
+        "contentCount": 29,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305350",
+    "firstName": "Jah",
+    "lastName": "Jah Boyd",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754778143-Jah_Jah Boyd_69023e096c94a2dace305350.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5020,
+        "likes": 8279,
+        "comments": 751,
+        "engagementRate": 0.26168547602092057,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30533b",
+    "firstName": "Jake",
+    "lastName": "Hanley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754777207-Jake_Hanley_69023e096c94a2dace30533b.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3669,
+        "likes": 24285,
+        "comments": 311,
+        "engagementRate": 0.23425364492235798,
+        "contentCount": 29,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053e4",
+    "firstName": "Chloe",
+    "lastName": "Spreen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754771072-Chloe_Spreen_69023e096c94a2dace3053e4.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 93445,
+        "likes": 161639,
+        "comments": 1434,
+        "engagementRate": 0.07265697174668476,
+        "contentCount": 24,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30533a",
+    "firstName": "Cooper",
+    "lastName": "Malamazian",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754768148-Cooper_Malamazian_69023e096c94a2dace30533a.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2212,
+        "likes": 9475,
+        "comments": 577,
+        "engagementRate": 0.3252216552629645,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053d1",
+    "firstName": "Ella",
+    "lastName": "Troutt",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754772005-Ella_Troutt_69023e096c94a2dace3053d1.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "P",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2285,
+        "likes": 9439,
+        "comments": 519,
+        "engagementRate": 0.27244919422605895,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053c9",
+    "firstName": "Hannah",
+    "lastName": "Haberstroh",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754776647-Hannah_Haberstroh_69023e096c94a2dace3053c9.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1126,
+        "likes": 18,
+        "comments": 543,
+        "engagementRate": 0.014495789971429822,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30539f",
+    "firstName": "James",
+    "lastName": "Bomba",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754772773-James_Bomba_69023e096c94a2dace30539f.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2939,
+        "likes": 8795,
+        "comments": 450,
+        "engagementRate": 0.16800918261283865,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305360",
+    "firstName": "Daniel",
+    "lastName": "Ndukwe",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754776453-Daniel_Ndukwe_69023e096c94a2dace305360.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7284,
+        "likes": 4230,
+        "comments": 1563,
+        "engagementRate": 0.05515513454146073,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30539e",
+    "firstName": "Riley",
+    "lastName": "Nowakowski",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754777987-Riley_Nowakowski_69023e096c94a2dace30539e.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6280,
+        "likes": 7755,
+        "comments": 589,
+        "engagementRate": 0.08523855739466933,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053b6",
+    "firstName": "Trent",
+    "lastName": "Sisley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754781744-Trent_Sisley_69023e096c94a2dace3053b6.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "FORWARD",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12308,
+        "likes": 78114,
+        "comments": 414,
+        "engagementRate": 0.356568205877551,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053b3",
+    "firstName": "Reed",
+    "lastName": "Bailey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754775886-Reed_Bailey_69023e096c94a2dace3053b3.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "FORWARD",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4800,
+        "likes": 34341,
+        "comments": 441,
+        "engagementRate": 0.4505542640628374,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053a9",
+    "firstName": "Elijah",
+    "lastName": "Sarratt",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754775783-Elijah_Sarratt_69023e096c94a2dace3053a9.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12392,
+        "likes": 183488,
+        "comments": 3334,
+        "engagementRate": 0.27080474848754366,
+        "contentCount": 23,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305366",
+    "firstName": "Jhrevious",
+    "lastName": "Hall",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754775808-Jhrevious_Hall_69023e096c94a2dace305366.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1948,
+        "likes": 2239,
+        "comments": 68,
+        "engagementRate": 0.29607289527720737,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053f0",
+    "firstName": "Audrey",
+    "lastName": "Jackson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754777205-Audrey_Jackson_69023e096c94a2dace3053f0.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH/DS",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3168,
+        "likes": 9274,
+        "comments": 593,
+        "engagementRate": 0.23959479501541114,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053c8",
+    "firstName": "Madalyn",
+    "lastName": "Strader",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754778131-Madalyn_Strader_69023e096c94a2dace3053c8.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 612,
+        "likes": 4159,
+        "comments": 255,
+        "engagementRate": 0.45385039754733497,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30534f",
+    "firstName": "Devan",
+    "lastName": "Boykin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754778821-Devan_Boykin_69023e096c94a2dace30534f.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6368,
+        "likes": 29994,
+        "comments": 1005,
+        "engagementRate": 0.21902958670905548,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053b4",
+    "firstName": "Sam",
+    "lastName": "Alexis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754771122-Sam_Alexis_69023e096c94a2dace3053b4.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "FORWARD",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8517,
+        "likes": 39487,
+        "comments": 3071,
+        "engagementRate": 0.24002726947573452,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305353",
+    "firstName": "Jamari",
+    "lastName": "Sharpe",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754769040-Jamari_Sharpe_69023e096c94a2dace305353.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2902,
+        "likes": 7213,
+        "comments": 1379,
+        "engagementRate": 0.11805349760891999,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305369",
+    "firstName": "Dominique",
+    "lastName": "Ratcliff",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754780250-Dominique_Ratcliff_69023e096c94a2dace305369.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1184,
+        "likes": 2310,
+        "comments": 173,
+        "engagementRate": 0.30969584026153374,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053a4",
+    "firstName": "Omar",
+    "lastName": "Cooper Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754771772-Omar_Cooper Jr._69023e096c94a2dace3053a4.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 22958,
+        "likes": 266222,
+        "comments": 3637,
+        "engagementRate": 0.4793016268674268,
+        "contentCount": 25,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053b0",
+    "firstName": "Bruno",
+    "lastName": "Massel IV",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754769011-Bruno_Massel IV_69023e096c94a2dace3053b0.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1148,
+        "likes": 3748,
+        "comments": 347,
+        "engagementRate": 0.5945121951219512,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053c3",
+    "firstName": "Josie",
+    "lastName": "Bird",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754770118-Josie_Bird_69023e096c94a2dace3053c3.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "C/INF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1127,
+        "likes": 6,
+        "comments": 361,
+        "engagementRate": 0.003992901508429459,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305371",
+    "firstName": "Brendan",
+    "lastName": "Franke",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754780424-Brendan_Franke_69023e096c94a2dace305371.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "K",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4926,
+        "likes": 22184,
+        "comments": 424,
+        "engagementRate": 0.24633877167962304,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053ce",
+    "firstName": "Jasmine",
+    "lastName": "Reyes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754775820-Jasmine_Reyes_69023e096c94a2dace3053ce.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "P",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1171,
+        "likes": 5531,
+        "comments": 427,
+        "engagementRate": 0.35229002038645846,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053c4",
+    "firstName": "Alli",
+    "lastName": "Gavin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754775828-Alli_Gavin_69023e096c94a2dace3053c4.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "C/UT",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 588,
+        "likes": 6,
+        "comments": 422,
+        "engagementRate": 0.010811467444120506,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053d5",
+    "firstName": "Caroline",
+    "lastName": "Gunderson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754773509-Caroline_Gunderson_69023e096c94a2dace3053d5.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "UT",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1262,
+        "likes": 6,
+        "comments": 304,
+        "engagementRate": 0.0009904912836767037,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305387",
+    "firstName": "Evan",
+    "lastName": "Parker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754777331-Evan_Parker_69023e096c94a2dace305387.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1706,
+        "likes": 4953,
+        "comments": 258,
+        "engagementRate": 0.5090855803048066,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305399",
+    "firstName": "Sean",
+    "lastName": "Cuono",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754770906-Sean_Cuono_69023e096c94a2dace305399.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10088,
+        "likes": 8802,
+        "comments": 647,
+        "engagementRate": 0.07027296541694925,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053ab",
+    "firstName": "Ace",
+    "lastName": "Ciongoli",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754773455-Ace_Ciongoli_69023e096c94a2dace3053ab.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1652,
+        "likes": 9234,
+        "comments": 421,
+        "engagementRate": 0.5312018489984592,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305395",
+    "firstName": "Alberto",
+    "lastName": "Mendoza",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754778007-Alberto_Mendoza_69023e096c94a2dace305395.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 108370,
+        "likes": 500355,
+        "comments": 4153,
+        "engagementRate": 0.26884367298483,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305392",
+    "firstName": "Jacob",
+    "lastName": "Bell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754774377-Jacob_Bell_69023e096c94a2dace305392.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4281,
+        "likes": 27440,
+        "comments": 853,
+        "engagementRate": 0.36687609736191024,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30538f",
+    "firstName": "Pat",
+    "lastName": "Coogan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754774413-Pat_Coogan_69023e096c94a2dace30538f.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 18658,
+        "likes": 96600,
+        "comments": 1230,
+        "engagementRate": 0.35175236089923867,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053f2",
+    "firstName": "Avery",
+    "lastName": "Daum",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754773634-Avery_Daum_69023e096c94a2dace3053f2.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OPP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2742,
+        "likes": 6423,
+        "comments": 1047,
+        "engagementRate": 0.17649871452175742,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305397",
+    "firstName": "Kaelon",
+    "lastName": "Black",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754767239-Kaelon_Black_69023e096c94a2dace305397.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11318,
+        "likes": 35927,
+        "comments": 1155,
+        "engagementRate": 0.13306488916365664,
+        "contentCount": 25,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305374",
+    "firstName": "Quinn",
+    "lastName": "Warren",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754769033-Quinn_Warren_69023e096c94a2dace305374.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "K",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4293,
+        "likes": 17414,
+        "comments": 1595,
+        "engagementRate": 0.3039773291673553,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053ad",
+    "firstName": "Charlie",
+    "lastName": "Becker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754773478-Charlie_Becker_69023e096c94a2dace3053ad.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 72165,
+        "likes": 90811,
+        "comments": 3014,
+        "engagementRate": 0.0803308670469425,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30537e",
+    "firstName": "Clayton",
+    "lastName": "Allen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754775023-Clayton_Allen_69023e096c94a2dace30537e.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1772,
+        "likes": 2308,
+        "comments": 159,
+        "engagementRate": 0.46407072987208425,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053aa",
+    "firstName": "Jackson",
+    "lastName": "Wasserstrom",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754781036-Jackson_Wasserstrom_69023e096c94a2dace3053aa.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3035,
+        "likes": 9943,
+        "comments": 631,
+        "engagementRate": 0.23660425429173912,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30539d",
+    "firstName": "Holden",
+    "lastName": "Staes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754775945-Holden_Staes_69023e096c94a2dace30539d.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10182,
+        "likes": 28055,
+        "comments": 1124,
+        "engagementRate": 0.1770438856749862,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053a1",
+    "firstName": "Andrew",
+    "lastName": "Barker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754771852-Andrew_Barker_69023e096c94a2dace3053a1.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1213,
+        "likes": 6796,
+        "comments": 221,
+        "engagementRate": 0.34647338584110243,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30535e",
+    "firstName": "Stephen",
+    "lastName": "Daley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754775725-Stephen_Daley_69023e096c94a2dace30535e.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1769,
+        "likes": 32,
+        "comments": 322,
+        "engagementRate": 0.002584187999676976,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30537b",
+    "firstName": "Kaden",
+    "lastName": "McConnell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754768129-Kaden_McConnell_69023e096c94a2dace30537b.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1533,
+        "likes": 2242,
+        "comments": 399,
+        "engagementRate": 0.1170263987438341,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30534e",
+    "firstName": "Ryland",
+    "lastName": "Gandy",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754771737-Ryland_Gandy_69023e096c94a2dace30534e.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2892,
+        "likes": 2041,
+        "comments": 675,
+        "engagementRate": 0.05202436975530228,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30537f",
+    "firstName": "Sam",
+    "lastName": "Lindsey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754780938-Sam_Lindsey_69023e096c94a2dace30537f.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "LS",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1529,
+        "likes": 4752,
+        "comments": 401,
+        "engagementRate": 0.33701765860039246,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053dc",
+    "firstName": "Faith",
+    "lastName": "Wiseman",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754768197-Faith_Wiseman_69023e096c94a2dace3053dc.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "FORWARD",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4142,
+        "likes": 9131,
+        "comments": 865,
+        "engagementRate": 0.16788411811519216,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30538c",
+    "firstName": "Bray",
+    "lastName": "Lynch",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754779554-Bray_Lynch_69023e096c94a2dace30538c.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5899,
+        "likes": 1117,
+        "comments": 616,
+        "engagementRate": 0.011618570654389194,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305359",
+    "firstName": "Clay",
+    "lastName": "Conner",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754780966-Clay_Conner_69023e096c94a2dace305359.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2312,
+        "likes": 926,
+        "comments": 432,
+        "engagementRate": 0.02686639818778638,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053a6",
+    "firstName": "Lebron",
+    "lastName": "Bond",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754770881-Lebron_Bond_69023e096c94a2dace3053a6.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4275,
+        "likes": 9127,
+        "comments": 1181,
+        "engagementRate": 0.14625546041463888,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305357",
+    "firstName": "Anthony",
+    "lastName": "Chung",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754769852-Anthony_Chung_69023e096c94a2dace305357.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1837,
+        "likes": 1309,
+        "comments": 369,
+        "engagementRate": 0.053858604604570294,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30536f",
+    "firstName": "Tyrone",
+    "lastName": "Burrus Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754767249-Tyrone_Burrus Jr._69023e096c94a2dace30536f.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9166,
+        "likes": 2010,
+        "comments": 248,
+        "engagementRate": 0.022114015850194745,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30537a",
+    "firstName": "Jeff",
+    "lastName": "Utzinger",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754770821-Jeff_Utzinger_69023e096c94a2dace30537a.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2413,
+        "likes": 475,
+        "comments": 604,
+        "engagementRate": 0.010680425965040449,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305391",
+    "firstName": "Grant",
+    "lastName": "Wilson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754780241-Grant_Wilson_69023e096c94a2dace305391.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7641,
+        "likes": 6,
+        "comments": 857,
+        "engagementRate": 0.0006466662047622347,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30537c",
+    "firstName": "Amari",
+    "lastName": "Kamara",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754769964-Amari_Kamara_69023e096c94a2dace30537c.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1047,
+        "likes": 3495,
+        "comments": 290,
+        "engagementRate": 0.2780839027257365,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305375",
+    "firstName": "Olubade",
+    "lastName": "Baker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754772040-Olubade_Baker_69023e096c94a2dace305375.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "K/P",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3454,
+        "likes": 5935,
+        "comments": 462,
+        "engagementRate": 0.07355171130209565,
+        "contentCount": 25,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305378",
+    "firstName": "Rolijah",
+    "lastName": "Hardy",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754781717-Rolijah_Hardy_69023e096c94a2dace305378.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1979,
+        "likes": 8010,
+        "comments": 987,
+        "engagementRate": 0.09383679572741334,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30538d",
+    "firstName": "Zen",
+    "lastName": "Michalski",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754778793-Zen_Michalski_69023e096c94a2dace30538d.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9633,
+        "likes": 43801,
+        "comments": 636,
+        "engagementRate": 0.20735288396265641,
+        "contentCount": 27,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305348",
+    "firstName": "Amare",
+    "lastName": "Ferrell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754775037-Amare_Ferrell_69023e096c94a2dace305348.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 711,
+        "engagementRate": 0,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305370",
+    "firstName": "Nico",
+    "lastName": "Radicic",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754780940-Nico_Radicic_69023e096c94a2dace305370.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "K",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4889,
+        "likes": 22762,
+        "comments": 586,
+        "engagementRate": 0.3617433649267726,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30536d",
+    "firstName": "Mario",
+    "lastName": "Landino",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754772691-Mario_Landino_69023e096c94a2dace30536d.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6788,
+        "likes": 32436,
+        "comments": 2107,
+        "engagementRate": 0.3499892513108541,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305390",
+    "firstName": "Mitch",
+    "lastName": "McCarthy",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754781719-Mitch_McCarthy_69023e096c94a2dace305390.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "P",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3167,
+        "likes": 21002,
+        "comments": 766,
+        "engagementRate": 0.2597201518474778,
+        "contentCount": 27,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053af",
+    "firstName": "Hunter",
+    "lastName": "Stroud",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754781710-Hunter_Stroud_69023e096c94a2dace3053af.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1375,
+        "likes": 2879,
+        "comments": 228,
+        "engagementRate": 0.17104609771499404,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305384",
+    "firstName": "Drew",
+    "lastName": "Evans",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754769985-Drew_Evans_69023e096c94a2dace305384.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1379,
+        "likes": 3318,
+        "comments": 130,
+        "engagementRate": 0.2113505725340067,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053e0",
+    "firstName": "Lenée",
+    "lastName": "Beaumont",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754767243-LenÃ©e_Beaumont_69023e096c94a2dace3053e0.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6271,
+        "likes": 20261,
+        "comments": 887,
+        "engagementRate": 0.16183111981910184,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30535f",
+    "firstName": "Kellan",
+    "lastName": "Wyatt",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754777194-Kellan_Wyatt_69023e096c94a2dace30535f.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2593,
+        "likes": 2052,
+        "comments": 143,
+        "engagementRate": 0.14108497236148607,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30538e",
+    "firstName": "Matt",
+    "lastName": "Marek",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754782391-Matt_Marek_69023e096c94a2dace30538e.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1756,
+        "likes": 7992,
+        "comments": 333,
+        "engagementRate": 0.39507403189066065,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053cd",
+    "firstName": "Peyton",
+    "lastName": "Drummond",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754775095-Peyton_Drummond_69023e096c94a2dace3053cd.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2357,
+        "likes": 8257,
+        "comments": 375,
+        "engagementRate": 0.20561678009800144,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30539b",
+    "firstName": "Lee",
+    "lastName": "Beebe Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754775160-Lee_Beebe Jr._69023e096c94a2dace30539b.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2242,
+        "likes": 8744,
+        "comments": 344,
+        "engagementRate": 0.19290670286690853,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053cb",
+    "firstName": "Cassidy",
+    "lastName": "Kettleman",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754775802-Cassidy_Kettleman_69023e096c94a2dace3053cb.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 794,
+        "likes": 2609,
+        "comments": 197,
+        "engagementRate": 0.23547575908705437,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30534a",
+    "firstName": "Jaylen",
+    "lastName": "Bell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754767271-Jaylen_Bell_69023e096c94a2dace30534a.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11928,
+        "likes": 37411,
+        "comments": 1442,
+        "engagementRate": 0.21869825150422287,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053ef",
+    "firstName": "Jaidyn",
+    "lastName": "Jager",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754776579-Jaidyn_Jager_69023e096c94a2dace3053ef.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2000,
+        "likes": 9280,
+        "comments": 396,
+        "engagementRate": 0.22931329448396037,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305352",
+    "firstName": "Dontrae",
+    "lastName": "Henderson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754769171-Dontrae_Henderson_69023e096c94a2dace305352.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4027,
+        "likes": 17719,
+        "comments": 776,
+        "engagementRate": 0.4614296420653511,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305377",
+    "firstName": "Kaiden",
+    "lastName": "Turner",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754769024-Kaiden_Turner_69023e096c94a2dace305377.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4161,
+        "likes": 4087,
+        "comments": 1120,
+        "engagementRate": 0.045092730688930674,
+        "contentCount": 23,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30533f",
+    "firstName": "Cole",
+    "lastName": "Decker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754771102-Cole_Decker_69023e096c94a2dace30533f.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASEBALL",
+    "position": "OF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1594,
+        "likes": 6170,
+        "comments": 342,
+        "engagementRate": 0.3148471781587902,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053c5",
+    "firstName": "Avery",
+    "lastName": "Parker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754768236-Avery_Parker_69023e096c94a2dace3053c5.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "C/UT",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2034,
+        "likes": 3126,
+        "comments": 238,
+        "engagementRate": 0.07988388867688716,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053f1",
+    "firstName": "Avry",
+    "lastName": "Tatum",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754779570-Avry_Tatum_69023e096c94a2dace3053f1.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OPP",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3374,
+        "likes": 19539,
+        "comments": 733,
+        "engagementRate": 0.22626747165516406,
+        "contentCount": 27,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053c6",
+    "firstName": "Maddie",
+    "lastName": "Engle",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754774427-Maddie_Engle_69023e096c94a2dace3053c6.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "C/UT",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 739,
+        "likes": 652,
+        "comments": 380,
+        "engagementRate": 0.09012178619756428,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053eb",
+    "firstName": "Ella",
+    "lastName": "Boersema",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754780994-Ella_Boersema_69023e096c94a2dace3053eb.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1923,
+        "likes": 9232,
+        "comments": 131,
+        "engagementRate": 0.24360769367483562,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053c7",
+    "firstName": "Savannah",
+    "lastName": "Oden",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754773549-Savannah_Oden_69023e096c94a2dace3053c7.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "C/UT",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 540,
+        "likes": 694,
+        "comments": 73,
+        "engagementRate": 0.282714916751614,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053da",
+    "firstName": "Zania",
+    "lastName": "Socka-Nguemen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754778077-Zania_Socka-Nguemen_69023e096c94a2dace3053da.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "FORWARD",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2725,
+        "likes": 3932,
+        "comments": 391,
+        "engagementRate": 0.1888990825688073,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053d6",
+    "firstName": "Josie",
+    "lastName": "White",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754781107-Josie_White_69023e096c94a2dace3053d6.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "UT",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1086,
+        "likes": 2279,
+        "comments": 233,
+        "engagementRate": 0.28913443830570906,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053ca",
+    "firstName": "Jada",
+    "lastName": "Ellison",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754775091-Jada_Ellison_69023e096c94a2dace3053ca.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 432,
+        "likes": 2070,
+        "comments": 431,
+        "engagementRate": 0.482445987654321,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053cc",
+    "firstName": "Nevaeh",
+    "lastName": "Nash",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754768184-Nevaeh_Nash_69023e096c94a2dace3053cc.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1106,
+        "likes": 4097,
+        "comments": 711,
+        "engagementRate": 0.29027735232342,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30536b",
+    "firstName": "Tyrique",
+    "lastName": "Tucker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754774273-Tyrique_Tucker_69023e096c94a2dace30536b.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 13902,
+        "likes": 4965,
+        "comments": 953,
+        "engagementRate": 0.02393676959179846,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305396",
+    "firstName": "Roman",
+    "lastName": "Hemby",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754777321-Roman_Hemby_69023e096c94a2dace305396.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 17647,
+        "likes": 168415,
+        "comments": 2047,
+        "engagementRate": 0.524081574725604,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053d7",
+    "firstName": "Alex",
+    "lastName": "Cooper",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754778178-Alex_Cooper_69023e096c94a2dace3053d7.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "UT",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3830,
+        "likes": 17319,
+        "comments": 397,
+        "engagementRate": 0.2551861206326941,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30533d",
+    "firstName": "Anthony",
+    "lastName": "Gubitosi",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754778913-Anthony_Gubitosi_69023e096c94a2dace30533d.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2783,
+        "likes": 3906,
+        "comments": 314,
+        "engagementRate": 0.12636243861540306,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053d0",
+    "firstName": "Taylor",
+    "lastName": "Hess",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754772723-Taylor_Hess_69023e096c94a2dace3053d0.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "P",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1482,
+        "likes": 1331,
+        "comments": 306,
+        "engagementRate": 0.05100369920314518,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053d4",
+    "firstName": "Brooke",
+    "lastName": "Mannon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754775077-Brooke_Mannon_69023e096c94a2dace3053d4.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "SOFTBALL",
+    "position": "UT",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1941,
+        "likes": 17862,
+        "comments": 447,
+        "engagementRate": 0.6738533097859635,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30533e",
+    "firstName": "Caleb",
+    "lastName": "Koskie",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754779010-Caleb_Koskie_69023e096c94a2dace30533e.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP/OF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2218,
+        "likes": 11986,
+        "comments": 546,
+        "engagementRate": 0.3768267596011751,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305338",
+    "firstName": "Brayden",
+    "lastName": "Ricketts",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754779030-Brayden_Ricketts_69023e096c94a2dace305338.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASEBALL",
+    "position": "C",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1708,
+        "likes": 944,
+        "comments": 572,
+        "engagementRate": 0.055620608899297416,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305340",
+    "firstName": "Hogan",
+    "lastName": "Denny",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754772635-Hogan_Denny_69023e096c94a2dace305340.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASEBALL",
+    "position": "OF/C",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2164,
+        "likes": 11084,
+        "comments": 251,
+        "engagementRate": 0.23837170026540389,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305345",
+    "firstName": "Jackson",
+    "lastName": "Yarberry",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754779645-Jackson_Yarberry_69023e096c94a2dace305345.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1432,
+        "likes": 5032,
+        "comments": 629,
+        "engagementRate": 0.3593829355002539,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305337",
+    "firstName": "T.J.",
+    "lastName": "Schuyler",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754775812-T.J._Schuyler_69023e096c94a2dace305337.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASEBALL",
+    "position": "C",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2727,
+        "likes": 7018,
+        "comments": 267,
+        "engagementRate": 0.15582624103947307,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30533c",
+    "firstName": "Brayton",
+    "lastName": "Thomas",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754769211-Brayton_Thomas_69023e096c94a2dace30533c.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1816,
+        "likes": 7544,
+        "comments": 394,
+        "engagementRate": 0.33570234512559133,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053e7",
+    "firstName": "Emma",
+    "lastName": "Segal",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754777220-Emma_Segal_69023e096c94a2dace3053e7.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "DS",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2835,
+        "likes": 6120,
+        "comments": 335,
+        "engagementRate": 0.16256360916823695,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305361",
+    "firstName": "Andrew",
+    "lastName": "Turvy",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754768069-Andrew_Turvy_69023e096c94a2dace305361.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2093,
+        "likes": 5442,
+        "comments": 420,
+        "engagementRate": 0.21734623986702742,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053b8",
+    "firstName": "Jasai",
+    "lastName": "Miles",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754779703-Jasai_Miles_69023e096c94a2dace3053b8.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4985,
+        "likes": 63046,
+        "comments": 982,
+        "engagementRate": 0.5843731942465463,
+        "contentCount": 23,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305342",
+    "firstName": "Clayton",
+    "lastName": "Weisheit",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754775177-Clayton_Weisheit_69023e096c94a2dace305342.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 422,
+        "likes": 823,
+        "comments": 97,
+        "engagementRate": 0.4360189573459715,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053e1",
+    "firstName": "Jerni",
+    "lastName": "Kiaku",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754781027-Jerni_Kiaku_69023e096c94a2dace3053e1.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3077,
+        "likes": 148350,
+        "comments": 1835,
+        "engagementRate": 2.2129991907010584,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053dd",
+    "firstName": "Jade",
+    "lastName": "Ondineme",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754775192-Jade_Ondineme_69023e096c94a2dace3053dd.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "FORWARD",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 749,
+        "likes": 2994,
+        "comments": 356,
+        "engagementRate": 0.3446629951865387,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053de",
+    "firstName": "Phoenix",
+    "lastName": "Stotijn",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754781911-Phoenix_Stotijn_69023e096c94a2dace3053de.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12114,
+        "likes": 25497,
+        "comments": 904,
+        "engagementRate": 0.13617674546999897,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053bf",
+    "firstName": "Jordan",
+    "lastName": "Rayford",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754780272-Jordan_Rayford_69023e096c94a2dace3053bf.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2366,
+        "likes": 3125,
+        "comments": 300,
+        "engagementRate": 0.36189771766694845,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053bc",
+    "firstName": "Tayton",
+    "lastName": "Conerway",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754776516-Tayton_Conerway_69023e096c94a2dace3053bc.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6208,
+        "likes": 25333,
+        "comments": 667,
+        "engagementRate": 0.19969795474950447,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053f4",
+    "firstName": "Teodora",
+    "lastName": "Kričković",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754777352-Teodora_KriÄkoviÄ_69023e096c94a2dace3053f4.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1714,
+        "likes": 3740,
+        "comments": 238,
+        "engagementRate": 0.17213414069997862,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053e5",
+    "firstName": "Avery",
+    "lastName": "Freeman",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754771051-Avery_Freeman_69023e096c94a2dace3053e5.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "DS",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1958,
+        "likes": 8159,
+        "comments": 1054,
+        "engagementRate": 0.32349864547138757,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305339",
+    "firstName": "Will",
+    "lastName": "Moore",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754778111-Will_Moore_69023e096c94a2dace305339.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2233,
+        "likes": 3412,
+        "comments": 172,
+        "engagementRate": 0.22928795342588446,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053e8",
+    "firstName": "Madi",
+    "lastName": "Sell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754781039-Madi_Sell_69023e096c94a2dace3053e8.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1921,
+        "likes": 8032,
+        "comments": 398,
+        "engagementRate": 0.3021727024431759,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305373",
+    "firstName": "Josh",
+    "lastName": "Placzek",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754780239-Josh_Placzek_69023e096c94a2dace305373.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "K",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1371,
+        "likes": 2870,
+        "comments": 275,
+        "engagementRate": 0.32770657497134525,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053ae",
+    "firstName": "Myles",
+    "lastName": "Kendrick",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754780216-Myles_Kendrick_69023e096c94a2dace3053ae.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6490,
+        "likes": 6644,
+        "comments": 697,
+        "engagementRate": 0.13552619170781874,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30534d",
+    "firstName": "Seaonta",
+    "lastName": "Stewart Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754776519-Seaonta_Stewart Jr._69023e096c94a2dace30534d.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4421,
+        "likes": 7443,
+        "comments": 566,
+        "engagementRate": 0.30193018170851244,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305398",
+    "firstName": "Solomon",
+    "lastName": "Vanhorse",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754771880-Solomon_Vanhorse_69023e096c94a2dace305398.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2729,
+        "likes": 4794,
+        "comments": 353,
+        "engagementRate": 0.13505203857878456,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053ac",
+    "firstName": "Cade",
+    "lastName": "Kaiser",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754776457-Cade_Kaiser_69023e096c94a2dace3053ac.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 937,
+        "likes": 4778,
+        "comments": 238,
+        "engagementRate": 0.3572939820201518,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305363",
+    "firstName": "Keishaun",
+    "lastName": "Calhoun",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754771920-Keishaun_Calhoun_69023e096c94a2dace305363.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1462,
+        "likes": 3058,
+        "comments": 225,
+        "engagementRate": 0.33788605323483134,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305394",
+    "firstName": "Fernando",
+    "lastName": "Mendoza",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754773552-Fernando_Mendoza_69023e096c94a2dace305394.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 54156,
+        "likes": 190220,
+        "comments": 2361,
+        "engagementRate": 0.3951157561283864,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30537d",
+    "firstName": "Isaiah",
+    "lastName": "Jones",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754780308-Isaiah_Jones_69023e096c94a2dace30537d.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3107,
+        "likes": 8408,
+        "comments": 374,
+        "engagementRate": 0.2355433966312627,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30535a",
+    "firstName": "Heath",
+    "lastName": "Kizer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754777174-Heath_Kizer_69023e096c94a2dace30535a.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1815,
+        "likes": 5267,
+        "comments": 591,
+        "engagementRate": 0.2689623507805326,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053b9",
+    "firstName": "Jason",
+    "lastName": "Drake",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754767281-Jason_Drake_69023e096c94a2dace3053b9.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5928,
+        "likes": 16522,
+        "comments": 633,
+        "engagementRate": 0.1802050619000912,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053c1",
+    "firstName": "Drew",
+    "lastName": "Snively",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754774434-Drew_Snively_69023e096c94a2dace3053c1.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3181,
+        "likes": 8533,
+        "comments": 701,
+        "engagementRate": 0.2181885772698397,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053f5",
+    "firstName": "Sade",
+    "lastName": "Ilawole",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754769160-Sade_Ilawole_69023e096c94a2dace3053f5.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2001,
+        "likes": 1599,
+        "comments": 430,
+        "engagementRate": 0.08449941695818758,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053be",
+    "firstName": "Aleksa",
+    "lastName": "Ristic",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754772623-Aleksa_Ristic_69023e096c94a2dace3053be.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2552,
+        "likes": 26837,
+        "comments": 300,
+        "engagementRate": 1.0633620689655172,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30536c",
+    "firstName": "Triston",
+    "lastName": "Abram",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754781754-Triston_Abram_69023e096c94a2dace30536c.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1678,
+        "likes": 1305,
+        "comments": 296,
+        "engagementRate": 0.061540092074498925,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30539c",
+    "firstName": "Kyler",
+    "lastName": "Kropp",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754779551-Kyler_Kropp_69023e096c94a2dace30539c.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 677,
+        "likes": 1073,
+        "comments": 46,
+        "engagementRate": 0.33057607090103397,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305351",
+    "firstName": "Zacharey",
+    "lastName": "Smith",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754771732-Zacharey_Smith_69023e096c94a2dace305351.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3136,
+        "likes": 7837,
+        "comments": 592,
+        "engagementRate": 0.5375637755102041,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace30536a",
+    "firstName": "Kyler",
+    "lastName": "Garcia",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754776557-Kyler_Garcia_69023e096c94a2dace30536a.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7970,
+        "likes": 3778,
+        "comments": 351,
+        "engagementRate": 0.03253115671947537,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053db",
+    "firstName": "Sydney",
+    "lastName": "Fenn",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754769199-Sydney_Fenn_69023e096c94a2dace3053db.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "FORWARD",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1774,
+        "likes": 1519,
+        "comments": 302,
+        "engagementRate": 0.12085541628735696,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053a8",
+    "firstName": "Tyler",
+    "lastName": "Morris",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754770669-Tyler_Morris_69023e096c94a2dace3053a8.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11152,
+        "likes": 86352,
+        "comments": 1837,
+        "engagementRate": 0.6083006842511864,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305347",
+    "firstName": "Pete",
+    "lastName": "Haas",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754775772-Pete_Haas_69023e096c94a2dace305347.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1301,
+        "likes": 546,
+        "comments": 119,
+        "engagementRate": 0.10588009223674097,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053b1",
+    "firstName": "Camden",
+    "lastName": "Jordan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754769735-Camden_Jordan_69023e096c94a2dace3053b1.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2147,
+        "likes": 2352,
+        "comments": 171,
+        "engagementRate": 0.10187576745564635,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305354",
+    "firstName": "Amariyun",
+    "lastName": "Knighten",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754772579-Amariyun_Knighten_69023e096c94a2dace305354.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1767,
+        "likes": 6,
+        "comments": 0,
+        "engagementRate": 0.0003086896125945362,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053c2",
+    "firstName": "Ian",
+    "lastName": "Stephens",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754774521-Ian_Stephens_69023e096c94a2dace3053c2.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "MENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2876,
+        "likes": 4357,
+        "comments": 283,
+        "engagementRate": 0.22764752632624674,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053e3",
+    "firstName": "Valentyna",
+    "lastName": "Kadlecova",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754773541-Valentyna_Kadlecova_69023e096c94a2dace3053e3.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1805,
+        "likes": 3625,
+        "comments": 75,
+        "engagementRate": 0.14582508903838542,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305383",
+    "firstName": "Baylor",
+    "lastName": "Wilkin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754778778-Baylor_Wilkin_69023e096c94a2dace305383.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1983,
+        "likes": 6622,
+        "comments": 239,
+        "engagementRate": 0.3145372025856141,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305393",
+    "firstName": "Maverick",
+    "lastName": "Geske",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754779564-Maverick_Geske_69023e096c94a2dace305393.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1822,
+        "likes": 3157,
+        "comments": 291,
+        "engagementRate": 0.47310647639956094,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305382",
+    "firstName": "Chance",
+    "lastName": "Johnson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754772744-Chance_Johnson_69023e096c94a2dace305382.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1275,
+        "likes": 3352,
+        "comments": 363,
+        "engagementRate": 0.2648841354723708,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305367",
+    "firstName": "Aden",
+    "lastName": "Cannon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754770855-Aden_Cannon_69023e096c94a2dace305367.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 197,
+        "engagementRate": 0,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace305365",
+    "firstName": "Finn",
+    "lastName": "Walters",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754774276-Finn_Walters_69023e096c94a2dace305365.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 210,
+        "engagementRate": 0,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69023e096c94a2dace3053a3",
+    "firstName": "Makai",
+    "lastName": "Jackson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761754781868-Makai_Jackson_69023e096c94a2dace3053a3.png",
+    "schoolName": "Indiana",
+    "conferenceName": "Big 10",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2369,
+        "likes": 4007,
+        "comments": 39,
+        "engagementRate": 0.8539468130012664,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  }
+]

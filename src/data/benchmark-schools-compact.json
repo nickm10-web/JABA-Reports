@@ -190,6 +190,16 @@
     "brandCount": 132
   },
   {
+    "id": "byu",
+    "shortName": "Brigham Young University(BYU)",
+    "conference": "Big 12",
+    "totalDeals": 282,
+    "totalEMV": 5479408,
+    "avgEngagement": 24.13,
+    "athleteCount": 636,
+    "brandCount": 173
+  },
+  {
     "id": "texas-a-m",
     "shortName": "Texas A&M",
     "conference": "SEC",
@@ -430,16 +440,6 @@
     "brandCount": 72
   },
   {
-    "id": "brigham-young-university-byu",
-    "shortName": "Brigham Young University(BYU)",
-    "conference": "Big 12",
-    "totalDeals": 159,
-    "totalEMV": 3853931,
-    "avgEngagement": 24.93,
-    "athleteCount": 416,
-    "brandCount": 97
-  },
-  {
     "id": "miami",
     "shortName": "Miami",
     "conference": "ACC",
@@ -510,24 +510,14 @@
     "brandCount": 92
   },
   {
-    "id": "kansas-state",
+    "id": "k-state",
     "shortName": "Kansas State",
     "conference": "Big 12",
     "totalDeals": 127,
-    "totalEMV": 1214777,
+    "totalEMV": 1214776.5,
     "avgEngagement": 28.44,
     "athleteCount": 158,
     "brandCount": 68
-  },
-  {
-    "id": "brigham-young-university-byu",
-    "shortName": "Brigham Young University (BYU)",
-    "conference": "Big 12",
-    "totalDeals": 123,
-    "totalEMV": 1625477,
-    "avgEngagement": 22.49,
-    "athleteCount": 220,
-    "brandCount": 84
   },
   {
     "id": "virginia-tech",
@@ -570,7 +560,7 @@
     "brandCount": 61
   },
   {
-    "id": "southern-methodist-university-smu",
+    "id": "smu",
     "shortName": "Southern Methodist University (SMU)",
     "conference": "AAC",
     "totalDeals": 111,
@@ -590,7 +580,7 @@
     "brandCount": 76
   },
   {
-    "id": "texas-christian-university",
+    "id": "tcu",
     "shortName": "Texas Christian University",
     "conference": "Big 12",
     "totalDeals": 96,

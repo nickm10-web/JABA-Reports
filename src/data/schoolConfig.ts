@@ -533,6 +533,280 @@ export const UTSA: SchoolConfig = {
   logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/2636.png'
 };
 
+export const CAL: SchoolConfig = {
+  id: 'cal',
+  name: 'University of California, Berkeley',
+  shortName: 'Cal',
+  mascot: 'Golden Bears',
+  primaryColor: '#003262', // Berkeley Blue
+  secondaryColor: '#FDB515', // California Gold
+  accentColor: '#002249', // Dark Blue
+  conference: 'Big Ten',
+  location: 'Berkeley, CA',
+  dataName: 'University of California, Berkeley',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/25.png'
+};
+
+export const NORTHWESTERN: SchoolConfig = {
+  id: 'northwestern',
+  name: 'Northwestern University',
+  shortName: 'Northwestern',
+  mascot: 'Wildcats',
+  primaryColor: '#4E2A84', // Purple
+  secondaryColor: '#FFFFFF', // White
+  accentColor: '#3B1F63', // Dark Purple
+  conference: 'Big Ten',
+  location: 'Evanston, IL',
+  dataName: 'Northwestern',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/77.png'
+};
+
+// ============ BIG TEN (additional) ============
+
+export const WASHINGTON: SchoolConfig = {
+  id: 'washington',
+  name: 'University of Washington',
+  shortName: 'Washington',
+  mascot: 'Huskies',
+  primaryColor: '#4B2E83',
+  secondaryColor: '#E8D3A2',
+  accentColor: '#33145C',
+  conference: 'Big Ten',
+  location: 'Seattle, WA',
+  dataName: 'University of Washington',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/264.png'
+};
+
+export const INDIANA: SchoolConfig = {
+  id: 'indiana',
+  name: 'Indiana University',
+  shortName: 'Indiana',
+  mascot: 'Hoosiers',
+  primaryColor: '#990000',
+  secondaryColor: '#FFFFFF',
+  accentColor: '#660000',
+  conference: 'Big Ten',
+  location: 'Bloomington, IN',
+  dataName: 'Indiana University',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/84.png'
+};
+
+export const OREGON: SchoolConfig = {
+  id: 'oregon',
+  name: 'University of Oregon',
+  shortName: 'Oregon',
+  mascot: 'Ducks',
+  primaryColor: '#154733',
+  secondaryColor: '#FEE123',
+  accentColor: '#0E3323',
+  conference: 'Big Ten',
+  location: 'Eugene, OR',
+  dataName: 'University of Oregon',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/2483.png'
+};
+
+export const IOWA: SchoolConfig = {
+  id: 'iowa',
+  name: 'University of Iowa',
+  shortName: 'Iowa',
+  mascot: 'Hawkeyes',
+  primaryColor: '#000000',
+  secondaryColor: '#FFCD00',
+  accentColor: '#F1BE48',
+  conference: 'Big Ten',
+  location: 'Iowa City, IA',
+  dataName: 'University of Iowa',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/2294.png'
+};
+
+// ============ SEC (additional) ============
+
+export const OLE_MISS: SchoolConfig = {
+  id: 'ole-miss',
+  name: 'University of Mississippi',
+  shortName: 'Ole Miss',
+  mascot: 'Rebels',
+  primaryColor: '#CE1126',
+  secondaryColor: '#14213D',
+  accentColor: '#A00D1E',
+  conference: 'SEC',
+  location: 'Oxford, MS',
+  dataName: 'University of Mississippi',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/145.png'
+};
+
+export const VANDERBILT: SchoolConfig = {
+  id: 'vanderbilt',
+  name: 'Vanderbilt University',
+  shortName: 'Vanderbilt',
+  mascot: 'Commodores',
+  primaryColor: '#866D4B',
+  secondaryColor: '#000000',
+  accentColor: '#6B5639',
+  conference: 'SEC',
+  location: 'Nashville, TN',
+  dataName: 'Vanderbilt University',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/238.png'
+};
+
+export const WAKE_FOREST: SchoolConfig = {
+  id: 'wake-forest',
+  name: 'Wake Forest University',
+  shortName: 'Wake Forest',
+  mascot: 'Demon Deacons',
+  primaryColor: '#9E7E38', // Old Gold
+  secondaryColor: '#000000', // Black
+  accentColor: '#7E6529', // Dark Gold
+  conference: 'ACC',
+  location: 'Winston-Salem, NC',
+  dataName: 'Wake Forest',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/154.png'
+};
+
+export const STANFORD: SchoolConfig = {
+  id: 'stanford',
+  name: 'Stanford University',
+  shortName: 'Stanford',
+  mascot: 'Cardinal',
+  primaryColor: '#8C1515', // Cardinal Red
+  secondaryColor: '#FFFFFF', // White
+  accentColor: '#6A1010', // Dark Cardinal
+  conference: 'ACC',
+  location: 'Stanford, CA',
+  dataName: 'Stanford',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/24.png'
+};
+
+// ============ ACC (additional) ============
+
+export const GEORGIA_TECH: SchoolConfig = {
+  id: 'georgia-tech',
+  name: 'Georgia Institute of Technology',
+  shortName: 'Georgia Tech',
+  mascot: 'Yellow Jackets',
+  primaryColor: '#B3A369',
+  secondaryColor: '#003057',
+  accentColor: '#857437',
+  conference: 'ACC',
+  location: 'Atlanta, GA',
+  dataName: 'Georgia Tech',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/59.png'
+};
+
+// ============ BIG 12 (additional) ============
+
+export const K_STATE: SchoolConfig = {
+  id: 'k-state',
+  name: 'Kansas State University',
+  shortName: 'K-State',
+  mascot: 'Wildcats',
+  primaryColor: '#512888',
+  secondaryColor: '#FFFFFF',
+  accentColor: '#3D1E66',
+  conference: 'Big 12',
+  location: 'Manhattan, KS',
+  dataName: 'Kansas State University',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/2306.png'
+};
+
+export const UTAH: SchoolConfig = {
+  id: 'utah',
+  name: 'University of Utah',
+  shortName: 'Utah',
+  mascot: 'Utes',
+  primaryColor: '#CC0000',
+  secondaryColor: '#FFFFFF',
+  accentColor: '#990000',
+  conference: 'Big 12',
+  location: 'Salt Lake City, UT',
+  dataName: 'University of Utah',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/254.png'
+};
+
+export const IOWA_STATE: SchoolConfig = {
+  id: 'iowa-state',
+  name: 'Iowa State University',
+  shortName: 'Iowa State',
+  mascot: 'Cyclones',
+  primaryColor: '#C8102E',
+  secondaryColor: '#F1BE48',
+  accentColor: '#960C22',
+  conference: 'Big 12',
+  location: 'Ames, IA',
+  dataName: 'Iowa State University',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/66.png'
+};
+
+export const COLORADO: SchoolConfig = {
+  id: 'colorado',
+  name: 'University of Colorado',
+  shortName: 'Colorado',
+  mascot: 'Buffaloes',
+  primaryColor: '#CFB87C',
+  secondaryColor: '#000000',
+  accentColor: '#A8944F',
+  conference: 'Big 12',
+  location: 'Boulder, CO',
+  dataName: 'University of Colorado',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/38.png'
+};
+
+export const BYU: SchoolConfig = {
+  id: 'byu',
+  name: 'Brigham Young University',
+  shortName: 'BYU',
+  mascot: 'Cougars',
+  primaryColor: '#002E5D',
+  secondaryColor: '#FFFFFF',
+  accentColor: '#001F3F',
+  conference: 'Big 12',
+  location: 'Provo, UT',
+  dataName: 'Brigham Young University',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/252.png'
+};
+
+export const TCU: SchoolConfig = {
+  id: 'tcu',
+  name: 'Texas Christian University',
+  shortName: 'TCU',
+  mascot: 'Horned Frogs',
+  primaryColor: '#4D1979',
+  secondaryColor: '#FFFFFF',
+  accentColor: '#3A1259',
+  conference: 'Big 12',
+  location: 'Fort Worth, TX',
+  dataName: 'Texas Christian University',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png'
+};
+
+export const KANSAS: SchoolConfig = {
+  id: 'kansas',
+  name: 'University of Kansas',
+  shortName: 'Kansas',
+  mascot: 'Jayhawks',
+  primaryColor: '#0051BA',
+  secondaryColor: '#E8000D',
+  accentColor: '#003D8C',
+  conference: 'Big 12',
+  location: 'Lawrence, KS',
+  dataName: 'University of Kansas',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/2305.png'
+};
+
+export const TEXAS_TECH: SchoolConfig = {
+  id: 'texas-tech',
+  name: 'Texas Tech University',
+  shortName: 'Texas Tech',
+  mascot: 'Red Raiders',
+  primaryColor: '#CC0000',
+  secondaryColor: '#000000',
+  accentColor: '#990000',
+  conference: 'Big 12',
+  location: 'Lubbock, TX',
+  dataName: 'Texas Tech University',
+  logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/2641.png'
+};
+
 // ============ PAC-12 SCHOOLS ============
 
 export const WASHINGTON_STATE: SchoolConfig = {
@@ -662,6 +936,8 @@ export const SCHOOLS: Record<string, SchoolConfig> = {
   'oklahoma': OKLAHOMA,
   'lsu': LSU,
   'texas-am': TEXAS_AM,
+  'ole-miss': OLE_MISS,
+  'vanderbilt': VANDERBILT,
   // Big Ten
   'michigan': MICHIGAN,
   'ohio-state': OHIO_STATE,
@@ -673,6 +949,12 @@ export const SCHOOLS: Record<string, SchoolConfig> = {
   'ucla': UCLA,
   'michigan-state': MICHIGAN_STATE,
   'msu': MICHIGAN_STATE,
+  'washington': WASHINGTON,
+  'cal': CAL,
+  'northwestern': NORTHWESTERN,
+  'indiana': INDIANA,
+  'oregon': OREGON,
+  'iowa': IOWA,
   // ACC
   'clemson': CLEMSON,
   'virginia': VIRGINIA,
@@ -681,12 +963,23 @@ export const SCHOOLS: Record<string, SchoolConfig> = {
   'pitt': PITT,
   'notre-dame': NOTRE_DAME,
   'smu': SMU,
+  'georgia-tech': GEORGIA_TECH,
+  'wake-forest': WAKE_FOREST,
+  'stanford': STANFORD,
   // Big 12
   'baylor': BAYLOR,
   'arizona': ARIZONA,
   'arizona-state': ARIZONA_STATE,
   'cincinnati': CINCINNATI,
   'ucf': UCF,
+  'k-state': K_STATE,
+  'utah': UTAH,
+  'iowa-state': IOWA_STATE,
+  'colorado': COLORADO,
+  'byu': BYU,
+  'tcu': TCU,
+  'kansas': KANSAS,
+  'texas-tech': TEXAS_TECH,
   // Mountain West / West Coast
   'boise-state': BOISE_STATE,
   'san-diego': SAN_DIEGO,

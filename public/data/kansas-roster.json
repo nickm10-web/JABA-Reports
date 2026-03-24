@@ -1,0 +1,4412 @@
+[
+  {
+    "_id": "690097af44ae6f854f5f5ae7",
+    "firstName": "Will",
+    "lastName": "Thengvall",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647450102-Will_Thengvall_690097af44ae6f854f5f5ae7.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2886,
+        "likes": 22397,
+        "comments": 402,
+        "engagementRate": 0.6075559554706914,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5af7",
+    "firstName": "Bailey",
+    "lastName": "Weber",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647466376-Bailey_Weber_690097af44ae6f854f5f5af7.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 682,
+        "likes": 2492,
+        "comments": 132,
+        "engagementRate": 0.29614887010522684,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b12",
+    "firstName": "Heidi",
+    "lastName": "Devers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647460362-Heidi_Devers_690097af44ae6f854f5f5b12.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "L/DS",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2286,
+        "likes": 1355,
+        "comments": 591,
+        "engagementRate": 0.0405149811178666,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5aef",
+    "firstName": "Karsen",
+    "lastName": "Griggs",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647462122-Karsen_Griggs_690097af44ae6f854f5f5aef.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2243,
+        "likes": 4793,
+        "comments": 139,
+        "engagementRate": 0.15708896031616687,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ae6",
+    "firstName": "Melvin",
+    "lastName": "Council Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647466946-Melvin_Council Jr._690097af44ae6f854f5f5ae6.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12979,
+        "likes": 123809,
+        "comments": 1887,
+        "engagementRate": 0.5022372128708128,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5af1",
+    "firstName": "Hailey",
+    "lastName": "Cripe",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647459022-Hailey_Cripe_690097af44ae6f854f5f5af1.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1479,
+        "likes": 5254,
+        "comments": 67,
+        "engagementRate": 0.25725660659962457,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5aec",
+    "firstName": "Ella",
+    "lastName": "Boyer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647459778-Ella_Boyer_690097af44ae6f854f5f5aec.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "C",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3127,
+        "likes": 3150,
+        "comments": 259,
+        "engagementRate": 0.06545659439259813,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ae8",
+    "firstName": "Darryn",
+    "lastName": "Peterson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647465664-Darryn_Peterson_690097af44ae6f854f5f5ae8.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 101144,
+        "likes": 231035,
+        "comments": 1957,
+        "engagementRate": 0.10932301285825322,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5aea",
+    "firstName": "Jaeden",
+    "lastName": "Murphy",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647460969-Jaeden_Murphy_690097af44ae6f854f5f5aea.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "C",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1313,
+        "likes": 210,
+        "comments": 168,
+        "engagementRate": 0.012391629979179393,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5aa7",
+    "firstName": "Greydon",
+    "lastName": "Grimes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647467008-Greydon_Grimes_690097af44ae6f854f5f5aa7.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1903,
+        "likes": 5681,
+        "comments": 421,
+        "engagementRate": 0.2658521632510072,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ae1",
+    "firstName": "Tre",
+    "lastName": "White",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647444643-Tre_White_690097af44ae6f854f5f5ae1.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 33173,
+        "likes": 20268,
+        "comments": 957,
+        "engagementRate": 0.036358538953273366,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b21",
+    "firstName": "Cristin",
+    "lastName": "Cline",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647446614-Cristin_Cline_690097af44ae6f854f5f5b21.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4704,
+        "likes": 2026,
+        "comments": 472,
+        "engagementRate": 0.03200462789166935,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b07",
+    "firstName": "Jaliya",
+    "lastName": "Davis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647447558-Jaliya_Davis_690097af44ae6f854f5f5b07.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2709,
+        "likes": 5416,
+        "comments": 294,
+        "engagementRate": 0.13503321009226832,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a55",
+    "firstName": "Dariel",
+    "lastName": "Osoria",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647464454-Dariel_Osoria_690097af44ae6f854f5f5a55.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2178,
+        "likes": 37068,
+        "comments": 996,
+        "engagementRate": 1.3222565395339068,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b1f",
+    "firstName": "Logan",
+    "lastName": "Bell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647444462-Logan_Bell_690097af44ae6f854f5f5b1f.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "PIN",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4377,
+        "likes": 29709,
+        "comments": 625,
+        "engagementRate": 0.4101891226747524,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b01",
+    "firstName": "Kaelee",
+    "lastName": "Washington",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647465657-Kaelee_Washington_690097af44ae6f854f5f5b01.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 651,
+        "likes": 3327,
+        "comments": 161,
+        "engagementRate": 0.41267743476719637,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b1c",
+    "firstName": "Selena",
+    "lastName": "Leban",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647446584-Selena_Leban_690097af44ae6f854f5f5b1c.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "PIN",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5695,
+        "likes": 9780,
+        "comments": 351,
+        "engagementRate": 0.07066008430489572,
+        "contentCount": 24,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5acf",
+    "firstName": "Bryson",
+    "lastName": "Canty",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647465126-Bryson_Canty_690097af44ae6f854f5f5acf.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2544,
+        "likes": 8028,
+        "comments": 515,
+        "engagementRate": 0.3731219426974144,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5add",
+    "firstName": "Flory",
+    "lastName": "Bidunga",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647464487-Flory_Bidunga_690097af44ae6f854f5f5add.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 35388,
+        "likes": 110080,
+        "comments": 1215,
+        "engagementRate": 0.16594396235555503,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a7a",
+    "firstName": "Adrian",
+    "lastName": "Holley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647466404-Adrian_Holley_690097af44ae6f854f5f5a7a.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1703,
+        "likes": 1455,
+        "comments": 100,
+        "engagementRate": 0.30358191426893716,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a4d",
+    "firstName": "Dominic",
+    "lastName": "Voegele",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647465040-Dominic_Voegele_690097af44ae6f854f5f5a4d.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1979,
+        "likes": 12186,
+        "comments": 54,
+        "engagementRate": 0.4758472870997896,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ace",
+    "firstName": "Levi",
+    "lastName": "Wentz",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647455403-Levi_Wentz_690097af44ae6f854f5f5ace.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5174,
+        "likes": 8410,
+        "comments": 644,
+        "engagementRate": 0.08703740332934579,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a82",
+    "firstName": "Tommy",
+    "lastName": "Dunn Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647464510-Tommy_Dunn Jr._690097af44ae6f854f5f5a82.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2329,
+        "likes": 3090,
+        "comments": 437,
+        "engagementRate": 0.06943946427495243,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5af0",
+    "firstName": "Emma",
+    "lastName": "Tatum",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647462971-Emma_Tatum_690097af44ae6f854f5f5af0.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2345,
+        "likes": 4133,
+        "comments": 299,
+        "engagementRate": 0.10504327413398623,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5af2",
+    "firstName": "September",
+    "lastName": "Flanagan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647450107-September_Flanagan_690097af44ae6f854f5f5af2.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "INF/UTL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2129,
+        "likes": 2993,
+        "comments": 305,
+        "engagementRate": 0.10284244760423426,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5aab",
+    "firstName": "Jalon",
+    "lastName": "Daniels",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647457569-Jalon_Daniels_690097af44ae6f854f5f5aab.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 46619,
+        "likes": 75433,
+        "comments": 965,
+        "engagementRate": 0.07786830434354083,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b11",
+    "firstName": "Raegan",
+    "lastName": "Burns",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647456832-Raegan_Burns_690097af44ae6f854f5f5b11.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "L/DS",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2502,
+        "likes": 7677,
+        "comments": 408,
+        "engagementRate": 0.2373178380372625,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ac4",
+    "firstName": "DeShawn",
+    "lastName": "Hanika",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647462965-DeShawn_Hanika_690097af44ae6f854f5f5ac4.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3179,
+        "likes": 6032,
+        "comments": 665,
+        "engagementRate": 0.14264912541440172,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b0a",
+    "firstName": "Laia",
+    "lastName": "Conesa",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647464507-Laia_Conesa_690097af44ae6f854f5f5b0a.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2150,
+        "likes": 5060,
+        "comments": 326,
+        "engagementRate": 0.17922199106790285,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5afa",
+    "firstName": "Madi",
+    "lastName": "Hays",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647456007-Madi_Hays_690097af44ae6f854f5f5afa.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 179334,
+        "likes": 145371,
+        "comments": 1527,
+        "engagementRate": 0.04298878045778926,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b14",
+    "firstName": "Ryan",
+    "lastName": "White",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647464533-Ryan_White_690097af44ae6f854f5f5b14.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "L/DS",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3538,
+        "likes": 18911,
+        "comments": 721,
+        "engagementRate": 0.29548372944509604,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b0b",
+    "firstName": "S'Mya",
+    "lastName": "Nichols",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647466407-S'Mya_Nichols_690097af44ae6f854f5f5b0b.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8564,
+        "likes": 11842,
+        "comments": 460,
+        "engagementRate": 0.06020446186486863,
+        "contentCount": 24,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5aca",
+    "firstName": "Emmanuel",
+    "lastName": "Henderson Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647459629-Emmanuel_Henderson Jr._690097af44ae6f854f5f5aca.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 61134,
+        "likes": 19723,
+        "comments": 452,
+        "engagementRate": 0.029932755764535135,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ad1",
+    "firstName": "Bryce",
+    "lastName": "Cohoon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647444450-Bryce_Cohoon_690097af44ae6f854f5f5ad1.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3596,
+        "likes": 257,
+        "comments": 330,
+        "engagementRate": 0.005540343971934628,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ae2",
+    "firstName": "Kohl",
+    "lastName": "Rosario",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647464483-Kohl_Rosario_690097af44ae6f854f5f5ae2.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 50467,
+        "likes": 110172,
+        "comments": 971,
+        "engagementRate": 0.14605667174869044,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5af3",
+    "firstName": "Anna",
+    "lastName": "Soles",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647466389-Anna_Soles_690097af44ae6f854f5f5af3.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "LHP/UTL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 940,
+        "likes": 662,
+        "comments": 215,
+        "engagementRate": 0.053130130195211546,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b16",
+    "firstName": "Ellie",
+    "lastName": "Schneider",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647446660-Ellie_Schneider_690097af44ae6f854f5f5b16.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2783,
+        "likes": 6376,
+        "comments": 559,
+        "engagementRate": 0.16648764909837124,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5aba",
+    "firstName": "Laquan",
+    "lastName": "Robinson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647463529-Laquan_Robinson_690097af44ae6f854f5f5aba.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1774,
+        "likes": 10632,
+        "comments": 229,
+        "engagementRate": 0.6122322435174745,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ad5",
+    "firstName": "Jaden",
+    "lastName": "Nickens",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647462196-Jaden_Nickens_690097af44ae6f854f5f5ad5.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 43211,
+        "likes": 47665,
+        "comments": 833,
+        "engagementRate": 0.09351686553636741,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5aaf",
+    "firstName": "David",
+    "lastName": "McComb",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647455381-David_McComb_690097af44ae6f854f5f5aaf.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2580,
+        "likes": 1420,
+        "comments": 267,
+        "engagementRate": 0.07083333333333333,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ab2",
+    "firstName": "Daniel",
+    "lastName": "Hishaw Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647459038-Daniel_Hishaw Jr._690097af44ae6f854f5f5ab2.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4090,
+        "likes": 23632,
+        "comments": 451,
+        "engagementRate": 0.3924423625977569,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a73",
+    "firstName": "Dean",
+    "lastName": "Miller",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647447549-Dean_Miller_690097af44ae6f854f5f5a73.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4898,
+        "likes": 5967,
+        "comments": 1385,
+        "engagementRate": 0.08544044110934551,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a9d",
+    "firstName": "Carter",
+    "lastName": "Lavrusky",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647447532-Carter_Lavrusky_690097af44ae6f854f5f5a9d.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1068,
+        "likes": 5564,
+        "comments": 397,
+        "engagementRate": 0.34863649771985583,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b20",
+    "firstName": "Ellie",
+    "lastName": "Moore",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647457557-Ellie_Moore_690097af44ae6f854f5f5b20.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1812,
+        "likes": 2264,
+        "comments": 481,
+        "engagementRate": 0.08796130832065427,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5aff",
+    "firstName": "Chole",
+    "lastName": "Barber",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647466346-Chole_Barber_690097af44ae6f854f5f5aff.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "P",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 861,
+        "likes": 2374,
+        "comments": 170,
+        "engagementRate": 0.19831664459285392,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ab0",
+    "firstName": "Harry",
+    "lastName": "Stewart III",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647465117-Harry_Stewart III_690097af44ae6f854f5f5ab0.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5763,
+        "likes": 22761,
+        "comments": 553,
+        "engagementRate": 0.24000923371449936,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ab8",
+    "firstName": "Lyrik",
+    "lastName": "Rawls",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647466954-Lyrik_Rawls_690097af44ae6f854f5f5ab8.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5178,
+        "likes": 43975,
+        "comments": 824,
+        "engagementRate": 0.42089626077059855,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ac5",
+    "firstName": "Carson",
+    "lastName": "Bruhn",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647447538-Carson_Bruhn_690097af44ae6f854f5f5ac5.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1696,
+        "likes": 8408,
+        "comments": 247,
+        "engagementRate": 0.42526533018867924,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a53",
+    "firstName": "Dalton",
+    "lastName": "Smith",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647444376-Dalton_Smith_690097af44ae6f854f5f5a53.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1750,
+        "likes": 2887,
+        "comments": 390,
+        "engagementRate": 0.14031173424276872,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5acd",
+    "firstName": "Cam",
+    "lastName": "Pickett",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647457560-Cam_Pickett_690097af44ae6f854f5f5acd.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3482,
+        "likes": 12583,
+        "comments": 765,
+        "engagementRate": 0.26208254697628625,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ab9",
+    "firstName": "Devin",
+    "lastName": "Dye",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647456857-Devin_Dye_690097af44ae6f854f5f5ab9.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2121,
+        "likes": 4699,
+        "comments": 511,
+        "engagementRate": 0.12405427353158512,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ae5",
+    "firstName": "Elmarko",
+    "lastName": "Jackson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647458996-Elmarko_Jackson_690097af44ae6f854f5f5ae5.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 13889,
+        "likes": 23288,
+        "comments": 790,
+        "engagementRate": 0.11376475591555385,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ac3",
+    "firstName": "Jaden",
+    "lastName": "Hamm",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647457580-Jaden_Hamm_690097af44ae6f854f5f5ac3.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2572,
+        "likes": 12322,
+        "comments": 496,
+        "engagementRate": 0.35769306500613396,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a70",
+    "firstName": "Aundre",
+    "lastName": "Gibson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647458206-Aundre_Gibson_690097af44ae6f854f5f5a70.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1612,
+        "likes": 3704,
+        "comments": 391,
+        "engagementRate": 0.2312189843904233,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a87",
+    "firstName": "Laith",
+    "lastName": "Marjan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647456259-Laith_Marjan_690097af44ae6f854f5f5a87.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "K",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2418,
+        "likes": 10613,
+        "comments": 440,
+        "engagementRate": 0.2990835790748133,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5acc",
+    "firstName": "Doug",
+    "lastName": "Emilien",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647458999-Doug_Emilien_690097af44ae6f854f5f5acc.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10849,
+        "likes": 2966,
+        "comments": 774,
+        "engagementRate": 0.022782437705472086,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a6f",
+    "firstName": "Jameel",
+    "lastName": "Croft Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647444489-Jameel_Croft Jr._690097af44ae6f854f5f5a6f.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5632,
+        "likes": 8867,
+        "comments": 468,
+        "engagementRate": 0.1837713068181818,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5af9",
+    "firstName": "Audri",
+    "lastName": "Youngblood",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647448138-Audri_Youngblood_690097af44ae6f854f5f5af9.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 840,
+        "likes": 3566,
+        "comments": 181,
+        "engagementRate": 0.34313186813186813,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a8b",
+    "firstName": "Jon",
+    "lastName": "Jon Kamara",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647456868-Jon_Jon Kamara_690097af44ae6f854f5f5a8b.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1869,
+        "likes": 2742,
+        "comments": 328,
+        "engagementRate": 0.2541466024612092,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5af5",
+    "firstName": "Presley",
+    "lastName": "Limbaugh",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647464500-Presley_Limbaugh_690097af44ae6f854f5f5af5.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 977,
+        "likes": 5708,
+        "comments": 105,
+        "engagementRate": 0.4160789624784682,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ac1",
+    "firstName": "Landon",
+    "lastName": "Nelson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647455344-Landon_Nelson_690097af44ae6f854f5f5ac1.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1662,
+        "likes": 1949,
+        "comments": 375,
+        "engagementRate": 0.0747217208182912,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5acb",
+    "firstName": "Keaton",
+    "lastName": "Kubecka",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647465083-Keaton_Kubecka_690097af44ae6f854f5f5acb.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12270,
+        "likes": 17449,
+        "comments": 323,
+        "engagementRate": 0.12025264873675633,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b08",
+    "firstName": "Lilly",
+    "lastName": "Meister",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647444480-Lilly_Meister_690097af44ae6f854f5f5b08.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5917,
+        "likes": 1685,
+        "comments": 501,
+        "engagementRate": 0.020943709429172203,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b1b",
+    "firstName": "Rhian",
+    "lastName": "Swanson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647455137-Rhian_Swanson_690097af44ae6f854f5f5b1b.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "PIN",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2476,
+        "likes": 829,
+        "comments": 551,
+        "engagementRate": 0.025222050047805877,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ac9",
+    "firstName": "Boden",
+    "lastName": "Groen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647467568-Boden_Groen_690097af44ae6f854f5f5ac9.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1349,
+        "likes": 7148,
+        "comments": 389,
+        "engagementRate": 0.41984040481154705,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a68",
+    "firstName": "Dane",
+    "lastName": "Ebel",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647459583-Dane_Ebel_690097af44ae6f854f5f5a68.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2068,
+        "likes": 4929,
+        "comments": 442,
+        "engagementRate": 0.25969629134522754,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a56",
+    "firstName": "Riane",
+    "lastName": "Ritter",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647459568-Riane_Ritter_690097af44ae6f854f5f5a56.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1264,
+        "likes": 5589,
+        "comments": 586,
+        "engagementRate": 0.3759155157602334,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a7f",
+    "firstName": "D.J.",
+    "lastName": "Withers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647459622-D.J._Withers_690097af44ae6f854f5f5a7f.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1305,
+        "likes": 3,
+        "comments": 256,
+        "engagementRate": 0.0009195402298850574,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b0d",
+    "firstName": "Elle",
+    "lastName": "Evans",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647466961-Elle_Evans_690097af44ae6f854f5f5b0d.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3646,
+        "likes": 4576,
+        "comments": 282,
+        "engagementRate": 0.07260982199985436,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5aeb",
+    "firstName": "Bailey",
+    "lastName": "Amezcua",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647463540-Bailey_Amezcua_690097af44ae6f854f5f5aeb.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "C",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 986,
+        "likes": 1496,
+        "comments": 122,
+        "engagementRate": 0.1640973630831643,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a91",
+    "firstName": "Ezra",
+    "lastName": "Vedral",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647460948-Ezra_Vedral_690097af44ae6f854f5f5a91.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1126,
+        "likes": 3762,
+        "comments": 272,
+        "engagementRate": 0.44782415630550626,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a45",
+    "firstName": "Max",
+    "lastName": "Soliz Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647463521-Max_Soliz Jr._690097af44ae6f854f5f5a45.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "C/1B",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4378,
+        "likes": 3787,
+        "comments": 76,
+        "engagementRate": 0.06216145663381844,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5aee",
+    "firstName": "Campbell",
+    "lastName": "Bagshaw",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647454276-Campbell_Bagshaw_690097af44ae6f854f5f5aee.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2148,
+        "likes": 3386,
+        "comments": 141,
+        "engagementRate": 0.12628987551410514,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5aa4",
+    "firstName": "Calvin",
+    "lastName": "Clements",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647460925-Calvin_Clements_690097af44ae6f854f5f5aa4.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1928,
+        "likes": 3113,
+        "comments": 447,
+        "engagementRate": 0.14177040110650072,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a49",
+    "firstName": "Gavyn",
+    "lastName": "Schlotterback",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647447259-Gavyn_Schlotterback_690097af44ae6f854f5f5a49.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "C/RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 527,
+        "likes": 2674,
+        "comments": 268,
+        "engagementRate": 0.4658210566421132,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b02",
+    "firstName": "Kennedy",
+    "lastName": "Diggs",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647460974-Kennedy_Diggs_690097af44ae6f854f5f5b02.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "RHP/UTL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 652,
+        "likes": 2873,
+        "comments": 118,
+        "engagementRate": 0.32818207304260716,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5aa6",
+    "firstName": "Enrique",
+    "lastName": "Cruz Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647465680-Enrique_Cruz Jr._690097af44ae6f854f5f5aa6.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2732,
+        "likes": 4279,
+        "comments": 535,
+        "engagementRate": 0.13328432460320028,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ab7",
+    "firstName": "Jack",
+    "lastName": "Schneider",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647447580-Jack_Schneider_690097af44ae6f854f5f5ab7.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2440,
+        "likes": 10099,
+        "comments": 323,
+        "engagementRate": 0.3285503713618703,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5abc",
+    "firstName": "Brandon",
+    "lastName": "Schmelzle",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647456262-Brandon_Schmelzle_690097af44ae6f854f5f5abc.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2030,
+        "likes": 9362,
+        "comments": 157,
+        "engagementRate": 0.3607645137651605,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5aed",
+    "firstName": "Kadence",
+    "lastName": "Stafford",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647455993-Kadence_Stafford_690097af44ae6f854f5f5aed.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1459,
+        "likes": 674,
+        "comments": 323,
+        "engagementRate": 0.03790794537881584,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ada",
+    "firstName": "Samis",
+    "lastName": "Calderon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647456009-Samis_Calderon_690097af44ae6f854f5f5ada.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 33635,
+        "likes": 60310,
+        "comments": 729,
+        "engagementRate": 0.12932962461748054,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ae3",
+    "firstName": "Jamari",
+    "lastName": "McDowell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647446603-Jamari_McDowell_690097af44ae6f854f5f5ae3.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7900,
+        "likes": 19258,
+        "comments": 252,
+        "engagementRate": 0.16624326742471535,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b1e",
+    "firstName": "Jovana",
+    "lastName": "Zelenovic",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647456212-Jovana_Zelenovic_690097af44ae6f854f5f5b1e.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "PIN",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5413,
+        "likes": 16420,
+        "comments": 296,
+        "engagementRate": 0.23847068227712434,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ade",
+    "firstName": "Nginyu",
+    "lastName": "Ngala",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647444411-Nginyu_Ngala_690097af44ae6f854f5f5ade.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3448,
+        "likes": 10430,
+        "comments": 687,
+        "engagementRate": 0.2164406667480923,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5aa3",
+    "firstName": "Jack",
+    "lastName": "Tanner",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647465099-Jack_Tanner_690097af44ae6f854f5f5aa3.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 834,
+        "likes": 2841,
+        "comments": 134,
+        "engagementRate": 0.46642325658832073,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a59",
+    "firstName": "Boede",
+    "lastName": "Rahe",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647463488-Boede_Rahe_690097af44ae6f854f5f5a59.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1144,
+        "likes": 2124,
+        "comments": 394,
+        "engagementRate": 0.11122921259611361,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a9c",
+    "firstName": "Bryce",
+    "lastName": "Foster",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647450111-Bryce_Foster_690097af44ae6f854f5f5a9c.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10785,
+        "likes": 7560,
+        "comments": 202,
+        "engagementRate": 0.042185543676103804,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a42",
+    "firstName": "David",
+    "lastName": "Hogg II",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647456826-David_Hogg II_690097af44ae6f854f5f5a42.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "INF/OF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12383,
+        "likes": 3509,
+        "comments": 1037,
+        "engagementRate": 0.029532423483808447,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a72",
+    "firstName": "Jacoby",
+    "lastName": "Davis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647444518-Jacoby_Davis_690097af44ae6f854f5f5a72.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2975,
+        "likes": 2842,
+        "comments": 187,
+        "engagementRate": 0.12466386554621849,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a6b",
+    "firstName": "DJ",
+    "lastName": "Graham II",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647462953-DJ_Graham II_690097af44ae6f854f5f5a6b.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 15099,
+        "likes": 53397,
+        "comments": 721,
+        "engagementRate": 0.2743424558280408,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ab1",
+    "firstName": "Leshon",
+    "lastName": "Williams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647459619-Leshon_Williams_690097af44ae6f854f5f5ab1.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9693,
+        "likes": 14305,
+        "comments": 413,
+        "engagementRate": 0.10677385549184412,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b05",
+    "firstName": "Tatyonna",
+    "lastName": "Brown",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647464527-Tatyonna_Brown_690097af44ae6f854f5f5b05.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1225,
+        "likes": 4340,
+        "comments": 173,
+        "engagementRate": 0.28351251375881914,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5afd",
+    "firstName": "Lila",
+    "lastName": "Partridge",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647460336-Lila_Partridge_690097af44ae6f854f5f5afd.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "P",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 953,
+        "likes": 3694,
+        "comments": 382,
+        "engagementRate": 0.21347491631400017,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a60",
+    "firstName": "Darius",
+    "lastName": "Henderson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647457021-Darius_Henderson_690097af44ae6f854f5f5a60.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 645,
+        "likes": 19359,
+        "comments": 183,
+        "engagementRate": 2.1684750254450487,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5abf",
+    "firstName": "Darrion",
+    "lastName": "Jones",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647466394-Darrion_Jones_690097af44ae6f854f5f5abf.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8581,
+        "likes": 5549,
+        "comments": 423,
+        "engagementRate": 0.1692110476634425,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ac6",
+    "firstName": "Quinton",
+    "lastName": "Conley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647458219-Quinton_Conley_690097af44ae6f854f5f5ac6.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2828,
+        "likes": 7068,
+        "comments": 156,
+        "engagementRate": 0.19649657273419655,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b22",
+    "firstName": "Katie",
+    "lastName": "Dalton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647465112-Katie_Dalton_690097af44ae6f854f5f5b22.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S/PIN",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3696,
+        "likes": 18167,
+        "comments": 644,
+        "engagementRate": 0.33586200765657387,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b10",
+    "firstName": "Molly",
+    "lastName": "McCarthy",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647455393-Molly_McCarthy_690097af44ae6f854f5f5b10.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "DS/L",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4548,
+        "likes": 4350,
+        "comments": 618,
+        "engagementRate": 0.07485905303505995,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b09",
+    "firstName": "Keeley",
+    "lastName": "Parks",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647457595-Keeley_Parks_690097af44ae6f854f5f5b09.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4248,
+        "likes": 4637,
+        "comments": 367,
+        "engagementRate": 0.0797488730217271,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b19",
+    "firstName": "Grace",
+    "lastName": "Nelson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647446549-Grace_Nelson_690097af44ae6f854f5f5b19.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "PIN",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3636,
+        "likes": 12623,
+        "comments": 582,
+        "engagementRate": 0.2610774320153651,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b0f",
+    "firstName": "Brittany",
+    "lastName": "Harshaw",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647460936-Brittany_Harshaw_690097af44ae6f854f5f5b0f.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1787,
+        "likes": 2568,
+        "comments": 255,
+        "engagementRate": 0.09927766877314849,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ab6",
+    "firstName": "Justin",
+    "lastName": "Thurman",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647462157-Justin_Thurman_690097af44ae6f854f5f5ab6.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3129,
+        "likes": 4343,
+        "comments": 416,
+        "engagementRate": 0.10350180340592612,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b15",
+    "firstName": "Reese",
+    "lastName": "Ptacek",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647466926-Reese_Ptacek_690097af44ae6f854f5f5b15.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2097,
+        "likes": 11921,
+        "comments": 253,
+        "engagementRate": 0.3895926039168466,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a48",
+    "firstName": "Dylan",
+    "lastName": "Schlotterback",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647462934-Dylan_Schlotterback_690097af44ae6f854f5f5a48.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 510,
+        "likes": 1392,
+        "comments": 122,
+        "engagementRate": 0.5943145005037588,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5aa9",
+    "firstName": "Grayden",
+    "lastName": "Addison",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647466383-Grayden_Addison_690097af44ae6f854f5f5aa9.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "P",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1228,
+        "likes": 4230,
+        "comments": 211,
+        "engagementRate": 0.27832375299415496,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a61",
+    "firstName": "Maddox",
+    "lastName": "Burkitt",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647455234-Maddox_Burkitt_690097af44ae6f854f5f5a61.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 876,
+        "likes": 1586,
+        "comments": 174,
+        "engagementRate": 0.40182648401826493,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ae4",
+    "firstName": "Wilder",
+    "lastName": "Evers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647462940-Wilder_Evers_690097af44ae6f854f5f5ae4.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5722,
+        "likes": 3224,
+        "comments": 454,
+        "engagementRate": 0.04517061816847463,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a79",
+    "firstName": "Garrett",
+    "lastName": "Martin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647460358-Garrett_Martin_690097af44ae6f854f5f5a79.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2554,
+        "likes": 63394,
+        "comments": 319,
+        "engagementRate": 3.5577574016303446,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b0c",
+    "firstName": "Libby",
+    "lastName": "Fandel",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647456291-Libby_Fandel_690097af44ae6f854f5f5b0c.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3938,
+        "likes": 17612,
+        "comments": 608,
+        "engagementRate": 0.35719196941807757,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5abb",
+    "firstName": "Jalen",
+    "lastName": "Dye",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647465669-Jalen_Dye_690097af44ae6f854f5f5abb.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1928,
+        "likes": 5088,
+        "comments": 376,
+        "engagementRate": 0.2071970832874307,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b06",
+    "firstName": "Regan",
+    "lastName": "Williams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647466361-Regan_Williams_690097af44ae6f854f5f5b06.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3060,
+        "likes": 3229,
+        "comments": 187,
+        "engagementRate": 0.07719400324320073,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5afc",
+    "firstName": "Blakely",
+    "lastName": "Barber",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647456808-Blakely_Barber_690097af44ae6f854f5f5afc.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "P",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1151,
+        "likes": 4269,
+        "comments": 814,
+        "engagementRate": 0.3402836917300387,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a46",
+    "firstName": "Tyson",
+    "lastName": "Owens",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647450104-Tyson_Owens_690097af44ae6f854f5f5a46.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "OF/C",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 142,
+        "engagementRate": 0,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a78",
+    "firstName": "Leroy",
+    "lastName": "Harris III",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647460371-Leroy_Harris III_690097af44ae6f854f5f5a78.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1488,
+        "likes": 8538,
+        "comments": 445,
+        "engagementRate": 0.4653297530926893,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b00",
+    "firstName": "Ellie",
+    "lastName": "Loveless",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647460953-Ellie_Loveless_690097af44ae6f854f5f5b00.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "P/UTL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 782,
+        "likes": 2797,
+        "comments": 284,
+        "engagementRate": 0.30295041246604076,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5abd",
+    "firstName": "Damani",
+    "lastName": "Maxson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647456877-Damani_Maxson_690097af44ae6f854f5f5abd.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3848,
+        "likes": 3616,
+        "comments": 165,
+        "engagementRate": 0.16376472626472627,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a98",
+    "firstName": "Amir",
+    "lastName": "Herring",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647454291-Amir_Herring_690097af44ae6f854f5f5a98.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4583,
+        "likes": 13288,
+        "comments": 1466,
+        "engagementRate": 0.24763913534479307,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a6a",
+    "firstName": "Jahlil",
+    "lastName": "Hurley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647465091-Jahlil_Hurley_690097af44ae6f854f5f5a6a.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6521,
+        "likes": 12083,
+        "comments": 481,
+        "engagementRate": 0.0945100444717068,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a84",
+    "firstName": "Blake",
+    "lastName": "Herold",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647444433-Blake_Herold_690097af44ae6f854f5f5a84.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1589,
+        "likes": 7137,
+        "comments": 243,
+        "engagementRate": 0.3574873493044875,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a7c",
+    "firstName": "Cole",
+    "lastName": "Petrus",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647455127-Cole_Petrus_690097af44ae6f854f5f5a7c.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1396,
+        "likes": 882,
+        "comments": 332,
+        "engagementRate": 0.06043240427194582,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a6e",
+    "firstName": "Jalen",
+    "lastName": "Todd",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647462180-Jalen_Todd_690097af44ae6f854f5f5a6e.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4966,
+        "likes": 10143,
+        "comments": 1234,
+        "engagementRate": 0.183020210036567,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ad3",
+    "firstName": "Mack",
+    "lastName": "Moeller",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647454530-Mack_Moeller_690097af44ae6f854f5f5ad3.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 124,
+        "engagementRate": 0,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5abe",
+    "firstName": "Mason",
+    "lastName": "Ellis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647464516-Mason_Ellis_690097af44ae6f854f5f5abe.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2140,
+        "likes": 827,
+        "comments": 171,
+        "engagementRate": 0.033450155763239876,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a6d",
+    "firstName": "Syeed",
+    "lastName": "Gibbs",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647463554-Syeed_Gibbs_690097af44ae6f854f5f5a6d.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 383,
+        "engagementRate": 0,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a54",
+    "firstName": "Augusto",
+    "lastName": "Mungarrieta",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647446460-Augusto_Mungarrieta_690097af44ae6f854f5f5a54.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "C",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1290,
+        "likes": 2515,
+        "comments": 427,
+        "engagementRate": 0.32580287929125135,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a4a",
+    "firstName": "Cade",
+    "lastName": "Baldridge",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647464445-Cade_Baldridge_690097af44ae6f854f5f5a4a.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "INF/OF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2053,
+        "likes": 7282,
+        "comments": 368,
+        "engagementRate": 0.2656165236326417,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ab3",
+    "firstName": "Johnny",
+    "lastName": "Thompson Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647451371-Johnny_Thompson Jr._690097af44ae6f854f5f5ab3.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7478,
+        "likes": 2540,
+        "comments": 556,
+        "engagementRate": 0.021199328235828173,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b0e",
+    "firstName": "Sania",
+    "lastName": "Copeland",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647461587-Sania_Copeland_690097af44ae6f854f5f5b0e.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3773,
+        "likes": 2086,
+        "comments": 581,
+        "engagementRate": 0.0463821892393321,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ac8",
+    "firstName": "Leyton",
+    "lastName": "Cure",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647458470-Leyton_Cure_690097af44ae6f854f5f5ac8.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1774,
+        "likes": 6809,
+        "comments": 167,
+        "engagementRate": 0.561765179578032,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a74",
+    "firstName": "Dakyus",
+    "lastName": "Brinkley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647456019-Dakyus_Brinkley_690097af44ae6f854f5f5a74.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1858,
+        "likes": 1667,
+        "comments": 181,
+        "engagementRate": 0.1307089035829617,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a9a",
+    "firstName": "Kael",
+    "lastName": "Farkes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647462160-Kael_Farkes_690097af44ae6f854f5f5a9a.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 985,
+        "likes": 3237,
+        "comments": 242,
+        "engagementRate": 0.32108906322104286,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a89",
+    "firstName": "Joseph",
+    "lastName": "Sipp Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647460388-Joseph_Sipp Jr._690097af44ae6f854f5f5a89.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4031,
+        "likes": 12619,
+        "comments": 438,
+        "engagementRate": 0.809786653435872,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b03",
+    "firstName": "Lizzy",
+    "lastName": "Ludwig",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647467573-Lizzy_Ludwig_690097af44ae6f854f5f5b03.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "RHP/UTL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1526,
+        "likes": 2801,
+        "comments": 225,
+        "engagementRate": 0.1791373763850828,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5aae",
+    "firstName": "Cole",
+    "lastName": "Ballard",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647459006-Cole_Ballard_690097af44ae6f854f5f5aae.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3591,
+        "likes": 7540,
+        "comments": 581,
+        "engagementRate": 0.24530647170874498,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a5f",
+    "firstName": "Caleb",
+    "lastName": "Deer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647455266-Caleb_Deer_690097af44ae6f854f5f5a5f.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 894,
+        "likes": 2694,
+        "comments": 283,
+        "engagementRate": 0.5679614941359908,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a50",
+    "firstName": "Joshua",
+    "lastName": "Dykhoff",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647459598-Joshua_Dykhoff_690097af44ae6f854f5f5a50.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP/1B",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1942,
+        "likes": 5474,
+        "comments": 223,
+        "engagementRate": 0.24377789220734636,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b13",
+    "firstName": "Brynn",
+    "lastName": "Kirsch",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647447577-Brynn_Kirsch_690097af44ae6f854f5f5b13.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "L/DS",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 19414,
+        "likes": 7341,
+        "comments": 703,
+        "engagementRate": 0.03178977370282614,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a5d",
+    "firstName": "Ty",
+    "lastName": "Thomson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647465635-Ty_Thomson_690097af44ae6f854f5f5a5d.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 885,
+        "likes": 4136,
+        "comments": 579,
+        "engagementRate": 0.41020402088430885,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a62",
+    "firstName": "Aiden",
+    "lastName": "Cline",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647458153-Aiden_Cline_690097af44ae6f854f5f5a62.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 998,
+        "likes": 2144,
+        "comments": 158,
+        "engagementRate": 0.5766533066132263,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a80",
+    "firstName": "Marcus",
+    "lastName": "Calvin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647463868-Marcus_Calvin_690097af44ae6f854f5f5a80.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2301,
+        "likes": 2901,
+        "comments": 32,
+        "engagementRate": 0.42488772997247576,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a83",
+    "firstName": "Josiah",
+    "lastName": "Hammond",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647457587-Josiah_Hammond_690097af44ae6f854f5f5a83.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1050,
+        "likes": 1707,
+        "comments": 70,
+        "engagementRate": 0.5506371947059626,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a5c",
+    "firstName": "Sawyer",
+    "lastName": "Cooney",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647462912-Sawyer_Cooney_690097af44ae6f854f5f5a5c.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 905,
+        "likes": 1792,
+        "comments": 189,
+        "engagementRate": 0.4377900552486188,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a65",
+    "firstName": "Manning",
+    "lastName": "West",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647457030-Manning_West_690097af44ae6f854f5f5a65.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2975,
+        "likes": 3500,
+        "comments": 174,
+        "engagementRate": 0.11226890756302521,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a9b",
+    "firstName": "Nolan",
+    "lastName": "Gorczyca",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647467592-Nolan_Gorczyca_690097af44ae6f854f5f5a9b.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1387,
+        "likes": 4014,
+        "comments": 228,
+        "engagementRate": 0.2548666186012978,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5afb",
+    "firstName": "Aynslee",
+    "lastName": "Linduff",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647455430-Aynslee_Linduff_690097af44ae6f854f5f5afb.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1616,
+        "likes": 3239,
+        "comments": 181,
+        "engagementRate": 0.17636138613861388,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5afe",
+    "firstName": "Sam",
+    "lastName": "Claire",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647462977-Sam_Claire_690097af44ae6f854f5f5afe.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "P",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 991,
+        "likes": 673,
+        "comments": 727,
+        "engagementRate": 0.057181298351833165,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a85",
+    "firstName": "Kenean",
+    "lastName": "Caldwell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647459596-Kenean_Caldwell_690097af44ae6f854f5f5a85.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DT",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1522,
+        "likes": 2437,
+        "comments": 116,
+        "engagementRate": 0.2795663600525624,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a44",
+    "firstName": "Landen",
+    "lastName": "Lozier",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647458966-Landen_Lozier_690097af44ae6f854f5f5a44.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "INF/OF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1710,
+        "likes": 1887,
+        "comments": 121,
+        "engagementRate": 0.22830409356725148,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5aaa",
+    "firstName": "Efren",
+    "lastName": "Jasso",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647459029-Efren_Jasso_690097af44ae6f854f5f5aaa.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "P",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1422,
+        "likes": 3114,
+        "comments": 209,
+        "engagementRate": 0.19473745897796527,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b18",
+    "firstName": "Aisha",
+    "lastName": "Aiono",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647465088-Aisha_Aiono_690097af44ae6f854f5f5b18.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 707,
+        "likes": 7945,
+        "comments": 166,
+        "engagementRate": 0.956034889203206,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5af6",
+    "firstName": "Ava",
+    "lastName": "Wallace",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647460377-Ava_Wallace_690097af44ae6f854f5f5af6.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1394,
+        "likes": 5559,
+        "comments": 482,
+        "engagementRate": 0.2142136523474112,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5aac",
+    "firstName": "Isaiah",
+    "lastName": "Marshall",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647457572-Isaiah_Marshall_690097af44ae6f854f5f5aac.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10538,
+        "likes": 29253,
+        "comments": 1119,
+        "engagementRate": 0.24017840197380905,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5adb",
+    "firstName": "Bryson",
+    "lastName": "Tiller",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647459586-Bryson_Tiller_690097af44ae6f854f5f5adb.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 62140,
+        "likes": 42582,
+        "comments": 564,
+        "engagementRate": 0.057720469906662374,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a69",
+    "firstName": "Austin",
+    "lastName": "Alexander",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647446635-Austin_Alexander_690097af44ae6f854f5f5a69.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2667,
+        "likes": 8242,
+        "comments": 677,
+        "engagementRate": 0.5573678290213724,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a6c",
+    "firstName": "Chris",
+    "lastName": "McCorkle",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647457603-Chris_McCorkle_690097af44ae6f854f5f5a6c.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1179,
+        "likes": 1425,
+        "comments": 148,
+        "engagementRate": 0.14814814814814814,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ae0",
+    "firstName": "Corbin",
+    "lastName": "Allen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647463505-Corbin_Allen_690097af44ae6f854f5f5ae0.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4994,
+        "likes": 29679,
+        "comments": 501,
+        "engagementRate": 0.4647977169031846,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b04",
+    "firstName": "Nadira",
+    "lastName": "Eltayeb",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647444421-Nadira_Eltayeb_690097af44ae6f854f5f5b04.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "C",
+    "year": "FIFTH YEAR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 538,
+        "likes": 790,
+        "comments": 122,
+        "engagementRate": 0.4237918215613383,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a96",
+    "firstName": "Tavake",
+    "lastName": "Tuikolovatu",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647458405-Tavake_Tuikolovatu_690097af44ae6f854f5f5a96.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1209,
+        "likes": 984,
+        "comments": 137,
+        "engagementRate": 0.1650951199338296,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5aa8",
+    "firstName": "Finn",
+    "lastName": "Lappin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647454550-Finn_Lappin_690097af44ae6f854f5f5aa8.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "P",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2024,
+        "likes": 5454,
+        "comments": 372,
+        "engagementRate": 0.2398715415019763,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a9e",
+    "firstName": "Eli",
+    "lastName": "Richmond",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647465806-Eli_Richmond_690097af44ae6f854f5f5a9e.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 701,
+        "likes": 1248,
+        "comments": 73,
+        "engagementRate": 0.23555634807417974,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5adc",
+    "firstName": "Justin",
+    "lastName": "Cross",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647454235-Justin_Cross_690097af44ae6f854f5f5adc.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3902,
+        "likes": 15109,
+        "comments": 254,
+        "engagementRate": 0.32660601400990946,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ae9",
+    "firstName": "Braelyn",
+    "lastName": "Daniels",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647465654-Braelyn_Daniels_690097af44ae6f854f5f5ae9.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "C",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1201,
+        "likes": 7971,
+        "comments": 243,
+        "engagementRate": 0.849273785906459,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ad9",
+    "firstName": "Paul",
+    "lastName": "Mbiya",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647465070-Paul_Mbiya_690097af44ae6f854f5f5ad9.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "C",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5497,
+        "likes": 23088,
+        "comments": 424,
+        "engagementRate": 0.35564853556485354,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b1a",
+    "firstName": "Kenzie",
+    "lastName": "Dean",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647446611-Kenzie_Dean_690097af44ae6f854f5f5b1a.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "PIN",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1532,
+        "likes": 4403,
+        "comments": 687,
+        "engagementRate": 0.408289817232376,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a52",
+    "firstName": "Kannon",
+    "lastName": "Carr",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647458155-Kannon_Carr_690097af44ae6f854f5f5a52.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 614,
+        "likes": 2968,
+        "comments": 245,
+        "engagementRate": 0.4757180929819367,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ad6",
+    "firstName": "Tate",
+    "lastName": "Nagy",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647453410-Tate_Nagy_690097af44ae6f854f5f5ad6.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2828,
+        "likes": 3906,
+        "comments": 299,
+        "engagementRate": 0.49563884959924565,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ad7",
+    "firstName": "Donald",
+    "lastName": "Collier",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647459057-Donald_Collier_690097af44ae6f854f5f5ad7.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1926,
+        "likes": 6444,
+        "comments": 185,
+        "engagementRate": 0.28682069920387676,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a4c",
+    "firstName": "Daniel",
+    "lastName": "Lopez",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647457527-Daniel_Lopez_690097af44ae6f854f5f5a4c.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1374,
+        "likes": 3261,
+        "comments": 74,
+        "engagementRate": 0.2022683163512858,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5adf",
+    "firstName": "Jayden",
+    "lastName": "Dawson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647454475-Jayden_Dawson_690097af44ae6f854f5f5adf.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6354,
+        "likes": 45154,
+        "comments": 727,
+        "engagementRate": 0.5549865620687151,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ab5",
+    "firstName": "John",
+    "lastName": "Kelly",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647447567-John_Kelly_690097af44ae6f854f5f5ab5.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1672,
+        "likes": 1791,
+        "comments": 96,
+        "engagementRate": 0.2254932786511734,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a86",
+    "firstName": "Dane",
+    "lastName": "Efird",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647458189-Dane_Efird_690097af44ae6f854f5f5a86.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "K",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 805,
+        "likes": 2922,
+        "comments": 239,
+        "engagementRate": 0.3569734613212874,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a99",
+    "firstName": "Hank",
+    "lastName": "Kelly",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647466370-Hank_Kelly_690097af44ae6f854f5f5a99.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2019,
+        "likes": 4200,
+        "comments": 308,
+        "engagementRate": 0.18606570909691267,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a7e",
+    "firstName": "Gage",
+    "lastName": "Keys",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647450117-Gage_Keys_690097af44ae6f854f5f5a7e.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11461,
+        "likes": 36,
+        "comments": 89,
+        "engagementRate": 0.0009088793880696855,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a97",
+    "firstName": "Kene",
+    "lastName": "Anene",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647466971-Kene_Anene_690097af44ae6f854f5f5a97.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1416,
+        "likes": 5228,
+        "comments": 497,
+        "engagementRate": 0.5775827280064568,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a4b",
+    "firstName": "Savion",
+    "lastName": "Flowers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647455977-Savion_Flowers_690097af44ae6f854f5f5a4b.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "OF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1738,
+        "likes": 6323,
+        "comments": 522,
+        "engagementRate": 0.32575757575757575,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a8c",
+    "firstName": "Jayson",
+    "lastName": "Gilliom",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647458209-Jayson_Gilliom_690097af44ae6f854f5f5a8c.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3309,
+        "likes": 1891,
+        "comments": 488,
+        "engagementRate": 0.04812632215170746,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a8f",
+    "firstName": "JaCorey",
+    "lastName": "Stewart",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647466983-JaCorey_Stewart_690097af44ae6f854f5f5a8f.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2822,
+        "likes": 7920,
+        "comments": 2177,
+        "engagementRate": 0.2981632412000945,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a43",
+    "firstName": "Tyson",
+    "lastName": "LeBlanc",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647463512-Tyson_LeBlanc_690097af44ae6f854f5f5a43.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "INF/OF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1546,
+        "likes": 3292,
+        "comments": 159,
+        "engagementRate": 0.2232212160413972,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a66",
+    "firstName": "Emerson",
+    "lastName": "McKnight",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647460322-Emerson_McKnight_690097af44ae6f854f5f5a66.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 650,
+        "likes": 1916,
+        "comments": 267,
+        "engagementRate": 0.27987179487179487,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a95",
+    "firstName": "Tyler",
+    "lastName": "Mercer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647462943-Tyler_Mercer_690097af44ae6f854f5f5a95.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2131,
+        "likes": 36,
+        "comments": 782,
+        "engagementRate": 0.03198811199749726,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a67",
+    "firstName": "Madden",
+    "lastName": "Seidl",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647447459-Madden_Seidl_690097af44ae6f854f5f5a67.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1184,
+        "likes": 3015,
+        "comments": 155,
+        "engagementRate": 0.2433968058968059,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ad2",
+    "firstName": "Jaidyn",
+    "lastName": "Doss",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647448165-Jaidyn_Doss_690097af44ae6f854f5f5ad2.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 13129,
+        "likes": 32187,
+        "comments": 325,
+        "engagementRate": 0.24763500647421738,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a71",
+    "firstName": "Jameer",
+    "lastName": "Moore",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647460390-Jameer_Moore_690097af44ae6f854f5f5a71.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1215,
+        "likes": 2654,
+        "comments": 93,
+        "engagementRate": 0.5652263374485597,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ab4",
+    "firstName": "Micah",
+    "lastName": "Johnson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647460401-Micah_Johnson_690097af44ae6f854f5f5ab4.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 119,
+        "engagementRate": 0,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ad8",
+    "firstName": "Jackson",
+    "lastName": "Cook",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647465677-Jackson_Cook_690097af44ae6f854f5f5ad8.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2720,
+        "likes": 891,
+        "comments": 334,
+        "engagementRate": 0.06948529411764706,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5aa2",
+    "firstName": "Anderson",
+    "lastName": "Kopp",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647460961-Anderson_Kopp_690097af44ae6f854f5f5aa2.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1877,
+        "likes": 2223,
+        "comments": 224,
+        "engagementRate": 0.6518380394246137,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a8d",
+    "firstName": "Logan",
+    "lastName": "Brantley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647467003-Logan_Brantley_690097af44ae6f854f5f5a8d.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2764,
+        "likes": 2585,
+        "comments": 276,
+        "engagementRate": 0.3450313555233961,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a47",
+    "firstName": "Colin",
+    "lastName": "Guerra",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647462931-Colin_Guerra_690097af44ae6f854f5f5a47.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1216,
+        "likes": 2661,
+        "comments": 400,
+        "engagementRate": 0.20291940789473684,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a4f",
+    "firstName": "Toby",
+    "lastName": "Scheidt",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647458147-Toby_Scheidt_690097af44ae6f854f5f5a4f.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1275,
+        "likes": 4454,
+        "comments": 307,
+        "engagementRate": 0.3111764705882352,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ad4",
+    "firstName": "Isreal",
+    "lastName": "Moses V",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647456861-Isreal_Moses V_690097af44ae6f854f5f5ad4.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2465,
+        "likes": 13284,
+        "comments": 384,
+        "engagementRate": 0.46206896551724136,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a5b",
+    "firstName": "Jordan",
+    "lastName": "Bach",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647466356-Jordan_Bach_690097af44ae6f854f5f5a5b.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "OF",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 477,
+        "likes": 1312,
+        "comments": 112,
+        "engagementRate": 0.24877707896575826,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a51",
+    "firstName": "Carter",
+    "lastName": "Fink",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647462134-Carter_Fink_690097af44ae6f854f5f5a51.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2506,
+        "likes": 4339,
+        "comments": 389,
+        "engagementRate": 0.18395849960095773,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5b1d",
+    "firstName": "Audra",
+    "lastName": "Wilmes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647462172-Audra_Wilmes_690097af44ae6f854f5f5b1d.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "PIN",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3497,
+        "likes": 6150,
+        "comments": 297,
+        "engagementRate": 0.15236869697836242,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a5a",
+    "firstName": "Abel",
+    "lastName": "Ney",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647465614-Abel_Ney_690097af44ae6f854f5f5a5a.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "C",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 242,
+        "likes": 69,
+        "comments": 11,
+        "engagementRate": 0.3305785123966942,
+        "contentCount": 1,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a90",
+    "firstName": "Cole",
+    "lastName": "Mondi",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647459044-Cole_Mondi_690097af44ae6f854f5f5a90.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2728,
+        "likes": 30133,
+        "comments": 474,
+        "engagementRate": 1.1219574780058652,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5aad",
+    "firstName": "Mikey",
+    "lastName": "Pauley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647454289-Mikey_Pauley_690097af44ae6f854f5f5aad.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2904,
+        "likes": 11657,
+        "comments": 545,
+        "engagementRate": 0.35014921946740124,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a77",
+    "firstName": "Caleb",
+    "lastName": "Redd",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647446643-Caleb_Redd_690097af44ae6f854f5f5a77.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2360,
+        "likes": 4669,
+        "comments": 130,
+        "engagementRate": 0.4077882112912644,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ad0",
+    "firstName": "Bryson",
+    "lastName": "Hayes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647460950-Bryson_Hayes_690097af44ae6f854f5f5ad0.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1699,
+        "likes": 1230,
+        "comments": 115,
+        "engagementRate": 0.12320973121443986,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5ac7",
+    "firstName": "Conlee",
+    "lastName": "Hovey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647467576-Conlee_Hovey_690097af44ae6f854f5f5ac7.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 754,
+        "likes": 3688,
+        "comments": 247,
+        "engagementRate": 0.5218832891246683,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a8e",
+    "firstName": "Malachi",
+    "lastName": "Curvey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647467561-Malachi_Curvey_690097af44ae6f854f5f5a8e.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1500,
+        "likes": 523,
+        "comments": 23,
+        "engagementRate": 0.364,
+        "contentCount": 1,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a94",
+    "firstName": "David",
+    "lastName": "Abajian",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647459050-David_Abajian_690097af44ae6f854f5f5a94.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1187,
+        "likes": 1000,
+        "comments": 262,
+        "engagementRate": 0.10736684451932976,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a64",
+    "firstName": "Jeremy",
+    "lastName": "Allen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647462922-Jeremy_Allen_690097af44ae6f854f5f5a64.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1543,
+        "likes": 3090,
+        "comments": 372,
+        "engagementRate": 0.44873622812702524,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a5e",
+    "firstName": "Mathis",
+    "lastName": "Nayral",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647457525-Mathis_Nayral_690097af44ae6f854f5f5a5e.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 810,
+        "likes": 1106,
+        "comments": 0,
+        "engagementRate": 0.2730864197530864,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5aa1",
+    "firstName": "DeAndre",
+    "lastName": "Harper",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647463538-DeAndre_Harper_690097af44ae6f854f5f5aa1.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1248,
+        "likes": 2777,
+        "comments": 328,
+        "engagementRate": 0.6219951923076923,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a7b",
+    "firstName": "Alex",
+    "lastName": "Bray",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647465103-Alex_Bray_690097af44ae6f854f5f5a7b.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1354,
+        "likes": 935,
+        "comments": 60,
+        "engagementRate": 0.3674298375184638,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a7d",
+    "firstName": "Jason",
+    "lastName": "Strickland",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647456835-Jason_Strickland_690097af44ae6f854f5f5a7d.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 973,
+        "likes": 1475,
+        "comments": 161,
+        "engagementRate": 0.3362795477903392,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a93",
+    "firstName": "Emory",
+    "lastName": "Duggar",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647465646-Emory_Duggar_690097af44ae6f854f5f5a93.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LS",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1187,
+        "likes": 844,
+        "comments": 98,
+        "engagementRate": 0.2645324347093513,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a92",
+    "firstName": "Hollis",
+    "lastName": "Moeller",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647466989-Hollis_Moeller_690097af44ae6f854f5f5a92.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LS",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1317,
+        "likes": 507,
+        "comments": 25,
+        "engagementRate": 0.4039483675018983,
+        "contentCount": 1,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a75",
+    "firstName": "Dylan",
+    "lastName": "Brooks",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647466980-Dylan_Brooks_690097af44ae6f854f5f5a75.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6416,
+        "likes": 7149,
+        "comments": 436,
+        "engagementRate": 0.23644014962593518,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690097af44ae6f854f5f5a58",
+    "firstName": "Blake",
+    "lastName": "O'Brien",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647462131-Blake_O'Brien_690097af44ae6f854f5f5a58.png",
+    "schoolName": "Kansas",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2295,
+        "likes": 3044,
+        "comments": 247,
+        "engagementRate": 0.47799564270152506,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  }
+]

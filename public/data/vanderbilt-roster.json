@@ -1,0 +1,3908 @@
+[
+  {
+    "_id": "69009bba3421b3cab6502185",
+    "firstName": "Chase",
+    "lastName": "Mitchell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647745337-Chase_Mitchell_69009bba3421b3cab6502185.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5617,
+        "likes": 7584,
+        "comments": 800,
+        "engagementRate": 0.07596977429628311,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021bd",
+    "firstName": "Marlen",
+    "lastName": "Sewell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647745330-Marlen_Sewell_69009bba3421b3cab65021bd.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3197,
+        "likes": 4355,
+        "comments": 590,
+        "engagementRate": 0.0778231950902472,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021ad",
+    "firstName": "Isaiah",
+    "lastName": "Fontan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647743585-Isaiah_Fontan_69009bba3421b3cab65021ad.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 213,
+        "engagementRate": 0,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021a5",
+    "firstName": "Chase",
+    "lastName": "Gillespie",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647733869-Chase_Gillespie_69009bba3421b3cab65021a5.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 18729,
+        "likes": 19772,
+        "comments": 50,
+        "engagementRate": 0.07546527303358988,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502189",
+    "firstName": "Bryce",
+    "lastName": "Henderson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647732940-Bryce_Henderson_69009bba3421b3cab6502189.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1427,
+        "likes": 4872,
+        "comments": 390,
+        "engagementRate": 0.2816559754191149,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502147",
+    "firstName": "Joshua",
+    "lastName": "Singh",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647740999-Joshua_Singh_69009bba3421b3cab6502147.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3340,
+        "likes": 2159,
+        "comments": 678,
+        "engagementRate": 0.03914059991904303,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021aa",
+    "firstName": "Jamezell",
+    "lastName": "Lassiter",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647732133-Jamezell_Lassiter_69009bba3421b3cab65021aa.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6100,
+        "likes": 20930,
+        "comments": 1729,
+        "engagementRate": 0.24904716448436895,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021b2",
+    "firstName": "Connor",
+    "lastName": "Fennell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647741519-Connor_Fennell_69009bba3421b3cab65021b2.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1992,
+        "likes": 9955,
+        "comments": 240,
+        "engagementRate": 0.3046826508334117,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650212f",
+    "firstName": "Jordan",
+    "lastName": "Matthews",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647738970-Jordan_Matthews_69009bba3421b3cab650212f.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 14792,
+        "likes": 31654,
+        "comments": 1740,
+        "engagementRate": 0.14056568909363526,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650216a",
+    "firstName": "Austin",
+    "lastName": "Howard",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647741566-Austin_Howard_69009bba3421b3cab650216a.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4138,
+        "likes": 184487,
+        "comments": 662,
+        "engagementRate": 2.6326848859006557,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502134",
+    "firstName": "Jack",
+    "lastName": "Wanzung",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647746523-Jack_Wanzung_69009bba3421b3cab6502134.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1382,
+        "likes": 6480,
+        "comments": 713,
+        "engagementRate": 0.40130067706066214,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021cb",
+    "firstName": "Eli",
+    "lastName": "Stowers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647745910-Eli_Stowers_69009bba3421b3cab65021cb.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10074,
+        "likes": 72667,
+        "comments": 656,
+        "engagementRate": 0.22365201168184204,
+        "contentCount": 32,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021db",
+    "firstName": "Joseph",
+    "lastName": "McVay",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647738096-Joseph_McVay_69009bba3421b3cab65021db.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 728,
+        "likes": 501,
+        "comments": 110,
+        "engagementRate": 0.25045787545787546,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502146",
+    "firstName": "Terry",
+    "lastName": "Nwabuisi-Ezeala",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647740352-Terry_Nwabuisi-Ezeala_69009bba3421b3cab6502146.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 767,
+        "engagementRate": 0,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021a2",
+    "firstName": "Jack",
+    "lastName": "Elliott",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647742144-Jack_Elliott_69009bba3421b3cab65021a2.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6147,
+        "likes": 75365,
+        "comments": 1093,
+        "engagementRate": 0.9516336924828871,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502131",
+    "firstName": "Cayden",
+    "lastName": "Daniels",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647735629-Cayden_Daniels_69009bba3421b3cab6502131.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 338,
+        "engagementRate": 0,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502168",
+    "firstName": "Bryce",
+    "lastName": "Cowan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647738992-Bryce_Cowan_69009bba3421b3cab6502168.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2815,
+        "likes": 206,
+        "comments": 498,
+        "engagementRate": 0.0266804391787171,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650217d",
+    "firstName": "Durham",
+    "lastName": "Harris",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647733932-Durham_Harris_69009bba3421b3cab650217d.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LS",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4650,
+        "likes": 9800,
+        "comments": 470,
+        "engagementRate": 0.17019689801527368,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021c6",
+    "firstName": "Taryn",
+    "lastName": "DeWese",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647739166-Taryn_DeWese_69009bba3421b3cab65021c6.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "SET",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10173,
+        "likes": 96194,
+        "comments": 345,
+        "engagementRate": 0.38021346582427085,
+        "contentCount": 25,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502178",
+    "firstName": "Hailee",
+    "lastName": "Mack",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647743555-Hailee_Mack_69009bba3421b3cab6502178.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "LIB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5860,
+        "likes": 18688,
+        "comments": 341,
+        "engagementRate": 0.18006260337659188,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502141",
+    "firstName": "Nikhil",
+    "lastName": "Jefferson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647736641-Nikhil_Jefferson_69009bba3421b3cab6502141.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1598,
+        "likes": 3128,
+        "comments": 386,
+        "engagementRate": 0.199908977130504,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021d0",
+    "firstName": "Brycen",
+    "lastName": "Coleman",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647742934-Brycen_Coleman_69009bba3421b3cab65021d0.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 18600,
+        "likes": 1547,
+        "comments": 191,
+        "engagementRate": 0.006590148761165212,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021b0",
+    "firstName": "Luke",
+    "lastName": "Guth",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647731999-Luke_Guth_69009bba3421b3cab65021b0.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2923,
+        "likes": 13229,
+        "comments": 235,
+        "engagementRate": 0.383438224012802,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650212e",
+    "firstName": "Kolbey",
+    "lastName": "Taylor",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647745319-Kolbey_Taylor_69009bba3421b3cab650212e.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2253,
+        "likes": 999,
+        "comments": 240,
+        "engagementRate": 0.02885042166000888,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502140",
+    "firstName": "Jaylon",
+    "lastName": "Stone",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647740974-Jaylon_Stone_69009bba3421b3cab6502140.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1597,
+        "likes": 7481,
+        "comments": 1242,
+        "engagementRate": 0.3639699481309563,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502121",
+    "firstName": "Jaylon",
+    "lastName": "Dean-Vines",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647740976-Jaylon_Dean-Vines_69009bba3421b3cab6502121.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 21830,
+        "likes": 41668,
+        "comments": 858,
+        "engagementRate": 0.12200837335729978,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021ba",
+    "firstName": "Nate",
+    "lastName": "Teague",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647746491-Nate_Teague_69009bba3421b3cab65021ba.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1695,
+        "likes": 2504,
+        "comments": 216,
+        "engagementRate": 0.12925270403146508,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502170",
+    "firstName": "JD",
+    "lastName": "Thompson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647740938-JD_Thompson_69009bba3421b3cab6502170.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4221,
+        "likes": 35884,
+        "comments": 531,
+        "engagementRate": 0.607973205317652,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502165",
+    "firstName": "Langston",
+    "lastName": "Patterson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647739783-Langston_Patterson_69009bba3421b3cab6502165.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2351,
+        "likes": 11141,
+        "comments": 864,
+        "engagementRate": 0.30212288560702955,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650214c",
+    "firstName": "Monique",
+    "lastName": "Williams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647740365-Monique_Williams_69009bba3421b3cab650214c.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "FORWARD",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1607,
+        "likes": 1586,
+        "comments": 291,
+        "engagementRate": 0.07360453383678046,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502149",
+    "firstName": "Miles",
+    "lastName": "Capers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647744744-Miles_Capers_69009bba3421b3cab6502149.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "EDGE",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2212,
+        "likes": 3368,
+        "comments": 341,
+        "engagementRate": 0.11018627740680201,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502150",
+    "firstName": "Mikayla",
+    "lastName": "Blakes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647742187-Mikayla_Blakes_69009bba3421b3cab6502150.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 13379,
+        "likes": 18230,
+        "comments": 674,
+        "engagementRate": 0.1050443313345897,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021cc",
+    "firstName": "Cole",
+    "lastName": "Spence",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647742922-Cole_Spence_69009bba3421b3cab65021cc.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2766,
+        "likes": 9191,
+        "comments": 253,
+        "engagementRate": 0.24409853485228136,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021c5",
+    "firstName": "Randon",
+    "lastName": "Fontenette",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647742926-Randon_Fontenette_69009bba3421b3cab65021c5.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "S/OLB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11594,
+        "likes": 43825,
+        "comments": 929,
+        "engagementRate": 0.21763607641754934,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021c1",
+    "firstName": "Carson",
+    "lastName": "Lawrence",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647733829-Carson_Lawrence_69009bba3421b3cab65021c1.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3881,
+        "likes": 3265,
+        "comments": 295,
+        "engagementRate": 0.08758099801649315,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021a6",
+    "firstName": "Makhilyn",
+    "lastName": "Young",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647732121-Makhilyn_Young_69009bba3421b3cab65021a6.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3337,
+        "likes": 15589,
+        "comments": 570,
+        "engagementRate": 0.2902668963214814,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021bc",
+    "firstName": "Dontae",
+    "lastName": "Carter",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647736435-Dontae_Carter_69009bba3421b3cab65021bc.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 14036,
+        "likes": 3304,
+        "comments": 1596,
+        "engagementRate": 0.017877772001219053,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502169",
+    "firstName": "Nick",
+    "lastName": "Rinaldi",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647736665-Nick_Rinaldi_69009bba3421b3cab6502169.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3780,
+        "likes": 22902,
+        "comments": 489,
+        "engagementRate": 0.3851838254819931,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502196",
+    "firstName": "Sterling",
+    "lastName": "Porcher",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647742911-Sterling_Porcher_69009bba3421b3cab6502196.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1969,
+        "likes": 563,
+        "comments": 88,
+        "engagementRate": 0.01882646060406309,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502191",
+    "firstName": "Isaia",
+    "lastName": "Glass",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647738109-Isaia_Glass_69009bba3421b3cab6502191.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9232,
+        "likes": 3794,
+        "comments": 1056,
+        "engagementRate": 0.026764079424679926,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502144",
+    "firstName": "Khordae",
+    "lastName": "Sydnor",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647734732-Khordae_Sydnor_69009bba3421b3cab6502144.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3235,
+        "likes": 7781,
+        "comments": 1378,
+        "engagementRate": 0.1660294937916318,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021e1",
+    "firstName": "Kayleb",
+    "lastName": "Barnett",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647735679-Kayleb_Barnett_69009bba3421b3cab65021e1.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3916,
+        "likes": 15728,
+        "comments": 587,
+        "engagementRate": 0.2999290157111612,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021d9",
+    "firstName": "Richie",
+    "lastName": "Hoskins",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647732986-Richie_Hoskins_69009bba3421b3cab65021d9.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2652,
+        "likes": 13575,
+        "comments": 466,
+        "engagementRate": 0.37886670395706395,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021da",
+    "firstName": "Tre",
+    "lastName": "Richardson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647744762-Tre_Richardson_69009bba3421b3cab65021da.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4759,
+        "likes": 90133,
+        "comments": 1355,
+        "engagementRate": 0.7903732411005885,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021bf",
+    "firstName": "Jalen",
+    "lastName": "Gilbert",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647744766-Jalen_Gilbert_69009bba3421b3cab65021bf.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1747,
+        "likes": 2319,
+        "comments": 340,
+        "engagementRate": 0.20524981601112108,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021e4",
+    "firstName": "Ty",
+    "lastName": "Burd",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647746541-Ty_Burd_69009bba3421b3cab65021e4.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1115,
+        "likes": 3251,
+        "comments": 308,
+        "engagementRate": 0.39417040358744393,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650219f",
+    "firstName": "Diego",
+    "lastName": "Pavia",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647738946-Diego_Pavia_69009bba3421b3cab650219f.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 99845,
+        "likes": 92253,
+        "comments": 4627,
+        "engagementRate": 0.0473753650803202,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502133",
+    "firstName": "Trudell",
+    "lastName": "Berry",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647740362-Trudell_Berry_69009bba3421b3cab6502133.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3413,
+        "likes": 49,
+        "comments": 504,
+        "engagementRate": 0.0010254907705830648,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502155",
+    "firstName": "Ndjakalenga",
+    "lastName": "Mwenentanda",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647745913-Ndjakalenga_Mwenentanda_69009bba3421b3cab6502155.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5343,
+        "likes": 7955,
+        "comments": 454,
+        "engagementRate": 0.09866779342266492,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502157",
+    "firstName": "Justine",
+    "lastName": "Pissott",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647744133-Justine_Pissott_69009bba3421b3cab6502157.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "GUARD/FORWARD",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9701,
+        "likes": 2854,
+        "comments": 487,
+        "engagementRate": 0.02056870008124391,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502193",
+    "firstName": "Misael",
+    "lastName": "Sandoval",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647742147-Misael_Sandoval_69009bba3421b3cab6502193.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 768,
+        "likes": 3136,
+        "comments": 211,
+        "engagementRate": 0.3631727430555555,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502186",
+    "firstName": "Clinton",
+    "lastName": "Azubuike",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647738962-Clinton_Azubuike_69009bba3421b3cab6502186.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7492,
+        "likes": 9612,
+        "comments": 85,
+        "engagementRate": 0.4314379782879516,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650211a",
+    "firstName": "Frankie",
+    "lastName": "Collins",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647738959-Frankie_Collins_69009bba3421b3cab650211a.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "-",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 46137,
+        "likes": 4051,
+        "comments": 297,
+        "engagementRate": 0.005983294083621536,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502132",
+    "firstName": "Jaylin",
+    "lastName": "Lackey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647746553-Jaylin_Lackey_69009bba3421b3cab6502132.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7056,
+        "likes": 3,
+        "comments": 983,
+        "engagementRate": 0.00182468820861678,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021cd",
+    "firstName": "Emmanuel",
+    "lastName": "Adebi",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647745311-Emmanuel_Adebi_69009bba3421b3cab65021cd.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1178,
+        "likes": 3629,
+        "comments": 374,
+        "engagementRate": 0.28317770232031686,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021a3",
+    "firstName": "Jérémy",
+    "lastName": "St-Hilaire",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647746549-JÃ©rÃ©my_St-Hilaire_69009bba3421b3cab65021a3.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2357,
+        "likes": 7936,
+        "comments": 539,
+        "engagementRate": 0.29599773723660017,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502179",
+    "firstName": "Kati",
+    "lastName": "Berezowitz",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647746519-Kati_Berezowitz_69009bba3421b3cab6502179.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "LIB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4576,
+        "likes": 16126,
+        "comments": 447,
+        "engagementRate": 0.2763876841849259,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502188",
+    "firstName": "Jordan",
+    "lastName": "White",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647742950-Jordan_White_69009bba3421b3cab6502188.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4337,
+        "likes": 11885,
+        "comments": 1122,
+        "engagementRate": 0.16855364570360754,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650211d",
+    "firstName": "Tyler",
+    "lastName": "Nickel",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647745299-Tyler_Nickel_69009bba3421b3cab650211d.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "-",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9670,
+        "likes": 33643,
+        "comments": 655,
+        "engagementRate": 0.20813185704599738,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650215a",
+    "firstName": "Chris",
+    "lastName": "Maldonado",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647732009-Chris_Maldonado_69009bba3421b3cab650215a.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5247,
+        "likes": 28221,
+        "comments": 254,
+        "engagementRate": 0.41525220990903744,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021b4",
+    "firstName": "Cody",
+    "lastName": "Bowker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647745285-Cody_Bowker_69009bba3421b3cab65021b4.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2947,
+        "likes": 16583,
+        "comments": 395,
+        "engagementRate": 0.4445296108700395,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502126",
+    "firstName": "Mason",
+    "lastName": "Nicholson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647744735-Mason_Nicholson_69009bba3421b3cab6502126.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "-",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1217,
+        "likes": 2905,
+        "comments": 222,
+        "engagementRate": 0.18362992900322977,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650214e",
+    "firstName": "Trinity",
+    "lastName": "Wilson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647738161-Trinity_Wilson_69009bba3421b3cab650214e.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "FORWARD",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1756,
+        "likes": 1677,
+        "comments": 342,
+        "engagementRate": 0.04976849571969343,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021af",
+    "firstName": "Ethan",
+    "lastName": "Robinson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647747094-Ethan_Robinson_69009bba3421b3cab65021af.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3416,
+        "likes": 1017,
+        "comments": 144,
+        "engagementRate": 0.04340916694546671,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502195",
+    "firstName": "Keegan",
+    "lastName": "Wechsler",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647744730-Keegan_Wechsler_69009bba3421b3cab6502195.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 852,
+        "likes": 2184,
+        "comments": 198,
+        "engagementRate": 0.310641627543036,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650212d",
+    "firstName": "Marlon",
+    "lastName": "Jones",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647745905-Marlon_Jones_69009bba3421b3cab650212d.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1619,
+        "likes": 5312,
+        "comments": 432,
+        "engagementRate": 0.3691579164093062,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502127",
+    "firstName": "Devin",
+    "lastName": "McGlockton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647740390-Devin_McGlockton_69009bba3421b3cab6502127.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "-",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3558,
+        "likes": 4276,
+        "comments": 482,
+        "engagementRate": 0.0916972404510245,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650218f",
+    "firstName": "Cade",
+    "lastName": "McConnell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647734530-Cade_McConnell_69009bba3421b3cab650218f.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3663,
+        "likes": 9198,
+        "comments": 628,
+        "engagementRate": 0.17163046230403742,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650211c",
+    "firstName": "Tyler",
+    "lastName": "Tanner",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647739788-Tyler_Tanner_69009bba3421b3cab650211c.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "-",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9718,
+        "likes": 43856,
+        "comments": 796,
+        "engagementRate": 0.1876979600747077,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502143",
+    "firstName": "Linus",
+    "lastName": "Zunk",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647734727-Linus_Zunk_69009bba3421b3cab6502143.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2027,
+        "likes": 3025,
+        "comments": 556,
+        "engagementRate": 0.08413532499835302,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502142",
+    "firstName": "Bradley",
+    "lastName": "Mann",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647744151-Bradley_Mann_69009bba3421b3cab6502142.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2630,
+        "likes": 8046,
+        "comments": 522,
+        "engagementRate": 0.19176364923708492,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502119",
+    "firstName": "Mike",
+    "lastName": "James",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647745297-Mike_James_69009bba3421b3cab6502119.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "-",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10385,
+        "likes": 6542,
+        "comments": 81,
+        "engagementRate": 0.04907737959395464,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021be",
+    "firstName": "CJ",
+    "lastName": "Heard",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647734809-CJ_Heard_69009bba3421b3cab65021be.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 41026,
+        "likes": 181941,
+        "comments": 1793,
+        "engagementRate": 0.40689290762289115,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502184",
+    "firstName": "Tommy",
+    "lastName": "Goodin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647745288-Tommy_Goodin_69009bba3421b3cab6502184.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "OF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2740,
+        "likes": 2325,
+        "comments": 315,
+        "engagementRate": 0.07563868613138687,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021c0",
+    "firstName": "Davin",
+    "lastName": "Chandler",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647739232-Davin_Chandler_69009bba3421b3cab65021c0.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6764,
+        "likes": 11154,
+        "comments": 622,
+        "engagementRate": 0.15724322884440342,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502145",
+    "firstName": "Hayden",
+    "lastName": "Bray",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647738392-Hayden_Bray_69009bba3421b3cab6502145.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1874,
+        "likes": 691,
+        "comments": 259,
+        "engagementRate": 0.03170262866986177,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021d6",
+    "firstName": "Jr.",
+    "lastName": "Sherrill",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647747109-Jr._Sherrill_69009bba3421b3cab65021d6.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4981,
+        "likes": 17365,
+        "comments": 890,
+        "engagementRate": 0.26187540280272587,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502137",
+    "firstName": "Martel",
+    "lastName": "Hight",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647745897-Martel_Hight_69009bba3421b3cab6502137.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "CB/WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8778,
+        "likes": 14261,
+        "comments": 758,
+        "engagementRate": 0.12795067060761628,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021a7",
+    "firstName": "AJ",
+    "lastName": "Newberry",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647741430-AJ_Newberry_69009bba3421b3cab65021a7.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1790,
+        "likes": 4503,
+        "comments": 382,
+        "engagementRate": 0.1951869359690589,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502175",
+    "firstName": "Roman",
+    "lastName": "Petricca",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647736386-Roman_Petricca_69009bba3421b3cab6502175.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1777,
+        "likes": 2347,
+        "comments": 260,
+        "engagementRate": 0.17965672481710748,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650214b",
+    "firstName": "Gabe",
+    "lastName": "Fisher",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647732931-Gabe_Fisher_69009bba3421b3cab650214b.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "FB/TE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2586,
+        "likes": 22173,
+        "comments": 804,
+        "engagementRate": 0.6849956819002684,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502194",
+    "firstName": "David",
+    "lastName": "Siegel",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647745309-David_Siegel_69009bba3421b3cab6502194.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3118,
+        "likes": 23247,
+        "comments": 571,
+        "engagementRate": 0.9548588838999358,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021a0",
+    "firstName": "Drew",
+    "lastName": "Dickey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647742375-Drew_Dickey_69009bba3421b3cab65021a0.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3781,
+        "likes": 5951,
+        "comments": 387,
+        "engagementRate": 0.11742004865643761,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650214f",
+    "firstName": "Sacha",
+    "lastName": "Washington",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647741530-Sacha_Washington_69009bba3421b3cab650214f.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "FORWARD",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3007,
+        "likes": 2609,
+        "comments": 154,
+        "engagementRate": 0.06413634060208719,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650217a",
+    "firstName": "Elli",
+    "lastName": "Kinney",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647734657-Elli_Kinney_69009bba3421b3cab650217a.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "LIB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2886,
+        "likes": 3414,
+        "comments": 548,
+        "engagementRate": 0.07543898541317047,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502129",
+    "firstName": "Mac",
+    "lastName": "Rose",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647731971-Mac_Rose_69009bba3421b3cab6502129.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "C",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1577,
+        "likes": 19592,
+        "comments": 224,
+        "engagementRate": 0.9656834949502371,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021dc",
+    "firstName": "Chance",
+    "lastName": "Fitzgerald",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647738984-Chance_Fitzgerald_69009bba3421b3cab65021dc.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5199,
+        "likes": 7169,
+        "comments": 601,
+        "engagementRate": 0.13137105512598846,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650217b",
+    "firstName": "Taylor",
+    "lastName": "Porter",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647738943-Taylor_Porter_69009bba3421b3cab650217b.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "LIB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1815,
+        "likes": 200,
+        "comments": 379,
+        "engagementRate": 0.008588390034766238,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021b9",
+    "firstName": "Sawyer",
+    "lastName": "Hawks",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647743542-Sawyer_Hawks_69009bba3421b3cab65021b9.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2753,
+        "likes": 11925,
+        "comments": 481,
+        "engagementRate": 0.3370309312917377,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021bb",
+    "firstName": "England",
+    "lastName": "Bryan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647743572-England_Bryan_69009bba3421b3cab65021bb.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1440,
+        "likes": 4444,
+        "comments": 331,
+        "engagementRate": 0.23686305249456743,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021b1",
+    "firstName": "Brennan",
+    "lastName": "Seiber",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647735358-Brennan_Seiber_69009bba3421b3cab65021b1.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1710,
+        "likes": 7369,
+        "comments": 316,
+        "engagementRate": 0.3455378715465923,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502166",
+    "firstName": "Bryan",
+    "lastName": "Longwell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647732101-Bryan_Longwell_69009bba3421b3cab6502166.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1639,
+        "likes": 6823,
+        "comments": 259,
+        "engagementRate": 0.3338926174496644,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021d7",
+    "firstName": "Trent",
+    "lastName": "Hudson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647745887-Trent_Hudson_69009bba3421b3cab65021d7.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 18951,
+        "likes": 17842,
+        "comments": 731,
+        "engagementRate": 0.06997490019017281,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650219a",
+    "firstName": "Reese",
+    "lastName": "Animashaun",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647740954-Reese_Animashaun_69009bba3421b3cab650219a.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OUT",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2194,
+        "likes": 3217,
+        "comments": 469,
+        "engagementRate": 0.10015319001621943,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502198",
+    "firstName": "Mia",
+    "lastName": "Soerensen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647744702-Mia_Soerensen_69009bba3421b3cab6502198.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OPP",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1825,
+        "likes": 2965,
+        "comments": 516,
+        "engagementRate": 0.0903930194213884,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502136",
+    "firstName": "Mustafa",
+    "lastName": "Dannett",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647735592-Mustafa_Dannett_69009bba3421b3cab6502136.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1673,
+        "likes": 917,
+        "comments": 300,
+        "engagementRate": 0.07068141063956963,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502151",
+    "firstName": "Jada",
+    "lastName": "Brown",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647744160-Jada_Brown_69009bba3421b3cab6502151.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 28346,
+        "likes": 34664,
+        "comments": 362,
+        "engagementRate": 0.07167165354724314,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502139",
+    "firstName": "Yilanan",
+    "lastName": "Ouattara",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647743562-Yilanan_Ouattara_69009bba3421b3cab6502139.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 212,
+        "engagementRate": 0,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650217e",
+    "firstName": "Rachel",
+    "lastName": "Ogunleye",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647747126-Rachel_Ogunleye_69009bba3421b3cab650217e.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MID",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1286,
+        "likes": 648,
+        "comments": 317,
+        "engagementRate": 0.02200581576827536,
+        "contentCount": 23,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502159",
+    "firstName": "Mike",
+    "lastName": "Mancini",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647738297-Mike_Mancini_69009bba3421b3cab6502159.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10990,
+        "likes": 23511,
+        "comments": 336,
+        "engagementRate": 0.16695855385630703,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502156",
+    "firstName": "Aga",
+    "lastName": "Makurat",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647733850-Aga_Makurat_69009bba3421b3cab6502156.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3067,
+        "likes": 1134,
+        "comments": 326,
+        "engagementRate": 0.03170850994457124,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021c7",
+    "firstName": "Isabella",
+    "lastName": "Bareford",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647732020-Isabella_Bareford_69009bba3421b3cab65021c7.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "SET",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1485,
+        "likes": 7149,
+        "comments": 526,
+        "engagementRate": 0.3764309764309764,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650219c",
+    "firstName": "Maya",
+    "lastName": "Witherspoon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647743538-Maya_Witherspoon_69009bba3421b3cab650219c.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OUT",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3934,
+        "likes": 7009,
+        "comments": 170,
+        "engagementRate": 0.09109455345230673,
+        "contentCount": 20,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650215f",
+    "firstName": "Riley",
+    "lastName": "Nelson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647738081-Riley_Nelson_69009bba3421b3cab650215f.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3955,
+        "likes": 40809,
+        "comments": 509,
+        "engagementRate": 0.8023089552100884,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021b7",
+    "firstName": "Tommy",
+    "lastName": "O'Rourke",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647732944-Tommy_O'Rourke_69009bba3421b3cab65021b7.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3650,
+        "likes": 4484,
+        "comments": 594,
+        "engagementRate": 0.10273974335391049,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650211b",
+    "firstName": "Duke",
+    "lastName": "Miles",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647744718-Duke_Miles_69009bba3421b3cab650211b.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "-",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7134,
+        "likes": 12951,
+        "comments": 459,
+        "engagementRate": 0.08773624779232697,
+        "contentCount": 22,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650214d",
+    "firstName": "Aiyana",
+    "lastName": "Mitchell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647739014-Aiyana_Mitchell_69009bba3421b3cab650214d.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "FORWARD",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 822,
+        "likes": 380,
+        "comments": 146,
+        "engagementRate": 0.037268828546933586,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021d5",
+    "firstName": "RJ",
+    "lastName": "Austin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647744142-RJ_Austin_69009bba3421b3cab65021d5.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "UTL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 30019,
+        "likes": 364435,
+        "comments": 1294,
+        "engagementRate": 0.7610996076599466,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650213a",
+    "firstName": "Zaylin",
+    "lastName": "Wood",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647733822-Zaylin_Wood_69009bba3421b3cab650213a.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2917,
+        "likes": 5046,
+        "comments": 412,
+        "engagementRate": 0.13610638050812526,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502199",
+    "firstName": "Kamryn",
+    "lastName": "Chaney",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647735553-Kamryn_Chaney_69009bba3421b3cab6502199.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OUT",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2412,
+        "likes": 10924,
+        "comments": 217,
+        "engagementRate": 0.3639912179873663,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650212a",
+    "firstName": "AJ",
+    "lastName": "DePaolo",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647739745-AJ_DePaolo_69009bba3421b3cab650212a.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "C",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3304,
+        "likes": 12994,
+        "comments": 1372,
+        "engagementRate": 0.33882407691841576,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650213e",
+    "firstName": "Aaron",
+    "lastName": "Bryant",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647732992-Aaron_Bryant_69009bba3421b3cab650213e.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2900,
+        "likes": 1739,
+        "comments": 185,
+        "engagementRate": 0.090935960591133,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650215e",
+    "firstName": "Braden",
+    "lastName": "Holcomb",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647741548-Braden_Holcomb_69009bba3421b3cab650215e.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7337,
+        "likes": 27938,
+        "comments": 261,
+        "engagementRate": 0.2950271193430673,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021c2",
+    "firstName": "Thomas",
+    "lastName": "Jones",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647732124-Thomas_Jones_69009bba3421b3cab65021c2.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2193,
+        "likes": 556,
+        "comments": 291,
+        "engagementRate": 0.021245831316588935,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650217f",
+    "firstName": "Kayla",
+    "lastName": "Dunlap",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647734697-Kayla_Dunlap_69009bba3421b3cab650217f.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MID",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4088,
+        "likes": 125516,
+        "comments": 104,
+        "engagementRate": 2.560741692420358,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502163",
+    "firstName": "Justin",
+    "lastName": "Dewers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647742916-Justin_Dewers_69009bba3421b3cab6502163.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "K",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1379,
+        "likes": 4183,
+        "comments": 618,
+        "engagementRate": 0.2628415073069971,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502176",
+    "firstName": "Ethan",
+    "lastName": "McElvain",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647744127-Ethan_McElvain_69009bba3421b3cab6502176.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2541,
+        "likes": 14072,
+        "comments": 198,
+        "engagementRate": 0.4320206248005137,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650218d",
+    "firstName": "CJ",
+    "lastName": "Williams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647740404-CJ_Williams_69009bba3421b3cab650218d.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1246,
+        "likes": 4689,
+        "comments": 688,
+        "engagementRate": 0.31781701444622795,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502130",
+    "firstName": "Mark",
+    "lastName": "Davis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647733756-Mark_Davis_69009bba3421b3cab6502130.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "CB",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2230,
+        "likes": 65,
+        "comments": 164,
+        "engagementRate": 0.005082212257100149,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021b3",
+    "firstName": "Austin",
+    "lastName": "Nye",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647742126-Austin_Nye_69009bba3421b3cab65021b3.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2346,
+        "likes": 9872,
+        "comments": 249,
+        "engagementRate": 0.3273001508295626,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650211e",
+    "firstName": "Chandler",
+    "lastName": "Bing",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647734686-Chandler_Bing_69009bba3421b3cab650211e.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1702,
+        "likes": 2570,
+        "comments": 327,
+        "engagementRate": 0.15564042303172737,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021a8",
+    "firstName": "Sedrick",
+    "lastName": "Alexander",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647747121-Sedrick_Alexander_69009bba3421b3cab65021a8.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1424,
+        "likes": 533,
+        "comments": 83,
+        "engagementRate": 0.03329949696249915,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021a4",
+    "firstName": "Blaze",
+    "lastName": "Berlowitz",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647732886-Blaze_Berlowitz_69009bba3421b3cab65021a4.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5691,
+        "likes": 13732,
+        "comments": 675,
+        "engagementRate": 0.19489620420999929,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650212c",
+    "firstName": "Aukai",
+    "lastName": "Kea",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647740949-Aukai_Kea_69009bba3421b3cab650212c.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "C",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7214,
+        "likes": 16727,
+        "comments": 477,
+        "engagementRate": 0.18181073388432686,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021ae",
+    "firstName": "Hudson",
+    "lastName": "Barton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647738079-Hudson_Barton_69009bba3421b3cab65021ae.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1811,
+        "likes": 6460,
+        "comments": 274,
+        "engagementRate": 0.30986563592858457,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502161",
+    "firstName": "Will",
+    "lastName": "Hampton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647743549-Will_Hampton_69009bba3421b3cab6502161.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "INF/OF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4629,
+        "likes": 12294,
+        "comments": 461,
+        "engagementRate": 0.18354865938352352,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021b8",
+    "firstName": "Alex",
+    "lastName": "Kranzler",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647733728-Alex_Kranzler_69009bba3421b3cab65021b8.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2788,
+        "likes": 8942,
+        "comments": 367,
+        "engagementRate": 0.27824605451936874,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502152",
+    "firstName": "Aubrey",
+    "lastName": "Galvan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647738269-Aubrey_Galvan_69009bba3421b3cab6502152.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4306,
+        "likes": 15057,
+        "comments": 707,
+        "engagementRate": 0.3051109142822166,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650213d",
+    "firstName": "Mason",
+    "lastName": "Nelson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647740987-Mason_Nelson_69009bba3421b3cab650213d.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1752,
+        "likes": 5114,
+        "comments": 352,
+        "engagementRate": 0.2599885844748858,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021d4",
+    "firstName": "David",
+    "lastName": "Mendez",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647745865-David_Mendez_69009bba3421b3cab65021d4.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "UTL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1848,
+        "likes": 6712,
+        "comments": 361,
+        "engagementRate": 0.3189033189033189,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650212b",
+    "firstName": "Colin",
+    "lastName": "Barczi",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647744145-Colin_Barczi_69009bba3421b3cab650212b.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "C",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2213,
+        "likes": 21312,
+        "comments": 347,
+        "engagementRate": 0.8880992482438486,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021b6",
+    "firstName": "Tristan",
+    "lastName": "Bristow",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647743529-Tristan_Bristow_69009bba3421b3cab65021b6.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2586,
+        "likes": 14990,
+        "comments": 735,
+        "engagementRate": 0.4679656791840119,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502177",
+    "firstName": "Miller",
+    "lastName": "Green",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647742128-Miller_Green_69009bba3421b3cab6502177.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1806,
+        "likes": 5740,
+        "comments": 196,
+        "engagementRate": 0.27057954964931713,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502160",
+    "firstName": "Ryker",
+    "lastName": "Waite",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647743569-Ryker_Waite_69009bba3421b3cab6502160.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1987,
+        "likes": 5412,
+        "comments": 201,
+        "engagementRate": 0.22999496728736787,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650215d",
+    "firstName": "Rustan",
+    "lastName": "Rigdon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647739757-Rustan_Rigdon_69009bba3421b3cab650215d.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4431,
+        "likes": 23437,
+        "comments": 298,
+        "engagementRate": 0.4463815542014595,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650215b",
+    "firstName": "Brodie",
+    "lastName": "Johnston",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647747139-Brodie_Johnston_69009bba3421b3cab650215b.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4933,
+        "likes": 30461,
+        "comments": 260,
+        "engagementRate": 0.5661500469933471,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021d1",
+    "firstName": "Witt",
+    "lastName": "Edwards",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647733901-Witt_Edwards_69009bba3421b3cab65021d1.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4964,
+        "likes": 1957,
+        "comments": 128,
+        "engagementRate": 0.06725087295192049,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502123",
+    "firstName": "Coleson",
+    "lastName": "Messer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647742153-Coleson_Messer_69009bba3421b3cab6502123.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "-",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3821,
+        "likes": 12718,
+        "comments": 722,
+        "engagementRate": 0.29311698508243916,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502138",
+    "firstName": "Aalyah",
+    "lastName": "Del Rosario",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647742985-Aalyah_Del Rosario_69009bba3421b3cab6502138.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "CENTER",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 15823,
+        "likes": 153678,
+        "comments": 3165,
+        "engagementRate": 0.9011220720125479,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021d2",
+    "firstName": "RJ",
+    "lastName": "Hamilton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647735340-RJ_Hamilton_69009bba3421b3cab65021d2.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "UTL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2649,
+        "likes": 10255,
+        "comments": 439,
+        "engagementRate": 0.33641625770731093,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502167",
+    "firstName": "Prince",
+    "lastName": "Kollie",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647740387-Prince_Kollie_69009bba3421b3cab6502167.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12031,
+        "likes": 7170,
+        "comments": 602,
+        "engagementRate": 0.05008588923059873,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650219d",
+    "firstName": "Nick",
+    "lastName": "Haberer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647736410-Nick_Haberer_69009bba3421b3cab650219d.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "P",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2080,
+        "likes": 7985,
+        "comments": 484,
+        "engagementRate": 0.3061636841151444,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502187",
+    "firstName": "Kevo",
+    "lastName": "Wesley",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647740964-Kevo_Wesley_69009bba3421b3cab6502187.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 928,
+        "likes": 1089,
+        "comments": 299,
+        "engagementRate": 0.11539152298850575,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502164",
+    "firstName": "Brock",
+    "lastName": "Taylor",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647746532-Brock_Taylor_69009bba3421b3cab6502164.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "K",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5331,
+        "likes": 18466,
+        "comments": 515,
+        "engagementRate": 0.29670793472144064,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650218a",
+    "firstName": "Gunner",
+    "lastName": "Givens",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647745796-Gunner_Givens_69009bba3421b3cab650218a.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9625,
+        "likes": 2875,
+        "comments": 396,
+        "engagementRate": 0.03837662337662338,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650211f",
+    "firstName": "Tyler",
+    "lastName": "Harris",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647742963-Tyler_Harris_69009bba3421b3cab650211f.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "-",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2693,
+        "likes": 7592,
+        "comments": 246,
+        "engagementRate": 0.20300609557148494,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502125",
+    "firstName": "Jayden",
+    "lastName": "Leverett",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647745321-Jayden_Leverett_69009bba3421b3cab6502125.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1945,
+        "likes": 4272,
+        "comments": 136,
+        "engagementRate": 0.18787489288774636,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502128",
+    "firstName": "George",
+    "lastName": "Kimble III",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647740379-George_Kimble III_69009bba3421b3cab6502128.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "-",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7981,
+        "likes": 15763,
+        "comments": 996,
+        "engagementRate": 0.15726441244066344,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502182",
+    "firstName": "Ariel",
+    "lastName": "Chime",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647735491-Ariel_Chime_69009bba3421b3cab6502182.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MID",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1048,
+        "likes": 2465,
+        "comments": 691,
+        "engagementRate": 0.37709383200143126,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650213c",
+    "firstName": "Glenn",
+    "lastName": "Seabrooks III",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647743526-Glenn_Seabrooks III_69009bba3421b3cab650213c.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1404,
+        "likes": 8852,
+        "comments": 286,
+        "engagementRate": 0.5423789173789174,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021ca",
+    "firstName": "Vanzale",
+    "lastName": "Hinton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647736301-Vanzale_Hinton_69009bba3421b3cab65021ca.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "STAR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 84,
+        "engagementRate": 0,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650213b",
+    "firstName": "Simeon",
+    "lastName": "Boulware",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647732043-Simeon_Boulware_69009bba3421b3cab650213b.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 483,
+        "likes": 1906,
+        "comments": 66,
+        "engagementRate": 0.45364619277662765,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502148",
+    "firstName": "Keanu",
+    "lastName": "Koht",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647744183-Keanu_Koht_69009bba3421b3cab6502148.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "EDGE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9988,
+        "likes": 1053,
+        "comments": 136,
+        "engagementRate": 0.017754638900013348,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650216e",
+    "firstName": "Ty",
+    "lastName": "Bartholomew",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647732028-Ty_Bartholomew_69009bba3421b3cab650216e.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1242,
+        "likes": 2594,
+        "comments": 180,
+        "engagementRate": 0.3722490606548578,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021a1",
+    "firstName": "Whit",
+    "lastName": "Muschamp",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647736676-Whit_Muschamp_69009bba3421b3cab65021a1.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4569,
+        "likes": 17061,
+        "comments": 951,
+        "engagementRate": 0.32851827533377104,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021c9",
+    "firstName": "Tate",
+    "lastName": "Hamby",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647732960-Tate_Hamby_69009bba3421b3cab65021c9.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "STAR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3801,
+        "likes": 2829,
+        "comments": 189,
+        "engagementRate": 0.19389634306761377,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021b5",
+    "firstName": "Deegan",
+    "lastName": "Cordova",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647738312-Deegan_Cordova_69009bba3421b3cab65021b5.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1116,
+        "likes": 1483,
+        "comments": 81,
+        "engagementRate": 0.20020481310803895,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650218c",
+    "firstName": "Orion",
+    "lastName": "Irving",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647741516-Orion_Irving_69009bba3421b3cab650218c.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1055,
+        "likes": 331,
+        "comments": 93,
+        "engagementRate": 0.05766192733017378,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502154",
+    "firstName": "Ava",
+    "lastName": "Black",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647745963-Ava_Black_69009bba3421b3cab6502154.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "GUARD",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1337,
+        "likes": 936,
+        "comments": 116,
+        "engagementRate": 0.39799418874981674,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021c4",
+    "firstName": "Brail",
+    "lastName": "Lipford",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647735676-Brail_Lipford_69009bba3421b3cab65021c4.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "S",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 807,
+        "likes": 184,
+        "comments": 109,
+        "engagementRate": 0.03282536516283909,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021ab",
+    "firstName": "Jake",
+    "lastName": "Balis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647738374-Jake_Balis_69009bba3421b3cab65021ab.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1944,
+        "likes": 3879,
+        "comments": 437,
+        "engagementRate": 0.17974108367626884,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021a9",
+    "firstName": "Gabe",
+    "lastName": "Fields",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647733877-Gabe_Fields_69009bba3421b3cab65021a9.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1791,
+        "likes": 2982,
+        "comments": 240,
+        "engagementRate": 0.29983249581239535,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650213f",
+    "firstName": "Jake",
+    "lastName": "Stanish",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647744170-Jake_Stanish_69009bba3421b3cab650213f.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1140,
+        "likes": 3529,
+        "comments": 326,
+        "engagementRate": 0.4226973684210526,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502180",
+    "firstName": "Maddy",
+    "lastName": "Bowser",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647740337-Maddy_Bowser_69009bba3421b3cab6502180.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MID",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 827,
+        "engagementRate": 0,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502183",
+    "firstName": "JD",
+    "lastName": "Rogers",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647734720-JD_Rogers_69009bba3421b3cab6502183.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "OF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3511,
+        "likes": 7700,
+        "comments": 200,
+        "engagementRate": 0.18736352416215704,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650215c",
+    "firstName": "Jonathan",
+    "lastName": "Vastine",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647745893-Jonathan_Vastine_69009bba3421b3cab650215c.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "INF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7280,
+        "likes": 57678,
+        "comments": 421,
+        "engagementRate": 0.6650526556776556,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650217c",
+    "firstName": "Stone",
+    "lastName": "Owens",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647734740-Stone_Owens_69009bba3421b3cab650217c.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LS",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 925,
+        "likes": 2378,
+        "comments": 409,
+        "engagementRate": 0.33477477477477474,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650216c",
+    "firstName": "Jamison",
+    "lastName": "Curtis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647736718-Jamison_Curtis_69009bba3421b3cab650216c.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1932,
+        "likes": 4162,
+        "comments": 205,
+        "engagementRate": 0.24450310319875537,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021c8",
+    "firstName": "Jailen",
+    "lastName": "Ruth",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647744723-Jailen_Ruth_69009bba3421b3cab65021c8.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "STAR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3522,
+        "likes": 3485,
+        "comments": 470,
+        "engagementRate": 0.28086726554403413,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502162",
+    "firstName": "Mason",
+    "lastName": "Rohmiller",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647737552-Mason_Rohmiller_69009bba3421b3cab6502162.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "K",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1681,
+        "likes": 2230,
+        "comments": 176,
+        "engagementRate": 0.7156454491374182,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021d3",
+    "firstName": "Jacob",
+    "lastName": "Humphrey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647742868-Jacob_Humphrey_69009bba3421b3cab65021d3.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "UTL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2889,
+        "likes": 25729,
+        "comments": 192,
+        "engagementRate": 0.7476923964462904,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021dd",
+    "firstName": "Boski",
+    "lastName": "Barrett",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647735659-Boski_Barrett_69009bba3421b3cab65021dd.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagementRate": 0,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650216d",
+    "firstName": "Luke",
+    "lastName": "D'Alise",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647744173-Luke_D'Alise_69009bba3421b3cab650216d.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1887,
+        "likes": 4251,
+        "comments": 250,
+        "engagementRate": 0.34075251722310546,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502173",
+    "firstName": "Matthew",
+    "lastName": "Shorey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647735375-Matthew_Shorey_69009bba3421b3cab6502173.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1213,
+        "likes": 5189,
+        "comments": 340,
+        "engagementRate": 0.5064578180818907,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021d8",
+    "firstName": "Tristen",
+    "lastName": "Brown",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647734778-Tristen_Brown_69009bba3421b3cab65021d8.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2591,
+        "likes": 7016,
+        "comments": 397,
+        "engagementRate": 0.47683897191608177,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021de",
+    "firstName": "Ryder",
+    "lastName": "Brownstein",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647739796-Ryder_Brownstein_69009bba3421b3cab65021de.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1589,
+        "likes": 1391,
+        "comments": 316,
+        "engagementRate": 0.3580868470736312,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021e5",
+    "firstName": "Cameran",
+    "lastName": "Dickson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647742939-Cameran_Dickson_69009bba3421b3cab65021e5.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1309,
+        "likes": 2593,
+        "comments": 55,
+        "engagementRate": 0.5057295645530939,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502171",
+    "firstName": "Levi",
+    "lastName": "Huesman",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647739748-Levi_Huesman_69009bba3421b3cab6502171.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASEBALL",
+    "position": "LHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2443,
+        "likes": 9646,
+        "comments": 476,
+        "engagementRate": 0.34527220630372496,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650219b",
+    "firstName": "Sydney",
+    "lastName": "Bryant",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647742096-Sydney_Bryant_69009bba3421b3cab650219b.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OUT",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 912,
+        "likes": 2957,
+        "comments": 629,
+        "engagementRate": 0.6553362573099415,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502192",
+    "firstName": "Charlie",
+    "lastName": "Clark",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647741564-Charlie_Clark_69009bba3421b3cab6502192.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "GRADUATE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1237,
+        "likes": 2751,
+        "comments": 87,
+        "engagementRate": 0.5735650767987066,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021df",
+    "firstName": "Wils",
+    "lastName": "Jackson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647742169-Wils_Jackson_69009bba3421b3cab65021df.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1115,
+        "likes": 756,
+        "comments": 78,
+        "engagementRate": 0.3739910313901345,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab6502124",
+    "firstName": "Miles",
+    "lastName": "Keeffe",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647744711-Miles_Keeffe_69009bba3421b3cab6502124.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "MENS_BASKETBALL",
+    "position": "-",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1646,
+        "likes": 3097,
+        "comments": 259,
+        "engagementRate": 0.2912688769310883,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021cf",
+    "firstName": "Elijah",
+    "lastName": "Rooney",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647739808-Elijah_Rooney_69009bba3421b3cab65021cf.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 604,
+        "likes": 509,
+        "comments": 40,
+        "engagementRate": 0.22723509933774833,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021e2",
+    "firstName": "Derek",
+    "lastName": "Kee",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647733893-Derek_Kee_69009bba3421b3cab65021e2.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 887,
+        "likes": 2263,
+        "comments": 71,
+        "engagementRate": 0.37590594298598806,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab65021ce",
+    "firstName": "Larry",
+    "lastName": "Benton III",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647741554-Larry_Benton III_69009bba3421b3cab65021ce.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 854,
+        "likes": 889,
+        "comments": 134,
+        "engagementRate": 0.40009274114762355,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "69009bba3421b3cab650219e",
+    "firstName": "Conor",
+    "lastName": "Weasler",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761647733001-Conor_Weasler_69009bba3421b3cab650219e.png",
+    "schoolName": "Vanderbilt",
+    "conferenceName": "SEC",
+    "sport": "FOOTBALL",
+    "position": "P",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1964,
+        "likes": 1459,
+        "comments": 234,
+        "engagementRate": 0.4310081466395112,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  }
+]

@@ -1,0 +1,4055 @@
+[
+  {
+    "_id": "690236480192a693453469b8",
+    "firstName": "Jada",
+    "lastName": "Williams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753135426-Jada_Williams_690236480192a693453469b8.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 584733,
+        "likes": 161865,
+        "comments": 880,
+        "engagementRate": 0.014635155039030833,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346924",
+    "firstName": "Mason",
+    "lastName": "Ellens",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753136966-Mason_Ellens_690236480192a69345346924.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1427,
+        "likes": 6112,
+        "comments": 436,
+        "engagementRate": 0.5733771396788215,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469c3",
+    "firstName": "Finley",
+    "lastName": "Weldon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753121888-Finley_Weldon_690236480192a693453469c3.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2377,
+        "likes": 7322,
+        "comments": 373,
+        "engagementRate": 0.20385888074131966,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534697f",
+    "firstName": "Carson",
+    "lastName": "Brown",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753138360-Carson_Brown_690236480192a6934534697f.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1904,
+        "likes": 9286,
+        "comments": 383,
+        "engagementRate": 1.0012605042016807,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469b5",
+    "firstName": "Arianna",
+    "lastName": "Jackson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753131896-Arianna_Jackson_690236480192a693453469b5.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3210,
+        "likes": 10167,
+        "comments": 194,
+        "engagementRate": 0.18285429468947106,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469af",
+    "firstName": "Jessie",
+    "lastName": "Clemons",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753132486-Jessie_Clemons_690236480192a693453469af.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "UTL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1111,
+        "likes": 5484,
+        "comments": 206,
+        "engagementRate": 0.34865266122929633,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534698b",
+    "firstName": "Joshua",
+    "lastName": "Jefferson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753133248-Joshua_Jefferson_690236480192a6934534698b.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6189,
+        "likes": 23921,
+        "comments": 229,
+        "engagementRate": 0.19527138214072068,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469d7",
+    "firstName": "Abbi",
+    "lastName": "Brenizer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753136041-Abbi_Brenizer_690236480192a693453469d7.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB/RS",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 206,
+        "engagementRate": 0,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469a1",
+    "firstName": "Paige",
+    "lastName": "Nakashima",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753124187-Paige_Nakashima_690236480192a693453469a1.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2027,
+        "likes": 338,
+        "comments": 375,
+        "engagementRate": 0.011910634998942843,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469b6",
+    "firstName": "Evangelia",
+    "lastName": "Paulk",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753134780-Evangelia_Paulk_690236480192a693453469b6.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3354,
+        "likes": 11951,
+        "comments": 351,
+        "engagementRate": 0.280125568903962,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346949",
+    "firstName": "Gavin",
+    "lastName": "Schieler",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753126676-Gavin_Schieler_690236480192a69345346949.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LS",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1111,
+        "likes": 3326,
+        "comments": 149,
+        "engagementRate": 0.24061445645604057,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346920",
+    "firstName": "LaMarcus",
+    "lastName": "Hicks II",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753132470-LaMarcus_Hicks II_690236480192a69345346920.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2026,
+        "likes": 9810,
+        "comments": 323,
+        "engagementRate": 0.4167900625205661,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469b0",
+    "firstName": "Audi",
+    "lastName": "Crooks",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753136895-Audi_Crooks_690236480192a693453469b0.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "C",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 113113,
+        "likes": 260511,
+        "comments": 3388,
+        "engagementRate": 0.12347445932335974,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346998",
+    "firstName": "Karlee",
+    "lastName": "Ford",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753121290-Karlee_Ford_690236480192a69345346998.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "C",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 16779,
+        "likes": 145,
+        "comments": 340,
+        "engagementRate": 0.0009512925017796219,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469ad",
+    "firstName": "Sami",
+    "lastName": "Potvin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753123220-Sami_Potvin_690236480192a693453469ad.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "RHP",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1209,
+        "likes": 52,
+        "comments": 386,
+        "engagementRate": 0.003072196620583718,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346913",
+    "firstName": "Jamison",
+    "lastName": "Patton",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753129320-Jamison_Patton_690236480192a69345346913.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6058,
+        "likes": 10267,
+        "comments": 631,
+        "engagementRate": 0.1107242891076802,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534693d",
+    "firstName": "John",
+    "lastName": "Klosterman",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753132535-John_Klosterman_690236480192a6934534693d.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2679,
+        "likes": 10982,
+        "comments": 309,
+        "engagementRate": 0.32621727388020916,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346946",
+    "firstName": "Kooper",
+    "lastName": "Ebel",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753132509-Kooper_Ebel_690236480192a69345346946.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6107,
+        "likes": 15384,
+        "comments": 219,
+        "engagementRate": 0.19932756201244262,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534693f",
+    "firstName": "Caleb",
+    "lastName": "Bacon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753124142-Caleb_Bacon_690236480192a6934534693f.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4365,
+        "likes": 28646,
+        "comments": 365,
+        "engagementRate": 0.41915784885477264,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346935",
+    "firstName": "Ikenna",
+    "lastName": "Ezeogu",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753132523-Ikenna_Ezeogu_690236480192a69345346935.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2718,
+        "likes": 13257,
+        "comments": 394,
+        "engagementRate": 0.31905756115645595,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346933",
+    "firstName": "Alijah",
+    "lastName": "Carnell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753134035-Alijah_Carnell_690236480192a69345346933.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1707,
+        "likes": 882,
+        "comments": 167,
+        "engagementRate": 0.17652802187072836,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346977",
+    "firstName": "Gabe",
+    "lastName": "Burkle",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753136880-Gabe_Burkle_690236480192a69345346977.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3354,
+        "likes": 29385,
+        "comments": 277,
+        "engagementRate": 0.5687789957273428,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534697b",
+    "firstName": "Chase",
+    "lastName": "Sowell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753122198-Chase_Sowell_690236480192a6934534697b.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12212,
+        "likes": 20598,
+        "comments": 830,
+        "engagementRate": 0.10437811564917686,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346981",
+    "firstName": "Zay",
+    "lastName": "Robinson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753129437-Zay_Robinson_690236480192a69345346981.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 9378,
+        "likes": 14288,
+        "comments": 688,
+        "engagementRate": 0.10117890218082391,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534697e",
+    "firstName": "Brett",
+    "lastName": "Eskildsen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753126683-Brett_Eskildsen_690236480192a6934534697e.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 11569,
+        "likes": 49971,
+        "comments": 523,
+        "engagementRate": 0.2794451886435214,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346986",
+    "firstName": "Karon",
+    "lastName": "Brookins",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753130852-Karon_Brookins_690236480192a69345346986.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2822,
+        "likes": 3580,
+        "comments": 327,
+        "engagementRate": 0.3441154830931504,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346919",
+    "firstName": "Cam",
+    "lastName": "Smith",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753130030-Cam_Smith_690236480192a69345346919.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3992,
+        "likes": 832,
+        "comments": 42,
+        "engagementRate": 0.10420841683366733,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346966",
+    "firstName": "Alex",
+    "lastName": "Manske",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753124144-Alex_Manske_690236480192a69345346966.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5691,
+        "likes": 63887,
+        "comments": 655,
+        "engagementRate": 0.6971771119245084,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469de",
+    "firstName": "Lilly",
+    "lastName": "Wachholz",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753122293-Lilly_Wachholz_690236480192a693453469de.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "RS",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1693,
+        "likes": 1318,
+        "comments": 203,
+        "engagementRate": 0.056792062270722,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346945",
+    "firstName": "Danny",
+    "lastName": "Inglis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753130861-Danny_Inglis_690236480192a69345346945.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1677,
+        "likes": 7074,
+        "comments": 274,
+        "engagementRate": 0.43810375670840784,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469ca",
+    "firstName": "Frederique",
+    "lastName": "Sgarbossa",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753136893-Frederique_Sgarbossa_690236480192a693453469ca.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "AA",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3675,
+        "likes": 10264,
+        "comments": 336,
+        "engagementRate": 0.23551075863525534,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346914",
+    "firstName": "Jontez",
+    "lastName": "Williams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753125818-Jontez_Williams_690236480192a69345346914.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3361,
+        "likes": 64152,
+        "comments": 1420,
+        "engagementRate": 1.1801063625444312,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346989",
+    "firstName": "Ty",
+    "lastName": "Claiborne",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753131856-Ty_Claiborne_690236480192a69345346989.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2039,
+        "likes": 6084,
+        "comments": 291,
+        "engagementRate": 0.2842302376387712,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469bf",
+    "firstName": "Peyton",
+    "lastName": "Nock",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753127670-Peyton_Nock_690236480192a693453469bf.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2331,
+        "likes": 3479,
+        "comments": 758,
+        "engagementRate": 0.14035464035464038,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346943",
+    "firstName": "Will",
+    "lastName": "Hawthorne",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753133222-Will_Hawthorne_690236480192a69345346943.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2526,
+        "likes": 21302,
+        "comments": 434,
+        "engagementRate": 0.5216980926311574,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469ab",
+    "firstName": "Hailey",
+    "lastName": "Holtz",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753135384-Hailey_Holtz_690236480192a693453469ab.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "RHP",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 766,
+        "likes": 2917,
+        "comments": 310,
+        "engagementRate": 0.3009672975036665,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469ba",
+    "firstName": "Reagan",
+    "lastName": "Wilson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753136948-Reagan_Wilson_690236480192a693453469ba.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4878,
+        "likes": 4939,
+        "comments": 228,
+        "engagementRate": 0.08019933126329062,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469db",
+    "firstName": "Nayeli",
+    "lastName": "Ti'a",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753125778-Nayeli_Ti'a_690236480192a693453469db.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2603,
+        "likes": 3819,
+        "comments": 726,
+        "engagementRate": 0.0907868882858849,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346947",
+    "firstName": "Nick",
+    "lastName": "Reinicke",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753124118-Nick_Reinicke_690236480192a69345346947.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1123,
+        "likes": 4629,
+        "comments": 148,
+        "engagementRate": 0.6076835008268668,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469d5",
+    "firstName": "Amiree",
+    "lastName": "Hendricks-Walker",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753136067-Amiree_Hendricks-Walker_690236480192a693453469d5.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1636,
+        "likes": 5205,
+        "comments": 342,
+        "engagementRate": 0.22597243831962657,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534697c",
+    "firstName": "Xavier",
+    "lastName": "Townsend",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753124239-Xavier_Townsend_690236480192a6934534697c.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6590,
+        "likes": 23963,
+        "comments": 1454,
+        "engagementRate": 0.2565098527307884,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469a2",
+    "firstName": "Ashley",
+    "lastName": "Minor",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753133257-Ashley_Minor_690236480192a693453469a2.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 941,
+        "likes": 2309,
+        "comments": 253,
+        "engagementRate": 0.14339226635373598,
+        "contentCount": 19,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469dd",
+    "firstName": "Faith",
+    "lastName": "DeRonde",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753121189-Faith_DeRonde_690236480192a693453469dd.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH/RS",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4180,
+        "likes": 13637,
+        "comments": 243,
+        "engagementRate": 0.20749141447797056,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346934",
+    "firstName": "Tamatoa",
+    "lastName": "McDonough",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753126083-Tamatoa_McDonough_690236480192a69345346934.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1767,
+        "likes": 18378,
+        "comments": 367,
+        "engagementRate": 0.7570676839227211,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346962",
+    "firstName": "Kyle",
+    "lastName": "Konrardy",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753130816-Kyle_Konrardy_690236480192a69345346962.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "PK",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5961,
+        "likes": 41813,
+        "comments": 462,
+        "engagementRate": 0.5097380928495346,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346944",
+    "firstName": "Samuel",
+    "lastName": "Samè",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753138330-Samuel_SamÃ¨_690236480192a69345346944.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2474,
+        "likes": 7437,
+        "comments": 712,
+        "engagementRate": 0.2627313680685413,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469bc",
+    "firstName": "Sydney",
+    "lastName": "Harris",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753133240-Sydney_Harris_690236480192a693453469bc.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G/F",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4218,
+        "likes": 13079,
+        "comments": 674,
+        "engagementRate": 0.18216245313800916,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346993",
+    "firstName": "Tamin",
+    "lastName": "Lipsey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753125116-Tamin_Lipsey_690236480192a69345346993.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 18319,
+        "likes": 64429,
+        "comments": 626,
+        "engagementRate": 0.20027833573290132,
+        "contentCount": 18,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469d3",
+    "firstName": "Tierney",
+    "lastName": "Jackson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753134728-Tierney_Jackson_690236480192a693453469d3.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4049,
+        "likes": 10056,
+        "comments": 586,
+        "engagementRate": 0.16478119110713582,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346997",
+    "firstName": "Killyan",
+    "lastName": "Toure",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753125137-Killyan_Toure_690236480192a69345346997.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7481,
+        "likes": 29905,
+        "comments": 542,
+        "engagementRate": 0.215978674123046,
+        "contentCount": 21,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346991",
+    "firstName": "Jamarion",
+    "lastName": "Batemon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753135448-Jamarion_Batemon_690236480192a69345346991.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7385,
+        "likes": 25788,
+        "comments": 489,
+        "engagementRate": 0.23772056524647606,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346979",
+    "firstName": "Tripp",
+    "lastName": "Walsh",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753124134-Tripp_Walsh_690236480192a69345346979.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1232,
+        "likes": 3506,
+        "comments": 260,
+        "engagementRate": 0.3421925238082999,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534691d",
+    "firstName": "Khijohnn",
+    "lastName": "Cummings-Coleman",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753120105-Khijohnn_Cummings-Coleman_690236480192a6934534691d.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2422,
+        "likes": 1331,
+        "comments": 666,
+        "engagementRate": 0.044178364987613544,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534695a",
+    "firstName": "Austin",
+    "lastName": "Barrett",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753130037-Austin_Barrett_690236480192a6934534695a.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2209,
+        "likes": 7996,
+        "comments": 363,
+        "engagementRate": 0.254553601562887,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534691e",
+    "firstName": "Quentin",
+    "lastName": "Taylor Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753122181-Quentin_Taylor Jr._690236480192a6934534691e.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1576,
+        "likes": 5000,
+        "comments": 301,
+        "engagementRate": 0.33299492385786805,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534694a",
+    "firstName": "Jacob",
+    "lastName": "Lyftogt",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753120123-Jacob_Lyftogt_690236480192a6934534694a.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LS",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1038,
+        "likes": 2257,
+        "comments": 143,
+        "engagementRate": 0.2312138728323699,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346922",
+    "firstName": "Marcus",
+    "lastName": "Neal Jr.",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753130001-Marcus_Neal Jr._690236480192a69345346922.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2505,
+        "likes": 7904,
+        "comments": 141,
+        "engagementRate": 1.6057884231536925,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534694c",
+    "firstName": "Brendan",
+    "lastName": "Black",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753129119-Brendan_Black_690236480192a6934534694c.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2079,
+        "likes": 18095,
+        "comments": 567,
+        "engagementRate": 0.5407365594388894,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534691f",
+    "firstName": "Josh",
+    "lastName": "Patterson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753136020-Josh_Patterson_690236480192a6934534691f.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1893,
+        "likes": 4088,
+        "comments": 168,
+        "engagementRate": 0.5620707871104067,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346926",
+    "firstName": "Carson",
+    "lastName": "Van Dinter",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753126030-Carson_Van Dinter_690236480192a69345346926.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2211,
+        "likes": 12608,
+        "comments": 114,
+        "engagementRate": 0.3954166547710456,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534696c",
+    "firstName": "Abu",
+    "lastName": "Sama III",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753120153-Abu_Sama III_690236480192a6934534696c.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6993,
+        "likes": 44553,
+        "comments": 616,
+        "engagementRate": 0.471568871417814,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534691c",
+    "firstName": "Ta’Shawn",
+    "lastName": "James",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753123212-TaâShawn_James_690236480192a6934534691c.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2016,
+        "likes": 3429,
+        "comments": 534,
+        "engagementRate": 0.1486441798941799,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469cd",
+    "firstName": "Lauren",
+    "lastName": "O'Brochta",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753134675-Lauren_O'Brochta_690236480192a693453469cd.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "BB/FX",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10409,
+        "likes": 21920,
+        "comments": 869,
+        "engagementRate": 0.18083436278204815,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346917",
+    "firstName": "Tre",
+    "lastName": "Bell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753126047-Tre_Bell_690236480192a69345346917.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3567,
+        "likes": 19942,
+        "comments": 783,
+        "engagementRate": 0.40662421402539145,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469c8",
+    "firstName": "Ella",
+    "lastName": "Schell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753134000-Ella_Schell_690236480192a693453469c8.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "AA",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2841,
+        "likes": 1520,
+        "comments": 452,
+        "engagementRate": 0.04383532183859849,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534693b",
+    "firstName": "Cael",
+    "lastName": "Brezina",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753132473-Cael_Brezina_690236480192a6934534693b.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3385,
+        "likes": 12336,
+        "comments": 358,
+        "engagementRate": 0.32404303880123875,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346999",
+    "firstName": "Kasey",
+    "lastName": "Kane",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753127612-Kasey_Kane_690236480192a69345346999.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "C",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 992,
+        "likes": 1128,
+        "comments": 655,
+        "engagementRate": 0.06973434535104364,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469ce",
+    "firstName": "Kaia",
+    "lastName": "Bochow",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753134045-Kaia_Bochow_690236480192a693453469ce.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "UB/BB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1573,
+        "likes": 697,
+        "comments": 111,
+        "engagementRate": 0.11077558804831532,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469a3",
+    "firstName": "Danika",
+    "lastName": "Best",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753122894-Danika_Best_690236480192a693453469a3.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 14949,
+        "likes": 1583,
+        "comments": 384,
+        "engagementRate": 0.008752836567406105,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469b2",
+    "firstName": "Alisa",
+    "lastName": "Williams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753133968-Alisa_Williams_690236480192a693453469b2.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 8458,
+        "likes": 2119,
+        "comments": 272,
+        "engagementRate": 0.01737872312693842,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534699b",
+    "firstName": "McKenna",
+    "lastName": "Andrews",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753138372-McKenna_Andrews_690236480192a6934534699b.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1142,
+        "likes": 29865,
+        "comments": 234,
+        "engagementRate": 2.0156944631550586,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534699a",
+    "firstName": "Paige",
+    "lastName": "Zender",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753134010-Paige_Zender_690236480192a6934534699a.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1915,
+        "likes": 1622,
+        "comments": 522,
+        "engagementRate": 0.06810848428031789,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469d6",
+    "firstName": "Reagan",
+    "lastName": "Hanfelt",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753127577-Reagan_Hanfelt_690236480192a693453469d6.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB/RS",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2302,
+        "likes": 10449,
+        "comments": 818,
+        "engagementRate": 0.3045196274712328,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346931",
+    "firstName": "Zaimir",
+    "lastName": "Hawk",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753120220-Zaimir_Hawk_690236480192a69345346931.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1692,
+        "likes": 7231,
+        "comments": 531,
+        "engagementRate": 0.35843921519685984,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534698c",
+    "firstName": "Dominykas",
+    "lastName": "Pleta",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753122158-Dominykas_Pleta_690236480192a6934534698c.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2478,
+        "likes": 10809,
+        "comments": 249,
+        "engagementRate": 0.4056790666960158,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346984",
+    "firstName": "Carson",
+    "lastName": "Robbins",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753130822-Carson_Robbins_690236480192a69345346984.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 84,
+        "engagementRate": 0,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346969",
+    "firstName": "Dylan",
+    "lastName": "Lee",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753130856-Dylan_Lee_690236480192a69345346969.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1562,
+        "likes": 12699,
+        "comments": 537,
+        "engagementRate": 0.5660846844851363,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469b1",
+    "firstName": "Lilly",
+    "lastName": "Taulelei",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753136051-Lilly_Taulelei_690236480192a693453469b1.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "C/F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3569,
+        "likes": 11045,
+        "comments": 524,
+        "engagementRate": 0.23233637835748952,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469a4",
+    "firstName": "Ireland",
+    "lastName": "Buss",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753121225-Ireland_Buss_690236480192a693453469a4.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1703,
+        "likes": 8,
+        "comments": 329,
+        "engagementRate": 0.0034395062768286353,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346932",
+    "firstName": "Jace",
+    "lastName": "J. Gilbert",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753134635-Jace_J. Gilbert_690236480192a69345346932.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1515,
+        "likes": 6023,
+        "comments": 362,
+        "engagementRate": 0.4214521452145215,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469cf",
+    "firstName": "Paula",
+    "lastName": "Krzeslak",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753124857-Paula_Krzeslak_690236480192a693453469cf.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "DS/L",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1559,
+        "likes": 5801,
+        "comments": 143,
+        "engagementRate": 0.27243682089256077,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469be",
+    "firstName": "Gaby",
+    "lastName": "Alvarez",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753136044-Gaby_Alvarez_690236480192a693453469be.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 325,
+        "likes": 164,
+        "comments": 89,
+        "engagementRate": 0.12984615384615386,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469b9",
+    "firstName": "Kenzie",
+    "lastName": "Hare",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753134643-Kenzie_Hare_690236480192a693453469b9.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3677,
+        "likes": 10820,
+        "comments": 545,
+        "engagementRate": 0.22308605152946145,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469dc",
+    "firstName": "Alea",
+    "lastName": "Goolsby",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753123260-Alea_Goolsby_690236480192a693453469dc.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1692,
+        "likes": 7087,
+        "comments": 808,
+        "engagementRate": 0.2830344316344499,
+        "contentCount": 16,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469c9",
+    "firstName": "Samantha",
+    "lastName": "Schneider",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753135375-Samantha_Schneider_690236480192a693453469c9.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "AA",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1870,
+        "likes": 1930,
+        "comments": 751,
+        "engagementRate": 0.07307803481064268,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346940",
+    "firstName": "Beau",
+    "lastName": "Goodwin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753135467-Beau_Goodwin_690236480192a69345346940.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2586,
+        "likes": 13407,
+        "comments": 348,
+        "engagementRate": 0.37949588673006496,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534694f",
+    "firstName": "Dylan",
+    "lastName": "Barrett",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753129143-Dylan_Barrett_690236480192a6934534694f.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2947,
+        "likes": 6547,
+        "comments": 532,
+        "engagementRate": 0.16921632526458685,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534694d",
+    "firstName": "Vaea",
+    "lastName": "Ikakoula",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753129228-Vaea_Ikakoula_690236480192a6934534694d.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1537,
+        "likes": 2882,
+        "comments": 330,
+        "engagementRate": 0.3474438329025187,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346980",
+    "firstName": "Dominic",
+    "lastName": "Overby",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753130013-Dominic_Overby_690236480192a69345346980.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2075,
+        "likes": 23912,
+        "comments": 323,
+        "engagementRate": 0.8924951306666403,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469bd",
+    "firstName": "Ale",
+    "lastName": "Alvarez",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753122883-Ale_Alvarez_690236480192a693453469bd.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 136,
+        "engagementRate": 0,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534695b",
+    "firstName": "Deylin",
+    "lastName": "Hasert",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753126701-Deylin_Hasert_690236480192a6934534695b.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2637,
+        "likes": 3,
+        "comments": 288,
+        "engagementRate": 0.0003521317514491576,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534696d",
+    "firstName": "Easton",
+    "lastName": "Miller",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753123137-Easton_Miller_690236480192a6934534696d.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1929,
+        "likes": 6172,
+        "comments": 358,
+        "engagementRate": 0.2606458378577988,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346963",
+    "firstName": "Jace",
+    "lastName": "T. Gilbert",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753127635-Jace_T. Gilbert_690236480192a69345346963.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "PK/P",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3502,
+        "likes": 8169,
+        "comments": 176,
+        "engagementRate": 0.1703221351705965,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346915",
+    "firstName": "Jeremiah",
+    "lastName": "Cooper",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753126016-Jeremiah_Cooper_690236480192a69345346915.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12014,
+        "likes": 30997,
+        "comments": 420,
+        "engagementRate": 0.21791937184395982,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346971",
+    "firstName": "Kai",
+    "lastName": "Black",
+    "profilePicture": "",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2131,
+        "likes": 4521,
+        "comments": 273,
+        "engagementRate": 0.24594608686584282,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346982",
+    "firstName": "Daniel",
+    "lastName": "Jackson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753122213-Daniel_Jackson_690236480192a69345346982.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1843,
+        "likes": 9939,
+        "comments": 249,
+        "engagementRate": 0.6140393007067825,
+        "contentCount": 9,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469d1",
+    "firstName": "Rachel",
+    "lastName": "Van Gorp",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753129204-Rachel_Van Gorp_690236480192a693453469d1.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "L/OH",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1936,
+        "likes": 6278,
+        "comments": 579,
+        "engagementRate": 0.32427330700960083,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534699f",
+    "firstName": "Reagan",
+    "lastName": "Bartholomew",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753134638-Reagan_Bartholomew_690236480192a6934534699f.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1188,
+        "likes": 1762,
+        "comments": 326,
+        "engagementRate": 0.11428386428386429,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346951",
+    "firstName": "Jim",
+    "lastName": "Bonifas",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753120083-Jim_Bonifas_690236480192a69345346951.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2616,
+        "likes": 16120,
+        "comments": 393,
+        "engagementRate": 0.4525420757513726,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534692b",
+    "firstName": "Myles",
+    "lastName": "Mendeszoon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753124765-Myles_Mendeszoon_690236480192a6934534692b.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4913,
+        "likes": 121073,
+        "comments": 1562,
+        "engagementRate": 1.921742569731999,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534698e",
+    "firstName": "Blake",
+    "lastName": "Buchanan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753126713-Blake_Buchanan_690236480192a6934534698e.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 10010,
+        "likes": 5927,
+        "comments": 803,
+        "engagementRate": 0.046685206573468946,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346936",
+    "firstName": "Domonique",
+    "lastName": "Orange",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753127058-Domonique_Orange_690236480192a69345346936.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2746,
+        "likes": 12125,
+        "comments": 362,
+        "engagementRate": 0.3440458745484237,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469e0",
+    "firstName": "Ava",
+    "lastName": "Martin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753136006-Ava_Martin_690236480192a693453469e0.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1811,
+        "likes": 7339,
+        "comments": 852,
+        "engagementRate": 0.30217464758608426,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346985",
+    "firstName": "Jonathan",
+    "lastName": "Vande Walle",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753124152-Jonathan_Vande Walle_690236480192a69345346985.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 838,
+        "likes": 239,
+        "comments": 241,
+        "engagementRate": 0.028097201128227386,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534699c",
+    "firstName": "Ava",
+    "lastName": "Wilmes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753135363-Ava_Wilmes_690236480192a6934534699c.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 982,
+        "likes": 1305,
+        "comments": 457,
+        "engagementRate": 0.08503495084388135,
+        "contentCount": 17,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469b3",
+    "firstName": "Addy",
+    "lastName": "Brown",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753130826-Addy_Brown_690236480192a693453469b3.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5780,
+        "likes": 19617,
+        "comments": 528,
+        "engagementRate": 0.2348787910188446,
+        "contentCount": 15,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346960",
+    "firstName": "Jonah",
+    "lastName": "DuPont",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753138364-Jonah_DuPont_690236480192a69345346960.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "P",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1163,
+        "likes": 2939,
+        "comments": 160,
+        "engagementRate": 0.5329320722269991,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469d4",
+    "firstName": "Shae",
+    "lastName": "Pearson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753134024-Shae_Pearson_690236480192a693453469d4.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1831,
+        "likes": 6538,
+        "comments": 534,
+        "engagementRate": 0.2970818933193829,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469d8",
+    "firstName": "Maya",
+    "lastName": "Duckworth",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753120111-Maya_Duckworth_690236480192a693453469d8.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2379,
+        "likes": 8871,
+        "comments": 380,
+        "engagementRate": 0.29920821988640206,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534692f",
+    "firstName": "Jack",
+    "lastName": "Limbaugh",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753124089-Jack_Limbaugh_690236480192a6934534692f.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1305,
+        "likes": 3574,
+        "comments": 123,
+        "engagementRate": 0.22962962962962963,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534695f",
+    "firstName": "Tyler",
+    "lastName": "Perkins",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753136330-Tyler_Perkins_690236480192a6934534695f.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "P",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2553,
+        "likes": 15148,
+        "comments": 254,
+        "engagementRate": 0.46444101305075114,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346942",
+    "firstName": "Rylan",
+    "lastName": "Barnes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753134053-Rylan_Barnes_690236480192a69345346942.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1504,
+        "likes": 6469,
+        "comments": 182,
+        "engagementRate": 0.3687815222375057,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469a0",
+    "firstName": "Sydney",
+    "lastName": "Malott",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753126105-Sydney_Malott_690236480192a693453469a0.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2248,
+        "likes": 117,
+        "comments": 310,
+        "engagementRate": 0.005005836045191289,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469df",
+    "firstName": "Morgan",
+    "lastName": "Brandt",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753136836-Morgan_Brandt_690236480192a693453469df.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "S",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4030,
+        "likes": 11199,
+        "comments": 134,
+        "engagementRate": 0.216321571261532,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534693e",
+    "firstName": "Will",
+    "lastName": "McLaughlin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753131885-Will_McLaughlin_690236480192a6934534693e.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3452,
+        "likes": 24630,
+        "comments": 568,
+        "engagementRate": 0.6012831753051775,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469a6",
+    "firstName": "Hayleigh",
+    "lastName": "Oliver",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753127687-Hayleigh_Oliver_690236480192a693453469a6.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1523,
+        "likes": 5329,
+        "comments": 675,
+        "engagementRate": 0.30326001678232867,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346921",
+    "firstName": "Drew",
+    "lastName": "Surges",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753125065-Drew_Surges_690236480192a69345346921.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2731,
+        "likes": 14408,
+        "comments": 371,
+        "engagementRate": 0.41691237099320255,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469c4",
+    "firstName": "Noelle",
+    "lastName": "Adams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753135405-Noelle_Adams_690236480192a693453469c4.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "AA",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1860,
+        "likes": 1191,
+        "comments": 394,
+        "engagementRate": 0.05452075634049561,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346973",
+    "firstName": "Vince",
+    "lastName": "Benetti",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753134015-Vince_Benetti_690236480192a69345346973.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1106,
+        "likes": 1439,
+        "comments": 74,
+        "engagementRate": 0.34199819168173595,
+        "contentCount": 4,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534693c",
+    "firstName": "Carson",
+    "lastName": "Willich",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753129156-Carson_Willich_690236480192a6934534693c.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2535,
+        "likes": 8697,
+        "comments": 389,
+        "engagementRate": 0.2757093005613716,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346961",
+    "firstName": "Chase",
+    "lastName": "Smith",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753133245-Chase_Smith_690236480192a69345346961.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "PK",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 870,
+        "likes": 3035,
+        "comments": 132,
+        "engagementRate": 0.3611494252873563,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346928",
+    "firstName": "Caden",
+    "lastName": "Matson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753123117-Caden_Matson_690236480192a69345346928.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1367,
+        "likes": 14198,
+        "comments": 245,
+        "engagementRate": 0.9491200525076405,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469b4",
+    "firstName": "Reese",
+    "lastName": "Beaty",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753125205-Reese_Beaty_690236480192a693453469b4.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2000,
+        "likes": 14949,
+        "comments": 247,
+        "engagementRate": 0.4749174120453192,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469b7",
+    "firstName": "Freya",
+    "lastName": "Jensen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753130047-Freya_Jensen_690236480192a693453469b7.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1765,
+        "likes": 1688,
+        "comments": 254,
+        "engagementRate": 0.08125590179414542,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469c5",
+    "firstName": "Aubree",
+    "lastName": "Guinee",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753120184-Aubree_Guinee_690236480192a693453469c5.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "AA",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2600,
+        "likes": 2864,
+        "comments": 362,
+        "engagementRate": 0.0932051282051282,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346964",
+    "firstName": "Rocco",
+    "lastName": "Becht",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753126689-Rocco_Becht_690236480192a69345346964.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 24573,
+        "likes": 28149,
+        "comments": 316,
+        "engagementRate": 0.09653210162915937,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534691b",
+    "firstName": "David",
+    "lastName": "Coffey",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753132506-David_Coffey_690236480192a6934534691b.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 198,
+        "engagementRate": 0,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346976",
+    "firstName": "Tyler",
+    "lastName": "Moore",
+    "profilePicture": "",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1682,
+        "likes": 7448,
+        "comments": 332,
+        "engagementRate": 0.385453824811732,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534696a",
+    "firstName": "Aiden",
+    "lastName": "Flora",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753130050-Aiden_Flora_690236480192a6934534696a.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2439,
+        "likes": 24738,
+        "comments": 224,
+        "engagementRate": 0.930411122293041,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469da",
+    "firstName": "Nayeli",
+    "lastName": "Gonzalez",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753130874-Nayeli_Gonzalez_690236480192a693453469da.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3482,
+        "likes": 9316,
+        "comments": 268,
+        "engagementRate": 0.211695937198818,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346972",
+    "firstName": "Benjamin",
+    "lastName": "Brahmer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753121123-Benjamin_Brahmer_690236480192a69345346972.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5478,
+        "likes": 34396,
+        "comments": 142,
+        "engagementRate": 0.573168707889409,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346948",
+    "firstName": "Drew",
+    "lastName": "Clausen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753129192-Drew_Clausen_690236480192a69345346948.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LS",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1187,
+        "likes": 1779,
+        "comments": 143,
+        "engagementRate": 0.1349340073013198,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346954",
+    "firstName": "Tyler",
+    "lastName": "Miller",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753133264-Tyler_Miller_690236480192a69345346954.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1734,
+        "likes": 11064,
+        "comments": 252,
+        "engagementRate": 0.5438292964244522,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346939",
+    "firstName": "Cannon",
+    "lastName": "Butler",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753133942-Cannon_Butler_690236480192a69345346939.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1621,
+        "likes": 6342,
+        "comments": 74,
+        "engagementRate": 0.39580505860579884,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469a9",
+    "firstName": "Tiana",
+    "lastName": "Poole",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753134576-Tiana_Poole_690236480192a693453469a9.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 458,
+        "likes": 1579,
+        "comments": 287,
+        "engagementRate": 0.3130462578694723,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534693a",
+    "firstName": "Zachary",
+    "lastName": "Lovett",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753120129-Zachary_Lovett_690236480192a6934534693a.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "LB",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2836,
+        "likes": 10915,
+        "comments": 344,
+        "engagementRate": 0.33004691746464204,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534695c",
+    "firstName": "James",
+    "lastName": "Neal III",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753122153-James_Neal III_690236480192a6934534695c.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1545,
+        "likes": 8735,
+        "comments": 310,
+        "engagementRate": 0.487864077669903,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534697d",
+    "firstName": "Eli",
+    "lastName": "Green",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753127609-Eli_Green_690236480192a6934534697d.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4292,
+        "likes": 17798,
+        "comments": 271,
+        "engagementRate": 0.38183089045158014,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346975",
+    "firstName": "Jack",
+    "lastName": "Bjorn",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753131841-Jack_Bjorn_690236480192a69345346975.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2119,
+        "likes": 6477,
+        "comments": 265,
+        "engagementRate": 0.26514078968066696,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346925",
+    "firstName": "Caden",
+    "lastName": "Kock",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753132483-Caden_Kock_690236480192a69345346925.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1140,
+        "likes": 841,
+        "comments": 96,
+        "engagementRate": 0.26286549707602336,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534698d",
+    "firstName": "Milan",
+    "lastName": "Momcilovic",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753121201-Milan_Momcilovic_690236480192a6934534698d.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 17067,
+        "likes": 61014,
+        "comments": 419,
+        "engagementRate": 0.2999599617194976,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534696e",
+    "firstName": "Carson",
+    "lastName": "Hansen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753134611-Carson_Hansen_690236480192a6934534696e.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 5321,
+        "likes": 24870,
+        "comments": 310,
+        "engagementRate": 0.39434943306396036,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534696f",
+    "firstName": "Jayden",
+    "lastName": "Jackson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753130864-Jayden_Jackson_690236480192a6934534696f.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "RB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2524,
+        "likes": 7216,
+        "comments": 196,
+        "engagementRate": 0.22580480739283304,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346994",
+    "firstName": "Anthony",
+    "lastName": "Rise",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753120026-Anthony_Rise_690236480192a69345346994.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2304,
+        "likes": 8726,
+        "comments": 417,
+        "engagementRate": 0.30530190918199285,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346937",
+    "firstName": "Chet",
+    "lastName": "Andrews",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753134622-Chet_Andrews_690236480192a69345346937.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1463,
+        "likes": 2580,
+        "comments": 224,
+        "engagementRate": 0.31943495101389835,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469a8",
+    "firstName": "Tatum",
+    "lastName": "Johnson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753121316-Tatum_Johnson_690236480192a693453469a8.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1188,
+        "likes": 242,
+        "comments": 304,
+        "engagementRate": 0.02053872053872054,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469d9",
+    "firstName": "Mesaiya",
+    "lastName": "Bettis",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753125826-Mesaiya_Bettis_690236480192a693453469d9.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "OH",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1276,
+        "likes": 1830,
+        "comments": 855,
+        "engagementRate": 0.11194626063591581,
+        "contentCount": 14,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469aa",
+    "firstName": "Ava",
+    "lastName": "Mullen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753124127-Ava_Mullen_690236480192a693453469aa.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1636,
+        "likes": 5420,
+        "comments": 412,
+        "engagementRate": 0.30593334680964385,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469a7",
+    "firstName": "Victoria",
+    "lastName": "Prado",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753125177-Victoria_Prado_690236480192a693453469a7.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1769,
+        "likes": 996,
+        "comments": 927,
+        "engagementRate": 0.055681175805539856,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534699e",
+    "firstName": "Kadence",
+    "lastName": "Shepherd",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753131873-Kadence_Shepherd_690236480192a6934534699e.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "INF",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 861,
+        "engagementRate": 0,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469a5",
+    "firstName": "Isabelle",
+    "lastName": "Nosan",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753136072-Isabelle_Nosan_690236480192a693453469a5.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "OF",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1008,
+        "likes": 3,
+        "comments": 386,
+        "engagementRate": 0.0018315018315018315,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469ac",
+    "firstName": "Jaiden",
+    "lastName": "Ralston",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753121293-Jaiden_Ralston_690236480192a693453469ac.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "RHP",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 209,
+        "engagementRate": 0,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534697a",
+    "firstName": "Cooper",
+    "lastName": "Alexander",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753136012-Cooper_Alexander_690236480192a6934534697a.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 488,
+        "likes": 492,
+        "comments": 50,
+        "engagementRate": 0.13883196721311475,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346929",
+    "firstName": "Wyatt",
+    "lastName": "Archer",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753132503-Wyatt_Archer_690236480192a69345346929.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1888,
+        "likes": 7991,
+        "comments": 838,
+        "engagementRate": 0.42511341612824544,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534698f",
+    "firstName": "Xzavion",
+    "lastName": "Mitchell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753133209-Xzavion_Mitchell_690236480192a6934534698f.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 7111,
+        "likes": 15361,
+        "comments": 207,
+        "engagementRate": 0.31275488679510616,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469d2",
+    "firstName": "Pam",
+    "lastName": "McCune",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753122184-Pam_McCune_690236480192a693453469d2.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_VOLLEYBALL",
+    "position": "MB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1569,
+        "likes": 7266,
+        "comments": 220,
+        "engagementRate": 0.38825154025918845,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469c7",
+    "firstName": "Haylee",
+    "lastName": "Hardin",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753125171-Haylee_Hardin_690236480192a693453469c7.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "AA",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1283,
+        "likes": 1324,
+        "comments": 361,
+        "engagementRate": 0.10584567420109119,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469cc",
+    "firstName": "Madelyn",
+    "lastName": "Manternach",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753136054-Madelyn_Manternach_690236480192a693453469cc.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "BB/FX",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2152,
+        "likes": 6134,
+        "comments": 511,
+        "engagementRate": 0.25731877323420077,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469c6",
+    "firstName": "Chloe",
+    "lastName": "Hammond",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753135413-Chloe_Hammond_690236480192a693453469c6.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "AA",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 473,
+        "engagementRate": 0,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469c0",
+    "firstName": "Ella",
+    "lastName": "Roberts",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753129197-Ella_Roberts_690236480192a693453469c0.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2433,
+        "likes": 917,
+        "comments": 369,
+        "engagementRate": 0.035309942831521134,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346952",
+    "firstName": "Sione",
+    "lastName": "Perkins",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753121142-Sione_Perkins_690236480192a69345346952.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 481,
+        "likes": 2301,
+        "comments": 32,
+        "engagementRate": 0.6062889812889813,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469ae",
+    "firstName": "Lauren",
+    "lastName": "Schurman",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753126726-Lauren_Schurman_690236480192a693453469ae.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "SOFTBALL",
+    "position": "RHP",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 368,
+        "likes": 1353,
+        "comments": 243,
+        "engagementRate": 0.5421195652173912,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346988",
+    "firstName": "Dyllan",
+    "lastName": "Malone",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753130859-Dyllan_Malone_690236480192a69345346988.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2571,
+        "likes": 3856,
+        "comments": 173,
+        "engagementRate": 0.3134189031505251,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346983",
+    "firstName": "Michael",
+    "lastName": "Parkes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753134003-Michael_Parkes_690236480192a69345346983.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1299,
+        "likes": 3599,
+        "comments": 268,
+        "engagementRate": 0.22886480543448387,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346956",
+    "firstName": "Makai",
+    "lastName": "Sat",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753126718-Makai_Sat_690236480192a69345346956.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1336,
+        "likes": 1781,
+        "comments": 161,
+        "engagementRate": 0.2025235243798118,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534694e",
+    "firstName": "Kuol",
+    "lastName": "Kuol II",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753126693-Kuol_Kuol II_690236480192a6934534694e.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2535,
+        "likes": 7245,
+        "comments": 462,
+        "engagementRate": 0.43431952662721895,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346967",
+    "firstName": "Major",
+    "lastName": "Cantrell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753123121-Major_Cantrell_690236480192a69345346967.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2025,
+        "likes": 6025,
+        "comments": 288,
+        "engagementRate": 0.25699588477366253,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346965",
+    "firstName": "Connor",
+    "lastName": "Moberly",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753136908-Connor_Moberly_690236480192a69345346965.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3017,
+        "likes": 8241,
+        "comments": 317,
+        "engagementRate": 0.23475306595956244,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346955",
+    "firstName": "Carson",
+    "lastName": "Rhodes",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753127627-Carson_Rhodes_690236480192a69345346955.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1326,
+        "likes": 4469,
+        "comments": 194,
+        "engagementRate": 0.26728018616177074,
+        "contentCount": 13,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534692a",
+    "firstName": "Hunter",
+    "lastName": "Sowell",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753121257-Hunter_Sowell_690236480192a6934534692a.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1126,
+        "likes": 2023,
+        "comments": 164,
+        "engagementRate": 0.3884547069271758,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346959",
+    "firstName": "Gabriel",
+    "lastName": "Greenlee",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753121178-Gabriel_Greenlee_690236480192a69345346959.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2500,
+        "likes": 2369,
+        "comments": 286,
+        "engagementRate": 0.10167999999999999,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346923",
+    "firstName": "Angelo",
+    "lastName": "Jackson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753135440-Angelo_Jackson_690236480192a69345346923.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1546,
+        "likes": 3541,
+        "comments": 213,
+        "engagementRate": 0.3203073518403402,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534695e",
+    "firstName": "Will",
+    "lastName": "Tompkins",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753134641-Will_Tompkins_690236480192a6934534695e.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2044,
+        "likes": 7710,
+        "comments": 297,
+        "engagementRate": 0.3264432485322896,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346995",
+    "firstName": "Dominick",
+    "lastName": "Nelson",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753127640-Dominick_Nelson_690236480192a69345346995.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1987,
+        "likes": 1629,
+        "comments": 501,
+        "engagementRate": 0.14217413185707098,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469c1",
+    "firstName": "Taylor",
+    "lastName": "Sanders",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753132526-Taylor_Sanders_690236480192a693453469c1.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "-",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 715,
+        "likes": 496,
+        "comments": 108,
+        "engagementRate": 0.24708624708624707,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346992",
+    "firstName": "Mason",
+    "lastName": "Williams",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753130018-Mason_Williams_690236480192a69345346992.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 3406,
+        "likes": 12261,
+        "comments": 442,
+        "engagementRate": 0.31079956938735565,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346996",
+    "firstName": "Cade",
+    "lastName": "Kelderman",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753131893-Cade_Kelderman_690236480192a69345346996.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 4150,
+        "likes": 16715,
+        "comments": 526,
+        "engagementRate": 0.3456224899598394,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346927",
+    "firstName": "Eddie",
+    "lastName": "Lemos",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753130813-Eddie_Lemos_690236480192a69345346927.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1427,
+        "likes": 1280,
+        "comments": 239,
+        "engagementRate": 0.09572529782761038,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346957",
+    "firstName": "Dontrell",
+    "lastName": "Holt",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753124198-Dontrell_Holt_690236480192a69345346957.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1239,
+        "likes": 832,
+        "comments": 62,
+        "engagementRate": 0.36077481840193704,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534695d",
+    "firstName": "Easton",
+    "lastName": "Eledge",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753126922-Easton_Eledge_690236480192a6934534695d.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1401,
+        "likes": 2783,
+        "comments": 145,
+        "engagementRate": 0.18999416001557326,
+        "contentCount": 11,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346953",
+    "firstName": "Garret",
+    "lastName": "Rutledge",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753131903-Garret_Rutledge_690236480192a69345346953.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 922,
+        "likes": 2616,
+        "comments": 75,
+        "engagementRate": 0.29186550976138825,
+        "contentCount": 10,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346990",
+    "firstName": "Nate",
+    "lastName": "Heise",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753131870-Nate_Heise_690236480192a69345346990.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 6047,
+        "likes": 13969,
+        "comments": 183,
+        "engagementRate": 0.33324671029317965,
+        "contentCount": 7,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534698a",
+    "firstName": "Eric",
+    "lastName": "Mulder",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753131865-Eric_Mulder_690236480192a6934534698a.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "year": "SENIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 2365,
+        "likes": 5992,
+        "comments": 231,
+        "engagementRate": 0.21927413671599716,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534692c",
+    "firstName": "Vontroy",
+    "lastName": "Malone",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753126122-Vontroy_Malone_690236480192a6934534692c.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1331,
+        "likes": 948,
+        "comments": 97,
+        "engagementRate": 0.3925619834710744,
+        "contentCount": 2,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346950",
+    "firstName": "Braden",
+    "lastName": "Simonsen",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753123141-Braden_Simonsen_690236480192a69345346950.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "OL",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1256,
+        "likes": 1047,
+        "comments": 129,
+        "engagementRate": 0.11703821656050956,
+        "contentCount": 8,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346978",
+    "firstName": "Keaton",
+    "lastName": "Roskop",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753127624-Keaton_Roskop_690236480192a69345346978.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "TE",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 823,
+        "likes": 3480,
+        "comments": 189,
+        "engagementRate": 0.37150668286755767,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346968",
+    "firstName": "Wyatt",
+    "lastName": "Bohm",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753123132-Wyatt_Bohm_690236480192a69345346968.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "QB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1245,
+        "likes": 1814,
+        "comments": 110,
+        "engagementRate": 0.30907630522088353,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534692e",
+    "firstName": "Charlie",
+    "lastName": "Woleben",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753125006-Charlie_Woleben_690236480192a6934534692e.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 414,
+        "likes": 1501,
+        "comments": 2,
+        "engagementRate": 3.630434782608696,
+        "contentCount": 1,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534692d",
+    "firstName": "Trey",
+    "lastName": "Verdon",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753125082-Trey_Verdon_690236480192a6934534692d.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DL",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 983,
+        "likes": 3136,
+        "comments": 63,
+        "engagementRate": 1.084774499830451,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346987",
+    "firstName": "Sam",
+    "lastName": "Zelenovich",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753130269-Sam_Zelenovich_690236480192a69345346987.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "WR",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 1296,
+        "likes": 3319,
+        "comments": 177,
+        "engagementRate": 0.5395061728395062,
+        "contentCount": 5,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a69345346916",
+    "firstName": "Beni",
+    "lastName": "Ngoyi",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753136912-Beni_Ngoyi_690236480192a69345346916.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "SOPHOMORE",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 12204,
+        "likes": 7717,
+        "comments": 53,
+        "engagementRate": 0.10611274991805965,
+        "contentCount": 6,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a6934534691a",
+    "firstName": "Connor",
+    "lastName": "Welsch",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753120053-Connor_Welsch_690236480192a6934534691a.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "FOOTBALL",
+    "position": "DB",
+    "year": "FRESHMAN",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 0,
+        "likes": 0,
+        "comments": 64,
+        "engagementRate": 0,
+        "contentCount": 3,
+        "marketability": 0
+      }
+    }
+  },
+  {
+    "_id": "690236480192a693453469cb",
+    "firstName": "Paige",
+    "lastName": "Wills",
+    "profilePicture": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761753133235-Paige_Wills_690236480192a693453469cb.png",
+    "schoolName": "Iowa State",
+    "conferenceName": "Big 12",
+    "sport": "WOMENS_GYMNASTICS",
+    "position": "AA",
+    "year": "JUNIOR",
+    "metrics": {
+      "thirtyDays": {
+        "followers": 365,
+        "likes": 3364,
+        "comments": 50,
+        "engagementRate": 0.7794520547945206,
+        "contentCount": 12,
+        "marketability": 0
+      }
+    }
+  }
+]
