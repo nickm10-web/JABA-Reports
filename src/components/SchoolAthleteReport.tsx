@@ -674,7 +674,7 @@ function deriveIPComparisons(raw: RawPost[]): IPComparison[] {
 
 function buildIPComparisonsFromPrecomputed(ipImpact: PrecomputedIPImpact | null): IPComparison[] {
   if (!ipImpact) return [];
-  const normalizeBucket = (bucket: PrecomputedIPImpactSignalBucket): IPBucket => {
+  const normalizeBucket = (bucket: IPBucket): IPBucket => {
     const contents = Number(bucket.contents || 0);
     const avgLikes = Number(bucket.likes || 0);
     const avgComments = Number(bucket.comments || 0);
