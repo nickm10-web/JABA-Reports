@@ -175,7 +175,7 @@ const fmtSport = (s?: string) => {
 };
 const fmtTeamAccountLabel = (team?: Pick<TeamPageStat, 'sport' | 'handle'> | null) => {
   if (!team) return 'N/A';
-  if (team.sport === 'GENERAL' && team.handle) return team.handle;
+  if (team.handle) return `@${team.handle.replace(/^@+/, '')}`;
   return fmtSport(team.sport);
 };
 const emv = (likes: number, comments: number) => likes * 0.5 + comments * 1.5;
