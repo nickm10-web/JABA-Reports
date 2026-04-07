@@ -2689,23 +2689,23 @@ function SponsoredTab({
           className="rounded-2xl p-6 border"
           style={{ backgroundColor: primaryColor, borderColor: primaryColor + '40' }}
         >
-          <p className="text-xs uppercase tracking-[0.22em] text-white/75">Estimated Brand Value Generated</p>
-          <p className="text-4xl md:text-5xl font-black text-white mt-2">{fmtCur(sponsoredEmv)}</p>
-          <p className="text-sm text-white/80 mt-2">
+          <p className="text-xs uppercase tracking-[0.22em] text-black/70">Estimated Brand Value Generated</p>
+          <p className="text-4xl md:text-5xl font-black text-black mt-2">{fmtCur(sponsoredEmv)}</p>
+          <p className="text-sm text-black/75 mt-2">
             From {fmtN(totalSponsoredPostsAll)} identified brand partnership posts.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-5">
-            <div className="rounded-xl border border-white/20 bg-white/10 px-3 py-2">
-              <p className="text-[11px] uppercase tracking-[0.18em] text-white/70">Sponsored Posts</p>
-              <p className="text-xl font-bold text-white mt-1">{fmtN(filtered.length)}</p>
+            <div className="rounded-xl border border-black/10 bg-white/12 px-3 py-2">
+              <p className="text-[11px] uppercase tracking-[0.18em] text-black/65">Sponsored Posts</p>
+              <p className="text-xl font-bold text-black mt-1">{fmtN(filtered.length)}</p>
             </div>
-            <div className="rounded-xl border border-white/20 bg-white/10 px-3 py-2">
-              <p className="text-[11px] uppercase tracking-[0.18em] text-white/70">Unique Brands</p>
-              <p className="text-xl font-bold text-white mt-1">{fmtN(uniqueBrands.size)}</p>
+            <div className="rounded-xl border border-black/10 bg-white/12 px-3 py-2">
+              <p className="text-[11px] uppercase tracking-[0.18em] text-black/65">Unique Brands</p>
+              <p className="text-xl font-bold text-black mt-1">{fmtN(uniqueBrands.size)}</p>
             </div>
-            <div className="rounded-xl border border-white/20 bg-white/10 px-3 py-2">
-              <p className="text-[11px] uppercase tracking-[0.18em] text-white/70">Athletes with Deals</p>
-              <p className="text-xl font-bold text-white mt-1">{fmtN(uniqueAthletes.size)}</p>
+            <div className="rounded-xl border border-black/10 bg-white/12 px-3 py-2">
+              <p className="text-[11px] uppercase tracking-[0.18em] text-black/65">Athletes with Deals</p>
+              <p className="text-xl font-bold text-black mt-1">{fmtN(uniqueAthletes.size)}</p>
             </div>
           </div>
         </div>
