@@ -781,7 +781,7 @@ export const missouriConfig: SchoolConfig = {
   logoUrl: 'https://a.espncdn.com/i/teamlogos/ncaa/500/142.png',
   conference: 'SEC',
   dataFile: '/data/mizzou-content-posts.json',
-  rosterDataFile: '/data/mizzou-roster.json',
+  rosterDataFile: '/data/Mizzou_roster.json',
   colors: {
     primary: '#F1B82D',
     secondary: '#000000',
