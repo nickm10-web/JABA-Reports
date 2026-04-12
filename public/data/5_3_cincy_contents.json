@@ -1,0 +1,567 @@
+[{
+  "_id": "69c42d49b07a1d9109551fd1",
+  "athlete": {
+    "_id": "68f8774766c6eed501f52faf",
+    "name": "Tyler McKinley",
+    "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1774388565655-Tyler_McKinley_68f8774766c6eed501f52faf_ProfilePicture.jpg",
+    "bio": "A relentless competitor with a knack for finding the net, this forward combines finesse and grit. Known for his infectious enthusiasm, he inspires teammates while dazzling fans with skillful play.",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "conference": {
+      "_id": "68d23eb26f71af5707a79f22",
+      "name": "Big 12"
+    },
+    "school": {
+      "_id": "68f876c47804265f86eb36fb",
+      "name": "University of Cincinnati"
+    },
+    "league": {
+      "_id": "68d23c396f71af5707a79f1c",
+      "name": "NCAA"
+    },
+    "year": "FRESHMAN"
+  },
+  "caption": "Playing for my hometown team has been such an amazing experience. From growing up rooting for the Bearcats to now playing in @fifththirdarena, I’m so grateful for every step of my journey that brought me here❤️ #team53",
+  "createdAt": {
+    "$date": "2026-03-10T13:03:38.000Z"
+  },
+  "hasOrganizationInCaption": true,
+  "hasOrganizationLogo": true,
+  "hashtags": [
+    "#team53"
+  ],
+  "isCollaboration": true,
+  "isOrganizationCollaboration": false,
+  "isSponsored": true,
+  "likeAndViewCountsDisabled": false,
+  "mediaType": "VIDEO",
+  "metrics": {
+    "comments": 7,
+    "likes": 490,
+    "engagementRate": 0.07824307304785894,
+    "shares": 0,
+    "saves": 0,
+    "impressions": 0,
+    "followers": 0,
+    "totalInteractions": 0,
+    "accountsEngaged": 0,
+    "videoViews": 738905,
+    "reach": 0,
+    "profileLinksTaps": 0,
+    "emv": 255.5
+  },
+  "permalink": "https://www.instagram.com/p/DVtHFLOuiw8",
+  "publishedAt": {
+    "$date": "2026-03-10T13:03:38.000Z"
+  },
+  "source": "INSTAGRAM",
+  "sponsorPartner": "@fifththirdbank",
+  "updatedAt": {
+    "$date": "2026-03-25T21:14:36.101Z"
+  },
+  "url": "https://storage.googleapis.com/scraper-media-images/18054481295473459"
+},
+{
+  "_id": "69c42d495b2f4293b59b0dd2",
+  "athlete": {
+    "_id": "68f8774766c6eed501f52faf",
+    "name": "Tyler McKinley",
+    "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1774388565655-Tyler_McKinley_68f8774766c6eed501f52faf_ProfilePicture.jpg",
+    "bio": "A relentless competitor with a knack for finding the net, this forward combines finesse and grit. Known for his infectious enthusiasm, he inspires teammates while dazzling fans with skillful play.",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "conference": {
+      "_id": "68d23eb26f71af5707a79f22",
+      "name": "Big 12"
+    },
+    "school": {
+      "_id": "68f876c47804265f86eb36fb",
+      "name": "University of Cincinnati"
+    },
+    "league": {
+      "_id": "68d23c396f71af5707a79f1c",
+      "name": "NCAA"
+    },
+    "year": "FRESHMAN"
+  },
+  "caption": "Every day we’re grinding to get A Fifth Third Better®—for our team, our city, and the fans who show up for us ❤️ #team53",
+  "createdAt": {
+    "$date": "2026-02-24T03:29:50.000Z"
+  },
+  "hasOrganizationInCaption": false,
+  "hasOrganizationLogo": false,
+  "hashtags": [
+    "#team53"
+  ],
+  "isCollaboration": true,
+  "isOrganizationCollaboration": false,
+  "isSponsored": true,
+  "likeAndViewCountsDisabled": false,
+  "mediaType": "VIDEO",
+  "metrics": {
+    "comments": 5,
+    "likes": 351,
+    "engagementRate": 0.05604534005037783,
+    "shares": 0,
+    "saves": 0,
+    "impressions": 0,
+    "followers": 0,
+    "totalInteractions": 0,
+    "accountsEngaged": 0,
+    "videoViews": 5916,
+    "reach": 0,
+    "profileLinksTaps": 0,
+    "emv": 183
+  },
+  "permalink": "https://www.instagram.com/p/DVICYH_jmyk",
+  "publishedAt": {
+    "$date": "2026-02-24T03:29:50.000Z"
+  },
+  "source": "INSTAGRAM",
+  "sponsorPartner": "@fifththirdbank",
+  "updatedAt": {
+    "$date": "2026-03-25T21:11:57.391Z"
+  },
+  "url": "https://storage.googleapis.com/scraper-media-images/18153300568450597"
+},
+{
+  "_id": "699affac42b24aecd2b5df73",
+  "athlete": {
+    "_id": "68f8774766c6eed501f5300d",
+    "name": "Mya Perry",
+    "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1774388641798-Mya_Perry_68f8774766c6eed501f5300d_ProfilePicture.jpg",
+    "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "GUARD",
+    "conference": {
+      "_id": "68d23eb26f71af5707a79f22",
+      "name": "Big 12"
+    },
+    "school": {
+      "_id": "68f876c47804265f86eb36fb",
+      "name": "University of Cincinnati"
+    },
+    "league": {
+      "_id": "68d23c396f71af5707a79f1c",
+      "name": "NCAA"
+    },
+    "year": "SENIOR"
+  },
+  "caption": "Get to know me A Fifth Third Better® in 5️⃣3️⃣ seconds! #team53",
+  "createdAt": {
+    "$date": "2026-02-19T00:56:41.000Z"
+  },
+  "hasOrganizationInCaption": false,
+  "hasOrganizationLogo": true,
+  "hashtags": [
+    "#team53"
+  ],
+  "isCollaboration": true,
+  "isOrganizationCollaboration": false,
+  "isSponsored": true,
+  "likeAndViewCountsDisabled": false,
+  "mediaType": "VIDEO",
+  "metrics": {
+    "comments": 18,
+    "likes": 449,
+    "engagementRate": 0.04441274369947694,
+    "shares": 0,
+    "saves": 0,
+    "impressions": 0,
+    "followers": 0,
+    "totalInteractions": 0,
+    "accountsEngaged": 0,
+    "videoViews": 305561,
+    "reach": 0,
+    "profileLinksTaps": 0,
+    "emv": 251.5
+  },
+  "permalink": "https://www.instagram.com/p/DU647X1D6a4",
+  "publishedAt": {
+    "$date": "2026-02-19T00:56:41.000Z"
+  },
+  "source": "INSTAGRAM",
+  "sponsorPartner": "@fifththirdbank",
+  "updatedAt": {
+    "$date": "2026-03-25T18:45:01.212Z"
+  },
+  "url": "https://storage.googleapis.com/scraper-media-images/18442360006111653"
+},
+{
+  "_id": "699b009094c1fab4e35cea43",
+  "athlete": {
+    "_id": "68f8774766c6eed501f52fab",
+    "name": "Shon Abaev",
+    "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1774388556945-Shon_Abaev_68f8774766c6eed501f52fab_ProfilePicture.jpg",
+    "bio": "A tenacious guard known for crafty ball-handling and sharp court vision, he thrives in high-pressure moments. Off the court, his infectious energy and camaraderie inspire teammates, forging unbreakable bonds.",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "conference": {
+      "_id": "68d23eb26f71af5707a79f22",
+      "name": "Big 12"
+    },
+    "school": {
+      "_id": "68f876c47804265f86eb36fb",
+      "name": "University of Cincinnati"
+    },
+    "league": {
+      "_id": "68d23c396f71af5707a79f1c",
+      "name": "NCAA"
+    },
+    "year": "FRESHMAN"
+  },
+  "caption": "Tour the @gobearcatsmbb locker room with me and @fifththirdbank 😎 #team53",
+  "createdAt": {
+    "$date": "2026-02-15T01:15:07.000Z"
+  },
+  "hasOrganizationInCaption": true,
+  "hasOrganizationLogo": false,
+  "hashtags": [
+    "#team53"
+  ],
+  "isCollaboration": true,
+  "isOrganizationCollaboration": false,
+  "isSponsored": true,
+  "likeAndViewCountsDisabled": false,
+  "mediaType": "VIDEO",
+  "metrics": {
+    "comments": 19,
+    "likes": 664,
+    "engagementRate": 0.013754908871211358,
+    "shares": 0,
+    "saves": 0,
+    "impressions": 0,
+    "followers": 0,
+    "totalInteractions": 0,
+    "accountsEngaged": 0,
+    "videoViews": 14526,
+    "reach": 0,
+    "profileLinksTaps": 0,
+    "emv": 360.5
+  },
+  "permalink": "https://www.instagram.com/p/DUwn4HuDBYU",
+  "publishedAt": {
+    "$date": "2026-02-15T01:15:07.000Z"
+  },
+  "source": "INSTAGRAM",
+  "sponsorPartner": "@fifththirdbank",
+  "updatedAt": {
+    "$date": "2026-02-24T00:18:10.568Z"
+  },
+  "url": "https://storage.googleapis.com/scraper-media-images/17861891370597804"
+},
+{
+  "_id": "698ea8b710609e4dd7fc43a5",
+  "athlete": {
+    "_id": "68f8774766c6eed501f52faf",
+    "name": "Tyler McKinley",
+    "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1774388565655-Tyler_McKinley_68f8774766c6eed501f52faf_ProfilePicture.jpg",
+    "bio": "A relentless competitor with a knack for finding the net, this forward combines finesse and grit. Known for his infectious enthusiasm, he inspires teammates while dazzling fans with skillful play.",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "conference": {
+      "_id": "68d23eb26f71af5707a79f22",
+      "name": "Big 12"
+    },
+    "school": {
+      "_id": "68f876c47804265f86eb36fb",
+      "name": "University of Cincinnati"
+    },
+    "league": {
+      "_id": "68d23c396f71af5707a79f1c",
+      "name": "NCAA"
+    },
+    "year": "FRESHMAN"
+  },
+  "caption": "My mom and my brother are my inspiration. They push me to be A Fifth Third Better® every day, while supporting me every game and every play❤️#team53",
+  "createdAt": {
+    "$date": "2026-02-12T20:50:40.000Z"
+  },
+  "hasOrganizationLogo": true,
+  "hashtags": [
+    "#team53"
+  ],
+  "isSponsored": true,
+  "likeAndViewCountsDisabled": false,
+  "mediaType": "VIDEO",
+  "metrics": {
+    "comments": 12,
+    "likes": 348,
+    "engagementRate": 0.05667506297229219,
+    "shares": 0,
+    "saves": 0,
+    "impressions": 0,
+    "followers": 0,
+    "totalInteractions": 0,
+    "accountsEngaged": 0,
+    "videoViews": 6941,
+    "reach": 0,
+    "profileLinksTaps": 0,
+    "emv": 192
+  },
+  "permalink": "https://www.instagram.com/p/DUq_-WwkdtZ",
+  "publishedAt": {
+    "$date": "2026-02-12T20:50:40.000Z"
+  },
+  "source": "INSTAGRAM",
+  "sponsorPartner": "@fifththirdbank",
+  "updatedAt": {
+    "$date": "2026-03-25T18:45:29.158Z"
+  },
+  "url": "https://storage.googleapis.com/scraper-media-images/18071994842409232",
+  "hasOrganizationInCaption": false,
+  "isCollaboration": true,
+  "isOrganizationCollaboration": false
+},
+{
+  "_id": "698ea88796d4901dfa397d4e",
+  "athlete": {
+    "_id": "68f8774766c6eed501f5300d",
+    "name": "Mya Perry",
+    "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1774388641798-Mya_Perry_68f8774766c6eed501f5300d_ProfilePicture.jpg",
+    "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "GUARD",
+    "conference": {
+      "_id": "68d23eb26f71af5707a79f22",
+      "name": "Big 12"
+    },
+    "school": {
+      "_id": "68f876c47804265f86eb36fb",
+      "name": "University of Cincinnati"
+    },
+    "league": {
+      "_id": "68d23c396f71af5707a79f1c",
+      "name": "NCAA"
+    },
+    "year": "SENIOR"
+  },
+  "caption": "Behind the scenes with @fifththirdbank😎 come tour our locker room with me! #team53",
+  "createdAt": {
+    "$date": "2026-02-10T00:31:00.000Z"
+  },
+  "hasOrganizationLogo": false,
+  "hashtags": [
+    "#team53"
+  ],
+  "isSponsored": true,
+  "likeAndViewCountsDisabled": false,
+  "mediaType": "VIDEO",
+  "metrics": {
+    "comments": 5,
+    "likes": 164,
+    "engagementRate": 0.016072277698525917,
+    "shares": 0,
+    "saves": 0,
+    "impressions": 0,
+    "followers": 0,
+    "totalInteractions": 0,
+    "accountsEngaged": 0,
+    "videoViews": 8828,
+    "reach": 0,
+    "profileLinksTaps": 0,
+    "emv": 89.5
+  },
+  "permalink": "https://www.instagram.com/p/DUjqxYcj-V0",
+  "publishedAt": {
+    "$date": "2026-02-10T00:31:00.000Z"
+  },
+  "source": "INSTAGRAM",
+  "sponsorPartner": "@fifththirdbank",
+  "updatedAt": {
+    "$date": "2026-03-25T18:45:01.172Z"
+  },
+  "url": "https://storage.googleapis.com/scraper-media-images/18131710192511856",
+  "hasOrganizationInCaption": false,
+  "isCollaboration": true,
+  "isOrganizationCollaboration": false
+},
+{
+  "_id": "698ea8b710609e4dd7fc43b5",
+  "athlete": {
+    "_id": "68f8774766c6eed501f52faf",
+    "name": "Tyler McKinley",
+    "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1774388565655-Tyler_McKinley_68f8774766c6eed501f52faf_ProfilePicture.jpg",
+    "bio": "A relentless competitor with a knack for finding the net, this forward combines finesse and grit. Known for his infectious enthusiasm, he inspires teammates while dazzling fans with skillful play.",
+    "sport": "MENS_BASKETBALL",
+    "position": "F",
+    "conference": {
+      "_id": "68d23eb26f71af5707a79f22",
+      "name": "Big 12"
+    },
+    "school": {
+      "_id": "68f876c47804265f86eb36fb",
+      "name": "University of Cincinnati"
+    },
+    "league": {
+      "_id": "68d23c396f71af5707a79f1c",
+      "name": "NCAA"
+    },
+    "year": "FRESHMAN"
+  },
+  "caption": "Being A Fifth Third Better® is not just about your performance on-court, it’s about how you push yourself to go above and beyond in all aspects of life. I learned a lot about myself as a person and a teammate while I was recovering, and I’m grateful for those lessons #team53",
+  "createdAt": {
+    "$date": "2026-02-05T01:01:05.000Z"
+  },
+  "hasOrganizationLogo": false,
+  "hashtags": [
+    "#team53"
+  ],
+  "isSponsored": true,
+  "likeAndViewCountsDisabled": false,
+  "mediaType": "VIDEO",
+  "metrics": {
+    "comments": 11,
+    "likes": 307,
+    "engagementRate": 0.050062972292191435,
+    "shares": 0,
+    "saves": 0,
+    "impressions": 0,
+    "followers": 0,
+    "totalInteractions": 0,
+    "accountsEngaged": 0,
+    "videoViews": 9102,
+    "reach": 0,
+    "profileLinksTaps": 0,
+    "emv": 170
+  },
+  "permalink": "https://www.instagram.com/p/DUW2QsHkf1t",
+  "publishedAt": {
+    "$date": "2026-02-05T01:01:05.000Z"
+  },
+  "source": "INSTAGRAM",
+  "sponsorPartner": "@fifththirdbank",
+  "updatedAt": {
+    "$date": "2026-03-25T18:45:29.257Z"
+  },
+  "url": "https://storage.googleapis.com/scraper-media-images/18183596314365537",
+  "hasOrganizationInCaption": false,
+  "isCollaboration": true,
+  "isOrganizationCollaboration": false
+},
+{
+  "_id": "699b009142b24aecd2b5eb4a",
+  "athlete": {
+    "_id": "68f8774766c6eed501f52fab",
+    "name": "Shon Abaev",
+    "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1774388556945-Shon_Abaev_68f8774766c6eed501f52fab_ProfilePicture.jpg",
+    "bio": "A tenacious guard known for crafty ball-handling and sharp court vision, he thrives in high-pressure moments. Off the court, his infectious energy and camaraderie inspire teammates, forging unbreakable bonds.",
+    "sport": "MENS_BASKETBALL",
+    "position": "G",
+    "conference": {
+      "_id": "68d23eb26f71af5707a79f22",
+      "name": "Big 12"
+    },
+    "school": {
+      "_id": "68f876c47804265f86eb36fb",
+      "name": "University of Cincinnati"
+    },
+    "league": {
+      "_id": "68d23c396f71af5707a79f1c",
+      "name": "NCAA"
+    },
+    "year": "FRESHMAN"
+  },
+  "caption": "Not only do I try and model my game after my big brother, but he also inspires me to be A Fifth Third Better® in all aspects of life #team53",
+  "createdAt": {
+    "$date": "2026-02-04T01:50:39.000Z"
+  },
+  "hasOrganizationInCaption": false,
+  "hasOrganizationLogo": true,
+  "hashtags": [
+    "#team53"
+  ],
+  "isCollaboration": true,
+  "isOrganizationCollaboration": false,
+  "isSponsored": true,
+  "likeAndViewCountsDisabled": false,
+  "mediaType": "VIDEO",
+  "metrics": {
+    "comments": 44,
+    "likes": 1417,
+    "engagementRate": 0.029423018829926494,
+    "shares": 0,
+    "saves": 0,
+    "impressions": 0,
+    "followers": 0,
+    "totalInteractions": 0,
+    "accountsEngaged": 0,
+    "videoViews": 390174,
+    "reach": 0,
+    "profileLinksTaps": 0,
+    "emv": 774.5
+  },
+  "permalink": "https://www.instagram.com/p/DUUXIbWjCJt",
+  "publishedAt": {
+    "$date": "2026-02-04T01:50:39.000Z"
+  },
+  "source": "INSTAGRAM",
+  "sponsorPartner": "@fifththirdbank",
+  "updatedAt": {
+    "$date": "2026-02-24T00:00:19.403Z"
+  },
+  "url": "https://storage.googleapis.com/scraper-media-images/18329206708175558"
+},
+{
+  "_id": "698ea88710609e4dd7fc27bf",
+  "athlete": {
+    "_id": "68f8774766c6eed501f5300d",
+    "name": "Mya Perry",
+    "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1774388641798-Mya_Perry_68f8774766c6eed501f5300d_ProfilePicture.jpg",
+    "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+    "sport": "WOMENS_BASKETBALL",
+    "position": "GUARD",
+    "conference": {
+      "_id": "68d23eb26f71af5707a79f22",
+      "name": "Big 12"
+    },
+    "school": {
+      "_id": "68f876c47804265f86eb36fb",
+      "name": "University of Cincinnati"
+    },
+    "league": {
+      "_id": "68d23c396f71af5707a79f1c",
+      "name": "NCAA"
+    },
+    "year": "SENIOR"
+  },
+  "caption": "I’m so excited to join @fifththirdbank in celebrating Women & Girls in Sports, especially my college basketball queens👑 #team53",
+  "createdAt": {
+    "$date": "2026-02-04T01:27:45.000Z"
+  },
+  "hasOrganizationLogo": false,
+  "hashtags": [
+    "#team53"
+  ],
+  "isSponsored": true,
+  "likeAndViewCountsDisabled": false,
+  "mediaType": "VIDEO",
+  "metrics": {
+    "comments": 9,
+    "likes": 290,
+    "engagementRate": 0.028435568235853543,
+    "shares": 0,
+    "saves": 0,
+    "impressions": 0,
+    "followers": 0,
+    "totalInteractions": 0,
+    "accountsEngaged": 0,
+    "videoViews": 8657,
+    "reach": 0,
+    "profileLinksTaps": 0,
+    "emv": 158.5
+  },
+  "permalink": "https://www.instagram.com/p/DUUUj7EDHpH",
+  "publishedAt": {
+    "$date": "2026-02-04T01:27:45.000Z"
+  },
+  "source": "INSTAGRAM",
+  "sponsorPartner": "@fifththirdbank",
+  "updatedAt": {
+    "$date": "2026-03-25T18:45:01.171Z"
+  },
+  "url": "https://storage.googleapis.com/scraper-media-images/17936387895154259",
+  "hasOrganizationInCaption": false,
+  "isCollaboration": true,
+  "isOrganizationCollaboration": false
+}]
