@@ -9,6 +9,7 @@ import { GeorgiaIPImpact } from './components/GeorgiaIPImpact';
 import { ClemsonIPImpact } from './components/ClemsonIPImpact';
 import { ClemsonReportHub } from './components/ClemsonReportHub';
 import { ClemsonHardeesCampaignReport } from './components/ClemsonHardeesCampaignReport';
+import { CincinnatiFifthThirdCampaignReport } from './components/CincinnatiFifthThirdCampaignReport';
 import { RutgersIPImpact } from './components/RutgersIPImpact';
 import { VirginiaIPImpact } from './components/VirginiaIPImpact';
 import { ArizonaIPImpact } from './components/ArizonaIPImpact';
@@ -20,6 +21,10 @@ import { PostgameReport } from './components/PostgameReport';
 import { AuburnDudewipesCampaign } from './components/AuburnDudewipesCampaign';
 import { AuburnAmsterdamCafeReport } from './components/AuburnAmsterdamCafeReport';
 import { ReligionOfSportReport } from './components/ReligionOfSportReport';
+import { MarchMadness2026Report } from './components/MarchMadness2026Report';
+import { ConcretCreatineCampaign } from './components/ConcretCreatineCampaign';
+import { WendysPurdueCampaign } from './components/WendysPurdueCampaign';
+import { AuburnPlayground } from './components/AuburnPlayground';
 import {
   michiganConfig,
   alabamaConfig,
@@ -134,6 +139,12 @@ function ClemsonHardeesRoute() {
   return <ClemsonHardeesCampaignReport onBack={() => navigate('/clemson')} />;
 }
 
+function CincinnatiRoute() {
+  const navigate = useNavigate();
+  const canGoBack = window.history.length > 2;
+  return <CincinnatiFifthThirdCampaignReport onBack={canGoBack ? () => navigate('/') : undefined} />;
+}
+
 function RutgersRoute() {
   return <RutgersIPImpact />;
 }
@@ -232,6 +243,24 @@ function ReligionOfSportRoute() {
   return <ReligionOfSportReport onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
+function MarchMadnessRoute() {
+  return <MarchMadness2026Report />;
+}
+
+function ConcretRoute() {
+  return <ConcretCreatineCampaign />;
+}
+
+function WendysPurdueRoute() {
+  return <WendysPurdueCampaign />;
+}
+
+function AuburnPlaygroundRoute() {
+  const navigate = useNavigate();
+  const canGoBack = window.history.length > 2;
+  return <AuburnPlayground onBack={canGoBack ? () => navigate('/auburn') : undefined} />;
+}
+
 // Handle ?playfly query param - show Playfly hub without back button
 function HomeRoute() {
   const [searchParams] = useSearchParams();
@@ -269,6 +298,8 @@ function App() {
         <Route path="/clemson" element={<ClemsonRoute />} />
         <Route path="/clemson/hardees" element={<ClemsonHardeesRoute />} />
         <Route path="/clemson/ip" element={<ClemsonIPRoute />} />
+        <Route path="/cincinnati" element={<CincinnatiRoute />} />
+        <Route path="/cincinnati/fifth-third" element={<CincinnatiRoute />} />
         <Route path="/clemson-athlete" element={<Navigate to="/clemson/ip" replace />} />
         <Route path="/clemson-ip" element={<Navigate to="/clemson/ip" replace />} />
         <Route path="/rutgers" element={<RutgersRoute />} />
@@ -322,6 +353,12 @@ function App() {
         <Route path="/postgame" element={<PostgameRoute />} />
         <Route path="/religion-of-sport" element={<ReligionOfSportRoute />} />
         <Route path="/religion-of-sports" element={<ReligionOfSportRoute />} />
+        <Route path="/march-madness/2026" element={<MarchMadnessRoute />} />
+        <Route path="/concret" element={<ConcretRoute />} />
+        <Route path="/con-cret" element={<ConcretRoute />} />
+        <Route path="/wendys-purdue" element={<WendysPurdueRoute />} />
+        <Route path="/wendys" element={<WendysPurdueRoute />} />
+        <Route path="/auburn-playground" element={<AuburnPlaygroundRoute />} />
         {/* Redirect any unknown routes to home */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
