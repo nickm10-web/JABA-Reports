@@ -130,8 +130,7 @@ function ClemsonRoute() {
 }
 
 function ClemsonIPRoute() {
-  const navigate = useNavigate();
-  return <ClemsonIPImpact onBack={() => navigate('/clemson')} />;
+  return <ClemsonIPImpact />;
 }
 
 function ClemsonHardeesRoute() {
