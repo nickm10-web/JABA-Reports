@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowLeft, Heart, Eye, MessageCircle, ExternalLink, Trophy } from 'lucide-react';
+import { ArrowLeft, Heart, Eye, MessageCircle, ExternalLink } from 'lucide-react';
 
 // ═══════════════════════════════════════════════════════════════
 // DATA (from creatine_contents.json — both Athletes Unlimited)
@@ -241,90 +241,6 @@ export function ConcretCreatineCampaign({ onBack }: ConcretCreatineCampaignProps
           </div>
         </div>
 
-        {/* ─── Athlete Comparison ─── */}
-        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
-          <div className="px-6 py-4 border-b border-gray-100">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FF8300] to-[#E07000] flex items-center justify-center shadow-lg">
-                <Trophy className="w-5 h-5 text-white" />
-              </div>
-              <div>
-                <h3 className="text-lg font-extrabold text-[#111111] uppercase tracking-wide">
-                  Athlete Performance Comparison
-                </h3>
-                <p className="text-sm text-gray-500">How each athlete&apos;s post performed</p>
-              </div>
-            </div>
-          </div>
-          <div className="p-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {posts.map((post, i) => {
-                const maxEmv = Math.max(...posts.map(p => p.emv));
-                const emvPercent = maxEmv > 0 ? (post.emv / maxEmv) * 100 : 0;
-
-                return (
-                  <div
-                    key={i}
-                    className="rounded-xl p-5 bg-gray-50 border border-gray-200"
-                  >
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden flex-shrink-0">
-                        {campaignData.featuredAthletes[i]?.image && !athleteImageErrors[i] ? (
-                          <img
-                            src={campaignData.featuredAthletes[i].image}
-                            alt={post.athlete}
-                            className="w-full h-full object-cover"
-                            onError={() => setAthleteImageErrors(prev => ({ ...prev, [i]: true }))}
-                          />
-                        ) : (
-                          <div className="w-full h-full flex items-center justify-center text-gray-400 text-sm font-bold">
-                            {post.athlete.charAt(0)}
-                          </div>
-                        )}
-                      </div>
-                      <div>
-                        <p className="text-base font-bold text-gray-900">{post.athlete}</p>
-                        <p className="text-xs text-gray-500">{post.date} · {post.mediaType === 'VIDEO' ? 'Video' : 'Photo'}</p>
-                      </div>
-                    </div>
-                    <div className="space-y-2">
-                      <div className="flex justify-between text-sm">
-                        <span className="text-gray-500">Likes</span>
-                        <span className="font-bold text-gray-900">{post.likeAndViewCountsDisabled ? 'Hidden' : formatNumber(post.likes)}</span>
-                      </div>
-                      <div className="flex justify-between text-sm">
-                        <span className="text-gray-500">Comments</span>
-                        <span className="font-bold text-gray-900">{formatNumber(post.comments)}</span>
-                      </div>
-                      <div className="flex justify-between text-sm">
-                        <span className="text-gray-500">Video Views</span>
-                        <span className="font-bold text-gray-900">{post.videoViews > 0 ? formatNumber(post.videoViews) : '—'}</span>
-                      </div>
-                    </div>
-                    <div className="mt-4 pt-3 border-t border-gray-200">
-                      <div className="flex justify-between items-center mb-1.5">
-                        <span className="text-sm font-semibold text-gray-700">Est. EMV</span>
-                        <span className="text-lg font-black" style={{ color: '#FF8300' }}>${post.emv.toFixed(2)}</span>
-                      </div>
-                      <div className="h-2.5 bg-gray-200 rounded-full overflow-hidden">
-                        <div
-                          className="h-full rounded-full"
-                          style={{ width: `${emvPercent}%`, backgroundColor: '#FF8300' }}
-                        />
-                      </div>
-                      <p className="text-xs text-gray-400 mt-1">
-                        {post.likeAndViewCountsDisabled
-                          ? 'EMV from comments + views (likes hidden)'
-                          : 'EMV from likes + comments'}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-
         {/* ─── Sponsored vs. Average Performance ─── */}
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
           <div className="px-6 py-4 border-b border-gray-100">
@@ -538,14 +454,14 @@ function BaselineCard({
         </div>
         <div>
           <p className="text-base font-bold text-gray-900">{name}</p>
-          <p className="text-xs text-gray-500">CON-CRĒT post vs. avg of {sampleSize} other posts</p>
+          <p className="text-xs text-gray-500">This post vs. avg of {sampleSize} other posts</p>
         </div>
       </div>
 
       {/* Table header */}
       <div className="grid grid-cols-4 gap-2 mb-2 px-1">
         <span className="text-xs font-semibold text-gray-400 uppercase"></span>
-        <span className="text-xs font-semibold text-gray-400 uppercase text-right">CON-CRĒT</span>
+        <span className="text-xs font-semibold text-gray-400 uppercase text-right">This Post</span>
         <span className="text-xs font-semibold text-gray-400 uppercase text-right">Avg</span>
         <span className="text-xs font-semibold text-gray-400 uppercase text-right">Change</span>
       </div>
