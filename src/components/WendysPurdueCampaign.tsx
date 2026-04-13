@@ -24,7 +24,7 @@ const campaignData = {
     image: 'https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1764957828594-Trey_Kaufman-Renn_68f6c2b98f845316214c4133_ProfilePicture.jpg',
   },
   metrics: {
-    totalEngagements: 6214511,
+    totalEngagements: 6035,
     posts: 2,
     likes: 6001,
     comments: 34,
@@ -221,7 +221,7 @@ export function WendysPurdueCampaign({ onBack }: WendysPurdueCampaignProps) {
                 Total Engagements
               </p>
               <p className="text-5xl font-black">{formatNumber(campaignData.metrics.totalEngagements)}</p>
-              <p className="text-xs text-white/70 mt-2">Likes, comments, and views combined</p>
+              <p className="text-xs text-white/70 mt-2">Likes and comments combined</p>
             </div>
           </div>
 
