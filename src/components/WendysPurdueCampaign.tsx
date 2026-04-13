@@ -29,7 +29,7 @@ const campaignData = {
     likes: 6001,
     comments: 34,
     videoViews: 6208476,
-    totalEmv: 127221.02,
+    totalEmv: 3051.50,
   },
 };
 
@@ -45,7 +45,7 @@ const posts = [
     comments: 7,
     videoViews: 6208476,
     engagementRate: 0.043,
-    emv: 124694.02,
+    emv: 524.50,
     caption: "It's official: I've joined the Wendy's Dunk Team. Fries + a Frosty is the ultimate dunk. Enter to win prizes in the Dunkstakes by ordering off the Dunk Menu in the Wendy's app.",
     date: 'March 18, 2026',
     hashtags: ['#ad', '#WendysPartner'],
@@ -175,31 +175,53 @@ export function WendysPurdueCampaign({ onBack }: WendysPurdueCampaignProps) {
         </div>
 
         {/* ─── Featured Athlete ─── */}
-        <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm max-w-lg mx-auto">
-          <p className="text-xs font-bold uppercase tracking-wider mb-3" style={{ color: PURDUE_GOLD }}>
-            Featured Athlete
-          </p>
-          <div className="flex items-center gap-4">
-            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 flex-shrink-0 overflow-hidden">
-              {!athleteImageError ? (
-                <img
-                  src={campaignData.featuredAthlete.image}
-                  alt={campaignData.featuredAthlete.name}
-                  className="w-full h-full object-cover"
-                  onError={() => setAthleteImageError(true)}
-                />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center text-gray-400 text-lg font-bold">
-                  TKR
-                </div>
-              )}
+        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+          <div className="flex items-stretch">
+            {/* Left: athlete photo + info */}
+            <div className="flex items-center gap-5 p-6 flex-1 min-w-0">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 flex-shrink-0 overflow-hidden ring-2 ring-gray-200">
+                {!athleteImageError ? (
+                  <img
+                    src={campaignData.featuredAthlete.image}
+                    alt={campaignData.featuredAthlete.name}
+                    className="w-full h-full object-cover"
+                    onError={() => setAthleteImageError(true)}
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-gray-400 text-lg font-bold">
+                    TKR
+                  </div>
+                )}
+              </div>
+              <div>
+                <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: PURDUE_GOLD }}>
+                  Featured Athlete
+                </p>
+                <h3 className="text-2xl font-black text-gray-900">{campaignData.featuredAthlete.name}</h3>
+                <p className="text-sm text-gray-500 mt-0.5">
+                  {campaignData.featuredAthlete.position} · {campaignData.featuredAthlete.sport} · {campaignData.featuredAthlete.year}
+                </p>
+                <p className="text-xs text-gray-400">{campaignData.school.name} · {campaignData.featuredAthlete.conference}</p>
+              </div>
             </div>
-            <div>
-              <h3 className="text-xl font-black text-gray-900">{campaignData.featuredAthlete.name}</h3>
-              <p className="text-sm text-gray-500">
-                {campaignData.featuredAthlete.position} · {campaignData.featuredAthlete.sport} · {campaignData.featuredAthlete.year}
-              </p>
-              <p className="text-xs text-gray-400">{campaignData.school.name} · {campaignData.featuredAthlete.conference}</p>
+            {/* Right: profile stats */}
+            <div className="flex items-center gap-6 px-8 border-l border-gray-100">
+              <div className="text-center">
+                <p className="text-2xl font-black text-gray-900">24K</p>
+                <p className="text-xs text-gray-400 uppercase tracking-wide font-semibold">Followers</p>
+              </div>
+              <div className="text-center">
+                <p className="text-2xl font-black text-gray-900">53</p>
+                <p className="text-xs text-gray-400 uppercase tracking-wide font-semibold">Posts</p>
+              </div>
+              <div className="text-center">
+                <p className="text-2xl font-black text-gray-900">78.9K</p>
+                <p className="text-xs text-gray-400 uppercase tracking-wide font-semibold">Total Likes</p>
+              </div>
+              <div className="text-center">
+                <p className="text-2xl font-black text-gray-900">2.8K</p>
+                <p className="text-xs text-gray-400 uppercase tracking-wide font-semibold">Total Comments</p>
+              </div>
             </div>
           </div>
         </div>
@@ -244,9 +266,9 @@ export function WendysPurdueCampaign({ onBack }: WendysPurdueCampaignProps) {
             <p className="text-xs opacity-75 mt-1">Dunk Team video drove massive reach on Instagram</p>
           </div>
           <div className="rounded-xl p-6 text-center text-white" style={{ background: `linear-gradient(135deg, ${PURDUE_BLACK} 0%, #1a1a1a 100%)` }}>
-            <p className="text-5xl font-black mb-2">$127K</p>
+            <p className="text-5xl font-black mb-2">$3.1K</p>
             <p className="text-sm font-semibold uppercase tracking-wide opacity-90">Total Estimated EMV</p>
-            <p className="text-xs opacity-75 mt-1">Combined earned media value across both posts</p>
+            <p className="text-xs opacity-75 mt-1">Based on likes and comments across both posts</p>
           </div>
         </div>
 
@@ -272,76 +294,6 @@ export function WendysPurdueCampaign({ onBack }: WendysPurdueCampaignProps) {
           </div>
         </div>
 
-        {/* ─── Post Performance Comparison ─── */}
-        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
-          <div className="px-6 py-4 border-b border-gray-100">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center shadow-lg" style={{ background: `linear-gradient(135deg, ${PURDUE_GOLD} 0%, #B8A070 100%)` }}>
-                <Trophy className="w-5 h-5 text-white" />
-              </div>
-              <div>
-                <h3 className="text-lg font-extrabold uppercase tracking-wide" style={{ color: PURDUE_BLACK }}>
-                  Post Performance Comparison
-                </h3>
-                <p className="text-sm text-gray-500">Video vs Photo performance breakdown</p>
-              </div>
-            </div>
-          </div>
-          <div className="p-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {posts.map((post, i) => (
-                <div key={i} className="rounded-xl p-5 bg-gray-50 border border-gray-200">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div
-                      className="w-10 h-10 rounded-full flex items-center justify-center text-white text-xs font-bold"
-                      style={{ backgroundColor: i === 0 ? PURDUE_GOLD : PURDUE_BLACK }}
-                    >
-                      {post.mediaType === 'VIDEO' ? '🎬' : '📷'}
-                    </div>
-                    <div>
-                      <p className="text-base font-bold text-gray-900">{post.label}</p>
-                      <p className="text-xs text-gray-500">{post.date} · {post.mediaType}</p>
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="flex justify-between text-sm">
-                      <span className="text-gray-500">Likes</span>
-                      <span className="font-bold text-gray-900">{formatNumber(post.likes)}</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-gray-500">Comments</span>
-                      <span className="font-bold text-gray-900">{post.comments}</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-gray-500">Video Views</span>
-                      <span className="font-bold text-gray-900">{post.videoViews > 0 ? formatNumber(post.videoViews) : '—'}</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-gray-500">Engagement Rate</span>
-                      <span className="font-bold text-gray-900">{(post.engagementRate * 100).toFixed(2)}%</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-gray-500">Est. EMV</span>
-                      <span className="font-bold" style={{ color: PURDUE_GOLD }}>${formatNumber(post.emv)}</span>
-                    </div>
-                  </div>
-                  {/* Engagement bar */}
-                  <div className="mt-3 h-2 bg-gray-200 rounded-full overflow-hidden">
-                    <div
-                      className="h-full rounded-full"
-                      style={{
-                        width: `${(post.emv / 124694.02) * 100}%`,
-                        background: `linear-gradient(90deg, ${PURDUE_GOLD}, ${PURDUE_BLACK})`,
-                      }}
-                    />
-                  </div>
-                  <p className="text-xs text-gray-400 mt-1">EMV share: ${formatNumber(post.emv)} of $127K total</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
         {/* ─── Wendy's Post vs. Average ─── */}
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
           <div className="px-6 py-4 border-b border-gray-100">
@@ -353,7 +305,7 @@ export function WendysPurdueCampaign({ onBack }: WendysPurdueCampaignProps) {
                 <h3 className="text-lg font-extrabold uppercase tracking-wide" style={{ color: PURDUE_BLACK }}>
                   Wendy&apos;s Post vs. Average
                 </h3>
-                <p className="text-sm text-gray-500">How each sponsored post compared to Trey&apos;s typical performance (51 other posts)</p>
+                <p className="text-sm text-gray-500">Each Wendy&apos;s sponsored post vs. Trey Kaufman-Renn&apos;s average across 51 other Instagram posts</p>
               </div>
             </div>
           </div>
@@ -369,7 +321,7 @@ export function WendysPurdueCampaign({ onBack }: WendysPurdueCampaignProps) {
         {/* ─── Methodology ─── */}
         <div className="text-center py-4">
           <p className="text-xs text-gray-400">
-            Data sourced from Instagram. EMV calculated as (likes × $0.50) + (comments × $1.50) + (views × $0.02). Pull date: April 6, 2026.
+            Data sourced from Instagram. EMV calculated as (likes × $0.50) + (comments × $1.50). Views reported separately as a reach metric. Pull date: April 6, 2026.
           </p>
         </div>
       </div>
@@ -471,15 +423,13 @@ const treyBaseline = {
   postCount: 51,
   avgLikes: 1429,
   avgComments: 54,
-  avgViews: 71022,
-  avgEmv: 2216.36,
+  avgEmv: 795.91,
 };
 
 function BaselineCard({ post }: { post: typeof posts[0] }) {
   const rows = [
     { label: 'Likes', postVal: post.likes, avgVal: treyBaseline.avgLikes },
     { label: 'Comments', postVal: post.comments, avgVal: treyBaseline.avgComments },
-    { label: 'Video Views', postVal: post.videoViews, avgVal: treyBaseline.avgViews },
     { label: 'Est. EMV', postVal: post.emv, avgVal: treyBaseline.avgEmv },
   ];
 
@@ -501,17 +451,14 @@ function BaselineCard({ post }: { post: typeof posts[0] }) {
       {/* Table header */}
       <div className="grid grid-cols-3 gap-2 mb-2 px-1">
         <span className="text-xs font-semibold text-gray-400 uppercase">Metric</span>
-        <span className="text-xs font-semibold uppercase text-center" style={{ color: PURDUE_GOLD }}>Wendy&apos;s Post</span>
-        <span className="text-xs font-semibold text-gray-400 uppercase text-center">Avg ({treyBaseline.postCount} posts)</span>
+        <span className="text-xs font-semibold uppercase text-center" style={{ color: PURDUE_GOLD }}>This Post</span>
+        <span className="text-xs font-semibold text-gray-400 uppercase text-center">Trey&apos;s Avg ({treyBaseline.postCount} other posts)</span>
       </div>
 
       <div className="space-y-1">
         {rows.map((row) => {
           const postVal = row.postVal;
           const avgVal = row.avgVal;
-          const skip = row.label === 'Video Views' && postVal === 0;
-          if (skip) return null;
-
           const pctChange = avgVal > 0 ? ((postVal - avgVal) / avgVal) * 100 : 0;
           const isUp = pctChange > 0;
           const pctStr = `${isUp ? '+' : ''}${pctChange.toFixed(0)}%`;
