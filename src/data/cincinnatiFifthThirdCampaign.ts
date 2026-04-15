@@ -35,6 +35,52 @@ interface RawBrandRecord {
   logo?: string;
 }
 
+interface ScrapedCaptionEdge {
+  node?: {
+    text?: string;
+  };
+}
+
+interface ScrapedTaggedUserEdge {
+  node?: {
+    user?: {
+      username?: string;
+    };
+  };
+}
+
+interface ScrapedMediaNode {
+  __typename?: string;
+  shortcode?: string;
+  thumbnail_src?: string;
+  display_url?: string;
+  is_video?: boolean;
+  video_view_count?: number;
+  video_play_count?: number;
+  taken_at_timestamp?: number;
+  owner?: {
+    username?: string;
+  };
+  edge_media_to_caption?: {
+    edges?: ScrapedCaptionEdge[];
+  };
+  edge_media_preview_like?: {
+    count?: number;
+  };
+  edge_media_to_parent_comment?: {
+    count?: number;
+  };
+  edge_media_to_tagged_user?: {
+    edges?: ScrapedTaggedUserEdge[];
+  };
+}
+
+interface ScrapedInstagramRecord {
+  data?: {
+    xdt_shortcode_media?: ScrapedMediaNode;
+  };
+}
+
 export interface CampaignPost {
   permalink: string;
   label: string;
@@ -127,6 +173,8 @@ export interface CincinnatiFifthThirdCampaignData {
 const DATA_PATHS = {
   athlete: 'data/ncaa_roster_updated_feb_17.json',
   brands: 'data/socialMedia.brands.json',
+  posts: 'data/posts.json',
+  team53Posts: 'data/team53posts.json',
 } as const;
 
 const SCHOOL_NAME = 'University of Cincinnati';
@@ -145,6 +193,16 @@ const CAMPAIGN_POSTS = [
     label: 'Tyler McKinley x Fifth Third Better',
   },
   {
+    permalink: 'https://www.instagram.com/p/DVICYH_jmyk',
+    athleteName: 'Tyler McKinley',
+    label: 'Tyler McKinley x Fifth Third Better',
+  },
+  {
+    permalink: 'https://www.instagram.com/p/DVtHFLOuiw8',
+    athleteName: 'Tyler McKinley',
+    label: 'Tyler McKinley x Fifth Third Hometown Story',
+  },
+  {
     permalink: 'https://www.instagram.com/p/DUjqxYcj-V0',
     athleteName: 'Mya Perry',
     label: 'Mya Perry x Fifth Third Bank',
@@ -154,7 +212,51 @@ const CAMPAIGN_POSTS = [
     athleteName: 'Mya Perry',
     label: 'Mya Perry x Team53',
   },
+  {
+    permalink: 'https://www.instagram.com/p/DU647X1D6a4',
+    athleteName: 'Mya Perry',
+    label: 'Mya Perry x Fifth Third Better',
+  },
+  {
+    permalink: 'https://www.instagram.com/p/DVw5NjJj_7J',
+    athleteName: 'Mya Perry',
+    label: 'Mya Perry x Cincinnati Love Letter',
+  },
 ] as const;
+
+const LOCAL_POST_IMAGE_OVERRIDES: Record<string, string> = {
+  'https://www.instagram.com/p/DVICYH_jmyk': 'images/campaigns/cincinnati-fifth-third/tyler-mckinley-fifth-third-better.jpg',
+  'https://www.instagram.com/p/DVtHFLOuiw8': 'images/campaigns/cincinnati-fifth-third/tyler-mckinley-fifth-third-hometown-story.png',
+  'https://www.instagram.com/p/DU647X1D6a4': 'images/campaigns/cincinnati-fifth-third/mya-perry-fifth-third-better.jpg',
+  'https://www.instagram.com/p/DVw5NjJj_7J': 'images/campaigns/cincinnati-fifth-third/mya-perry-cincinnati-love-letter.jpg',
+};
+
+const CAMPAIGN_VIEW_OVERRIDES: Record<string, number> = {
+  'https://www.instagram.com/p/DUq_-WwkdtZ': 7076,
+  'https://www.instagram.com/p/DUW2QsHkf1t': 9224,
+  'https://www.instagram.com/p/DVICYH_jmyk': 6155,
+  'https://www.instagram.com/p/DVtHFLOuiw8': 739000,
+  'https://www.instagram.com/p/DUjqxYcj-V0': 9104,
+  'https://www.instagram.com/p/DUUUj7EDHpH': 9014,
+  'https://www.instagram.com/p/DU647X1D6a4': 82200,
+  'https://www.instagram.com/p/DVw5NjJj_7J': 8460,
+};
+
+const LOCAL_ATHLETE_IMAGE_OVERRIDES: Record<string, string> = {
+  'Tyler McKinley': 'tmckinley.png',
+  'Mya Perry': 'images/campaigns/cincinnati-fifth-third/mya-perry-headshot.png',
+};
+
+const SCRAPED_ATHLETE_BY_OWNER: Record<string, Pick<RawAthlete, 'name' | 'sport'>> = {
+  txm35: {
+    name: 'Tyler McKinley',
+    sport: 'MENS_BASKETBALL',
+  },
+  myawittamac: {
+    name: 'Mya Perry',
+    sport: 'WOMENS_BASKETBALL',
+  },
+};
 
 function buildPublicPath(relativePath: string): string {
   return `${import.meta.env.BASE_URL}${relativePath}`;
@@ -178,6 +280,11 @@ function toDate(value?: RawDate): string | undefined {
 
 function resolvePublishedAt(record: RawContentRecord): string | undefined {
   return toDate(record.publishedAt) || toDate(record.createdAt);
+}
+
+function toIsoFromUnix(value: unknown): string | undefined {
+  if (typeof value !== 'number' || !Number.isFinite(value)) return undefined;
+  return new Date(value * 1000).toISOString();
 }
 
 function toNumber(value: unknown): number {
@@ -245,16 +352,20 @@ function formatPullDate(values: string[]): string {
 function mapPost(record: RawContentRecord, label: string): CampaignPost {
   const likes = toNumber(record.metrics?.likes);
   const comments = toNumber(record.metrics?.comments);
-  const views = toNumber(record.metrics?.videoViews);
+  const normalizedPermalink = normalizePermalink(record.permalink);
+  const views = CAMPAIGN_VIEW_OVERRIDES[normalizedPermalink] ?? toNumber(record.metrics?.videoViews);
+  const localImagePath = LOCAL_POST_IMAGE_OVERRIDES[normalizedPermalink];
+  const athleteName = record.athlete?.name || 'Unknown athlete';
+  const athleteImagePath = LOCAL_ATHLETE_IMAGE_OVERRIDES[athleteName];
 
   return {
-    permalink: normalizePermalink(record.permalink),
+    permalink: normalizedPermalink,
     label,
-    athleteName: record.athlete?.name || 'Unknown athlete',
-    athleteImageUrl: record.athlete?.image || '',
+    athleteName,
+    athleteImageUrl: athleteImagePath ? buildPublicPath(athleteImagePath) : (record.athlete?.image || ''),
     sport: record.athlete?.sport || 'Unknown sport',
     caption: record.caption || 'No caption available.',
-    imageUrl: record.url || '',
+    imageUrl: localImagePath ? buildPublicPath(localImagePath) : (record.url || ''),
     mediaType: record.mediaType || 'POST',
     likes,
     comments,
@@ -355,17 +466,81 @@ function findCampaignRecord(records: RawContentRecord[], permalink: string): Raw
   return record;
 }
 
+function mapScrapedPost(record: ScrapedInstagramRecord): RawContentRecord | null {
+  const media = record.data?.xdt_shortcode_media;
+  const shortcode = media?.shortcode;
+  if (!shortcode) return null;
+
+  const taggedUsers = media.edge_media_to_tagged_user?.edges?.map((edge) => edge.node?.user?.username?.toLowerCase()).filter(Boolean) || [];
+  const caption = media.edge_media_to_caption?.edges?.[0]?.node?.text || '';
+  const ownerUsername = media.owner?.username?.toLowerCase() || '';
+  const athlete = SCRAPED_ATHLETE_BY_OWNER[ownerUsername];
+
+  if (!taggedUsers.includes('fifththirdbank')) return null;
+  if (!athlete) return null;
+
+  return {
+    athlete: {
+      name: athlete.name,
+      image: '',
+      sport: athlete.sport,
+      school: {
+        name: SCHOOL_NAME,
+      },
+    },
+    caption,
+    createdAt: undefined,
+    mediaType: media.is_video || media.__typename === 'XDTGraphVideo' ? 'VIDEO' : 'POST',
+    metrics: {
+      likes: toNumber(media.edge_media_preview_like?.count),
+      comments: toNumber(media.edge_media_to_parent_comment?.count),
+      engagementRate: 0,
+      videoViews: toNumber(media.video_view_count ?? media.video_play_count),
+    },
+    permalink: `https://www.instagram.com/p/${shortcode}`,
+    publishedAt: (() => {
+      const iso = toIsoFromUnix(media.taken_at_timestamp);
+      return iso ? { $date: iso } : undefined;
+    })(),
+    sponsorPartner: BRAND_HANDLE,
+    url: media.display_url || media.thumbnail_src || '',
+  };
+}
+
+function mergeRecordsByPermalink(primary: RawContentRecord[], supplemental: RawContentRecord[]): RawContentRecord[] {
+  const merged = new Map<string, RawContentRecord>();
+
+  for (const row of primary) {
+    merged.set(normalizePermalink(row.permalink), row);
+  }
+
+  for (const row of supplemental) {
+    const key = normalizePermalink(row.permalink);
+    if (!merged.has(key)) {
+      merged.set(key, row);
+    }
+  }
+
+  return [...merged.values()];
+}
+
 export async function loadCincinnatiFifthThirdCampaign(): Promise<CincinnatiFifthThirdCampaignData> {
-  const [athleteRows, brandRows] = await Promise.all([
+  const [athleteRows, brandRows, scrapedRows, team53Rows] = await Promise.all([
     fetchJson<RawContentRecord[]>(DATA_PATHS.athlete),
     fetchJson<RawBrandRecord[]>(DATA_PATHS.brands),
+    fetchJson<ScrapedInstagramRecord[]>(DATA_PATHS.posts),
+    fetchJson<ScrapedInstagramRecord[]>(DATA_PATHS.team53Posts),
   ]);
 
   const cincinnatiRows = athleteRows.filter((row) => row.athlete?.school?.name === SCHOOL_NAME);
+  const supplementalRows = [...scrapedRows, ...team53Rows]
+    .map(mapScrapedPost)
+    .filter((row): row is RawContentRecord => Boolean(row));
+  const mergedCincinnatiRows = mergeRecordsByPermalink(cincinnatiRows, supplementalRows);
   const campaignPermalinks = new Set(CAMPAIGN_POSTS.map((post) => normalizePermalink(post.permalink)));
 
   const heroActivations = CAMPAIGN_POSTS.map((post) => {
-    const record = findCampaignRecord(cincinnatiRows, post.permalink);
+    const record = findCampaignRecord(mergedCincinnatiRows, post.permalink);
     return mapPost(record, post.label);
   });
 
@@ -376,8 +551,8 @@ export async function loadCincinnatiFifthThirdCampaign(): Promise<CincinnatiFift
   const schoolLogoUrl = 'https://a.espncdn.com/i/teamlogos/ncaa/500/2132.png';
   const brandLogoUrl = brandRows.find((row) => String(row.name || '').toLowerCase() === BRAND_HANDLE)?.logo;
 
-  const tylerRows = cincinnatiRows.filter((row) => row.athlete?.name === 'Tyler McKinley');
-  const myaRows = cincinnatiRows.filter((row) => row.athlete?.name === 'Mya Perry');
+  const tylerRows = mergedCincinnatiRows.filter((row) => row.athlete?.name === 'Tyler McKinley');
+  const myaRows = mergedCincinnatiRows.filter((row) => row.athlete?.name === 'Mya Perry');
 
   const tylerCampaign = heroActivations.filter((post) => post.athleteName === 'Tyler McKinley');
   const myaCampaign = heroActivations.filter((post) => post.athleteName === 'Mya Perry');
