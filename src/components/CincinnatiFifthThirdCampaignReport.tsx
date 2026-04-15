@@ -430,12 +430,7 @@ export function CincinnatiFifthThirdCampaignReport({ onBack }: CincinnatiFifthTh
               <h1 className="mt-3 max-w-4xl text-4xl font-black tracking-tight text-white sm:text-5xl">
                 {data.campaignMeta.title}
               </h1>
-              <p className="mt-6 text-sm text-white/70">
-                Campaign performance across Tyler McKinley and Mya Perry&apos;s Fifth Third activations
-              </p>
-              <p className="mt-2 text-sm text-white/60">
-                Reporting window: {data.campaignMeta.dateWindow}
-              </p>
+              <p className="mt-6 text-xs font-bold uppercase tracking-[0.24em] text-white/60">Featured Athletes</p>
               <div className="mt-6 grid gap-3 sm:grid-cols-2">
                 {athleteCards.map((athlete) => (
                   <AthleteIdentityCard
@@ -449,7 +444,6 @@ export function CincinnatiFifthThirdCampaignReport({ onBack }: CincinnatiFifthTh
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
-              <StatCard label="Athletes" value={formatNumber(data.campaignTotals.uniqueAthletes)} />
               <StatCard label="Posts" value={formatNumber(data.campaignTotals.totalIncludedPosts)} />
               <StatCard label="Likes" value={formatCompact(data.campaignTotals.likes)} />
               <StatCard label="Comments" value={formatNumber(data.campaignTotals.comments)} />
