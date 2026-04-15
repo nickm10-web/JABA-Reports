@@ -1,0 +1,3089 @@
+[
+  {
+    "_id": "698ea8b710609e4dd7fc43a5",
+    "athlete": {
+      "_id": "68f8774766c6eed501f52faf",
+      "name": "Tyler McKinley",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114194734-Tyler_McKinley_68f8774766c6eed501f52faf.png",
+      "bio": "A relentless competitor with a knack for finding the net, this forward combines finesse and grit. Known for his infectious enthusiasm, he inspires teammates while dazzling fans with skillful play.",
+      "sport": "MENS_BASKETBALL",
+      "position": "F",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "FRESHMAN"
+    },
+    "caption": "My mom and my brother are my inspiration. They push me to be A Fifth Third Better® every day, while supporting me every game and every play❤️#team53",
+    "createdAt": {
+      "$date": "2026-02-12T20:50:40.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "hashtags": [
+      "#team53"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 10,
+      "likes": 230,
+      "engagementRate": 0.03761755485893417,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 130
+    },
+    "permalink": "https://www.instagram.com/p/DUq_-WwkdtZ",
+    "publishedAt": {
+      "$date": "2026-02-12T20:50:40.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "updatedAt": {
+      "$date": "2026-02-13T04:29:43.688Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18071994842409232",
+    "hasOrganizationInCaption": false,
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false
+  },
+  {
+    "_id": "698ea88610609e4dd7fc26fb",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "sequence of the night 🔋",
+    "createdAt": {
+      "$date": "2026-02-11T19:01:04.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 0,
+      "likes": 404,
+      "engagementRate": 0.10266836086404066,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 202
+    },
+    "permalink": "https://www.instagram.com/p/DUoOtQODXxt",
+    "publishedAt": {
+      "$date": "2026-02-11T19:01:04.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "updatedAt": {
+      "$date": "2026-02-13T04:28:56.699Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18042858923722382",
+    "hasOrganizationInCaption": false,
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false
+  },
+  {
+    "_id": "698ea88796d4901dfa397d4e",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "Behind the scenes with @fifththirdbank😎 come tour our locker room with me! #team53",
+    "createdAt": {
+      "$date": "2026-02-10T00:31:00.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "hashtags": [
+      "#team53"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 5,
+      "likes": 135,
+      "engagementRate": 0.013635920911658713,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 75
+    },
+    "permalink": "https://www.instagram.com/p/DUjqxYcj-V0",
+    "publishedAt": {
+      "$date": "2026-02-10T00:31:00.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "updatedAt": {
+      "$date": "2026-02-13T04:28:55.458Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18131710192511856",
+    "hasOrganizationInCaption": false,
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false
+  },
+  {
+    "_id": "698ea8b710609e4dd7fc43a8",
+    "athlete": {
+      "_id": "68f8774766c6eed501f52faf",
+      "name": "Tyler McKinley",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114194734-Tyler_McKinley_68f8774766c6eed501f52faf.png",
+      "bio": "A relentless competitor with a knack for finding the net, this forward combines finesse and grit. Known for his infectious enthusiasm, he inspires teammates while dazzling fans with skillful play.",
+      "sport": "MENS_BASKETBALL",
+      "position": "F",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "FRESHMAN"
+    },
+    "caption": "When it’s time to move up - do it local, do it with @erarealsolutionsrealty",
+    "createdAt": {
+      "$date": "2026-02-05T18:29:11.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 5,
+      "likes": 301,
+      "engagementRate": 0.04796238244514107,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 158
+    },
+    "permalink": "https://www.instagram.com/p/DUYuQugEViv",
+    "publishedAt": {
+      "$date": "2026-02-05T18:29:11.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "updatedAt": {
+      "$date": "2026-02-13T04:29:43.697Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17943067767070178",
+    "hasOrganizationInCaption": false,
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false
+  },
+  {
+    "_id": "698ea8b710609e4dd7fc43b5",
+    "athlete": {
+      "_id": "68f8774766c6eed501f52faf",
+      "name": "Tyler McKinley",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114194734-Tyler_McKinley_68f8774766c6eed501f52faf.png",
+      "bio": "A relentless competitor with a knack for finding the net, this forward combines finesse and grit. Known for his infectious enthusiasm, he inspires teammates while dazzling fans with skillful play.",
+      "sport": "MENS_BASKETBALL",
+      "position": "F",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "FRESHMAN"
+    },
+    "caption": "Being A Fifth Third Better® is not just about your performance on-court, it’s about how you push yourself to go above and beyond in all aspects of life. I learned a lot about myself as a person and a teammate while I was recovering, and I’m grateful for those lessons #team53",
+    "createdAt": {
+      "$date": "2026-02-05T01:01:05.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "hashtags": [
+      "#team53"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 10,
+      "likes": 296,
+      "engagementRate": 0.04796238244514107,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 163
+    },
+    "permalink": "https://www.instagram.com/p/DUW2QsHkf1t",
+    "publishedAt": {
+      "$date": "2026-02-05T01:01:05.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "updatedAt": {
+      "$date": "2026-02-13T04:29:43.770Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18183596314365537",
+    "hasOrganizationInCaption": false,
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false
+  },
+  {
+    "_id": "698ea88710609e4dd7fc27bf",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "I’m so excited to join @fifththirdbank in celebrating Women & Girls in Sports, especially my college basketball queens👑 #team53",
+    "createdAt": {
+      "$date": "2026-02-04T01:27:45.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "hashtags": [
+      "#team53"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 9,
+      "likes": 271,
+      "engagementRate": 0.027271841823317426,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 149
+    },
+    "permalink": "https://www.instagram.com/p/DUUUj7EDHpH",
+    "publishedAt": {
+      "$date": "2026-02-04T01:27:45.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "updatedAt": {
+      "$date": "2026-02-13T04:28:55.556Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17936387895154259",
+    "hasOrganizationInCaption": false,
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false
+  },
+  {
+    "_id": "698ea8b8faf459888aff833e",
+    "athlete": {
+      "_id": "68f8774766c6eed501f52faf",
+      "name": "Tyler McKinley",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114194734-Tyler_McKinley_68f8774766c6eed501f52faf.png",
+      "bio": "A relentless competitor with a knack for finding the net, this forward combines finesse and grit. Known for his infectious enthusiasm, he inspires teammates while dazzling fans with skillful play.",
+      "sport": "MENS_BASKETBALL",
+      "position": "F",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "FRESHMAN"
+    },
+    "caption": "¿",
+    "createdAt": {
+      "$date": "2026-01-29T14:07:04.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 95,
+      "likes": 960,
+      "engagementRate": 0.16536050156739812,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 622.5
+    },
+    "permalink": "https://www.instagram.com/p/DUGOxL2EdLm",
+    "publishedAt": {
+      "$date": "2026-01-29T14:07:04.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "updatedAt": {
+      "$date": "2026-02-13T04:29:44.003Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18087205267884715",
+    "hasOrganizationInCaption": false,
+    "isCollaboration": false,
+    "isOrganizationCollaboration": false
+  },
+  {
+    "_id": "6974bbb20581ef173a6fd415",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "The recognition she deserves 👑\n\nMya Perry earns a spot on the Big 12 Starting Five after averaging 21 points and shooting 53% from three.",
+    "createdAt": {
+      "$date": "2026-01-20T19:30:23.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 6,
+      "likes": 368,
+      "engagementRate": 0.03642738872114542,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 193
+    },
+    "permalink": "https://www.instagram.com/p/DTvomqBjeVN",
+    "publishedAt": {
+      "$date": "2026-01-20T19:30:23.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "updatedAt": {
+      "$date": "2026-02-13T04:28:53.508Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17907200382337177",
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false
+  },
+  {
+    "_id": "6974bbb28bd4b01bdc71c0a5",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "lighting it up from deep 🔥",
+    "createdAt": {
+      "$date": "2026-01-20T15:05:25.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 4,
+      "likes": 191,
+      "engagementRate": 0.01899288984123892,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 101.5
+    },
+    "permalink": "https://www.instagram.com/p/DTvKSGmjZoD",
+    "publishedAt": {
+      "$date": "2026-01-20T15:05:25.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "updatedAt": {
+      "$date": "2026-02-13T04:28:53.612Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18099534754808188",
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false
+  },
+  {
+    "_id": "6974bbb20581ef173a6fd3ff",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "Mya Perry 🤝 That 1 Mailman\n\nGame of PIG",
+    "createdAt": {
+      "$date": "2026-01-17T16:33:39.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 27,
+      "likes": 1781,
+      "engagementRate": 0.17609817863056396,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 931
+    },
+    "permalink": "https://www.instagram.com/p/DTnl16NjgM3",
+    "publishedAt": {
+      "$date": "2026-01-17T16:33:39.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "updatedAt": {
+      "$date": "2026-02-13T04:28:53.646Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18376257508085154",
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false
+  },
+  {
+    "_id": "6974bbbb37a39affe6d21b9f",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "24 and a buzzer beater for Mya Perry. 🤩\n\n#Bearcats | @gatorade",
+    "createdAt": {
+      "$date": "2026-01-15T20:01:27.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#Bearcats"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 12,
+      "likes": 376,
+      "engagementRate": 0.03779098081231129,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 206
+    },
+    "permalink": "https://www.instagram.com/p/DTi0Lw0E1wR",
+    "publishedAt": {
+      "$date": "2026-01-15T20:01:27.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "updatedAt": {
+      "$date": "2026-02-13T04:28:53.685Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18117590950600757",
+    "isCollaboration": true,
+    "isOrganizationCollaboration": true,
+    "hasOrganizationInCaption": true
+  },
+  {
+    "_id": "6974bbb28bd4b01bdc71c0fa",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "Mya Perry says good knight 🌙",
+    "createdAt": {
+      "$date": "2026-01-15T04:00:46.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 10,
+      "likes": 339,
+      "engagementRate": 0.033992402844063505,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 184.5
+    },
+    "permalink": "https://www.instagram.com/p/DThGNBfE6QN",
+    "publishedAt": {
+      "$date": "2026-01-15T04:00:46.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "updatedAt": {
+      "$date": "2026-02-13T04:28:53.732Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18212726344314249",
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false
+  },
+  {
+    "_id": "6974bbb93e49163812228c27",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "Cincinnati’s Mya Perry (@myawittamac) has quietly established herself as one of the most reliable scoring guards in the Big 12.\n\nShe’s opened the season averaging 18.3 points, showing a willingness to take on defensive pressure while carrying a heavy offensive load.\n\nAgainst Iowa State, Perry delivered a statement performance 26 points on 10-of-14 shooting, knocking down 4 threes and playing all 40 minutes in a key win. Her efficiency and shot-making late were the difference.\n\nPerry continues to set the tone for Cincinnati, combining confidence, pace control, and shot creation from the guard spot.\n\nWhen guards can score it efficiently and handle volume, defenses start adjusting.\nThose are the ones you build around.",
+    "createdAt": {
+      "$date": "2026-01-09T15:13:33.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": true,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 21,
+      "likes": 0,
+      "engagementRate": 0,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 31.5
+    },
+    "permalink": "https://www.instagram.com/p/DTS2epilB89",
+    "publishedAt": {
+      "$date": "2026-01-09T15:13:33.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "updatedAt": {
+      "$date": "2026-02-13T04:28:54.040Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18076896026028613",
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": true
+  },
+  {
+    "_id": "6974bbb72742b5d689e8aa59",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "And now you know 🤏 @myawittamac",
+    "createdAt": {
+      "$date": "2026-01-08T23:00:52.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 20,
+      "likes": 341,
+      "engagementRate": 0.03516119606506282,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 200.5
+    },
+    "permalink": "https://www.instagram.com/p/DTRHG_JgJKo",
+    "publishedAt": {
+      "$date": "2026-01-08T23:00:52.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "updatedAt": {
+      "$date": "2026-02-13T04:28:54.112Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17969384720841008",
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false
+  },
+  {
+    "_id": "6974bbb72742b5d689e8aa64",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "All eyes on Mya Perry and #TheSisterhood. 💬\n\n#Bearcats | @gobearcatswbb",
+    "createdAt": {
+      "$date": "2026-01-08T21:00:30.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#TheSisterhood",
+      "#Bearcats"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 14,
+      "likes": 881,
+      "engagementRate": 0.08717249439953248,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 461.5
+    },
+    "permalink": "https://www.instagram.com/p/DTQ5YHYic54",
+    "publishedAt": {
+      "$date": "2026-01-08T21:00:30.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "updatedAt": {
+      "$date": "2026-02-13T04:28:54.147Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17883489567429495",
+    "isCollaboration": true,
+    "isOrganizationCollaboration": true,
+    "hasOrganizationInCaption": true
+  },
+  {
+    "_id": "6974bbb59c2530cd732e245a",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "Mya Perry drops an efficient 26pts as Cincinnati takes down  #11 Iowa State in a statement win. @myawittamac \n\n#FeedTheYouth 🖍️",
+    "createdAt": {
+      "$date": "2026-01-08T05:04:27.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#11",
+      "#FeedTheYouth"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": true,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 8,
+      "likes": 0,
+      "engagementRate": 0,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 12
+    },
+    "permalink": "https://www.instagram.com/p/DTPLG6RDVU4",
+    "publishedAt": {
+      "$date": "2026-01-08T05:04:27.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "updatedAt": {
+      "$date": "2026-02-13T04:28:54.166Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17982975299783131",
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": true
+  },
+  {
+    "_id": "6974bbb6786fe6224373ffef",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "Cinci did not come to PLAY tonight 😮‍💨 @gobearcatswbb @myawittamac (via LanceMcAlister/X)",
+    "createdAt": {
+      "$date": "2026-01-08T02:01:34.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 77,
+      "likes": 4426,
+      "engagementRate": 0.4385896561799942,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 2328.5
+    },
+    "permalink": "https://www.instagram.com/p/DTO3DApERb2",
+    "publishedAt": {
+      "$date": "2026-01-08T02:01:34.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "updatedAt": {
+      "$date": "2026-02-04T23:27:12.001Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18059037818321553",
+    "isCollaboration": true,
+    "isOrganizationCollaboration": true,
+    "hasOrganizationInCaption": true
+  },
+  {
+    "_id": "698ea88710609e4dd7fc281c",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "the newest member of the 1k club 👑",
+    "createdAt": {
+      "$date": "2025-12-22T15:50:22.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 40,
+      "likes": 713,
+      "engagementRate": 0.07334177461770722,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 416.5
+    },
+    "permalink": "https://www.instagram.com/p/DSkkQ_yDhJ6",
+    "publishedAt": {
+      "$date": "2025-12-22T15:50:22.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "updatedAt": {
+      "$date": "2026-02-13T04:28:55.814Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18086872718025158",
+    "hasOrganizationInCaption": false,
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false
+  },
+  {
+    "_id": "698ea88810609e4dd7fc28ad",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "Nine straight in double figures to start the season 🔥 \n\nFirst Bearcat with that start since 2022-23.",
+    "createdAt": {
+      "$date": "2025-12-05T19:35:36.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 16,
+      "likes": 214,
+      "engagementRate": 0.0224018700691536,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 131
+    },
+    "permalink": "https://www.instagram.com/p/DR5MmEGFLgz",
+    "publishedAt": {
+      "$date": "2025-12-05T19:35:36.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "updatedAt": {
+      "$date": "2026-02-13T04:28:56.304Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18066548441573702",
+    "hasOrganizationInCaption": false,
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false
+  },
+  {
+    "_id": "692c854d7a2525e5e3446893",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "The world is yours but the city is mine 🐾",
+    "createdAt": {
+      "$date": "2025-11-16T20:00:09.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "metrics": {
+      "comments": 50,
+      "likes": 3,
+      "engagementRate": 0.00530849358974359,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 76.5
+    },
+    "permalink": "https://www.instagram.com/p/DRIUWasD7Pe",
+    "publishedAt": {
+      "$date": "2025-11-16T20:00:09.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-11T05:41:13.885Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18411622765185810",
+    "likeAndViewCountsDisabled": false,
+    "isSponsored": false,
+    "isCollaboration": false,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false,
+    "mediaType": "PHOTO"
+  },
+  {
+    "_id": "691629cc1bada041ff479598",
+    "athlete": {
+      "_id": "68f8774766c6eed501f52faf",
+      "name": "Tyler McKinley",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114194734-Tyler_McKinley_68f8774766c6eed501f52faf.png",
+      "bio": "A relentless competitor with a knack for finding the net, this forward combines finesse and grit. Known for his infectious enthusiasm, he inspires teammates while dazzling fans with skillful play.",
+      "sport": "MENS_BASKETBALL",
+      "position": "F",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "FRESHMAN"
+    },
+    "caption": "Throw it down, T-Mac! 💥",
+    "createdAt": {
+      "$date": "2025-11-12T00:56:43.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "metrics": {
+      "comments": 27,
+      "likes": 1218,
+      "engagementRate": 0.195141065830721,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 649.5
+    },
+    "permalink": "https://www.instagram.com/p/DQ7-UMZDQHx",
+    "publishedAt": {
+      "$date": "2025-11-12T00:56:43.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-13T04:29:43.533Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18005942510819540",
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "isSponsored": false,
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false
+  },
+  {
+    "_id": "69162dc81bada041ff4795bd",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "Mya Perry dropped 31 points in her Bearcat debut, tying her career high on 11-of-17 shooting, including 6-of-8 from three.\n\nMost points by a Bearcat since 2021.",
+    "createdAt": {
+      "$date": "2025-11-05T16:53:48.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "metrics": {
+      "comments": 60,
+      "likes": 878,
+      "engagementRate": 0.09395032051282051,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 529
+    },
+    "permalink": "https://www.instagram.com/p/DQrqSAPDls-",
+    "publishedAt": {
+      "$date": "2025-11-05T16:53:48.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-04T22:40:27.223Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17915442552218891",
+    "likeAndViewCountsDisabled": false,
+    "isSponsored": false,
+    "isCollaboration": false,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": true
+  },
+  {
+    "_id": "690a4abdad3d2a32f88de000",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "Im everything they said I wouldn’t be or couldn’t be",
+    "createdAt": {
+      "$date": "2025-10-24T21:42:14.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "metrics": {
+      "comments": 30,
+      "likes": 3,
+      "engagementRate": 0.0033052884615384615,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 46.5
+    },
+    "permalink": "https://www.instagram.com/p/DQNRwBHDz2i",
+    "publishedAt": {
+      "$date": "2025-10-24T21:42:14.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-11T05:08:27.254Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18095837959788976",
+    "likeAndViewCountsDisabled": false,
+    "isSponsored": false,
+    "isCollaboration": false,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false,
+    "mediaType": "PHOTO"
+  },
+  {
+    "_id": "68fac37a1e4a5fe96ac34ca0",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "Chemistry off the charts 🔥 #TheSisterhood",
+    "createdAt": {
+      "$date": "2025-10-22T19:05:12.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#TheSisterhood"
+    ],
+    "metrics": {
+      "comments": 5,
+      "likes": 147,
+      "engagementRate": 0.015291750503018108,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 81
+    },
+    "permalink": "https://www.instagram.com/p/DQH2MK3EWKO",
+    "publishedAt": {
+      "$date": "2025-10-22T19:05:12.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-11T04:27:33.204Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17947238718059418",
+    "likeAndViewCountsDisabled": false,
+    "isSponsored": false,
+    "isCollaboration": false,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false,
+    "mediaType": "PHOTO"
+  },
+  {
+    "_id": "68fabe9d1e4a5fe96ac3495b",
+    "athlete": {
+      "_id": "68f8774766c6eed501f52faf",
+      "name": "Tyler McKinley",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114194734-Tyler_McKinley_68f8774766c6eed501f52faf.png",
+      "bio": "A relentless competitor with a knack for finding the net, this forward combines finesse and grit. Known for his infectious enthusiasm, he inspires teammates while dazzling fans with skillful play.",
+      "sport": "MENS_BASKETBALL",
+      "position": "F",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "FRESHMAN"
+    },
+    "caption": "",
+    "createdAt": {
+      "$date": "2025-10-16T18:23:19.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "metrics": {
+      "comments": 153,
+      "likes": 1461,
+      "engagementRate": 0.2529780564263323,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 960
+    },
+    "permalink": "https://www.instagram.com/p/DP4UoIvkRBJ",
+    "publishedAt": {
+      "$date": "2025-10-16T18:23:19.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-13T04:29:43.594Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18088960090901390",
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "isSponsored": false,
+    "isCollaboration": false,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false
+  },
+  {
+    "_id": "68fac37a1e4a5fe96ac34c9c",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "All I need ❤️",
+    "createdAt": {
+      "$date": "2025-09-17T22:02:53.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "metrics": {
+      "comments": 97,
+      "likes": 3,
+      "engagementRate": 0.010016025641025642,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 147
+    },
+    "permalink": "https://www.instagram.com/p/DOuCs8tj0Ae",
+    "publishedAt": {
+      "$date": "2025-09-17T22:02:53.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-11T04:27:28.087Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18057550631451970",
+    "likeAndViewCountsDisabled": false,
+    "isSponsored": false,
+    "isCollaboration": false,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false,
+    "mediaType": "PHOTO"
+  },
+  {
+    "_id": "68fabe9d1e4a5fe96ac34954",
+    "athlete": {
+      "_id": "68f8774766c6eed501f52faf",
+      "name": "Tyler McKinley",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114194734-Tyler_McKinley_68f8774766c6eed501f52faf.png",
+      "bio": "A relentless competitor with a knack for finding the net, this forward combines finesse and grit. Known for his infectious enthusiasm, he inspires teammates while dazzling fans with skillful play.",
+      "sport": "MENS_BASKETBALL",
+      "position": "F",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "FRESHMAN"
+    },
+    "caption": ":/",
+    "createdAt": {
+      "$date": "2025-09-01T00:32:34.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "metrics": {
+      "comments": 108,
+      "likes": 945,
+      "engagementRate": 0.16504702194357368,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 634.5
+    },
+    "permalink": "https://www.instagram.com/p/DOCiUSMEaNh",
+    "publishedAt": {
+      "$date": "2025-09-01T00:32:34.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-13T04:29:43.706Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17999016722658906",
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "isSponsored": false,
+    "isCollaboration": false,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false
+  },
+  {
+    "_id": "68fac37a1e4a5fe96ac34ca5",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "Champagnemami😛",
+    "createdAt": {
+      "$date": "2025-08-17T00:14:18.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "metrics": {
+      "comments": 63,
+      "likes": 3,
+      "engagementRate": 0.006610576923076923,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 96
+    },
+    "permalink": "https://www.instagram.com/p/DNb4TZotkPO",
+    "publishedAt": {
+      "$date": "2025-08-17T00:14:18.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-11T04:27:33.471Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17944457790014926",
+    "likeAndViewCountsDisabled": false,
+    "isSponsored": false,
+    "isCollaboration": false,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false,
+    "mediaType": "PHOTO"
+  },
+  {
+    "_id": "68fac37a1e4a5fe96ac34c9f",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "Yk it’s real when you are who you think you are 🤏🏽",
+    "createdAt": {
+      "$date": "2025-07-14T00:35:49.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "metrics": {
+      "comments": 50,
+      "likes": 3,
+      "engagementRate": 0.00530849358974359,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 76.5
+    },
+    "permalink": "https://www.instagram.com/p/DMEXvU4NNuQ",
+    "publishedAt": {
+      "$date": "2025-07-14T00:35:49.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-11T04:27:28.302Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18020107790721404",
+    "likeAndViewCountsDisabled": false,
+    "isSponsored": false,
+    "isCollaboration": false,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false,
+    "mediaType": "PHOTO"
+  },
+  {
+    "_id": "68fac37a1e4a5fe96ac34c9d",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "𝐌𝐞𝐞𝐭 𝐌𝐲𝐚 𝐏𝐞𝐫𝐫𝐲 #TheSisterhood",
+    "createdAt": {
+      "$date": "2025-06-16T20:49:07.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#TheSisterhood"
+    ],
+    "metrics": {
+      "comments": 33,
+      "likes": 626,
+      "engagementRate": 0.06418622771987922,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 362.5
+    },
+    "permalink": "https://www.instagram.com/p/DK-b13kyONT",
+    "publishedAt": {
+      "$date": "2025-06-16T20:49:07.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-13T04:28:54.325Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18119129854464741",
+    "likeAndViewCountsDisabled": false,
+    "isSponsored": false,
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false,
+    "mediaType": "VIDEO"
+  },
+  {
+    "_id": "68fac37a1e4a5fe96ac34ca3",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "",
+    "createdAt": {
+      "$date": "2025-05-10T18:50:34.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "metrics": {
+      "comments": 53,
+      "likes": 3,
+      "engagementRate": 0.005608974358974359,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 81
+    },
+    "permalink": "https://www.instagram.com/p/DJe9WoYPVIr",
+    "publishedAt": {
+      "$date": "2025-05-10T18:50:34.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-11T04:27:32.844Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17882277765293533",
+    "likeAndViewCountsDisabled": false,
+    "isSponsored": false,
+    "isCollaboration": false,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false,
+    "mediaType": "PHOTO"
+  },
+  {
+    "_id": "68fac37a1e4a5fe96ac34ca2",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "Misfit in mind, mania in the fit💆🏽‍♀️ @_misfitmania",
+    "createdAt": {
+      "$date": "2025-04-16T18:06:05.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "metrics": {
+      "comments": 37,
+      "likes": 3,
+      "engagementRate": 0.004006410256410256,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 57
+    },
+    "permalink": "https://www.instagram.com/p/DIhFL1bOuaC",
+    "publishedAt": {
+      "$date": "2025-04-16T18:06:05.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "@_misfitmania",
+    "sponsored": true,
+    "updatedAt": {
+      "$date": "2026-02-11T04:27:33.079Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18038520488566614",
+    "likeAndViewCountsDisabled": false,
+    "isSponsored": true,
+    "isCollaboration": false,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false,
+    "mediaType": "PHOTO"
+  },
+  {
+    "_id": "68fac37a1e4a5fe96ac34ca6",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "I’m with red like I’m at a Cincinnati game😉",
+    "createdAt": {
+      "$date": "2025-04-03T23:44:36.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "metrics": {
+      "comments": 117,
+      "likes": 8916,
+      "engagementRate": 0.8798090971072368,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 4633.5
+    },
+    "permalink": "https://www.instagram.com/p/DIANl03P1_6",
+    "publishedAt": {
+      "$date": "2025-04-03T23:44:36.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-13T04:28:53.304Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17889349830223870",
+    "likeAndViewCountsDisabled": false,
+    "isSponsored": false,
+    "mediaType": "PHOTO",
+    "isCollaboration": false,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": true
+  },
+  {
+    "_id": "68fac37a1e4a5fe96ac34ca4",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "I’m home ❤️🐾#gobearcats🐾",
+    "createdAt": {
+      "$date": "2025-04-03T15:15:37.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "hashtags": [
+      "#gobearcats"
+    ],
+    "metrics": {
+      "comments": 154,
+      "likes": 1154,
+      "engagementRate": 0.1273984610889257,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 808
+    },
+    "permalink": "https://www.instagram.com/p/DH_SEQvuBd6",
+    "publishedAt": {
+      "$date": "2025-04-03T15:15:37.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-13T04:28:54.369Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/17975497349830343",
+    "likeAndViewCountsDisabled": false,
+    "isSponsored": false,
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": true,
+    "mediaType": "VIDEO"
+  },
+  {
+    "_id": "68fac37a1e4a5fe96ac34ca1",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "Welcome to The Sisterhood, Mya Perry! ♥️🐾",
+    "createdAt": {
+      "$date": "2025-04-03T15:01:11.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "metrics": {
+      "comments": 30,
+      "likes": 1009,
+      "engagementRate": 0.10423354735152487,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 549.5
+    },
+    "permalink": "https://www.instagram.com/p/DH_RrySO2YV",
+    "publishedAt": {
+      "$date": "2025-04-03T15:01:11.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-11T04:27:33.500Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18385251034119679",
+    "likeAndViewCountsDisabled": false,
+    "isSponsored": false,
+    "isCollaboration": false,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false,
+    "mediaType": "PHOTO"
+  },
+  {
+    "_id": "68fabe9d1e4a5fe96ac34953",
+    "athlete": {
+      "_id": "68f8774766c6eed501f52faf",
+      "name": "Tyler McKinley",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114194734-Tyler_McKinley_68f8774766c6eed501f52faf.png",
+      "bio": "A relentless competitor with a knack for finding the net, this forward combines finesse and grit. Known for his infectious enthusiasm, he inspires teammates while dazzling fans with skillful play.",
+      "sport": "MENS_BASKETBALL",
+      "position": "F",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "FRESHMAN"
+    },
+    "caption": "The 4-star freshman Tyler McKinley had an incredible summer! We can’t wait to see him in a @gobearcatsmbb uniform! @txm35 \n\n#smithleague | @ballislife",
+    "createdAt": {
+      "$date": "2024-12-03T18:36:23.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "hashtags": [
+      "#smithleague"
+    ],
+    "metrics": {
+      "comments": 22,
+      "likes": 796,
+      "engagementRate": 0.1282131661442006,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 431
+    },
+    "permalink": "https://www.instagram.com/p/DDIGIgORAmX",
+    "publishedAt": {
+      "$date": "2024-12-03T18:36:23.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-13T04:29:43.775Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18172580221313874",
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "isSponsored": false,
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": true
+  },
+  {
+    "_id": "68fac37a1e4a5fe96ac34c9b",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "Top 3 but she really the 1 😉",
+    "createdAt": {
+      "$date": "2024-09-27T22:29:16.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "metrics": {
+      "comments": 111,
+      "likes": 2711,
+      "engagementRate": 0.27486120580500634,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 1522
+    },
+    "permalink": "https://www.instagram.com/p/DAb_hg5vfNW",
+    "publishedAt": {
+      "$date": "2024-09-27T22:29:16.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-13T04:28:53.355Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18097776967454360",
+    "likeAndViewCountsDisabled": false,
+    "isSponsored": false,
+    "mediaType": "PHOTO",
+    "isCollaboration": false,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false
+  },
+  {
+    "_id": "69620733d624beb56eeaa687",
+    "athlete": {
+      "_id": "68f8774766c6eed501f52faf",
+      "name": "Tyler McKinley",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114194734-Tyler_McKinley_68f8774766c6eed501f52faf.png",
+      "bio": "A relentless competitor with a knack for finding the net, this forward combines finesse and grit. Known for his infectious enthusiasm, he inspires teammates while dazzling fans with skillful play.",
+      "sport": "MENS_BASKETBALL",
+      "position": "F",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "FRESHMAN"
+    },
+    "caption": "Nothings into somethings. 🎧\n\n📸 @shotbytrill__ \n\nPro @txm35",
+    "createdAt": {
+      "$date": "2024-09-04T00:02:22.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "likeAndViewCountsDisabled": true,
+    "mediaType": "PHOTO",
+    "metrics": {
+      "comments": 27,
+      "likes": 0,
+      "engagementRate": 0,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 40.5
+    },
+    "permalink": "https://www.instagram.com/p/C_eXGYsJ1Fv",
+    "publishedAt": {
+      "$date": "2024-09-04T00:02:22.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-13T04:29:43.818Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18249051586253692",
+    "isSponsored": false,
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false
+  },
+  {
+    "_id": "68fabe9d1e4a5fe96ac34957",
+    "athlete": {
+      "_id": "68f8774766c6eed501f52faf",
+      "name": "Tyler McKinley",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114194734-Tyler_McKinley_68f8774766c6eed501f52faf.png",
+      "bio": "A relentless competitor with a knack for finding the net, this forward combines finesse and grit. Known for his infectious enthusiasm, he inspires teammates while dazzling fans with skillful play.",
+      "sport": "MENS_BASKETBALL",
+      "position": "F",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "FRESHMAN"
+    },
+    "caption": "tell me why",
+    "createdAt": {
+      "$date": "2024-09-02T18:26:10.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "metrics": {
+      "comments": 87,
+      "likes": 1097,
+      "engagementRate": 0.18557993730407524,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 679
+    },
+    "permalink": "https://www.instagram.com/p/C_bL1HHx-KL",
+    "publishedAt": {
+      "$date": "2024-09-02T18:26:10.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-13T04:29:43.878Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18031182851016873",
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "PHOTO",
+    "isSponsored": false,
+    "isCollaboration": false,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false
+  },
+  {
+    "_id": "68fabe9d1e4a5fe96ac34958",
+    "athlete": {
+      "_id": "68f8774766c6eed501f52faf",
+      "name": "Tyler McKinley",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114194734-Tyler_McKinley_68f8774766c6eed501f52faf.png",
+      "bio": "A relentless competitor with a knack for finding the net, this forward combines finesse and grit. Known for his infectious enthusiasm, he inspires teammates while dazzling fans with skillful play.",
+      "sport": "MENS_BASKETBALL",
+      "position": "F",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "FRESHMAN"
+    },
+    "caption": "5 am in milan🇮🇹",
+    "createdAt": {
+      "$date": "2024-08-08T22:10:56.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "metrics": {
+      "comments": 24,
+      "likes": 493,
+      "engagementRate": 0.08103448275862069,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 282.5
+    },
+    "permalink": "https://www.instagram.com/p/C-a_lUhRk4O",
+    "publishedAt": {
+      "$date": "2024-08-08T22:10:56.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-13T04:29:43.932Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18067240813585431",
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "isSponsored": false,
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false
+  },
+  {
+    "_id": "68fabe9d1e4a5fe96ac34956",
+    "athlete": {
+      "_id": "68f8774766c6eed501f52faf",
+      "name": "Tyler McKinley",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114194734-Tyler_McKinley_68f8774766c6eed501f52faf.png",
+      "bio": "A relentless competitor with a knack for finding the net, this forward combines finesse and grit. Known for his infectious enthusiasm, he inspires teammates while dazzling fans with skillful play.",
+      "sport": "MENS_BASKETBALL",
+      "position": "F",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "FRESHMAN"
+    },
+    "caption": "Meet the Bearcats: Tyler McKinley",
+    "createdAt": {
+      "$date": "2024-07-29T15:57:09.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "metrics": {
+      "comments": 32,
+      "likes": 1341,
+      "engagementRate": 0.2152037617554859,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 718.5
+    },
+    "permalink": "https://www.instagram.com/p/C-Ayro7ufmv",
+    "publishedAt": {
+      "$date": "2024-07-29T15:57:09.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-13T04:29:43.996Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18051257137785177",
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "isSponsored": false,
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": true
+  },
+  {
+    "_id": "68fabe9d1e4a5fe96ac34950",
+    "athlete": {
+      "_id": "68f8774766c6eed501f52faf",
+      "name": "Tyler McKinley",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114194734-Tyler_McKinley_68f8774766c6eed501f52faf.png",
+      "bio": "A relentless competitor with a knack for finding the net, this forward combines finesse and grit. Known for his infectious enthusiasm, he inspires teammates while dazzling fans with skillful play.",
+      "sport": "MENS_BASKETBALL",
+      "position": "F",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "FRESHMAN"
+    },
+    "caption": "Tyler McKinley was a standout at Link Academy and now ready to make noise in the BIG12! @thesmithleague @txm35",
+    "createdAt": {
+      "$date": "2024-07-10T20:55:37.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "metrics": {
+      "comments": 9,
+      "likes": 0,
+      "engagementRate": 0,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 13.5
+    },
+    "permalink": "https://www.instagram.com/p/C9QZqcUyEy9",
+    "publishedAt": {
+      "$date": "2024-07-10T20:55:37.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-13T04:29:44.059Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18079166242449592",
+    "likeAndViewCountsDisabled": true,
+    "mediaType": "VIDEO",
+    "isSponsored": false,
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false
+  },
+  {
+    "_id": "68fabe9d1e4a5fe96ac34951",
+    "athlete": {
+      "_id": "68f8774766c6eed501f52faf",
+      "name": "Tyler McKinley",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114194734-Tyler_McKinley_68f8774766c6eed501f52faf.png",
+      "bio": "A relentless competitor with a knack for finding the net, this forward combines finesse and grit. Known for his infectious enthusiasm, he inspires teammates while dazzling fans with skillful play.",
+      "sport": "MENS_BASKETBALL",
+      "position": "F",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "FRESHMAN"
+    },
+    "caption": "Cincinnati’s own @txm was back in uniform this weekend! Here’s a look at @gobearcatsmbb freshman’s 21 points, 9 rebounds and 2 stls from this past Saturday at the #smithleague! \n\n#smithleague | @ballislife",
+    "createdAt": {
+      "$date": "2024-07-09T15:00:58.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "hashtags": [
+      "#smithleague",
+      "#smithleague"
+    ],
+    "metrics": {
+      "comments": 24,
+      "likes": 462,
+      "engagementRate": 0.0761755485893417,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 267
+    },
+    "permalink": "https://www.instagram.com/p/C9NMHbFRG7b",
+    "publishedAt": {
+      "$date": "2024-07-09T15:00:58.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-13T04:29:44.123Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18026169803472345",
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "isSponsored": false,
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": true
+  },
+  {
+    "_id": "68fabe9d1e4a5fe96ac34955",
+    "athlete": {
+      "_id": "68f8774766c6eed501f52faf",
+      "name": "Tyler McKinley",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114194734-Tyler_McKinley_68f8774766c6eed501f52faf.png",
+      "bio": "A relentless competitor with a knack for finding the net, this forward combines finesse and grit. Known for his infectious enthusiasm, he inspires teammates while dazzling fans with skillful play.",
+      "sport": "MENS_BASKETBALL",
+      "position": "F",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "FRESHMAN"
+    },
+    "caption": "Class of 2024 @espn ranked and @gobearcatsmbb commit Tyler McKinley had a solid performance in his Smith League Debut this past weekend! @txm35 finished with a near Double-Double of 12 points and 9 Rebounds! \n\n#smithleague | @ballislife",
+    "createdAt": {
+      "$date": "2024-07-03T23:58:00.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "hashtags": [
+      "#smithleague"
+    ],
+    "metrics": {
+      "comments": 9,
+      "likes": 493,
+      "engagementRate": 0.0786833855799373,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 260
+    },
+    "permalink": "https://www.instagram.com/p/C8-sv1Fh6nh",
+    "publishedAt": {
+      "$date": "2024-07-03T23:58:00.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-13T04:29:44.190Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18011505758254329",
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "isSponsored": false,
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": true
+  },
+  {
+    "_id": "68fabe9d1e4a5fe96ac3495a",
+    "athlete": {
+      "_id": "68f8774766c6eed501f52faf",
+      "name": "Tyler McKinley",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114194734-Tyler_McKinley_68f8774766c6eed501f52faf.png",
+      "bio": "A relentless competitor with a knack for finding the net, this forward combines finesse and grit. Known for his infectious enthusiasm, he inspires teammates while dazzling fans with skillful play.",
+      "sport": "MENS_BASKETBALL",
+      "position": "F",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "FRESHMAN"
+    },
+    "caption": "sink or swim",
+    "createdAt": {
+      "$date": "2024-06-01T15:54:02.000Z"
+    },
+    "hasOrganizationLogo": true,
+    "metrics": {
+      "comments": 114,
+      "likes": 1509,
+      "engagementRate": 0.25209692451071763,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 925.5
+    },
+    "permalink": "https://www.instagram.com/p/C7rcfiyxHIZ",
+    "publishedAt": {
+      "$date": "2024-06-01T15:54:02.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-11T04:23:58.029Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18264861427169030",
+    "likeAndViewCountsDisabled": false,
+    "isSponsored": false,
+    "isCollaboration": false,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false,
+    "mediaType": "PHOTO"
+  },
+  {
+    "_id": "698ea8b910609e4dd7fc43da",
+    "athlete": {
+      "_id": "68f8774766c6eed501f52faf",
+      "name": "Tyler McKinley",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114194734-Tyler_McKinley_68f8774766c6eed501f52faf.png",
+      "bio": "A relentless competitor with a knack for finding the net, this forward combines finesse and grit. Known for his infectious enthusiasm, he inspires teammates while dazzling fans with skillful play.",
+      "sport": "MENS_BASKETBALL",
+      "position": "F",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "FRESHMAN"
+    },
+    "caption": "Can I ? @txm35 💡\n\n@shotbytrill__ 🎥",
+    "createdAt": {
+      "$date": "2024-04-06T14:01:05.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": true,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 9,
+      "likes": 0,
+      "engagementRate": 0,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 13.5
+    },
+    "permalink": "https://www.instagram.com/p/C5bCaHeAtUX",
+    "publishedAt": {
+      "$date": "2024-04-06T14:01:05.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "updatedAt": {
+      "$date": "2026-02-13T04:29:45.032Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18024579814893270",
+    "hasOrganizationInCaption": false,
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false
+  },
+  {
+    "_id": "68fabe9d1e4a5fe96ac34952",
+    "athlete": {
+      "_id": "68f8774766c6eed501f52faf",
+      "name": "Tyler McKinley",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114194734-Tyler_McKinley_68f8774766c6eed501f52faf.png",
+      "bio": "A relentless competitor with a knack for finding the net, this forward combines finesse and grit. Known for his infectious enthusiasm, he inspires teammates while dazzling fans with skillful play.",
+      "sport": "MENS_BASKETBALL",
+      "position": "F",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "FRESHMAN"
+    },
+    "caption": "A kid from Cincinnati, Ohio, believes in step higher academy on a international mission. Tyler McKinley played in our Tip-Off Classic back in November and did his thing. Fast forward to April, he became the top scorer out of 12 national teams, averaging 28 points per game. As he ends his high school career and gets ready for the Big 12, we just want to give Tyler a huge shoutout for his performance. Cincinnati Bearcats, you’ve got a good one in Tyler. Good luck the rest of the way! #gobercatsmbb #UC \n\n📸: @daylansparks",
+    "createdAt": {
+      "$date": "2024-04-02T20:00:07.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "hashtags": [
+      "#gobercatsmbb",
+      "#UC"
+    ],
+    "metrics": {
+      "comments": 8,
+      "likes": 1082,
+      "engagementRate": 0.1702061211742661,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 553
+    },
+    "permalink": "https://www.instagram.com/p/C5RY9YpRpYq",
+    "publishedAt": {
+      "$date": "2024-04-02T20:00:07.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-11T04:23:49.496Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18295178044086337",
+    "likeAndViewCountsDisabled": false,
+    "isSponsored": false,
+    "isCollaboration": false,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": true,
+    "mediaType": "PHOTO"
+  },
+  {
+    "_id": "698ea8bafaf459888aff834f",
+    "athlete": {
+      "_id": "68f8774766c6eed501f52faf",
+      "name": "Tyler McKinley",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114194734-Tyler_McKinley_68f8774766c6eed501f52faf.png",
+      "bio": "A relentless competitor with a knack for finding the net, this forward combines finesse and grit. Known for his infectious enthusiasm, he inspires teammates while dazzling fans with skillful play.",
+      "sport": "MENS_BASKETBALL",
+      "position": "F",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "FRESHMAN"
+    },
+    "caption": "🔥𝐓𝐲𝐥𝐞𝐫 𝐌𝐜𝐤𝐢𝐧𝐥𝐞𝐲 of Step Higher Academy wins the slam dunk contest at the Jit 2024 in Lissone !\n\n#MrHoop | #Italhoop | #U19 | #JIT | #2k24 | #SlamDunk | #Contest",
+    "createdAt": {
+      "$date": "2024-03-31T14:15:16.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "hashtags": [
+      "#MrHoop",
+      "#Italhoop",
+      "#U19",
+      "#JIT",
+      "#2k24",
+      "#SlamDunk",
+      "#Contest"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 14,
+      "likes": 3118,
+      "engagementRate": 0.4909090909090909,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 1580
+    },
+    "permalink": "https://www.instagram.com/p/C5LmrQ2NF6_",
+    "publishedAt": {
+      "$date": "2024-03-31T14:15:16.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "updatedAt": {
+      "$date": "2026-02-13T04:29:46.108Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18028578904960650",
+    "hasOrganizationInCaption": false,
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false
+  },
+  {
+    "_id": "698ea8b996d4901dfa3999e8",
+    "athlete": {
+      "_id": "68f8774766c6eed501f52faf",
+      "name": "Tyler McKinley",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114194734-Tyler_McKinley_68f8774766c6eed501f52faf.png",
+      "bio": "A relentless competitor with a knack for finding the net, this forward combines finesse and grit. Known for his infectious enthusiasm, he inspires teammates while dazzling fans with skillful play.",
+      "sport": "MENS_BASKETBALL",
+      "position": "F",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "FRESHMAN"
+    },
+    "caption": "Tyler Mckinley #24 \nStep Higher Academy 🇺🇸\nJuniores International Tournament “Città di Lissone”\n\n#JIT |  #U19",
+    "createdAt": {
+      "$date": "2024-03-29T07:55:02.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "hashtags": [
+      "#24",
+      "#JIT",
+      "#U19"
+    ],
+    "isSponsored": false,
+    "likeAndViewCountsDisabled": false,
+    "mediaType": "VIDEO",
+    "metrics": {
+      "comments": 14,
+      "likes": 1044,
+      "engagementRate": 0.16583072100313478,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 543
+    },
+    "permalink": "https://www.instagram.com/p/C5Fyo-0tgZM",
+    "publishedAt": {
+      "$date": "2024-03-29T07:55:02.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "updatedAt": {
+      "$date": "2026-02-13T04:29:45.001Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18008389622521175",
+    "hasOrganizationInCaption": false,
+    "isCollaboration": true,
+    "isOrganizationCollaboration": false
+  },
+  {
+    "_id": "68fac37a1e4a5fe96ac34c9e",
+    "athlete": {
+      "_id": "68f8774766c6eed501f5300d",
+      "name": "Mya Perry",
+      "image": "https://storage.googleapis.com/jaba-profile-pictures-bucket-prod/profile-pictures/1761114189286-Mya_Perry_68f8774766c6eed501f5300d.png",
+      "bio": "A tenacious floor general, she weaves through defenses with agility and precision. Known for her fierce competitiveness and infectious energy, she inspires teammates while leaving opponents in her wake.",
+      "sport": "WOMENS_BASKETBALL",
+      "position": "GUARD",
+      "conference": {
+        "_id": "68d23eb26f71af5707a79f22",
+        "name": "Big 12"
+      },
+      "school": {
+        "_id": "68f876c47804265f86eb36fb",
+        "name": "University of Cincinnati"
+      },
+      "league": {
+        "_id": "68d23c396f71af5707a79f1c",
+        "name": "NCAA"
+      },
+      "year": "SENIOR"
+    },
+    "caption": "On my worst behavior 🫶🏽🧘🏽‍♀️",
+    "createdAt": {
+      "$date": "2023-04-08T01:32:56.000Z"
+    },
+    "hasOrganizationLogo": false,
+    "metrics": {
+      "comments": 63,
+      "likes": 2608,
+      "engagementRate": 0.2675280448717949,
+      "shares": 0,
+      "saves": 0,
+      "impressions": 0,
+      "followers": 0,
+      "totalInteractions": 0,
+      "accountsEngaged": 0,
+      "videoViews": 0,
+      "reach": 0,
+      "profileLinksTaps": 0,
+      "emv": 1398.5
+    },
+    "permalink": "https://www.instagram.com/p/CqwcFHWJppk",
+    "publishedAt": {
+      "$date": "2023-04-08T01:32:56.000Z"
+    },
+    "source": "INSTAGRAM",
+    "sponsorPartner": "",
+    "sponsored": false,
+    "updatedAt": {
+      "$date": "2026-02-11T04:27:29.506Z"
+    },
+    "url": "https://storage.googleapis.com/scraper-media-images/18018094390548949",
+    "likeAndViewCountsDisabled": false,
+    "isSponsored": false,
+    "isCollaboration": false,
+    "isOrganizationCollaboration": false,
+    "hasOrganizationInCaption": false,
+    "mediaType": "PHOTO"
+  }
+]

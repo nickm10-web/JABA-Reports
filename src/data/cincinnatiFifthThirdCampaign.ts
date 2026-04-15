@@ -171,7 +171,7 @@ export interface CincinnatiFifthThirdCampaignData {
 }
 
 const DATA_PATHS = {
-  athlete: 'data/ncaa_roster_updated_feb_17.json',
+  athlete: 'data/cincinnati-fifth-third-source.json',
   brands: 'data/socialMedia.brands.json',
   posts: 'data/posts.json',
   team53Posts: 'data/team53posts.json',
