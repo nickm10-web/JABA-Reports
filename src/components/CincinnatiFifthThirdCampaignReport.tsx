@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
-import { ArrowLeft, ExternalLink, Eye, Heart, MessageCircle, Target } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Eye, Heart, MessageCircle } from 'lucide-react';
 import { CINCINNATI } from '../data/schoolConfig';
 import {
   CincinnatiFifthThirdCampaignData,
@@ -25,14 +25,6 @@ function formatCompact(value: number): string {
   return `${rounded}`;
 }
 
-function formatCurrency(value: number): string {
-  return value.toLocaleString('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    maximumFractionDigits: 0,
-  });
-}
-
 function formatLift(value: number): string {
   const rounded = Number.isFinite(value) ? value : 0;
   return `${rounded >= 0 ? '+' : ''}${rounded.toFixed(1)}%`;
@@ -46,12 +38,11 @@ function formatSport(value: string): string {
     .join(' ');
 }
 
-type ComparisonMetric = 'likes' | 'comments' | 'estimatedEmv';
+type ComparisonMetric = 'likes' | 'comments';
 
 const COMPARISON_METRICS: Array<{ key: ComparisonMetric; label: string }> = [
   { key: 'likes', label: 'Likes' },
   { key: 'comments', label: 'Comments' },
-  { key: 'estimatedEmv', label: 'EMV' },
 ];
 
 function FifthThirdBadge({ logoUrl }: { logoUrl?: string }) {
@@ -133,8 +124,7 @@ function MetricPill({ icon, label, value }: { icon: ReactNode; label: string; va
 
 function getComparisonMetricValue(row: ComparisonRow, metric: ComparisonMetric): number {
   if (metric === 'likes') return row.likes;
-  if (metric === 'comments') return row.comments;
-  return row.likes * 0.5 + row.comments * 1.5;
+  return row.comments;
 }
 
 function formatComparisonMetricValue(row: ComparisonRow, metric: ComparisonMetric): string {
@@ -144,11 +134,7 @@ function formatComparisonMetricValue(row: ComparisonRow, metric: ComparisonMetri
     return value > 0 ? formatCompact(value) : 'Hidden';
   }
 
-  if (metric === 'comments') {
-    return formatNumber(value);
-  }
-
-  return formatCurrency(value);
+  return formatNumber(value);
 }
 
 function ActivationCard({ post }: { post: HeroActivation }) {
@@ -213,7 +199,6 @@ function ActivationCard({ post }: { post: HeroActivation }) {
           <MetricPill icon={<Heart className="h-4 w-4" />} label="Likes" value={formatCompact(post.likes)} />
           <MetricPill icon={<MessageCircle className="h-4 w-4" />} label="Comments" value={formatNumber(post.comments)} />
           <MetricPill icon={<Eye className="h-4 w-4" />} label="Views" value={formatCompact(post.views)} />
-          <MetricPill icon={<Target className="h-4 w-4" />} label="EMV" value={formatCurrency(post.estimatedEmv)} />
         </div>
 
         <p className="text-xs uppercase tracking-[0.18em] text-gray-400">
@@ -309,7 +294,7 @@ function AthleteBenchmarkPanel({
         </div>
       </div>
 
-      <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-6 grid gap-4 md:grid-cols-2">
         <SummaryMetric
           label="Average Likes"
           campaignValue={formatCompact(summary.campaignAverageLikes)}
@@ -321,12 +306,6 @@ function AthleteBenchmarkPanel({
           campaignValue={formatNumber(Math.round(summary.campaignAverageComments * 10) / 10)}
           baselineValue={formatNumber(Math.round(summary.averageComments * 10) / 10)}
           lift={formatLift(summary.liftVsAverageComments)}
-        />
-        <SummaryMetric
-          label="Average EMV"
-          campaignValue={formatCurrency(summary.campaignAverageEmv)}
-          baselineValue={formatCurrency(summary.averageEmv)}
-          lift={formatLift(summary.liftVsAverageEmv)}
         />
       </div>
 
@@ -475,7 +454,6 @@ export function CincinnatiFifthThirdCampaignReport({ onBack }: CincinnatiFifthTh
               <StatCard label="Likes" value={formatCompact(data.campaignTotals.likes)} />
               <StatCard label="Comments" value={formatNumber(data.campaignTotals.comments)} />
               <StatCard label="Views" value={formatCompact(data.campaignTotals.views)} />
-              <StatCard label="Estimated EMV" value={formatCurrency(data.campaignTotals.estimatedEmv)} />
             </div>
           </div>
         </div>
