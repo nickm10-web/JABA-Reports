@@ -298,6 +298,7 @@ function App() {
         <Route path="/clemson/hardees" element={<ClemsonHardeesRoute />} />
         <Route path="/clemson/ip" element={<ClemsonIPRoute />} />
         <Route path="/cincinnati" element={<CincinnatiRoute />} />
+        <Route path="/cincinnati/53" element={<CincinnatiRoute />} />
         <Route path="/cincinnati/fifth-third" element={<CincinnatiRoute />} />
         <Route path="/clemson-athlete" element={<Navigate to="/clemson/ip" replace />} />
         <Route path="/clemson-ip" element={<Navigate to="/clemson/ip" replace />} />
