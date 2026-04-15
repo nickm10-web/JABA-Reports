@@ -259,7 +259,9 @@ const SCRAPED_ATHLETE_BY_OWNER: Record<string, Pick<RawAthlete, 'name' | 'sport'
 };
 
 function buildPublicPath(relativePath: string): string {
-  return `${import.meta.env.BASE_URL}${relativePath}`;
+  const basePath = import.meta.env.BASE_URL || '/';
+  const normalizedBase = basePath.endsWith('/') ? basePath : `${basePath}/`;
+  return `${normalizedBase}${relativePath.replace(/^\/+/, '')}`;
 }
 
 async function fetchJson<T>(relativePath: string): Promise<T> {
