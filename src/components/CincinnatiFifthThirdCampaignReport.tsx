@@ -4,7 +4,6 @@ import { ArrowLeft, ExternalLink, Eye, Heart, MessageCircle } from 'lucide-react
 import { CINCINNATI } from '../data/schoolConfig';
 import {
   CincinnatiFifthThirdCampaignData,
-  ComparisonRow,
   HeroActivation,
   BenchmarkSummary,
   loadCincinnatiFifthThirdCampaign,
@@ -39,11 +38,6 @@ function formatSport(value: string): string {
 }
 
 type ComparisonMetric = 'likes' | 'comments';
-
-const BENCHMARK_METRICS: Array<{ key: ComparisonMetric; label: string }> = [
-  { key: 'likes', label: 'Likes' },
-  { key: 'comments', label: 'Comments' },
-];
 
 function FifthThirdBadge({ logoUrl }: { logoUrl?: string }) {
   return (
@@ -178,11 +172,6 @@ function MetricPill({ icon, label, value }: { icon: ReactNode; label: string; va
   );
 }
 
-function getComparisonMetricValue(row: ComparisonRow, metric: ComparisonMetric): number {
-  if (metric === 'likes') return row.likes;
-  return row.comments;
-}
-
 function formatMetricValue(value: number, metric: ComparisonMetric): string {
   if (metric === 'likes') return formatCompact(value);
   return formatNumber(Math.round(value * 10) / 10);
@@ -315,120 +304,14 @@ function BenchmarkMetricCard({
   );
 }
 
-function percentile(values: number[], ratio: number): number {
-  if (!values.length) return 0;
-  const sorted = [...values].sort((a, b) => a - b);
-  const index = (sorted.length - 1) * ratio;
-  const lower = Math.floor(index);
-  const upper = Math.ceil(index);
-  if (lower === upper) return sorted[lower];
-  const weight = index - lower;
-  return sorted[lower] * (1 - weight) + sorted[upper] * weight;
-}
-
-function BenchmarkRangeBar({
-  label,
-  metric,
-  rows,
-  campaignAverage,
-  recentAverage,
-}: {
-  label: string;
-  metric: ComparisonMetric;
-  rows: ComparisonRow[];
-  campaignAverage: number;
-  recentAverage: number;
-}) {
-  const recentRows = rows.filter((row) => !row.isCurrent);
-  const recentValues = recentRows
-    .map((row) => getComparisonMetricValue(row, metric))
-    .filter((value) => !(metric === 'likes' && value === 0));
-  const minValue = recentValues.length ? Math.min(...recentValues) : 0;
-  const maxValue = recentValues.length ? Math.max(...recentValues) : Math.max(campaignAverage, recentAverage, 1);
-  const q1 = percentile(recentValues, 0.25);
-  const q3 = percentile(recentValues, 0.75);
-  const rangeSpan = Math.max(maxValue - minValue, 1);
-  const toPercent = (value: number) => `${Math.min(Math.max(((value - minValue) / rangeSpan) * 100, 0), 100)}%`;
-  const outperformingShare = recentValues.length
-    ? Math.round((recentValues.filter((value) => value > campaignAverage).length / recentValues.length) * 100)
-    : 0;
-  const underperformingShare = recentValues.length
-    ? Math.round((recentValues.filter((value) => value < campaignAverage).length / recentValues.length) * 100)
-    : 0;
-
-  let insight = 'Campaign average matched the recent normal average.';
-  if (campaignAverage < recentAverage) {
-    insight = `Campaign average performed lower than ${outperformingShare}% of recent posts.`;
-  } else if (campaignAverage > recentAverage) {
-    insight = `Campaign average performed higher than ${underperformingShare}% of recent posts.`;
-  }
-
-  return (
-    <div className="rounded-[1.5rem] border border-gray-200 bg-white p-5 shadow-sm">
-      <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-        <div>
-          <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-gray-500">{label} Benchmark Range</p>
-          <p className="mt-1 text-sm text-gray-500">Campaign average against the athlete’s recent normal post range.</p>
-        </div>
-      </div>
-
-      <div className="mt-6">
-        <div className="relative h-14 rounded-full bg-gray-100 ring-1 ring-gray-200">
-          <div
-            className="absolute left-0 top-1/2 h-3 -translate-y-1/2 rounded-full bg-gray-200"
-            style={{ width: '100%' }}
-          />
-          <div
-            className="absolute top-1/2 h-3 -translate-y-1/2 rounded-full bg-gray-300"
-            style={{ left: toPercent(q1), width: `calc(${toPercent(q3)} - ${toPercent(q1)})` }}
-          />
-          <div
-            className="absolute top-1/2 h-6 w-[2px] -translate-x-1/2 -translate-y-1/2 bg-gray-500"
-            style={{ left: toPercent(recentAverage) }}
-            title={`Recent normal average: ${formatMetricValue(recentAverage, metric)}`}
-          />
-          <div
-            className="absolute top-1/2 h-7 w-[2px] -translate-x-1/2 -translate-y-1/2 bg-[#E00122]"
-            style={{ left: toPercent(campaignAverage) }}
-            title={`Campaign average: ${formatMetricValue(campaignAverage, metric)}`}
-          />
-          <div
-            className="absolute top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#E00122] shadow-[0_0_0_4px_rgba(224,1,34,0.10)]"
-            style={{ left: toPercent(campaignAverage) }}
-          />
-        </div>
-
-        <div className="mt-3 grid grid-cols-3 gap-3 text-xs font-semibold text-gray-500">
-          <div>
-            <span className="block text-[10px] uppercase tracking-[0.18em] text-gray-400">Min</span>
-            <span>{formatMetricValue(minValue, metric)}</span>
-          </div>
-          <div className="text-center">
-            <span className="block text-[10px] uppercase tracking-[0.18em] text-gray-400">Avg</span>
-            <span>{formatMetricValue(recentAverage, metric)}</span>
-          </div>
-          <div className="text-right">
-            <span className="block text-[10px] uppercase tracking-[0.18em] text-gray-400">Max</span>
-            <span>{formatMetricValue(maxValue, metric)}</span>
-          </div>
-        </div>
-
-        <p className="mt-4 text-sm text-gray-600">{insight}</p>
-      </div>
-    </div>
-  );
-}
-
 function AthleteBenchmarkPanel({
   athleteName,
   sport,
   summary,
-  rows,
 }: {
   athleteName: string;
   sport: string;
   summary: BenchmarkSummary;
-  rows: ComparisonRow[];
 }) {
   const campaignPostLabel = `${summary.campaignPostCount} campaign ${summary.campaignPostCount === 1 ? 'post' : 'posts'}`;
   const recentPostLabel = `${summary.populationSize} recent posts benchmarked`;
@@ -466,19 +349,6 @@ function AthleteBenchmarkPanel({
           recentAverage={summary.averageComments}
           lift={summary.liftVsAverageComments}
         />
-      </div>
-
-      <div className="mt-6 grid gap-4">
-        {BENCHMARK_METRICS.map((item) => (
-          <BenchmarkRangeBar
-            key={item.key}
-            label={item.label}
-            metric={item.key}
-            rows={rows}
-            campaignAverage={item.key === 'likes' ? summary.campaignAverageLikes : summary.campaignAverageComments}
-            recentAverage={item.key === 'likes' ? summary.averageLikes : summary.averageComments}
-          />
-        ))}
       </div>
     </section>
   );
@@ -618,14 +488,12 @@ export function CincinnatiFifthThirdCampaignReport({ onBack }: CincinnatiFifthTh
           athleteName="Tyler McKinley"
           sport={data.heroActivations.find((post) => post.athleteName === 'Tyler McKinley')?.sport || 'MENS_BASKETBALL'}
           summary={data.athleteBenchmarks.tylerMcKinley}
-          rows={data.benchmarkViews.tylerMcKinley.recentPosts}
         />
 
         <AthleteBenchmarkPanel
           athleteName="Mya Perry"
           sport={data.heroActivations.find((post) => post.athleteName === 'Mya Perry')?.sport || 'WOMENS_BASKETBALL'}
           summary={data.athleteBenchmarks.myaPerry}
-          rows={data.benchmarkViews.myaPerry.recentPosts}
         />
 
       </main>
