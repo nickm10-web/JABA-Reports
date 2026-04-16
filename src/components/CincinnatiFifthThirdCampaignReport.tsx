@@ -74,9 +74,9 @@ function FifthThirdBadge({ logoUrl }: { logoUrl?: string }) {
 
 function StatCard({ label, value, helper }: { label: string; value: string; helper?: string }) {
   return (
-    <div className="rounded-xl border border-white/15 bg-white/[0.08] p-3">
-      <p className="text-[10px] uppercase tracking-[0.22em] text-white/60">{label}</p>
-      <p className="mt-1 text-2xl font-black text-white">{value}</p>
+    <div className="rounded-xl border border-white/15 bg-white/[0.08] px-3 py-2.5">
+      <p className="text-[9px] uppercase tracking-[0.22em] text-white/60">{label}</p>
+      <p className="mt-1 text-xl font-black text-white">{value}</p>
       {helper ? <p className="mt-1 text-xs text-white/70">{helper}</p> : null}
     </div>
   );
@@ -92,18 +92,18 @@ function AthleteIdentityCard({
   imageUrl?: string;
 }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/[0.08] p-4">
+    <div className="rounded-2xl border border-white/10 bg-white/[0.08] px-4 py-3">
       <div className="flex items-center gap-3">
         {imageUrl ? (
-          <img src={imageUrl} alt={name} className="h-14 w-14 rounded-full object-cover ring-2 ring-white/25" />
+          <img src={imageUrl} alt={name} className="h-12 w-12 rounded-full object-cover ring-2 ring-white/25" />
         ) : (
-          <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/20 text-sm font-black text-white">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/20 text-sm font-black text-white">
             {name.split(' ').map((part) => part[0]).join('').slice(0, 2)}
           </div>
         )}
         <div>
-          <p className="text-lg font-black text-white">{name}</p>
-          <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/70">{formatSport(sport)}</p>
+          <p className="text-base font-black text-white">{name}</p>
+          <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/65">{formatSport(sport)}</p>
         </div>
       </div>
     </div>
@@ -116,17 +116,10 @@ function FeaturedAthletesPanel({
   athletes: Array<{ name: string; sport: string; imageUrl?: string }>;
 }) {
   return (
-    <div className="mt-7 rounded-[1.5rem] border border-white/15 bg-black/15 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-sm">
-      <div className="mb-4 flex items-center justify-between gap-3">
-        <div>
-          <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-white/45">Featured Athletes</p>
-          <p className="mt-1 text-sm text-white/70">Cincinnati athletes featured in the Fifth Third campaign</p>
-        </div>
-        <div className="rounded-full border border-white/15 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-white/60">
-          {athletes.length} profiles
-        </div>
-      </div>
-      <div className="grid gap-3 sm:grid-cols-2">
+    <div className="mt-6 rounded-[1.5rem] border border-white/15 bg-black/15 p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-sm">
+      <div className="grid gap-3 lg:grid-cols-[220px_1fr] lg:items-center">
+        <p className="px-1 text-[10px] font-bold uppercase tracking-[0.28em] text-white/50">Featured Athletes</p>
+        <div className="grid gap-3 sm:grid-cols-2">
         {athletes.map((athlete) => (
           <AthleteIdentityCard
             key={athlete.name}
@@ -135,6 +128,7 @@ function FeaturedAthletesPanel({
             imageUrl={athlete.imageUrl}
           />
         ))}
+        </div>
       </div>
     </div>
   );
@@ -437,15 +431,15 @@ export function CincinnatiFifthThirdCampaignReport({ onBack }: CincinnatiFifthTh
         }}
       >
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at top right, white 0, transparent 42%)' }} />
-        <div className="relative mx-auto max-w-7xl px-6 py-8 sm:px-8 lg:px-10">
+        <div className="relative mx-auto max-w-7xl px-6 py-6 sm:px-8 sm:py-8 lg:px-10">
           {onBack ? (
-            <button onClick={onBack} className="mb-8 flex items-center gap-2 text-sm font-semibold text-white/80 transition-colors hover:text-white">
+            <button onClick={onBack} className="mb-6 flex items-center gap-2 text-sm font-semibold text-white/80 transition-colors hover:text-white">
               <ArrowLeft className="h-4 w-4" />
               Back
             </button>
           ) : null}
 
-          <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="grid gap-6 lg:grid-cols-[1fr_420px] lg:items-start">
             <div>
               <div className="flex items-center gap-4">
                 {data.campaignMeta.schoolLogoUrl ? (
@@ -456,14 +450,13 @@ export function CincinnatiFifthThirdCampaignReport({ onBack }: CincinnatiFifthTh
                 <FifthThirdBadge logoUrl={data.campaignMeta.brandLogoUrl} />
               </div>
 
-              <p className="mt-8 text-xs font-bold uppercase tracking-[0.28em] text-white/70">Campaign Performance Report</p>
-              <h1 className="mt-3 max-w-4xl text-4xl font-black tracking-tight text-white sm:text-5xl">
+              <p className="mt-5 text-xs font-bold uppercase tracking-[0.28em] text-white/70">Campaign Performance Report</p>
+              <h1 className="mt-3 max-w-3xl text-4xl font-black tracking-tight text-white lg:text-[3rem] lg:leading-[0.98]">
                 {data.campaignMeta.title}
               </h1>
-              <FeaturedAthletesPanel athletes={athleteCards} />
             </div>
 
-            <div className="self-end rounded-[1.5rem] border border-white/15 bg-white/[0.06] p-3 backdrop-blur-sm">
+            <div className="rounded-[1.5rem] border border-white/15 bg-white/[0.06] p-3 backdrop-blur-sm">
               <p className="mb-3 px-1 text-[10px] font-bold uppercase tracking-[0.24em] text-white/50">Campaign Snapshot</p>
               <div className="grid gap-3 sm:grid-cols-2">
                 <StatCard label="Posts" value={formatNumber(data.campaignTotals.totalIncludedPosts)} />
@@ -473,6 +466,8 @@ export function CincinnatiFifthThirdCampaignReport({ onBack }: CincinnatiFifthTh
               </div>
             </div>
           </div>
+
+          <FeaturedAthletesPanel athletes={athleteCards} />
         </div>
       </section>
 
