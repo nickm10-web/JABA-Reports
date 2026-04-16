@@ -40,7 +40,7 @@ function formatSport(value: string): string {
 
 type ComparisonMetric = 'likes' | 'comments';
 
-const COMPARISON_METRICS: Array<{ key: ComparisonMetric; label: string }> = [
+const BENCHMARK_METRICS: Array<{ key: ComparisonMetric; label: string }> = [
   { key: 'likes', label: 'Likes' },
   { key: 'comments', label: 'Comments' },
 ];
@@ -183,14 +183,9 @@ function getComparisonMetricValue(row: ComparisonRow, metric: ComparisonMetric):
   return row.comments;
 }
 
-function formatComparisonMetricValue(row: ComparisonRow, metric: ComparisonMetric): string {
-  const value = getComparisonMetricValue(row, metric);
-
-  if (metric === 'likes') {
-    return value > 0 ? formatCompact(value) : 'Hidden';
-  }
-
-  return formatNumber(value);
+function formatMetricValue(value: number, metric: ComparisonMetric): string {
+  if (metric === 'likes') return formatCompact(value);
+  return formatNumber(Math.round(value * 10) / 10);
 }
 
 function ActivationCard({ post }: { post: HeroActivation }) {
@@ -265,61 +260,150 @@ function ActivationCard({ post }: { post: HeroActivation }) {
   );
 }
 
-function ComparisonBars({
-  rows,
+function BenchmarkMetricCard({
+  label,
   metric,
+  campaignAverage,
+  recentAverage,
+  lift,
 }: {
-  rows: ComparisonRow[];
+  label: string;
   metric: ComparisonMetric;
+  campaignAverage: number;
+  recentAverage: number;
+  lift: number;
 }) {
-  const maxValue = rows.reduce((max, row) => Math.max(max, getComparisonMetricValue(row, metric)), 0);
+  const maxValue = Math.max(campaignAverage, recentAverage, 1);
+  const campaignWidth = `${Math.max((campaignAverage / maxValue) * 100, 2)}%`;
+  const recentWidth = `${Math.max((recentAverage / maxValue) * 100, 2)}%`;
+  const formattedLift = formatLift(lift);
 
   return (
-    <div className="space-y-3">
-      {rows.map((row) => (
-        <div key={row.id}>
-          {row.isCurrent ? (
-            <div className="mb-1 pl-14 text-[10px] font-bold uppercase tracking-[0.24em] text-[#E00122]">Campaign Post</div>
-          ) : null}
-          <div className="flex items-center gap-3">
-            <div className="w-11 shrink-0 text-xs font-semibold text-gray-500">{row.dateLabel}</div>
-            <div className="h-3 flex-1 overflow-hidden rounded-full bg-gray-100">
-              <div
-                className={`h-full rounded-full ${row.isCurrent ? 'bg-[#E00122]' : 'bg-gray-300'}`}
-                style={{
-                  width: getComparisonMetricValue(row, metric) > 0
-                    ? `${Math.max((getComparisonMetricValue(row, metric) / Math.max(maxValue, 1)) * 100, 4)}%`
-                    : '0%',
-                }}
-              />
-            </div>
-            <div className={`w-16 shrink-0 text-right text-sm font-semibold ${row.isCurrent ? 'text-[#E00122]' : 'text-gray-500'}`}>
-              {formatComparisonMetricValue(row, metric)}
-            </div>
+    <div className="rounded-[1.5rem] border border-gray-200 bg-white p-5 shadow-sm">
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-gray-500">{label}</p>
+          <p className="mt-2 text-3xl font-black text-gray-950">{formatMetricValue(campaignAverage, metric)}</p>
+          <p className="mt-1 text-sm text-gray-500">Campaign Average</p>
+        </div>
+        <p className={`rounded-full px-3 py-1 text-xs font-black ${lift >= 0 ? 'bg-emerald-50 text-emerald-700' : 'bg-rose-50 text-rose-700'}`}>
+          {formattedLift}
+        </p>
+      </div>
+
+      <div className="mt-5 space-y-4">
+        <div>
+          <div className="mb-1 flex items-center justify-between text-xs font-semibold text-gray-500">
+            <span>Campaign Average</span>
+            <span className="text-[#E00122]">{formatMetricValue(campaignAverage, metric)}</span>
+          </div>
+          <div className="h-2.5 overflow-hidden rounded-full bg-gray-100">
+            <div className="h-full rounded-full bg-[#E00122]" style={{ width: campaignWidth }} />
           </div>
         </div>
-      ))}
+        <div>
+          <div className="mb-1 flex items-center justify-between text-xs font-semibold text-gray-500">
+            <span>Recent Normal Average</span>
+            <span>{formatMetricValue(recentAverage, metric)}</span>
+          </div>
+          <div className="h-2.5 overflow-hidden rounded-full bg-gray-100">
+            <div className="h-full rounded-full bg-gray-300" style={{ width: recentWidth }} />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
 
-function SummaryMetric({
+function DistributionRow({
   label,
-  campaignValue,
-  baselineValue,
-  lift,
+  rows,
+  metric,
+  maxValue,
+  color,
 }: {
   label: string;
-  campaignValue: string;
-  baselineValue: string;
-  lift: string;
+  rows: ComparisonRow[];
+  metric: ComparisonMetric;
+  maxValue: number;
+  color: 'campaign' | 'recent';
 }) {
   return (
-    <div className="rounded-2xl border border-gray-200 bg-white p-4">
-      <p className="text-[11px] uppercase tracking-[0.22em] text-gray-500">{label}</p>
-      <p className="mt-2 text-xl font-black text-gray-950">{campaignValue}</p>
-      <p className="mt-1 text-sm text-gray-500">Baseline {baselineValue}</p>
-      <p className={`mt-2 text-sm font-bold ${lift.startsWith('+') ? 'text-emerald-600' : 'text-rose-600'}`}>{lift} vs baseline</p>
+    <div className="grid gap-3 sm:grid-cols-[140px_1fr] sm:items-center">
+      <div>
+        <p className={`text-xs font-bold uppercase tracking-[0.2em] ${color === 'campaign' ? 'text-[#E00122]' : 'text-gray-500'}`}>{label}</p>
+        <p className="mt-1 text-xs text-gray-400">{rows.length} posts</p>
+      </div>
+      <div className="relative h-10 rounded-full bg-gray-50 ring-1 ring-gray-100">
+        {rows.map((row, index) => {
+          const value = getComparisonMetricValue(row, metric);
+          const isHiddenLike = metric === 'likes' && !row.isCurrent && value === 0;
+          const left = isHiddenLike ? 0 : (value / maxValue) * 100;
+          const titleValue = isHiddenLike ? 'Hidden' : formatMetricValue(value, metric);
+          return (
+            <span
+              key={`${row.id}-${metric}-${index}`}
+              title={`${row.dateLabel}: ${titleValue}`}
+              className={`absolute top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full ${
+                color === 'campaign'
+                  ? 'bg-[#E00122] shadow-[0_0_0_4px_rgba(224,1,34,0.10)]'
+                  : isHiddenLike
+                    ? 'border-2 border-gray-300 bg-white'
+                    : 'bg-gray-300'
+              }`}
+              style={{ left: `${Math.min(Math.max(left, 0), 100)}%` }}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function DistributionBand({
+  metric,
+  label,
+  rows,
+  campaignAverage,
+  recentAverage,
+}: {
+  metric: ComparisonMetric;
+  label: string;
+  rows: ComparisonRow[];
+  campaignAverage: number;
+  recentAverage: number;
+}) {
+  const campaignRows = rows.filter((row) => row.isCurrent);
+  const recentRows = rows.filter((row) => !row.isCurrent);
+  const visibleValues = rows
+    .map((row) => getComparisonMetricValue(row, metric))
+    .filter((value, index) => !(metric === 'likes' && !rows[index].isCurrent && value === 0));
+  const maxValue = Math.max(...visibleValues, campaignAverage, recentAverage, 1);
+  const campaignAveragePosition = `${Math.min(Math.max((campaignAverage / maxValue) * 100, 0), 100)}%`;
+  const recentAveragePosition = `${Math.min(Math.max((recentAverage / maxValue) * 100, 0), 100)}%`;
+
+  return (
+    <div className="rounded-[1.5rem] border border-gray-200 bg-white p-5 shadow-sm">
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-gray-500">{label} Distribution</p>
+          <p className="mt-1 text-sm text-gray-500">Where campaign posts land against recent normal content.</p>
+        </div>
+        <div className="flex gap-4 text-xs font-semibold text-gray-500">
+          <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-full bg-[#E00122]" />Campaign</span>
+          <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-full bg-gray-300" />Recent</span>
+        </div>
+      </div>
+
+      <div className="mt-6 space-y-5">
+        <div className="relative ml-0 sm:ml-[152px]">
+          <div className="h-px bg-gray-200" />
+          <div className="absolute -top-2 h-4 border-l-2 border-[#E00122]" style={{ left: campaignAveragePosition }} title={`Campaign average: ${formatMetricValue(campaignAverage, metric)}`} />
+          <div className="absolute -top-2 h-4 border-l-2 border-gray-400" style={{ left: recentAveragePosition }} title={`Recent normal average: ${formatMetricValue(recentAverage, metric)}`} />
+        </div>
+        <DistributionRow label="Recent Posts" rows={recentRows} metric={metric} maxValue={maxValue} color="recent" />
+        <DistributionRow label="Campaign Posts" rows={campaignRows} metric={metric} maxValue={maxValue} color="campaign" />
+      </div>
     </div>
   );
 }
@@ -335,63 +419,55 @@ function AthleteBenchmarkPanel({
   summary: BenchmarkSummary;
   rows: ComparisonRow[];
 }) {
-  const [comparisonMetric, setComparisonMetric] = useState<ComparisonMetric>('likes');
+  const campaignPostLabel = `${summary.campaignPostCount} campaign ${summary.campaignPostCount === 1 ? 'post' : 'posts'}`;
+  const recentPostLabel = `${summary.populationSize} recent posts benchmarked`;
 
   return (
-    <section className="rounded-3xl border border-gray-200 bg-[#FCFCFD] p-6 shadow-sm">
-      <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+    <section className="rounded-[2rem] border border-gray-200 bg-[#FCFCFD] p-6 shadow-sm">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#E00122]">Athlete Benchmark</p>
           <h2 className="mt-1 text-3xl font-black text-gray-950">{athleteName}</h2>
-          <p className="text-sm text-gray-500">{formatSport(sport)} · Benchmarked against {summary.populationSize} recent non-campaign athlete posts</p>
+          <p className="text-sm text-gray-500">{formatSport(sport)}</p>
         </div>
-        <div className="rounded-full bg-[#E00122]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.22em] text-[#E00122]">
-          {summary.campaignPostCount} campaign posts included
+        <div className="flex flex-wrap gap-2">
+          <div className="rounded-full bg-[#E00122]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#E00122]">
+            {campaignPostLabel}
+          </div>
+          <div className="rounded-full bg-gray-100 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-gray-500">
+            {recentPostLabel}
+          </div>
         </div>
       </div>
 
       <div className="mt-6 grid gap-4 md:grid-cols-2">
-        <SummaryMetric
-          label="Average Likes"
-          campaignValue={formatCompact(summary.campaignAverageLikes)}
-          baselineValue={formatCompact(summary.averageLikes)}
-          lift={formatLift(summary.liftVsAverageLikes)}
+        <BenchmarkMetricCard
+          label="Likes"
+          metric="likes"
+          campaignAverage={summary.campaignAverageLikes}
+          recentAverage={summary.averageLikes}
+          lift={summary.liftVsAverageLikes}
         />
-        <SummaryMetric
-          label="Average Comments"
-          campaignValue={formatNumber(Math.round(summary.campaignAverageComments * 10) / 10)}
-          baselineValue={formatNumber(Math.round(summary.averageComments * 10) / 10)}
-          lift={formatLift(summary.liftVsAverageComments)}
+        <BenchmarkMetricCard
+          label="Comments"
+          metric="comments"
+          campaignAverage={summary.campaignAverageComments}
+          recentAverage={summary.averageComments}
+          lift={summary.liftVsAverageComments}
         />
       </div>
 
-      <div className="mt-6 rounded-2xl border border-gray-200 bg-white p-5">
-        <div className="mb-4 flex items-center justify-between gap-3">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-gray-500">Recent Comparison</p>
-            <p className="text-sm text-gray-600">
-              Comparing <span className="font-semibold text-gray-900">{COMPARISON_METRICS.find((item) => item.key === comparisonMetric)?.label}</span> across the athlete’s recent posting history.
-            </p>
-          </div>
-          <div className="text-sm font-semibold text-gray-500">{rows.length} recent posts shown</div>
-        </div>
-        <div className="mb-4 flex flex-wrap gap-2">
-          {COMPARISON_METRICS.map((item) => (
-            <button
-              key={item.key}
-              type="button"
-              onClick={() => setComparisonMetric(item.key)}
-              className={`rounded-full px-3 py-1.5 text-xs font-bold uppercase tracking-[0.18em] transition-colors ${
-                comparisonMetric === item.key
-                  ? 'bg-[#E00122] text-white'
-                  : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
-              }`}
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
-        <ComparisonBars rows={rows} metric={comparisonMetric} />
+      <div className="mt-6 grid gap-4">
+        {BENCHMARK_METRICS.map((item) => (
+          <DistributionBand
+            key={item.key}
+            metric={item.key}
+            label={item.label}
+            rows={rows}
+            campaignAverage={item.key === 'likes' ? summary.campaignAverageLikes : summary.campaignAverageComments}
+            recentAverage={item.key === 'likes' ? summary.averageLikes : summary.averageComments}
+          />
+        ))}
       </div>
     </section>
   );
