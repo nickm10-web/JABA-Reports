@@ -74,7 +74,7 @@ function FifthThirdBadge({ logoUrl }: { logoUrl?: string }) {
 
 function HeroSupportStat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-2xl bg-white/[0.09] px-4 py-3 ring-1 ring-white/10">
+    <div className="rounded-2xl bg-white/[0.075] px-4 py-3 ring-1 ring-white/10">
       <p className="text-[9px] font-bold uppercase tracking-[0.24em] text-white/45">{label}</p>
       <p className="mt-1 text-xl font-black text-white">{value}</p>
     </div>
@@ -93,20 +93,20 @@ function HeroSnapshot({
   views: string;
 }) {
   return (
-    <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.09] p-5 shadow-2xl shadow-black/20 backdrop-blur-xl">
+    <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.075] p-5 shadow-2xl shadow-black/20 backdrop-blur-xl lg:mt-10">
       <div
-        className="absolute inset-0 opacity-[0.16]"
+        className="absolute inset-0 opacity-[0.10]"
         style={{
           backgroundImage:
-            'linear-gradient(135deg, transparent 0 42%, rgba(255,255,255,0.7) 42% 42.6%, transparent 42.6% 100%), linear-gradient(160deg, rgba(255,255,255,0.32), transparent 55%)',
+            'linear-gradient(150deg, rgba(255,255,255,0.32), transparent 54%)',
         }}
       />
-      <div className="absolute -right-12 -top-16 h-40 w-40 rounded-full bg-white/20 blur-3xl" />
+      <div className="absolute -right-12 -top-16 h-40 w-40 rounded-full bg-white/15 blur-3xl" />
       <div className="relative">
         <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-white/50">Campaign Snapshot</p>
-        <div className="mt-5 rounded-[1.5rem] bg-black/20 p-5 ring-1 ring-white/10">
+        <div className="mt-5 rounded-[1.5rem] bg-black/[0.18] p-5 ring-1 ring-white/10">
           <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-white/45">Views</p>
-          <p className="mt-1 text-6xl font-black leading-none tracking-tight text-white sm:text-7xl">{views}</p>
+          <p className="mt-1 text-5xl font-black leading-none tracking-tight text-white sm:text-6xl">{views}</p>
         </div>
         <div className="mt-4 grid grid-cols-3 gap-3">
           <HeroSupportStat label="Posts" value={posts} />
@@ -130,14 +130,14 @@ function FeaturedAthletePill({
   return (
     <div className="flex items-center gap-3">
       {imageUrl ? (
-        <img src={imageUrl} alt={name} className="h-12 w-12 rounded-full object-cover ring-2 ring-white/25" />
+        <img src={imageUrl} alt={name} className="h-14 w-14 rounded-full object-cover ring-2 ring-white/25" />
       ) : (
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/15 text-sm font-black text-white">
+        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/15 text-sm font-black text-white">
           {name.split(' ').map((part) => part[0]).join('').slice(0, 2)}
         </div>
       )}
       <div>
-        <p className="text-base font-black text-white">{name}</p>
+        <p className="text-lg font-black text-white">{name}</p>
         <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/55">{formatSport(sport)}</p>
       </div>
     </div>
@@ -150,9 +150,9 @@ function FeaturedAthletesPanel({
   athletes: Array<{ name: string; sport: string; imageUrl?: string }>;
 }) {
   return (
-    <div className="mt-8">
+    <div className="mt-10">
       <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-white/45">Featured Athletes</p>
-      <div className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
+      <div className="mt-5 flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-10">
         {athletes.map((athlete) => (
           <FeaturedAthletePill
             key={athlete.name}
@@ -538,13 +538,12 @@ export function CincinnatiFifthThirdCampaignReport({ onBack }: CincinnatiFifthTh
           background: 'linear-gradient(135deg, #0D0D12 0%, #2B0A12 34%, #7A1120 68%, #E00122 100%)',
         }}
       >
-        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 20% 24%, rgba(255,255,255,0.9) 0, transparent 32%), radial-gradient(circle at top right, white 0, transparent 42%)' }} />
+        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 18% 28%, rgba(255,255,255,0.72) 0, transparent 30%), radial-gradient(circle at top right, rgba(255,255,255,0.70) 0, transparent 42%)' }} />
         <div
-          className="absolute inset-0 opacity-[0.08]"
+          className="absolute inset-0 opacity-[0.075]"
           style={{
             backgroundImage:
-              'linear-gradient(115deg, transparent 0 46%, white 46% 46.25%, transparent 46.25% 100%), linear-gradient(25deg, transparent 0 58%, white 58% 58.2%, transparent 58.2% 100%)',
-            backgroundSize: '160px 160px, 220px 220px',
+              'linear-gradient(112deg, transparent 0 43%, rgba(255,255,255,0.9) 43% 43.35%, transparent 43.35% 100%)',
           }}
         />
         <div className="relative mx-auto max-w-7xl px-6 py-6 sm:px-8 sm:py-8 lg:px-10">
@@ -568,7 +567,7 @@ export function CincinnatiFifthThirdCampaignReport({ onBack }: CincinnatiFifthTh
                 <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/65">Campaign Performance Report</p>
               </div>
 
-              <h1 className="mt-6 max-w-2xl text-5xl font-black leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-[4.6rem]">
+              <h1 className="mt-6 max-w-[46rem] text-4xl font-black leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[3.7rem]">
                 Cincinnati × Fifth Third
                 <span className="block">Campaign Report</span>
               </h1>
