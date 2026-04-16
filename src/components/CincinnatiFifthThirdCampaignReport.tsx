@@ -47,7 +47,7 @@ const COMPARISON_METRICS: Array<{ key: ComparisonMetric; label: string }> = [
 
 function FifthThirdBadge({ logoUrl }: { logoUrl?: string }) {
   return (
-    <div className="w-16 h-16 rounded-2xl bg-white p-2 flex items-center justify-center overflow-hidden shadow-sm">
+    <div className="w-12 h-12 rounded-2xl bg-white p-2 flex items-center justify-center overflow-hidden shadow-sm">
       {logoUrl ? (
         <img
           src={logoUrl}
@@ -58,13 +58,13 @@ function FifthThirdBadge({ logoUrl }: { logoUrl?: string }) {
             img.style.display = 'none';
             const parent = img.parentElement;
             if (parent) {
-              parent.className = 'w-16 h-16 rounded-2xl bg-[#1D4ED8] text-white flex items-center justify-center text-[10px] font-black tracking-wide text-center leading-tight px-2 shadow-sm';
+              parent.className = 'w-12 h-12 rounded-2xl bg-[#1D4ED8] text-white flex items-center justify-center text-[8px] font-black tracking-wide text-center leading-tight px-1.5 shadow-sm';
               parent.textContent = 'FIFTH THIRD';
             }
           }}
         />
       ) : (
-        <div className="w-full h-full rounded-2xl bg-[#1D4ED8] text-white flex items-center justify-center text-[10px] font-black tracking-wide text-center leading-tight px-2">
+        <div className="w-full h-full rounded-2xl bg-[#1D4ED8] text-white flex items-center justify-center text-[8px] font-black tracking-wide text-center leading-tight px-1.5">
           FIFTH THIRD
         </div>
       )}
@@ -72,17 +72,53 @@ function FifthThirdBadge({ logoUrl }: { logoUrl?: string }) {
   );
 }
 
-function StatCard({ label, value, helper }: { label: string; value: string; helper?: string }) {
+function HeroSupportStat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-xl border border-white/15 bg-white/[0.08] px-3 py-2.5">
-      <p className="text-[9px] uppercase tracking-[0.22em] text-white/60">{label}</p>
+    <div className="rounded-2xl bg-white/[0.09] px-4 py-3 ring-1 ring-white/10">
+      <p className="text-[9px] font-bold uppercase tracking-[0.24em] text-white/45">{label}</p>
       <p className="mt-1 text-xl font-black text-white">{value}</p>
-      {helper ? <p className="mt-1 text-xs text-white/70">{helper}</p> : null}
     </div>
   );
 }
 
-function AthleteIdentityCard({
+function HeroSnapshot({
+  posts,
+  likes,
+  comments,
+  views,
+}: {
+  posts: string;
+  likes: string;
+  comments: string;
+  views: string;
+}) {
+  return (
+    <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.09] p-5 shadow-2xl shadow-black/20 backdrop-blur-xl">
+      <div
+        className="absolute inset-0 opacity-[0.16]"
+        style={{
+          backgroundImage:
+            'linear-gradient(135deg, transparent 0 42%, rgba(255,255,255,0.7) 42% 42.6%, transparent 42.6% 100%), linear-gradient(160deg, rgba(255,255,255,0.32), transparent 55%)',
+        }}
+      />
+      <div className="absolute -right-12 -top-16 h-40 w-40 rounded-full bg-white/20 blur-3xl" />
+      <div className="relative">
+        <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-white/50">Campaign Snapshot</p>
+        <div className="mt-5 rounded-[1.5rem] bg-black/20 p-5 ring-1 ring-white/10">
+          <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-white/45">Views</p>
+          <p className="mt-1 text-6xl font-black leading-none tracking-tight text-white sm:text-7xl">{views}</p>
+        </div>
+        <div className="mt-4 grid grid-cols-3 gap-3">
+          <HeroSupportStat label="Posts" value={posts} />
+          <HeroSupportStat label="Likes" value={likes} />
+          <HeroSupportStat label="Comments" value={comments} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function FeaturedAthletePill({
   name,
   sport,
   imageUrl,
@@ -92,19 +128,17 @@ function AthleteIdentityCard({
   imageUrl?: string;
 }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/[0.08] px-4 py-3">
-      <div className="flex items-center gap-3">
-        {imageUrl ? (
-          <img src={imageUrl} alt={name} className="h-12 w-12 rounded-full object-cover ring-2 ring-white/25" />
-        ) : (
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/20 text-sm font-black text-white">
-            {name.split(' ').map((part) => part[0]).join('').slice(0, 2)}
-          </div>
-        )}
-        <div>
-          <p className="text-base font-black text-white">{name}</p>
-          <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/65">{formatSport(sport)}</p>
+    <div className="flex items-center gap-3">
+      {imageUrl ? (
+        <img src={imageUrl} alt={name} className="h-12 w-12 rounded-full object-cover ring-2 ring-white/25" />
+      ) : (
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/15 text-sm font-black text-white">
+          {name.split(' ').map((part) => part[0]).join('').slice(0, 2)}
         </div>
+      )}
+      <div>
+        <p className="text-base font-black text-white">{name}</p>
+        <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/55">{formatSport(sport)}</p>
       </div>
     </div>
   );
@@ -116,19 +150,17 @@ function FeaturedAthletesPanel({
   athletes: Array<{ name: string; sport: string; imageUrl?: string }>;
 }) {
   return (
-    <div className="mt-6 rounded-[1.5rem] border border-white/15 bg-black/15 p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-sm">
-      <div className="grid gap-3 lg:grid-cols-[220px_1fr] lg:items-center">
-        <p className="px-1 text-[10px] font-bold uppercase tracking-[0.28em] text-white/50">Featured Athletes</p>
-        <div className="grid gap-3 sm:grid-cols-2">
+    <div className="mt-8">
+      <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-white/45">Featured Athletes</p>
+      <div className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
         {athletes.map((athlete) => (
-          <AthleteIdentityCard
+          <FeaturedAthletePill
             key={athlete.name}
             name={athlete.name}
             sport={athlete.sport}
             imageUrl={athlete.imageUrl}
           />
         ))}
-        </div>
       </div>
     </div>
   );
@@ -430,7 +462,15 @@ export function CincinnatiFifthThirdCampaignReport({ onBack }: CincinnatiFifthTh
           background: 'linear-gradient(135deg, #0D0D12 0%, #2B0A12 34%, #7A1120 68%, #E00122 100%)',
         }}
       >
-        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at top right, white 0, transparent 42%)' }} />
+        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 20% 24%, rgba(255,255,255,0.9) 0, transparent 32%), radial-gradient(circle at top right, white 0, transparent 42%)' }} />
+        <div
+          className="absolute inset-0 opacity-[0.08]"
+          style={{
+            backgroundImage:
+              'linear-gradient(115deg, transparent 0 46%, white 46% 46.25%, transparent 46.25% 100%), linear-gradient(25deg, transparent 0 58%, white 58% 58.2%, transparent 58.2% 100%)',
+            backgroundSize: '160px 160px, 220px 220px',
+          }}
+        />
         <div className="relative mx-auto max-w-7xl px-6 py-6 sm:px-8 sm:py-8 lg:px-10">
           {onBack ? (
             <button onClick={onBack} className="mb-6 flex items-center gap-2 text-sm font-semibold text-white/80 transition-colors hover:text-white">
@@ -439,35 +479,33 @@ export function CincinnatiFifthThirdCampaignReport({ onBack }: CincinnatiFifthTh
             </button>
           ) : null}
 
-          <div className="grid gap-6 lg:grid-cols-[1fr_420px] lg:items-start">
-            <div>
-              <div className="flex items-center gap-4">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_430px] lg:items-start">
+            <div className="max-w-3xl">
+              <div className="flex flex-wrap items-center gap-3">
                 {data.campaignMeta.schoolLogoUrl ? (
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/95 p-2 shadow-sm">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/95 p-2 shadow-sm">
                     <img src={data.campaignMeta.schoolLogoUrl} alt={CINCINNATI.shortName} className="h-full w-full object-contain" />
                   </div>
                 ) : null}
                 <FifthThirdBadge logoUrl={data.campaignMeta.brandLogoUrl} />
+                <div className="hidden h-8 w-px bg-white/20 sm:block" />
+                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/65">Campaign Performance Report</p>
               </div>
 
-              <p className="mt-5 text-xs font-bold uppercase tracking-[0.28em] text-white/70">Campaign Performance Report</p>
-              <h1 className="mt-3 max-w-3xl text-4xl font-black tracking-tight text-white lg:text-[3rem] lg:leading-[0.98]">
-                {data.campaignMeta.title}
+              <h1 className="mt-6 max-w-2xl text-5xl font-black leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-[4.6rem]">
+                Cincinnati × Fifth Third
+                <span className="block">Campaign Report</span>
               </h1>
+              <FeaturedAthletesPanel athletes={athleteCards} />
             </div>
 
-            <div className="rounded-[1.5rem] border border-white/15 bg-white/[0.06] p-3 backdrop-blur-sm">
-              <p className="mb-3 px-1 text-[10px] font-bold uppercase tracking-[0.24em] text-white/50">Campaign Snapshot</p>
-              <div className="grid gap-3 sm:grid-cols-2">
-                <StatCard label="Posts" value={formatNumber(data.campaignTotals.totalIncludedPosts)} />
-                <StatCard label="Likes" value={formatCompact(data.campaignTotals.likes)} />
-                <StatCard label="Comments" value={formatNumber(data.campaignTotals.comments)} />
-                <StatCard label="Views" value={formatCompact(data.campaignTotals.views)} />
-              </div>
-            </div>
+            <HeroSnapshot
+              posts={formatNumber(data.campaignTotals.totalIncludedPosts)}
+              likes={formatCompact(data.campaignTotals.likes)}
+              comments={formatNumber(data.campaignTotals.comments)}
+              views={formatCompact(data.campaignTotals.views)}
+            />
           </div>
-
-          <FeaturedAthletesPanel athletes={athleteCards} />
         </div>
       </section>
 
