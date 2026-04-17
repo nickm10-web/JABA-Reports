@@ -25,6 +25,7 @@ import { MarchMadness2026Report } from './components/MarchMadness2026Report';
 import { ConcretCreatineCampaign } from './components/ConcretCreatineCampaign';
 import { WendysPurdueCampaign } from './components/WendysPurdueCampaign';
 import { AuburnPlayground } from './components/AuburnPlayground';
+import { GenescoReport } from './components/GenescoReport';
 import {
   michiganConfig,
   alabamaConfig,
@@ -260,6 +261,10 @@ function AuburnPlaygroundRoute() {
   return <AuburnPlayground onBack={canGoBack ? () => navigate('/auburn') : undefined} />;
 }
 
+function GenescoRoute() {
+  return <GenescoReport />;
+}
+
 // Handle ?playfly query param - show Playfly hub without back button
 function HomeRoute() {
   const [searchParams] = useSearchParams();
@@ -359,6 +364,8 @@ function App() {
         <Route path="/wendys-purdue" element={<WendysPurdueRoute />} />
         <Route path="/wendys" element={<WendysPurdueRoute />} />
         <Route path="/auburn-playground" element={<AuburnPlaygroundRoute />} />
+        <Route path="/genesco" element={<GenescoRoute />} />
+        <Route path="/Genesco" element={<GenescoRoute />} />
         {/* Redirect any unknown routes to home */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
