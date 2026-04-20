@@ -8,7 +8,7 @@ import { ArrowLeft, Heart, Eye, MessageCircle, ExternalLink, Trophy } from 'luci
 const campaignData = {
   brand: {
     name: "Wendy's",
-    logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/32/Wendy%27s_full_logo_2012.svg/1200px-Wendy%27s_full_logo_2012.svg.png',
+    logo: '/images/wendys-logo.svg',
   },
   school: {
     name: 'Purdue',
@@ -29,7 +29,6 @@ const campaignData = {
     likes: 6001,
     comments: 34,
     videoViews: 6208476,
-    totalEmv: 3051.50,
   },
 };
 
@@ -45,7 +44,6 @@ const posts = [
     comments: 7,
     videoViews: 6208476,
     engagementRate: 0.043,
-    emv: 524.50,
     caption: "It's official: I've joined the Wendy's Dunk Team. Fries + a Frosty is the ultimate dunk. Enter to win prizes in the Dunkstakes by ordering off the Dunk Menu in the Wendy's app.",
     date: 'March 18, 2026',
     hashtags: ['#ad', '#WendysPartner'],
@@ -62,7 +60,6 @@ const posts = [
     comments: 27,
     videoViews: 0,
     engagementRate: 0.208,
-    emv: 2527.0,
     caption: "The Fry and Frosty combo is elite. This March, every time you order off of the Dunks Menu in the Wendy's app, you're entered to win cool prizes in the Dunkstakes!",
     date: 'March 16, 2026',
     hashtags: ['#ad', '#WendysPartner'],
@@ -253,22 +250,16 @@ export function WendysPurdueCampaign({ onBack }: WendysPurdueCampaignProps) {
             <MetricCard label="Likes" value={formatNumber(campaignData.metrics.likes)} />
             <MetricCard label="Comments" value={campaignData.metrics.comments.toString()} />
             <MetricCard label="Video Views" value={formatNumber(campaignData.metrics.videoViews)} />
-            <MetricCard label="Est. EMV" value={`$${formatNumber(campaignData.metrics.totalEmv)}`} />
             <MetricCard label="Avg. ER" value="0.13%" />
           </div>
         </div>
 
         {/* ─── Hero Stat - 6.2M Views ─── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4">
           <div className="rounded-xl p-6 text-center text-white" style={{ background: `linear-gradient(135deg, ${PURDUE_GOLD} 0%, #B8A070 100%)` }}>
             <p className="text-5xl font-black mb-2">6.2M</p>
             <p className="text-sm font-semibold uppercase tracking-wide opacity-90">Video Views</p>
             <p className="text-xs opacity-75 mt-1">Dunk Team video drove massive reach on Instagram</p>
-          </div>
-          <div className="rounded-xl p-6 text-center text-white" style={{ background: `linear-gradient(135deg, ${PURDUE_BLACK} 0%, #1a1a1a 100%)` }}>
-            <p className="text-5xl font-black mb-2">$3.1K</p>
-            <p className="text-sm font-semibold uppercase tracking-wide opacity-90">Total Estimated EMV</p>
-            <p className="text-xs opacity-75 mt-1">Based on likes and comments across both posts</p>
           </div>
         </div>
 
@@ -321,7 +312,7 @@ export function WendysPurdueCampaign({ onBack }: WendysPurdueCampaignProps) {
         {/* ─── Methodology ─── */}
         <div className="text-center py-4">
           <p className="text-xs text-gray-400">
-            Data sourced from Instagram. EMV calculated as (likes × $0.50) + (comments × $1.50). Views reported separately as a reach metric. Pull date: April 6, 2026.
+            Data sourced from Instagram. Views reported separately as a reach metric. Pull date: April 6, 2026.
           </p>
         </div>
       </div>
@@ -407,11 +398,6 @@ function PostCard({
             label="Comments"
             value={post.comments.toString()}
           />
-          <MetricPill
-            icon={<span className="text-xs">💰</span>}
-            label="EMV"
-            value={`$${formatNumber(post.emv)}`}
-          />
         </div>
       </div>
     </div>
@@ -423,14 +409,12 @@ const treyBaseline = {
   postCount: 51,
   avgLikes: 1429,
   avgComments: 54,
-  avgEmv: 795.91,
 };
 
 function BaselineCard({ post }: { post: typeof posts[0] }) {
   const rows = [
     { label: 'Likes', postVal: post.likes, avgVal: treyBaseline.avgLikes },
     { label: 'Comments', postVal: post.comments, avgVal: treyBaseline.avgComments },
-    { label: 'Est. EMV', postVal: post.emv, avgVal: treyBaseline.avgEmv },
   ];
 
   return (
@@ -468,12 +452,12 @@ function BaselineCard({ post }: { post: typeof posts[0] }) {
               <span className="text-sm text-gray-600 font-medium">{row.label}</span>
               <div className="text-center">
                 <span className="text-sm font-bold text-gray-900">
-                  {row.label === 'Est. EMV' ? `$${formatNumber(postVal)}` : formatNumber(postVal)}
+                  {formatNumber(postVal)}
                 </span>
               </div>
               <div className="flex items-center justify-center gap-2">
                 <span className="text-sm text-gray-500">
-                  {row.label === 'Est. EMV' ? `$${formatNumber(avgVal)}` : formatNumber(avgVal)}
+                  {formatNumber(avgVal)}
                 </span>
                 <span
                   className="text-xs font-bold px-1.5 py-0.5 rounded"
