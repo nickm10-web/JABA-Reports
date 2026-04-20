@@ -26,6 +26,7 @@ import { ConcretCreatineCampaign } from './components/ConcretCreatineCampaign';
 import { WendysPurdueCampaign } from './components/WendysPurdueCampaign';
 import { AuburnPlayground } from './components/AuburnPlayground';
 import { GenescoReport } from './components/GenescoReport';
+import { GenescoReportV2 } from './components/GenescoReportV2';
 import {
   michiganConfig,
   alabamaConfig,
@@ -265,6 +266,10 @@ function GenescoRoute() {
   return <GenescoReport />;
 }
 
+function GenescoV2Route() {
+  return <GenescoReportV2 />;
+}
+
 // Handle ?playfly query param - show Playfly hub without back button
 function HomeRoute() {
   const [searchParams] = useSearchParams();
@@ -366,6 +371,8 @@ function App() {
         <Route path="/auburn-playground" element={<AuburnPlaygroundRoute />} />
         <Route path="/genesco" element={<GenescoRoute />} />
         <Route path="/Genesco" element={<GenescoRoute />} />
+        <Route path="/genesco2" element={<GenescoV2Route />} />
+        <Route path="/Genesco2" element={<GenescoV2Route />} />
         {/* Redirect any unknown routes to home */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
