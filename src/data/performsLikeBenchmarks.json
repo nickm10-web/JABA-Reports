@@ -1,0 +1,13 @@
+{
+  "source": "JABA athletes-full universe, computed via generate_school_overperformers_data.py (build_perf_benchmarks). Medians per follower tier of signal = 0.6*ln(avgComments+1) + 0.4*ln(avgLikes+1).",
+  "benchmarks": [
+    { "label": "Nano", "followers": 2112, "signal": 4.467614436665817 },
+    { "label": "Micro", "followers": 18042, "signal": 5.519631080840221 },
+    { "label": "Mid-Tier", "followers": 68972, "signal": 6.106025662886574 },
+    { "label": "Macro-Low", "followers": 118720, "signal": 6.365882993734293 },
+    { "label": "Macro-Mid", "followers": 183305, "signal": 6.699522096479765 },
+    { "label": "Macro-High", "followers": 330067, "signal": 6.941119343459629 },
+    { "label": "Mega", "followers": 640833, "signal": 7.32200409720827 },
+    { "label": "Celebrity", "followers": 1992969.5, "signal": 7.916869681195244 }
+  ]
+}
