@@ -389,33 +389,6 @@ export function GenescoReportV2() {
             </div>
           </div>
 
-          <div className="hero-kpis">
-            <div className="hero-kpi">
-              <span className="hero-kpi-v">{data.counts.total}</span>
-              <span className="hero-kpi-l">Campaign posts</span>
-            </div>
-            <div className="hero-kpi">
-              <span className="hero-kpi-v">{data.counts.campaignAthletes}</span>
-              <span className="hero-kpi-l">Athletes</span>
-            </div>
-            <div className="hero-kpi">
-              <span className="hero-kpi-v">{data.counts.brands}</span>
-              <span className="hero-kpi-l">Brands</span>
-            </div>
-            <div className="hero-kpi">
-              <span className="hero-kpi-v">{fmtInt(data.totalLikes)}</span>
-              <span className="hero-kpi-l">Total likes generated</span>
-            </div>
-            <div className="hero-kpi">
-              <span className="hero-kpi-v">{fmtPctShort(data.avgCampaignER)}</span>
-              <span className="hero-kpi-l">Avg campaign ER</span>
-            </div>
-            <div className="hero-kpi">
-              <span className="hero-kpi-v">{fmtDelta(-data.avgCampaignDiscount)}</span>
-              <span className="hero-kpi-l">Avg lift vs organic</span>
-            </div>
-          </div>
-
           <p className="hero-meta">
             Data window: {fmtWindow(data.window)} &nbsp;·&nbsp; Reviewed {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })} &nbsp;·&nbsp; Baseline: each athlete's non-sponsored Instagram posts in the same window
           </p>
@@ -1286,10 +1259,6 @@ html,body,#root{background:${C.bg};}
 .hero-title{font-size:24px;font-weight:800;color:${C.text};letter-spacing:-0.03em;line-height:1.15;}
 .hero-sub{font-size:12px;color:${C.text3};margin-top:4px;letter-spacing:0.02em;}
 .hero-meta{font-size:12px;color:${C.text3};margin-top:20px;padding-top:20px;border-top:1px solid ${C.border};}
-.hero-kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;}
-.hero-kpi{display:flex;flex-direction:column;gap:4px;padding:16px 18px;background:${C.bgCard};border:1px solid ${C.border};border-radius:12px;}
-.hero-kpi-v{font-size:clamp(20px,2vw,26px);font-weight:800;color:${C.text};letter-spacing:-0.03em;font-feature-settings:"tnum";line-height:1.1;}
-.hero-kpi-l{font-size:10px;font-weight:600;color:${C.text3};letter-spacing:0.05em;text-transform:uppercase;}
 
 /* ── KPI row ── */
 .kpi-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
@@ -1503,7 +1472,6 @@ html,body,#root{background:${C.bg};}
   .pdr-pct-col,.pdr-status,.pdr-chevron{display:none;}
   .tier-row{grid-template-columns:180px 1fr 60px;}
   .tr-camp,.tr-flag{display:none;}
-  .hero-kpis{grid-template-columns:repeat(3,1fr);}
 }
 @media(max-width:900px){
   .summary-grid{grid-template-columns:1fr;}
@@ -1526,9 +1494,6 @@ html,body,#root{background:${C.bg};}
   .hero-logo{height:28px;}
   .hero-title{font-size:18px;}
   .hero-sub{font-size:11px;}
-  .hero-kpis{grid-template-columns:repeat(2,1fr);}
-  .hero-kpi{padding:12px 14px;}
-  .hero-kpi-v{font-size:19px;}
   .hero-meta{font-size:11px;line-height:1.5;margin-top:14px;padding-top:14px;}
 
   /* ── Tier View: stacked card per athlete ── */
