@@ -35,7 +35,6 @@ const campaignData = {
     likes: 190,
     comments: 17,
     videoViews: 1869,
-    totalEmv: 157.88,
   },
 };
 
@@ -50,7 +49,6 @@ const posts = [
     likes: 0,
     comments: 15,
     videoViews: 1869,
-    emv: 59.88,
     caption: 'Fuel different. Train different. Get the most out of your workouts with @concret_creatine\n\nCON-CRĒT Creatine HCI supports cellular energy, strength and muscle recovery. No bloating. No waiting. Just results.',
     date: 'March 27, 2026',
     hashtags: ['#ad', '#CONCRET'],
@@ -67,7 +65,6 @@ const posts = [
     likes: 190,
     comments: 2,
     videoViews: 0,
-    emv: 98.0,
     caption: 'Celebrating Champions Week with Con-Cret 🏀\n\nCreatine has been a key part of my routine! Every lift, sprint and dynamic movement depends on my strength and energy as a pro athlete.',
     date: 'March 1, 2026',
     hashtags: ['#ad', '#CONCRET', '#BeUnlimited'],
@@ -214,7 +211,6 @@ export function ConcretCreatineCampaign({ onBack }: ConcretCreatineCampaignProps
             <MetricCard label="Likes" value={formatNumber(campaignData.metrics.likes)} />
             <MetricCard label="Comments" value={campaignData.metrics.comments.toString()} />
             <MetricCard label="Video Views" value={formatNumber(campaignData.metrics.videoViews)} />
-            <MetricCard label="Est. EMV" value={`$${campaignData.metrics.totalEmv.toFixed(0)}`} />
           </div>
         </div>
 
@@ -265,8 +261,8 @@ export function ConcretCreatineCampaign({ onBack }: ConcretCreatineCampaignProps
                 image={campaignData.featuredAthletes[0].image}
                 imageError={!!athleteImageErrors[0]}
                 onImageError={() => setAthleteImageErrors(prev => ({ ...prev, [0]: true }))}
-                sponsored={{ likes: 0, likesHidden: true, comments: 15, views: 1869, emv: 59.88 }}
-                average={{ likes: 614, comments: 37, views: 0, emv: 362.83 }}
+                sponsored={{ likes: 0, likesHidden: true, comments: 15, views: 1869 }}
+                average={{ likes: 614, comments: 37, views: 0 }}
               />
               {/* Ariel Atkins Comparison */}
               <BaselineCard
@@ -275,8 +271,8 @@ export function ConcretCreatineCampaign({ onBack }: ConcretCreatineCampaignProps
                 image={campaignData.featuredAthletes[1].image}
                 imageError={!!athleteImageErrors[1]}
                 onImageError={() => setAthleteImageErrors(prev => ({ ...prev, [1]: true }))}
-                sponsored={{ likes: 190, likesHidden: false, comments: 2, views: 0, emv: 98.00 }}
-                average={{ likes: 337, comments: 11, views: 0, emv: 184.62 }}
+                sponsored={{ likes: 190, likesHidden: false, comments: 2, views: 0 }}
+                average={{ likes: 337, comments: 11, views: 0 }}
               />
             </div>
           </div>
@@ -285,7 +281,7 @@ export function ConcretCreatineCampaign({ onBack }: ConcretCreatineCampaignProps
         {/* ─── Methodology ─── */}
         <div className="text-center py-4">
           <p className="text-xs text-gray-400">
-            Data sourced from Instagram. EMV calculated as (likes × $0.50) + (comments × $1.50) + (views × $0.02). Shey Peddy&apos;s likes are hidden; EMV uses per-view rate. Pull date: April 6, 2026.
+            Data sourced from Instagram. Shey Peddy&apos;s likes are hidden on-platform. Pull date: April 6, 2026.
           </p>
         </div>
       </div>
@@ -373,11 +369,6 @@ function PostCard({
             label="Comments"
             value={post.comments.toString()}
           />
-          <MetricPill
-            icon={<span className="text-xs">💰</span>}
-            label="EMV"
-            value={`$${post.emv.toFixed(0)}`}
-          />
         </div>
       </div>
     </div>
@@ -410,8 +401,8 @@ function BaselineCard({
   image: string;
   imageError: boolean;
   onImageError: () => void;
-  sponsored: { likes: number; likesHidden: boolean; comments: number; views: number; emv: number };
-  average: { likes: number; comments: number; views: number; emv: number };
+  sponsored: { likes: number; likesHidden: boolean; comments: number; views: number };
+  average: { likes: number; comments: number; views: number };
 }) {
   const rows = [
     {
@@ -432,12 +423,6 @@ function BaselineCard({
       average: average.views > 0 ? formatNumber(average.views) : '—',
       delta: null as number | null,
     }] : []),
-    {
-      label: 'Est. EMV',
-      sponsored: `$${sponsored.emv.toFixed(0)}`,
-      average: `$${average.emv.toFixed(0)}`,
-      delta: average.emv > 0 ? ((sponsored.emv - average.emv) / average.emv) * 100 : null,
-    },
   ];
 
   return (
