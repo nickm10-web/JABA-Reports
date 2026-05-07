@@ -49,13 +49,6 @@ type VoiceAnalysisRow = {
   takeaway: string;
 };
 
-type Recommendation = {
-  title: string;
-  format: string;
-  concept: string;
-  whyItWorks: string;
-};
-
 type BenchmarkPost = {
   label: string;
   engagement: number;
