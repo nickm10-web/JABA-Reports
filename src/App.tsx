@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, Navigate, useNavigate, useSearchParams } from 'react-router-dom';
 import { SchoolReportsPage } from './components/SchoolReportsPage';
 import { AuburnReportHub } from './components/AuburnReportHub';
@@ -26,7 +27,7 @@ import { ConcretCreatineCampaign } from './components/ConcretCreatineCampaign';
 import { WendysPurdueCampaign } from './components/WendysPurdueCampaign';
 import { AuburnPlayground } from './components/AuburnPlayground';
 import { GenescoReport } from './components/GenescoReport';
-import { GenescoReportV2 } from './components/GenescoReportV2';
+import { MonsterMaxxReportMock } from './components/MonsterMaxxReportMock';
 import {
   michiganConfig,
   alabamaConfig,
@@ -50,6 +51,10 @@ import {
   uncConfig,
   texasConfig,
 } from './config/schoolConfigs';
+
+const GenescoReportV2 = lazy(() =>
+  import('./components/GenescoReportV2').then((module) => ({ default: module.GenescoReportV2 }))
+);
 
 // Wrapper components that provide navigation
 // Only show back button if user navigated from within the app
@@ -266,8 +271,18 @@ function GenescoRoute() {
   return <GenescoReport />;
 }
 
-function GenescoV2Route() {
-  return <GenescoReportV2 />;
+function Genesco2Route() {
+  return (
+    <Suspense fallback={<div style={{ minHeight: '100vh', background: '#000', color: '#fff', padding: 32 }}>Loading Cleat Crew report...</div>}>
+      <GenescoReportV2 />
+    </Suspense>
+  );
+}
+
+function MonsterMaxxRoute() {
+  const navigate = useNavigate();
+  const canGoBack = window.history.length > 2;
+  return <MonsterMaxxReportMock onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
 // Handle ?playfly query param - show Playfly hub without back button
@@ -371,8 +386,10 @@ function App() {
         <Route path="/auburn-playground" element={<AuburnPlaygroundRoute />} />
         <Route path="/genesco" element={<GenescoRoute />} />
         <Route path="/Genesco" element={<GenescoRoute />} />
-        <Route path="/genesco2" element={<GenescoV2Route />} />
-        <Route path="/Genesco2" element={<GenescoV2Route />} />
+        <Route path="/genesco2" element={<Genesco2Route />} />
+        <Route path="/Genesco2" element={<Genesco2Route />} />
+        <Route path="/monster-maxx" element={<MonsterMaxxRoute />} />
+        <Route path="/maxx-monster" element={<MonsterMaxxRoute />} />
         {/* Redirect any unknown routes to home */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
