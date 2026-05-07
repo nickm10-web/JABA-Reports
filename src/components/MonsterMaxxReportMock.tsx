@@ -187,7 +187,6 @@ const voiceAnalysisRows: VoiceAnalysisRow[] = [
   },
 ];
 
-const benchmarkTotalPosts = 500;
 
 const recommendations: Recommendation[] = [
   {
