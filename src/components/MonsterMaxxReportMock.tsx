@@ -1,6 +1,5 @@
 import {
   ArrowLeft,
-  BarChart3,
   ExternalLink,
   Heart,
   MessageCircle,
@@ -40,12 +39,6 @@ type GridPost = {
   image: string;
   href: string;
   isVideo?: boolean;
-};
-
-type FitMetric = {
-  label: string;
-  score: number;
-  note: string;
 };
 
 type VoiceAnalysisRow = {
@@ -180,24 +173,6 @@ const gridPosts: GridPost[] = [
   },
 ];
 
-const fitMetrics: FitMetric[] = [
-  {
-    label: 'Voice Match',
-    score: 78,
-    note: 'Best when Maxx sounds conversational or recap-driven. Weakens when copy reads like a roster announcement.',
-  },
-  {
-    label: 'Brand Naturalness',
-    score: 72,
-    note: 'Monster fits most naturally inside event recap and behind-the-scenes language, less so in overtly branded phrasing.',
-  },
-  {
-    label: 'Promo Pressure',
-    score: 38,
-    note: 'Lower is better here. The strongest posts avoid hard CTA language and keep the brand embedded in the moment.',
-  },
-];
-
 const voiceAnalysisRows: VoiceAnalysisRow[] = [
   {
     post: 'Post 1',
@@ -324,27 +299,6 @@ const athleteLeaderboard: BenchmarkAthlete[] = [
   { rank: 9, name: 'Lotte van Drunen', sport: 'Motocross', posts: 5, engagement: 16285 },
   { rank: 10, name: 'Vaughn Gittin Jr', sport: 'Drift', posts: 5, engagement: 15808 },
   { rank: 16, name: 'Maxx Crosby', sport: 'NFL', posts: 2, engagement: 13324, isMaxx: true },
-];
-
-const recommendations: Recommendation[] = [
-  {
-    title: 'No Off Switch',
-    format: '15-20 sec reel, fast cuts',
-    concept: 'Split-screen or rapid transitions showing Maxx’s intensity in three places: film room at 6AM (Monster on desk), weight room mid-lift (can in frame), game day pass rush. Text overlay: “some people have an off switch” [cut to Maxx] “I don’t” [Monster logo].',
-    whyItWorks: 'Monster’s brand is about energy and relentlessness. Maxx’s motor is his signature trait. This is the most natural fit possible. His identity IS their product benefit.',
-  },
-  {
-    title: 'Unleash the Chaos',
-    format: '30 sec reel, POV + game footage mashup',
-    concept: 'Opens with Maxx cracking open a Monster (tight shot, you hear the hiss). Cut to helmet cam POV of him running out of the tunnel. Then splice in his most violent pass rush moments: sacks, pressures, QB hits, synced to heavy bass. End card: “Chaos is a lifestyle. @monsterenergy”',
-    whyItWorks: 'Taps into Monster’s extreme sports aesthetic. Maxx’s playing style is chaotic, violent, uncontrollable. Exactly what Monster wants associated with their brand. Visceral and shareable.',
-  },
-  {
-    title: 'Fuel the Grind (Sobriety Angle)',
-    format: '45-60 sec reel, more narrative',
-    concept: 'Maxx voice-over about what fuels him now vs. what used to. Show him training, studying film, recovery work. “Used to look for energy in the wrong places. Now I find it in the work.” Monster cans placed naturally throughout: gym bag, locker, film room. Not a hard sell, just present. End with him on field, text: “Find your fuel. @monsterenergy”',
-    whyItWorks: 'This is the differentiated play. Maxx’s sobriety story is powerful and unique in the NFL. Monster can own the “clean energy” narrative in a way that feels real to him. It’s brand integration that actually means something because it connects to his actual journey.',
-  },
 ];
 
 function SectionHeader({ title }: { title: string }) {
@@ -511,26 +465,6 @@ function PostGridCard({ post }: { post: GridPost }) {
         </div>
       </div>
     </a>
-  );
-}
-
-function FitMetricCard({ item }: { item: FitMetric }) {
-  return (
-    <div className={`${jabaShell} rounded-[18px] p-4`}>
-      <div className="flex items-end justify-between gap-3">
-        <p className="text-[12px] font-black uppercase tracking-[0.08em] text-white/62">{item.label}</p>
-        <p className="text-[26px] font-black tracking-[-0.03em]" style={{ color: accent }}>
-          {item.score}
-        </p>
-      </div>
-      <div className="mt-3 h-2 overflow-hidden rounded-full bg-white/8">
-        <div
-          className="h-full rounded-full bg-[linear-gradient(90deg,#9AE600,#6FB000)]"
-          style={{ width: `${item.score}%` }}
-        />
-      </div>
-      <p className="mt-3 text-[13px] leading-6 text-white/82">{item.note}</p>
-    </div>
   );
 }
 
