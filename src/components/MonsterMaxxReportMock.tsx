@@ -57,27 +57,6 @@ type Recommendation = {
   whyItWorks: string;
 };
 
-type BenchmarkPost = {
-  label: string;
-  engagement: number;
-  percentile: number;
-  rank: number;
-};
-
-type BenchmarkThreshold = {
-  label: string;
-  value: string;
-};
-
-type BenchmarkAthlete = {
-  rank: number;
-  name: string;
-  sport: string;
-  posts: number;
-  engagement: number;
-  isMaxx?: boolean;
-};
-
 const accent = '#9AE600';
 
 const overviewCards: OverviewCard[] = [
@@ -208,45 +187,7 @@ const voiceAnalysisRows: VoiceAnalysisRow[] = [
   },
 ];
 
-const benchmarkPosts: BenchmarkPost[] = [
-  { label: 'Aug 20 · Roster Reveal', engagement: 15070, percentile: 54, rank: 230 },
-  { label: 'Aug 21 · “CHARGED UP”', engagement: 11579, percentile: 42, rank: 289 },
-];
-
-const benchmarkThresholds: BenchmarkThreshold[] = [
-  { label: 'P25', value: '8.2K' },
-  { label: 'Median', value: '13.9K' },
-  { label: 'P75', value: '26.7K' },
-  { label: 'P90', value: '54.4K' },
-];
-
 const benchmarkTotalPosts = 500;
-
-const benchmarkTopPosts: Array<{ rank: number; date: string; shortcode: string; engagement: number; label: string }> = [
-  { rank: 1, date: 'Sep 27, 2025', shortcode: 'DPHgI2EDK5z', engagement: 1970678, label: 'V8 Hayabusa mini-truck wheelies at LZ World Tour' },
-  { rank: 2, date: 'Mar 2, 2026', shortcode: 'DVZRdOrjDeO', engagement: 799646, label: 'Mega day in Sweden with the Solbergs (rally)' },
-  { rank: 3, date: 'Jan 4, 2026', shortcode: 'DTGMeq6Eaqc', engagement: 763150, label: 'Ben Richards FMX big-air extension' },
-];
-
-const formatEngagementShort = (n: number) => {
-  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(2)}M`;
-  if (n >= 1_000) return `${Math.round(n / 1000)}K`;
-  return `${n}`;
-};
-
-const athleteLeaderboard: BenchmarkAthlete[] = [
-  { rank: 1, name: 'Axell Hodges', sport: 'FMX', posts: 6, engagement: 47797 },
-  { rank: 2, name: 'Alex Pereira', sport: 'MMA', posts: 2, engagement: 42058 },
-  { rank: 3, name: 'Justin Gaethje', sport: 'MMA', posts: 2, engagement: 33154 },
-  { rank: 4, name: 'Dangerboy Deegan', sport: 'Motocross', posts: 9, engagement: 28989 },
-  { rank: 5, name: 'Marc Marquez', sport: 'MotoGP', posts: 8, engagement: 27185 },
-  { rank: 6, name: 'Nyjah Huston', sport: 'Skate', posts: 8, engagement: 23576 },
-  { rank: 7, name: 'Lando Norris', sport: 'F1', posts: 7, engagement: 21788 },
-  { rank: 8, name: 'Cole Davies', sport: 'Motocross', posts: 6, engagement: 17196 },
-  { rank: 9, name: 'Lotte van Drunen', sport: 'Motocross', posts: 5, engagement: 16285 },
-  { rank: 10, name: 'Vaughn Gittin Jr', sport: 'Drift', posts: 5, engagement: 15808 },
-  { rank: 16, name: 'Maxx Crosby', sport: 'NFL', posts: 2, engagement: 13324, isMaxx: true },
-];
 
 const recommendations: Recommendation[] = [
   {
@@ -546,22 +487,6 @@ export function MonsterMaxxReportMock({ onBack }: MonsterMaxxReportMockProps) {
                     <div className="leading-6 text-white/82">{row.takeaway}</div>
                   </div>
                 ))}
-              </div>
-            </div>
-
-            <div className="mt-6">
-              <SectionHeader title="Benchmark" />
-              <div className="grid gap-4 lg:grid-cols-[1.15fr_1fr]">
-                <BenchmarkDistributionBar />
-                <AthleteLeaderboardCard />
-              </div>
-              <div className="mt-4 rounded-[22px] border border-[#9AE600]/25 bg-[linear-gradient(135deg,rgba(154,230,0,0.08),rgba(154,230,0,0.02))] p-5">
-                <p className="text-[12px] font-black uppercase tracking-[0.08em]" style={{ color: accent }}>
-                  Strategic Read
-                </p>
-                <p className="mt-2 text-[15px] leading-7 text-white/92">
-                  Monster’s handle isn’t the lift surface for this partnership. Across 500 posts, Maxx lands at the median. Not a flop, but nowhere near the top tier. Their audience is action-sports-native and rewards big-moment combat-sports content, not NFL roster reveals. The recommendations below focus on Maxx’s own account because that’s where this collab actually compounds.
-                </p>
               </div>
             </div>
 
