@@ -58,7 +58,6 @@ const engagementBars: Array<{ label: string; maxx: number | null }> = [
   { label: 'Post 5', maxx: 2.5 },
 ];
 
-const likeTrend: Array<number | null> = [null, 14.8, 11.5, 5.7, 2.4];
 const commentTrend: Array<number | null> = [51, 225, 76, 76, 41];
 
 const metricRows: MetricRow[] = [
