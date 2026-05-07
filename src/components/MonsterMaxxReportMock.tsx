@@ -42,6 +42,12 @@ type GridPost = {
   isVideo?: boolean;
 };
 
+type FitMetric = {
+  label: string;
+  score: number;
+  note: string;
+};
+
 type VoiceAnalysisRow = {
   post: string;
   caption: string;
@@ -57,7 +63,32 @@ type Recommendation = {
   whyItWorks: string;
 };
 
+type BenchmarkPost = {
+  label: string;
+  engagement: number;
+  percentile: number;
+  rank: number;
+};
+
+type BenchmarkTopPost = {
+  rank: number;
+  date: string;
+  engagement: number;
+  label: string;
+};
+
+type BenchmarkAthlete = {
+  rank: number;
+  name: string;
+  sport: string;
+  posts: number;
+  engagement: number;
+  isMaxx?: boolean;
+};
+
 const accent = '#9AE600';
+const jabaShell =
+  'relative overflow-hidden rounded-[22px] border border-white/10 bg-[linear-gradient(180deg,#161616_0%,#101010_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.08),inset_0_18px_30px_rgba(255,255,255,0.03),0_20px_50px_rgba(0,0,0,0.3)] before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-8 before:bg-[linear-gradient(180deg,rgba(255,255,255,0.09),rgba(255,255,255,0))]';
 
 const overviewCards: OverviewCard[] = [
   { label: 'Collab Posts Detected', value: '5', icon: 'posts' },
@@ -149,6 +180,24 @@ const gridPosts: GridPost[] = [
   },
 ];
 
+const fitMetrics: FitMetric[] = [
+  {
+    label: 'Voice Match',
+    score: 78,
+    note: 'Best when Maxx sounds conversational or recap-driven. Weakens when copy reads like a roster announcement.',
+  },
+  {
+    label: 'Brand Naturalness',
+    score: 72,
+    note: 'Monster fits most naturally inside event recap and behind-the-scenes language, less so in overtly branded phrasing.',
+  },
+  {
+    label: 'Promo Pressure',
+    score: 38,
+    note: 'Lower is better here. The strongest posts avoid hard CTA language and keep the brand embedded in the moment.',
+  },
+];
+
 const voiceAnalysisRows: VoiceAnalysisRow[] = [
   {
     post: 'Post 1',
@@ -187,6 +236,95 @@ const voiceAnalysisRows: VoiceAnalysisRow[] = [
   },
 ];
 
+const benchmarkPosts: BenchmarkPost[] = [
+  { label: 'Aug 20 · Roster Reveal', engagement: 15070, percentile: 54, rank: 230 },
+  { label: 'Aug 21 · “CHARGED UP”', engagement: 11579, percentile: 42, rank: 289 },
+];
+
+const benchmarkTotalPosts = 500;
+
+const benchmarkTopPosts: BenchmarkTopPost[] = [
+  {
+    rank: 1,
+    date: 'Sep 27, 2025',
+    engagement: 1970678,
+    label: 'V8 Hayabusa mini-truck wheelies at LZ World Tour',
+  },
+  {
+    rank: 2,
+    date: 'Mar 2, 2026',
+    engagement: 799646,
+    label: 'Mega day in Sweden with the Solbergs (rally)',
+  },
+  {
+    rank: 3,
+    date: 'Jan 4, 2026',
+    engagement: 763150,
+    label: 'Ben Richards FMX big-air extension',
+  },
+  {
+    rank: 4,
+    date: 'Feb 8, 2026',
+    engagement: 512908,
+    label: 'SLS Sydney win with Rayssa Leal',
+  },
+  {
+    rank: 5,
+    date: 'Jan 19, 2026',
+    engagement: 476334,
+    label: 'Strickland TKO fight-night clip',
+  },
+  {
+    rank: 6,
+    date: 'Feb 14, 2026',
+    engagement: 401228,
+    label: 'Sydney street session with the Monster skate team',
+  },
+  {
+    rank: 7,
+    date: 'Jan 28, 2026',
+    engagement: 365904,
+    label: 'Cole Davies Supercross podium celebration',
+  },
+  {
+    rank: 8,
+    date: 'Apr 11, 2026',
+    engagement: 344281,
+    label: 'Marquez race-weekend paddock clip',
+  },
+  {
+    rank: 9,
+    date: 'Mar 18, 2026',
+    engagement: 331775,
+    label: 'Dangerboy Deegan whip montage',
+  },
+  {
+    rank: 10,
+    date: 'Feb 21, 2026',
+    engagement: 319442,
+    label: 'Nyjah Huston contest run recap',
+  },
+];
+
+const formatEngagementShort = (n: number) => {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(2)}M`;
+  if (n >= 1_000) return `${Math.round(n / 1000)}K`;
+  return `${n}`;
+};
+
+const athleteLeaderboard: BenchmarkAthlete[] = [
+  { rank: 1, name: 'Axell Hodges', sport: 'FMX', posts: 6, engagement: 47797 },
+  { rank: 2, name: 'Alex Pereira', sport: 'MMA', posts: 2, engagement: 42058 },
+  { rank: 3, name: 'Justin Gaethje', sport: 'MMA', posts: 2, engagement: 33154 },
+  { rank: 4, name: 'Dangerboy Deegan', sport: 'Motocross', posts: 9, engagement: 28989 },
+  { rank: 5, name: 'Marc Marquez', sport: 'MotoGP', posts: 8, engagement: 27185 },
+  { rank: 6, name: 'Nyjah Huston', sport: 'Skate', posts: 8, engagement: 23576 },
+  { rank: 7, name: 'Lando Norris', sport: 'F1', posts: 7, engagement: 21788 },
+  { rank: 8, name: 'Cole Davies', sport: 'Motocross', posts: 6, engagement: 17196 },
+  { rank: 9, name: 'Lotte van Drunen', sport: 'Motocross', posts: 5, engagement: 16285 },
+  { rank: 10, name: 'Vaughn Gittin Jr', sport: 'Drift', posts: 5, engagement: 15808 },
+  { rank: 16, name: 'Maxx Crosby', sport: 'NFL', posts: 2, engagement: 13324, isMaxx: true },
+];
 
 const recommendations: Recommendation[] = [
   {
@@ -239,7 +377,7 @@ function IconFor({ kind }: { kind: OverviewCard['icon'] }) {
 
 function OverviewMetric({ card }: { card: OverviewCard }) {
   return (
-    <div className="rounded-[18px] border border-white/12 bg-[#171717] px-4 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] sm:px-5 sm:py-4">
+    <div className={`${jabaShell} rounded-[18px] px-4 py-3 sm:px-5 sm:py-4`}>
       <div className="flex items-center gap-2 text-[#9AE600]">
         <IconFor kind={card.icon} />
       </div>
@@ -252,7 +390,7 @@ function OverviewMetric({ card }: { card: OverviewCard }) {
 function EngagementChart() {
   const maxValue = 16;
   return (
-    <div className="rounded-[22px] border border-white/10 bg-[#121212] p-4">
+    <div className={`${jabaShell} p-4`}>
       <div className="mb-4 flex items-center justify-between">
         <p className="text-[13px] font-black uppercase tracking-[0.06em] text-white">Engagement By Post</p>
         <div className="flex items-center gap-4 text-[11px] text-white/70">
@@ -285,7 +423,7 @@ function CommentsChart() {
   const valueToY = (value: number | null) => height - (Math.max(0.18, (value ?? 0) / max) * 130);
   const pts = commentTrend.map((v, i) => `${padX + i * step},${valueToY(v)}`).join(' ');
   return (
-    <div className="rounded-[22px] border border-white/10 bg-[#121212] p-4">
+    <div className={`${jabaShell} p-4`}>
       <div className="mb-4 flex items-center justify-between">
         <p className="text-[13px] font-black uppercase tracking-[0.06em] text-white">Comments By Post</p>
       </div>
@@ -316,7 +454,7 @@ function PostGridCard({ post }: { post: GridPost }) {
       href={post.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block overflow-hidden rounded-[22px] border border-white/10 bg-[#121212] transition hover:-translate-y-0.5 hover:border-[#9AE600]/50 hover:shadow-[0_20px_50px_rgba(0,0,0,0.35)]"
+      className={`${jabaShell} group block transition hover:-translate-y-0.5 hover:border-[#9AE600]/50 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.08),inset_0_18px_30px_rgba(255,255,255,0.03),0_24px_56px_rgba(0,0,0,0.42)]`}
     >
       <div className="relative aspect-[3/4] overflow-hidden bg-[linear-gradient(180deg,#1a1a1a,#111111)]">
         <img
@@ -352,27 +490,195 @@ function PostGridCard({ post }: { post: GridPost }) {
       </div>
       <div className="p-4">
         <div className="grid grid-cols-3 gap-2">
-          <div className="rounded-[14px] border border-white/8 bg-white/[0.03] px-3 py-2.5">
+          <div className="rounded-[14px] border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] px-3 py-2.5">
             <p className="text-[10px] font-bold uppercase tracking-[0.08em] text-white/42">Likes</p>
             <div className="mt-1 flex items-center gap-2 text-[14px] font-black text-white">
               <Heart className="h-4 w-4 text-white/72" />
               {post.likes}
             </div>
           </div>
-          <div className="rounded-[14px] border border-white/8 bg-white/[0.03] px-3 py-2.5">
+          <div className="rounded-[14px] border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] px-3 py-2.5">
             <p className="text-[10px] font-bold uppercase tracking-[0.08em] text-white/42">Comments</p>
             <div className="mt-1 flex items-center gap-2 text-[14px] font-black text-white">
               <MessageCircle className="h-4 w-4 text-white/72" />
               {post.comments}
             </div>
           </div>
-          <div className="rounded-[14px] border border-[#9AE600]/20 bg-[#9AE600]/[0.06] px-3 py-2.5">
+          <div className="rounded-[14px] border border-[#9AE600]/20 bg-[linear-gradient(180deg,rgba(154,230,0,0.13),rgba(154,230,0,0.05))] px-3 py-2.5">
             <p className="text-[10px] font-bold uppercase tracking-[0.08em] text-[#b4f636]/75">Engagement</p>
             <div className="mt-1 text-[14px] font-black text-[#d9ff86]">{post.engagement}</div>
           </div>
         </div>
       </div>
     </a>
+  );
+}
+
+function FitMetricCard({ item }: { item: FitMetric }) {
+  return (
+    <div className={`${jabaShell} rounded-[18px] p-4`}>
+      <div className="flex items-end justify-between gap-3">
+        <p className="text-[12px] font-black uppercase tracking-[0.08em] text-white/62">{item.label}</p>
+        <p className="text-[26px] font-black tracking-[-0.03em]" style={{ color: accent }}>
+          {item.score}
+        </p>
+      </div>
+      <div className="mt-3 h-2 overflow-hidden rounded-full bg-white/8">
+        <div
+          className="h-full rounded-full bg-[linear-gradient(90deg,#9AE600,#6FB000)]"
+          style={{ width: `${item.score}%` }}
+        />
+      </div>
+      <p className="mt-3 text-[13px] leading-6 text-white/82">{item.note}</p>
+    </div>
+  );
+}
+
+function AthleteLeaderboardRow({ row, maxValue }: { row: BenchmarkAthlete; maxValue: number }) {
+  const isMaxx = row.isMaxx;
+  return (
+    <div
+      className={`grid grid-cols-[28px_1fr_92px_60px] items-center gap-3 rounded-[10px] px-2 py-2 ${
+        isMaxx ? 'border border-[#9AE600]/40 bg-[#9AE600]/[0.06]' : ''
+      }`}
+    >
+      <div className={`text-[11px] font-black ${isMaxx ? 'text-[#9AE600]' : 'text-white/50'}`}>{row.rank}</div>
+      <div className="min-w-0">
+        <p className={`truncate text-[13px] ${isMaxx ? 'font-black text-white' : 'font-bold text-white/88'}`}>{row.name}</p>
+        <p className="text-[10px] text-white/45">{`${row.sport} · ${row.posts} posts`}</p>
+      </div>
+      <div className="h-1.5 overflow-hidden rounded-full bg-white/8">
+        <div
+          className="h-full rounded-full"
+          style={{ width: `${(row.engagement / maxValue) * 100}%`, backgroundColor: isMaxx ? '#d9ff86' : '#9AE600' }}
+        />
+      </div>
+      <div className={`text-right text-[12px] font-black ${isMaxx ? 'text-[#9AE600]' : 'text-white'}`}>
+        <div>{`${(row.engagement / 1000).toFixed(1)}K`}</div>
+        <div className="mt-0.5 text-[9px] font-bold uppercase tracking-[0.08em] text-white/40">avg eng./post</div>
+      </div>
+    </div>
+  );
+}
+
+function BenchmarkDistributionBar() {
+  return (
+    <div className={`${jabaShell} p-5`}>
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <p className="text-[13px] font-black uppercase tracking-[0.06em] text-white">Maxx vs Full Monster Feed</p>
+          <p className="mt-1 text-[11px] text-white/55">Last {benchmarkTotalPosts} @monsterenergy posts, ranked by engagement</p>
+        </div>
+      </div>
+
+      <div className="mt-6">
+        <div className="relative h-12">
+          <div className="absolute inset-y-[18px] left-0 right-0 rounded-full bg-[linear-gradient(90deg,rgba(154,230,0,0.12),rgba(154,230,0,0.55))]" />
+          {[25, 50, 75, 90].map((pct) => (
+            <div
+              key={pct}
+              className="absolute top-0 bottom-0 w-px bg-white/15"
+              style={{ left: `${pct}%` }}
+            />
+          ))}
+          {benchmarkPosts.map((post) => (
+            <div
+              key={post.label}
+              className="absolute top-1 flex flex-col items-center"
+              style={{ left: `${post.percentile}%`, transform: 'translateX(-50%)' }}
+              title={`${post.label} · ${post.engagement.toLocaleString()} engagement`}
+            >
+              <div className="h-10 w-3 rounded-full border-2 border-[#0b0b0b]" style={{ backgroundColor: accent }} />
+            </div>
+          ))}
+        </div>
+        <div className="relative mt-2 h-4 text-[10px] font-bold uppercase tracking-[0.06em] text-white/55">
+          {[
+            { pct: 25, label: 'P25' },
+            { pct: 50, label: 'Median' },
+            { pct: 75, label: 'P75' },
+            { pct: 90, label: 'P90' },
+          ].map((tick) => (
+            <div key={tick.pct} className="absolute" style={{ left: `${tick.pct}%`, transform: 'translateX(-50%)' }}>
+              {tick.label}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-6 space-y-3">
+        {benchmarkPosts.map((post) => (
+          <div key={post.label} className="flex items-center justify-between gap-4 rounded-[14px] border border-white/8 bg-white/[0.03] px-4 py-3">
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-[0.08em] text-white/45">{post.label}</p>
+              <p className="mt-1 text-[11px] font-black uppercase tracking-[0.06em]" style={{ color: accent }}>
+                {`${post.percentile}th percentile · rank ${post.rank} of ${benchmarkTotalPosts}`}
+              </p>
+            </div>
+            <div className="shrink-0 text-right">
+              <p className="text-[24px] font-black tracking-[-0.02em] text-white">
+                {post.engagement.toLocaleString()}
+              </p>
+              <p className="text-[9px] font-bold uppercase tracking-[0.08em] text-white/45">engagement</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-5">
+        <p className="text-[10px] font-bold uppercase tracking-[0.08em] text-white/45">Top 10 feed posts, for reference</p>
+        <div className="mt-3 space-y-3.5">
+          {benchmarkTopPosts.map((post) => (
+            <div key={`${post.rank}-${post.date}`} className="flex items-start justify-between gap-3">
+              <div className="flex min-w-0 items-start gap-3">
+                <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-[#9AE600]/30 bg-[#9AE600]/[0.08] text-[11px] font-black" style={{ color: accent }}>
+                  {post.rank}
+                </div>
+                <div className="min-w-0">
+                  <p className="text-[13px] font-black leading-5 text-white">{post.label}</p>
+                  <p className="mt-0.5 text-[10px] text-white/45">{post.date}</p>
+                </div>
+              </div>
+              <div className="shrink-0 text-right">
+                <p className="text-[16px] font-black" style={{ color: accent }}>
+                  {formatEngagementShort(post.engagement)}
+                </p>
+                <p className="text-[9px] font-bold uppercase tracking-[0.08em] text-white/40">engagement</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <p className="mt-3 text-[11px] leading-5 text-white/55">
+          Monster’s top tier is built on extreme stunts and motorsports moments, not athlete partnerships. Top 3 posts run 50 to 130 times Maxx’s engagement. Even P90 sits roughly 4 times above his stronger post.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function AthleteLeaderboardCard() {
+  const maxValue = Math.max(...athleteLeaderboard.map((a) => a.engagement));
+  const topTen = athleteLeaderboard.filter((a) => !a.isMaxx);
+  const maxx = athleteLeaderboard.find((a) => a.isMaxx);
+  return (
+    <div className={`${jabaShell} p-5`}>
+      <p className="text-[13px] font-black uppercase tracking-[0.06em] text-white">Athlete Leaderboard</p>
+      <p className="mt-1 text-[11px] text-white/55">Based on the last 500 @monsterenergy posts · average engagement per post</p>
+      <div className="mt-4 space-y-1.5">
+        {topTen.map((row) => (
+          <AthleteLeaderboardRow key={row.name} row={row} maxValue={maxValue} />
+        ))}
+        <div className="flex items-center gap-3 px-2 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-white/35">
+          <div className="h-px flex-1 bg-white/8" />
+          ranks 11 – 15
+          <div className="h-px flex-1 bg-white/8" />
+        </div>
+        {maxx ? <AthleteLeaderboardRow key={maxx.name} row={maxx} maxValue={maxValue} /> : null}
+      </div>
+      <p className="mt-4 text-[11px] leading-5 text-white/50">
+        Sample sizes vary. Combat-sports leaders (Pereira, Gaethje) anchor on single big-moment title fights; action-sports leaders (Hodges, Deegan, Marquez, Nyjah) draw from steady high-volume coverage.
+      </p>
+    </div>
   );
 }
 
@@ -434,7 +740,7 @@ export function MonsterMaxxReportMock({ onBack }: MonsterMaxxReportMockProps) {
 
             <div className="mt-6">
               <SectionHeader title="Campaign Metrics" />
-              <div className="overflow-hidden rounded-[20px] border border-white/10 bg-[#121212]">
+              <div className={`${jabaShell} rounded-[20px]`}>
                 <div className="grid grid-cols-7 gap-3 border-b border-white/10 px-4 py-3 text-[12px] font-black uppercase tracking-[0.05em]" style={{ color: accent }}>
                   <div>Post</div>
                   <div>Account</div>
@@ -469,7 +775,7 @@ export function MonsterMaxxReportMock({ onBack }: MonsterMaxxReportMockProps) {
 
             <div className="mt-6">
               <SectionHeader title="Caption Fit Analysis" />
-              <div className="overflow-hidden rounded-[20px] border border-white/10 bg-[#121212]">
+              <div className={`${jabaShell} rounded-[20px]`}>
                 <div className="grid grid-cols-[0.65fr_1.5fr_1fr_0.65fr_1.5fr] gap-3 border-b border-white/10 px-4 py-3 text-[12px] font-black uppercase tracking-[0.05em]" style={{ color: accent }}>
                   <div>Post</div>
                   <div>Caption</div>
@@ -490,9 +796,25 @@ export function MonsterMaxxReportMock({ onBack }: MonsterMaxxReportMockProps) {
             </div>
 
             <div className="mt-6">
+              <SectionHeader title="Benchmark" />
+              <div className="grid gap-4 lg:grid-cols-[1.15fr_1fr]">
+                <BenchmarkDistributionBar />
+                <AthleteLeaderboardCard />
+              </div>
+              <div className="mt-4 rounded-[22px] border border-[#9AE600]/25 bg-[linear-gradient(135deg,rgba(154,230,0,0.08),rgba(154,230,0,0.02))] p-5">
+                <p className="text-[12px] font-black uppercase tracking-[0.08em]" style={{ color: accent }}>
+                  Strategic Read
+                </p>
+                <p className="mt-2 text-[15px] leading-7 text-white/92">
+                  Monster’s handle isn’t the lift surface for this partnership. Across 500 posts, Maxx lands at the median. Not a flop, but nowhere near the top tier. Their audience is action-sports-native and rewards big-moment combat-sports content, not NFL roster reveals. The recommendations below focus on Maxx’s own account because that’s where this collab actually compounds.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-6">
               <SectionHeader title="Creator Studio Recommendations" />
               <div className="mb-4 grid gap-3 lg:grid-cols-2">
-                <div className="rounded-[18px] border border-white/10 bg-[#121212] p-4">
+                <div className={`${jabaShell} rounded-[18px] p-4`}>
                   <p className="text-[12px] font-black uppercase tracking-[0.08em]" style={{ color: accent }}>
                     Maxx Voice Model Notes
                   </p>
@@ -502,7 +824,7 @@ export function MonsterMaxxReportMock({ onBack }: MonsterMaxxReportMockProps) {
                     <p>Recurring cues include grit, reset, edge, presence, and simple emotional punctuation through emojis like `🦅`, `🖤`, `💎`, and `💪`.</p>
                   </div>
                 </div>
-                <div className="rounded-[18px] border border-white/10 bg-[#121212] p-4">
+                <div className={`${jabaShell} rounded-[18px] p-4`}>
                   <p className="text-[12px] font-black uppercase tracking-[0.08em]" style={{ color: accent }}>
                     Monster Voice Model Notes
                   </p>
@@ -513,44 +835,8 @@ export function MonsterMaxxReportMock({ onBack }: MonsterMaxxReportMockProps) {
                   </div>
                 </div>
               </div>
-              <div className="grid gap-3 lg:grid-cols-3">
-                {recommendations.map((item, index) => (
-                  <div key={item.title} className="rounded-[18px] border border-white/10 bg-[#121212] p-4">
-                    <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-full border border-[#9AE600]/60 bg-[#9AE600]/12 text-[#9AE600]">
-                      {index === 0 ? <Heart className="h-5 w-5" /> : index === 1 ? <BarChart3 className="h-5 w-5" /> : <Play className="h-5 w-5 fill-current" />}
-                    </div>
-                    <div className="flex items-start justify-between gap-3">
-                      <p className="text-[15px] font-black text-white">{item.title}</p>
-                      <span className="rounded-full border border-[#9AE600]/25 bg-[#9AE600]/10 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.08em] text-[#b4f636]">
-                        {item.format}
-                      </span>
-                    </div>
-                    <p className="mt-2 text-[14px] leading-6 text-white/86">{item.concept}</p>
-                    <div className="mt-3 space-y-2 border-t border-white/8 pt-3 text-[13px] leading-6">
-                      <p><span className="font-black text-white">Why it works:</span> <span className="text-white/78">{item.whyItWorks}</span></p>
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
 
-            <div className="mt-6">
-              <SectionHeader title="AI Insights" />
-              <div className="grid gap-3 lg:grid-cols-3">
-                {[
-                  'The highest-performing collaboration post leaned into clear announcement framing, but it sounded less like Maxx than the strongest native-feeling recap posts.',
-                  'Shorter BTS and event-recap captions produced the best balance of authenticity and brand visibility, which is the better long-term lane for this partnership.',
-                  'Monster performs best here when it behaves like part of Maxx’s environment, not when the caption reads like brand copy pasted onto his page.',
-                ].map((item, index) => (
-                  <div key={item} className="rounded-[18px] border border-white/10 bg-[#121212] p-4">
-                    <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-full border border-[#9AE600]/60 bg-[#9AE600]/12 text-[#9AE600]">
-                      {index === 0 ? <Heart className="h-5 w-5" /> : index === 1 ? <BarChart3 className="h-5 w-5" /> : index === 2 ? <Play className="h-5 w-5 fill-current" /> : <User className="h-5 w-5" />}
-                    </div>
-                    <p className="text-[14px] leading-6 text-white/92">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>
