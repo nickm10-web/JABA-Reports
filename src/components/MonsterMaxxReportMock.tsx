@@ -309,7 +309,6 @@ export function MonsterMaxxReportMock({ onBack }: MonsterMaxxReportMockProps) {
                     </span>
                   </h1>
                   <p className="mt-3 text-[18px] font-black uppercase tracking-[0.04em] text-white">Campaign Performance Report</p>
-                  <p className="mt-1 text-[14px] text-white/80">Instagram Collaboration Summary • 150 Maxx posts + 150 Monster posts reviewed</p>
                 </div>
                 <div className="hidden items-center justify-end sm:flex">
                   <img src="/monster-maxx/monster-logo.png" alt="Monster Energy logo" className="h-[138px] w-auto object-contain opacity-95" />
