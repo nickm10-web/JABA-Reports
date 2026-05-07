@@ -728,18 +728,10 @@ export function MonsterMaxxReportMock({ onBack }: MonsterMaxxReportMockProps) {
                 <BenchmarkDistributionBar />
                 <AthleteLeaderboardCard />
               </div>
-              <div className="mt-4 rounded-[22px] border border-[#9AE600]/25 bg-[linear-gradient(135deg,rgba(154,230,0,0.08),rgba(154,230,0,0.02))] p-5">
-                <p className="text-[12px] font-black uppercase tracking-[0.08em]" style={{ color: accent }}>
-                  Strategic Read
-                </p>
-                <p className="mt-2 text-[15px] leading-7 text-white/92">
-                  Monster’s handle isn’t the lift surface for this partnership. Across 500 posts, Maxx lands at the median. Not a flop, but nowhere near the top tier. Their audience is action-sports-native and rewards big-moment combat-sports content, not NFL roster reveals. The recommendations below focus on Maxx’s own account because that’s where this collab actually compounds.
-                </p>
-              </div>
             </div>
 
             <div className="mt-6">
-              <SectionHeader title="Creator Studio Recommendations" />
+              <SectionHeader title="JABA Insights" />
               <div className="mb-4 grid gap-3 lg:grid-cols-2">
                 <div className={`${jabaShell} rounded-[18px] p-4`}>
                   <p className="text-[12px] font-black uppercase tracking-[0.08em]" style={{ color: accent }}>
