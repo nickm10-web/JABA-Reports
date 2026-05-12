@@ -51,12 +51,6 @@ function formatNumber(value: number) {
   return value.toLocaleString();
 }
 
-function formatCompact(value: number) {
-  if (value >= 1_000_000) return `${(value / 1_000_000).toFixed(1).replace(/\.0$/, '')}M`;
-  if (value >= 1_000) return `${(value / 1_000).toFixed(1).replace(/\.0$/, '')}K`;
-  return `${value}`;
-}
-
 function formatDateLabel(value: string) {
   const date = new Date(value);
   return date.toLocaleDateString('en-US', {
@@ -103,12 +97,6 @@ function PostThumb({ src, fallbackLabel }: { src?: string; fallbackLabel: string
   );
 }
 
-function formatMultiplier(value: number) {
-  if (!Number.isFinite(value) || value <= 0) return '0x';
-  if (value >= 10) return `${Math.round(value)}x`;
-  return `${value.toFixed(1).replace(/\.0$/, '')}x`;
-}
-
 export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
   const [data, setData] = useState<CampaignDataset | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -147,16 +135,12 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
         benchmarkSorted.reduce((sum, post) => sum + parseEngagement(post), 0) /
           Math.max(benchmarkSorted.length, 1)
       ) || 0;
-    const xAboveAverage = avgBenchmarkEngagement
-      ? collabEngagement / avgBenchmarkEngagement
-      : 0;
 
     return {
       gunnerPost,
       collabPost,
       collabEngagement,
       avgBenchmarkEngagement,
-      xAboveAverage,
     };
   }, [data]);
 
@@ -187,23 +171,11 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
     collabPost,
     collabEngagement,
     avgBenchmarkEngagement,
-    xAboveAverage,
   } = derived;
 
   const totalPosts = data.brand_benchmark_summary.total_posts;
-  const outperformedCount = totalPosts - data.brand_benchmark_summary.rank;
   const comparablePosts = totalPosts - 1;
   const reportMonth = new Date(data.generated_at).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }).toUpperCase();
-
-  const benchmarkDates = data.brand_benchmark_posts.map((p) => new Date(p.date_utc).getTime());
-  const minBenchDate = new Date(Math.min(...benchmarkDates));
-  const maxBenchDate = new Date(Math.max(...benchmarkDates));
-  const minMonth = minBenchDate.toLocaleDateString('en-US', { month: 'short' });
-  const maxMonth = maxBenchDate.toLocaleDateString('en-US', { month: 'short' });
-  const benchmarkRange =
-    minBenchDate.getFullYear() === maxBenchDate.getFullYear()
-      ? `${minMonth}–${maxMonth} ${maxBenchDate.getFullYear()}`
-      : `${minMonth} ${minBenchDate.getFullYear()}–${maxMonth} ${maxBenchDate.getFullYear()}`;
 
   const topTen = (() => {
     const sorted = [...data.brand_benchmark_posts]
