@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Heart, MessageCircle, Trophy, Users } from 'lucide-react';
+import { Eye, Heart, MessageCircle, Trophy, Users } from 'lucide-react';
 
 interface GunnerPruittCampaignReportProps {
   onBack?: () => void;
@@ -402,6 +402,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
               label: 'Collab Post · Gunner Stockton × PruittHealth',
               sub: 'Hosted on @_drewbobo · Distributed across 3 accounts',
               post: collabPost,
+              views: 63900,
               callout: {
                 icon: <Trophy className="h-4 w-4" />,
                 headline: `RANKED #1 OF ${totalPosts} PRUITTHEALTH POSTS`,
@@ -414,6 +415,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
               label: 'Paid Partnership · Gunner Stockton',
               sub: 'Posted on @gstockton14 and @pruitthealth · 111K followers',
               post: gunnerPost,
+              views: 19100,
               callout: {
                 icon: <Users className="h-4 w-4" />,
                 headline: "RANKED #2 ON PRUITTHEALTH'S GRID",
@@ -421,7 +423,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
                 tone: 'muted' as const,
               },
             },
-          ].map(({ n, label, sub, post, callout }) => {
+          ].map(({ n, label, sub, post, views, callout }) => {
             const eng = parseEngagement(post);
             return (
               <a
@@ -460,6 +462,10 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
                         {formatNumber(eng)}
                       </p>
                       <div className="mt-4 flex items-center gap-4 border-t border-slate-200 pt-3 text-[12px] text-slate-700">
+                        <span className="flex items-center gap-1.5" title="Views">
+                          <Eye className="h-3.5 w-3.5 text-slate-500" />
+                          <span className="font-semibold tabular-nums">{formatNumber(views)}</span>
+                        </span>
                         <span className="flex items-center gap-1.5" title="Likes">
                           <Heart className="h-3.5 w-3.5 text-slate-500" />
                           <span className="font-semibold tabular-nums">{formatNumber(Number(post.likes))}</span>
