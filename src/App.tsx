@@ -28,6 +28,7 @@ import { WendysPurdueCampaign } from './components/WendysPurdueCampaign';
 import { AuburnPlayground } from './components/AuburnPlayground';
 import { GenescoReport } from './components/GenescoReport';
 import { MonsterMaxxReportMock } from './components/MonsterMaxxReportMock';
+import { GunnerPruittCampaignReport } from './components/GunnerPruittCampaignReport';
 import {
   michiganConfig,
   alabamaConfig,
@@ -285,6 +286,12 @@ function MonsterMaxxRoute() {
   return <MonsterMaxxReportMock onBack={canGoBack ? () => navigate('/') : undefined} />;
 }
 
+function GunnerPruittRoute() {
+  const navigate = useNavigate();
+  const canGoBack = window.history.length > 2;
+  return <GunnerPruittCampaignReport onBack={canGoBack ? () => navigate('/') : undefined} />;
+}
+
 // Handle ?playfly query param - show Playfly hub without back button
 function HomeRoute() {
   const [searchParams] = useSearchParams();
@@ -390,6 +397,8 @@ function App() {
         <Route path="/Genesco2" element={<Genesco2Route />} />
         <Route path="/monster-maxx" element={<MonsterMaxxRoute />} />
         <Route path="/maxx-monster" element={<MonsterMaxxRoute />} />
+        <Route path="/gunner-pruitt" element={<GunnerPruittRoute />} />
+        <Route path="/pruitt-gunner" element={<GunnerPruittRoute />} />
         {/* Redirect any unknown routes to home */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
