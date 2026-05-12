@@ -249,7 +249,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
       ],
     },
     {
-      label: 'GUNNER STOCKTON SUPPORT POST',
+      label: 'GUNNER STOCKTON PAID PARTNERSHIP',
       runtime: 27,
       shots: 6,
       subjects: [
@@ -412,12 +412,12 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
             {
               n: '2',
               label: 'Paid Partnership · Gunner Stockton',
-              sub: 'Posted on @gstockton14 · 111K followers',
+              sub: 'Posted on @gstockton14 and @pruitthealth · 111K followers',
               post: gunnerPost,
               callout: {
                 icon: <Users className="h-4 w-4" />,
-                headline: 'REACHED A SECOND AUDIENCE',
-                body: `Added ${formatNumber(parseEngagement(gunnerPost))} engagements on Gunner's own page, a different follower base than PruittHealth's.`,
+                headline: "RANKED #2 ON PRUITTHEALTH'S GRID",
+                body: `Ranked #2 on PruittHealth's grid with ${formatNumber(parseEngagement(gunnerPost))} engagements, plus a second placement on @gstockton14's feed (111K followers).`,
                 tone: 'muted' as const,
               },
             },
@@ -701,7 +701,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
           <div className="mt-3 h-[3px] w-12 bg-[#C9A35E]" />
           <div className="mt-5 rounded-md border border-[#E5DCC0] bg-[#F1E8D2] p-7">
             <p className="text-[12.5px] leading-relaxed text-slate-700">
-              The Collab + Paid Partnership combination delivered both volume (on the brand grid) and audience extension (on the athlete's account). Worth testing this two-post structure as a repeatable pattern for future PruittHealth athlete activations.
+              The Collab + Paid Partnership combination delivered the top two engagement spots on PruittHealth's grid, with the Paid Partnership extending reach into Gunner's 111K-follower audience as a second touchpoint. Worth testing this two-post structure as a repeatable pattern for future PruittHealth athlete activations.
             </p>
           </div>
         </div>
@@ -728,8 +728,8 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
             },
             {
               n: '03',
-              title: 'A second touchpoint from Gunner',
-              body: `Gunner's paid partnership post added ${formatNumber(parseEngagement(gunnerPost))} engagements on @gstockton14, reaching his 111K followers as a follow-up to the collab.`,
+              title: 'Two top posts, both on the brand grid',
+              body: `Gunner's paid partnership ranked #2 on PruittHealth's grid with ${formatNumber(parseEngagement(gunnerPost))} engagements, and reached his 111K followers on @gstockton14 as a second touchpoint.`,
             },
           ].map(({ n, title, body }) => (
             <div key={n} className="border-t border-slate-200 pt-5">
