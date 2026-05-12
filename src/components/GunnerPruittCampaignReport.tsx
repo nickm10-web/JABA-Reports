@@ -178,16 +178,22 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
   const reportMonth = new Date(data.generated_at).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }).toUpperCase();
 
   const topTen = (() => {
-    const sorted = [...data.brand_benchmark_posts]
-      .map((p) => {
-        const isCollab = p.post_url === collabPost.post_url;
-        return {
-          eng: isCollab ? collabEngagement : parseEngagement(p),
-          isCollab,
-          post: p,
-        };
-      })
-      .sort((a, b) => b.eng - a.eng);
+    const benchmarkEntries = data.brand_benchmark_posts.map((p) => {
+      const isCollab = p.post_url === collabPost.post_url;
+      return {
+        eng: isCollab ? collabEngagement : parseEngagement(p),
+        isCollab,
+        isPaidPartnership: false,
+        post: p,
+      };
+    });
+    const paidEntry = {
+      eng: parseEngagement(gunnerPost),
+      isCollab: false,
+      isPaidPartnership: true,
+      post: gunnerPost,
+    };
+    const sorted = [...benchmarkEntries, paidEntry].sort((a, b) => b.eng - a.eng);
     const top = sorted.slice(0, 10);
     const rest = sorted.slice(10);
     const restAvg = rest.length
@@ -632,7 +638,11 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
           </div>
           {topTen.top.map((d, i) => {
             const type = postTypeLabel(d.post);
-            const typeLabel = d.isCollab ? `Collab · ${type}` : type;
+            const typeLabel = d.isCollab
+              ? `Collab · ${type}`
+              : d.isPaidPartnership
+                ? `Paid · ${type}`
+                : type;
             const caption = d.isCollab
               ? 'From the field to our communities, teamwork is everything 🤝 Proud to partner with organiz…'
               : truncateCaption(d.post.caption);
