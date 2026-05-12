@@ -650,8 +650,8 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
               <div
                 key={`${d.post.shortcode}-${i}`}
                 className={`grid min-h-[72px] grid-cols-[60px_72px_1fr_120px_100px_88px] items-center gap-4 px-5 py-3 ${
-                  d.isCollab ? 'bg-[#F1E8D2]' : i === 0 ? '' : 'border-t border-slate-100'
-                }`}
+                  i === 0 ? '' : 'border-t border-slate-100'
+                } ${d.isCollab || d.isPaidPartnership ? 'bg-[#F1E8D2]' : ''}`}
               >
                 <span
                   className={`text-[14px] font-black tabular-nums ${
@@ -701,7 +701,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
           <div className="mt-3 h-[3px] w-12 bg-[#C9A35E]" />
           <div className="mt-5 rounded-md border border-[#E5DCC0] bg-[#F1E8D2] p-7">
             <p className="text-[12.5px] leading-relaxed text-slate-700">
-              The Collab + Paid Partnership combination delivered the top two engagement spots on PruittHealth's grid, with the Paid Partnership extending reach into Gunner's 111K-follower audience as a second touchpoint. Worth testing this two-post structure as a repeatable pattern for future PruittHealth athlete activations.
+              The Collab + Paid Partnership combination delivered the top two engagement spots on PruittHealth's grid, plus two touchpoints to Gunner's 111K followers on @gstockton14 and a reach extension to Drew Bobo's 11.6K via the Collab. Worth testing this two-post structure as a repeatable pattern for future PruittHealth athlete activations.
             </p>
           </div>
         </div>
@@ -728,7 +728,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
             },
             {
               n: '03',
-              title: 'Two top posts, both on the brand grid',
+              title: 'Two posts, top two ranks',
               body: `Gunner's paid partnership ranked #2 on PruittHealth's grid with ${formatNumber(parseEngagement(gunnerPost))} engagements, and reached his 111K followers on @gstockton14 as a second touchpoint.`,
             },
           ].map(({ n, title, body }) => (
