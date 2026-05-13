@@ -352,10 +352,29 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
                   aria-hidden
                 />
                 <div className="relative">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-white/50">
+                  {/* Top-left identification lockup: brand logo × athlete headshot */}
+                  <div className="mb-5 flex items-center gap-2.5">
+                    <img
+                      src={`${import.meta.env.BASE_URL}pruitt/pruitthealth-logo.png`}
+                      alt="PruittHealth"
+                      className="h-8 w-auto object-contain"
+                      style={{ maxWidth: '110px', filter: 'drop-shadow(0 1px 4px rgba(0,0,0,0.85)) brightness(0) invert(1)' }}
+                    />
+                    <span className="text-[13px] font-light text-white/35 leading-none select-none">×</span>
+                    <div className="h-8 w-8 overflow-hidden rounded-full ring-1 ring-white/20">
+                      <img
+                        src={`${import.meta.env.BASE_URL}esm/gunner.png`}
+                        alt="Gunner Stockton"
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                  </div>
+                  {/* Primary eyebrow: partnership name */}
+                  <p className="text-[13px] font-black uppercase tracking-[0.18em] text-[#C9A35E]">
                     Gunner Stockton ×&thinsp;PruittHealth
                   </p>
-                  <p className="mt-[6px] text-[11px] font-bold uppercase tracking-[0.22em] text-[#C9A35E]">
+                  {/* Secondary eyebrow: campaign structure */}
+                  <p className="mt-[6px] text-[10px] font-bold uppercase tracking-[0.22em] text-[#C9A35E]/70">
                     2-Post Campaign · 3 Handles · Collab + Paid Partnership
                   </p>
                   <h1 className="mt-3 text-[44px] font-black uppercase leading-[0.95] tracking-[-0.01em] text-white sm:text-[56px]">
