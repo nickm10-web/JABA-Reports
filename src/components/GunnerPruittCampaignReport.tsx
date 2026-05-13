@@ -373,10 +373,6 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
                   <p className="text-[13px] font-black uppercase tracking-[0.18em] text-[#C9A35E]">
                     Gunner Stockton ×&thinsp;PruittHealth
                   </p>
-                  {/* Secondary eyebrow: campaign structure */}
-                  <p className="mt-[6px] text-[10px] font-bold uppercase tracking-[0.22em] text-[#C9A35E]/70">
-                    2-Post Campaign · 3 Handles · Collab + Paid Partnership
-                  </p>
                   <h1 className="mt-3 text-[44px] font-black uppercase leading-[0.95] tracking-[-0.01em] text-white sm:text-[56px]">
                     Partnership
                     <br />
