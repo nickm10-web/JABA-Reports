@@ -418,7 +418,8 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
           </div>
 
           {/* KPI glass cards */}
-          <div className="mt-12 grid items-start gap-4 md:grid-cols-[1.5fr_1fr_1fr]">
+          <div className="mt-12 grid items-start gap-[20px] md:grid-cols-[1.4fr_1fr_1fr]">
+            {/* Card 1: hero stat — gold left bar */}
             <div className={`${GLASS_BASE} rounded-[20px] p-6`}>
               <GlassSheen />
               <div className="relative border-l-4 border-[#C9A35E] pl-5">
@@ -428,31 +429,33 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
                 <p className="mt-2 text-[88px] font-black leading-none tracking-[-0.04em] text-white">
                   #{data.brand_benchmark_summary.rank}
                 </p>
-                <p className="mt-2 text-[12px] text-white/75">of {totalPosts} PruittHealth posts</p>
+                <p className="mt-2 text-[11px] text-white/70">of {totalPosts} PruittHealth posts</p>
               </div>
             </div>
+            {/* Card 2: ratio — muted left bar */}
             <div className={`${GLASS_BASE} rounded-[20px] p-6`}>
               <GlassSheen />
-              <div className="relative">
+              <div className="relative border-l-[2px] border-white/20 pl-5">
                 <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/65">
                   vs. Brand Average
                 </p>
                 <p className="mt-2 font-mono text-[28px] font-bold leading-none tracking-tight text-white">
-                  93<span className="text-[#C9A35E]">x</span>
+                  93<span className="text-[#C9A35E]">×</span>
                 </p>
-                <p className="mt-1.5 text-[10px] text-white/70">PruittHealth's other {comparablePosts} grid posts averaged {avgBenchmarkEngagement} engagements</p>
+                <p className="mt-1.5 text-[11px] text-white/70">PruittHealth's other {comparablePosts} grid posts averaged {avgBenchmarkEngagement} engagements</p>
               </div>
             </div>
+            {/* Card 3: engagement — muted left bar */}
             <div className={`${GLASS_BASE} rounded-[20px] p-6`}>
               <GlassSheen />
-              <div className="relative">
+              <div className="relative border-l-[2px] border-white/20 pl-5">
                 <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/65">
                   Collab Engagement
                 </p>
                 <p className="mt-2 text-[28px] font-black leading-none tracking-tight text-white">
                   {formatNumber(collabEngagement)}
                 </p>
-                <p className="mt-1.5 text-[10px] text-white/70">
+                <p className="mt-1.5 text-[11px] text-white/70">
                   {formatNumber(Number(collabPost.likes))} likes · {formatNumber(Number(collabPost.comments))} comments
                 </p>
               </div>
