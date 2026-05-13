@@ -352,7 +352,10 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
                   aria-hidden
                 />
                 <div className="relative">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#C9A35E]">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-white/50">
+                    Gunner Stockton ×&thinsp;PruittHealth
+                  </p>
+                  <p className="mt-[6px] text-[11px] font-bold uppercase tracking-[0.22em] text-[#C9A35E]">
                     2-Post Campaign · 3 Handles · Collab + Paid Partnership
                   </p>
                   <h1 className="mt-3 text-[44px] font-black uppercase leading-[0.95] tracking-[-0.01em] text-white sm:text-[56px]">
@@ -364,6 +367,20 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
                   <p className="mt-4 text-[11px] leading-relaxed tracking-wide text-white/65">
                     Benchmarked against PruittHealth's {totalPosts} most recent grid posts.
                   </p>
+                  {/* In partnership with — logo mark */}
+                  <div className="mt-6">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40">
+                      In Partnership With
+                    </p>
+                    <div className="mt-2 inline-flex items-center rounded-md bg-white/[0.08] px-3 py-1.5 backdrop-blur-sm">
+                      <img
+                        src={`${import.meta.env.BASE_URL}pruitt/pruitthealth-logo.png`}
+                        alt="PruittHealth"
+                        className="h-6 w-auto object-contain"
+                        style={{ maxWidth: '130px', filter: 'brightness(0) invert(1) opacity(0.85)' }}
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
 
