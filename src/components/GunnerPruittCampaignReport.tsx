@@ -412,8 +412,8 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
                   aria-hidden
                 />
                 <img
-                  src={`${import.meta.env.BASE_URL}esm/thumb-collab.jpg`}
-                  alt="Collab post — Gunner Stockton and Drew Bobo"
+                  src={`${import.meta.env.BASE_URL}esm/thumb-paid.jpg`}
+                  alt="Paid partnership post — Gunner Stockton"
                   className="h-full w-full object-cover"
                   style={{ minHeight: '240px' }}
                 />
