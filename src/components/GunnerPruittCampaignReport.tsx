@@ -381,98 +381,62 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
       {/* HERO + KPI */}
       <div className="text-[#f5f1e8]">
 
-        <div className="mx-auto max-w-[1100px] px-8 pb-20 pt-8 lg:px-10">
-          {/* Top bar — sits directly over photo, no panel */}
-          <div className="flex items-start justify-between gap-6">
-            <img
-              src={`${import.meta.env.BASE_URL}esm/esm-white-gold.avif`}
-              alt="ESM"
-              className="h-12 w-auto object-contain drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]"
-            />
-            <div className="text-right">
-              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#f5f1e8] drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
-                Campaign Intelligence Report
-              </p>
-              <p className="mt-1 text-[11px] font-bold uppercase tracking-[0.18em] text-[#f5f1e8]/75 drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
-                {reportMonth}
-              </p>
-            </div>
-          </div>
+        {/* ESM logo — top-left page identifier */}
+        <div className="mx-auto max-w-[1100px] px-8 pt-8 lg:px-10">
+          <img
+            src={`${import.meta.env.BASE_URL}esm/esm-white-gold.avif`}
+            alt="ESM"
+            className="h-12 w-auto object-contain drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]"
+          />
+        </div>
 
-          {/* Hero glass panel */}
-          <div className={`mt-10 ${GLASS_BASE} rounded-[4px] overflow-hidden`}>
-            <GlassSheen />
-            <div className="relative grid lg:grid-cols-[55%_45%] lg:items-stretch">
-              {/* Left: text column with red gradient framing */}
-              <div className="relative p-8 lg:p-10">
-                <div className="relative">
-                  {/* Top-left identification lockup: brand logo × athlete headshot */}
-                  <div className="mb-5 flex items-center gap-2.5">
-                    <img
-                      src={`${import.meta.env.BASE_URL}pruitt/pruitthealth-logo.png`}
-                      alt="PruittHealth"
-                      className="h-8 w-auto object-contain"
-                      style={{ maxWidth: '110px', filter: 'drop-shadow(0 1px 4px rgba(0,0,0,0.85)) brightness(0) invert(1)' }}
-                    />
-                    <span className="text-[13px] font-light text-[#f5f1e8]/35 leading-none select-none">×</span>
-                    <div className="h-8 w-8 overflow-hidden rounded-full ring-1 ring-white/20">
-                      <img
-                        src={`${import.meta.env.BASE_URL}esm/gunner.png`}
-                        alt="Gunner Stockton"
-                        className="h-full w-full object-cover"
-                      />
-                    </div>
-                  </div>
-                  {/* Primary eyebrow: partnership name */}
-                  <p className="text-[13px] font-black uppercase tracking-[0.18em] text-[#c9a14a]">
-                    Gunner Stockton ×&thinsp;PruittHealth
-                  </p>
-                  <h1 className="mt-3 font-display text-[44px] font-black uppercase leading-[0.95] tracking-[-0.01em] text-[#f5f1e8] sm:text-[56px]">
-                    Partnership
-                    <br />
-                    Performance Report
-                  </h1>
-                  <div className="mt-4 h-px w-20 bg-white/30" />
-                  <p className="mt-4 text-[11px] leading-relaxed tracking-wide text-[#f5f1e8]/65">
-                    Benchmarked against PruittHealth's {totalPosts} most recent grid posts.
-                  </p>
-                  {/* In partnership with — logo mark */}
-                  <div className="mt-6">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f5f1e8]/40">
-                      In Partnership With
-                    </p>
-                    <div className="mt-2 inline-flex items-center rounded-[4px] border border-[rgba(245,241,232,0.12)] px-3 py-1.5">
-                      <img
-                        src={`${import.meta.env.BASE_URL}pruitt/pruitthealth-logo.png`}
-                        alt="PruittHealth"
-                        className="h-6 w-auto object-contain"
-                        style={{ maxWidth: '130px', filter: 'brightness(0) invert(1) opacity(0.85)' }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
+        {/* Hero — centered announcement-card composition */}
+        <div className="flex min-h-[78vh] flex-col items-center justify-center px-8 py-24 text-center lg:px-10">
+          {/* Eyebrow */}
+          <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#f5f1e8]/65">
+            Campaign Intelligence Report · {reportMonth}
+          </p>
 
-              {/* Right: collab post image, full height, bleeds to edge */}
-              <div className="relative hidden lg:block">
-                {/* Dark gradient blending left edge into text column */}
-                <div
-                  className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24"
-                  style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.72) 0%, transparent 100%)' }}
-                  aria-hidden
-                />
-                <img
-                  src={`${import.meta.env.BASE_URL}esm/thumb-paid.jpg`}
-                  alt="Paid partnership post — Gunner Stockton"
-                  className="h-full w-full object-cover"
-                  style={{ minHeight: '240px' }}
-                />
-              </div>
-            </div>
-          </div>
+          {/* Headline stack */}
+          <h1 className="mt-6 font-display uppercase">
+            {/* Line 1 — partnership line, smaller */}
+            <span className="block font-black leading-[1.0] tracking-[-0.01em] text-[#f5f1e8]"
+              style={{ fontSize: 'clamp(22px, 4.5vw, 68px)' }}>
+              Gunner Stockton × PruittHealth
+            </span>
+            {/* Line 2 — main title, large */}
+            <span className="block font-black leading-[0.88] tracking-[-0.02em] text-[#f5f1e8]"
+              style={{ fontSize: 'clamp(36px, 8vw, 96px)' }}>
+              Partnership Performance
+            </span>
+            {/* Line 3 — gold-foil accent word */}
+            <span
+              className="block font-black leading-[0.88] tracking-[-0.02em]"
+              style={{
+                fontSize: 'clamp(36px, 8vw, 96px)',
+                background: 'linear-gradient(180deg, #f3d77a 0%, #c9a14a 45%, #8a6a25 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                color: 'transparent',
+              }}
+            >
+              Report
+            </span>
+          </h1>
 
-          {/* KPI glass cards */}
-          <div className="mt-12 grid items-start gap-[20px] md:grid-cols-[1.4fr_1fr_1fr]">
+          {/* Gold rule */}
+          <div className="mt-8 h-px w-20 bg-[#c9a14a]" />
+
+          {/* Single body line */}
+          <p className="mt-5 text-[14px] leading-relaxed text-[#f5f1e8]/65">
+            Benchmarked against PruittHealth's {totalPosts} most recent grid posts.
+          </p>
+        </div>
+
+        <div className="mx-auto max-w-[1100px] px-8 pb-20 lg:px-10">
+          {/* KPI cards */}
+          <div className="grid items-start gap-[20px] md:grid-cols-[1.4fr_1fr_1fr]">
             {/* Card 1: hero stat — gold left bar */}
             <div className={`${GLASS_BASE} rounded-[4px] p-6`}>
               <GlassSheen />
