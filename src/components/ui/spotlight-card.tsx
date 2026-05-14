@@ -158,7 +158,7 @@ export function GlowCard({
     const dx = x - cardCenterX;
     const dy = y - cardCenterY;
     const distance = Math.sqrt(dx * dx + dy * dy);
-    const proximityRadius = 400;
+    const proximityRadius = 200;
     const proximity = Math.max(0, Math.min(1, 1 - distance / proximityRadius));
     el.style.setProperty("--proximity", proximity.toFixed(3));
   }, []);
