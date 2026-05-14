@@ -289,6 +289,10 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
   const comparablePosts = totalPosts - 1;
   const reportMonth = new Date(data.generated_at).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }).toUpperCase();
 
+  const paidEngagement = parseEngagement(gunnerPost);
+  const campaignTotal = collabEngagement + paidEngagement;
+  const campaignMultiplier = avgBenchmarkEngagement ? Math.round(campaignTotal / avgBenchmarkEngagement) : 0;
+
   const topTen = (() => {
     const benchmarkEntries = data.brand_benchmark_posts.map((p) => {
       const isCollab = p.post_url === collabPost.post_url;
@@ -485,49 +489,51 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
         </div>
 
         <div className="mx-auto max-w-[1100px] px-8 pb-20 lg:px-10">
-          {/* KPI cards */}
-          <div className="grid items-start gap-[20px] md:grid-cols-[1.4fr_1fr_1fr]">
-            {/* Card 1: hero stat — gold left bar */}
-            <div className={`${GLASS_BASE} rounded-[4px] p-6`}>
-              <GlassSheen />
-              <div className="relative border-l-4 border-[#c9a14a] pl-5">
-                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#f5f1e8]/65">
-                  PruittHealth Post Rank
-                </p>
-                <p className="mt-2 text-[88px] font-black leading-none tracking-[-0.04em] text-[#f5f1e8]">
-                  #{data.brand_benchmark_summary.rank}
-                </p>
-                <p className="mt-2 text-[11px] text-[#f5f1e8]/70">of {totalPosts} PruittHealth posts</p>
-              </div>
+          {/* KPI tiles — equal 3-col grid, no left-rail accents */}
+          <div className="grid grid-cols-3 gap-6">
+
+            {/* Tile 1: Campaign Rank */}
+            <div className="rounded-[4px] border border-[rgba(245,241,232,0.12)] bg-[#141414] p-8">
+              <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#f5f1e8]/55">
+                Campaign Rank · PruittHealth Grid
+              </p>
+              <p className="mt-3 font-display text-[56px] font-black leading-none text-[#f5f1e8]"
+                style={{ fontVariantNumeric: 'tabular-nums' }}>
+                #1 &amp; #2
+              </p>
+              <p className="mt-3 text-[13px] leading-snug text-[#f5f1e8]/55">
+                Top two posts of PruittHealth's last {totalPosts} grid posts.
+              </p>
             </div>
-            {/* Card 2: ratio — muted left bar */}
-            <div className={`${GLASS_BASE} rounded-[4px] p-6`}>
-              <GlassSheen />
-              <div className="relative border-l-[2px] border-white/20 pl-5">
-                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#f5f1e8]/65">
-                  vs. Brand Average
-                </p>
-                <p className="mt-2 font-mono text-[28px] font-bold leading-none tracking-tight text-[#f5f1e8]">
-                  93<span className="text-[#c9a14a]">×</span>
-                </p>
-                <p className="mt-1.5 text-[11px] text-[#f5f1e8]/70">PruittHealth's other {comparablePosts} grid posts averaged {avgBenchmarkEngagement} engagements</p>
-              </div>
+
+            {/* Tile 2: Total Campaign Engagement */}
+            <div className="rounded-[4px] border border-[rgba(245,241,232,0.12)] bg-[#141414] p-8">
+              <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#f5f1e8]/55">
+                Total Campaign Engagement
+              </p>
+              <p className="mt-3 font-display text-[56px] font-black leading-none text-[#f5f1e8]"
+                style={{ fontVariantNumeric: 'tabular-nums' }}>
+                {formatNumber(campaignTotal)}
+              </p>
+              <p className="mt-3 text-[13px] leading-snug text-[#f5f1e8]/55">
+                Combined engagement across the Collab ({formatNumber(collabEngagement)}) and Paid Partnership ({formatNumber(paidEngagement)}).
+              </p>
             </div>
-            {/* Card 3: engagement — muted left bar */}
-            <div className={`${GLASS_BASE} rounded-[4px] p-6`}>
-              <GlassSheen />
-              <div className="relative border-l-[2px] border-white/20 pl-5">
-                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#f5f1e8]/65">
-                  Collab Engagement
-                </p>
-                <p className="mt-2 text-[28px] font-black leading-none tracking-tight text-[#f5f1e8]">
-                  {formatNumber(collabEngagement)}
-                </p>
-                <p className="mt-1.5 text-[11px] text-[#f5f1e8]/70">
-                  {formatNumber(Number(collabPost.likes))} likes · {formatNumber(Number(collabPost.comments))} comments
-                </p>
-              </div>
+
+            {/* Tile 3: vs. Brand Average */}
+            <div className="rounded-[4px] border border-[rgba(245,241,232,0.12)] bg-[#141414] p-8">
+              <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#f5f1e8]/55">
+                vs. Brand Average
+              </p>
+              <p className="mt-3 font-display text-[56px] font-black leading-none text-[#f5f1e8]"
+                style={{ fontVariantNumeric: 'tabular-nums' }}>
+                {campaignMultiplier}×
+              </p>
+              <p className="mt-3 text-[13px] leading-snug text-[#f5f1e8]/55">
+                PruittHealth's other {comparablePosts} grid posts averaged {avgBenchmarkEngagement} engagements.
+              </p>
             </div>
+
           </div>
         </div>
       </div>
