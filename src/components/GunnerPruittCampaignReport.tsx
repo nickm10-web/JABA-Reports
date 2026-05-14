@@ -115,48 +115,6 @@ function FilmGrain() {
   );
 }
 
-// Full-page sparse gold-dust particles (SVG pattern, mix-blend-mode: screen).
-function GoldDust() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden
-      className="pointer-events-none fixed inset-0 h-full w-full"
-      style={{ zIndex: 56, opacity: 0.15, mixBlendMode: 'screen' }}
-    >
-      <defs>
-        <pattern id="gold-dust-pat" x="0" y="0" width="480" height="360" patternUnits="userSpaceOnUse">
-          <circle cx="23"  cy="17"  r="0.9" fill="#f3d77a" />
-          <circle cx="87"  cy="54"  r="0.6" fill="#c9a14a" />
-          <circle cx="156" cy="8"   r="1.1" fill="#f3d77a" />
-          <circle cx="198" cy="78"  r="0.7" fill="#e8b84a" />
-          <circle cx="234" cy="33"  r="0.5" fill="#f3d77a" />
-          <circle cx="312" cy="61"  r="0.8" fill="#c9a14a" />
-          <circle cx="367" cy="19"  r="0.6" fill="#f3d77a" />
-          <circle cx="45"  cy="98"  r="0.7" fill="#e8c070" />
-          <circle cx="123" cy="143" r="0.9" fill="#f3d77a" />
-          <circle cx="278" cy="112" r="0.5" fill="#c9a14a" />
-          <circle cx="389" cy="134" r="0.8" fill="#f3d77a" />
-          <circle cx="67"  cy="189" r="0.6" fill="#e8b84a" />
-          <circle cx="145" cy="201" r="1.0" fill="#f3d77a" />
-          <circle cx="223" cy="167" r="0.7" fill="#c9a14a" />
-          <circle cx="334" cy="183" r="0.5" fill="#f3d77a" />
-          <circle cx="8"   cy="234" r="0.8" fill="#e8c070" />
-          <circle cx="178" cy="256" r="0.6" fill="#f3d77a" />
-          <circle cx="289" cy="243" r="0.9" fill="#c9a14a" />
-          <circle cx="356" cy="278" r="0.5" fill="#f3d77a" />
-          <circle cx="98"  cy="301" r="0.7" fill="#e8b84a" />
-          <circle cx="421" cy="47"  r="0.6" fill="#f3d77a" />
-          <circle cx="455" cy="189" r="0.8" fill="#c9a14a" />
-          <circle cx="412" cy="312" r="0.5" fill="#f3d77a" />
-          <circle cx="18"  cy="339" r="0.9" fill="#e8c070" />
-          <circle cx="247" cy="347" r="0.6" fill="#f3d77a" />
-        </pattern>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#gold-dust-pat)" />
-    </svg>
-  );
-}
 
 export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
   const [data, setData] = useState<CampaignDataset | null>(null);
@@ -350,25 +308,22 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
     <div className="relative min-h-screen overflow-x-hidden text-[#f5f1e8]">
       {/* Full-page texture overlays */}
       <FilmGrain />
-      <GoldDust />
 
-      {/* Fixed photo backdrop — desaturated, amber-shifted, ~25% brightness */}
+      {/* Fixed backdrop — esm-bg.png tiled/covered, dark center overlay for legibility */}
       <div className="fixed inset-0 -z-10">
         <img
-          src={`${import.meta.env.BASE_URL}esm/gunner-bg.png`}
+          src={`${import.meta.env.BASE_URL}esm-bg.png`}
           alt=""
           aria-hidden
           className="h-full w-full object-cover"
-          style={{ filter: 'brightness(0.28) sepia(0.55) saturate(1.6) hue-rotate(-18deg)' }}
+          style={{ opacity: 0.45 }}
         />
-        {/* Radial vignette: center-lit, hard-fade to #0a0a0a at edges */}
+        {/* Darken center so text reads cleanly */}
         <div
           className="absolute inset-0"
-          style={{ background: 'radial-gradient(ellipse 72% 58% at 50% 32%, transparent 0%, rgba(10,10,10,0.5) 48%, rgba(10,10,10,0.88) 75%, #0a0a0a 100%)' }}
+          style={{ background: 'radial-gradient(ellipse 70% 60% at 50% 42%, rgba(0,0,0,0.55) 0%, transparent 100%)' }}
           aria-hidden
         />
-        {/* Bottom-half fill so lower sections read on pure dark */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0a0a]/40 to-[#0a0a0a]" aria-hidden />
       </div>
 
       {/* HERO + KPI */}
