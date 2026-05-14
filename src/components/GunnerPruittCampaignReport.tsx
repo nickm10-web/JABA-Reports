@@ -435,59 +435,131 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
           />
         </div>
 
-        {/* Hero — centered announcement-card composition */}
-        <div className="flex min-h-[78vh] flex-col items-center justify-center px-8 text-center lg:px-10" style={{ paddingTop: '120px', paddingBottom: '96px' }}>
-          {/* Eyebrow */}
-          <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#f5f1e8]/65">
-            Campaign Intelligence Report · {reportMonth}
-          </p>
+        {/* Hero — two-column grid on tablet/desktop, stacked on mobile */}
+        <style>{`
+          .hero-hl-lg { font-size: clamp(32px, 8vw, 48px); }
+          .hero-hl-sm { font-size: clamp(18px, 4.5vw, 32px); }
+          @media (min-width: 768px) and (max-width: 1023px) {
+            .hero-hl-lg { font-size: clamp(40px, 8vw, 72px); }
+            .hero-hl-sm { font-size: clamp(20px, 4.5vw, 48px); }
+          }
+          @media (min-width: 1024px) {
+            .hero-hl-lg { font-size: clamp(48px, 7vw, 96px); }
+            .hero-hl-sm { font-size: clamp(22px, 4.5vw, 68px); }
+          }
+        `}</style>
+        <section aria-labelledby="hero-heading">
+          <div
+            className="mx-auto grid max-w-[1200px] min-h-[78vh] items-center px-8 md:grid-cols-[3fr_2fr] lg:px-10"
+            style={{ paddingTop: '120px', paddingBottom: '96px' }}
+          >
 
-          {/* PruittHealth wordmark lockup — centered between eyebrow and headline */}
-          <div className="mt-4 flex items-center justify-center">
-            <img
-              src={`${import.meta.env.BASE_URL}pruitt/pruitthealth-logo.png`}
-              alt="PruittHealth"
-              className="h-9 w-auto object-contain"
-              style={{ filter: 'brightness(0) invert(1)', opacity: 0.75 }}
-            />
-          </div>
-
-          {/* Headline stack */}
-          <h1 className="mt-5 font-display uppercase">
-            {/* Line 1 — partnership line, smaller */}
-            <span className="block font-black leading-[1.0] tracking-[-0.01em] text-[#f5f1e8]"
-              style={{ fontSize: 'clamp(22px, 4.5vw, 68px)' }}>
-              Gunner Stockton <GoldFoil>×</GoldFoil> PruittHealth
-            </span>
-            {/* Line 2 — main title, large */}
-            <span className="block font-black leading-[0.88] tracking-[-0.02em] text-[#f5f1e8]"
-              style={{ fontSize: 'clamp(36px, 8vw, 96px)' }}>
-              Partnership Performance
-            </span>
-            {/* Line 3 — gold-foil accent word */}
-            <span
-              className="block font-black leading-[0.88] tracking-[-0.02em]"
-              style={{
-                fontSize: 'clamp(36px, 8vw, 96px)',
-                background: 'linear-gradient(180deg, #f3d77a 0%, #c9a14a 45%, #8a6a25 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                color: 'transparent',
-              }}
+            {/* LEFT — text content */}
+            <div
+              className="flex flex-col items-center text-center md:items-start md:text-left"
+              style={{ position: 'relative', zIndex: 1 }}
             >
-              Report
-            </span>
-          </h1>
+              {/* Eyebrow */}
+              <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#f5f1e8]/65">
+                Campaign Intelligence Report · {reportMonth}
+              </p>
 
-          {/* Gold rule */}
-          <div className="mt-8 h-px w-20 bg-[#c9a14a]" />
+              {/* PruittHealth wordmark */}
+              <div className="mt-4 flex items-center">
+                <img
+                  src={`${import.meta.env.BASE_URL}pruitt/pruitthealth-logo.png`}
+                  alt="PruittHealth"
+                  className="h-9 w-auto object-contain"
+                  style={{ filter: 'brightness(0) invert(1)', opacity: 0.75 }}
+                />
+              </div>
 
-          {/* Single body line */}
-          <p className="mt-5 text-[14px] leading-relaxed text-[#f5f1e8]/65">
-            Benchmarked against PruittHealth's {totalPosts} most recent grid posts.
-          </p>
-        </div>
+              {/* Mobile-only portrait — stacked between logo and headline */}
+              <div className="relative mt-6 block w-full md:hidden" style={{ maxHeight: '320px' }}>
+                <img
+                  src={`${import.meta.env.BASE_URL}Gunner-hero.png`}
+                  alt="Gunner Stockton, Georgia Bulldogs quarterback"
+                  className="mx-auto block"
+                  style={{
+                    maxHeight: '320px',
+                    width: 'auto',
+                    objectFit: 'contain',
+                    objectPosition: 'bottom center',
+                  }}
+                  loading="eager"
+                  sizes="100vw"
+                />
+              </div>
+
+              {/* Headline stack */}
+              <h1 id="hero-heading" className="mt-5 font-display uppercase">
+                {/* Line 1 — partnership eyebrow, smaller */}
+                <span className="hero-hl-sm block font-black leading-[1.0] tracking-[-0.01em] text-[#f5f1e8]">
+                  Gunner Stockton <GoldFoil>×</GoldFoil> PruittHealth
+                </span>
+                {/* Line 2 — main title */}
+                <span className="hero-hl-lg block font-black leading-[0.88] tracking-[-0.02em] text-[#f5f1e8]">
+                  Partnership Performance
+                </span>
+                {/* Line 3 — gold-foil accent */}
+                <span
+                  className="hero-hl-lg block font-black leading-[0.88] tracking-[-0.02em]"
+                  style={{
+                    background: 'linear-gradient(180deg, #f3d77a 0%, #c9a14a 45%, #8a6a25 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    color: 'transparent',
+                  }}
+                >
+                  Report
+                </span>
+              </h1>
+
+              {/* Gold rule */}
+              <div className="mt-8 h-px w-20 bg-[#c9a14a]" />
+
+              {/* Supporting line */}
+              <p className="mt-5 text-[14px] leading-relaxed text-[#f5f1e8]/65">
+                Benchmarked against PruittHealth's {totalPosts} most recent grid posts.
+              </p>
+            </div>
+
+            {/* RIGHT — portrait, tablet+ only */}
+            <div
+              className="relative hidden md:-ml-6 md:block lg:-ml-16"
+              style={{ alignSelf: 'stretch', zIndex: 2 }}
+            >
+              {/* Warm gold radial halo — grounds the figure without a hard edge */}
+              <div
+                aria-hidden
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  background: 'radial-gradient(600px circle at center, rgba(201,161,74,0.08) 0%, transparent 70%)',
+                  pointerEvents: 'none',
+                }}
+              />
+              {/* Portrait — flush right, feet anchored, breaks vertical containment */}
+              <img
+                src={`${import.meta.env.BASE_URL}Gunner-hero.png`}
+                alt="Gunner Stockton, Georgia Bulldogs quarterback"
+                style={{
+                  position: 'absolute',
+                  bottom: '-40px',
+                  right: 0,
+                  height: 'calc(100% + 80px)',
+                  width: '100%',
+                  objectFit: 'contain',
+                  objectPosition: 'bottom right',
+                }}
+                loading="eager"
+                sizes="(max-width: 1024px) 40vw, 480px"
+              />
+            </div>
+
+          </div>
+        </section>
 
         <div className="mx-auto max-w-[1100px] px-8 pb-20 lg:px-10">
           {/* KPI tiles — GlowCard spotlight, equal 3-col grid */}
