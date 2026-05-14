@@ -446,7 +446,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
             <img
               src={`${import.meta.env.BASE_URL}pruitt/pruitthealth-logo.png`}
               alt="PruittHealth"
-              className="h-6 w-auto object-contain"
+              className="h-9 w-auto object-contain"
               style={{ filter: 'brightness(0) invert(1)', opacity: 0.75 }}
             />
           </div>
