@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Eye, Heart, MessageCircle } from 'lucide-react';
-import { GlowCard } from './ui/spotlight-card';
+import { ArrowUpRight } from 'lucide-react';
 
 interface GunnerPruittCampaignReportProps {
   onBack?: () => void;
@@ -52,58 +51,11 @@ function formatNumber(value: number) {
   return value.toLocaleString();
 }
 
-function formatDateLabel(value: string) {
-  const date = new Date(value);
-  return date.toLocaleDateString('en-US', {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric',
-  });
-}
 
 function parseEngagement(post: PostRow) {
   return Number(post.likes || 0) + Number(post.comments || 0);
 }
 
-function postTypeLabel(p: PostRow) {
-  if (p.typename === 'GraphVideo') return 'REEL';
-  if (p.typename === 'GraphSidecar') return 'CAROUSEL';
-  return 'IMAGE';
-}
-
-function truncateCaption(c: string | undefined | null, max = 95) {
-  if (!c) return null;
-  const clean = c.replace(/\s+/g, ' ').trim();
-  if (!clean) return null;
-  if (clean.length <= max) return clean;
-  return clean.slice(0, max).trimEnd() + '…';
-}
-
-function PostThumb({ src, fallbackLabel }: { src?: string; fallbackLabel: string }) {
-  const [errored, setErrored] = useState(false);
-  if (!src || errored) {
-    return (
-      <div className="flex h-14 w-14 items-center justify-center rounded-[4px] border border-[rgba(245,241,232,0.12)] bg-[#141414] text-[9px] font-bold uppercase tracking-wider text-[#f5f1e8]/55">
-        {fallbackLabel}
-      </div>
-    );
-  }
-  return (
-    <img
-      src={src}
-      onError={() => setErrored(true)}
-      className="h-14 w-14 rounded-[4px] object-cover"
-      alt=""
-    />
-  );
-}
-
-// Flat panel treatment — used everywhere. No blur, no shadow, no rounded excess.
-const GLASS_BASE =
-  'relative overflow-hidden border border-[rgba(245,241,232,0.12)] bg-[#141414]';
-
-// Retained as no-op so call sites don't need to change.
-function GlassSheen() { return null; }
 
 // Gold-foil inline span — wraps any text in the brand gradient via background-clip.
 function GoldFoil({ children }: { children: React.ReactNode }) {
@@ -294,32 +246,28 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
   const campaignTotal = collabEngagement + paidEngagement;
   const campaignMultiplier = avgBenchmarkEngagement ? Math.round(campaignTotal / avgBenchmarkEngagement) : 0;
 
-  const topTen = (() => {
-    const benchmarkEntries = data.brand_benchmark_posts.map((p) => {
-      const isCollab = p.post_url === collabPost.post_url;
-      return {
-        eng: isCollab ? collabEngagement : parseEngagement(p),
-        isCollab,
-        isPaidPartnership: false,
-        post: p,
-      };
-    });
-    const paidEntry = {
-      eng: parseEngagement(gunnerPost),
-      isCollab: false,
-      isPaidPartnership: true,
-      post: gunnerPost,
-    };
-    const sorted = [...benchmarkEntries, paidEntry].sort((a, b) => b.eng - a.eng);
-    const top = sorted.slice(0, 10);
-    const rest = sorted.slice(10);
-    const restAvg = rest.length
-      ? Math.round(rest.reduce((s, d) => s + d.eng, 0) / rest.length)
-      : 0;
-    const runnerUp = top[1]?.eng ?? 0;
-    const collabVsRunnerUp = runnerUp ? collabEngagement / runnerUp : 0;
-    return { top, restAvg, runnerUp, collabVsRunnerUp };
+
+  // Top 10 non-campaign PruittHealth posts combined
+  const benchmarkTop10 = (() => {
+    const nonCampaign = data.brand_benchmark_posts
+      .filter(p => p.post_url !== collabPost.post_url && p.post_url !== gunnerPost.post_url)
+      .map(p => parseEngagement(p))
+      .sort((a, b) => b - a)
+      .slice(0, 10);
+    return nonCampaign.reduce((s, e) => s + e, 0);
   })();
+
+  // Insight 2: collab as % of all benchmark engagement
+  const benchmarkTotalEng = data.brand_benchmark_posts.reduce((s, p) => s + parseEngagement(p), 0);
+  const collabConcentrationPct = Math.round(collabEngagement / benchmarkTotalEng * 100);
+
+  // Insight 4: lowest monthly median before campaign (Feb 2026 = 4, peak Jul 2025 = 12)
+  // Hardcoded from data analysis — monthly medians of non-collab benchmark posts
+  const preCollabPeakMedian = 12;   // July 2025
+  const preCollabTroughMedian = 4;  // February 2026
+
+  // Insight 5: collab format advantage over solo paid post
+  const collabVsPaidRatio = (collabEngagement / paidEngagement).toFixed(1);
 
   type VisionLabel = { label: string; score: number };
   type VisionRead = {
@@ -449,13 +397,13 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
         `}</style>
         <section aria-labelledby="hero-heading">
           <div
-            className="mx-auto grid max-w-[1200px] min-h-[78vh] items-center px-8 md:grid-cols-[3fr_2fr] lg:px-10"
-            style={{ paddingTop: '120px', paddingBottom: '96px' }}
+            className="mx-auto max-w-[900px] min-h-[78vh] flex items-center px-8 lg:px-10"
+            style={{ paddingTop: '40px', paddingBottom: '96px' }}
           >
 
-            {/* LEFT — text content */}
+            {/* Text content */}
             <div
-              className="flex flex-col items-center text-center md:items-start md:text-left"
+              className="w-full flex flex-col items-center text-center"
               style={{ position: 'relative', zIndex: 1 }}
             >
               {/* Eyebrow */}
@@ -473,39 +421,22 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
                 />
               </div>
 
-              {/* Mobile-only portrait — stacked between logo and headline */}
-              <div className="relative mt-6 block w-full md:hidden" style={{ maxHeight: '320px' }}>
-                <img
-                  src={`${import.meta.env.BASE_URL}Gunner-hero.png`}
-                  alt="Gunner Stockton, Georgia Bulldogs quarterback"
-                  className="mx-auto block"
-                  style={{
-                    maxHeight: '320px',
-                    width: 'auto',
-                    objectFit: 'contain',
-                    objectPosition: 'bottom center',
-                  }}
-                  loading="eager"
-                  sizes="100vw"
-                />
-              </div>
-
               {/* Headline — two lines */}
               <h1 id="hero-heading" className="mt-5 font-display uppercase">
                 {/* Line 1: GUNNER STOCKTON × PRUITTHEALTH */}
                 <span className="hero-line1 block font-black leading-[1.0] tracking-[-0.01em] text-[#f5f1e8]">
                   Gunner Stockton <GoldFoil>×</GoldFoil> PruittHealth
                 </span>
-                {/* Line 2: PERFORMANCE REPORT — 16px gap, ink + gold-foil split */}
-                <span className="hero-line2 mt-4 block font-black leading-[0.95] tracking-[-0.02em]">
-                  <span className="text-[#f5f1e8]">Performance </span>
-                  <span style={{
+                {/* Line 2: PERFORMANCE REPORT — full gold */}
+                <span className="hero-line2 mt-4 block font-black leading-[0.95] tracking-[-0.02em]"
+                  style={{
                     background: 'linear-gradient(180deg, #f3d77a 0%, #c9a14a 45%, #8a6a25 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
                     color: 'transparent',
-                  }}>Report</span>
+                  }}>
+                  Performance Report
                 </span>
               </h1>
 
@@ -515,498 +446,470 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
               </p>
             </div>
 
-            {/* RIGHT — portrait, tablet+ only */}
-            <div
-              className="relative hidden md:-ml-6 md:block lg:-ml-8"
-              style={{ alignSelf: 'stretch', zIndex: 2 }}
-            >
-              {/* Warm gold radial halo — grounds the figure without a hard edge */}
-              <div
-                aria-hidden
-                style={{
-                  position: 'absolute',
-                  inset: 0,
-                  background: 'radial-gradient(600px circle at center, rgba(201,161,74,0.08) 0%, transparent 70%)',
-                  pointerEvents: 'none',
-                }}
-              />
-              {/* Portrait — flush right, feet anchored, breaks vertical containment */}
-              <img
-                src={`${import.meta.env.BASE_URL}Gunner-hero.png`}
-                alt="Gunner Stockton, Georgia Bulldogs quarterback"
-                style={{
-                  position: 'absolute',
-                  bottom: '-40px',
-                  right: 0,
-                  height: 'calc(100% + 80px)',
-                  width: '100%',
-                  objectFit: 'contain',
-                  objectPosition: 'bottom right',
-                }}
-                loading="eager"
-                sizes="(max-width: 1024px) 40vw, 480px"
-              />
-            </div>
 
           </div>
         </section>
 
-        <div className="mx-auto max-w-[1100px] px-8 pb-20 lg:px-10">
-          {/* KPI tiles — GlowCard spotlight, equal 3-col grid */}
-          <div className="grid grid-cols-3 gap-6">
-
-            {/* Tile 1: Campaign Rank */}
-            <GlowCard
-              glowColor="gold"
-              customSize
-              className="bg-[#141414] border border-[rgba(245,241,232,0.12)] p-8"
-              style={{ height: '200px' }}
-            >
-              <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#f5f1e8]/55">
+        {/* KPI strip — editorial ruled layout, no cards */}
+        <div
+          className="mx-auto max-w-[1100px] px-8 lg:px-10"
+          style={{ marginTop: '-110px', paddingBottom: '80px' }}
+        >
+          <div
+            className="grid grid-cols-3"
+            style={{ borderTop: '2px solid rgba(201,161,74,0.55)' }}
+          >
+            {/* Stat 1: Campaign Ranks */}
+            <div className="pr-10 pt-7 pb-8">
+              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#f5f1e8]/38">
                 Campaign Ranks
               </p>
-              <p className="mt-3 font-display text-[56px] font-black leading-none text-[#f5f1e8]"
-                style={{ fontVariantNumeric: 'tabular-nums' }}>
+              <p
+                className="mt-2 font-display font-black leading-none"
+                style={{
+                  fontSize: '68px',
+                  fontVariantNumeric: 'tabular-nums',
+                  background: 'linear-gradient(180deg, #f3d77a 0%, #c9a14a 45%, #8a6a25 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  color: 'transparent',
+                }}
+              >
                 #1 &amp; #2
               </p>
-              <p className="mt-3 text-[13px] leading-snug text-[#f5f1e8]/55">
+              <p className="mt-3 text-[12px] leading-snug text-[#f5f1e8]/42">
                 Top two posts of PruittHealth's last {totalPosts} grid posts.
               </p>
-            </GlowCard>
+            </div>
 
-            {/* Tile 2: Total Campaign Engagement */}
-            <GlowCard
-              glowColor="gold"
-              customSize
-              className="bg-[#141414] border border-[rgba(245,241,232,0.12)] p-8"
-              style={{ height: '200px' }}
+            {/* Stat 2: Total Campaign Engagement */}
+            <div
+              className="px-10 pt-7 pb-8"
+              style={{ borderLeft: '1px solid rgba(245,241,232,0.1)' }}
             >
-              <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#f5f1e8]/55">
-                Total Campaign Engagement
+              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#f5f1e8]/38">
+                Total Engagement
               </p>
-              <p className="mt-3 font-display text-[56px] font-black leading-none text-[#f5f1e8]"
-                style={{ fontVariantNumeric: 'tabular-nums' }}>
+              <p
+                className="mt-2 font-display font-black leading-none"
+                style={{
+                  fontSize: '68px',
+                  fontVariantNumeric: 'tabular-nums',
+                  background: 'linear-gradient(180deg, #f3d77a 0%, #c9a14a 45%, #8a6a25 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  color: 'transparent',
+                }}
+              >
                 {formatNumber(campaignTotal)}
               </p>
-              <p className="mt-3 text-[13px] leading-snug text-[#f5f1e8]/55">
-                Combined engagement across the Collab ({formatNumber(collabEngagement)}) and Paid Partnership ({formatNumber(paidEngagement)}).
+              <p className="mt-3 text-[12px] leading-snug text-[#f5f1e8]/42">
+                Collab ({formatNumber(collabEngagement)}) + Paid Partnership ({formatNumber(paidEngagement)}).
               </p>
-            </GlowCard>
+            </div>
 
-            {/* Tile 3: vs. Brand Average */}
-            <GlowCard
-              glowColor="gold"
-              customSize
-              className="bg-[#141414] border border-[rgba(245,241,232,0.12)] p-8"
-              style={{ height: '200px' }}
+            {/* Stat 3: vs. Brand Average */}
+            <div
+              className="pl-10 pt-7 pb-8"
+              style={{ borderLeft: '1px solid rgba(245,241,232,0.1)' }}
             >
-              <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#f5f1e8]/55">
+              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#f5f1e8]/38">
                 vs. Brand Average
               </p>
-              <p className="mt-3 font-display text-[56px] font-black leading-none text-[#f5f1e8]"
-                style={{ fontVariantNumeric: 'tabular-nums' }}>
+              <p
+                className="mt-2 font-display font-black leading-none"
+                style={{
+                  fontSize: '68px',
+                  fontVariantNumeric: 'tabular-nums',
+                  background: 'linear-gradient(180deg, #f3d77a 0%, #c9a14a 45%, #8a6a25 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  color: 'transparent',
+                }}
+              >
                 {campaignMultiplier}×
               </p>
-              <p className="mt-3 text-[13px] leading-snug text-[#f5f1e8]/55">
-                PruittHealth's other {comparablePosts} grid posts averaged {avgBenchmarkEngagement} engagements.
+              <p className="mt-3 text-[12px] leading-snug text-[#f5f1e8]/42">
+                PruittHealth's other {comparablePosts} posts averaged {avgBenchmarkEngagement} engagements.
               </p>
-            </GlowCard>
-
+            </div>
           </div>
         </div>
       </div>
 
-      {/* CAMPAIGN POSTS */}
+      {/* CAMPAIGN POSTS — unified performance + debrief */}
       <div className="mx-auto max-w-[1100px] px-8 py-16 lg:px-10">
         <SectionHeader n="01" title="The Campaign Posts" />
 
-        <div className="mt-6 grid gap-6 md:grid-cols-[1.5fr_1fr]">
-          {[
-            {
-              n: '1',
-              label: 'Collab Post · Gunner Stockton × PruittHealth',
-              sub: 'Hosted on @_drewbobo · Distributed across 3 accounts',
-              post: collabPost,
-              thumb: `${import.meta.env.BASE_URL}esm/thumb-collab.jpg`,
-              views: 63900,
-              callout: {
-                headline: `RANKED #1 OF ${totalPosts} PRUITTHEALTH POSTS`,
-                body: 'Outperformed every other PruittHealth post in the benchmark.',
-                tone: 'primary' as const,
-              },
-            },
-            {
-              n: '2',
-              label: 'Paid Partnership · Gunner Stockton',
-              sub: 'Posted on @gstockton14 and @pruitthealth · 111K followers',
-              post: gunnerPost,
-              thumb: `${import.meta.env.BASE_URL}esm/thumb-paid.jpg`,
-              views: 19100,
-              callout: {
-                headline: "RANKED #2 ON PRUITTHEALTH'S GRID",
-                body: `Ranked #2 on PruittHealth's grid with ${formatNumber(parseEngagement(gunnerPost))} engagements, plus a second placement on @gstockton14's feed (111K followers).`,
-                tone: 'muted' as const,
-              },
-            },
-          ].map(({ n, label, sub, post, thumb, views, callout }) => {
-            const eng = parseEngagement(post);
-            return (
-              <a
-                key={post.post_url}
-                href={post.post_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`group block ${GLASS_BASE} rounded-[4px] transition hover:-translate-y-0.5`}
-              >
-                <GlassSheen />
-                <div className="relative border-b border-[rgba(245,241,232,0.12)] bg-[#0a0a0a] px-4 py-2.5">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#f5f1e8]">
-                    <span className="text-[#c9a14a]">{n}.</span> {label}
-                  </p>
-                  <p className="mt-0.5 text-[10px] uppercase tracking-[0.12em] text-[#f5f1e8]/55">
-                    {sub}
-                  </p>
-                </div>
-                <div className={`grid ${n === '1' ? 'grid-cols-[44%_1fr]' : 'grid-cols-[42%_1fr]'}`}>
-                  <div className="aspect-[3/4] overflow-hidden bg-black/30">
-                    <img
-                      src={thumb}
-                      alt={label}
-                      className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"
-                    />
-                  </div>
-                  <div className={`flex flex-col justify-between ${n === '1' ? 'p-7' : 'p-5'}`}>
-                    <div>
-                      <p className="text-[11px] font-medium italic text-[#f5f1e8]/65">Post ID: {post.shortcode}</p>
-                      <p className="text-[11px] italic text-[#f5f1e8]/45">{formatDateLabel(post.date_utc)}</p>
-                    </div>
-                    <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/55">
-                        Total Engagement
-                      </p>
-                      <p className={`mt-1 font-black leading-none tracking-tight text-[#f5f1e8] ${n === '1' ? 'text-[56px]' : 'text-[40px]'}`}>
-                        {formatNumber(eng)}
-                      </p>
-                      <div className="mt-4 flex items-center gap-4 border-t border-white/10 pt-3 text-[12px] text-[#f5f1e8]/75">
-                        <span className="flex items-center gap-1.5" title="Views">
-                          <Eye className="h-3.5 w-3.5 text-[#f5f1e8]/55" />
-                          <span className="font-semibold tabular-nums">{formatNumber(views)}</span>
-                        </span>
-                        <span className="flex items-center gap-1.5" title="Likes">
-                          <Heart className="h-3.5 w-3.5 text-[#f5f1e8]/55" />
-                          <span className="font-semibold tabular-nums">{formatNumber(Number(post.likes))}</span>
-                        </span>
-                        <span className="flex items-center gap-1.5" title="Comments">
-                          <MessageCircle className="h-3.5 w-3.5 text-[#f5f1e8]/55" />
-                          <span className="font-semibold tabular-nums">{formatNumber(Number(post.comments))}</span>
-                        </span>
+        {/* ── Post 1 · Collab ── image left, text right ── */}
+        <div className="mt-12 grid items-start gap-10 md:grid-cols-[7fr_5fr]">
+
+          {/* Image — Instagram link */}
+          <a
+            href="https://www.instagram.com/p/DXwW7UGOBWf/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative order-1 block aspect-[4/5] overflow-hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c9a14a]"
+          >
+            <img
+              src={`${import.meta.env.BASE_URL}esm/thumb-collab.jpg`}
+              alt="Collab Post · Gunner Stockton × PruittHealth"
+              className="h-full w-full object-cover transition-transform duration-200 ease-out group-hover:scale-[1.02]"
+            />
+            <div className="absolute bottom-8 right-8 flex items-center gap-1.5 rounded-[2px] border border-[#c9a14a]/60 bg-black/60 px-2 py-1.5 transition-all duration-200 ease-out group-hover:border-[#c9a14a] group-hover:bg-black/90">
+              <ArrowUpRight className="h-3.5 w-3.5 text-[#c9a14a]" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#f5f1e8]">Open on Instagram</span>
+            </div>
+          </a>
+
+          {/* Text column */}
+          <div className="order-2 flex flex-col justify-center py-4">
+            <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#f5f1e8]/55">
+              <GoldFoil>01</GoldFoil><span className="ml-2">· Collab Post</span>
+            </p>
+            {/* Byline strip */}
+            <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#f5f1e8]/38">
+              <span>@_drewbobo</span>
+              <span className="opacity-30">·</span>
+              <span>@gstockton14</span>
+              <span className="opacity-30">·</span>
+              <span>@pruitthealth</span>
+            </div>
+            <div className="my-6 h-px w-[60px] bg-[#c9a14a]" />
+
+            {/* 3-up metrics */}
+            <div className="mt-5 flex items-center divide-x divide-[rgba(245,241,232,0.12)]">
+              <div className="pr-5">
+                <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/40">Views</p>
+                <p className="mt-0.5 font-display text-[26px] font-black tabular-nums"
+                  style={{ background: 'linear-gradient(180deg, #f3d77a 0%, #c9a14a 45%, #8a6a25 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', color: 'transparent' }}>63.9K</p>
+              </div>
+              <div className="px-5">
+                <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/40">Likes</p>
+                <p className="mt-0.5 font-display text-[26px] font-black tabular-nums"
+                  style={{ background: 'linear-gradient(180deg, #f3d77a 0%, #c9a14a 45%, #8a6a25 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', color: 'transparent' }}>{formatNumber(Number(collabPost.likes))}</p>
+              </div>
+              <div className="pl-5">
+                <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/40">Comments</p>
+                <p className="mt-0.5 font-display text-[26px] font-black tabular-nums"
+                  style={{ background: 'linear-gradient(180deg, #f3d77a 0%, #c9a14a 45%, #8a6a25 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', color: 'transparent' }}>{formatNumber(Number(collabPost.comments))}</p>
+              </div>
+            </div>
+
+            {/* Rank callout */}
+            <div className="mt-7">
+              <p className="font-display text-[22px] font-black leading-snug text-[#f5f1e8]">#1 most engaging post on PruittHealth's grid in the last {totalPosts} posts.</p>
+            </div>
+
+            {/* ── Performance / Debrief divider ── */}
+            <div className="mt-5 mb-4 h-px bg-[rgba(245,241,232,0.12)]" />
+
+            {/* Debrief eyebrow */}
+            {/* Beats */}
+            <div className="flex flex-col divide-y divide-[rgba(245,241,232,0.08)]">
+              {([
+                { label: 'SUBJECTS',        text: 'Two-up establish with Gunner Stockton and Drew Bobo on Dooley Field. Eye contact with camera, daytime exterior framing.' },
+                {
+                  label: 'BRAND LOGOS',
+                  content: (
+                    <div className="flex-1">
+                      <div role="group" aria-label="Brands detected in frame" className="flex items-center gap-8">
+                        <img
+                          src={`${import.meta.env.BASE_URL}logos/georgia-g.png`}
+                          alt="Georgia Bulldogs logo"
+                          className="w-auto opacity-[0.95] transition-opacity duration-150 hover:opacity-100"
+                          style={{ height: '36px' }}
+                        />
+                        <img
+                          src={`${import.meta.env.BASE_URL}logos/nike-swoosh.svg`}
+                          alt="Nike logo"
+                          className="w-auto opacity-[0.85] transition-opacity duration-150 hover:opacity-100"
+                          style={{ height: '20px', filter: 'brightness(0) invert(1)' }}
+                        />
+                        <img
+                          src={`${import.meta.env.BASE_URL}pruitt/pruitthealth-logo.png`}
+                          alt="PruittHealth logo"
+                          className="w-auto opacity-[0.85] transition-opacity duration-150 hover:opacity-100"
+                          style={{ height: '32px', filter: 'brightness(0) invert(1)' }}
+                        />
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div
-                  className={`relative min-h-[72px] border-t border-white/10 px-5 py-4 ${
-                    callout.tone === 'primary'
-                      ? 'bg-[#c9a14a]/15 text-[#f3d77a]'
-                      : 'bg-white/[0.06] text-[#f5f1e8]/75'
-                  }`}
-                >
-                  <p className="text-[11px] font-bold uppercase tracking-[0.12em]">
-                    {callout.headline}
-                  </p>
-                  <p className="mt-1 text-[11px] leading-snug text-[#f5f1e8]/70">{callout.body}</p>
-                </div>
-              </a>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* VISUAL READ */}
-      <div className="mx-auto max-w-[1100px] px-8 py-16 lg:px-10">
-        <SectionHeader
-          n="02"
-          title="Visual Read"
-          right={
-            <div className="flex items-center gap-2 pb-1">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#c9a14a]/60" />
-              <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#f5f1e8]/55">
-                Powered by JABA AI
-              </p>
-            </div>
-          }
-        />
-
-        <div className="mt-6 grid gap-6 md:grid-cols-[1.1fr_0.9fr]">
-          {visualReads.map((vr, idx) => (
-            <div key={vr.label} className={`${GLASS_BASE} flex h-full flex-col rounded-[4px] p-5`}>
-              <GlassSheen />
-              <div className="relative flex items-baseline justify-between gap-3">
-                <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#f5f1e8]">
-                  <span className="text-[#c9a14a]">{idx + 1}.</span> {vr.label}
-                </p>
-                <p className="whitespace-nowrap text-[10px] uppercase tracking-wider text-[#f5f1e8]/55">
-                  {vr.runtime}s
-                </p>
-              </div>
-
-              <div className="mt-4">
-                <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/55">
-                  Subjects detected
-                </p>
-                <div className="mt-1.5 flex flex-wrap gap-1.5">
-                  {vr.subjects.map((s) => (
-                    <span
-                      key={s.label}
-                      className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/10 px-2 py-0.5 text-[11px] text-[#f5f1e8]/85"
-                    >
-                      {s.label}
-                      <span className="text-[10px] tabular-nums text-[#f5f1e8]/50">{s.score}%</span>
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-4">
-                <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/55">
-                  Logos
-                </p>
-                <div className="mt-1.5 flex flex-wrap gap-1.5">
-                  {vr.logos.map((l) => (
-                    <span
-                      key={l.label}
-                      className="inline-flex items-center gap-1.5 rounded-full border border-[#c9a14a]/25 bg-[#c9a14a]/15 px-2 py-0.5 text-[11px] font-medium text-[#f3d77a]"
-                    >
-                      {l.label}
-                      <span className="text-[10px] tabular-nums text-[#f3d77a]/65">{l.score}%</span>
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-4">
-                <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/55">
-                  Text detected (OCR)
-                </p>
-                <div className="mt-1.5 flex flex-wrap gap-1.5">
-                  {vr.text.map((t) => (
-                    <span
-                      key={t}
-                      className="rounded-sm border border-white/10 bg-white/5 px-1.5 py-0.5 text-[11px] text-[#f5f1e8]/80"
-                    >
-                      "{t}"
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-4 grid grid-cols-2 gap-4">
-                <div>
-                  <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/55">
-                    Composition
-                  </p>
-                  <p className="mt-1.5 text-[11.5px] leading-relaxed text-[#f5f1e8]/80">
-                    {vr.composition}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/55">
-                    Scene breakdown
-                  </p>
-                  <p className="mt-1.5 text-[11.5px] leading-relaxed text-[#f5f1e8]/80">
-                    {vr.scenes}
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-auto pt-4">
-                <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/55">
-                  Dominant colors
-                </p>
-                <div className="mt-1.5 flex gap-4">
-                  {vr.colors.map((c) => (
-                    <div key={c.hex} className="flex flex-col items-center gap-1.5">
-                      <div
-                        className="h-6 w-6 rounded-[2px] border border-[#c9a14a]/60"
-                        style={{ backgroundColor: c.hex }}
-                      />
-                      <span className="text-[8px] font-bold uppercase tracking-[0.14em] tabular-nums text-[#f5f1e8]/55">{c.score}%</span>
+                  ),
+                },
+                { label: 'SCENE STRUCTURE', text: 'Two-up establish → tunnel walk → individual close-ups → walk-away tracking → outro two-up.' },
+                {
+                  label: 'COLOR PALETTE',
+                  content: (
+                    <div className="flex-1 flex items-center gap-2">
+                      {visualReads[0].colors.map(({ hex }) => (
+                        <div key={hex} className="flex flex-col items-center gap-1.5">
+                          <div
+                            className="rounded-sm"
+                            style={{ width: '36px', height: '28px', backgroundColor: hex }}
+                          />
+                          <span className="font-mono text-[9px] uppercase tracking-wide text-[#f5f1e8]/35">{hex}</span>
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  ),
+                },
+              ] as { label: string; text?: string; content?: React.ReactNode }[]).map(({ label, text, content }) => (
+                <div key={label} className="flex items-start gap-4 py-4">
+                  <p className="w-[28%] shrink-0 pt-0.5 text-[11px] font-bold uppercase tracking-[0.16em]"
+                    style={{ background: 'linear-gradient(180deg, #f3d77a 0%, #c9a14a 45%, #8a6a25 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', color: 'transparent' }}>
+                    {label}
+                  </p>
+                  {content ?? <p className="flex-1 text-[14px] leading-relaxed text-[#f5f1e8]/80">{text}</p>}
                 </div>
+              ))}
+            </div>
+
+          </div>
+        </div>
+
+        {/* Post separator */}
+        <div className="my-14 h-px bg-[rgba(245,241,232,0.12)]" />
+
+        {/* ── Post 2 · Paid Partnership ── text left, image right ── */}
+        <div className="grid items-start gap-10 md:grid-cols-[5fr_7fr]">
+
+          {/* Text column — below image on mobile, left on md+ */}
+          <div className="order-2 flex flex-col justify-center py-4 md:order-1">
+            <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#f5f1e8]/55">
+              <GoldFoil>02</GoldFoil><span className="ml-2">· Paid Partnership</span>
+            </p>
+            {/* Byline strip */}
+            <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#f5f1e8]/38">
+              <span>@gstockton14</span>
+              <span className="opacity-30">·</span>
+              <span>@pruitthealth</span>
+            </div>
+            <div className="my-6 h-px w-[60px] bg-[#c9a14a]" />
+
+            {/* 3-up metrics */}
+            <div className="mt-5 flex items-center divide-x divide-[rgba(245,241,232,0.12)]">
+              <div className="pr-5">
+                <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/40">Views</p>
+                <p className="mt-0.5 font-display text-[26px] font-black tabular-nums"
+                  style={{ background: 'linear-gradient(180deg, #f3d77a 0%, #c9a14a 45%, #8a6a25 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', color: 'transparent' }}>19.1K</p>
+              </div>
+              <div className="px-5">
+                <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/40">Likes</p>
+                <p className="mt-0.5 font-display text-[26px] font-black tabular-nums"
+                  style={{ background: 'linear-gradient(180deg, #f3d77a 0%, #c9a14a 45%, #8a6a25 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', color: 'transparent' }}>{formatNumber(Number(gunnerPost.likes))}</p>
+              </div>
+              <div className="pl-5">
+                <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/40">Comments</p>
+                <p className="mt-0.5 font-display text-[26px] font-black tabular-nums"
+                  style={{ background: 'linear-gradient(180deg, #f3d77a 0%, #c9a14a 45%, #8a6a25 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', color: 'transparent' }}>{formatNumber(Number(gunnerPost.comments))}</p>
               </div>
             </div>
-          ))}
+
+            {/* Rank callout */}
+            <div className="mt-7">
+              <p className="font-display text-[22px] font-black leading-snug text-[#f5f1e8]">#2 most engaging post on PruittHealth's grid in the last {totalPosts} posts.</p>
+            </div>
+
+            {/* ── Performance / Debrief divider ── */}
+            <div className="mt-5 mb-4 h-px bg-[rgba(245,241,232,0.12)]" />
+
+            {/* Debrief eyebrow */}
+            {/* Beats */}
+            <div className="flex flex-col divide-y divide-[rgba(245,241,232,0.08)]">
+              {([
+                { label: 'SUBJECTS',        text: 'Single-subject portrait of Gunner Stockton. Locker room context, slight smile, controlled lighting.' },
+                {
+                  label: 'BRAND LOGOS',
+                  content: (
+                    <div className="flex-1">
+                      <div role="group" aria-label="Brands detected in frame" className="flex items-center gap-8">
+                        <img
+                          src={`${import.meta.env.BASE_URL}logos/georgia-g.png`}
+                          alt="Georgia Bulldogs logo"
+                          className="w-auto opacity-[0.95] transition-opacity duration-150 hover:opacity-100"
+                          style={{ height: '36px' }}
+                        />
+                        <img
+                          src={`${import.meta.env.BASE_URL}logos/nike-swoosh.svg`}
+                          alt="Nike logo"
+                          className="w-auto opacity-[0.85] transition-opacity duration-150 hover:opacity-100"
+                          style={{ height: '20px', filter: 'brightness(0) invert(1)' }}
+                        />
+                        <img
+                          src={`${import.meta.env.BASE_URL}pruitt/pruitthealth-logo.png`}
+                          alt="PruittHealth logo"
+                          className="w-auto opacity-[0.85] transition-opacity duration-150 hover:opacity-100"
+                          style={{ height: '32px', filter: 'brightness(0) invert(1)' }}
+                        />
+                      </div>
+                    </div>
+                  ),
+                },
+                { label: 'SCENE STRUCTURE', text: "On-field portrait → locker-room cut → on-field B-roll → walking head-on → portrait close-ups." },
+                {
+                  label: 'COLOR PALETTE',
+                  content: (
+                    <div className="flex-1 flex items-center gap-2">
+                      {visualReads[1].colors.map(({ hex }) => (
+                        <div key={hex} className="flex flex-col items-center gap-1.5">
+                          <div
+                            className="rounded-sm"
+                            style={{ width: '36px', height: '28px', backgroundColor: hex }}
+                          />
+                          <span className="font-mono text-[9px] uppercase tracking-wide text-[#f5f1e8]/35">{hex}</span>
+                        </div>
+                      ))}
+                    </div>
+                  ),
+                },
+              ] as { label: string; text?: string; content?: React.ReactNode }[]).map(({ label, text, content }) => (
+                <div key={label} className="flex items-start gap-4 py-4">
+                  <p className="w-[28%] shrink-0 pt-0.5 text-[11px] font-bold uppercase tracking-[0.16em]"
+                    style={{ background: 'linear-gradient(180deg, #f3d77a 0%, #c9a14a 45%, #8a6a25 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', color: 'transparent' }}>
+                    {label}
+                  </p>
+                  {content ?? <p className="flex-1 text-[14px] leading-relaxed text-[#f5f1e8]/80">{text}</p>}
+                </div>
+              ))}
+            </div>
+
+          </div>
+
+          {/* Image — above text on mobile, right on md+ */}
+          <a
+            href="https://www.instagram.com/p/DYDg0r0xiaB/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative order-1 block aspect-[4/5] overflow-hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c9a14a] md:order-2"
+          >
+            <img
+              src={`${import.meta.env.BASE_URL}esm/thumb-paid.jpg`}
+              alt="Paid Partnership · Gunner Stockton"
+              className="h-full w-full object-cover transition-transform duration-200 ease-out group-hover:scale-[1.02]"
+            />
+            <div className="absolute bottom-8 right-8 flex items-center gap-1.5 rounded-[2px] border border-[#c9a14a]/60 bg-black/60 px-2 py-1.5 transition-all duration-200 ease-out group-hover:border-[#c9a14a] group-hover:bg-black/90">
+              <ArrowUpRight className="h-3.5 w-3.5 text-[#c9a14a]" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#f5f1e8]">Open on Instagram</span>
+            </div>
+          </a>
         </div>
       </div>
 
       {/* TOP 10 + TAKEAWAY */}
       <div className="mx-auto max-w-[1100px] px-8 py-12 lg:px-10">
-        <SectionHeader n="03" title="Top 10 Posts · Benchmark Window" />
-        <p className="mt-3 text-[11px] uppercase tracking-[0.14em] text-[#f5f1e8]/55">
-          @pruitthealth · last {totalPosts} grid posts
-        </p>
+        <SectionHeader n="02" title="Campaign vs. Benchmark" />
 
-        <div className={`mt-5 ${GLASS_BASE} rounded-[4px]`}>
-          <GlassSheen />
-          {/* Column headers */}
-          <div className="relative grid grid-cols-[60px_72px_1fr_120px_100px_88px] items-center gap-4 border-b border-white/10 bg-black/25 px-5 py-2.5 text-[9px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/55">
-            <span>Rank</span>
-            <span />
-            <span>Caption</span>
-            <span>Type</span>
-            <span>Date</span>
-            <span className="text-right">Engagement</span>
-          </div>
-          {topTen.top.map((d, i) => {
-            const type = postTypeLabel(d.post);
-            const typeLabel = d.isCollab
-              ? `Collab · ${type}`
-              : d.isPaidPartnership
-                ? `Collab · ${type}`
-                : type;
-            const caption = d.isCollab
-              ? 'From the field to our communities, teamwork is everything 🤝 Proud to partner with organiz…'
-              : truncateCaption(d.post.caption);
-            const isHighlight = d.isCollab || d.isPaidPartnership;
-            const localThumb = d.isCollab
-              ? `${import.meta.env.BASE_URL}esm/thumb-collab.jpg`
-              : d.isPaidPartnership
-                ? `${import.meta.env.BASE_URL}esm/thumb-paid.jpg`
-                : undefined;
-            return (
-              <div
-                key={`${d.post.shortcode}-${i}`}
-                className={`grid min-h-[72px] grid-cols-[60px_72px_1fr_120px_100px_88px] items-center gap-4 px-5 py-3 ${
-                  i === 0 ? '' : 'border-t border-white/8'
-                } ${isHighlight ? 'bg-[#c9a14a]/12' : ''}`}
-              >
-                <span
-                  className={`text-[14px] font-black tabular-nums ${
-                    d.isCollab ? 'text-[#c9a14a]' : 'text-[#f5f1e8]/50'
-                  }`}
-                >
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <PostThumb src={localThumb} fallbackLabel={type === 'IMAGE' ? 'IMG' : type} />
-                <p
-                  className={`line-clamp-2 text-[12.5px] leading-snug ${
-                    d.isCollab ? 'font-medium text-[#f5f1e8]' : 'text-[#f5f1e8]/80'
-                  }`}
-                >
-                  {caption ?? <span className="text-[#f5f1e8]/30">No caption</span>}
-                </p>
-                <span
-                  className={`text-[10px] font-bold uppercase tracking-[0.14em] ${
-                    d.isCollab ? 'text-[#f3d77a]' : 'text-[#f5f1e8]/55'
-                  }`}
-                >
-                  {typeLabel}
-                </span>
-                <span className="text-[11px] italic text-[#f5f1e8]/45">
-                  {new Date(d.post.date_utc).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
-                </span>
-                <span
-                  className={`text-right tabular-nums ${
-                    d.isCollab ? 'text-[18px] font-black text-[#f5f1e8]' : 'text-[14px] font-bold text-[#f5f1e8]/85'
-                  }`}
-                >
-                  {formatNumber(d.eng)}
-                </span>
-              </div>
-            );
-          })}
-        </div>
-
-        <p className="mt-4 text-center text-[12px] italic text-[#f5f1e8]/50">
-          Posts ranked #11–{totalPosts} averaged {avgBenchmarkEngagement} engagements.
-        </p>
-
-      </div>
-
-      {/* WHAT THIS SUGGESTS — condensed-caps statement with gold-foil proper nouns */}
-      <div className="mx-auto max-w-[1100px] px-8 py-28 lg:px-10">
-        <div className="ml-0 max-w-[900px] lg:ml-16">
-          <p className="font-display font-black text-[#f5f1e8]"
-            style={{ fontSize: 'clamp(32px,4vw,56px)', lineHeight: 1.05, maxWidth: '18ch', letterSpacing: '-0.01em' }}>
-            The <GoldFoil>Collab</GoldFoil> + <GoldFoil>Paid Partnership</GoldFoil> combination
-            delivered the top two engagement spots on <GoldFoil>PruittHealth</GoldFoil>'s grid,
-            plus two touchpoints to <GoldFoil>Gunner</GoldFoil>'s <GoldFoil>111K</GoldFoil> followers
-            and a reach extension to <GoldFoil>Drew Bobo</GoldFoil>'s <GoldFoil>11.6K</GoldFoil> via the <GoldFoil>Collab</GoldFoil>.
-          </p>
-        </div>
-      </div>
-
-      {/* WHY IT MATTERS — numerals as the section identifier, no header */}
-      <div className="mx-auto max-w-[1100px] px-8 pb-32 pt-20 lg:px-10">
-        <div className="grid gap-12 md:grid-cols-3">
-          {[
-            {
-              n: '01',
-              title: 'One post, three feeds',
-              body: (
-                <>
-                  The Collab format placed the campaign on{' '}
-                  <strong className="font-semibold text-[#f5f1e8]">@_drewbobo</strong>,{' '}
-                  <strong className="font-semibold text-[#f5f1e8]">@gstockton14</strong>, and{' '}
-                  <strong className="font-semibold text-[#f5f1e8]">@pruitthealth</strong> simultaneously:
-                  three audiences from a single piece of content.
-                </>
-              ),
-            },
-            {
-              n: '02',
-              title: 'A clear gap from the baseline',
-              body: (
-                <>
-                  PruittHealth's prior{' '}
-                  <strong className="font-semibold text-[#f5f1e8]">{comparablePosts}</strong> grid posts
-                  averaged{' '}
-                  <strong className="font-semibold text-[#f5f1e8]">{avgBenchmarkEngagement} engagements</strong>.
-                  The collab cleared{' '}
-                  <strong className="font-semibold text-[#f5f1e8]">{formatNumber(collabEngagement)}</strong>,{' '}
-                  <strong className="font-semibold text-[#f5f1e8]">93×</strong> the baseline.
-                </>
-              ),
-            },
-            {
-              n: '03',
-              title: 'Two posts, top two ranks',
-              body: (
-                <>
-                  Gunner's paid partnership ranked{' '}
-                  <strong className="font-semibold text-[#f5f1e8]">#2</strong> on PruittHealth's grid with{' '}
-                  <strong className="font-semibold text-[#f5f1e8]">
-                    {formatNumber(parseEngagement(gunnerPost))} engagements
-                  </strong>
-                  , and reached his{' '}
-                  <strong className="font-semibold text-[#f5f1e8]">111K followers</strong> on{' '}
-                  <strong className="font-semibold text-[#f5f1e8]">@gstockton14</strong> as a second
-                  touchpoint.
-                </>
-              ),
-            },
-          ].map(({ n, title, body }) => (
-            <div key={n}>
-              {/* Gold-foil numeral at 120px */}
-              <p className="font-display text-[120px] font-black leading-[0.85] tracking-[-0.04em]" style={{
+        {/* Editorial comparison strip */}
+        <div
+          className="mt-8 grid grid-cols-2"
+          style={{ borderTop: '2px solid rgba(201,161,74,0.55)' }}
+        >
+          {/* Left: campaign total */}
+          <div className="pr-10 pt-7 pb-8">
+            <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#f5f1e8]/38">
+              Gunner's 2 posts · total engagements
+            </p>
+            <p
+              className="mt-2 font-display font-black leading-none"
+              style={{
+                fontSize: '68px',
+                fontVariantNumeric: 'tabular-nums',
                 background: 'linear-gradient(180deg, #f3d77a 0%, #c9a14a 45%, #8a6a25 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
                 color: 'transparent',
-              }}>
-                {n}
-              </p>
-              {/* 1px gold hairline rule below each numeral */}
-              <div className="h-px bg-[#c9a14a]/60" />
-              <p className="mt-5 font-display text-[15px] font-black uppercase tracking-[0.08em] text-[#f5f1e8]">
-                {title}
-              </p>
-              <p className="mt-2 text-[13px] leading-relaxed text-[#f5f1e8]/70">{body}</p>
-            </div>
-          ))}
+              }}
+            >
+              {formatNumber(campaignTotal)}
+            </p>
+            <p className="mt-3 text-[12px] leading-snug text-[#f5f1e8]/42">
+              Collab ({formatNumber(collabEngagement)}) + Paid Partnership ({formatNumber(paidEngagement)})
+            </p>
+          </div>
+
+          {/* Right: next 10 benchmark posts combined */}
+          <div
+            className="pl-10 pt-7 pb-8"
+            style={{ borderLeft: '1px solid rgba(245,241,232,0.1)' }}
+          >
+            <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#f5f1e8]/38">
+              PruittHealth's next 10 posts combined
+            </p>
+            <p
+              className="mt-2 font-display font-black leading-none text-[#f5f1e8]"
+              style={{ fontSize: '68px', fontVariantNumeric: 'tabular-nums' }}
+            >
+              {formatNumber(benchmarkTop10)}
+            </p>
+            <p className="mt-3 text-[12px] leading-snug text-[#f5f1e8]/42">
+              The campaign generated {(campaignTotal / benchmarkTop10).toFixed(1)}× more engagement than PruittHealth's next 10 highest-performing posts combined.
+            </p>
+          </div>
         </div>
+
+      </div>
+
+      {/* WHY IT MATTERS — ruled editorial list, 3 insights only */}
+      <div className="mx-auto max-w-[1100px] px-8 pb-32 pt-0 lg:px-10">
+
+        {/* Section label */}
+        <p className="mb-10 text-[10px] font-bold uppercase tracking-[0.28em] text-[#f5f1e8]/30">
+          Why It Matters
+        </p>
+
+        {[
+          {
+            headline: `One post drove ${collabConcentrationPct}% of all their engagement`,
+            body: (
+              <>
+                The collab post alone generated{' '}
+                <strong className="font-semibold text-[#f5f1e8]">{collabConcentrationPct}%</strong> of all engagement
+                PruittHealth earned across their entire{' '}
+                <strong className="font-semibold text-[#f5f1e8]">{totalPosts}-post</strong> benchmark window.
+                The other <strong className="font-semibold text-[#f5f1e8]">{comparablePosts} posts</strong> split the remaining{' '}
+                <strong className="font-semibold text-[#f5f1e8]">{100 - collabConcentrationPct}%</strong>.
+              </>
+            ),
+          },
+          {
+            headline: 'The campaign reversed a six-month decline',
+            body: (
+              <>
+                Before this campaign, PruittHealth's monthly median engagement had fallen from{' '}
+                <strong className="font-semibold text-[#f5f1e8]">{preCollabPeakMedian}</strong> to{' '}
+                <strong className="font-semibold text-[#f5f1e8]">{preCollabTroughMedian}</strong> per post over six months.
+                February 2026 was their worst month on record. This activation landed at exactly the right moment.
+              </>
+            ),
+          },
+          {
+            headline: `The Collab format outperformed the solo post by ${collabVsPaidRatio}×`,
+            body: (
+              <>
+                The Collab post generated{' '}
+                <strong className="font-semibold text-[#f5f1e8]">{collabVsPaidRatio}×</strong> more engagement
+                than Gunner's standalone paid partnership post.
+                Distributing across three accounts simultaneously — not just posting on one — is what drove the gap.
+              </>
+            ),
+          },
+        ].map(({ headline, body }, i) => (
+          <div
+            key={i}
+            className="grid grid-cols-[1fr_1.4fr] gap-x-16 py-9"
+            style={{ borderTop: '1px solid rgba(245,241,232,0.1)' }}
+          >
+            <p className="font-display text-[18px] font-black leading-snug tracking-[-0.01em] text-[#f5f1e8]">
+              {headline}
+            </p>
+            <p className="text-[13px] leading-relaxed text-[#f5f1e8]/60">{body}</p>
+          </div>
+        ))}
+
       </div>
 
       {/* FOOTER */}

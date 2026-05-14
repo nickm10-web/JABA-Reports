@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 78">
+  <!-- Red oval -->
+  <ellipse cx="60" cy="39" rx="57" ry="36" fill="#BA0C2F"/>
+  <!-- White outer ring -->
+  <ellipse cx="60" cy="39" rx="57" ry="36" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+  <!-- Black outer border -->
+  <ellipse cx="60" cy="39" rx="57" ry="36" fill="none" stroke="#1a1a1a" stroke-width="6" stroke-dasharray="0" opacity="0.3"/>
+  <!-- G letterform — white, bold serif -->
+  <text
+    x="60" y="54"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="54"
+    font-weight="900"
+    fill="#FFFFFF"
+    letter-spacing="-1"
+  >G</text>
+</svg>

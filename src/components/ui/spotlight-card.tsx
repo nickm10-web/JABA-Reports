@@ -68,7 +68,7 @@ function buildPseudoCSS(sc: string): string {
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
       mask-composite: exclude;
-      transition: opacity 0.15s ease-out;
+      transition: none;
     }
 
     /* ::before — slightly wider halo at lower opacity */
