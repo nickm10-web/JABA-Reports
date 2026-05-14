@@ -843,12 +843,12 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
       {/* WHAT THIS SUGGESTS — condensed-caps statement with gold-foil proper nouns */}
       <div className="mx-auto max-w-[1100px] px-8 py-28 lg:px-10">
         <div className="ml-0 max-w-[900px] lg:ml-16">
-          <div className="h-px w-10 bg-[#c9a14a]" />
-          <p className="mt-8 font-display text-[clamp(32px,4.5vw,56px)] font-black uppercase leading-[0.92] tracking-[-0.01em] text-[#f5f1e8]">
+          <p className="font-display font-black text-[#f5f1e8]"
+            style={{ fontSize: 'clamp(32px,4vw,56px)', lineHeight: 1.05, maxWidth: '18ch', letterSpacing: '-0.01em' }}>
             The <GoldFoil>Collab</GoldFoil> + <GoldFoil>Paid Partnership</GoldFoil> combination
             delivered the top two engagement spots on <GoldFoil>PruittHealth</GoldFoil>'s grid,
-            plus two touchpoints to Gunner's <GoldFoil>111K</GoldFoil> followers
-            and a reach extension to Drew Bobo's <GoldFoil>11.6K</GoldFoil> via the Collab.
+            plus two touchpoints to <GoldFoil>Gunner</GoldFoil>'s <GoldFoil>111K</GoldFoil> followers
+            and a reach extension to <GoldFoil>Drew Bobo</GoldFoil>'s <GoldFoil>11.6K</GoldFoil> via the <GoldFoil>Collab</GoldFoil>.
           </p>
         </div>
       </div>
