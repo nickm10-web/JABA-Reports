@@ -554,6 +554,15 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
               </div>
             </div>
 
+            <div className="mt-6 border-l border-[rgba(201,161,74,0.55)] pl-4">
+              <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#f5f1e8]/38">
+                Caption
+              </p>
+              <p className="mt-2 text-[13px] leading-relaxed text-[#f5f1e8]/72">
+                {collabPost.caption}
+              </p>
+            </div>
+
             {/* Rank callout */}
             <div className="mt-7">
               <p className="font-display text-[22px] font-black leading-snug text-[#f5f1e8]">#1 most engaging post on PruittHealth's grid in the last {totalPosts} posts.</p>
@@ -595,22 +604,6 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
                   ),
                 },
                 { label: 'SCENE STRUCTURE', text: 'Two-up establish → tunnel walk → individual close-ups → walk-away tracking → outro two-up.' },
-                {
-                  label: 'COLOR PALETTE',
-                  content: (
-                    <div className="flex-1 flex items-center gap-2">
-                      {visualReads[0].colors.map(({ hex }) => (
-                        <div key={hex} className="flex flex-col items-center gap-1.5">
-                          <div
-                            className="rounded-sm"
-                            style={{ width: '36px', height: '28px', backgroundColor: hex }}
-                          />
-                          <span className="font-mono text-[9px] uppercase tracking-wide text-[#f5f1e8]/35">{hex}</span>
-                        </div>
-                      ))}
-                    </div>
-                  ),
-                },
               ] as { label: string; text?: string; content?: React.ReactNode }[]).map(({ label, text, content }) => (
                 <div key={label} className="flex items-start gap-4 py-4">
                   <p className="w-[28%] shrink-0 pt-0.5 text-[11px] font-bold uppercase tracking-[0.16em]"
@@ -663,6 +656,15 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
               </div>
             </div>
 
+            <div className="mt-6 border-l border-[rgba(201,161,74,0.55)] pl-4">
+              <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#f5f1e8]/38">
+                Caption
+              </p>
+              <p className="mt-2 text-[13px] leading-relaxed text-[#f5f1e8]/72">
+                {gunnerPost.caption}
+              </p>
+            </div>
+
             {/* Rank callout */}
             <div className="mt-7">
               <p className="font-display text-[22px] font-black leading-snug text-[#f5f1e8]">#2 most engaging post on PruittHealth's grid in the last {totalPosts} posts.</p>
@@ -704,22 +706,6 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
                   ),
                 },
                 { label: 'SCENE STRUCTURE', text: "On-field portrait → locker-room cut → on-field B-roll → walking head-on → portrait close-ups." },
-                {
-                  label: 'COLOR PALETTE',
-                  content: (
-                    <div className="flex-1 flex items-center gap-2">
-                      {visualReads[1].colors.map(({ hex }) => (
-                        <div key={hex} className="flex flex-col items-center gap-1.5">
-                          <div
-                            className="rounded-sm"
-                            style={{ width: '36px', height: '28px', backgroundColor: hex }}
-                          />
-                          <span className="font-mono text-[9px] uppercase tracking-wide text-[#f5f1e8]/35">{hex}</span>
-                        </div>
-                      ))}
-                    </div>
-                  ),
-                },
               ] as { label: string; text?: string; content?: React.ReactNode }[]).map(({ label, text, content }) => (
                 <div key={label} className="flex items-start gap-4 py-4">
                   <p className="w-[28%] shrink-0 pt-0.5 text-[11px] font-bold uppercase tracking-[0.16em]"
@@ -786,13 +772,13 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
             </p>
           </div>
 
-          {/* Right: next 10 benchmark posts combined */}
+          {/* Right: top 10 benchmark posts combined */}
           <div
             className="pl-10 pt-7 pb-8"
             style={{ borderLeft: '1px solid rgba(245,241,232,0.1)' }}
           >
             <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#f5f1e8]/38">
-              PruittHealth's next 10 posts combined
+              PruittHealth's top 10 posts combined
             </p>
             <p
               className="mt-2 font-display font-black leading-none text-[#f5f1e8]"
@@ -801,7 +787,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
               {formatNumber(benchmarkTop10)}
             </p>
             <p className="mt-3 text-[12px] leading-snug text-[#f5f1e8]/42">
-              The campaign generated {(campaignTotal / benchmarkTop10).toFixed(1)}× more engagement than PruittHealth's next 10 highest-performing posts combined.
+              The campaign generated {(campaignTotal / benchmarkTop10).toFixed(1)}× more engagement than PruittHealth's top 10 highest-performing posts combined.
             </p>
           </div>
         </div>
