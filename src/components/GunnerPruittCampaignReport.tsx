@@ -431,18 +431,28 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
         </div>
 
         {/* Hero — centered announcement-card composition */}
-        <div className="flex min-h-[78vh] flex-col items-center justify-center px-8 py-24 text-center lg:px-10">
+        <div className="flex min-h-[78vh] flex-col items-center justify-center px-8 text-center lg:px-10" style={{ paddingTop: '120px', paddingBottom: '96px' }}>
           {/* Eyebrow */}
           <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#f5f1e8]/65">
             Campaign Intelligence Report · {reportMonth}
           </p>
 
+          {/* PruittHealth wordmark lockup — centered between eyebrow and headline */}
+          <div className="mt-4 flex items-center justify-center">
+            <img
+              src={`${import.meta.env.BASE_URL}pruitt/pruitthealth-logo.png`}
+              alt="PruittHealth"
+              className="h-6 w-auto object-contain"
+              style={{ filter: 'brightness(0) invert(1)', opacity: 0.75 }}
+            />
+          </div>
+
           {/* Headline stack */}
-          <h1 className="mt-6 font-display uppercase">
+          <h1 className="mt-5 font-display uppercase">
             {/* Line 1 — partnership line, smaller */}
             <span className="block font-black leading-[1.0] tracking-[-0.01em] text-[#f5f1e8]"
               style={{ fontSize: 'clamp(22px, 4.5vw, 68px)' }}>
-              Gunner Stockton × PruittHealth
+              Gunner Stockton <GoldFoil>×</GoldFoil> PruittHealth
             </span>
             {/* Line 2 — main title, large */}
             <span className="block font-black leading-[0.88] tracking-[-0.02em] text-[#f5f1e8]"
