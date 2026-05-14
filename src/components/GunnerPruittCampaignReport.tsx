@@ -437,16 +437,15 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
 
         {/* Hero — two-column grid on tablet/desktop, stacked on mobile */}
         <style>{`
-          .hero-hl-lg { font-size: clamp(32px, 8vw, 48px); }
-          .hero-hl-sm { font-size: clamp(18px, 4.5vw, 32px); }
-          @media (min-width: 768px) and (max-width: 1023px) {
-            .hero-hl-lg { font-size: clamp(40px, 8vw, 72px); }
-            .hero-hl-sm { font-size: clamp(20px, 4.5vw, 48px); }
-          }
-          @media (min-width: 1024px) {
-            .hero-hl-lg { font-size: clamp(48px, 7vw, 96px); }
-            .hero-hl-sm { font-size: clamp(22px, 4.5vw, 68px); }
-          }
+          /* Line 1: GUNNER STOCKTON × PRUITTHEALTH */
+          .hero-line1 { font-size: 32px; }
+          @media (min-width: 768px)  { .hero-line1 { font-size: 40px; } }
+          @media (min-width: 1024px) { .hero-line1 { font-size: 56px; } }
+
+          /* Line 2: PERFORMANCE REPORT — no wrap on tablet+ */
+          .hero-line2 { font-size: clamp(44px, 12vw, 56px); }
+          @media (min-width: 768px)  { .hero-line2 { font-size: 80px;  white-space: nowrap; } }
+          @media (min-width: 1024px) { .hero-line2 { font-size: 112px; white-space: nowrap; } }
         `}</style>
         <section aria-labelledby="hero-heading">
           <div
@@ -491,43 +490,34 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
                 />
               </div>
 
-              {/* Headline stack */}
+              {/* Headline — two lines */}
               <h1 id="hero-heading" className="mt-5 font-display uppercase">
-                {/* Line 1 — partnership eyebrow, smaller */}
-                <span className="hero-hl-sm block font-black leading-[1.0] tracking-[-0.01em] text-[#f5f1e8]">
+                {/* Line 1: GUNNER STOCKTON × PRUITTHEALTH */}
+                <span className="hero-line1 block font-black leading-[1.0] tracking-[-0.01em] text-[#f5f1e8]">
                   Gunner Stockton <GoldFoil>×</GoldFoil> PruittHealth
                 </span>
-                {/* Line 2 — main title */}
-                <span className="hero-hl-lg block font-black leading-[0.88] tracking-[-0.02em] text-[#f5f1e8]">
-                  Partnership Performance
-                </span>
-                {/* Line 3 — gold-foil accent */}
-                <span
-                  className="hero-hl-lg block font-black leading-[0.88] tracking-[-0.02em]"
-                  style={{
+                {/* Line 2: PERFORMANCE REPORT — 16px gap, ink + gold-foil split */}
+                <span className="hero-line2 mt-4 block font-black leading-[0.95] tracking-[-0.02em]">
+                  <span className="text-[#f5f1e8]">Performance </span>
+                  <span style={{
                     background: 'linear-gradient(180deg, #f3d77a 0%, #c9a14a 45%, #8a6a25 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
                     color: 'transparent',
-                  }}
-                >
-                  Report
+                  }}>Report</span>
                 </span>
               </h1>
 
-              {/* Gold rule */}
-              <div className="mt-8 h-px w-20 bg-[#c9a14a]" />
-
               {/* Supporting line */}
-              <p className="mt-5 text-[14px] leading-relaxed text-[#f5f1e8]/65">
+              <p className="mt-6 text-[14px] leading-relaxed text-[#f5f1e8]/65">
                 Benchmarked against PruittHealth's {totalPosts} most recent grid posts.
               </p>
             </div>
 
             {/* RIGHT — portrait, tablet+ only */}
             <div
-              className="relative hidden md:-ml-6 md:block lg:-ml-16"
+              className="relative hidden md:-ml-6 md:block lg:-ml-8"
               style={{ alignSelf: 'stretch', zIndex: 2 }}
             >
               {/* Warm gold radial halo — grounds the figure without a hard edge */}
