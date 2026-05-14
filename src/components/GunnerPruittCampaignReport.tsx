@@ -45,7 +45,7 @@ type CampaignDataset = {
 };
 
 const shell =
-  'rounded-[24px] border border-[#f5f1e8]/10 bg-[#141414] shadow-[0_1px_0_rgba(0,0,0,0.4),0_14px_40px_rgba(0,0,0,0.5)]';
+  'rounded-[4px] border border-[#f5f1e8]/10 bg-[#141414] shadow-[0_1px_0_rgba(0,0,0,0.4),0_14px_40px_rgba(0,0,0,0.5)]';
 
 function formatNumber(value: number) {
   return value.toLocaleString();
@@ -82,7 +82,7 @@ function PostThumb({ src, fallbackLabel }: { src?: string; fallbackLabel: string
   const [errored, setErrored] = useState(false);
   if (!src || errored) {
     return (
-      <div className="flex h-14 w-14 items-center justify-center rounded-md border border-white/10 bg-white/[0.06] text-[9px] font-bold uppercase tracking-wider text-[#f5f1e8]/55 backdrop-blur-sm">
+      <div className="flex h-14 w-14 items-center justify-center rounded-[4px] border border-[rgba(245,241,232,0.12)] bg-[#141414] text-[9px] font-bold uppercase tracking-wider text-[#f5f1e8]/55">
         {fallbackLabel}
       </div>
     );
@@ -91,29 +91,77 @@ function PostThumb({ src, fallbackLabel }: { src?: string; fallbackLabel: string
     <img
       src={src}
       onError={() => setErrored(true)}
-      className="h-14 w-14 rounded-md object-cover"
+      className="h-14 w-14 rounded-[4px] object-cover"
       alt=""
     />
   );
 }
 
-// Liquid glass treatment — applied as a className token.
-// Includes: subtle fill, strong top + right inset highlights, soft drop, crisp backdrop blur.
+// Flat panel treatment — used everywhere. No blur, no shadow, no rounded excess.
 const GLASS_BASE =
-  'relative overflow-hidden border border-white/[0.18] bg-white/[0.045] backdrop-blur-[28px] ' +
-  'shadow-[0_22px_55px_-14px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.32),inset_-1px_0_0_rgba(255,255,255,0.08),inset_0_-1px_0_rgba(255,255,255,0.04)]';
+  'relative overflow-hidden border border-[rgba(245,241,232,0.12)] bg-[#141414]';
 
-// Diagonal specular sheen — drop in as the first child of a glass panel.
-function GlassSheen() {
+// Retained as no-op so call sites don't need to change.
+function GlassSheen() { return null; }
+
+// Full-page film grain overlay (feTurbulence at 6% opacity).
+function FilmGrain() {
   return (
-    <div
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
       aria-hidden
-      className="pointer-events-none absolute inset-0"
-      style={{
-        background:
-          'linear-gradient(118deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0) 26%, rgba(255,255,255,0) 70%, rgba(255,255,255,0.05) 100%)',
-      }}
-    />
+      className="pointer-events-none fixed inset-0 h-full w-full"
+      style={{ zIndex: 55, opacity: 0.06, mixBlendMode: 'overlay' }}
+    >
+      <filter id="grain-noise" x="0%" y="0%" width="100%" height="100%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.68" numOctaves="3" stitchTiles="stitch" />
+        <feColorMatrix type="saturate" values="0" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#grain-noise)" />
+    </svg>
+  );
+}
+
+// Full-page sparse gold-dust particles (SVG pattern, mix-blend-mode: screen).
+function GoldDust() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden
+      className="pointer-events-none fixed inset-0 h-full w-full"
+      style={{ zIndex: 56, opacity: 0.15, mixBlendMode: 'screen' }}
+    >
+      <defs>
+        <pattern id="gold-dust-pat" x="0" y="0" width="480" height="360" patternUnits="userSpaceOnUse">
+          <circle cx="23"  cy="17"  r="0.9" fill="#f3d77a" />
+          <circle cx="87"  cy="54"  r="0.6" fill="#c9a14a" />
+          <circle cx="156" cy="8"   r="1.1" fill="#f3d77a" />
+          <circle cx="198" cy="78"  r="0.7" fill="#e8b84a" />
+          <circle cx="234" cy="33"  r="0.5" fill="#f3d77a" />
+          <circle cx="312" cy="61"  r="0.8" fill="#c9a14a" />
+          <circle cx="367" cy="19"  r="0.6" fill="#f3d77a" />
+          <circle cx="45"  cy="98"  r="0.7" fill="#e8c070" />
+          <circle cx="123" cy="143" r="0.9" fill="#f3d77a" />
+          <circle cx="278" cy="112" r="0.5" fill="#c9a14a" />
+          <circle cx="389" cy="134" r="0.8" fill="#f3d77a" />
+          <circle cx="67"  cy="189" r="0.6" fill="#e8b84a" />
+          <circle cx="145" cy="201" r="1.0" fill="#f3d77a" />
+          <circle cx="223" cy="167" r="0.7" fill="#c9a14a" />
+          <circle cx="334" cy="183" r="0.5" fill="#f3d77a" />
+          <circle cx="8"   cy="234" r="0.8" fill="#e8c070" />
+          <circle cx="178" cy="256" r="0.6" fill="#f3d77a" />
+          <circle cx="289" cy="243" r="0.9" fill="#c9a14a" />
+          <circle cx="356" cy="278" r="0.5" fill="#f3d77a" />
+          <circle cx="98"  cy="301" r="0.7" fill="#e8b84a" />
+          <circle cx="421" cy="47"  r="0.6" fill="#f3d77a" />
+          <circle cx="455" cy="189" r="0.8" fill="#c9a14a" />
+          <circle cx="412" cy="312" r="0.5" fill="#f3d77a" />
+          <circle cx="18"  cy="339" r="0.9" fill="#e8c070" />
+          <circle cx="247" cy="347" r="0.6" fill="#f3d77a" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#gold-dust-pat)" />
+    </svg>
   );
 }
 
@@ -307,15 +355,27 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
 
   return (
     <div className="relative min-h-screen overflow-x-hidden text-[#f5f1e8]">
-      {/* Fixed photo backdrop spanning the whole report */}
+      {/* Full-page texture overlays */}
+      <FilmGrain />
+      <GoldDust />
+
+      {/* Fixed photo backdrop — desaturated, amber-shifted, ~25% brightness */}
       <div className="fixed inset-0 -z-10">
         <img
           src={`${import.meta.env.BASE_URL}esm/gunner-bg.png`}
           alt=""
           aria-hidden
           className="h-full w-full object-cover"
+          style={{ filter: 'brightness(0.28) sepia(0.55) saturate(1.6) hue-rotate(-18deg)' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/55 to-black/75" />
+        {/* Radial vignette: center-lit, hard-fade to #0a0a0a at edges */}
+        <div
+          className="absolute inset-0"
+          style={{ background: 'radial-gradient(ellipse 72% 58% at 50% 32%, transparent 0%, rgba(10,10,10,0.5) 48%, rgba(10,10,10,0.88) 75%, #0a0a0a 100%)' }}
+          aria-hidden
+        />
+        {/* Bottom-half fill so lower sections read on pure dark */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0a0a]/40 to-[#0a0a0a]" aria-hidden />
       </div>
 
       {/* HERO + KPI */}
@@ -340,17 +400,11 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
           </div>
 
           {/* Hero glass panel */}
-          <div className={`mt-10 ${GLASS_BASE} rounded-[28px] overflow-hidden`}>
+          <div className={`mt-10 ${GLASS_BASE} rounded-[4px] overflow-hidden`}>
             <GlassSheen />
             <div className="relative grid lg:grid-cols-[55%_45%] lg:items-stretch">
               {/* Left: text column with red gradient framing */}
               <div className="relative p-8 lg:p-10">
-                {/* Dark warm vignette framing the left column */}
-                <div
-                  className="pointer-events-none absolute inset-0 rounded-l-[28px]"
-                  style={{ background: 'linear-gradient(105deg, rgba(20,14,8,0.52) 0%, rgba(12,9,4,0.22) 55%, transparent 100%)' }}
-                  aria-hidden
-                />
                 <div className="relative">
                   {/* Top-left identification lockup: brand logo × athlete headshot */}
                   <div className="mb-5 flex items-center gap-2.5">
@@ -387,7 +441,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
                     <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f5f1e8]/40">
                       In Partnership With
                     </p>
-                    <div className="mt-2 inline-flex items-center rounded-md bg-white/[0.08] px-3 py-1.5 backdrop-blur-sm">
+                    <div className="mt-2 inline-flex items-center rounded-[4px] border border-[rgba(245,241,232,0.12)] px-3 py-1.5">
                       <img
                         src={`${import.meta.env.BASE_URL}pruitt/pruitthealth-logo.png`}
                         alt="PruittHealth"
@@ -420,7 +474,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
           {/* KPI glass cards */}
           <div className="mt-12 grid items-start gap-[20px] md:grid-cols-[1.4fr_1fr_1fr]">
             {/* Card 1: hero stat — gold left bar */}
-            <div className={`${GLASS_BASE} rounded-[20px] p-6`}>
+            <div className={`${GLASS_BASE} rounded-[4px] p-6`}>
               <GlassSheen />
               <div className="relative border-l-4 border-[#c9a14a] pl-5">
                 <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#f5f1e8]/65">
@@ -433,7 +487,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
               </div>
             </div>
             {/* Card 2: ratio — muted left bar */}
-            <div className={`${GLASS_BASE} rounded-[20px] p-6`}>
+            <div className={`${GLASS_BASE} rounded-[4px] p-6`}>
               <GlassSheen />
               <div className="relative border-l-[2px] border-white/20 pl-5">
                 <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#f5f1e8]/65">
@@ -446,7 +500,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
               </div>
             </div>
             {/* Card 3: engagement — muted left bar */}
-            <div className={`${GLASS_BASE} rounded-[20px] p-6`}>
+            <div className={`${GLASS_BASE} rounded-[4px] p-6`}>
               <GlassSheen />
               <div className="relative border-l-[2px] border-white/20 pl-5">
                 <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#f5f1e8]/65">
@@ -507,10 +561,10 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
                 href={post.post_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group block ${GLASS_BASE} rounded-2xl transition hover:-translate-y-0.5`}
+                className={`group block ${GLASS_BASE} rounded-[4px] transition hover:-translate-y-0.5`}
               >
                 <GlassSheen />
-                <div className="relative border-b border-white/10 bg-black/40 px-4 py-2.5 backdrop-blur-md">
+                <div className="relative border-b border-[rgba(245,241,232,0.12)] bg-[#0a0a0a] px-4 py-2.5">
                   <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#f5f1e8]">
                     <span className="text-[#c9a14a]">{n}.</span> {label}
                   </p>
@@ -590,7 +644,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
 
         <div className="mt-6 grid gap-6 md:grid-cols-[1.1fr_0.9fr]">
           {visualReads.map((vr, idx) => (
-            <div key={vr.label} className={`${GLASS_BASE} flex h-full flex-col rounded-2xl p-5`}>
+            <div key={vr.label} className={`${GLASS_BASE} flex h-full flex-col rounded-[4px] p-5`}>
               <GlassSheen />
               <div className="relative flex items-baseline justify-between gap-3">
                 <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#f5f1e8]">
@@ -674,14 +728,14 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
                 <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/55">
                   Dominant colors
                 </p>
-                <div className="mt-1.5 flex gap-3">
+                <div className="mt-1.5 flex gap-4">
                   {vr.colors.map((c) => (
-                    <div key={c.hex} className="flex flex-col items-center gap-1">
+                    <div key={c.hex} className="flex flex-col items-center gap-1.5">
                       <div
-                        className="h-7 w-7 rounded-sm border border-white/20"
+                        className="h-6 w-6 rounded-[2px] border border-[#c9a14a]/60"
                         style={{ backgroundColor: c.hex }}
                       />
-                      <span className="text-[9px] tabular-nums text-[#f5f1e8]/55">{c.score}%</span>
+                      <span className="text-[8px] font-bold uppercase tracking-[0.14em] tabular-nums text-[#f5f1e8]/55">{c.score}%</span>
                     </div>
                   ))}
                 </div>
@@ -701,7 +755,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
           @pruitthealth · last {totalPosts} grid posts
         </p>
 
-        <div className={`mt-5 ${GLASS_BASE} rounded-2xl`}>
+        <div className={`mt-5 ${GLASS_BASE} rounded-[4px]`}>
           <GlassSheen />
           {/* Column headers */}
           <div className="relative grid grid-cols-[60px_72px_1fr_120px_100px_88px] items-center gap-4 border-b border-white/10 bg-black/25 px-5 py-2.5 text-[9px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/55">
