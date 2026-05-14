@@ -893,7 +893,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
                 The Collab post generated{' '}
                 <strong className="font-semibold text-[#f5f1e8]">{collabVsPaidRatio}×</strong> more engagement
                 than Gunner's standalone paid partnership post.
-                Distributing across three accounts simultaneously — not just posting on one — is what drove the gap.
+                Distributing across three accounts simultaneously, not just posting on one, is what drove the gap.
               </>
             ),
           },
