@@ -873,7 +873,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
             const typeLabel = d.isCollab
               ? `Collab · ${type}`
               : d.isPaidPartnership
-                ? `Paid · ${type}`
+                ? `Collab · ${type}`
                 : type;
             const caption = d.isCollab
               ? 'From the field to our communities, teamwork is everything 🤝 Proud to partner with organiz…'
