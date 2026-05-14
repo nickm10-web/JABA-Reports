@@ -45,7 +45,7 @@ type CampaignDataset = {
 };
 
 const shell =
-  'rounded-[24px] border border-slate-200 bg-white shadow-[0_1px_0_rgba(15,23,42,0.04),0_14px_40px_rgba(15,23,42,0.06)]';
+  'rounded-[24px] border border-[#f5f1e8]/10 bg-[#141414] shadow-[0_1px_0_rgba(0,0,0,0.4),0_14px_40px_rgba(0,0,0,0.5)]';
 
 function formatNumber(value: number) {
   return value.toLocaleString();
@@ -82,7 +82,7 @@ function PostThumb({ src, fallbackLabel }: { src?: string; fallbackLabel: string
   const [errored, setErrored] = useState(false);
   if (!src || errored) {
     return (
-      <div className="flex h-14 w-14 items-center justify-center rounded-md border border-white/10 bg-white/[0.06] text-[9px] font-bold uppercase tracking-wider text-white/55 backdrop-blur-sm">
+      <div className="flex h-14 w-14 items-center justify-center rounded-md border border-white/10 bg-white/[0.06] text-[9px] font-bold uppercase tracking-wider text-[#f5f1e8]/55 backdrop-blur-sm">
         {fallbackLabel}
       </div>
     );
@@ -170,10 +170,10 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-[#F4F6F8] p-8 text-slate-900">
+      <div className="min-h-screen bg-[#0a0a0a] p-8 text-[#f5f1e8]">
         <div className={`${shell} mx-auto max-w-3xl p-8`}>
-          <p className="text-sm font-semibold uppercase tracking-[0.12em] text-red-600">Load Error</p>
-          <p className="mt-3 text-lg text-slate-700">{error}</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#c9a14a]">Load Error</p>
+          <p className="mt-3 text-lg text-[#f5f1e8]/80">{error}</p>
         </div>
       </div>
     );
@@ -181,10 +181,10 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
 
   if (!data || !derived) {
     return (
-      <div className="min-h-screen bg-[#F4F6F8] p-8">
+      <div className="min-h-screen bg-[#0a0a0a] p-8">
         <div className={`${shell} mx-auto max-w-5xl p-8`}>
-          <p className="text-sm font-semibold uppercase tracking-[0.12em] text-slate-500">Loading</p>
-          <p className="mt-3 text-lg text-slate-700">Preparing Gunner Stockton × PruittHealth report…</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#f5f1e8]/50">Loading</p>
+          <p className="mt-3 text-lg text-[#f5f1e8]/80">Preparing Gunner Stockton × PruittHealth report…</p>
         </div>
       </div>
     );
@@ -306,7 +306,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
   ];
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden text-white">
+    <div className="relative min-h-screen overflow-x-hidden text-[#f5f1e8]">
       {/* Fixed photo backdrop spanning the whole report */}
       <div className="fixed inset-0 -z-10">
         <img
@@ -319,7 +319,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
       </div>
 
       {/* HERO + KPI */}
-      <div className="text-white">
+      <div className="text-[#f5f1e8]">
 
         <div className="mx-auto max-w-[1100px] px-8 pb-20 pt-8 lg:px-10">
           {/* Top bar — sits directly over photo, no panel */}
@@ -330,10 +330,10 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
               className="h-12 w-auto object-contain drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]"
             />
             <div className="text-right">
-              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-white drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
+              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#f5f1e8] drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
                 Campaign Intelligence Report
               </p>
-              <p className="mt-1 text-[11px] font-bold uppercase tracking-[0.18em] text-white/75 drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
+              <p className="mt-1 text-[11px] font-bold uppercase tracking-[0.18em] text-[#f5f1e8]/75 drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
                 {reportMonth}
               </p>
             </div>
@@ -345,10 +345,10 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
             <div className="relative grid lg:grid-cols-[55%_45%] lg:items-stretch">
               {/* Left: text column with red gradient framing */}
               <div className="relative p-8 lg:p-10">
-                {/* Red gradient that frames the entire left column */}
+                {/* Dark warm vignette framing the left column */}
                 <div
                   className="pointer-events-none absolute inset-0 rounded-l-[28px]"
-                  style={{ background: 'linear-gradient(105deg, rgba(180,20,20,0.38) 0%, rgba(140,15,15,0.18) 55%, transparent 100%)' }}
+                  style={{ background: 'linear-gradient(105deg, rgba(20,14,8,0.52) 0%, rgba(12,9,4,0.22) 55%, transparent 100%)' }}
                   aria-hidden
                 />
                 <div className="relative">
@@ -360,7 +360,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
                       className="h-8 w-auto object-contain"
                       style={{ maxWidth: '110px', filter: 'drop-shadow(0 1px 4px rgba(0,0,0,0.85)) brightness(0) invert(1)' }}
                     />
-                    <span className="text-[13px] font-light text-white/35 leading-none select-none">×</span>
+                    <span className="text-[13px] font-light text-[#f5f1e8]/35 leading-none select-none">×</span>
                     <div className="h-8 w-8 overflow-hidden rounded-full ring-1 ring-white/20">
                       <img
                         src={`${import.meta.env.BASE_URL}esm/gunner.png`}
@@ -370,21 +370,21 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
                     </div>
                   </div>
                   {/* Primary eyebrow: partnership name */}
-                  <p className="text-[13px] font-black uppercase tracking-[0.18em] text-[#C9A35E]">
+                  <p className="text-[13px] font-black uppercase tracking-[0.18em] text-[#c9a14a]">
                     Gunner Stockton ×&thinsp;PruittHealth
                   </p>
-                  <h1 className="mt-3 text-[44px] font-black uppercase leading-[0.95] tracking-[-0.01em] text-white sm:text-[56px]">
+                  <h1 className="mt-3 font-display text-[44px] font-black uppercase leading-[0.95] tracking-[-0.01em] text-[#f5f1e8] sm:text-[56px]">
                     Partnership
                     <br />
                     Performance Report
                   </h1>
                   <div className="mt-4 h-px w-20 bg-white/30" />
-                  <p className="mt-4 text-[11px] leading-relaxed tracking-wide text-white/65">
+                  <p className="mt-4 text-[11px] leading-relaxed tracking-wide text-[#f5f1e8]/65">
                     Benchmarked against PruittHealth's {totalPosts} most recent grid posts.
                   </p>
                   {/* In partnership with — logo mark */}
                   <div className="mt-6">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f5f1e8]/40">
                       In Partnership With
                     </p>
                     <div className="mt-2 inline-flex items-center rounded-md bg-white/[0.08] px-3 py-1.5 backdrop-blur-sm">
@@ -422,40 +422,40 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
             {/* Card 1: hero stat — gold left bar */}
             <div className={`${GLASS_BASE} rounded-[20px] p-6`}>
               <GlassSheen />
-              <div className="relative border-l-4 border-[#C9A35E] pl-5">
-                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/65">
+              <div className="relative border-l-4 border-[#c9a14a] pl-5">
+                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#f5f1e8]/65">
                   PruittHealth Post Rank
                 </p>
-                <p className="mt-2 text-[88px] font-black leading-none tracking-[-0.04em] text-white">
+                <p className="mt-2 text-[88px] font-black leading-none tracking-[-0.04em] text-[#f5f1e8]">
                   #{data.brand_benchmark_summary.rank}
                 </p>
-                <p className="mt-2 text-[11px] text-white/70">of {totalPosts} PruittHealth posts</p>
+                <p className="mt-2 text-[11px] text-[#f5f1e8]/70">of {totalPosts} PruittHealth posts</p>
               </div>
             </div>
             {/* Card 2: ratio — muted left bar */}
             <div className={`${GLASS_BASE} rounded-[20px] p-6`}>
               <GlassSheen />
               <div className="relative border-l-[2px] border-white/20 pl-5">
-                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/65">
+                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#f5f1e8]/65">
                   vs. Brand Average
                 </p>
-                <p className="mt-2 font-mono text-[28px] font-bold leading-none tracking-tight text-white">
-                  93<span className="text-[#C9A35E]">×</span>
+                <p className="mt-2 font-mono text-[28px] font-bold leading-none tracking-tight text-[#f5f1e8]">
+                  93<span className="text-[#c9a14a]">×</span>
                 </p>
-                <p className="mt-1.5 text-[11px] text-white/70">PruittHealth's other {comparablePosts} grid posts averaged {avgBenchmarkEngagement} engagements</p>
+                <p className="mt-1.5 text-[11px] text-[#f5f1e8]/70">PruittHealth's other {comparablePosts} grid posts averaged {avgBenchmarkEngagement} engagements</p>
               </div>
             </div>
             {/* Card 3: engagement — muted left bar */}
             <div className={`${GLASS_BASE} rounded-[20px] p-6`}>
               <GlassSheen />
               <div className="relative border-l-[2px] border-white/20 pl-5">
-                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/65">
+                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#f5f1e8]/65">
                   Collab Engagement
                 </p>
-                <p className="mt-2 text-[28px] font-black leading-none tracking-tight text-white">
+                <p className="mt-2 text-[28px] font-black leading-none tracking-tight text-[#f5f1e8]">
                   {formatNumber(collabEngagement)}
                 </p>
-                <p className="mt-1.5 text-[11px] text-white/70">
+                <p className="mt-1.5 text-[11px] text-[#f5f1e8]/70">
                   {formatNumber(Number(collabPost.likes))} likes · {formatNumber(Number(collabPost.comments))} comments
                 </p>
               </div>
@@ -466,7 +466,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
 
       {/* CAMPAIGN POSTS */}
       <div className="mx-auto max-w-[1100px] px-8 py-16 lg:px-10">
-        <h2 className="text-[22px] font-black uppercase tracking-tight text-white">
+        <h2 className="font-display text-[22px] font-black uppercase tracking-tight text-[#f5f1e8]">
           The Campaign Posts
         </h2>
         <div className="mt-3 h-px w-12 bg-white/30" />
@@ -511,10 +511,10 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
               >
                 <GlassSheen />
                 <div className="relative border-b border-white/10 bg-black/40 px-4 py-2.5 backdrop-blur-md">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-white">
-                    <span className="text-[#C9A35E]">{n}.</span> {label}
+                  <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#f5f1e8]">
+                    <span className="text-[#c9a14a]">{n}.</span> {label}
                   </p>
-                  <p className="mt-0.5 text-[10px] uppercase tracking-[0.12em] text-white/55">
+                  <p className="mt-0.5 text-[10px] uppercase tracking-[0.12em] text-[#f5f1e8]/55">
                     {sub}
                   </p>
                 </div>
@@ -528,27 +528,27 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
                   </div>
                   <div className={`flex flex-col justify-between ${n === '1' ? 'p-7' : 'p-5'}`}>
                     <div>
-                      <p className="text-[11px] font-medium italic text-white/65">Post ID: {post.shortcode}</p>
-                      <p className="text-[11px] italic text-white/45">{formatDateLabel(post.date_utc)}</p>
+                      <p className="text-[11px] font-medium italic text-[#f5f1e8]/65">Post ID: {post.shortcode}</p>
+                      <p className="text-[11px] italic text-[#f5f1e8]/45">{formatDateLabel(post.date_utc)}</p>
                     </div>
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/55">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/55">
                         Total Engagement
                       </p>
-                      <p className={`mt-1 font-black leading-none tracking-tight text-white ${n === '1' ? 'text-[56px]' : 'text-[40px]'}`}>
+                      <p className={`mt-1 font-black leading-none tracking-tight text-[#f5f1e8] ${n === '1' ? 'text-[56px]' : 'text-[40px]'}`}>
                         {formatNumber(eng)}
                       </p>
-                      <div className="mt-4 flex items-center gap-4 border-t border-white/10 pt-3 text-[12px] text-white/75">
+                      <div className="mt-4 flex items-center gap-4 border-t border-white/10 pt-3 text-[12px] text-[#f5f1e8]/75">
                         <span className="flex items-center gap-1.5" title="Views">
-                          <Eye className="h-3.5 w-3.5 text-white/55" />
+                          <Eye className="h-3.5 w-3.5 text-[#f5f1e8]/55" />
                           <span className="font-semibold tabular-nums">{formatNumber(views)}</span>
                         </span>
                         <span className="flex items-center gap-1.5" title="Likes">
-                          <Heart className="h-3.5 w-3.5 text-white/55" />
+                          <Heart className="h-3.5 w-3.5 text-[#f5f1e8]/55" />
                           <span className="font-semibold tabular-nums">{formatNumber(Number(post.likes))}</span>
                         </span>
                         <span className="flex items-center gap-1.5" title="Comments">
-                          <MessageCircle className="h-3.5 w-3.5 text-white/55" />
+                          <MessageCircle className="h-3.5 w-3.5 text-[#f5f1e8]/55" />
                           <span className="font-semibold tabular-nums">{formatNumber(Number(post.comments))}</span>
                         </span>
                       </div>
@@ -558,14 +558,14 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
                 <div
                   className={`relative min-h-[72px] border-t border-white/10 px-5 py-4 ${
                     callout.tone === 'primary'
-                      ? 'bg-[#C9A35E]/15 text-[#E8C988]'
-                      : 'bg-white/[0.06] text-white/75'
+                      ? 'bg-[#c9a14a]/15 text-[#f3d77a]'
+                      : 'bg-white/[0.06] text-[#f5f1e8]/75'
                   }`}
                 >
                   <p className="text-[11px] font-bold uppercase tracking-[0.12em]">
                     {callout.headline}
                   </p>
-                  <p className="mt-1 text-[11px] leading-snug text-white/70">{callout.body}</p>
+                  <p className="mt-1 text-[11px] leading-snug text-[#f5f1e8]/70">{callout.body}</p>
                 </div>
               </a>
             );
@@ -576,12 +576,12 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
       {/* VISUAL READ */}
       <div className="mx-auto max-w-[1100px] px-8 py-16 lg:px-10">
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <h2 className="text-[22px] font-black uppercase tracking-tight text-white">
+          <h2 className="font-display text-[22px] font-black uppercase tracking-tight text-[#f5f1e8]">
             Visual Read
           </h2>
           <div className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-white/40" />
-            <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-white/65">
+            <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#f5f1e8]/65">
               Powered by JABA AI
             </p>
           </div>
@@ -593,57 +593,57 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
             <div key={vr.label} className={`${GLASS_BASE} flex h-full flex-col rounded-2xl p-5`}>
               <GlassSheen />
               <div className="relative flex items-baseline justify-between gap-3">
-                <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-white">
-                  <span className="text-[#C9A35E]">{idx + 1}.</span> {vr.label}
+                <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#f5f1e8]">
+                  <span className="text-[#c9a14a]">{idx + 1}.</span> {vr.label}
                 </p>
-                <p className="whitespace-nowrap text-[10px] uppercase tracking-wider text-white/55">
+                <p className="whitespace-nowrap text-[10px] uppercase tracking-wider text-[#f5f1e8]/55">
                   {vr.runtime}s
                 </p>
               </div>
 
               <div className="mt-4">
-                <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-white/55">
+                <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/55">
                   Subjects detected
                 </p>
                 <div className="mt-1.5 flex flex-wrap gap-1.5">
                   {vr.subjects.map((s) => (
                     <span
                       key={s.label}
-                      className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/10 px-2 py-0.5 text-[11px] text-white/85"
+                      className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/10 px-2 py-0.5 text-[11px] text-[#f5f1e8]/85"
                     >
                       {s.label}
-                      <span className="text-[10px] tabular-nums text-white/50">{s.score}%</span>
+                      <span className="text-[10px] tabular-nums text-[#f5f1e8]/50">{s.score}%</span>
                     </span>
                   ))}
                 </div>
               </div>
 
               <div className="mt-4">
-                <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-white/55">
+                <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/55">
                   Logos
                 </p>
                 <div className="mt-1.5 flex flex-wrap gap-1.5">
                   {vr.logos.map((l) => (
                     <span
                       key={l.label}
-                      className="inline-flex items-center gap-1.5 rounded-full border border-[#C9A35E]/25 bg-[#C9A35E]/15 px-2 py-0.5 text-[11px] font-medium text-[#E8C988]"
+                      className="inline-flex items-center gap-1.5 rounded-full border border-[#c9a14a]/25 bg-[#c9a14a]/15 px-2 py-0.5 text-[11px] font-medium text-[#f3d77a]"
                     >
                       {l.label}
-                      <span className="text-[10px] tabular-nums text-[#E8C988]/65">{l.score}%</span>
+                      <span className="text-[10px] tabular-nums text-[#f3d77a]/65">{l.score}%</span>
                     </span>
                   ))}
                 </div>
               </div>
 
               <div className="mt-4">
-                <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-white/55">
+                <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/55">
                   Text detected (OCR)
                 </p>
                 <div className="mt-1.5 flex flex-wrap gap-1.5">
                   {vr.text.map((t) => (
                     <span
                       key={t}
-                      className="rounded-sm border border-white/10 bg-white/5 px-1.5 py-0.5 text-[11px] text-white/80"
+                      className="rounded-sm border border-white/10 bg-white/5 px-1.5 py-0.5 text-[11px] text-[#f5f1e8]/80"
                     >
                       "{t}"
                     </span>
@@ -653,25 +653,25 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
 
               <div className="mt-4 grid grid-cols-2 gap-4">
                 <div>
-                  <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-white/55">
+                  <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/55">
                     Composition
                   </p>
-                  <p className="mt-1.5 text-[11.5px] leading-relaxed text-white/80">
+                  <p className="mt-1.5 text-[11.5px] leading-relaxed text-[#f5f1e8]/80">
                     {vr.composition}
                   </p>
                 </div>
                 <div>
-                  <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-white/55">
+                  <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/55">
                     Scene breakdown
                   </p>
-                  <p className="mt-1.5 text-[11.5px] leading-relaxed text-white/80">
+                  <p className="mt-1.5 text-[11.5px] leading-relaxed text-[#f5f1e8]/80">
                     {vr.scenes}
                   </p>
                 </div>
               </div>
 
               <div className="mt-auto pt-4">
-                <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-white/55">
+                <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/55">
                   Dominant colors
                 </p>
                 <div className="mt-1.5 flex gap-3">
@@ -681,7 +681,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
                         className="h-7 w-7 rounded-sm border border-white/20"
                         style={{ backgroundColor: c.hex }}
                       />
-                      <span className="text-[9px] tabular-nums text-white/55">{c.score}%</span>
+                      <span className="text-[9px] tabular-nums text-[#f5f1e8]/55">{c.score}%</span>
                     </div>
                   ))}
                 </div>
@@ -693,18 +693,18 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
 
       {/* TOP 10 + TAKEAWAY */}
       <div className="mx-auto max-w-[1100px] px-8 py-12 lg:px-10">
-        <h2 className="text-[22px] font-black uppercase tracking-tight text-white">
+        <h2 className="font-display text-[22px] font-black uppercase tracking-tight text-[#f5f1e8]">
           Top 10 Posts · Benchmark Window
         </h2>
         <div className="mt-3 h-px w-12 bg-white/30" />
-        <p className="mt-2 text-[11px] uppercase tracking-[0.14em] text-white/55">
+        <p className="mt-2 text-[11px] uppercase tracking-[0.14em] text-[#f5f1e8]/55">
           @pruitthealth · last {totalPosts} grid posts
         </p>
 
         <div className={`mt-5 ${GLASS_BASE} rounded-2xl`}>
           <GlassSheen />
           {/* Column headers */}
-          <div className="relative grid grid-cols-[60px_72px_1fr_120px_100px_88px] items-center gap-4 border-b border-white/10 bg-black/25 px-5 py-2.5 text-[9px] font-bold uppercase tracking-[0.16em] text-white/55">
+          <div className="relative grid grid-cols-[60px_72px_1fr_120px_100px_88px] items-center gap-4 border-b border-white/10 bg-black/25 px-5 py-2.5 text-[9px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/55">
             <span>Rank</span>
             <span />
             <span>Caption</span>
@@ -733,11 +733,11 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
                 key={`${d.post.shortcode}-${i}`}
                 className={`grid min-h-[72px] grid-cols-[60px_72px_1fr_120px_100px_88px] items-center gap-4 px-5 py-3 ${
                   i === 0 ? '' : 'border-t border-white/8'
-                } ${isHighlight ? 'bg-[#C9A35E]/12' : ''}`}
+                } ${isHighlight ? 'bg-[#c9a14a]/12' : ''}`}
               >
                 <span
                   className={`text-[14px] font-black tabular-nums ${
-                    d.isCollab ? 'text-[#C9A35E]' : 'text-white/50'
+                    d.isCollab ? 'text-[#c9a14a]' : 'text-[#f5f1e8]/50'
                   }`}
                 >
                   {String(i + 1).padStart(2, '0')}
@@ -745,24 +745,24 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
                 <PostThumb src={localThumb} fallbackLabel={type === 'IMAGE' ? 'IMG' : type} />
                 <p
                   className={`line-clamp-2 text-[12.5px] leading-snug ${
-                    d.isCollab ? 'font-medium text-white' : 'text-white/80'
+                    d.isCollab ? 'font-medium text-[#f5f1e8]' : 'text-[#f5f1e8]/80'
                   }`}
                 >
-                  {caption ?? <span className="text-white/30">No caption</span>}
+                  {caption ?? <span className="text-[#f5f1e8]/30">No caption</span>}
                 </p>
                 <span
                   className={`text-[10px] font-bold uppercase tracking-[0.14em] ${
-                    d.isCollab ? 'text-[#E8C988]' : 'text-white/55'
+                    d.isCollab ? 'text-[#f3d77a]' : 'text-[#f5f1e8]/55'
                   }`}
                 >
                   {typeLabel}
                 </span>
-                <span className="text-[11px] italic text-white/45">
+                <span className="text-[11px] italic text-[#f5f1e8]/45">
                   {new Date(d.post.date_utc).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
                 </span>
                 <span
                   className={`text-right tabular-nums ${
-                    d.isCollab ? 'text-[18px] font-black text-white' : 'text-[14px] font-bold text-white/85'
+                    d.isCollab ? 'text-[18px] font-black text-[#f5f1e8]' : 'text-[14px] font-bold text-[#f5f1e8]/85'
                   }`}
                 >
                   {formatNumber(d.eng)}
@@ -772,7 +772,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
           })}
         </div>
 
-        <p className="mt-4 text-center text-[12px] italic text-white/50">
+        <p className="mt-4 text-center text-[12px] italic text-[#f5f1e8]/50">
           Posts ranked #11–{totalPosts} averaged {avgBenchmarkEngagement} engagements.
         </p>
 
@@ -782,7 +782,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
       <div className="mx-auto max-w-[1100px] px-8 py-28 lg:px-10">
         <div className="ml-0 max-w-[860px] lg:ml-24">
           <div className="h-px w-12 bg-white/30" />
-          <p className="mt-8 font-serif text-[36px] font-normal leading-[1.22] tracking-tight text-white sm:text-[44px]">
+          <p className="mt-8 font-display text-[36px] font-semibold leading-[1.18] tracking-[-0.01em] text-[#f5f1e8] sm:text-[44px]">
             The Collab + Paid Partnership combination delivered the top two engagement spots on PruittHealth's grid, plus two touchpoints to Gunner's 111K followers and a reach extension to Drew Bobo's 11.6K via the Collab. Worth testing this two-post structure as a repeatable pattern for future PruittHealth athlete activations.
           </p>
         </div>
@@ -798,9 +798,9 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
               body: (
                 <>
                   The Collab format placed the campaign on{' '}
-                  <strong className="font-semibold text-white">@_drewbobo</strong>,{' '}
-                  <strong className="font-semibold text-white">@gstockton14</strong>, and{' '}
-                  <strong className="font-semibold text-white">@pruitthealth</strong> simultaneously:
+                  <strong className="font-semibold text-[#f5f1e8]">@_drewbobo</strong>,{' '}
+                  <strong className="font-semibold text-[#f5f1e8]">@gstockton14</strong>, and{' '}
+                  <strong className="font-semibold text-[#f5f1e8]">@pruitthealth</strong> simultaneously:
                   three audiences from a single piece of content.
                 </>
               ),
@@ -811,12 +811,12 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
               body: (
                 <>
                   PruittHealth's prior{' '}
-                  <strong className="font-semibold text-white">{comparablePosts}</strong> grid posts
+                  <strong className="font-semibold text-[#f5f1e8]">{comparablePosts}</strong> grid posts
                   averaged{' '}
-                  <strong className="font-semibold text-white">{avgBenchmarkEngagement} engagements</strong>.
+                  <strong className="font-semibold text-[#f5f1e8]">{avgBenchmarkEngagement} engagements</strong>.
                   The collab cleared{' '}
-                  <strong className="font-semibold text-white">{formatNumber(collabEngagement)}</strong>,{' '}
-                  <strong className="font-semibold text-white">93×</strong> the baseline.
+                  <strong className="font-semibold text-[#f5f1e8]">{formatNumber(collabEngagement)}</strong>,{' '}
+                  <strong className="font-semibold text-[#f5f1e8]">93×</strong> the baseline.
                 </>
               ),
             },
@@ -826,26 +826,26 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
               body: (
                 <>
                   Gunner's paid partnership ranked{' '}
-                  <strong className="font-semibold text-white">#2</strong> on PruittHealth's grid with{' '}
-                  <strong className="font-semibold text-white">
+                  <strong className="font-semibold text-[#f5f1e8]">#2</strong> on PruittHealth's grid with{' '}
+                  <strong className="font-semibold text-[#f5f1e8]">
                     {formatNumber(parseEngagement(gunnerPost))} engagements
                   </strong>
                   , and reached his{' '}
-                  <strong className="font-semibold text-white">111K followers</strong> on{' '}
-                  <strong className="font-semibold text-white">@gstockton14</strong> as a second
+                  <strong className="font-semibold text-[#f5f1e8]">111K followers</strong> on{' '}
+                  <strong className="font-semibold text-[#f5f1e8]">@gstockton14</strong> as a second
                   touchpoint.
                 </>
               ),
             },
           ].map(({ n, title, body }) => (
             <div key={n}>
-              <p className="text-[112px] font-black leading-[0.9] tracking-[-0.04em] text-white/25">
+              <p className="font-display text-[112px] font-black leading-[0.9] tracking-[-0.04em] text-[#f5f1e8]/25">
                 {n}
               </p>
-              <p className="mt-5 text-[13px] font-bold uppercase tracking-[0.08em] text-white">
+              <p className="mt-5 text-[13px] font-bold uppercase tracking-[0.08em] text-[#f5f1e8]">
                 {title}
               </p>
-              <p className="mt-2 text-[13px] leading-relaxed text-white/70">{body}</p>
+              <p className="mt-2 text-[13px] leading-relaxed text-[#f5f1e8]/70">{body}</p>
             </div>
           ))}
         </div>
@@ -854,15 +854,29 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
       {/* FOOTER */}
       <div className="mt-6 border-t border-white/10 bg-black/55 backdrop-blur-2xl">
         <div className="mx-auto flex max-w-[1100px] items-center justify-between gap-4 px-8 py-6 lg:px-10">
-          <img
-            src={`${import.meta.env.BASE_URL}jaba-logo.png`}
-            alt="Jaba"
-            className="h-12 w-auto object-contain"
+          {/* JABA wordmark in gold-foil gradient via CSS mask */}
+          <div
+            role="img"
+            aria-label="Jaba"
+            style={{
+              background: 'linear-gradient(180deg, #f3d77a 0%, #c9a14a 45%, #8a6a25 100%)',
+              WebkitMaskImage: `url(${import.meta.env.BASE_URL}jaba-logo.png)`,
+              WebkitMaskRepeat: 'no-repeat',
+              WebkitMaskSize: 'contain',
+              WebkitMaskPosition: 'left center',
+              maskImage: `url(${import.meta.env.BASE_URL}jaba-logo.png)`,
+              maskRepeat: 'no-repeat',
+              maskSize: 'contain',
+              maskPosition: 'left center',
+              width: '120px',
+              height: '48px',
+              flexShrink: 0,
+            }}
           />
-          <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-white/70">
+          <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#f5f1e8]/70">
             @jaba
-            <span className="mx-2 text-white/30">·</span>
-            <span className="text-white/55">jaba.ai</span>
+            <span className="mx-2 text-[#f5f1e8]/30">·</span>
+            <span className="text-[#f5f1e8]/55">jaba.ai</span>
           </p>
         </div>
       </div>
