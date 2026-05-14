@@ -573,7 +573,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
               style={{ height: '200px' }}
             >
               <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#f5f1e8]/55">
-                Campaign Rank · PruittHealth Grid
+                Campaign Ranks
               </p>
               <p className="mt-3 font-display text-[56px] font-black leading-none text-[#f5f1e8]"
                 style={{ fontVariantNumeric: 'tabular-nums' }}>
