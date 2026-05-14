@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Eye, Heart, MessageCircle } from 'lucide-react';
+import { GlowCard } from './ui/spotlight-card';
 
 interface GunnerPruittCampaignReportProps {
   onBack?: () => void;
@@ -489,11 +490,16 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
         </div>
 
         <div className="mx-auto max-w-[1100px] px-8 pb-20 lg:px-10">
-          {/* KPI tiles — equal 3-col grid, no left-rail accents */}
+          {/* KPI tiles — GlowCard spotlight, equal 3-col grid */}
           <div className="grid grid-cols-3 gap-6">
 
             {/* Tile 1: Campaign Rank */}
-            <div className="rounded-[4px] border border-[rgba(245,241,232,0.12)] bg-[#141414] p-8">
+            <GlowCard
+              glowColor="gold"
+              customSize
+              className="bg-[#141414] border border-[rgba(245,241,232,0.12)] p-8"
+              style={{ height: '200px' }}
+            >
               <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#f5f1e8]/55">
                 Campaign Rank · PruittHealth Grid
               </p>
@@ -504,10 +510,15 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
               <p className="mt-3 text-[13px] leading-snug text-[#f5f1e8]/55">
                 Top two posts of PruittHealth's last {totalPosts} grid posts.
               </p>
-            </div>
+            </GlowCard>
 
             {/* Tile 2: Total Campaign Engagement */}
-            <div className="rounded-[4px] border border-[rgba(245,241,232,0.12)] bg-[#141414] p-8">
+            <GlowCard
+              glowColor="gold"
+              customSize
+              className="bg-[#141414] border border-[rgba(245,241,232,0.12)] p-8"
+              style={{ height: '200px' }}
+            >
               <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#f5f1e8]/55">
                 Total Campaign Engagement
               </p>
@@ -518,10 +529,15 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
               <p className="mt-3 text-[13px] leading-snug text-[#f5f1e8]/55">
                 Combined engagement across the Collab ({formatNumber(collabEngagement)}) and Paid Partnership ({formatNumber(paidEngagement)}).
               </p>
-            </div>
+            </GlowCard>
 
             {/* Tile 3: vs. Brand Average */}
-            <div className="rounded-[4px] border border-[rgba(245,241,232,0.12)] bg-[#141414] p-8">
+            <GlowCard
+              glowColor="gold"
+              customSize
+              className="bg-[#141414] border border-[rgba(245,241,232,0.12)] p-8"
+              style={{ height: '200px' }}
+            >
               <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#f5f1e8]/55">
                 vs. Brand Average
               </p>
@@ -532,7 +548,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
               <p className="mt-3 text-[13px] leading-snug text-[#f5f1e8]/55">
                 PruittHealth's other {comparablePosts} grid posts averaged {avgBenchmarkEngagement} engagements.
               </p>
-            </div>
+            </GlowCard>
 
           </div>
         </div>
