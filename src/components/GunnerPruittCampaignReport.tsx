@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Eye, Heart, MessageCircle } from 'lucide-react';
 
 interface GunnerPruittCampaignReportProps {
@@ -103,6 +103,46 @@ const GLASS_BASE =
 
 // Retained as no-op so call sites don't need to change.
 function GlassSheen() { return null; }
+
+// Gold-foil inline span — wraps any text in the brand gradient via background-clip.
+function GoldFoil({ children }: { children: React.ReactNode }) {
+  return (
+    <span style={{
+      background: 'linear-gradient(180deg, #f3d77a 0%, #c9a14a 45%, #8a6a25 100%)',
+      WebkitBackgroundClip: 'text',
+      WebkitTextFillColor: 'transparent',
+      backgroundClip: 'text',
+      color: 'transparent',
+      display: 'inline',
+    }}>
+      {children}
+    </span>
+  );
+}
+
+// Standard ESM section header: gold-foil numeral → 40px gold rule → condensed title.
+function SectionHeader({ n, title, right }: { n: string; title: string; right?: React.ReactNode }) {
+  return (
+    <div>
+      <p className="font-display text-[24px] font-black uppercase tracking-[0.06em]" style={{
+        background: 'linear-gradient(180deg, #f3d77a 0%, #c9a14a 45%, #8a6a25 100%)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        backgroundClip: 'text',
+        color: 'transparent',
+      }}>
+        {n}
+      </p>
+      <div className="mt-2 h-px w-10 bg-[#c9a14a]" />
+      <div className="mt-3 flex flex-wrap items-end justify-between gap-3">
+        <h2 className="font-display text-[40px] font-black uppercase leading-[0.9] tracking-[-0.01em] text-[#f5f1e8]">
+          {title}
+        </h2>
+        {right}
+      </div>
+    </div>
+  );
+}
 
 // Full-page film grain overlay (feTurbulence at 6% opacity).
 function FilmGrain() {
@@ -484,10 +524,7 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
 
       {/* CAMPAIGN POSTS */}
       <div className="mx-auto max-w-[1100px] px-8 py-16 lg:px-10">
-        <h2 className="font-display text-[22px] font-black uppercase tracking-tight text-[#f5f1e8]">
-          The Campaign Posts
-        </h2>
-        <div className="mt-3 h-px w-12 bg-white/30" />
+        <SectionHeader n="01" title="The Campaign Posts" />
 
         <div className="mt-6 grid gap-6 md:grid-cols-[1.5fr_1fr]">
           {[
@@ -593,18 +630,18 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
 
       {/* VISUAL READ */}
       <div className="mx-auto max-w-[1100px] px-8 py-16 lg:px-10">
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <h2 className="font-display text-[22px] font-black uppercase tracking-tight text-[#f5f1e8]">
-            Visual Read
-          </h2>
-          <div className="flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-white/40" />
-            <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#f5f1e8]/65">
-              Powered by JABA AI
-            </p>
-          </div>
-        </div>
-        <div className="mt-3 h-px w-12 bg-white/30" />
+        <SectionHeader
+          n="02"
+          title="Visual Read"
+          right={
+            <div className="flex items-center gap-2 pb-1">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#c9a14a]/60" />
+              <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#f5f1e8]/55">
+                Powered by JABA AI
+              </p>
+            </div>
+          }
+        />
 
         <div className="mt-6 grid gap-6 md:grid-cols-[1.1fr_0.9fr]">
           {visualReads.map((vr, idx) => (
@@ -711,11 +748,8 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
 
       {/* TOP 10 + TAKEAWAY */}
       <div className="mx-auto max-w-[1100px] px-8 py-12 lg:px-10">
-        <h2 className="font-display text-[22px] font-black uppercase tracking-tight text-[#f5f1e8]">
-          Top 10 Posts · Benchmark Window
-        </h2>
-        <div className="mt-3 h-px w-12 bg-white/30" />
-        <p className="mt-2 text-[11px] uppercase tracking-[0.14em] text-[#f5f1e8]/55">
+        <SectionHeader n="03" title="Top 10 Posts · Benchmark Window" />
+        <p className="mt-3 text-[11px] uppercase tracking-[0.14em] text-[#f5f1e8]/55">
           @pruitthealth · last {totalPosts} grid posts
         </p>
 
@@ -796,12 +830,15 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
 
       </div>
 
-      {/* WHAT THIS SUGGESTS — pull quote treatment, indented for editorial weight */}
+      {/* WHAT THIS SUGGESTS — condensed-caps statement with gold-foil proper nouns */}
       <div className="mx-auto max-w-[1100px] px-8 py-28 lg:px-10">
-        <div className="ml-0 max-w-[860px] lg:ml-24">
-          <div className="h-px w-12 bg-white/30" />
-          <p className="mt-8 font-display text-[36px] font-semibold leading-[1.18] tracking-[-0.01em] text-[#f5f1e8] sm:text-[44px]">
-            The Collab + Paid Partnership combination delivered the top two engagement spots on PruittHealth's grid, plus two touchpoints to Gunner's 111K followers and a reach extension to Drew Bobo's 11.6K via the Collab. Worth testing this two-post structure as a repeatable pattern for future PruittHealth athlete activations.
+        <div className="ml-0 max-w-[900px] lg:ml-16">
+          <div className="h-px w-10 bg-[#c9a14a]" />
+          <p className="mt-8 font-display text-[clamp(32px,4.5vw,56px)] font-black uppercase leading-[0.92] tracking-[-0.01em] text-[#f5f1e8]">
+            The <GoldFoil>Collab</GoldFoil> + <GoldFoil>Paid Partnership</GoldFoil> combination
+            delivered the top two engagement spots on <GoldFoil>PruittHealth</GoldFoil>'s grid,
+            plus two touchpoints to Gunner's <GoldFoil>111K</GoldFoil> followers
+            and a reach extension to Drew Bobo's <GoldFoil>11.6K</GoldFoil> via the Collab.
           </p>
         </div>
       </div>
@@ -857,10 +894,19 @@ export function GunnerPruittCampaignReport(_: GunnerPruittCampaignReportProps) {
             },
           ].map(({ n, title, body }) => (
             <div key={n}>
-              <p className="font-display text-[112px] font-black leading-[0.9] tracking-[-0.04em] text-[#f5f1e8]/25">
+              {/* Gold-foil numeral at 120px */}
+              <p className="font-display text-[120px] font-black leading-[0.85] tracking-[-0.04em]" style={{
+                background: 'linear-gradient(180deg, #f3d77a 0%, #c9a14a 45%, #8a6a25 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                color: 'transparent',
+              }}>
                 {n}
               </p>
-              <p className="mt-5 text-[13px] font-bold uppercase tracking-[0.08em] text-[#f5f1e8]">
+              {/* 1px gold hairline rule below each numeral */}
+              <div className="h-px bg-[#c9a14a]/60" />
+              <p className="mt-5 font-display text-[15px] font-black uppercase tracking-[0.08em] text-[#f5f1e8]">
                 {title}
               </p>
               <p className="mt-2 text-[13px] leading-relaxed text-[#f5f1e8]/70">{body}</p>
