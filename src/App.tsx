@@ -15,6 +15,7 @@ import { RutgersIPImpact } from './components/RutgersIPImpact';
 import { VirginiaIPImpact } from './components/VirginiaIPImpact';
 import { ArizonaIPImpact } from './components/ArizonaIPImpact';
 import { PlayflyReportHub } from './components/PlayflyReportHub';
+import { PlayflyIPImpactReport } from './components/PlayflyIPImpactReport';
 import { UCLABrandDeals } from './components/UCLABrandDeals';
 import { SchoolAthleteReport } from './components/SchoolAthleteReport';
 import { QCollarReport } from './components/QCollarReport';
@@ -104,7 +105,7 @@ function GeorgiaRoute() {
 }
 
 function PlayflyRoute() {
-  return <PlayflyReportHub />;
+  return <PlayflyIPImpactReport />;
 }
 
 function UCLARoute() {
